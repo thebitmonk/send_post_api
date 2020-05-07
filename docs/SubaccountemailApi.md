@@ -1,0 +1,58 @@
+# SendPostApi.SubaccountemailApi
+
+All URIs are relative to *http://127.0.0.1:8080/api/v1*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**emailRouterSendEmail**](SubaccountemailApi.md#emailRouterSendEmail) | **POST** /subaccount/email/ | 
+
+
+<a name="emailRouterSendEmail"></a>
+# **emailRouterSendEmail**
+> emailRouterSendEmail(xSubAccountApiKey, body)
+
+
+
+Send Email To Contacts
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.SubaccountemailApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var body = new SendPostApi.ModelsEmailMessage(); // ModelsEmailMessage | The Email Message
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+apiInstance.emailRouterSendEmail(xSubAccountApiKey, body, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **body** | [**ModelsEmailMessage**](ModelsEmailMessage.md)| The Email Message | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
