@@ -131,6 +131,8 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterGet**](docs/AccountsubaccountApi.md#subAccountRouterGet) | **GET** /account/subaccount/{subAccountId} | 
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterGetAll**](docs/AccountsubaccountApi.md#subAccountRouterGetAll) | **GET** /account/subaccount/ | 
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterUpdate**](docs/AccountsubaccountApi.md#subAccountRouterUpdate) | **PUT** /account/subaccount/{subAccountId} | 
+*SendPostApi.ClusterApi* | [**clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster**](docs/ClusterApi.md#clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster) | **POST** /cluster/suppression/filter | 
+*SendPostApi.ClusterApi* | [**clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster**](docs/ClusterApi.md#clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster) | **DELETE** /cluster/suppression/filter | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterCreate**](docs/SubaccountdomainApi.md#domainRouterCreate) | **POST** /subaccount/domain/ | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterDelete**](docs/SubaccountdomainApi.md#domainRouterDelete) | **DELETE** /subaccount/domain/{domainId} | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterGet**](docs/SubaccountdomainApi.md#domainRouterGet) | **GET** /subaccount/domain/{domainId} | 
@@ -169,6 +171,9 @@ Class | Method | HTTP request | Description
 *SendPostApi.SubaccountwebhookApi* | [**webhookRouterGet**](docs/SubaccountwebhookApi.md#webhookRouterGet) | **GET** /subaccount/webhook/{webhookId} | 
 *SendPostApi.SubaccountwebhookApi* | [**webhookRouterGetAll**](docs/SubaccountwebhookApi.md#webhookRouterGetAll) | **GET** /subaccount/webhook/ | 
 *SendPostApi.SubaccountwebhookApi* | [**webhookRouterUpdate**](docs/SubaccountwebhookApi.md#webhookRouterUpdate) | **PUT** /subaccount/webhook/{webhookId} | 
+*SendPostApi.TrackApi* | [**trackRouterTrackEmailOpen**](docs/TrackApi.md#trackRouterTrackEmailOpen) | **GET** /track/open/{subAccountId}/{messageId}/1.png | 
+*SendPostApi.TrackApi* | [**trackRouterTrackLinkClick**](docs/TrackApi.md#trackRouterTrackLinkClick) | **GET** /track/click/{subAccountId}/{messageId} | 
+*SendPostApi.TrackApi* | [**trackRouterTrackUnsubscribe**](docs/TrackApi.md#trackRouterTrackUnsubscribe) | **GET** /track/unsubscribe/{subAccountId}/{messageId} | 
 
 
 ## Documentation for Models
@@ -176,12 +181,15 @@ Class | Method | HTTP request | Description
  - [SendPostApi.Geoip2City](docs/Geoip2City.md)
  - [SendPostApi.ModelsAccount](docs/ModelsAccount.md)
  - [SendPostApi.ModelsDNSRecord](docs/ModelsDNSRecord.md)
+ - [SendPostApi.ModelsDeleteResponse](docs/ModelsDeleteResponse.md)
  - [SendPostApi.ModelsDomain](docs/ModelsDomain.md)
  - [SendPostApi.ModelsEDomain](docs/ModelsEDomain.md)
  - [SendPostApi.ModelsEIP](docs/ModelsEIP.md)
  - [SendPostApi.ModelsEIPPool](docs/ModelsEIPPool.md)
  - [SendPostApi.ModelsESender](docs/ModelsESender.md)
+ - [SendPostApi.ModelsEmailErrorCode](docs/ModelsEmailErrorCode.md)
  - [SendPostApi.ModelsEmailMessage](docs/ModelsEmailMessage.md)
+ - [SendPostApi.ModelsEmailResponse](docs/ModelsEmailResponse.md)
  - [SendPostApi.ModelsEventMetadata](docs/ModelsEventMetadata.md)
  - [SendPostApi.ModelsEventType](docs/ModelsEventType.md)
  - [SendPostApi.ModelsFrom](docs/ModelsFrom.md)

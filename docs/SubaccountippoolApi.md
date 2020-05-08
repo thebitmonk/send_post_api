@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="iPPoolRouterCreate"></a>
 # **iPPoolRouterCreate**
-> iPPoolRouterCreate(xSubAccountApiKey, body)
+> ModelsIPPool iPPoolRouterCreate(xSubAccountApiKey, body)
 
 
 
@@ -34,7 +34,7 @@ var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 };
 apiInstance.iPPoolRouterCreate(xSubAccountApiKey, body, callback);
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**ModelsIPPool**](ModelsIPPool.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ No authorization required
 
 <a name="iPPoolRouterDelete"></a>
 # **iPPoolRouterDelete**
-> iPPoolRouterDelete(xSubAccountApiKey, ippoolid)
+> ModelsDeleteResponse iPPoolRouterDelete(xSubAccountApiKey, ippoolid)
 
 
 
@@ -83,7 +83,7 @@ var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 };
 apiInstance.iPPoolRouterDelete(xSubAccountApiKey, ippoolid, callback);
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**ModelsDeleteResponse**](ModelsDeleteResponse.md)
 
 ### Authorization
 

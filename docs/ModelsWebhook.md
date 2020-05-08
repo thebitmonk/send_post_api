@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **clicked** | **Boolean** |  | [optional] 
+**created** | **Number** |  | [optional] 
 **delivered** | **Boolean** |  | [optional] 
 **dropped** | **Boolean** |  | [optional] 
 **enabled** | **Boolean** |  | [optional] 

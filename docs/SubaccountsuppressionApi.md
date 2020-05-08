@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="suppressionRouterCreateSuppressions"></a>
 # **suppressionRouterCreateSuppressions**
-> suppressionRouterCreateSuppressions(xSubAccountApiKey, body)
+> ModelsSuppression suppressionRouterCreateSuppressions(xSubAccountApiKey, body)
 
 
 
@@ -34,7 +34,7 @@ var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 };
 apiInstance.suppressionRouterCreateSuppressions(xSubAccountApiKey, body, callback);
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**ModelsSuppression**](ModelsSuppression.md)
 
 ### Authorization
 
@@ -108,7 +108,7 @@ No authorization required
 
 <a name="suppressionRouterDeleteSuppression"></a>
 # **suppressionRouterDeleteSuppression**
-> suppressionRouterDeleteSuppression(xSubAccountApiKey, body)
+> ModelsSuppression suppressionRouterDeleteSuppression(xSubAccountApiKey, body)
 
 
 
@@ -129,7 +129,7 @@ var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 };
 apiInstance.suppressionRouterDeleteSuppression(xSubAccountApiKey, body, callback);
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**ModelsSuppression**](ModelsSuppression.md)
 
 ### Authorization
 
@@ -203,7 +203,7 @@ No authorization required
 
 <a name="suppressionRouterGetAllSuppressions"></a>
 # **suppressionRouterGetAllSuppressions**
-> suppressionRouterGetAllSuppressions(xSubAccountApiKey)
+> [ModelsSuppression] suppressionRouterGetAllSuppressions(xSubAccountApiKey)
 
 
 
@@ -222,7 +222,7 @@ var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 };
 apiInstance.suppressionRouterGetAllSuppressions(xSubAccountApiKey, callback);
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[ModelsSuppression]**](ModelsSuppression.md)
 
 ### Authorization
 

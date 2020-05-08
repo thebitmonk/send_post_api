@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="domainRouterCreate"></a>
 # **domainRouterCreate**
-> domainRouterCreate(xSubAccountApiKey, body)
+> ModelsDomain domainRouterCreate(xSubAccountApiKey, body)
 
 
 
@@ -34,7 +34,7 @@ var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 };
 apiInstance.domainRouterCreate(xSubAccountApiKey, body, callback);
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**ModelsDomain**](ModelsDomain.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ No authorization required
 
 <a name="domainRouterDelete"></a>
 # **domainRouterDelete**
-> domainRouterDelete(xSubAccountApiKey, domainId)
+> ModelsDeleteResponse domainRouterDelete(xSubAccountApiKey, domainId)
 
 
 
@@ -83,7 +83,7 @@ var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 };
 apiInstance.domainRouterDelete(xSubAccountApiKey, domainId, callback);
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**ModelsDeleteResponse**](ModelsDeleteResponse.md)
 
 ### Authorization
 

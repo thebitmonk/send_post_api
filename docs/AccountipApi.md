@@ -59,7 +59,7 @@ No authorization required
 
 <a name="iPRouterDelete"></a>
 # **iPRouterDelete**
-> iPRouterDelete(xAccountApiKey, ipid)
+> ModelsDeleteResponse iPRouterDelete(xAccountApiKey, ipid)
 
 
 
@@ -80,7 +80,7 @@ var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 };
 apiInstance.iPRouterDelete(xAccountApiKey, ipid, callback);
@@ -95,7 +95,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**ModelsDeleteResponse**](ModelsDeleteResponse.md)
 
 ### Authorization
 
@@ -203,7 +203,7 @@ No authorization required
 
 <a name="iPRouterUpdate"></a>
 # **iPRouterUpdate**
-> iPRouterUpdate(xAccountApiKey, ipid)
+> ModelsIP iPRouterUpdate(xAccountApiKey, ipid)
 
 
 
@@ -224,7 +224,7 @@ var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 };
 apiInstance.iPRouterUpdate(xAccountApiKey, ipid, callback);
@@ -239,7 +239,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**ModelsIP**](ModelsIP.md)
 
 ### Authorization
 
