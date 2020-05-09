@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * SendPost API to send fast transactional emails to inbox
+ * SendPost API to transactional emails reliably
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -26,7 +26,7 @@
   'use strict';
 
   /**
-   * SendPost_API_to_send_fast_transactional_emails_to_inbox.<br>
+   * SendPost_API_to_transactional_emails_reliably.<br>
    * The <code>index</code> module provides access to constructors for all the classes which comprise the public API.
    * <p>
    * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:

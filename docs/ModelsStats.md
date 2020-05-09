@@ -3,14 +3,14 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**clicks** | **Number** |  | [optional] 
+**clicked** | **Number** |  | [optional] 
 **delivered** | **Number** |  | [optional] 
 **dropped** | **Number** |  | [optional] 
 **hardBounced** | **Number** |  | [optional] 
-**opens** | **Number** |  | [optional] 
+**opened** | **Number** |  | [optional] 
 **processed** | **Number** |  | [optional] 
 **softBounced** | **Number** |  | [optional] 
-**spams** | **Number** |  | [optional] 
+**spam** | **Number** |  | [optional] 
 **unsubscribed** | **Number** |  | [optional] 
 
 

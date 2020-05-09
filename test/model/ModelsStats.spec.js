@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * SendPost API to send fast transactional emails to inbox
+ * SendPost API to transactional emails reliably
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -41,10 +41,10 @@
         expect(instance).to.be.a(SendPostApi.ModelsStats);
       });
 
-      it('should have the property clicks (base name: "clicks")', function() {
-        // TODO: update the code to test the property clicks
-        expect(instance).to.have.property('clicks');
-        // expect(instance.clicks).to.be(expectedValueLiteral);
+      it('should have the property clicked (base name: "clicked")', function() {
+        // TODO: update the code to test the property clicked
+        expect(instance).to.have.property('clicked');
+        // expect(instance.clicked).to.be(expectedValueLiteral);
       });
 
       it('should have the property delivered (base name: "delivered")', function() {
@@ -65,10 +65,10 @@
         // expect(instance.hardBounced).to.be(expectedValueLiteral);
       });
 
-      it('should have the property opens (base name: "opens")', function() {
-        // TODO: update the code to test the property opens
-        expect(instance).to.have.property('opens');
-        // expect(instance.opens).to.be(expectedValueLiteral);
+      it('should have the property opened (base name: "opened")', function() {
+        // TODO: update the code to test the property opened
+        expect(instance).to.have.property('opened');
+        // expect(instance.opened).to.be(expectedValueLiteral);
       });
 
       it('should have the property processed (base name: "processed")', function() {
@@ -83,10 +83,10 @@
         // expect(instance.softBounced).to.be(expectedValueLiteral);
       });
 
-      it('should have the property spams (base name: "spams")', function() {
-        // TODO: update the code to test the property spams
-        expect(instance).to.have.property('spams');
-        // expect(instance.spams).to.be(expectedValueLiteral);
+      it('should have the property spam (base name: "spam")', function() {
+        // TODO: update the code to test the property spam
+        expect(instance).to.have.property('spam');
+        // expect(instance.spam).to.be(expectedValueLiteral);
       });
 
       it('should have the property unsubscribed (base name: "unsubscribed")', function() {

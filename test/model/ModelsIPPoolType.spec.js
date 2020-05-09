@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * SendPost API to send fast transactional emails to inbox
+ * SendPost API to transactional emails reliably
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io

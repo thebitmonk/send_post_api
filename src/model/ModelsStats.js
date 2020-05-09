@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * SendPost API to send fast transactional emails to inbox
+ * SendPost API to transactional emails reliably
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -55,22 +55,22 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('clicks'))
-        obj.clicks = ApiClient.convertToType(data['clicks'], 'Number');
+      if (data.hasOwnProperty('clicked'))
+        obj.clicked = ApiClient.convertToType(data['clicked'], 'Number');
       if (data.hasOwnProperty('delivered'))
         obj.delivered = ApiClient.convertToType(data['delivered'], 'Number');
       if (data.hasOwnProperty('dropped'))
         obj.dropped = ApiClient.convertToType(data['dropped'], 'Number');
       if (data.hasOwnProperty('hardBounced'))
         obj.hardBounced = ApiClient.convertToType(data['hardBounced'], 'Number');
-      if (data.hasOwnProperty('opens'))
-        obj.opens = ApiClient.convertToType(data['opens'], 'Number');
+      if (data.hasOwnProperty('opened'))
+        obj.opened = ApiClient.convertToType(data['opened'], 'Number');
       if (data.hasOwnProperty('processed'))
         obj.processed = ApiClient.convertToType(data['processed'], 'Number');
       if (data.hasOwnProperty('softBounced'))
         obj.softBounced = ApiClient.convertToType(data['softBounced'], 'Number');
-      if (data.hasOwnProperty('spams'))
-        obj.spams = ApiClient.convertToType(data['spams'], 'Number');
+      if (data.hasOwnProperty('spam'))
+        obj.spam = ApiClient.convertToType(data['spam'], 'Number');
       if (data.hasOwnProperty('unsubscribed'))
         obj.unsubscribed = ApiClient.convertToType(data['unsubscribed'], 'Number');
     }
@@ -78,9 +78,9 @@
   }
 
   /**
-   * @member {Number} clicks
+   * @member {Number} clicked
    */
-  exports.prototype.clicks = undefined;
+  exports.prototype.clicked = undefined;
 
   /**
    * @member {Number} delivered
@@ -98,9 +98,9 @@
   exports.prototype.hardBounced = undefined;
 
   /**
-   * @member {Number} opens
+   * @member {Number} opened
    */
-  exports.prototype.opens = undefined;
+  exports.prototype.opened = undefined;
 
   /**
    * @member {Number} processed
@@ -113,9 +113,9 @@
   exports.prototype.softBounced = undefined;
 
   /**
-   * @member {Number} spams
+   * @member {Number} spam
    */
-  exports.prototype.spams = undefined;
+  exports.prototype.spam = undefined;
 
   /**
    * @member {Number} unsubscribed
