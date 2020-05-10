@@ -61,7 +61,7 @@ No authorization required
 
 <a name="eventRouterGetAllEventsFromASubAccountForAGivenTimeRange"></a>
 # **eventRouterGetAllEventsFromASubAccountForAGivenTimeRange**
-> [ModelsQEvent] eventRouterGetAllEventsFromASubAccountForAGivenTimeRange(subAccountId)
+> [ModelsQEvent] eventRouterGetAllEventsFromASubAccountForAGivenTimeRange(xSubAccountApiKey, subAccountId)
 
 
 
@@ -73,6 +73,8 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.SubaccounteventApi();
 
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
 var subAccountId = 789; // Number | the subAccountId whose event you want to retrieve
 
 
@@ -83,13 +85,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.eventRouterGetAllEventsFromASubAccountForAGivenTimeRange(subAccountId, callback);
+apiInstance.eventRouterGetAllEventsFromASubAccountForAGivenTimeRange(xSubAccountApiKey, subAccountId, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
  **subAccountId** | **Number**| the subAccountId whose event you want to retrieve | 
 
 ### Return type
@@ -107,7 +110,7 @@ No authorization required
 
 <a name="eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange"></a>
 # **eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange**
-> [ModelsQEvent] eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange(subAccountId)
+> [ModelsQEvent] eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange(xSubAccountApiKey, subAccountId)
 
 
 
@@ -119,6 +122,8 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.SubaccounteventApi();
 
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
 var subAccountId = 789; // Number | the subAccountId whose event you want to retrieve
 
 
@@ -129,13 +134,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange(subAccountId, callback);
+apiInstance.eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange(xSubAccountApiKey, subAccountId, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
  **subAccountId** | **Number**| the subAccountId whose event you want to retrieve | 
 
 ### Return type

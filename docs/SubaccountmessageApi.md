@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="messageRouterGet"></a>
 # **messageRouterGet**
-> ModelsQEmailMessage messageRouterGet(messageId)
+> ModelsQEmailMessage messageRouterGet(xSubAccountApiKey, messageId)
 
 
 
@@ -24,6 +24,8 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.SubaccountmessageApi();
 
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
 var messageId = "messageId_example"; // String | the messageId that you want to retrieve
 
 
@@ -34,13 +36,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.messageRouterGet(messageId, callback);
+apiInstance.messageRouterGet(xSubAccountApiKey, messageId, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
  **messageId** | **String**| the messageId that you want to retrieve | 
 
 ### Return type
@@ -58,7 +61,7 @@ No authorization required
 
 <a name="messageRouterGetAllMessagesFromASubAccountBasedOnTimeRange"></a>
 # **messageRouterGetAllMessagesFromASubAccountBasedOnTimeRange**
-> [ModelsQEmailMessage] messageRouterGetAllMessagesFromASubAccountBasedOnTimeRange()
+> [ModelsQEmailMessage] messageRouterGetAllMessagesFromASubAccountBasedOnTimeRange(xSubAccountApiKey)
 
 
 
@@ -70,6 +73,9 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.SubaccountmessageApi();
 
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -77,11 +83,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.messageRouterGetAllMessagesFromASubAccountBasedOnTimeRange(callback);
+apiInstance.messageRouterGetAllMessagesFromASubAccountBasedOnTimeRange(xSubAccountApiKey, callback);
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
 
 ### Return type
 

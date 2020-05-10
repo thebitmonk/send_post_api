@@ -17,12 +17,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Geoip2City', 'model/ModelsAccount', 'model/ModelsDNSRecord', 'model/ModelsDeleteResponse', 'model/ModelsDomain', 'model/ModelsEDomain', 'model/ModelsEIP', 'model/ModelsEIPPool', 'model/ModelsESender', 'model/ModelsEmailErrorCode', 'model/ModelsEmailMessage', 'model/ModelsEmailResponse', 'model/ModelsEventMetadata', 'model/ModelsEventType', 'model/ModelsFrom', 'model/ModelsIP', 'model/ModelsIPPool', 'model/ModelsIPPoolType', 'model/ModelsIPType', 'model/ModelsMember', 'model/ModelsQEmailMessage', 'model/ModelsQEvent', 'model/ModelsRDSuppression', 'model/ModelsRStats', 'model/ModelsRSuppression', 'model/ModelsReplyTo', 'model/ModelsSender', 'model/ModelsStats', 'model/ModelsSubAccount', 'model/ModelsSubAccountType', 'model/ModelsSuppression', 'model/ModelsSuppressionEmail', 'model/ModelsSuppressionReason', 'model/ModelsTo', 'model/ModelsWebhook', 'model/UaparserDevice', 'model/UaparserOs', 'model/UaparserUserAgent', 'api/ClusterApi', 'api/TrackApi'], factory);
+    define(['ApiClient', 'model/Geoip2City', 'model/ModelsAccount', 'model/ModelsDNSRecord', 'model/ModelsDeleteResponse', 'model/ModelsDomain', 'model/ModelsEDomain', 'model/ModelsEIP', 'model/ModelsEIPPool', 'model/ModelsESender', 'model/ModelsEmailErrorCode', 'model/ModelsEmailMessage', 'model/ModelsEmailResponse', 'model/ModelsEventMetadata', 'model/ModelsEventType', 'model/ModelsFrom', 'model/ModelsIP', 'model/ModelsIPPool', 'model/ModelsIPPoolType', 'model/ModelsIPType', 'model/ModelsMember', 'model/ModelsQEmailMessage', 'model/ModelsQEvent', 'model/ModelsRDSuppression', 'model/ModelsRStats', 'model/ModelsRSuppression', 'model/ModelsReplyTo', 'model/ModelsSender', 'model/ModelsStats', 'model/ModelsSubAccount', 'model/ModelsSubAccountType', 'model/ModelsSuppression', 'model/ModelsSuppressionEmail', 'model/ModelsSuppressionReason', 'model/ModelsTo', 'model/ModelsWebhook', 'model/UaparserDevice', 'model/UaparserOs', 'model/UaparserUserAgent', 'api/AccountipApi', 'api/AccountstatApi', 'api/AccountsubaccountApi', 'api/ClusterApi', 'api/SubaccountdomainApi', 'api/SubaccountemailApi', 'api/SubaccounteventApi', 'api/SubaccountippoolApi', 'api/SubaccountmessageApi', 'api/SubaccountsenderApi', 'api/SubaccountstatApi', 'api/SubaccountsuppressionApi', 'api/SubaccountwebhookApi', 'api/TrackApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/Geoip2City'), require('./model/ModelsAccount'), require('./model/ModelsDNSRecord'), require('./model/ModelsDeleteResponse'), require('./model/ModelsDomain'), require('./model/ModelsEDomain'), require('./model/ModelsEIP'), require('./model/ModelsEIPPool'), require('./model/ModelsESender'), require('./model/ModelsEmailErrorCode'), require('./model/ModelsEmailMessage'), require('./model/ModelsEmailResponse'), require('./model/ModelsEventMetadata'), require('./model/ModelsEventType'), require('./model/ModelsFrom'), require('./model/ModelsIP'), require('./model/ModelsIPPool'), require('./model/ModelsIPPoolType'), require('./model/ModelsIPType'), require('./model/ModelsMember'), require('./model/ModelsQEmailMessage'), require('./model/ModelsQEvent'), require('./model/ModelsRDSuppression'), require('./model/ModelsRStats'), require('./model/ModelsRSuppression'), require('./model/ModelsReplyTo'), require('./model/ModelsSender'), require('./model/ModelsStats'), require('./model/ModelsSubAccount'), require('./model/ModelsSubAccountType'), require('./model/ModelsSuppression'), require('./model/ModelsSuppressionEmail'), require('./model/ModelsSuppressionReason'), require('./model/ModelsTo'), require('./model/ModelsWebhook'), require('./model/UaparserDevice'), require('./model/UaparserOs'), require('./model/UaparserUserAgent'), require('./api/ClusterApi'), require('./api/TrackApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/Geoip2City'), require('./model/ModelsAccount'), require('./model/ModelsDNSRecord'), require('./model/ModelsDeleteResponse'), require('./model/ModelsDomain'), require('./model/ModelsEDomain'), require('./model/ModelsEIP'), require('./model/ModelsEIPPool'), require('./model/ModelsESender'), require('./model/ModelsEmailErrorCode'), require('./model/ModelsEmailMessage'), require('./model/ModelsEmailResponse'), require('./model/ModelsEventMetadata'), require('./model/ModelsEventType'), require('./model/ModelsFrom'), require('./model/ModelsIP'), require('./model/ModelsIPPool'), require('./model/ModelsIPPoolType'), require('./model/ModelsIPType'), require('./model/ModelsMember'), require('./model/ModelsQEmailMessage'), require('./model/ModelsQEvent'), require('./model/ModelsRDSuppression'), require('./model/ModelsRStats'), require('./model/ModelsRSuppression'), require('./model/ModelsReplyTo'), require('./model/ModelsSender'), require('./model/ModelsStats'), require('./model/ModelsSubAccount'), require('./model/ModelsSubAccountType'), require('./model/ModelsSuppression'), require('./model/ModelsSuppressionEmail'), require('./model/ModelsSuppressionReason'), require('./model/ModelsTo'), require('./model/ModelsWebhook'), require('./model/UaparserDevice'), require('./model/UaparserOs'), require('./model/UaparserUserAgent'), require('./api/AccountipApi'), require('./api/AccountstatApi'), require('./api/AccountsubaccountApi'), require('./api/ClusterApi'), require('./api/SubaccountdomainApi'), require('./api/SubaccountemailApi'), require('./api/SubaccounteventApi'), require('./api/SubaccountippoolApi'), require('./api/SubaccountmessageApi'), require('./api/SubaccountsenderApi'), require('./api/SubaccountstatApi'), require('./api/SubaccountsuppressionApi'), require('./api/SubaccountwebhookApi'), require('./api/TrackApi'));
   }
-}(function(ApiClient, Geoip2City, ModelsAccount, ModelsDNSRecord, ModelsDeleteResponse, ModelsDomain, ModelsEDomain, ModelsEIP, ModelsEIPPool, ModelsESender, ModelsEmailErrorCode, ModelsEmailMessage, ModelsEmailResponse, ModelsEventMetadata, ModelsEventType, ModelsFrom, ModelsIP, ModelsIPPool, ModelsIPPoolType, ModelsIPType, ModelsMember, ModelsQEmailMessage, ModelsQEvent, ModelsRDSuppression, ModelsRStats, ModelsRSuppression, ModelsReplyTo, ModelsSender, ModelsStats, ModelsSubAccount, ModelsSubAccountType, ModelsSuppression, ModelsSuppressionEmail, ModelsSuppressionReason, ModelsTo, ModelsWebhook, UaparserDevice, UaparserOs, UaparserUserAgent, ClusterApi, TrackApi) {
+}(function(ApiClient, Geoip2City, ModelsAccount, ModelsDNSRecord, ModelsDeleteResponse, ModelsDomain, ModelsEDomain, ModelsEIP, ModelsEIPPool, ModelsESender, ModelsEmailErrorCode, ModelsEmailMessage, ModelsEmailResponse, ModelsEventMetadata, ModelsEventType, ModelsFrom, ModelsIP, ModelsIPPool, ModelsIPPoolType, ModelsIPType, ModelsMember, ModelsQEmailMessage, ModelsQEvent, ModelsRDSuppression, ModelsRStats, ModelsRSuppression, ModelsReplyTo, ModelsSender, ModelsStats, ModelsSubAccount, ModelsSubAccountType, ModelsSuppression, ModelsSuppressionEmail, ModelsSuppressionReason, ModelsTo, ModelsWebhook, UaparserDevice, UaparserOs, UaparserUserAgent, AccountipApi, AccountstatApi, AccountsubaccountApi, ClusterApi, SubaccountdomainApi, SubaccountemailApi, SubaccounteventApi, SubaccountippoolApi, SubaccountmessageApi, SubaccountsenderApi, SubaccountstatApi, SubaccountsuppressionApi, SubaccountwebhookApi, TrackApi) {
   'use strict';
 
   /**
@@ -253,10 +253,70 @@
      */
     UaparserUserAgent: UaparserUserAgent,
     /**
+     * The AccountipApi service constructor.
+     * @property {module:api/AccountipApi}
+     */
+    AccountipApi: AccountipApi,
+    /**
+     * The AccountstatApi service constructor.
+     * @property {module:api/AccountstatApi}
+     */
+    AccountstatApi: AccountstatApi,
+    /**
+     * The AccountsubaccountApi service constructor.
+     * @property {module:api/AccountsubaccountApi}
+     */
+    AccountsubaccountApi: AccountsubaccountApi,
+    /**
      * The ClusterApi service constructor.
      * @property {module:api/ClusterApi}
      */
     ClusterApi: ClusterApi,
+    /**
+     * The SubaccountdomainApi service constructor.
+     * @property {module:api/SubaccountdomainApi}
+     */
+    SubaccountdomainApi: SubaccountdomainApi,
+    /**
+     * The SubaccountemailApi service constructor.
+     * @property {module:api/SubaccountemailApi}
+     */
+    SubaccountemailApi: SubaccountemailApi,
+    /**
+     * The SubaccounteventApi service constructor.
+     * @property {module:api/SubaccounteventApi}
+     */
+    SubaccounteventApi: SubaccounteventApi,
+    /**
+     * The SubaccountippoolApi service constructor.
+     * @property {module:api/SubaccountippoolApi}
+     */
+    SubaccountippoolApi: SubaccountippoolApi,
+    /**
+     * The SubaccountmessageApi service constructor.
+     * @property {module:api/SubaccountmessageApi}
+     */
+    SubaccountmessageApi: SubaccountmessageApi,
+    /**
+     * The SubaccountsenderApi service constructor.
+     * @property {module:api/SubaccountsenderApi}
+     */
+    SubaccountsenderApi: SubaccountsenderApi,
+    /**
+     * The SubaccountstatApi service constructor.
+     * @property {module:api/SubaccountstatApi}
+     */
+    SubaccountstatApi: SubaccountstatApi,
+    /**
+     * The SubaccountsuppressionApi service constructor.
+     * @property {module:api/SubaccountsuppressionApi}
+     */
+    SubaccountsuppressionApi: SubaccountsuppressionApi,
+    /**
+     * The SubaccountwebhookApi service constructor.
+     * @property {module:api/SubaccountwebhookApi}
+     */
+    SubaccountwebhookApi: SubaccountwebhookApi,
     /**
      * The TrackApi service constructor.
      * @property {module:api/TrackApi}
