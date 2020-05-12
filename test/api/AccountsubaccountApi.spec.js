@@ -41,12 +41,8 @@
           // TODO: uncomment, update parameter values for subAccountRouterCreate call and complete the assertions
           /*
           var xAccountApiKey = "xAccountApiKey_example";
-          var body = new SendPostApi.ModelsSubAccount();
-          body.apiKey = "";
-          body.created = "0";
-          body.id = "0";
+          var body = new SendPostApi.ModelsESubAccount();
           body.name = "";
-          body.type = new SendPostApi.ModelsSubAccountType();
 
           instance.subAccountRouterCreate(xAccountApiKey, body, function(error, data, response) {
             if (error) {
@@ -172,12 +168,8 @@
           /*
           var xAccountApiKey = "xAccountApiKey_example";
           var subAccountId = 789;
-          var body = new SendPostApi.ModelsSubAccount();
-          body.apiKey = "";
-          body.created = "0";
-          body.id = "0";
+          var body = new SendPostApi.ModelsESubAccount();
           body.name = "";
-          body.type = new SendPostApi.ModelsSubAccountType();
 
           instance.subAccountRouterUpdate(xAccountApiKey, subAccountId, body, function(error, data, response) {
             if (error) {

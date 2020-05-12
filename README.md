@@ -187,6 +187,8 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsEIP](docs/ModelsEIP.md)
  - [SendPostApi.ModelsEIPPool](docs/ModelsEIPPool.md)
  - [SendPostApi.ModelsESender](docs/ModelsESender.md)
+ - [SendPostApi.ModelsESubAccount](docs/ModelsESubAccount.md)
+ - [SendPostApi.ModelsEWebhook](docs/ModelsEWebhook.md)
  - [SendPostApi.ModelsEmailErrorCode](docs/ModelsEmailErrorCode.md)
  - [SendPostApi.ModelsEmailMessage](docs/ModelsEmailMessage.md)
  - [SendPostApi.ModelsEmailResponse](docs/ModelsEmailResponse.md)

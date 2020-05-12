@@ -41,14 +41,12 @@
           // TODO: uncomment, update parameter values for webhookRouterCreate call and complete the assertions
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
-          var body = new SendPostApi.ModelsWebhook();
+          var body = new SendPostApi.ModelsEWebhook();
           body.clicked = false;
-          body.created = "0";
           body.delivered = false;
           body.dropped = false;
           body.enabled = false;
           body.hardBounced = false;
-          body.id = "0";
           body.opened = false;
           body.processed = false;
           body.softBounced = false;
@@ -230,14 +228,12 @@
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
           var webhookId = 789;
-          var body = new SendPostApi.ModelsWebhook();
+          var body = new SendPostApi.ModelsEWebhook();
           body.clicked = false;
-          body.created = "0";
           body.delivered = false;
           body.dropped = false;
           body.enabled = false;
           body.hardBounced = false;
-          body.id = "0";
           body.opened = false;
           body.processed = false;
           body.softBounced = false;

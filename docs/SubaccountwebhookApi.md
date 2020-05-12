@@ -27,7 +27,7 @@ var apiInstance = new SendPostApi.SubaccountwebhookApi();
 
 var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
 
-var body = new SendPostApi.ModelsWebhook(); // ModelsWebhook | The Webhook content
+var body = new SendPostApi.ModelsEWebhook(); // ModelsEWebhook | The Webhook content
 
 
 var callback = function(error, data, response) {
@@ -45,7 +45,7 @@ apiInstance.webhookRouterCreate(xSubAccountApiKey, body, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **body** | [**ModelsWebhook**](ModelsWebhook.md)| The Webhook content | 
+ **body** | [**ModelsEWebhook**](ModelsEWebhook.md)| The Webhook content | 
 
 ### Return type
 
@@ -222,7 +222,7 @@ var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API
 
 var webhookId = 789; // Number | The WebhookId you want to update
 
-var body = new SendPostApi.ModelsWebhook(); // ModelsWebhook | The body
+var body = new SendPostApi.ModelsEWebhook(); // ModelsEWebhook | The body
 
 
 var callback = function(error, data, response) {
@@ -241,7 +241,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
  **webhookId** | **Number**| The WebhookId you want to update | 
- **body** | [**ModelsWebhook**](ModelsWebhook.md)| The body | 
+ **body** | [**ModelsEWebhook**](ModelsEWebhook.md)| The body | 
 
 ### Return type
 

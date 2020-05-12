@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsDeleteResponse', 'model/ModelsSubAccount'], factory);
+    define(['ApiClient', 'model/ModelsDeleteResponse', 'model/ModelsESubAccount', 'model/ModelsSubAccount'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsDeleteResponse'), require('../model/ModelsSubAccount'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsDeleteResponse'), require('../model/ModelsESubAccount'), require('../model/ModelsSubAccount'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.AccountsubaccountApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsSubAccount);
+    root.SendPostApi.AccountsubaccountApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsESubAccount, root.SendPostApi.ModelsSubAccount);
   }
-}(this, function(ApiClient, ModelsDeleteResponse, ModelsSubAccount) {
+}(this, function(ApiClient, ModelsDeleteResponse, ModelsESubAccount, ModelsSubAccount) {
   'use strict';
 
   /**
@@ -59,7 +59,7 @@
     /**
      * Create SubAccount
      * @param {String} xAccountApiKey Account API Key
-     * @param {module:model/ModelsSubAccount} body The SubAccount content
+     * @param {module:model/ModelsESubAccount} body The SubAccount content
      * @param {module:api/AccountsubaccountApi~subAccountRouterCreateCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsSubAccount}
      */
@@ -268,7 +268,7 @@
      * Update SubAccount
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} subAccountId The SubAccountId you want to update
-     * @param {module:model/ModelsSubAccount} body The body
+     * @param {module:model/ModelsESubAccount} body The body
      * @param {module:api/AccountsubaccountApi~subAccountRouterUpdateCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsSubAccount}
      */

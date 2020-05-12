@@ -27,7 +27,7 @@ var apiInstance = new SendPostApi.AccountsubaccountApi();
 
 var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
-var body = new SendPostApi.ModelsSubAccount(); // ModelsSubAccount | The SubAccount content
+var body = new SendPostApi.ModelsESubAccount(); // ModelsESubAccount | The SubAccount content
 
 
 var callback = function(error, data, response) {
@@ -45,7 +45,7 @@ apiInstance.subAccountRouterCreate(xAccountApiKey, body, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
- **body** | [**ModelsSubAccount**](ModelsSubAccount.md)| The SubAccount content | 
+ **body** | [**ModelsESubAccount**](ModelsESubAccount.md)| The SubAccount content | 
 
 ### Return type
 
@@ -222,7 +222,7 @@ var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var subAccountId = 789; // Number | The SubAccountId you want to update
 
-var body = new SendPostApi.ModelsSubAccount(); // ModelsSubAccount | The body
+var body = new SendPostApi.ModelsESubAccount(); // ModelsESubAccount | The body
 
 
 var callback = function(error, data, response) {
@@ -241,7 +241,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
  **subAccountId** | **Number**| The SubAccountId you want to update | 
- **body** | [**ModelsSubAccount**](ModelsSubAccount.md)| The body | 
+ **body** | [**ModelsESubAccount**](ModelsESubAccount.md)| The body | 
 
 ### Return type
 

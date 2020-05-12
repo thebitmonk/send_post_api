@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsDeleteResponse', 'model/ModelsWebhook'], factory);
+    define(['ApiClient', 'model/ModelsDeleteResponse', 'model/ModelsEWebhook', 'model/ModelsWebhook'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsDeleteResponse'), require('../model/ModelsWebhook'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsDeleteResponse'), require('../model/ModelsEWebhook'), require('../model/ModelsWebhook'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.SubaccountwebhookApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsWebhook);
+    root.SendPostApi.SubaccountwebhookApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsEWebhook, root.SendPostApi.ModelsWebhook);
   }
-}(this, function(ApiClient, ModelsDeleteResponse, ModelsWebhook) {
+}(this, function(ApiClient, ModelsDeleteResponse, ModelsEWebhook, ModelsWebhook) {
   'use strict';
 
   /**
@@ -59,7 +59,7 @@
     /**
      * Create Webhook
      * @param {String} xSubAccountApiKey Sub-Account API Key
-     * @param {module:model/ModelsWebhook} body The Webhook content
+     * @param {module:model/ModelsEWebhook} body The Webhook content
      * @param {module:api/SubaccountwebhookApi~webhookRouterCreateCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsWebhook}
      */
@@ -268,7 +268,7 @@
      * Update Webhook
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Number} webhookId The WebhookId you want to update
-     * @param {module:model/ModelsWebhook} body The body
+     * @param {module:model/ModelsEWebhook} body The body
      * @param {module:api/SubaccountwebhookApi~webhookRouterUpdateCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsWebhook}
      */
