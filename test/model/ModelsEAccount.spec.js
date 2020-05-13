@@ -53,6 +53,12 @@
         // expect(instance.token).to.be(expectedValueLiteral);
       });
 
+      it('should have the property uid (base name: "uid")', function() {
+        // TODO: update the code to test the property uid
+        expect(instance).to.have.property('uid');
+        // expect(instance.uid).to.be(expectedValueLiteral);
+      });
+
     });
   });
 

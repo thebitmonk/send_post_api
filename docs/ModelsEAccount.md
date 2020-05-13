@@ -5,5 +5,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **email** | **String** |  | [optional] 
 **token** | **String** |  | [optional] 
+**uid** | **String** |  | [optional] 
 
 

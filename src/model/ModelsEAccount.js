@@ -59,6 +59,8 @@
         obj.email = ApiClient.convertToType(data['email'], 'String');
       if (data.hasOwnProperty('token'))
         obj.token = ApiClient.convertToType(data['token'], 'String');
+      if (data.hasOwnProperty('uid'))
+        obj.uid = ApiClient.convertToType(data['uid'], 'String');
     }
     return obj;
   }
@@ -72,6 +74,11 @@
    * @member {String} token
    */
   exports.prototype.token = undefined;
+
+  /**
+   * @member {String} uid
+   */
+  exports.prototype.uid = undefined;
 
   return exports;
 

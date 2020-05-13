@@ -43,6 +43,7 @@
           var body = new SendPostApi.ModelsEAccount();
           body.email = "";
           body.token = "";
+          body.uid = "";
           var xToken = "xToken_example";
 
           instance.accountRouterCreate(body, xToken, function(error, data, response) {
