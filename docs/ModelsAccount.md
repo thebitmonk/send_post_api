@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **apiKey** | **String** |  | [optional] 
-**email** | **String** |  | [optional] 
-**verificationStatus** | **Boolean** |  | [optional] 
 **created** | **Number** |  | [optional] 
+**email** | **String** |  | [optional] 
 **id** | **Number** |  | [optional] 
+**verificationStatus** | **Boolean** |  | [optional] 
 
 

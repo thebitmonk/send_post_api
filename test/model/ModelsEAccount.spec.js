@@ -31,20 +31,26 @@
   var instance;
 
   describe('(package)', function() {
-    describe('ModelsEIP', function() {
+    describe('ModelsEAccount', function() {
       beforeEach(function() {
-        instance = new SendPostApi.ModelsEIP();
+        instance = new SendPostApi.ModelsEAccount();
       });
 
-      it('should create an instance of ModelsEIP', function() {
-        // TODO: update the code to test ModelsEIP
-        expect(instance).to.be.a(SendPostApi.ModelsEIP);
+      it('should create an instance of ModelsEAccount', function() {
+        // TODO: update the code to test ModelsEAccount
+        expect(instance).to.be.a(SendPostApi.ModelsEAccount);
       });
 
-      it('should have the property publicIP (base name: "publicIP")', function() {
-        // TODO: update the code to test the property publicIP
-        expect(instance).to.have.property('publicIP');
-        // expect(instance.publicIP).to.be(expectedValueLiteral);
+      it('should have the property email (base name: "email")', function() {
+        // TODO: update the code to test the property email
+        expect(instance).to.have.property('email');
+        // expect(instance.email).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property token (base name: "token")', function() {
+        // TODO: update the code to test the property token
+        expect(instance).to.have.property('token');
+        // expect(instance.token).to.be(expectedValueLiteral);
       });
 
     });

@@ -26,58 +26,42 @@
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsAccount = factory(root.SendPostApi.ApiClient);
+    root.SendPostApi.ModelsEAccount = factory(root.SendPostApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The ModelsAccount model module.
-   * @module model/ModelsAccount
+   * The ModelsEAccount model module.
+   * @module model/ModelsEAccount
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>ModelsAccount</code>.
-   * @alias module:model/ModelsAccount
+   * Constructs a new <code>ModelsEAccount</code>.
+   * @alias module:model/ModelsEAccount
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>ModelsAccount</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ModelsEAccount</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ModelsAccount} obj Optional instance to populate.
-   * @return {module:model/ModelsAccount} The populated <code>ModelsAccount</code> instance.
+   * @param {module:model/ModelsEAccount} obj Optional instance to populate.
+   * @return {module:model/ModelsEAccount} The populated <code>ModelsEAccount</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('apiKey'))
-        obj.apiKey = ApiClient.convertToType(data['apiKey'], 'String');
-      if (data.hasOwnProperty('created'))
-        obj.created = ApiClient.convertToType(data['created'], 'Number');
       if (data.hasOwnProperty('email'))
         obj.email = ApiClient.convertToType(data['email'], 'String');
-      if (data.hasOwnProperty('id'))
-        obj.id = ApiClient.convertToType(data['id'], 'Number');
-      if (data.hasOwnProperty('verificationStatus'))
-        obj.verificationStatus = ApiClient.convertToType(data['verificationStatus'], 'Boolean');
+      if (data.hasOwnProperty('token'))
+        obj.token = ApiClient.convertToType(data['token'], 'String');
     }
     return obj;
   }
-
-  /**
-   * @member {String} apiKey
-   */
-  exports.prototype.apiKey = undefined;
-
-  /**
-   * @member {Number} created
-   */
-  exports.prototype.created = undefined;
 
   /**
    * @member {String} email
@@ -85,14 +69,9 @@
   exports.prototype.email = undefined;
 
   /**
-   * @member {Number} id
+   * @member {String} token
    */
-  exports.prototype.id = undefined;
-
-  /**
-   * @member {Boolean} verificationStatus
-   */
-  exports.prototype.verificationStatus = undefined;
+  exports.prototype.token = undefined;
 
   return exports;
 

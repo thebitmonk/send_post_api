@@ -41,22 +41,10 @@
         expect(instance).to.be.a(SendPostApi.ModelsAccount);
       });
 
-      it('should have the property apiKey (base name: "ApiKey")', function() {
+      it('should have the property apiKey (base name: "apiKey")', function() {
         // TODO: update the code to test the property apiKey
         expect(instance).to.have.property('apiKey');
         // expect(instance.apiKey).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property email (base name: "Email")', function() {
-        // TODO: update the code to test the property email
-        expect(instance).to.have.property('email');
-        // expect(instance.email).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property verificationStatus (base name: "VerificationStatus")', function() {
-        // TODO: update the code to test the property verificationStatus
-        expect(instance).to.have.property('verificationStatus');
-        // expect(instance.verificationStatus).to.be(expectedValueLiteral);
       });
 
       it('should have the property created (base name: "created")', function() {
@@ -65,10 +53,22 @@
         // expect(instance.created).to.be(expectedValueLiteral);
       });
 
+      it('should have the property email (base name: "email")', function() {
+        // TODO: update the code to test the property email
+        expect(instance).to.have.property('email');
+        // expect(instance.email).to.be(expectedValueLiteral);
+      });
+
       it('should have the property id (base name: "id")', function() {
         // TODO: update the code to test the property id
         expect(instance).to.have.property('id');
         // expect(instance.id).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property verificationStatus (base name: "verificationStatus")', function() {
+        // TODO: update the code to test the property verificationStatus
+        expect(instance).to.have.property('verificationStatus');
+        // expect(instance.verificationStatus).to.be(expectedValueLiteral);
       });
 
     });

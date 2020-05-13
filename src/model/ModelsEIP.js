@@ -55,16 +55,16 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('public_ip'))
-        obj.publicIp = ApiClient.convertToType(data['public_ip'], 'String');
+      if (data.hasOwnProperty('publicIP'))
+        obj.publicIP = ApiClient.convertToType(data['publicIP'], 'String');
     }
     return obj;
   }
 
   /**
-   * @member {String} publicIp
+   * @member {String} publicIP
    */
-  exports.prototype.publicIp = undefined;
+  exports.prototype.publicIP = undefined;
 
   return exports;
 

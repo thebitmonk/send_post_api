@@ -1,8 +1,9 @@
-# SendPostApi.ModelsEIP
+# SendPostApi.ModelsEAccount
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**publicIP** | **String** |  | [optional] 
+**email** | **String** |  | [optional] 
+**token** | **String** |  | [optional] 
 
 

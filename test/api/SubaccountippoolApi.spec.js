@@ -43,7 +43,7 @@
           var xSubAccountApiKey = "xSubAccountApiKey_example";
           var body = new SendPostApi.ModelsEIPPool();
           body.ips = [new SendPostApi.ModelsEIP()];
-          body.ips[0].publicIp = "";
+          body.ips[0].publicIP = "";
           body.name = "";
           body.overflowPool = false;
 
@@ -233,7 +233,7 @@
           var ippoolid = 789;
           var body = new SendPostApi.ModelsEIPPool();
           body.ips = [new SendPostApi.ModelsEIP()];
-          body.ips[0].publicIp = "";
+          body.ips[0].publicIP = "";
           body.name = "";
           body.overflowPool = false;
 

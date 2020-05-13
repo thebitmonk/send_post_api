@@ -95,9 +95,11 @@ Please follow the [installation](#installation) instruction and execute the foll
 ```javascript
 var SendPostApi = require('send_post_api');
 
-var api = new SendPostApi.AccountipApi()
+var api = new SendPostApi.AccountcreateApi()
 
-var xAccountApiKey = "xAccountApiKey_example"; // {String} Account API Key
+var body = new SendPostApi.ModelsEAccount(); // {ModelsEAccount} The Account content
+
+var xToken = "xToken_example"; // {String} Firebase dynamic token
 
 
 var callback = function(error, data, response) {
@@ -107,7 +109,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.iPRouterAllocateIP(xAccountApiKey, callback);
+api.accountRouterCreate(body, xToken, callback);
 
 ```
 
@@ -117,6 +119,7 @@ All URIs are relative to *http://127.0.0.1:8080/api/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*SendPostApi.AccountcreateApi* | [**accountRouterCreate**](docs/AccountcreateApi.md#accountRouterCreate) | **POST** /account/create/ | 
 *SendPostApi.AccountipApi* | [**iPRouterAllocateIP**](docs/AccountipApi.md#iPRouterAllocateIP) | **POST** /account/ip/allocate | 
 *SendPostApi.AccountipApi* | [**iPRouterDelete**](docs/AccountipApi.md#iPRouterDelete) | **DELETE** /account/ip/{ipid} | 
 *SendPostApi.AccountipApi* | [**iPRouterGet**](docs/AccountipApi.md#iPRouterGet) | **GET** /account/ip/{ipid} | 
@@ -183,6 +186,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsDNSRecord](docs/ModelsDNSRecord.md)
  - [SendPostApi.ModelsDeleteResponse](docs/ModelsDeleteResponse.md)
  - [SendPostApi.ModelsDomain](docs/ModelsDomain.md)
+ - [SendPostApi.ModelsEAccount](docs/ModelsEAccount.md)
  - [SendPostApi.ModelsEDomain](docs/ModelsEDomain.md)
  - [SendPostApi.ModelsEIP](docs/ModelsEIP.md)
  - [SendPostApi.ModelsEIPPool](docs/ModelsEIPPool.md)
