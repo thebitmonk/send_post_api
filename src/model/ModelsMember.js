@@ -59,16 +59,10 @@
         obj.email = ApiClient.convertToType(data['Email'], 'String');
       if (data.hasOwnProperty('Id'))
         obj.id = ApiClient.convertToType(data['Id'], 'Number');
-      if (data.hasOwnProperty('IsActive'))
-        obj.isActive = ApiClient.convertToType(data['IsActive'], 'Boolean');
-      if (data.hasOwnProperty('IsForbid'))
-        obj.isForbid = ApiClient.convertToType(data['IsForbid'], 'Boolean');
-      if (data.hasOwnProperty('Password'))
-        obj.password = ApiClient.convertToType(data['Password'], 'String');
-      if (data.hasOwnProperty('Rands'))
-        obj.rands = ApiClient.convertToType(data['Rands'], 'String');
-      if (data.hasOwnProperty('UserName'))
-        obj.userName = ApiClient.convertToType(data['UserName'], 'String');
+      if (data.hasOwnProperty('IsForbidden'))
+        obj.isForbidden = ApiClient.convertToType(data['IsForbidden'], 'Boolean');
+      if (data.hasOwnProperty('IsVerified'))
+        obj.isVerified = ApiClient.convertToType(data['IsVerified'], 'Boolean');
       if (data.hasOwnProperty('created'))
         obj.created = ApiClient.convertToType(data['created'], 'Number');
     }
@@ -86,29 +80,14 @@
   exports.prototype.id = undefined;
 
   /**
-   * @member {Boolean} isActive
+   * @member {Boolean} isForbidden
    */
-  exports.prototype.isActive = undefined;
+  exports.prototype.isForbidden = undefined;
 
   /**
-   * @member {Boolean} isForbid
+   * @member {Boolean} isVerified
    */
-  exports.prototype.isForbid = undefined;
-
-  /**
-   * @member {String} password
-   */
-  exports.prototype.password = undefined;
-
-  /**
-   * @member {String} rands
-   */
-  exports.prototype.rands = undefined;
-
-  /**
-   * @member {String} userName
-   */
-  exports.prototype.userName = undefined;
+  exports.prototype.isVerified = undefined;
 
   /**
    * @member {Number} created

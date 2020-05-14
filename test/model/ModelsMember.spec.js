@@ -53,34 +53,16 @@
         // expect(instance.id).to.be(expectedValueLiteral);
       });
 
-      it('should have the property isActive (base name: "IsActive")', function() {
-        // TODO: update the code to test the property isActive
-        expect(instance).to.have.property('isActive');
-        // expect(instance.isActive).to.be(expectedValueLiteral);
+      it('should have the property isForbidden (base name: "IsForbidden")', function() {
+        // TODO: update the code to test the property isForbidden
+        expect(instance).to.have.property('isForbidden');
+        // expect(instance.isForbidden).to.be(expectedValueLiteral);
       });
 
-      it('should have the property isForbid (base name: "IsForbid")', function() {
-        // TODO: update the code to test the property isForbid
-        expect(instance).to.have.property('isForbid');
-        // expect(instance.isForbid).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property password (base name: "Password")', function() {
-        // TODO: update the code to test the property password
-        expect(instance).to.have.property('password');
-        // expect(instance.password).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property rands (base name: "Rands")', function() {
-        // TODO: update the code to test the property rands
-        expect(instance).to.have.property('rands');
-        // expect(instance.rands).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property userName (base name: "UserName")', function() {
-        // TODO: update the code to test the property userName
-        expect(instance).to.have.property('userName');
-        // expect(instance.userName).to.be(expectedValueLiteral);
+      it('should have the property isVerified (base name: "IsVerified")', function() {
+        // TODO: update the code to test the property isVerified
+        expect(instance).to.have.property('isVerified');
+        // expect(instance.isVerified).to.be(expectedValueLiteral);
       });
 
       it('should have the property created (base name: "created")', function() {

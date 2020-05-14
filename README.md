@@ -95,11 +95,9 @@ Please follow the [installation](#installation) instruction and execute the foll
 ```javascript
 var SendPostApi = require('send_post_api');
 
-var api = new SendPostApi.AccountgetorcreateApi()
+var api = new SendPostApi.AccountipApi()
 
-var body = new SendPostApi.ModelsEAccount(); // {ModelsEAccount} The Account content
-
-var xToken = "xToken_example"; // {String} Firebase dynamic token
+var xAccountApiKey = "xAccountApiKey_example"; // {String} Account API Key
 
 
 var callback = function(error, data, response) {
@@ -109,7 +107,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.accountRouterCreate(body, xToken, callback);
+api.iPRouterAllocateIP(xAccountApiKey, callback);
 
 ```
 
@@ -119,7 +117,6 @@ All URIs are relative to *http://127.0.0.1:8080/api/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*SendPostApi.AccountgetorcreateApi* | [**accountRouterCreate**](docs/AccountgetorcreateApi.md#accountRouterCreate) | **POST** /account/getorcreate/ | 
 *SendPostApi.AccountipApi* | [**iPRouterAllocateIP**](docs/AccountipApi.md#iPRouterAllocateIP) | **POST** /account/ip/allocate | 
 *SendPostApi.AccountipApi* | [**iPRouterDelete**](docs/AccountipApi.md#iPRouterDelete) | **DELETE** /account/ip/{ipid} | 
 *SendPostApi.AccountipApi* | [**iPRouterGet**](docs/AccountipApi.md#iPRouterGet) | **GET** /account/ip/{ipid} | 
@@ -134,6 +131,8 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterGet**](docs/AccountsubaccountApi.md#subAccountRouterGet) | **GET** /account/subaccount/{subAccountId} | 
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterGetAll**](docs/AccountsubaccountApi.md#subAccountRouterGetAll) | **GET** /account/subaccount/ | 
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterUpdate**](docs/AccountsubaccountApi.md#subAccountRouterUpdate) | **PUT** /account/subaccount/{subAccountId} | 
+*SendPostApi.AuthApi* | [**authRouterCreate**](docs/AuthApi.md#authRouterCreate) | **POST** /auth/ | 
+*SendPostApi.AuthApi* | [**authRouterGet**](docs/AuthApi.md#authRouterGet) | **GET** /auth/ | 
 *SendPostApi.ClusterApi* | [**clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster**](docs/ClusterApi.md#clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster) | **POST** /cluster/suppression/filter | 
 *SendPostApi.ClusterApi* | [**clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster**](docs/ClusterApi.md#clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster) | **DELETE** /cluster/suppression/filter | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterCreate**](docs/SubaccountdomainApi.md#domainRouterCreate) | **POST** /subaccount/domain/ | 
@@ -183,6 +182,7 @@ Class | Method | HTTP request | Description
 
  - [SendPostApi.Geoip2City](docs/Geoip2City.md)
  - [SendPostApi.ModelsAccount](docs/ModelsAccount.md)
+ - [SendPostApi.ModelsAuthInfo](docs/ModelsAuthInfo.md)
  - [SendPostApi.ModelsDNSRecord](docs/ModelsDNSRecord.md)
  - [SendPostApi.ModelsDeleteResponse](docs/ModelsDeleteResponse.md)
  - [SendPostApi.ModelsDomain](docs/ModelsDomain.md)
@@ -203,6 +203,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsIPPool](docs/ModelsIPPool.md)
  - [SendPostApi.ModelsIPPoolType](docs/ModelsIPPoolType.md)
  - [SendPostApi.ModelsIPType](docs/ModelsIPType.md)
+ - [SendPostApi.ModelsMember](docs/ModelsMember.md)
  - [SendPostApi.ModelsQEmailMessage](docs/ModelsQEmailMessage.md)
  - [SendPostApi.ModelsQEvent](docs/ModelsQEvent.md)
  - [SendPostApi.ModelsRDSuppression](docs/ModelsRDSuppression.md)
