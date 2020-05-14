@@ -72,9 +72,9 @@
           done();
         });
       });
-      describe('authRouterGet', function() {
-        it('should call authRouterGet successfully', function(done) {
-          // TODO: uncomment, update parameter values for authRouterGet call and complete the assertions
+      describe('authRouterGetAuthInfo', function() {
+        it('should call authRouterGetAuthInfo successfully', function(done) {
+          // TODO: uncomment, update parameter values for authRouterGetAuthInfo call and complete the assertions
           /*
           var body = new SendPostApi.ModelsEAccount();
           body.email = "";
@@ -83,7 +83,7 @@
           body.uid = "";
           var xToken = "xToken_example";
 
-          instance.authRouterGet(body, xToken, function(error, data, response) {
+          instance.authRouterGetAuthInfo(body, xToken, function(error, data, response) {
             if (error) {
               done(error);
               return;

@@ -95,15 +95,15 @@
       var returnType = ModelsAccount;
 
       return this.apiClient.callApi(
-        '/auth/', 'POST',
+        '/auth/create', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
     }
 
     /**
-     * Callback function to receive the result of the authRouterGet operation.
-     * @callback module:api/AuthApi~authRouterGetCallback
+     * Callback function to receive the result of the authRouterGetAuthInfo operation.
+     * @callback module:api/AuthApi~authRouterGetAuthInfoCallback
      * @param {String} error Error message, if any.
      * @param {module:model/ModelsAuthInfo} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -113,20 +113,20 @@
      * Get Auth Info Details
      * @param {module:model/ModelsEAccount} body The Account content
      * @param {String} xToken Firebase dynamic token
-     * @param {module:api/AuthApi~authRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/AuthApi~authRouterGetAuthInfoCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsAuthInfo}
      */
-    this.authRouterGet = function(body, xToken, callback) {
+    this.authRouterGetAuthInfo = function(body, xToken, callback) {
       var postBody = body;
 
       // verify the required parameter 'body' is set
       if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling authRouterGet");
+        throw new Error("Missing the required parameter 'body' when calling authRouterGetAuthInfo");
       }
 
       // verify the required parameter 'xToken' is set
       if (xToken === undefined || xToken === null) {
-        throw new Error("Missing the required parameter 'xToken' when calling authRouterGet");
+        throw new Error("Missing the required parameter 'xToken' when calling authRouterGetAuthInfo");
       }
 
 
@@ -148,7 +148,7 @@
       var returnType = ModelsAuthInfo;
 
       return this.apiClient.callApi(
-        '/auth/', 'GET',
+        '/auth/info', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

@@ -4,8 +4,8 @@ All URIs are relative to *http://127.0.0.1:8080/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**authRouterCreate**](AuthApi.md#authRouterCreate) | **POST** /auth/ | 
-[**authRouterGet**](AuthApi.md#authRouterGet) | **GET** /auth/ | 
+[**authRouterCreate**](AuthApi.md#authRouterCreate) | **POST** /auth/create | 
+[**authRouterGetAuthInfo**](AuthApi.md#authRouterGetAuthInfo) | **POST** /auth/info | 
 
 
 <a name="authRouterCreate"></a>
@@ -57,9 +57,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="authRouterGet"></a>
-# **authRouterGet**
-> ModelsAuthInfo authRouterGet(body, xToken)
+<a name="authRouterGetAuthInfo"></a>
+# **authRouterGetAuthInfo**
+> ModelsAuthInfo authRouterGetAuthInfo(body, xToken)
 
 
 
@@ -83,7 +83,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.authRouterGet(body, xToken, callback);
+apiInstance.authRouterGetAuthInfo(body, xToken, callback);
 ```
 
 ### Parameters
