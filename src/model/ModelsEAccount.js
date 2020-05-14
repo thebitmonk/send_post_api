@@ -57,6 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('email'))
         obj.email = ApiClient.convertToType(data['email'], 'String');
+      if (data.hasOwnProperty('signupMode'))
+        obj.signupMode = ApiClient.convertToType(data['signupMode'], 'String');
       if (data.hasOwnProperty('token'))
         obj.token = ApiClient.convertToType(data['token'], 'String');
       if (data.hasOwnProperty('uid'))
@@ -69,6 +71,11 @@
    * @member {String} email
    */
   exports.prototype.email = undefined;
+
+  /**
+   * @member {String} signupMode
+   */
+  exports.prototype.signupMode = undefined;
 
   /**
    * @member {String} token

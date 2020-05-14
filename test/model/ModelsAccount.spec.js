@@ -53,22 +53,22 @@
         // expect(instance.created).to.be(expectedValueLiteral);
       });
 
-      it('should have the property email (base name: "email")', function() {
-        // TODO: update the code to test the property email
-        expect(instance).to.have.property('email');
-        // expect(instance.email).to.be(expectedValueLiteral);
-      });
-
       it('should have the property id (base name: "id")', function() {
         // TODO: update the code to test the property id
         expect(instance).to.have.property('id');
         // expect(instance.id).to.be(expectedValueLiteral);
       });
 
-      it('should have the property verificationStatus (base name: "verificationStatus")', function() {
-        // TODO: update the code to test the property verificationStatus
-        expect(instance).to.have.property('verificationStatus');
-        // expect(instance.verificationStatus).to.be(expectedValueLiteral);
+      it('should have the property name (base name: "name")', function() {
+        // TODO: update the code to test the property name
+        expect(instance).to.have.property('name');
+        // expect(instance.name).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property url (base name: "url")', function() {
+        // TODO: update the code to test the property url
+        expect(instance).to.have.property('url');
+        // expect(instance.url).to.be(expectedValueLiteral);
       });
 
     });

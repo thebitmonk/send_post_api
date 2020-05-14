@@ -47,6 +47,12 @@
         // expect(instance.email).to.be(expectedValueLiteral);
       });
 
+      it('should have the property signupMode (base name: "signupMode")', function() {
+        // TODO: update the code to test the property signupMode
+        expect(instance).to.have.property('signupMode');
+        // expect(instance.signupMode).to.be(expectedValueLiteral);
+      });
+
       it('should have the property token (base name: "token")', function() {
         // TODO: update the code to test the property token
         expect(instance).to.have.property('token');

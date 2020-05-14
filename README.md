@@ -95,7 +95,7 @@ Please follow the [installation](#installation) instruction and execute the foll
 ```javascript
 var SendPostApi = require('send_post_api');
 
-var api = new SendPostApi.AccountcreateApi()
+var api = new SendPostApi.AccountgetorcreateApi()
 
 var body = new SendPostApi.ModelsEAccount(); // {ModelsEAccount} The Account content
 
@@ -119,7 +119,7 @@ All URIs are relative to *http://127.0.0.1:8080/api/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*SendPostApi.AccountcreateApi* | [**accountRouterCreate**](docs/AccountcreateApi.md#accountRouterCreate) | **POST** /account/create/ | 
+*SendPostApi.AccountgetorcreateApi* | [**accountRouterCreate**](docs/AccountgetorcreateApi.md#accountRouterCreate) | **POST** /account/getorcreate/ | 
 *SendPostApi.AccountipApi* | [**iPRouterAllocateIP**](docs/AccountipApi.md#iPRouterAllocateIP) | **POST** /account/ip/allocate | 
 *SendPostApi.AccountipApi* | [**iPRouterDelete**](docs/AccountipApi.md#iPRouterDelete) | **DELETE** /account/ip/{ipid} | 
 *SendPostApi.AccountipApi* | [**iPRouterGet**](docs/AccountipApi.md#iPRouterGet) | **GET** /account/ip/{ipid} | 
@@ -203,7 +203,6 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsIPPool](docs/ModelsIPPool.md)
  - [SendPostApi.ModelsIPPoolType](docs/ModelsIPPoolType.md)
  - [SendPostApi.ModelsIPType](docs/ModelsIPType.md)
- - [SendPostApi.ModelsMember](docs/ModelsMember.md)
  - [SendPostApi.ModelsQEmailMessage](docs/ModelsQEmailMessage.md)
  - [SendPostApi.ModelsQEvent](docs/ModelsQEvent.md)
  - [SendPostApi.ModelsRDSuppression](docs/ModelsRDSuppression.md)

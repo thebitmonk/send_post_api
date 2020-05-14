@@ -59,12 +59,12 @@
         obj.apiKey = ApiClient.convertToType(data['apiKey'], 'String');
       if (data.hasOwnProperty('created'))
         obj.created = ApiClient.convertToType(data['created'], 'Number');
-      if (data.hasOwnProperty('email'))
-        obj.email = ApiClient.convertToType(data['email'], 'String');
       if (data.hasOwnProperty('id'))
         obj.id = ApiClient.convertToType(data['id'], 'Number');
-      if (data.hasOwnProperty('verificationStatus'))
-        obj.verificationStatus = ApiClient.convertToType(data['verificationStatus'], 'Boolean');
+      if (data.hasOwnProperty('name'))
+        obj.name = ApiClient.convertToType(data['name'], 'String');
+      if (data.hasOwnProperty('url'))
+        obj.url = ApiClient.convertToType(data['url'], 'String');
     }
     return obj;
   }
@@ -80,19 +80,19 @@
   exports.prototype.created = undefined;
 
   /**
-   * @member {String} email
-   */
-  exports.prototype.email = undefined;
-
-  /**
    * @member {Number} id
    */
   exports.prototype.id = undefined;
 
   /**
-   * @member {Boolean} verificationStatus
+   * @member {String} name
    */
-  exports.prototype.verificationStatus = undefined;
+  exports.prototype.name = undefined;
+
+  /**
+   * @member {String} url
+   */
+  exports.prototype.url = undefined;
 
   return exports;
 
