@@ -157,7 +157,7 @@ No authorization required
 
 <a name="iPRouterGetAll"></a>
 # **iPRouterGetAll**
-> [ModelsIP] iPRouterGetAll(xAccountApiKey)
+> [ModelsIP] iPRouterGetAll(xAccountApiKey, opts)
 
 
 
@@ -171,6 +171,11 @@ var apiInstance = new SendPostApi.AccountipApi();
 
 var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
+var opts = { 
+  'offset': 789, // Number | offset
+  'limit': 789, // Number | limit
+  'search': "search_example" // String | search term
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -179,7 +184,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.iPRouterGetAll(xAccountApiKey, callback);
+apiInstance.iPRouterGetAll(xAccountApiKey, opts, callback);
 ```
 
 ### Parameters
@@ -187,6 +192,9 @@ apiInstance.iPRouterGetAll(xAccountApiKey, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
+ **offset** | **Number**| offset | [optional] 
+ **limit** | **Number**| limit | [optional] 
+ **search** | **String**| search term | [optional] 
 
 ### Return type
 

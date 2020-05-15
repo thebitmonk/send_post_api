@@ -255,10 +255,15 @@
     /**
      * Get all suppressions
      * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.offset offset
+     * @param {Number} opts.limit limit
+     * @param {String} opts.search search
      * @param {module:api/SubaccountsuppressionApi~suppressionRouterGetAllSuppressionsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsSuppression>}
      */
-    this.suppressionRouterGetAllSuppressions = function(xSubAccountApiKey, callback) {
+    this.suppressionRouterGetAllSuppressions = function(xSubAccountApiKey, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'xSubAccountApiKey' is set
@@ -270,6 +275,9 @@
       var pathParams = {
       };
       var queryParams = {
+        'offset': opts['offset'],
+        'limit': opts['limit'],
+        'search': opts['search'],
       };
       var collectionQueryParams = {
       };

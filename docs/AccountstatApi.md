@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="accountStatsRouterGetAllAccountStats"></a>
 # **accountStatsRouterGetAllAccountStats**
-> [ModelsRStats] accountStatsRouterGetAllAccountStats(xAccountApiKey)
+> [ModelsRStats] accountStatsRouterGetAllAccountStats(xAccountApiKey, opts)
 
 
 
@@ -26,6 +26,10 @@ var apiInstance = new SendPostApi.AccountstatApi();
 
 var xAccountApiKey = "xAccountApiKey_example"; // String | Sub-Account API Key
 
+var opts = { 
+  'from': "from_example", // String | from date
+  'to': "to_example" // String | to date
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -34,7 +38,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.accountStatsRouterGetAllAccountStats(xAccountApiKey, callback);
+apiInstance.accountStatsRouterGetAllAccountStats(xAccountApiKey, opts, callback);
 ```
 
 ### Parameters
@@ -42,6 +46,8 @@ apiInstance.accountStatsRouterGetAllAccountStats(xAccountApiKey, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Sub-Account API Key | 
+ **from** | **String**| from date | [optional] 
+ **to** | **String**| to date | [optional] 
 
 ### Return type
 
@@ -58,7 +64,7 @@ No authorization required
 
 <a name="accountStatsRouterGetAllAccountStatsByGroup"></a>
 # **accountStatsRouterGetAllAccountStatsByGroup**
-> [ModelsRStats] accountStatsRouterGetAllAccountStatsByGroup(xAccountApiKey, group)
+> [ModelsRStats] accountStatsRouterGetAllAccountStatsByGroup(xAccountApiKey, group, opts)
 
 
 
@@ -74,6 +80,10 @@ var xAccountApiKey = "xAccountApiKey_example"; // String | Sub-Account API Key
 
 var group = "group_example"; // String | the group whose stats you want
 
+var opts = { 
+  'from': "from_example", // String | from date
+  'to': "to_example" // String | to date
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -82,7 +92,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.accountStatsRouterGetAllAccountStatsByGroup(xAccountApiKey, group, callback);
+apiInstance.accountStatsRouterGetAllAccountStatsByGroup(xAccountApiKey, group, opts, callback);
 ```
 
 ### Parameters
@@ -91,6 +101,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Sub-Account API Key | 
  **group** | **String**| the group whose stats you want | 
+ **from** | **String**| from date | [optional] 
+ **to** | **String**| to date | [optional] 
 
 ### Return type
 
@@ -107,7 +119,7 @@ No authorization required
 
 <a name="accountStatsRouterGetAllAggregateAccountStats"></a>
 # **accountStatsRouterGetAllAggregateAccountStats**
-> ModelsStats accountStatsRouterGetAllAggregateAccountStats(xAccountApiKey)
+> ModelsStats accountStatsRouterGetAllAggregateAccountStats(xAccountApiKey, opts)
 
 
 
@@ -121,6 +133,10 @@ var apiInstance = new SendPostApi.AccountstatApi();
 
 var xAccountApiKey = "xAccountApiKey_example"; // String | Sub-Account API Key
 
+var opts = { 
+  'from': "from_example", // String | from date
+  'to': "to_example" // String | to date
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -129,7 +145,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.accountStatsRouterGetAllAggregateAccountStats(xAccountApiKey, callback);
+apiInstance.accountStatsRouterGetAllAggregateAccountStats(xAccountApiKey, opts, callback);
 ```
 
 ### Parameters
@@ -137,6 +153,8 @@ apiInstance.accountStatsRouterGetAllAggregateAccountStats(xAccountApiKey, callba
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Sub-Account API Key | 
+ **from** | **String**| from date | [optional] 
+ **to** | **String**| to date | [optional] 
 
 ### Return type
 
@@ -153,7 +171,7 @@ No authorization required
 
 <a name="accountStatsRouterGetAllAggregateAccountStatsByGroup"></a>
 # **accountStatsRouterGetAllAggregateAccountStatsByGroup**
-> ModelsStats accountStatsRouterGetAllAggregateAccountStatsByGroup(xAccountApiKey, group)
+> ModelsStats accountStatsRouterGetAllAggregateAccountStatsByGroup(xAccountApiKey, group, opts)
 
 
 
@@ -169,6 +187,10 @@ var xAccountApiKey = "xAccountApiKey_example"; // String | Sub-Account API Key
 
 var group = "group_example"; // String | the group whose stats you want
 
+var opts = { 
+  'from': "from_example", // String | from date
+  'to': "to_example" // String | to date
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -177,7 +199,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.accountStatsRouterGetAllAggregateAccountStatsByGroup(xAccountApiKey, group, callback);
+apiInstance.accountStatsRouterGetAllAggregateAccountStatsByGroup(xAccountApiKey, group, opts, callback);
 ```
 
 ### Parameters
@@ -186,6 +208,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Sub-Account API Key | 
  **group** | **String**| the group whose stats you want | 
+ **from** | **String**| from date | [optional] 
+ **to** | **String**| to date | [optional] 
 
 ### Return type
 

@@ -114,8 +114,14 @@
           // TODO: uncomment, update parameter values for messageRouterGetAllMessagesFromASubAccountBasedOnTimeRange call and complete the assertions
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var opts = {};
+          opts.offset = 789;
+          opts.limit = 789;
+          opts.search = "search_example";
+          opts.from = "from_example";
+          opts.to = "to_example";
 
-          instance.messageRouterGetAllMessagesFromASubAccountBasedOnTimeRange(xSubAccountApiKey, function(error, data, response) {
+          instance.messageRouterGetAllMessagesFromASubAccountBasedOnTimeRange(xSubAccountApiKey, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;

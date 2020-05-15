@@ -130,8 +130,12 @@
           // TODO: uncomment, update parameter values for subAccountRouterGetAll call and complete the assertions
           /*
           var xAccountApiKey = "xAccountApiKey_example";
+          var opts = {};
+          opts.offset = 789;
+          opts.limit = 789;
+          opts.search = "search_example";
 
-          instance.subAccountRouterGetAll(xAccountApiKey, function(error, data, response) {
+          instance.subAccountRouterGetAll(xAccountApiKey, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;

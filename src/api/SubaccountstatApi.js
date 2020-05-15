@@ -59,10 +59,14 @@
     /**
      * Get All Aggregate Sub-Account Stats
      * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.from from date
+     * @param {String} opts.to to date
      * @param {module:api/SubaccountstatApi~subAccountStatsRouterGetAllAggregateSubAccountStatsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsStats}
      */
-    this.subAccountStatsRouterGetAllAggregateSubAccountStats = function(xSubAccountApiKey, callback) {
+    this.subAccountStatsRouterGetAllAggregateSubAccountStats = function(xSubAccountApiKey, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'xSubAccountApiKey' is set
@@ -74,6 +78,8 @@
       var pathParams = {
       };
       var queryParams = {
+        'from': opts['from'],
+        'to': opts['to'],
       };
       var collectionQueryParams = {
       };
@@ -107,10 +113,14 @@
      * Get All Aggregate Sub-Account Stats by Group
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {String} group the group whose stats you want
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.from from date
+     * @param {String} opts.to to date
      * @param {module:api/SubaccountstatApi~subAccountStatsRouterGetAllAggregateSubAccountStatsByGroupCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsStats}
      */
-    this.subAccountStatsRouterGetAllAggregateSubAccountStatsByGroup = function(xSubAccountApiKey, group, callback) {
+    this.subAccountStatsRouterGetAllAggregateSubAccountStatsByGroup = function(xSubAccountApiKey, group, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'xSubAccountApiKey' is set
@@ -125,9 +135,11 @@
 
 
       var pathParams = {
-        'group': group
       };
       var queryParams = {
+        'from': opts['from'],
+        'to': opts['to'],
+        'group': group,
       };
       var collectionQueryParams = {
       };
@@ -160,10 +172,14 @@
     /**
      * Get All Sub-Account Stats
      * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.from from date
+     * @param {String} opts.to to date
      * @param {module:api/SubaccountstatApi~subAccountStatsRouterGetAllSubAccountStatsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsRStats>}
      */
-    this.subAccountStatsRouterGetAllSubAccountStats = function(xSubAccountApiKey, callback) {
+    this.subAccountStatsRouterGetAllSubAccountStats = function(xSubAccountApiKey, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'xSubAccountApiKey' is set
@@ -175,6 +191,8 @@
       var pathParams = {
       };
       var queryParams = {
+        'from': opts['from'],
+        'to': opts['to'],
       };
       var collectionQueryParams = {
       };
@@ -208,10 +226,14 @@
      * Get All Sub-Account Stats by Group
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {String} group the tag whose stats you want
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.from from date
+     * @param {String} opts.to to date
      * @param {module:api/SubaccountstatApi~subAccountStatsRouterGetAllSubAccountStatsByGroupCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsRStats>}
      */
-    this.subAccountStatsRouterGetAllSubAccountStatsByGroup = function(xSubAccountApiKey, group, callback) {
+    this.subAccountStatsRouterGetAllSubAccountStatsByGroup = function(xSubAccountApiKey, group, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'xSubAccountApiKey' is set
@@ -226,9 +248,11 @@
 
 
       var pathParams = {
-        'group': group
       };
       var queryParams = {
+        'from': opts['from'],
+        'to': opts['to'],
+        'group': group,
       };
       var collectionQueryParams = {
       };

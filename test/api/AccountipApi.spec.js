@@ -136,8 +136,12 @@
           // TODO: uncomment, update parameter values for iPRouterGetAll call and complete the assertions
           /*
           var xAccountApiKey = "xAccountApiKey_example";
+          var opts = {};
+          opts.offset = 789;
+          opts.limit = 789;
+          opts.search = "search_example";
 
-          instance.iPRouterGetAll(xAccountApiKey, function(error, data, response) {
+          instance.iPRouterGetAll(xAccountApiKey, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;

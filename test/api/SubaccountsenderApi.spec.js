@@ -143,8 +143,12 @@
           // TODO: uncomment, update parameter values for senderRouterGetAll call and complete the assertions
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var opts = {};
+          opts.offset = 789;
+          opts.limit = 789;
+          opts.search = "search_example";
 
-          instance.senderRouterGetAll(xSubAccountApiKey, function(error, data, response) {
+          instance.senderRouterGetAll(xSubAccountApiKey, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;

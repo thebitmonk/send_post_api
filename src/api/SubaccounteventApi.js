@@ -114,10 +114,17 @@
      * Find all events from a sub-account for a given time-range
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Number} subAccountId the subAccountId whose event you want to retrieve
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.offset offset
+     * @param {Number} opts.limit limit
+     * @param {String} opts.search search term
+     * @param {String} opts.from from date
+     * @param {String} opts.to to date
      * @param {module:api/SubaccounteventApi~eventRouterGetAllEventsFromASubAccountForAGivenTimeRangeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsQEvent>}
      */
-    this.eventRouterGetAllEventsFromASubAccountForAGivenTimeRange = function(xSubAccountApiKey, subAccountId, callback) {
+    this.eventRouterGetAllEventsFromASubAccountForAGivenTimeRange = function(xSubAccountApiKey, subAccountId, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'xSubAccountApiKey' is set
@@ -135,6 +142,11 @@
         'subAccountId': subAccountId
       };
       var queryParams = {
+        'offset': opts['offset'],
+        'limit': opts['limit'],
+        'search': opts['search'],
+        'from': opts['from'],
+        'to': opts['to'],
       };
       var collectionQueryParams = {
       };

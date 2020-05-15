@@ -61,7 +61,7 @@ No authorization required
 
 <a name="messageRouterGetAllMessagesFromASubAccountBasedOnTimeRange"></a>
 # **messageRouterGetAllMessagesFromASubAccountBasedOnTimeRange**
-> [ModelsQEmailMessage] messageRouterGetAllMessagesFromASubAccountBasedOnTimeRange(xSubAccountApiKey)
+> [ModelsQEmailMessage] messageRouterGetAllMessagesFromASubAccountBasedOnTimeRange(xSubAccountApiKey, opts)
 
 
 
@@ -75,6 +75,13 @@ var apiInstance = new SendPostApi.SubaccountmessageApi();
 
 var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
 
+var opts = { 
+  'offset': 789, // Number | offset
+  'limit': 789, // Number | limit
+  'search': "search_example", // String | search term
+  'from': "from_example", // String | from date
+  'to': "to_example" // String | to date
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -83,7 +90,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.messageRouterGetAllMessagesFromASubAccountBasedOnTimeRange(xSubAccountApiKey, callback);
+apiInstance.messageRouterGetAllMessagesFromASubAccountBasedOnTimeRange(xSubAccountApiKey, opts, callback);
 ```
 
 ### Parameters
@@ -91,6 +98,11 @@ apiInstance.messageRouterGetAllMessagesFromASubAccountBasedOnTimeRange(xSubAccou
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **offset** | **Number**| offset | [optional] 
+ **limit** | **Number**| limit | [optional] 
+ **search** | **String**| search term | [optional] 
+ **from** | **String**| from date | [optional] 
+ **to** | **String**| to date | [optional] 
 
 ### Return type
 

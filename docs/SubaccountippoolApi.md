@@ -160,7 +160,7 @@ No authorization required
 
 <a name="iPPoolRouterGetAll"></a>
 # **iPPoolRouterGetAll**
-> [ModelsIPPool] iPPoolRouterGetAll(xSubAccountApiKey)
+> [ModelsIPPool] iPPoolRouterGetAll(xSubAccountApiKey, opts)
 
 
 
@@ -174,6 +174,11 @@ var apiInstance = new SendPostApi.SubaccountippoolApi();
 
 var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
 
+var opts = { 
+  'offset': 789, // Number | offset
+  'limit': 789, // Number | limit
+  'search': "search_example" // String | search term
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -182,7 +187,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.iPPoolRouterGetAll(xSubAccountApiKey, callback);
+apiInstance.iPPoolRouterGetAll(xSubAccountApiKey, opts, callback);
 ```
 
 ### Parameters
@@ -190,6 +195,9 @@ apiInstance.iPPoolRouterGetAll(xSubAccountApiKey, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **offset** | **Number**| offset | [optional] 
+ **limit** | **Number**| limit | [optional] 
+ **search** | **String**| search term | [optional] 
 
 ### Return type
 

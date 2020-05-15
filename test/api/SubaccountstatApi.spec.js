@@ -41,8 +41,11 @@
           // TODO: uncomment, update parameter values for subAccountStatsRouterGetAllAggregateSubAccountStats call and complete the assertions
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var opts = {};
+          opts.from = "from_example";
+          opts.to = "to_example";
 
-          instance.subAccountStatsRouterGetAllAggregateSubAccountStats(xSubAccountApiKey, function(error, data, response) {
+          instance.subAccountStatsRouterGetAllAggregateSubAccountStats(xSubAccountApiKey, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -81,8 +84,11 @@
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
           var group = "group_example";
+          var opts = {};
+          opts.from = "from_example";
+          opts.to = "to_example";
 
-          instance.subAccountStatsRouterGetAllAggregateSubAccountStatsByGroup(xSubAccountApiKey, group, function(error, data, response) {
+          instance.subAccountStatsRouterGetAllAggregateSubAccountStatsByGroup(xSubAccountApiKey, group, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -120,8 +126,11 @@
           // TODO: uncomment, update parameter values for subAccountStatsRouterGetAllSubAccountStats call and complete the assertions
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var opts = {};
+          opts.from = "from_example";
+          opts.to = "to_example";
 
-          instance.subAccountStatsRouterGetAllSubAccountStats(xSubAccountApiKey, function(error, data, response) {
+          instance.subAccountStatsRouterGetAllSubAccountStats(xSubAccountApiKey, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -169,8 +178,11 @@
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
           var group = "group_example";
+          var opts = {};
+          opts.from = "from_example";
+          opts.to = "to_example";
 
-          instance.subAccountStatsRouterGetAllSubAccountStatsByGroup(xSubAccountApiKey, group, function(error, data, response) {
+          instance.subAccountStatsRouterGetAllSubAccountStatsByGroup(xSubAccountApiKey, group, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;

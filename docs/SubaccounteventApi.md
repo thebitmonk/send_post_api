@@ -61,7 +61,7 @@ No authorization required
 
 <a name="eventRouterGetAllEventsFromASubAccountForAGivenTimeRange"></a>
 # **eventRouterGetAllEventsFromASubAccountForAGivenTimeRange**
-> [ModelsQEvent] eventRouterGetAllEventsFromASubAccountForAGivenTimeRange(xSubAccountApiKey, subAccountId)
+> [ModelsQEvent] eventRouterGetAllEventsFromASubAccountForAGivenTimeRange(xSubAccountApiKey, subAccountId, opts)
 
 
 
@@ -77,6 +77,13 @@ var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API
 
 var subAccountId = 789; // Number | the subAccountId whose event you want to retrieve
 
+var opts = { 
+  'offset': 789, // Number | offset
+  'limit': 789, // Number | limit
+  'search': "search_example", // String | search term
+  'from': "from_example", // String | from date
+  'to': "to_example" // String | to date
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -85,7 +92,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.eventRouterGetAllEventsFromASubAccountForAGivenTimeRange(xSubAccountApiKey, subAccountId, callback);
+apiInstance.eventRouterGetAllEventsFromASubAccountForAGivenTimeRange(xSubAccountApiKey, subAccountId, opts, callback);
 ```
 
 ### Parameters
@@ -94,6 +101,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
  **subAccountId** | **Number**| the subAccountId whose event you want to retrieve | 
+ **offset** | **Number**| offset | [optional] 
+ **limit** | **Number**| limit | [optional] 
+ **search** | **String**| search term | [optional] 
+ **from** | **String**| from date | [optional] 
+ **to** | **String**| to date | [optional] 
 
 ### Return type
 

@@ -114,8 +114,14 @@
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
           var subAccountId = 789;
+          var opts = {};
+          opts.offset = 789;
+          opts.limit = 789;
+          opts.search = "search_example";
+          opts.from = "from_example";
+          opts.to = "to_example";
 
-          instance.eventRouterGetAllEventsFromASubAccountForAGivenTimeRange(xSubAccountApiKey, subAccountId, function(error, data, response) {
+          instance.eventRouterGetAllEventsFromASubAccountForAGivenTimeRange(xSubAccountApiKey, subAccountId, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;

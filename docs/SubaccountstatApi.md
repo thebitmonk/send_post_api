@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="subAccountStatsRouterGetAllAggregateSubAccountStats"></a>
 # **subAccountStatsRouterGetAllAggregateSubAccountStats**
-> ModelsStats subAccountStatsRouterGetAllAggregateSubAccountStats(xSubAccountApiKey)
+> ModelsStats subAccountStatsRouterGetAllAggregateSubAccountStats(xSubAccountApiKey, opts)
 
 
 
@@ -26,6 +26,10 @@ var apiInstance = new SendPostApi.SubaccountstatApi();
 
 var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
 
+var opts = { 
+  'from': "from_example", // String | from date
+  'to': "to_example" // String | to date
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -34,7 +38,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.subAccountStatsRouterGetAllAggregateSubAccountStats(xSubAccountApiKey, callback);
+apiInstance.subAccountStatsRouterGetAllAggregateSubAccountStats(xSubAccountApiKey, opts, callback);
 ```
 
 ### Parameters
@@ -42,6 +46,8 @@ apiInstance.subAccountStatsRouterGetAllAggregateSubAccountStats(xSubAccountApiKe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **from** | **String**| from date | [optional] 
+ **to** | **String**| to date | [optional] 
 
 ### Return type
 
@@ -58,7 +64,7 @@ No authorization required
 
 <a name="subAccountStatsRouterGetAllAggregateSubAccountStatsByGroup"></a>
 # **subAccountStatsRouterGetAllAggregateSubAccountStatsByGroup**
-> ModelsStats subAccountStatsRouterGetAllAggregateSubAccountStatsByGroup(xSubAccountApiKey, group)
+> ModelsStats subAccountStatsRouterGetAllAggregateSubAccountStatsByGroup(xSubAccountApiKey, group, opts)
 
 
 
@@ -74,6 +80,10 @@ var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API
 
 var group = "group_example"; // String | the group whose stats you want
 
+var opts = { 
+  'from': "from_example", // String | from date
+  'to': "to_example" // String | to date
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -82,7 +92,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.subAccountStatsRouterGetAllAggregateSubAccountStatsByGroup(xSubAccountApiKey, group, callback);
+apiInstance.subAccountStatsRouterGetAllAggregateSubAccountStatsByGroup(xSubAccountApiKey, group, opts, callback);
 ```
 
 ### Parameters
@@ -91,6 +101,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
  **group** | **String**| the group whose stats you want | 
+ **from** | **String**| from date | [optional] 
+ **to** | **String**| to date | [optional] 
 
 ### Return type
 
@@ -107,7 +119,7 @@ No authorization required
 
 <a name="subAccountStatsRouterGetAllSubAccountStats"></a>
 # **subAccountStatsRouterGetAllSubAccountStats**
-> [ModelsRStats] subAccountStatsRouterGetAllSubAccountStats(xSubAccountApiKey)
+> [ModelsRStats] subAccountStatsRouterGetAllSubAccountStats(xSubAccountApiKey, opts)
 
 
 
@@ -121,6 +133,10 @@ var apiInstance = new SendPostApi.SubaccountstatApi();
 
 var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
 
+var opts = { 
+  'from': "from_example", // String | from date
+  'to': "to_example" // String | to date
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -129,7 +145,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.subAccountStatsRouterGetAllSubAccountStats(xSubAccountApiKey, callback);
+apiInstance.subAccountStatsRouterGetAllSubAccountStats(xSubAccountApiKey, opts, callback);
 ```
 
 ### Parameters
@@ -137,6 +153,8 @@ apiInstance.subAccountStatsRouterGetAllSubAccountStats(xSubAccountApiKey, callba
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **from** | **String**| from date | [optional] 
+ **to** | **String**| to date | [optional] 
 
 ### Return type
 
@@ -153,7 +171,7 @@ No authorization required
 
 <a name="subAccountStatsRouterGetAllSubAccountStatsByGroup"></a>
 # **subAccountStatsRouterGetAllSubAccountStatsByGroup**
-> [ModelsRStats] subAccountStatsRouterGetAllSubAccountStatsByGroup(xSubAccountApiKey, group)
+> [ModelsRStats] subAccountStatsRouterGetAllSubAccountStatsByGroup(xSubAccountApiKey, group, opts)
 
 
 
@@ -169,6 +187,10 @@ var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API
 
 var group = "group_example"; // String | the tag whose stats you want
 
+var opts = { 
+  'from': "from_example", // String | from date
+  'to': "to_example" // String | to date
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -177,7 +199,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.subAccountStatsRouterGetAllSubAccountStatsByGroup(xSubAccountApiKey, group, callback);
+apiInstance.subAccountStatsRouterGetAllSubAccountStatsByGroup(xSubAccountApiKey, group, opts, callback);
 ```
 
 ### Parameters
@@ -186,6 +208,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
  **group** | **String**| the tag whose stats you want | 
+ **from** | **String**| from date | [optional] 
+ **to** | **String**| to date | [optional] 
 
 ### Return type
 

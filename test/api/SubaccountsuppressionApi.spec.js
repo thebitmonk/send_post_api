@@ -155,8 +155,12 @@
           // TODO: uncomment, update parameter values for suppressionRouterGetAllSuppressions call and complete the assertions
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var opts = {};
+          opts.offset = 789;
+          opts.limit = 789;
+          opts.search = "search_example";
 
-          instance.suppressionRouterGetAllSuppressions(xSubAccountApiKey, function(error, data, response) {
+          instance.suppressionRouterGetAllSuppressions(xSubAccountApiKey, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;

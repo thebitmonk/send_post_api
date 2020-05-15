@@ -220,10 +220,15 @@
     /**
      * Get All SubAccounts
      * @param {String} xAccountApiKey Account API Key
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.offset offset
+     * @param {Number} opts.limit limit
+     * @param {String} opts.search search term
      * @param {module:api/AccountsubaccountApi~subAccountRouterGetAllCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsSubAccount>}
      */
-    this.subAccountRouterGetAll = function(xAccountApiKey, callback) {
+    this.subAccountRouterGetAll = function(xAccountApiKey, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'xAccountApiKey' is set
@@ -235,6 +240,9 @@
       var pathParams = {
       };
       var queryParams = {
+        'offset': opts['offset'],
+        'limit': opts['limit'],
+        'search': opts['search'],
       };
       var collectionQueryParams = {
       };

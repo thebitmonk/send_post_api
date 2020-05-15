@@ -59,10 +59,14 @@
     /**
      * Get All Account Stats
      * @param {String} xAccountApiKey Sub-Account API Key
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.from from date
+     * @param {String} opts.to to date
      * @param {module:api/AccountstatApi~accountStatsRouterGetAllAccountStatsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsRStats>}
      */
-    this.accountStatsRouterGetAllAccountStats = function(xAccountApiKey, callback) {
+    this.accountStatsRouterGetAllAccountStats = function(xAccountApiKey, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'xAccountApiKey' is set
@@ -74,6 +78,8 @@
       var pathParams = {
       };
       var queryParams = {
+        'from': opts['from'],
+        'to': opts['to'],
       };
       var collectionQueryParams = {
       };
@@ -107,10 +113,14 @@
      * Get All Account Stats by Group
      * @param {String} xAccountApiKey Sub-Account API Key
      * @param {String} group the group whose stats you want
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.from from date
+     * @param {String} opts.to to date
      * @param {module:api/AccountstatApi~accountStatsRouterGetAllAccountStatsByGroupCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsRStats>}
      */
-    this.accountStatsRouterGetAllAccountStatsByGroup = function(xAccountApiKey, group, callback) {
+    this.accountStatsRouterGetAllAccountStatsByGroup = function(xAccountApiKey, group, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'xAccountApiKey' is set
@@ -125,9 +135,11 @@
 
 
       var pathParams = {
-        'group': group
       };
       var queryParams = {
+        'from': opts['from'],
+        'to': opts['to'],
+        'group': group,
       };
       var collectionQueryParams = {
       };
@@ -160,10 +172,14 @@
     /**
      * Get All Aggregate Stats
      * @param {String} xAccountApiKey Sub-Account API Key
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.from from date
+     * @param {String} opts.to to date
      * @param {module:api/AccountstatApi~accountStatsRouterGetAllAggregateAccountStatsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsStats}
      */
-    this.accountStatsRouterGetAllAggregateAccountStats = function(xAccountApiKey, callback) {
+    this.accountStatsRouterGetAllAggregateAccountStats = function(xAccountApiKey, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'xAccountApiKey' is set
@@ -175,6 +191,8 @@
       var pathParams = {
       };
       var queryParams = {
+        'from': opts['from'],
+        'to': opts['to'],
       };
       var collectionQueryParams = {
       };
@@ -208,10 +226,14 @@
      * Get All Aggregate Stats by Group
      * @param {String} xAccountApiKey Sub-Account API Key
      * @param {String} group the group whose stats you want
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.from from date
+     * @param {String} opts.to to date
      * @param {module:api/AccountstatApi~accountStatsRouterGetAllAggregateAccountStatsByGroupCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsStats}
      */
-    this.accountStatsRouterGetAllAggregateAccountStatsByGroup = function(xAccountApiKey, group, callback) {
+    this.accountStatsRouterGetAllAggregateAccountStatsByGroup = function(xAccountApiKey, group, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'xAccountApiKey' is set
@@ -226,9 +248,11 @@
 
 
       var pathParams = {
-        'group': group
       };
       var queryParams = {
+        'from': opts['from'],
+        'to': opts['to'],
+        'group': group,
       };
       var collectionQueryParams = {
       };

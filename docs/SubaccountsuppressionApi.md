@@ -203,7 +203,7 @@ No authorization required
 
 <a name="suppressionRouterGetAllSuppressions"></a>
 # **suppressionRouterGetAllSuppressions**
-> [ModelsSuppression] suppressionRouterGetAllSuppressions(xSubAccountApiKey)
+> [ModelsSuppression] suppressionRouterGetAllSuppressions(xSubAccountApiKey, opts)
 
 
 
@@ -217,6 +217,11 @@ var apiInstance = new SendPostApi.SubaccountsuppressionApi();
 
 var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
 
+var opts = { 
+  'offset': 789, // Number | offset
+  'limit': 789, // Number | limit
+  'search': "search_example" // String | search
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -225,7 +230,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.suppressionRouterGetAllSuppressions(xSubAccountApiKey, callback);
+apiInstance.suppressionRouterGetAllSuppressions(xSubAccountApiKey, opts, callback);
 ```
 
 ### Parameters
@@ -233,6 +238,9 @@ apiInstance.suppressionRouterGetAllSuppressions(xSubAccountApiKey, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **offset** | **Number**| offset | [optional] 
+ **limit** | **Number**| limit | [optional] 
+ **search** | **String**| search | [optional] 
 
 ### Return type
 

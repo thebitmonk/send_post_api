@@ -160,7 +160,7 @@ No authorization required
 
 <a name="subAccountRouterGetAll"></a>
 # **subAccountRouterGetAll**
-> [ModelsSubAccount] subAccountRouterGetAll(xAccountApiKey)
+> [ModelsSubAccount] subAccountRouterGetAll(xAccountApiKey, opts)
 
 
 
@@ -174,6 +174,11 @@ var apiInstance = new SendPostApi.AccountsubaccountApi();
 
 var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
+var opts = { 
+  'offset': 789, // Number | offset
+  'limit': 789, // Number | limit
+  'search': "search_example" // String | search term
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -182,7 +187,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.subAccountRouterGetAll(xAccountApiKey, callback);
+apiInstance.subAccountRouterGetAll(xAccountApiKey, opts, callback);
 ```
 
 ### Parameters
@@ -190,6 +195,9 @@ apiInstance.subAccountRouterGetAll(xAccountApiKey, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
+ **offset** | **Number**| offset | [optional] 
+ **limit** | **Number**| limit | [optional] 
+ **search** | **String**| search term | [optional] 
 
 ### Return type
 
