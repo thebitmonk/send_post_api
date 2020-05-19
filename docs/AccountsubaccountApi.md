@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="subAccountRouterCount"></a>
 # **subAccountRouterCount**
-> ModelsCountStat subAccountRouterCount(xSubAccountApiKey)
+> ModelsCountStat subAccountRouterCount(xAccountApiKey)
 
 
 
@@ -26,7 +26,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.AccountsubaccountApi();
 
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 
 var callback = function(error, data, response) {
@@ -36,14 +36,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.subAccountRouterCount(xSubAccountApiKey, callback);
+apiInstance.subAccountRouterCount(xAccountApiKey, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **xAccountApiKey** | **String**| Account API Key | 
 
 ### Return type
 

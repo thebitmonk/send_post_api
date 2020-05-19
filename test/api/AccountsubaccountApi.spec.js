@@ -40,9 +40,9 @@
         it('should call subAccountRouterCount successfully', function(done) {
           // TODO: uncomment, update parameter values for subAccountRouterCount call and complete the assertions
           /*
-          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var xAccountApiKey = "xAccountApiKey_example";
 
-          instance.subAccountRouterCount(xSubAccountApiKey, function(error, data, response) {
+          instance.subAccountRouterCount(xAccountApiKey, function(error, data, response) {
             if (error) {
               done(error);
               return;
