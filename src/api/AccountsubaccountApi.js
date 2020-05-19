@@ -59,10 +59,11 @@
     /**
      * Count Total Subaccounts
      * @param {String} xAccountApiKey Account API Key
+     * @param {Number} subAccountId The SubAccountId you want to delete
      * @param {module:api/AccountsubaccountApi~subAccountRouterCountCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsCountStat}
      */
-    this.subAccountRouterCount = function(xAccountApiKey, callback) {
+    this.subAccountRouterCount = function(xAccountApiKey, subAccountId, callback) {
       var postBody = null;
 
       // verify the required parameter 'xAccountApiKey' is set
@@ -70,8 +71,14 @@
         throw new Error("Missing the required parameter 'xAccountApiKey' when calling subAccountRouterCount");
       }
 
+      // verify the required parameter 'subAccountId' is set
+      if (subAccountId === undefined || subAccountId === null) {
+        throw new Error("Missing the required parameter 'subAccountId' when calling subAccountRouterCount");
+      }
+
 
       var pathParams = {
+        'subAccountId': subAccountId
       };
       var queryParams = {
       };
@@ -89,7 +96,7 @@
       var returnType = ModelsCountStat;
 
       return this.apiClient.callApi(
-        '/account/subaccount/count', 'GET',
+        '/account/subaccount/{subAccountId}/count', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
