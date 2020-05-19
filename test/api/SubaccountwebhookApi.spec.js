@@ -36,6 +36,29 @@
 
   describe('(package)', function() {
     describe('SubaccountwebhookApi', function() {
+      describe('webhookRouterCount', function() {
+        it('should call webhookRouterCount successfully', function(done) {
+          // TODO: uncomment, update parameter values for webhookRouterCount call and complete the assertions
+          /*
+          var xSubAccountApiKey = "xSubAccountApiKey_example";
+
+          instance.webhookRouterCount(xSubAccountApiKey, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelsCountStat);
+            expect(data.count).to.be.a('number');
+            expect(data.count).to.be("0");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('webhookRouterCreate', function() {
         it('should call webhookRouterCreate successfully', function(done) {
           // TODO: uncomment, update parameter values for webhookRouterCreate call and complete the assertions

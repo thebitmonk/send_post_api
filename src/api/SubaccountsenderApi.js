@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsDeleteResponse', 'model/ModelsESender', 'model/ModelsSender'], factory);
+    define(['ApiClient', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsESender', 'model/ModelsSender'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsDeleteResponse'), require('../model/ModelsESender'), require('../model/ModelsSender'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsESender'), require('../model/ModelsSender'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.SubaccountsenderApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsESender, root.SendPostApi.ModelsSender);
+    root.SendPostApi.SubaccountsenderApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsESender, root.SendPostApi.ModelsSender);
   }
-}(this, function(ApiClient, ModelsDeleteResponse, ModelsESender, ModelsSender) {
+}(this, function(ApiClient, ModelsCountStat, ModelsDeleteResponse, ModelsESender, ModelsSender) {
   'use strict';
 
   /**
@@ -47,6 +47,53 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the senderRouterCount operation.
+     * @callback module:api/SubaccountsenderApi~senderRouterCountCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ModelsCountStat} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Count Total Senders
+     * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {module:api/SubaccountsenderApi~senderRouterCountCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ModelsCountStat}
+     */
+    this.senderRouterCount = function(xSubAccountApiKey, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'xSubAccountApiKey' is set
+      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling senderRouterCount");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-SubAccount-ApiKey': xSubAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ModelsCountStat;
+
+      return this.apiClient.callApi(
+        '/subaccount/sender/count', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the senderRouterCreate operation.

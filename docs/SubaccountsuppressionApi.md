@@ -4,12 +4,59 @@ All URIs are relative to *http://127.0.0.1:8080/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**suppressionRouterCount**](SubaccountsuppressionApi.md#suppressionRouterCount) | **GET** /subaccount/suppression/count | 
 [**suppressionRouterCreateSuppressions**](SubaccountsuppressionApi.md#suppressionRouterCreateSuppressions) | **POST** /subaccount/suppression/ | 
 [**suppressionRouterCreateSuppressionsInSuppressionFilter**](SubaccountsuppressionApi.md#suppressionRouterCreateSuppressionsInSuppressionFilter) | **POST** /subaccount/suppression/filter | 
 [**suppressionRouterDeleteSuppression**](SubaccountsuppressionApi.md#suppressionRouterDeleteSuppression) | **DELETE** /subaccount/suppression/ | 
 [**suppressionRouterDeleteSuppressionsInSuppressionFilter**](SubaccountsuppressionApi.md#suppressionRouterDeleteSuppressionsInSuppressionFilter) | **DELETE** /subaccount/suppression/filter | 
 [**suppressionRouterGetAllSuppressions**](SubaccountsuppressionApi.md#suppressionRouterGetAllSuppressions) | **GET** /subaccount/suppression/ | 
 
+
+<a name="suppressionRouterCount"></a>
+# **suppressionRouterCount**
+> ModelsCountStat suppressionRouterCount(xSubAccountApiKey)
+
+
+
+Count Total Suppressions
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.SubaccountsuppressionApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.suppressionRouterCount(xSubAccountApiKey, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+
+### Return type
+
+[**ModelsCountStat**](ModelsCountStat.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="suppressionRouterCreateSuppressions"></a>
 # **suppressionRouterCreateSuppressions**

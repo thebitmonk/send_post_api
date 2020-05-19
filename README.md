@@ -135,6 +135,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.AuthApi* | [**authRouterGetAuthInfo**](docs/AuthApi.md#authRouterGetAuthInfo) | **POST** /auth/info | 
 *SendPostApi.ClusterApi* | [**clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster**](docs/ClusterApi.md#clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster) | **POST** /cluster/suppression/filter | 
 *SendPostApi.ClusterApi* | [**clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster**](docs/ClusterApi.md#clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster) | **DELETE** /cluster/suppression/filter | 
+*SendPostApi.SubaccountdomainApi* | [**domainRouterCount**](docs/SubaccountdomainApi.md#domainRouterCount) | **GET** /subaccount/domain/count | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterCreate**](docs/SubaccountdomainApi.md#domainRouterCreate) | **POST** /subaccount/domain/ | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterDelete**](docs/SubaccountdomainApi.md#domainRouterDelete) | **DELETE** /subaccount/domain/{domainId} | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterGet**](docs/SubaccountdomainApi.md#domainRouterGet) | **GET** /subaccount/domain/{domainId} | 
@@ -145,6 +146,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.SubaccounteventApi* | [**eventRouterGetAllEventsFromASubAccountForAGivenTimeRange**](docs/SubaccounteventApi.md#eventRouterGetAllEventsFromASubAccountForAGivenTimeRange) | **GET** /subaccount/event/ | 
 *SendPostApi.SubaccounteventApi* | [**eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange**](docs/SubaccounteventApi.md#eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange) | **GET** /subaccount/event/node/{subAccountId} | 
 *SendPostApi.SubaccounteventApi* | [**eventRouterGetEventInNode**](docs/SubaccounteventApi.md#eventRouterGetEventInNode) | **GET** /subaccount/event/node/{subAccountId}/{eventId} | 
+*SendPostApi.SubaccountippoolApi* | [**iPPoolRouterCount**](docs/SubaccountippoolApi.md#iPPoolRouterCount) | **GET** /subaccount/ippool/count | 
 *SendPostApi.SubaccountippoolApi* | [**iPPoolRouterCreate**](docs/SubaccountippoolApi.md#iPPoolRouterCreate) | **POST** /subaccount/ippool/ | 
 *SendPostApi.SubaccountippoolApi* | [**iPPoolRouterDelete**](docs/SubaccountippoolApi.md#iPPoolRouterDelete) | **DELETE** /subaccount/ippool/{ippoolid} | 
 *SendPostApi.SubaccountippoolApi* | [**iPPoolRouterGet**](docs/SubaccountippoolApi.md#iPPoolRouterGet) | **GET** /subaccount/ippool/{ippoolid} | 
@@ -154,6 +156,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.SubaccountmessageApi* | [**messageRouterGetAllMessagesFromASubAccountBasedOnTimeRange**](docs/SubaccountmessageApi.md#messageRouterGetAllMessagesFromASubAccountBasedOnTimeRange) | **GET** /subaccount/message/ | 
 *SendPostApi.SubaccountmessageApi* | [**messageRouterGetAllMessagesOfASubAccountFromASpecificNodeBasedOnTimeRange**](docs/SubaccountmessageApi.md#messageRouterGetAllMessagesOfASubAccountFromASpecificNodeBasedOnTimeRange) | **GET** /subaccount/message/node/{subAccountId} | 
 *SendPostApi.SubaccountmessageApi* | [**messageRouterGetMessageFromNodeById**](docs/SubaccountmessageApi.md#messageRouterGetMessageFromNodeById) | **GET** /subaccount/message/node/{subAccountId}/{messageId} | 
+*SendPostApi.SubaccountsenderApi* | [**senderRouterCount**](docs/SubaccountsenderApi.md#senderRouterCount) | **GET** /subaccount/sender/count | 
 *SendPostApi.SubaccountsenderApi* | [**senderRouterCreate**](docs/SubaccountsenderApi.md#senderRouterCreate) | **POST** /subaccount/sender/ | 
 *SendPostApi.SubaccountsenderApi* | [**senderRouterDelete**](docs/SubaccountsenderApi.md#senderRouterDelete) | **DELETE** /subaccount/sender/{senderId} | 
 *SendPostApi.SubaccountsenderApi* | [**senderRouterGet**](docs/SubaccountsenderApi.md#senderRouterGet) | **GET** /subaccount/sender/{senderId} | 
@@ -163,11 +166,13 @@ Class | Method | HTTP request | Description
 *SendPostApi.SubaccountstatApi* | [**subAccountStatsRouterGetAllAggregateSubAccountStatsByGroup**](docs/SubaccountstatApi.md#subAccountStatsRouterGetAllAggregateSubAccountStatsByGroup) | **GET** /subaccount/stat/aggregate/group | 
 *SendPostApi.SubaccountstatApi* | [**subAccountStatsRouterGetAllSubAccountStats**](docs/SubaccountstatApi.md#subAccountStatsRouterGetAllSubAccountStats) | **GET** /subaccount/stat/ | 
 *SendPostApi.SubaccountstatApi* | [**subAccountStatsRouterGetAllSubAccountStatsByGroup**](docs/SubaccountstatApi.md#subAccountStatsRouterGetAllSubAccountStatsByGroup) | **GET** /subaccount/stat/group | 
+*SendPostApi.SubaccountsuppressionApi* | [**suppressionRouterCount**](docs/SubaccountsuppressionApi.md#suppressionRouterCount) | **GET** /subaccount/suppression/count | 
 *SendPostApi.SubaccountsuppressionApi* | [**suppressionRouterCreateSuppressions**](docs/SubaccountsuppressionApi.md#suppressionRouterCreateSuppressions) | **POST** /subaccount/suppression/ | 
 *SendPostApi.SubaccountsuppressionApi* | [**suppressionRouterCreateSuppressionsInSuppressionFilter**](docs/SubaccountsuppressionApi.md#suppressionRouterCreateSuppressionsInSuppressionFilter) | **POST** /subaccount/suppression/filter | 
 *SendPostApi.SubaccountsuppressionApi* | [**suppressionRouterDeleteSuppression**](docs/SubaccountsuppressionApi.md#suppressionRouterDeleteSuppression) | **DELETE** /subaccount/suppression/ | 
 *SendPostApi.SubaccountsuppressionApi* | [**suppressionRouterDeleteSuppressionsInSuppressionFilter**](docs/SubaccountsuppressionApi.md#suppressionRouterDeleteSuppressionsInSuppressionFilter) | **DELETE** /subaccount/suppression/filter | 
 *SendPostApi.SubaccountsuppressionApi* | [**suppressionRouterGetAllSuppressions**](docs/SubaccountsuppressionApi.md#suppressionRouterGetAllSuppressions) | **GET** /subaccount/suppression/ | 
+*SendPostApi.SubaccountwebhookApi* | [**webhookRouterCount**](docs/SubaccountwebhookApi.md#webhookRouterCount) | **GET** /subaccount/webhook/count | 
 *SendPostApi.SubaccountwebhookApi* | [**webhookRouterCreate**](docs/SubaccountwebhookApi.md#webhookRouterCreate) | **POST** /subaccount/webhook/ | 
 *SendPostApi.SubaccountwebhookApi* | [**webhookRouterDelete**](docs/SubaccountwebhookApi.md#webhookRouterDelete) | **DELETE** /subaccount/webhook/{webhookId} | 
 *SendPostApi.SubaccountwebhookApi* | [**webhookRouterGet**](docs/SubaccountwebhookApi.md#webhookRouterGet) | **GET** /subaccount/webhook/{webhookId} | 
@@ -183,6 +188,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.Geoip2City](docs/Geoip2City.md)
  - [SendPostApi.ModelsAccount](docs/ModelsAccount.md)
  - [SendPostApi.ModelsAuthInfo](docs/ModelsAuthInfo.md)
+ - [SendPostApi.ModelsCountStat](docs/ModelsCountStat.md)
  - [SendPostApi.ModelsDNSRecord](docs/ModelsDNSRecord.md)
  - [SendPostApi.ModelsDeleteResponse](docs/ModelsDeleteResponse.md)
  - [SendPostApi.ModelsDomain](docs/ModelsDomain.md)

@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsDeleteResponse', 'model/ModelsEIPPool', 'model/ModelsIPPool'], factory);
+    define(['ApiClient', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsEIPPool', 'model/ModelsIPPool'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsDeleteResponse'), require('../model/ModelsEIPPool'), require('../model/ModelsIPPool'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsEIPPool'), require('../model/ModelsIPPool'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.SubaccountippoolApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsEIPPool, root.SendPostApi.ModelsIPPool);
+    root.SendPostApi.SubaccountippoolApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsEIPPool, root.SendPostApi.ModelsIPPool);
   }
-}(this, function(ApiClient, ModelsDeleteResponse, ModelsEIPPool, ModelsIPPool) {
+}(this, function(ApiClient, ModelsCountStat, ModelsDeleteResponse, ModelsEIPPool, ModelsIPPool) {
   'use strict';
 
   /**
@@ -47,6 +47,53 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the iPPoolRouterCount operation.
+     * @callback module:api/SubaccountippoolApi~iPPoolRouterCountCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ModelsCountStat} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Count Total IPPools
+     * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {module:api/SubaccountippoolApi~iPPoolRouterCountCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ModelsCountStat}
+     */
+    this.iPPoolRouterCount = function(xSubAccountApiKey, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'xSubAccountApiKey' is set
+      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling iPPoolRouterCount");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-SubAccount-ApiKey': xSubAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ModelsCountStat;
+
+      return this.apiClient.callApi(
+        '/subaccount/ippool/count', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the iPPoolRouterCreate operation.

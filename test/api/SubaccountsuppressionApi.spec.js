@@ -36,6 +36,29 @@
 
   describe('(package)', function() {
     describe('SubaccountsuppressionApi', function() {
+      describe('suppressionRouterCount', function() {
+        it('should call suppressionRouterCount successfully', function(done) {
+          // TODO: uncomment, update parameter values for suppressionRouterCount call and complete the assertions
+          /*
+          var xSubAccountApiKey = "xSubAccountApiKey_example";
+
+          instance.suppressionRouterCount(xSubAccountApiKey, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelsCountStat);
+            expect(data.count).to.be.a('number');
+            expect(data.count).to.be("0");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('suppressionRouterCreateSuppressions', function() {
         it('should call suppressionRouterCreateSuppressions successfully', function(done) {
           // TODO: uncomment, update parameter values for suppressionRouterCreateSuppressions call and complete the assertions

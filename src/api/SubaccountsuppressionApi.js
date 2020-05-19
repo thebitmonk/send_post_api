@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsRDSuppression', 'model/ModelsRSuppression', 'model/ModelsSuppression'], factory);
+    define(['ApiClient', 'model/ModelsCountStat', 'model/ModelsRDSuppression', 'model/ModelsRSuppression', 'model/ModelsSuppression'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsRDSuppression'), require('../model/ModelsRSuppression'), require('../model/ModelsSuppression'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsCountStat'), require('../model/ModelsRDSuppression'), require('../model/ModelsRSuppression'), require('../model/ModelsSuppression'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.SubaccountsuppressionApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsRDSuppression, root.SendPostApi.ModelsRSuppression, root.SendPostApi.ModelsSuppression);
+    root.SendPostApi.SubaccountsuppressionApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsRDSuppression, root.SendPostApi.ModelsRSuppression, root.SendPostApi.ModelsSuppression);
   }
-}(this, function(ApiClient, ModelsRDSuppression, ModelsRSuppression, ModelsSuppression) {
+}(this, function(ApiClient, ModelsCountStat, ModelsRDSuppression, ModelsRSuppression, ModelsSuppression) {
   'use strict';
 
   /**
@@ -47,6 +47,53 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the suppressionRouterCount operation.
+     * @callback module:api/SubaccountsuppressionApi~suppressionRouterCountCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ModelsCountStat} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Count Total Suppressions
+     * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {module:api/SubaccountsuppressionApi~suppressionRouterCountCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ModelsCountStat}
+     */
+    this.suppressionRouterCount = function(xSubAccountApiKey, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'xSubAccountApiKey' is set
+      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling suppressionRouterCount");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-SubAccount-ApiKey': xSubAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ModelsCountStat;
+
+      return this.apiClient.callApi(
+        '/subaccount/suppression/count', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the suppressionRouterCreateSuppressions operation.

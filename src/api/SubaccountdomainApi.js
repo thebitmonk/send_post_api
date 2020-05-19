@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsDeleteResponse', 'model/ModelsDomain', 'model/ModelsEDomain'], factory);
+    define(['ApiClient', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsDomain', 'model/ModelsEDomain'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsDeleteResponse'), require('../model/ModelsDomain'), require('../model/ModelsEDomain'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsDomain'), require('../model/ModelsEDomain'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.SubaccountdomainApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsDomain, root.SendPostApi.ModelsEDomain);
+    root.SendPostApi.SubaccountdomainApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsDomain, root.SendPostApi.ModelsEDomain);
   }
-}(this, function(ApiClient, ModelsDeleteResponse, ModelsDomain, ModelsEDomain) {
+}(this, function(ApiClient, ModelsCountStat, ModelsDeleteResponse, ModelsDomain, ModelsEDomain) {
   'use strict';
 
   /**
@@ -47,6 +47,53 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the domainRouterCount operation.
+     * @callback module:api/SubaccountdomainApi~domainRouterCountCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ModelsCountStat} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Count Total Domains
+     * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {module:api/SubaccountdomainApi~domainRouterCountCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ModelsCountStat}
+     */
+    this.domainRouterCount = function(xSubAccountApiKey, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'xSubAccountApiKey' is set
+      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling domainRouterCount");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-SubAccount-ApiKey': xSubAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ModelsCountStat;
+
+      return this.apiClient.callApi(
+        '/subaccount/domain/count', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the domainRouterCreate operation.

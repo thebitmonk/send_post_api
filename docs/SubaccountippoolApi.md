@@ -4,12 +4,59 @@ All URIs are relative to *http://127.0.0.1:8080/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**iPPoolRouterCount**](SubaccountippoolApi.md#iPPoolRouterCount) | **GET** /subaccount/ippool/count | 
 [**iPPoolRouterCreate**](SubaccountippoolApi.md#iPPoolRouterCreate) | **POST** /subaccount/ippool/ | 
 [**iPPoolRouterDelete**](SubaccountippoolApi.md#iPPoolRouterDelete) | **DELETE** /subaccount/ippool/{ippoolid} | 
 [**iPPoolRouterGet**](SubaccountippoolApi.md#iPPoolRouterGet) | **GET** /subaccount/ippool/{ippoolid} | 
 [**iPPoolRouterGetAll**](SubaccountippoolApi.md#iPPoolRouterGetAll) | **GET** /subaccount/ippool/ | 
 [**iPPoolRouterUpdate**](SubaccountippoolApi.md#iPPoolRouterUpdate) | **PUT** /subaccount/ippool/{ippoolid} | 
 
+
+<a name="iPPoolRouterCount"></a>
+# **iPPoolRouterCount**
+> ModelsCountStat iPPoolRouterCount(xSubAccountApiKey)
+
+
+
+Count Total IPPools
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.SubaccountippoolApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.iPPoolRouterCount(xSubAccountApiKey, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+
+### Return type
+
+[**ModelsCountStat**](ModelsCountStat.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="iPPoolRouterCreate"></a>
 # **iPPoolRouterCreate**

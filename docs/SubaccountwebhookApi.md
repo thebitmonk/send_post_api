@@ -4,12 +4,59 @@ All URIs are relative to *http://127.0.0.1:8080/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**webhookRouterCount**](SubaccountwebhookApi.md#webhookRouterCount) | **GET** /subaccount/webhook/count | 
 [**webhookRouterCreate**](SubaccountwebhookApi.md#webhookRouterCreate) | **POST** /subaccount/webhook/ | 
 [**webhookRouterDelete**](SubaccountwebhookApi.md#webhookRouterDelete) | **DELETE** /subaccount/webhook/{webhookId} | 
 [**webhookRouterGet**](SubaccountwebhookApi.md#webhookRouterGet) | **GET** /subaccount/webhook/{webhookId} | 
 [**webhookRouterGetAll**](SubaccountwebhookApi.md#webhookRouterGetAll) | **GET** /subaccount/webhook/ | 
 [**webhookRouterUpdate**](SubaccountwebhookApi.md#webhookRouterUpdate) | **PUT** /subaccount/webhook/{webhookId} | 
 
+
+<a name="webhookRouterCount"></a>
+# **webhookRouterCount**
+> ModelsCountStat webhookRouterCount(xSubAccountApiKey)
+
+
+
+Count Total Webhooks
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.SubaccountwebhookApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.webhookRouterCount(xSubAccountApiKey, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+
+### Return type
+
+[**ModelsCountStat**](ModelsCountStat.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="webhookRouterCreate"></a>
 # **webhookRouterCreate**

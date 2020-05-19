@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsDeleteResponse', 'model/ModelsEWebhook', 'model/ModelsWebhook'], factory);
+    define(['ApiClient', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsEWebhook', 'model/ModelsWebhook'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsDeleteResponse'), require('../model/ModelsEWebhook'), require('../model/ModelsWebhook'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsEWebhook'), require('../model/ModelsWebhook'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.SubaccountwebhookApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsEWebhook, root.SendPostApi.ModelsWebhook);
+    root.SendPostApi.SubaccountwebhookApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsEWebhook, root.SendPostApi.ModelsWebhook);
   }
-}(this, function(ApiClient, ModelsDeleteResponse, ModelsEWebhook, ModelsWebhook) {
+}(this, function(ApiClient, ModelsCountStat, ModelsDeleteResponse, ModelsEWebhook, ModelsWebhook) {
   'use strict';
 
   /**
@@ -47,6 +47,53 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the webhookRouterCount operation.
+     * @callback module:api/SubaccountwebhookApi~webhookRouterCountCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ModelsCountStat} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Count Total Webhooks
+     * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {module:api/SubaccountwebhookApi~webhookRouterCountCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ModelsCountStat}
+     */
+    this.webhookRouterCount = function(xSubAccountApiKey, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'xSubAccountApiKey' is set
+      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling webhookRouterCount");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-SubAccount-ApiKey': xSubAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ModelsCountStat;
+
+      return this.apiClient.callApi(
+        '/subaccount/webhook/count', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the webhookRouterCreate operation.

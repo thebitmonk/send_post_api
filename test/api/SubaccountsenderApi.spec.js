@@ -36,6 +36,29 @@
 
   describe('(package)', function() {
     describe('SubaccountsenderApi', function() {
+      describe('senderRouterCount', function() {
+        it('should call senderRouterCount successfully', function(done) {
+          // TODO: uncomment, update parameter values for senderRouterCount call and complete the assertions
+          /*
+          var xSubAccountApiKey = "xSubAccountApiKey_example";
+
+          instance.senderRouterCount(xSubAccountApiKey, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelsCountStat);
+            expect(data.count).to.be.a('number');
+            expect(data.count).to.be("0");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('senderRouterCreate', function() {
         it('should call senderRouterCreate successfully', function(done) {
           // TODO: uncomment, update parameter values for senderRouterCreate call and complete the assertions
