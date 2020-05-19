@@ -36,6 +36,53 @@
 
   describe('(package)', function() {
     describe('SubaccounteventApi', function() {
+      describe('eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange', function() {
+        it('should call eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange successfully', function(done) {
+          // TODO: uncomment, update parameter values for eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange call and complete the assertions
+          /*
+          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var subAccountId = 789;
+
+          instance.eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange(xSubAccountApiKey, subAccountId, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelsCountStat);
+            expect(data.count).to.be.a('number');
+            expect(data.count).to.be("0");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('eventRouterCountAllEventsFromASubAccountForAGivenTimeRange', function() {
+        it('should call eventRouterCountAllEventsFromASubAccountForAGivenTimeRange successfully', function(done) {
+          // TODO: uncomment, update parameter values for eventRouterCountAllEventsFromASubAccountForAGivenTimeRange call and complete the assertions
+          /*
+          var xSubAccountApiKey = "xSubAccountApiKey_example";
+
+          instance.eventRouterCountAllEventsFromASubAccountForAGivenTimeRange(xSubAccountApiKey, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelsCountStat);
+            expect(data.count).to.be.a('number');
+            expect(data.count).to.be("0");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('eventRouterGet', function() {
         it('should call eventRouterGet successfully', function(done) {
           // TODO: uncomment, update parameter values for eventRouterGet call and complete the assertions
@@ -113,7 +160,6 @@
           // TODO: uncomment, update parameter values for eventRouterGetAllEventsFromASubAccountForAGivenTimeRange call and complete the assertions
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
-          var subAccountId = 789;
           var opts = {};
           opts.offset = 789;
           opts.limit = 789;
@@ -121,7 +167,7 @@
           opts.from = "from_example";
           opts.to = "to_example";
 
-          instance.eventRouterGetAllEventsFromASubAccountForAGivenTimeRange(xSubAccountApiKey, subAccountId, opts, function(error, data, response) {
+          instance.eventRouterGetAllEventsFromASubAccountForAGivenTimeRange(xSubAccountApiKey, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;

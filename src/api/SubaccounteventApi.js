@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsQEvent'], factory);
+    define(['ApiClient', 'model/ModelsCountStat', 'model/ModelsQEvent'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsQEvent'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsCountStat'), require('../model/ModelsQEvent'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.SubaccounteventApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsQEvent);
+    root.SendPostApi.SubaccounteventApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsQEvent);
   }
-}(this, function(ApiClient, ModelsQEvent) {
+}(this, function(ApiClient, ModelsCountStat, ModelsQEvent) {
   'use strict';
 
   /**
@@ -47,6 +47,107 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange operation.
+     * @callback module:api/SubaccounteventApi~eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRangeCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ModelsCountStat} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Count all events from a node of a sub-account for a given time-range
+     * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {Number} subAccountId the subAccountId whose event you want to retrieve
+     * @param {module:api/SubaccounteventApi~eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRangeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ModelsCountStat}
+     */
+    this.eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange = function(xSubAccountApiKey, subAccountId, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'xSubAccountApiKey' is set
+      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange");
+      }
+
+      // verify the required parameter 'subAccountId' is set
+      if (subAccountId === undefined || subAccountId === null) {
+        throw new Error("Missing the required parameter 'subAccountId' when calling eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange");
+      }
+
+
+      var pathParams = {
+        'subAccountId': subAccountId
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-SubAccount-ApiKey': xSubAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ModelsCountStat;
+
+      return this.apiClient.callApi(
+        '/subaccount/event/node/{subAccountId}/count', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the eventRouterCountAllEventsFromASubAccountForAGivenTimeRange operation.
+     * @callback module:api/SubaccounteventApi~eventRouterCountAllEventsFromASubAccountForAGivenTimeRangeCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ModelsCountStat} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Count all events from a sub-account for a given time-range
+     * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {module:api/SubaccounteventApi~eventRouterCountAllEventsFromASubAccountForAGivenTimeRangeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ModelsCountStat}
+     */
+    this.eventRouterCountAllEventsFromASubAccountForAGivenTimeRange = function(xSubAccountApiKey, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'xSubAccountApiKey' is set
+      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling eventRouterCountAllEventsFromASubAccountForAGivenTimeRange");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-SubAccount-ApiKey': xSubAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ModelsCountStat;
+
+      return this.apiClient.callApi(
+        '/subaccount/event/count', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the eventRouterGet operation.
@@ -113,7 +214,6 @@
     /**
      * Find all events from a sub-account for a given time-range
      * @param {String} xSubAccountApiKey Sub-Account API Key
-     * @param {Number} subAccountId the subAccountId whose event you want to retrieve
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
      * @param {Number} opts.limit limit
@@ -123,7 +223,7 @@
      * @param {module:api/SubaccounteventApi~eventRouterGetAllEventsFromASubAccountForAGivenTimeRangeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsQEvent>}
      */
-    this.eventRouterGetAllEventsFromASubAccountForAGivenTimeRange = function(xSubAccountApiKey, subAccountId, opts, callback) {
+    this.eventRouterGetAllEventsFromASubAccountForAGivenTimeRange = function(xSubAccountApiKey, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -132,14 +232,8 @@
         throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling eventRouterGetAllEventsFromASubAccountForAGivenTimeRange");
       }
 
-      // verify the required parameter 'subAccountId' is set
-      if (subAccountId === undefined || subAccountId === null) {
-        throw new Error("Missing the required parameter 'subAccountId' when calling eventRouterGetAllEventsFromASubAccountForAGivenTimeRange");
-      }
-
 
       var pathParams = {
-        'subAccountId': subAccountId
       };
       var queryParams = {
         'offset': opts['offset'],

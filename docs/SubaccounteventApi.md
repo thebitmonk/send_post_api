@@ -4,11 +4,108 @@ All URIs are relative to *http://127.0.0.1:8080/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange**](SubaccounteventApi.md#eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange) | **GET** /subaccount/event/node/{subAccountId}/count | 
+[**eventRouterCountAllEventsFromASubAccountForAGivenTimeRange**](SubaccounteventApi.md#eventRouterCountAllEventsFromASubAccountForAGivenTimeRange) | **GET** /subaccount/event/count | 
 [**eventRouterGet**](SubaccounteventApi.md#eventRouterGet) | **GET** /subaccount/event/{eventId} | 
 [**eventRouterGetAllEventsFromASubAccountForAGivenTimeRange**](SubaccounteventApi.md#eventRouterGetAllEventsFromASubAccountForAGivenTimeRange) | **GET** /subaccount/event/ | 
 [**eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange**](SubaccounteventApi.md#eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange) | **GET** /subaccount/event/node/{subAccountId} | 
 [**eventRouterGetEventInNode**](SubaccounteventApi.md#eventRouterGetEventInNode) | **GET** /subaccount/event/node/{subAccountId}/{eventId} | 
 
+
+<a name="eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange"></a>
+# **eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange**
+> ModelsCountStat eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange(xSubAccountApiKey, subAccountId)
+
+
+
+Count all events from a node of a sub-account for a given time-range
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.SubaccounteventApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var subAccountId = 789; // Number | the subAccountId whose event you want to retrieve
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange(xSubAccountApiKey, subAccountId, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **subAccountId** | **Number**| the subAccountId whose event you want to retrieve | 
+
+### Return type
+
+[**ModelsCountStat**](ModelsCountStat.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="eventRouterCountAllEventsFromASubAccountForAGivenTimeRange"></a>
+# **eventRouterCountAllEventsFromASubAccountForAGivenTimeRange**
+> ModelsCountStat eventRouterCountAllEventsFromASubAccountForAGivenTimeRange(xSubAccountApiKey)
+
+
+
+Count all events from a sub-account for a given time-range
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.SubaccounteventApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.eventRouterCountAllEventsFromASubAccountForAGivenTimeRange(xSubAccountApiKey, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+
+### Return type
+
+[**ModelsCountStat**](ModelsCountStat.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="eventRouterGet"></a>
 # **eventRouterGet**
@@ -61,7 +158,7 @@ No authorization required
 
 <a name="eventRouterGetAllEventsFromASubAccountForAGivenTimeRange"></a>
 # **eventRouterGetAllEventsFromASubAccountForAGivenTimeRange**
-> [ModelsQEvent] eventRouterGetAllEventsFromASubAccountForAGivenTimeRange(xSubAccountApiKey, subAccountId, opts)
+> [ModelsQEvent] eventRouterGetAllEventsFromASubAccountForAGivenTimeRange(xSubAccountApiKey, opts)
 
 
 
@@ -74,8 +171,6 @@ var SendPostApi = require('send_post_api');
 var apiInstance = new SendPostApi.SubaccounteventApi();
 
 var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var subAccountId = 789; // Number | the subAccountId whose event you want to retrieve
 
 var opts = { 
   'offset': 789, // Number | offset
@@ -92,7 +187,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.eventRouterGetAllEventsFromASubAccountForAGivenTimeRange(xSubAccountApiKey, subAccountId, opts, callback);
+apiInstance.eventRouterGetAllEventsFromASubAccountForAGivenTimeRange(xSubAccountApiKey, opts, callback);
 ```
 
 ### Parameters
@@ -100,7 +195,6 @@ apiInstance.eventRouterGetAllEventsFromASubAccountForAGivenTimeRange(xSubAccount
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **subAccountId** | **Number**| the subAccountId whose event you want to retrieve | 
  **offset** | **Number**| offset | [optional] 
  **limit** | **Number**| limit | [optional] 
  **search** | **String**| search term | [optional] 
