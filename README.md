@@ -113,7 +113,7 @@ api.iPRouterAllocateIP(xAccountApiKey, callback);
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://127.0.0.1:8080/api/v1*
+All URIs are relative to *https://api.sendpost.io/api/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -126,7 +126,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountstatApi* | [**accountStatsRouterGetAllAccountStatsByGroup**](docs/AccountstatApi.md#accountStatsRouterGetAllAccountStatsByGroup) | **GET** /account/stat/group | 
 *SendPostApi.AccountstatApi* | [**accountStatsRouterGetAllAggregateAccountStats**](docs/AccountstatApi.md#accountStatsRouterGetAllAggregateAccountStats) | **GET** /account/stat/aggregate | 
 *SendPostApi.AccountstatApi* | [**accountStatsRouterGetAllAggregateAccountStatsByGroup**](docs/AccountstatApi.md#accountStatsRouterGetAllAggregateAccountStatsByGroup) | **GET** /account/stat/aggregate/group | 
-*SendPostApi.AccountsubaccountApi* | [**subAccountRouterCount**](docs/AccountsubaccountApi.md#subAccountRouterCount) | **GET** /account/subaccount/count | 
+*SendPostApi.AccountsubaccountApi* | [**subAccountRouterCount**](docs/AccountsubaccountApi.md#subAccountRouterCount) | **GET** /account/subaccount/{subAccountId}/count | 
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterCreate**](docs/AccountsubaccountApi.md#subAccountRouterCreate) | **POST** /account/subaccount/ | 
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterDelete**](docs/AccountsubaccountApi.md#subAccountRouterDelete) | **DELETE** /account/subaccount/{subAccountId} | 
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterGet**](docs/AccountsubaccountApi.md#subAccountRouterGet) | **GET** /account/subaccount/{subAccountId} | 
