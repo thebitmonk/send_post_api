@@ -4,7 +4,7 @@ All URIs are relative to *https://api.sendpost.io/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**subAccountRouterCount**](AccountsubaccountApi.md#subAccountRouterCount) | **GET** /account/subaccount/{subAccountId}/count | 
+[**subAccountRouterCount**](AccountsubaccountApi.md#subAccountRouterCount) | **GET** /account/subaccount/count | 
 [**subAccountRouterCreate**](AccountsubaccountApi.md#subAccountRouterCreate) | **POST** /account/subaccount/ | 
 [**subAccountRouterDelete**](AccountsubaccountApi.md#subAccountRouterDelete) | **DELETE** /account/subaccount/{subAccountId} | 
 [**subAccountRouterGet**](AccountsubaccountApi.md#subAccountRouterGet) | **GET** /account/subaccount/{subAccountId} | 
@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="subAccountRouterCount"></a>
 # **subAccountRouterCount**
-> ModelsCountStat subAccountRouterCount(xAccountApiKey, subAccountId)
+> ModelsCountStat subAccountRouterCount(xAccountApiKey)
 
 
 
@@ -28,8 +28,6 @@ var apiInstance = new SendPostApi.AccountsubaccountApi();
 
 var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
-var subAccountId = 789; // Number | The SubAccountId you want to delete
-
 
 var callback = function(error, data, response) {
   if (error) {
@@ -38,7 +36,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.subAccountRouterCount(xAccountApiKey, subAccountId, callback);
+apiInstance.subAccountRouterCount(xAccountApiKey, callback);
 ```
 
 ### Parameters
@@ -46,7 +44,6 @@ apiInstance.subAccountRouterCount(xAccountApiKey, subAccountId, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
- **subAccountId** | **Number**| The SubAccountId you want to delete | 
 
 ### Return type
 

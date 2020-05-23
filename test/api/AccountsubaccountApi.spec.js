@@ -41,9 +41,8 @@
           // TODO: uncomment, update parameter values for subAccountRouterCount call and complete the assertions
           /*
           var xAccountApiKey = "xAccountApiKey_example";
-          var subAccountId = 789;
 
-          instance.subAccountRouterCount(xAccountApiKey, subAccountId, function(error, data, response) {
+          instance.subAccountRouterCount(xAccountApiKey, function(error, data, response) {
             if (error) {
               done(error);
               return;
