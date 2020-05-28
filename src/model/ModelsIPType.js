@@ -53,7 +53,10 @@
    * @return {module:model/ModelsIPType} The populated <code>ModelsIPType</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
-    return data;
+    if (data) {
+      obj = obj || new exports();
+    }
+    return obj;
   }
 
   return exports;

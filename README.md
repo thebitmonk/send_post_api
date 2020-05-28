@@ -113,7 +113,7 @@ api.iPRouterAllocateIP(xAccountApiKey, callback);
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api.sendpost.io/api/v1*
+All URIs are relative to *http://127.0.0.1:8080/api/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -156,9 +156,13 @@ Class | Method | HTTP request | Description
 *SendPostApi.SubaccountippoolApi* | [**iPPoolRouterGetAll**](docs/SubaccountippoolApi.md#iPPoolRouterGetAll) | **GET** /subaccount/ippool/ | 
 *SendPostApi.SubaccountippoolApi* | [**iPPoolRouterUpdate**](docs/SubaccountippoolApi.md#iPPoolRouterUpdate) | **PUT** /subaccount/ippool/{ippoolid} | 
 *SendPostApi.SubaccountmessageApi* | [**messageRouterGet**](docs/SubaccountmessageApi.md#messageRouterGet) | **GET** /subaccount/message/{messageId} | 
+*SendPostApi.SubaccountmessageApi* | [**messageRouterGetAllEventsForAMessageId**](docs/SubaccountmessageApi.md#messageRouterGetAllEventsForAMessageId) | **GET** /subaccount/message/{messageId}/events | 
 *SendPostApi.SubaccountmessageApi* | [**messageRouterGetAllMessagesFromASubAccountBasedOnTimeRange**](docs/SubaccountmessageApi.md#messageRouterGetAllMessagesFromASubAccountBasedOnTimeRange) | **GET** /subaccount/message/ | 
 *SendPostApi.SubaccountmessageApi* | [**messageRouterGetAllMessagesOfASubAccountFromASpecificNodeBasedOnTimeRange**](docs/SubaccountmessageApi.md#messageRouterGetAllMessagesOfASubAccountFromASpecificNodeBasedOnTimeRange) | **GET** /subaccount/message/node/{subAccountId} | 
+*SendPostApi.SubaccountmessageApi* | [**messageRouterGetMessageEventsFromANode**](docs/SubaccountmessageApi.md#messageRouterGetMessageEventsFromANode) | **GET** /subaccount/message/node/{subAccountId}/{messageId}/events | 
 *SendPostApi.SubaccountmessageApi* | [**messageRouterGetMessageFromNodeById**](docs/SubaccountmessageApi.md#messageRouterGetMessageFromNodeById) | **GET** /subaccount/message/node/{subAccountId}/{messageId} | 
+*SendPostApi.SubaccountrecipientApi* | [**recipientRouterGetAllMessagesSentToASpecificRecipient**](docs/SubaccountrecipientApi.md#recipientRouterGetAllMessagesSentToASpecificRecipient) | **GET** /subaccount/recipient/{recipient}/messages | 
+*SendPostApi.SubaccountrecipientApi* | [**recipientRouterGetMessagesForASpecificRecipientFromANode**](docs/SubaccountrecipientApi.md#recipientRouterGetMessagesForASpecificRecipientFromANode) | **GET** /subaccount/recipient/node/{subAccountId}/{recipient}/messages | 
 *SendPostApi.SubaccountsenderApi* | [**senderRouterCount**](docs/SubaccountsenderApi.md#senderRouterCount) | **GET** /subaccount/sender/count | 
 *SendPostApi.SubaccountsenderApi* | [**senderRouterCreate**](docs/SubaccountsenderApi.md#senderRouterCreate) | **POST** /subaccount/sender/ | 
 *SendPostApi.SubaccountsenderApi* | [**senderRouterDelete**](docs/SubaccountsenderApi.md#senderRouterDelete) | **DELETE** /subaccount/sender/{senderId} | 
@@ -188,7 +192,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [SendPostApi.Geoip2City](docs/Geoip2City.md)
+ - [SendPostApi.City](docs/City.md)
  - [SendPostApi.ModelsAccount](docs/ModelsAccount.md)
  - [SendPostApi.ModelsAuthInfo](docs/ModelsAuthInfo.md)
  - [SendPostApi.ModelsCountStat](docs/ModelsCountStat.md)

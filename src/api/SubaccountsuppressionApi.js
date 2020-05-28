@@ -158,7 +158,7 @@
 
     /**
      * Add Email Addresses To Suppression Filter
-     * @param {Array.<module:model/ModelsSuppression>} body Add suppressions to suppression filter
+     * @param {module:model/ModelsSuppression} body Add suppressions to suppression filter
      * @param {module:api/SubaccountsuppressionApi~suppressionRouterCreateSuppressionsInSuppressionFilterCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.suppressionRouterCreateSuppressionsInSuppressionFilter = function(body, callback) {
@@ -256,7 +256,7 @@
 
     /**
      * Delete specific emails which are in suppression list
-     * @param {Array.<module:model/ModelsSuppression>} body Suppression content
+     * @param {module:model/ModelsSuppression} body Suppression content
      * @param {module:api/SubaccountsuppressionApi~suppressionRouterDeleteSuppressionsInSuppressionFilterCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.suppressionRouterDeleteSuppressionsInSuppressionFilter = function(body, callback) {

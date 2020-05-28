@@ -57,16 +57,8 @@
               expect(data.from.email).to.be("");
               expect(data.from.name).to.be.a('string');
               expect(data.from.name).to.be("");
-            {
-              let dataCtr = data.groups;
-              expect(dataCtr).to.be.an(Array);
-              expect(dataCtr).to.not.be.empty();
-              for (let p in dataCtr) {
-                let data = dataCtr[p];
-                expect(data).to.be.a('string');
-                expect(data).to.be("");
-              }
-            }
+            expect(data.groups).to.be.a(Object);
+            expect(data.groups).to.be();
             expect(data.headers).to.be.a(Object);
             expect(data.headers).to.be();
             expect(data.htmlBody).to.be.a('string');
@@ -109,6 +101,77 @@
           done();
         });
       });
+      describe('messageRouterGetAllEventsForAMessageId', function() {
+        it('should call messageRouterGetAllEventsForAMessageId successfully', function(done) {
+          // TODO: uncomment, update parameter values for messageRouterGetAllEventsForAMessageId call and complete the assertions
+          /*
+          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var messageId = "messageId_example";
+
+          instance.messageRouterGetAllEventsForAMessageId(xSubAccountApiKey, messageId, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            let dataCtr = data;
+            expect(dataCtr).to.be.an(Array);
+            expect(dataCtr).to.not.be.empty();
+            for (let p in dataCtr) {
+              let data = dataCtr[p];
+              expect(data).to.be.a(SendPostApi.ModelsQEvent);
+              expect(data.eventID).to.be.a('string');
+              expect(data.eventID).to.be("");
+              expect(data.eventMetadata).to.be.a(SendPostApi.ModelsEventMetadata);
+                    expect(data.eventMetadata.clickedURL).to.be.a('string');
+                expect(data.eventMetadata.clickedURL).to.be("");
+                expect(data.eventMetadata.device).to.be.a(SendPostApi.UaparserDevice);
+                      expect(data.eventMetadata.device.family).to.be.a('string');
+                  expect(data.eventMetadata.device.family).to.be("");
+                expect(data.eventMetadata.geo).to.be.a(SendPostApi.Geoip2City);
+                    expect(data.eventMetadata.os).to.be.a(SendPostApi.UaparserOs);
+                      expect(data.eventMetadata.os.family).to.be.a('string');
+                  expect(data.eventMetadata.os.family).to.be("");
+                  expect(data.eventMetadata.os.major).to.be.a('string');
+                  expect(data.eventMetadata.os.major).to.be("");
+                  expect(data.eventMetadata.os.minor).to.be.a('string');
+                  expect(data.eventMetadata.os.minor).to.be("");
+                  expect(data.eventMetadata.os.patch).to.be.a('string');
+                  expect(data.eventMetadata.os.patch).to.be("");
+                  expect(data.eventMetadata.os.patchMinor).to.be.a('string');
+                  expect(data.eventMetadata.os.patchMinor).to.be("");
+                expect(data.eventMetadata.smtpCode).to.be.a('number');
+                expect(data.eventMetadata.smtpCode).to.be("0");
+                expect(data.eventMetadata.smtpDescription).to.be.a('string');
+                expect(data.eventMetadata.smtpDescription).to.be("");
+                expect(data.eventMetadata.userAgent).to.be.a(SendPostApi.UaparserUserAgent);
+                      expect(data.eventMetadata.userAgent.family).to.be.a('string');
+                  expect(data.eventMetadata.userAgent.family).to.be("");
+                  expect(data.eventMetadata.userAgent.major).to.be.a('string');
+                  expect(data.eventMetadata.userAgent.major).to.be("");
+                  expect(data.eventMetadata.userAgent.minor).to.be.a('string');
+                  expect(data.eventMetadata.userAgent.minor).to.be("");
+                  expect(data.eventMetadata.userAgent.patch).to.be.a('string');
+                  expect(data.eventMetadata.userAgent.patch).to.be("");
+              expect(data.groups).to.be.a(Object);
+              expect(data.groups).to.be();
+              expect(data.messageID).to.be.a('string');
+              expect(data.messageID).to.be("");
+              expect(data.subAccountID).to.be.a('number');
+              expect(data.subAccountID).to.be("0");
+              expect(data.submittedAt).to.be.a('number');
+              expect(data.submittedAt).to.be("0");
+              expect(data.type).to.be.a(SendPostApi.ModelsEventType);
+      
+            }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('messageRouterGetAllMessagesFromASubAccountBasedOnTimeRange', function() {
         it('should call messageRouterGetAllMessagesFromASubAccountBasedOnTimeRange successfully', function(done) {
           // TODO: uncomment, update parameter values for messageRouterGetAllMessagesFromASubAccountBasedOnTimeRange call and complete the assertions
@@ -140,16 +203,8 @@
                 expect(data.from.email).to.be("");
                 expect(data.from.name).to.be.a('string');
                 expect(data.from.name).to.be("");
-              {
-                let dataCtr = data.groups;
-                expect(dataCtr).to.be.an(Array);
-                expect(dataCtr).to.not.be.empty();
-                for (let p in dataCtr) {
-                  let data = dataCtr[p];
-                  expect(data).to.be.a('string');
-                  expect(data).to.be("");
-                }
-              }
+              expect(data.groups).to.be.a(Object);
+              expect(data.groups).to.be();
               expect(data.headers).to.be.a(Object);
               expect(data.headers).to.be();
               expect(data.htmlBody).to.be.a('string');
@@ -218,16 +273,8 @@
                 expect(data.from.email).to.be("");
                 expect(data.from.name).to.be.a('string');
                 expect(data.from.name).to.be("");
-              {
-                let dataCtr = data.groups;
-                expect(dataCtr).to.be.an(Array);
-                expect(dataCtr).to.not.be.empty();
-                for (let p in dataCtr) {
-                  let data = dataCtr[p];
-                  expect(data).to.be.a('string');
-                  expect(data).to.be("");
-                }
-              }
+              expect(data.groups).to.be.a(Object);
+              expect(data.groups).to.be();
               expect(data.headers).to.be.a(Object);
               expect(data.headers).to.be();
               expect(data.htmlBody).to.be.a('string');
@@ -271,6 +318,78 @@
           done();
         });
       });
+      describe('messageRouterGetMessageEventsFromANode', function() {
+        it('should call messageRouterGetMessageEventsFromANode successfully', function(done) {
+          // TODO: uncomment, update parameter values for messageRouterGetMessageEventsFromANode call and complete the assertions
+          /*
+          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var messageId = "messageId_example";
+          var subAccountId = 789;
+
+          instance.messageRouterGetMessageEventsFromANode(xSubAccountApiKey, messageId, subAccountId, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            let dataCtr = data;
+            expect(dataCtr).to.be.an(Array);
+            expect(dataCtr).to.not.be.empty();
+            for (let p in dataCtr) {
+              let data = dataCtr[p];
+              expect(data).to.be.a(SendPostApi.ModelsQEvent);
+              expect(data.eventID).to.be.a('string');
+              expect(data.eventID).to.be("");
+              expect(data.eventMetadata).to.be.a(SendPostApi.ModelsEventMetadata);
+                    expect(data.eventMetadata.clickedURL).to.be.a('string');
+                expect(data.eventMetadata.clickedURL).to.be("");
+                expect(data.eventMetadata.device).to.be.a(SendPostApi.UaparserDevice);
+                      expect(data.eventMetadata.device.family).to.be.a('string');
+                  expect(data.eventMetadata.device.family).to.be("");
+                expect(data.eventMetadata.geo).to.be.a(SendPostApi.Geoip2City);
+                    expect(data.eventMetadata.os).to.be.a(SendPostApi.UaparserOs);
+                      expect(data.eventMetadata.os.family).to.be.a('string');
+                  expect(data.eventMetadata.os.family).to.be("");
+                  expect(data.eventMetadata.os.major).to.be.a('string');
+                  expect(data.eventMetadata.os.major).to.be("");
+                  expect(data.eventMetadata.os.minor).to.be.a('string');
+                  expect(data.eventMetadata.os.minor).to.be("");
+                  expect(data.eventMetadata.os.patch).to.be.a('string');
+                  expect(data.eventMetadata.os.patch).to.be("");
+                  expect(data.eventMetadata.os.patchMinor).to.be.a('string');
+                  expect(data.eventMetadata.os.patchMinor).to.be("");
+                expect(data.eventMetadata.smtpCode).to.be.a('number');
+                expect(data.eventMetadata.smtpCode).to.be("0");
+                expect(data.eventMetadata.smtpDescription).to.be.a('string');
+                expect(data.eventMetadata.smtpDescription).to.be("");
+                expect(data.eventMetadata.userAgent).to.be.a(SendPostApi.UaparserUserAgent);
+                      expect(data.eventMetadata.userAgent.family).to.be.a('string');
+                  expect(data.eventMetadata.userAgent.family).to.be("");
+                  expect(data.eventMetadata.userAgent.major).to.be.a('string');
+                  expect(data.eventMetadata.userAgent.major).to.be("");
+                  expect(data.eventMetadata.userAgent.minor).to.be.a('string');
+                  expect(data.eventMetadata.userAgent.minor).to.be("");
+                  expect(data.eventMetadata.userAgent.patch).to.be.a('string');
+                  expect(data.eventMetadata.userAgent.patch).to.be("");
+              expect(data.groups).to.be.a(Object);
+              expect(data.groups).to.be();
+              expect(data.messageID).to.be.a('string');
+              expect(data.messageID).to.be("");
+              expect(data.subAccountID).to.be.a('number');
+              expect(data.subAccountID).to.be("0");
+              expect(data.submittedAt).to.be.a('number');
+              expect(data.submittedAt).to.be("0");
+              expect(data.type).to.be.a(SendPostApi.ModelsEventType);
+      
+            }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('messageRouterGetMessageFromNodeById', function() {
         it('should call messageRouterGetMessageFromNodeById successfully', function(done) {
           // TODO: uncomment, update parameter values for messageRouterGetMessageFromNodeById call and complete the assertions
@@ -292,16 +411,8 @@
               expect(data.from.email).to.be("");
               expect(data.from.name).to.be.a('string');
               expect(data.from.name).to.be("");
-            {
-              let dataCtr = data.groups;
-              expect(dataCtr).to.be.an(Array);
-              expect(dataCtr).to.not.be.empty();
-              for (let p in dataCtr) {
-                let data = dataCtr[p];
-                expect(data).to.be.a('string');
-                expect(data).to.be("");
-              }
-            }
+            expect(data.groups).to.be.a(Object);
+            expect(data.groups).to.be();
             expect(data.headers).to.be.a(Object);
             expect(data.headers).to.be();
             expect(data.htmlBody).to.be.a('string');

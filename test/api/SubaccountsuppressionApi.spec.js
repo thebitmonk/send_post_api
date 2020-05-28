@@ -100,11 +100,11 @@
         it('should call suppressionRouterCreateSuppressionsInSuppressionFilter successfully', function(done) {
           // TODO: uncomment, update parameter values for suppressionRouterCreateSuppressionsInSuppressionFilter call
           /*
-          var body = [new SendPostApi.ModelsSuppression()];
-          body[0].created = "0";
-          body[0].email = "";
-          body[0].id = "0";
-          body[0].reason = new SendPostApi.ModelsSuppressionReason();
+          var body = new SendPostApi.ModelsSuppression();
+          body.created = "0";
+          body.email = "";
+          body.id = "0";
+          body.reason = new SendPostApi.ModelsSuppressionReason();
 
           instance.suppressionRouterCreateSuppressionsInSuppressionFilter(body, function(error, data, response) {
             if (error) {
@@ -154,11 +154,11 @@
         it('should call suppressionRouterDeleteSuppressionsInSuppressionFilter successfully', function(done) {
           // TODO: uncomment, update parameter values for suppressionRouterDeleteSuppressionsInSuppressionFilter call
           /*
-          var body = [new SendPostApi.ModelsSuppression()];
-          body[0].created = "0";
-          body[0].email = "";
-          body[0].id = "0";
-          body[0].reason = new SendPostApi.ModelsSuppressionReason();
+          var body = new SendPostApi.ModelsSuppression();
+          body.created = "0";
+          body.email = "";
+          body.id = "0";
+          body.reason = new SendPostApi.ModelsSuppressionReason();
 
           instance.suppressionRouterDeleteSuppressionsInSuppressionFilter(body, function(error, data, response) {
             if (error) {

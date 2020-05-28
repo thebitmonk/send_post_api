@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **customFields** | **Object** |  | [optional] 
 **from** | [**ModelsFrom**](ModelsFrom.md) |  | [optional] 
-**groups** | **[String]** |  | [optional] 
+**groups** | **Object** |  | [optional] 
 **headers** | **Object** |  | [optional] 
 **htmlBody** | **String** |  | [optional] 
 **ipPool** | **String** |  | [optional] 

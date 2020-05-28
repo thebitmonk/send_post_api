@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **from** | [**ModelsFrom**](ModelsFrom.md) |  | [optional] 
-**groups** | **[String]** |  | [optional] 
+**groups** | **Object** |  | [optional] 
 **headers** | **Object** |  | [optional] 
 **htmlBody** | **String** |  | [optional] 
 **ippool** | **String** |  | [optional] 

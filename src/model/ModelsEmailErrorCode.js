@@ -53,7 +53,10 @@
    * @return {module:model/ModelsEmailErrorCode} The populated <code>ModelsEmailErrorCode</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
-    return data;
+    if (data) {
+      obj = obj || new exports();
+    }
+    return obj;
   }
 
   return exports;

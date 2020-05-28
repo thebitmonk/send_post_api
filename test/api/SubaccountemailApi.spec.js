@@ -45,7 +45,7 @@
           body.from = new SendPostApi.ModelsFrom();
           body.from.email = "";
           body.from.name = "";
-          body.groups = [""];
+          body.groups = ;
           body.headers = ;
           body.htmlBody = "";
           body.ippool = "";

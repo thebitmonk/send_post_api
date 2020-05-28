@@ -26,31 +26,31 @@
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsIPPoolType = factory(root.SendPostApi.ApiClient);
+    root.SendPostApi.City = factory(root.SendPostApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The ModelsIPPoolType model module.
-   * @module model/ModelsIPPoolType
+   * The City model module.
+   * @module model/City
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>ModelsIPPoolType</code>.
-   * @alias module:model/ModelsIPPoolType
+   * Constructs a new <code>City</code>.
+   * @alias module:model/City
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>ModelsIPPoolType</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>City</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ModelsIPPoolType} obj Optional instance to populate.
-   * @return {module:model/ModelsIPPoolType} The populated <code>ModelsIPPoolType</code> instance.
+   * @param {module:model/City} obj Optional instance to populate.
+   * @return {module:model/City} The populated <code>City</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {

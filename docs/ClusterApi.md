@@ -1,6 +1,6 @@
 # SendPostApi.ClusterApi
 
-All URIs are relative to *https://api.sendpost.io/api/v1*
+All URIs are relative to *http://127.0.0.1:8080/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -22,7 +22,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.ClusterApi();
 
-var body = [new SendPostApi.ModelsSuppression()]; // [ModelsSuppression] | Add suppressions to suppression filter
+var body = new SendPostApi.ModelsSuppression(); // ModelsSuppression | Add suppressions to suppression filter
 
 
 var callback = function(error, data, response) {
@@ -39,7 +39,7 @@ apiInstance.clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster(body, c
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**[ModelsSuppression]**](ModelsSuppression.md)| Add suppressions to suppression filter | 
+ **body** | [**ModelsSuppression**](ModelsSuppression.md)| Add suppressions to suppression filter | 
 
 ### Return type
 
@@ -68,7 +68,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.ClusterApi();
 
-var body = [new SendPostApi.ModelsSuppression()]; // [ModelsSuppression] | Delete suppressions from suppression filter
+var body = new SendPostApi.ModelsSuppression(); // ModelsSuppression | Delete suppressions from suppression filter
 
 
 var callback = function(error, data, response) {
@@ -85,7 +85,7 @@ apiInstance.clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster(bo
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**[ModelsSuppression]**](ModelsSuppression.md)| Delete suppressions from suppression filter | 
+ **body** | [**ModelsSuppression**](ModelsSuppression.md)| Delete suppressions from suppression filter | 
 
 ### Return type
 

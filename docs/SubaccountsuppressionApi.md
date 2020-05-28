@@ -1,6 +1,6 @@
 # SendPostApi.SubaccountsuppressionApi
 
-All URIs are relative to *https://api.sendpost.io/api/v1*
+All URIs are relative to *http://127.0.0.1:8080/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -121,7 +121,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.SubaccountsuppressionApi();
 
-var body = [new SendPostApi.ModelsSuppression()]; // [ModelsSuppression] | Add suppressions to suppression filter
+var body = new SendPostApi.ModelsSuppression(); // ModelsSuppression | Add suppressions to suppression filter
 
 
 var callback = function(error, data, response) {
@@ -138,7 +138,7 @@ apiInstance.suppressionRouterCreateSuppressionsInSuppressionFilter(body, callbac
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**[ModelsSuppression]**](ModelsSuppression.md)| Add suppressions to suppression filter | 
+ **body** | [**ModelsSuppression**](ModelsSuppression.md)| Add suppressions to suppression filter | 
 
 ### Return type
 
@@ -216,7 +216,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.SubaccountsuppressionApi();
 
-var body = [new SendPostApi.ModelsSuppression()]; // [ModelsSuppression] | Suppression content
+var body = new SendPostApi.ModelsSuppression(); // ModelsSuppression | Suppression content
 
 
 var callback = function(error, data, response) {
@@ -233,7 +233,7 @@ apiInstance.suppressionRouterDeleteSuppressionsInSuppressionFilter(body, callbac
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**[ModelsSuppression]**](ModelsSuppression.md)| Suppression content | 
+ **body** | [**ModelsSuppression**](ModelsSuppression.md)| Suppression content | 
 
 ### Return type
 

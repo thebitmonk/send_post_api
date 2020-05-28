@@ -40,11 +40,11 @@
         it('should call clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster successfully', function(done) {
           // TODO: uncomment, update parameter values for clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster call
           /*
-          var body = [new SendPostApi.ModelsSuppression()];
-          body[0].created = "0";
-          body[0].email = "";
-          body[0].id = "0";
-          body[0].reason = new SendPostApi.ModelsSuppressionReason();
+          var body = new SendPostApi.ModelsSuppression();
+          body.created = "0";
+          body.email = "";
+          body.id = "0";
+          body.reason = new SendPostApi.ModelsSuppressionReason();
 
           instance.clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster(body, function(error, data, response) {
             if (error) {
@@ -63,11 +63,11 @@
         it('should call clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster successfully', function(done) {
           // TODO: uncomment, update parameter values for clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster call
           /*
-          var body = [new SendPostApi.ModelsSuppression()];
-          body[0].created = "0";
-          body[0].email = "";
-          body[0].id = "0";
-          body[0].reason = new SendPostApi.ModelsSuppressionReason();
+          var body = new SendPostApi.ModelsSuppression();
+          body.created = "0";
+          body.email = "";
+          body.id = "0";
+          body.reason = new SendPostApi.ModelsSuppressionReason();
 
           instance.clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster(body, function(error, data, response) {
             if (error) {

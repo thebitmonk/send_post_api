@@ -1,12 +1,14 @@
 # SendPostApi.SubaccountmessageApi
 
-All URIs are relative to *https://api.sendpost.io/api/v1*
+All URIs are relative to *http://127.0.0.1:8080/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**messageRouterGet**](SubaccountmessageApi.md#messageRouterGet) | **GET** /subaccount/message/{messageId} | 
+[**messageRouterGetAllEventsForAMessageId**](SubaccountmessageApi.md#messageRouterGetAllEventsForAMessageId) | **GET** /subaccount/message/{messageId}/events | 
 [**messageRouterGetAllMessagesFromASubAccountBasedOnTimeRange**](SubaccountmessageApi.md#messageRouterGetAllMessagesFromASubAccountBasedOnTimeRange) | **GET** /subaccount/message/ | 
 [**messageRouterGetAllMessagesOfASubAccountFromASpecificNodeBasedOnTimeRange**](SubaccountmessageApi.md#messageRouterGetAllMessagesOfASubAccountFromASpecificNodeBasedOnTimeRange) | **GET** /subaccount/message/node/{subAccountId} | 
+[**messageRouterGetMessageEventsFromANode**](SubaccountmessageApi.md#messageRouterGetMessageEventsFromANode) | **GET** /subaccount/message/node/{subAccountId}/{messageId}/events | 
 [**messageRouterGetMessageFromNodeById**](SubaccountmessageApi.md#messageRouterGetMessageFromNodeById) | **GET** /subaccount/message/node/{subAccountId}/{messageId} | 
 
 
@@ -49,6 +51,55 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ModelsQEmailMessage**](ModelsQEmailMessage.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="messageRouterGetAllEventsForAMessageId"></a>
+# **messageRouterGetAllEventsForAMessageId**
+> [ModelsQEvent] messageRouterGetAllEventsForAMessageId(xSubAccountApiKey, messageId)
+
+
+
+Find all events associated with a message id
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.SubaccountmessageApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var messageId = "messageId_example"; // String | the messageId that you want to retrieve
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.messageRouterGetAllEventsForAMessageId(xSubAccountApiKey, messageId, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **messageId** | **String**| the messageId that you want to retrieve | 
+
+### Return type
+
+[**[ModelsQEvent]**](ModelsQEvent.md)
 
 ### Authorization
 
@@ -153,6 +204,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[ModelsQEmailMessage]**](ModelsQEmailMessage.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="messageRouterGetMessageEventsFromANode"></a>
+# **messageRouterGetMessageEventsFromANode**
+> [ModelsQEvent] messageRouterGetMessageEventsFromANode(xSubAccountApiKey, messageId, subAccountId)
+
+
+
+Find all message events associated with a message id from a specific node
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.SubaccountmessageApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var messageId = "messageId_example"; // String | the messageId that you want to retrieve
+
+var subAccountId = 789; // Number | the subAccountId whose message you want to retrieve
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.messageRouterGetMessageEventsFromANode(xSubAccountApiKey, messageId, subAccountId, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **messageId** | **String**| the messageId that you want to retrieve | 
+ **subAccountId** | **Number**| the subAccountId whose message you want to retrieve | 
+
+### Return type
+
+[**[ModelsQEvent]**](ModelsQEvent.md)
 
 ### Authorization
 

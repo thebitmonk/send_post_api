@@ -53,7 +53,10 @@
    * @return {module:model/ModelsSubAccountType} The populated <code>ModelsSubAccountType</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
-    return data;
+    if (data) {
+      obj = obj || new exports();
+    }
+    return obj;
   }
 
   return exports;

@@ -58,7 +58,7 @@
 
     /**
      * Add items to suppression filter of every node in cluster
-     * @param {Array.<module:model/ModelsSuppression>} body Add suppressions to suppression filter
+     * @param {module:model/ModelsSuppression} body Add suppressions to suppression filter
      * @param {module:api/ClusterApi~clusterRouterAddItemsToSuppressionFilterOfEveryNodeInClusterCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster = function(body, callback) {
@@ -103,7 +103,7 @@
 
     /**
      * Delete items from suppression filter of every node in cluster
-     * @param {Array.<module:model/ModelsSuppression>} body Delete suppressions from suppression filter
+     * @param {module:model/ModelsSuppression} body Delete suppressions from suppression filter
      * @param {module:api/ClusterApi~clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInClusterCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster = function(body, callback) {

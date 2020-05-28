@@ -130,16 +130,8 @@
                 expect(data.eventMetadata.userAgent.minor).to.be("");
                 expect(data.eventMetadata.userAgent.patch).to.be.a('string');
                 expect(data.eventMetadata.userAgent.patch).to.be("");
-            {
-              let dataCtr = data.groups;
-              expect(dataCtr).to.be.an(Array);
-              expect(dataCtr).to.not.be.empty();
-              for (let p in dataCtr) {
-                let data = dataCtr[p];
-                expect(data).to.be.a('string');
-                expect(data).to.be("");
-              }
-            }
+            expect(data.groups).to.be.a(Object);
+            expect(data.groups).to.be();
             expect(data.messageID).to.be.a('string');
             expect(data.messageID).to.be("");
             expect(data.subAccountID).to.be.a('number');
@@ -212,16 +204,8 @@
                   expect(data.eventMetadata.userAgent.minor).to.be("");
                   expect(data.eventMetadata.userAgent.patch).to.be.a('string');
                   expect(data.eventMetadata.userAgent.patch).to.be("");
-              {
-                let dataCtr = data.groups;
-                expect(dataCtr).to.be.an(Array);
-                expect(dataCtr).to.not.be.empty();
-                for (let p in dataCtr) {
-                  let data = dataCtr[p];
-                  expect(data).to.be.a('string');
-                  expect(data).to.be("");
-                }
-              }
+              expect(data.groups).to.be.a(Object);
+              expect(data.groups).to.be();
               expect(data.messageID).to.be.a('string');
               expect(data.messageID).to.be("");
               expect(data.subAccountID).to.be.a('number');
@@ -291,16 +275,8 @@
                   expect(data.eventMetadata.userAgent.minor).to.be("");
                   expect(data.eventMetadata.userAgent.patch).to.be.a('string');
                   expect(data.eventMetadata.userAgent.patch).to.be("");
-              {
-                let dataCtr = data.groups;
-                expect(dataCtr).to.be.an(Array);
-                expect(dataCtr).to.not.be.empty();
-                for (let p in dataCtr) {
-                  let data = dataCtr[p];
-                  expect(data).to.be.a('string');
-                  expect(data).to.be("");
-                }
-              }
+              expect(data.groups).to.be.a(Object);
+              expect(data.groups).to.be();
               expect(data.messageID).to.be.a('string');
               expect(data.messageID).to.be("");
               expect(data.subAccountID).to.be.a('number');
@@ -365,16 +341,8 @@
                 expect(data.eventMetadata.userAgent.minor).to.be("");
                 expect(data.eventMetadata.userAgent.patch).to.be.a('string');
                 expect(data.eventMetadata.userAgent.patch).to.be("");
-            {
-              let dataCtr = data.groups;
-              expect(dataCtr).to.be.an(Array);
-              expect(dataCtr).to.not.be.empty();
-              for (let p in dataCtr) {
-                let data = dataCtr[p];
-                expect(data).to.be.a('string');
-                expect(data).to.be("");
-              }
-            }
+            expect(data.groups).to.be.a(Object);
+            expect(data.groups).to.be();
             expect(data.messageID).to.be.a('string');
             expect(data.messageID).to.be("");
             expect(data.subAccountID).to.be.a('number');

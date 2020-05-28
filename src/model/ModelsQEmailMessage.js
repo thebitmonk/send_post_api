@@ -60,7 +60,7 @@
       if (data.hasOwnProperty('from'))
         obj.from = ModelsFrom.constructFromObject(data['from']);
       if (data.hasOwnProperty('groups'))
-        obj.groups = ApiClient.convertToType(data['groups'], ['String']);
+        obj.groups = ApiClient.convertToType(data['groups'], Object);
       if (data.hasOwnProperty('headers'))
         obj.headers = ApiClient.convertToType(data['headers'], Object);
       if (data.hasOwnProperty('htmlBody'))
@@ -102,7 +102,7 @@
   exports.prototype.from = undefined;
 
   /**
-   * @member {Array.<String>} groups
+   * @member {Object} groups
    */
   exports.prototype.groups = undefined;
 

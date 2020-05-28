@@ -60,7 +60,7 @@
       if (data.hasOwnProperty('eventMetadata'))
         obj.eventMetadata = ModelsEventMetadata.constructFromObject(data['eventMetadata']);
       if (data.hasOwnProperty('groups'))
-        obj.groups = ApiClient.convertToType(data['groups'], ['String']);
+        obj.groups = ApiClient.convertToType(data['groups'], Object);
       if (data.hasOwnProperty('messageID'))
         obj.messageID = ApiClient.convertToType(data['messageID'], 'String');
       if (data.hasOwnProperty('subAccountID'))
@@ -84,7 +84,7 @@
   exports.prototype.eventMetadata = undefined;
 
   /**
-   * @member {Array.<String>} groups
+   * @member {Object} groups
    */
   exports.prototype.groups = undefined;
 
