@@ -49,8 +49,8 @@
 
 
     /**
-     * Callback function to receive the result of the recipientRouterGetAllMessagesSentToASpecificRecipient operation.
-     * @callback module:api/SubaccountrecipientApi~recipientRouterGetAllMessagesSentToASpecificRecipientCallback
+     * Callback function to receive the result of the recipientRouterGetAllMessagesForARecipient operation.
+     * @callback module:api/SubaccountrecipientApi~recipientRouterGetAllMessagesForARecipientCallback
      * @param {String} error Error message, if any.
      * @param {Array.<module:model/ModelsQEmailMessage>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -60,20 +60,20 @@
      * Find all messages sent to a specific recipient
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {String} recipient email of the recipient
-     * @param {module:api/SubaccountrecipientApi~recipientRouterGetAllMessagesSentToASpecificRecipientCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/SubaccountrecipientApi~recipientRouterGetAllMessagesForARecipientCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsQEmailMessage>}
      */
-    this.recipientRouterGetAllMessagesSentToASpecificRecipient = function(xSubAccountApiKey, recipient, callback) {
+    this.recipientRouterGetAllMessagesForARecipient = function(xSubAccountApiKey, recipient, callback) {
       var postBody = null;
 
       // verify the required parameter 'xSubAccountApiKey' is set
       if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling recipientRouterGetAllMessagesSentToASpecificRecipient");
+        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling recipientRouterGetAllMessagesForARecipient");
       }
 
       // verify the required parameter 'recipient' is set
       if (recipient === undefined || recipient === null) {
-        throw new Error("Missing the required parameter 'recipient' when calling recipientRouterGetAllMessagesSentToASpecificRecipient");
+        throw new Error("Missing the required parameter 'recipient' when calling recipientRouterGetAllMessagesForARecipient");
       }
 
 
@@ -103,8 +103,8 @@
     }
 
     /**
-     * Callback function to receive the result of the recipientRouterGetMessagesForASpecificRecipientFromANode operation.
-     * @callback module:api/SubaccountrecipientApi~recipientRouterGetMessagesForASpecificRecipientFromANodeCallback
+     * Callback function to receive the result of the recipientRouterGetAllMessagesForARecipientFromANode operation.
+     * @callback module:api/SubaccountrecipientApi~recipientRouterGetAllMessagesForARecipientFromANodeCallback
      * @param {String} error Error message, if any.
      * @param {Array.<module:model/ModelsQEmailMessage>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -115,25 +115,25 @@
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Number} subAccountId the subAccountId whose message you want to retrieve
      * @param {String} recipient email of the recipient
-     * @param {module:api/SubaccountrecipientApi~recipientRouterGetMessagesForASpecificRecipientFromANodeCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/SubaccountrecipientApi~recipientRouterGetAllMessagesForARecipientFromANodeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsQEmailMessage>}
      */
-    this.recipientRouterGetMessagesForASpecificRecipientFromANode = function(xSubAccountApiKey, subAccountId, recipient, callback) {
+    this.recipientRouterGetAllMessagesForARecipientFromANode = function(xSubAccountApiKey, subAccountId, recipient, callback) {
       var postBody = null;
 
       // verify the required parameter 'xSubAccountApiKey' is set
       if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling recipientRouterGetMessagesForASpecificRecipientFromANode");
+        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling recipientRouterGetAllMessagesForARecipientFromANode");
       }
 
       // verify the required parameter 'subAccountId' is set
       if (subAccountId === undefined || subAccountId === null) {
-        throw new Error("Missing the required parameter 'subAccountId' when calling recipientRouterGetMessagesForASpecificRecipientFromANode");
+        throw new Error("Missing the required parameter 'subAccountId' when calling recipientRouterGetAllMessagesForARecipientFromANode");
       }
 
       // verify the required parameter 'recipient' is set
       if (recipient === undefined || recipient === null) {
-        throw new Error("Missing the required parameter 'recipient' when calling recipientRouterGetMessagesForASpecificRecipientFromANode");
+        throw new Error("Missing the required parameter 'recipient' when calling recipientRouterGetAllMessagesForARecipientFromANode");
       }
 
 

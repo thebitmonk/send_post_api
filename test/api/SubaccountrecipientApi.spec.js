@@ -36,14 +36,14 @@
 
   describe('(package)', function() {
     describe('SubaccountrecipientApi', function() {
-      describe('recipientRouterGetAllMessagesSentToASpecificRecipient', function() {
-        it('should call recipientRouterGetAllMessagesSentToASpecificRecipient successfully', function(done) {
-          // TODO: uncomment, update parameter values for recipientRouterGetAllMessagesSentToASpecificRecipient call and complete the assertions
+      describe('recipientRouterGetAllMessagesForARecipient', function() {
+        it('should call recipientRouterGetAllMessagesForARecipient successfully', function(done) {
+          // TODO: uncomment, update parameter values for recipientRouterGetAllMessagesForARecipient call and complete the assertions
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
           var recipient = "recipient_example";
 
-          instance.recipientRouterGetAllMessagesSentToASpecificRecipient(xSubAccountApiKey, recipient, function(error, data, response) {
+          instance.recipientRouterGetAllMessagesForARecipient(xSubAccountApiKey, recipient, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -107,15 +107,15 @@
           done();
         });
       });
-      describe('recipientRouterGetMessagesForASpecificRecipientFromANode', function() {
-        it('should call recipientRouterGetMessagesForASpecificRecipientFromANode successfully', function(done) {
-          // TODO: uncomment, update parameter values for recipientRouterGetMessagesForASpecificRecipientFromANode call and complete the assertions
+      describe('recipientRouterGetAllMessagesForARecipientFromANode', function() {
+        it('should call recipientRouterGetAllMessagesForARecipientFromANode successfully', function(done) {
+          // TODO: uncomment, update parameter values for recipientRouterGetAllMessagesForARecipientFromANode call and complete the assertions
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
           var subAccountId = 789;
           var recipient = "recipient_example";
 
-          instance.recipientRouterGetMessagesForASpecificRecipientFromANode(xSubAccountApiKey, subAccountId, recipient, function(error, data, response) {
+          instance.recipientRouterGetAllMessagesForARecipientFromANode(xSubAccountApiKey, subAccountId, recipient, function(error, data, response) {
             if (error) {
               done(error);
               return;

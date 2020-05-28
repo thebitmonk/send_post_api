@@ -6,10 +6,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**messageRouterGet**](SubaccountmessageApi.md#messageRouterGet) | **GET** /subaccount/message/{messageId} | 
 [**messageRouterGetAllEventsForAMessageId**](SubaccountmessageApi.md#messageRouterGetAllEventsForAMessageId) | **GET** /subaccount/message/{messageId}/events | 
-[**messageRouterGetAllMessagesFromASubAccountBasedOnTimeRange**](SubaccountmessageApi.md#messageRouterGetAllMessagesFromASubAccountBasedOnTimeRange) | **GET** /subaccount/message/ | 
-[**messageRouterGetAllMessagesOfASubAccountFromASpecificNodeBasedOnTimeRange**](SubaccountmessageApi.md#messageRouterGetAllMessagesOfASubAccountFromASpecificNodeBasedOnTimeRange) | **GET** /subaccount/message/node/{subAccountId} | 
-[**messageRouterGetMessageEventsFromANode**](SubaccountmessageApi.md#messageRouterGetMessageEventsFromANode) | **GET** /subaccount/message/node/{subAccountId}/{messageId}/events | 
-[**messageRouterGetMessageFromNodeById**](SubaccountmessageApi.md#messageRouterGetMessageFromNodeById) | **GET** /subaccount/message/node/{subAccountId}/{messageId} | 
+[**messageRouterGetAllEventsForAMessageIdFromANode**](SubaccountmessageApi.md#messageRouterGetAllEventsForAMessageIdFromANode) | **GET** /subaccount/message/node/{subAccountId}/{messageId}/events | 
+[**messageRouterGetAllMessages**](SubaccountmessageApi.md#messageRouterGetAllMessages) | **GET** /subaccount/message/ | 
+[**messageRouterGetAllMessagesFromANode**](SubaccountmessageApi.md#messageRouterGetAllMessagesFromANode) | **GET** /subaccount/message/node/{subAccountId} | 
+[**messageRouterGetMessageFromNode**](SubaccountmessageApi.md#messageRouterGetMessageFromNode) | **GET** /subaccount/message/node/{subAccountId}/{messageId} | 
 
 
 <a name="messageRouterGet"></a>
@@ -110,9 +110,61 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="messageRouterGetAllMessagesFromASubAccountBasedOnTimeRange"></a>
-# **messageRouterGetAllMessagesFromASubAccountBasedOnTimeRange**
-> [ModelsQEmailMessage] messageRouterGetAllMessagesFromASubAccountBasedOnTimeRange(xSubAccountApiKey, opts)
+<a name="messageRouterGetAllEventsForAMessageIdFromANode"></a>
+# **messageRouterGetAllEventsForAMessageIdFromANode**
+> [ModelsQEvent] messageRouterGetAllEventsForAMessageIdFromANode(xSubAccountApiKey, messageId, subAccountId)
+
+
+
+Find all message events associated with a message id from a specific node
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.SubaccountmessageApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var messageId = "messageId_example"; // String | the messageId that you want to retrieve
+
+var subAccountId = 789; // Number | the subAccountId whose message you want to retrieve
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.messageRouterGetAllEventsForAMessageIdFromANode(xSubAccountApiKey, messageId, subAccountId, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **messageId** | **String**| the messageId that you want to retrieve | 
+ **subAccountId** | **Number**| the subAccountId whose message you want to retrieve | 
+
+### Return type
+
+[**[ModelsQEvent]**](ModelsQEvent.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="messageRouterGetAllMessages"></a>
+# **messageRouterGetAllMessages**
+> [ModelsQEmailMessage] messageRouterGetAllMessages(xSubAccountApiKey, opts)
 
 
 
@@ -141,7 +193,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.messageRouterGetAllMessagesFromASubAccountBasedOnTimeRange(xSubAccountApiKey, opts, callback);
+apiInstance.messageRouterGetAllMessages(xSubAccountApiKey, opts, callback);
 ```
 
 ### Parameters
@@ -168,9 +220,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="messageRouterGetAllMessagesOfASubAccountFromASpecificNodeBasedOnTimeRange"></a>
-# **messageRouterGetAllMessagesOfASubAccountFromASpecificNodeBasedOnTimeRange**
-> [ModelsQEmailMessage] messageRouterGetAllMessagesOfASubAccountFromASpecificNodeBasedOnTimeRange(subAccountId)
+<a name="messageRouterGetAllMessagesFromANode"></a>
+# **messageRouterGetAllMessagesFromANode**
+> [ModelsQEmailMessage] messageRouterGetAllMessagesFromANode(subAccountId)
 
 
 
@@ -192,7 +244,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.messageRouterGetAllMessagesOfASubAccountFromASpecificNodeBasedOnTimeRange(subAccountId, callback);
+apiInstance.messageRouterGetAllMessagesFromANode(subAccountId, callback);
 ```
 
 ### Parameters
@@ -214,61 +266,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="messageRouterGetMessageEventsFromANode"></a>
-# **messageRouterGetMessageEventsFromANode**
-> [ModelsQEvent] messageRouterGetMessageEventsFromANode(xSubAccountApiKey, messageId, subAccountId)
-
-
-
-Find all message events associated with a message id from a specific node
-
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountmessageApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var messageId = "messageId_example"; // String | the messageId that you want to retrieve
-
-var subAccountId = 789; // Number | the subAccountId whose message you want to retrieve
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.messageRouterGetMessageEventsFromANode(xSubAccountApiKey, messageId, subAccountId, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **messageId** | **String**| the messageId that you want to retrieve | 
- **subAccountId** | **Number**| the subAccountId whose message you want to retrieve | 
-
-### Return type
-
-[**[ModelsQEvent]**](ModelsQEvent.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="messageRouterGetMessageFromNodeById"></a>
-# **messageRouterGetMessageFromNodeById**
-> ModelsQEmailMessage messageRouterGetMessageFromNodeById(subAccountId, messageId)
+<a name="messageRouterGetMessageFromNode"></a>
+# **messageRouterGetMessageFromNode**
+> ModelsQEmailMessage messageRouterGetMessageFromNode(subAccountId, messageId)
 
 
 
@@ -292,7 +292,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.messageRouterGetMessageFromNodeById(subAccountId, messageId, callback);
+apiInstance.messageRouterGetMessageFromNode(subAccountId, messageId, callback);
 ```
 
 ### Parameters

@@ -4,13 +4,13 @@ All URIs are relative to *http://127.0.0.1:8080/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**recipientRouterGetAllMessagesSentToASpecificRecipient**](SubaccountrecipientApi.md#recipientRouterGetAllMessagesSentToASpecificRecipient) | **GET** /subaccount/recipient/{recipient}/messages | 
-[**recipientRouterGetMessagesForASpecificRecipientFromANode**](SubaccountrecipientApi.md#recipientRouterGetMessagesForASpecificRecipientFromANode) | **GET** /subaccount/recipient/node/{subAccountId}/{recipient}/messages | 
+[**recipientRouterGetAllMessagesForARecipient**](SubaccountrecipientApi.md#recipientRouterGetAllMessagesForARecipient) | **GET** /subaccount/recipient/{recipient}/messages | 
+[**recipientRouterGetAllMessagesForARecipientFromANode**](SubaccountrecipientApi.md#recipientRouterGetAllMessagesForARecipientFromANode) | **GET** /subaccount/recipient/node/{subAccountId}/{recipient}/messages | 
 
 
-<a name="recipientRouterGetAllMessagesSentToASpecificRecipient"></a>
-# **recipientRouterGetAllMessagesSentToASpecificRecipient**
-> [ModelsQEmailMessage] recipientRouterGetAllMessagesSentToASpecificRecipient(xSubAccountApiKey, recipient)
+<a name="recipientRouterGetAllMessagesForARecipient"></a>
+# **recipientRouterGetAllMessagesForARecipient**
+> [ModelsQEmailMessage] recipientRouterGetAllMessagesForARecipient(xSubAccountApiKey, recipient)
 
 
 
@@ -34,7 +34,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.recipientRouterGetAllMessagesSentToASpecificRecipient(xSubAccountApiKey, recipient, callback);
+apiInstance.recipientRouterGetAllMessagesForARecipient(xSubAccountApiKey, recipient, callback);
 ```
 
 ### Parameters
@@ -57,9 +57,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="recipientRouterGetMessagesForASpecificRecipientFromANode"></a>
-# **recipientRouterGetMessagesForASpecificRecipientFromANode**
-> [ModelsQEmailMessage] recipientRouterGetMessagesForASpecificRecipientFromANode(xSubAccountApiKey, subAccountId, recipient)
+<a name="recipientRouterGetAllMessagesForARecipientFromANode"></a>
+# **recipientRouterGetAllMessagesForARecipientFromANode**
+> [ModelsQEmailMessage] recipientRouterGetAllMessagesForARecipientFromANode(xSubAccountApiKey, subAccountId, recipient)
 
 
 
@@ -85,7 +85,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.recipientRouterGetMessagesForASpecificRecipientFromANode(xSubAccountApiKey, subAccountId, recipient, callback);
+apiInstance.recipientRouterGetAllMessagesForARecipientFromANode(xSubAccountApiKey, subAccountId, recipient, callback);
 ```
 
 ### Parameters

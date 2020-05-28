@@ -157,8 +157,69 @@
     }
 
     /**
-     * Callback function to receive the result of the messageRouterGetAllMessagesFromASubAccountBasedOnTimeRange operation.
-     * @callback module:api/SubaccountmessageApi~messageRouterGetAllMessagesFromASubAccountBasedOnTimeRangeCallback
+     * Callback function to receive the result of the messageRouterGetAllEventsForAMessageIdFromANode operation.
+     * @callback module:api/SubaccountmessageApi~messageRouterGetAllEventsForAMessageIdFromANodeCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/ModelsQEvent>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Find all message events associated with a message id from a specific node
+     * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {String} messageId the messageId that you want to retrieve
+     * @param {Number} subAccountId the subAccountId whose message you want to retrieve
+     * @param {module:api/SubaccountmessageApi~messageRouterGetAllEventsForAMessageIdFromANodeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/ModelsQEvent>}
+     */
+    this.messageRouterGetAllEventsForAMessageIdFromANode = function(xSubAccountApiKey, messageId, subAccountId, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'xSubAccountApiKey' is set
+      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling messageRouterGetAllEventsForAMessageIdFromANode");
+      }
+
+      // verify the required parameter 'messageId' is set
+      if (messageId === undefined || messageId === null) {
+        throw new Error("Missing the required parameter 'messageId' when calling messageRouterGetAllEventsForAMessageIdFromANode");
+      }
+
+      // verify the required parameter 'subAccountId' is set
+      if (subAccountId === undefined || subAccountId === null) {
+        throw new Error("Missing the required parameter 'subAccountId' when calling messageRouterGetAllEventsForAMessageIdFromANode");
+      }
+
+
+      var pathParams = {
+        'messageId': messageId,
+        'subAccountId': subAccountId
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-SubAccount-ApiKey': xSubAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = [ModelsQEvent];
+
+      return this.apiClient.callApi(
+        '/subaccount/message/node/{subAccountId}/{messageId}/events', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the messageRouterGetAllMessages operation.
+     * @callback module:api/SubaccountmessageApi~messageRouterGetAllMessagesCallback
      * @param {String} error Error message, if any.
      * @param {Array.<module:model/ModelsQEmailMessage>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -173,16 +234,16 @@
      * @param {String} opts.search search term
      * @param {String} opts.from from date
      * @param {String} opts.to to date
-     * @param {module:api/SubaccountmessageApi~messageRouterGetAllMessagesFromASubAccountBasedOnTimeRangeCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/SubaccountmessageApi~messageRouterGetAllMessagesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsQEmailMessage>}
      */
-    this.messageRouterGetAllMessagesFromASubAccountBasedOnTimeRange = function(xSubAccountApiKey, opts, callback) {
+    this.messageRouterGetAllMessages = function(xSubAccountApiKey, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'xSubAccountApiKey' is set
       if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling messageRouterGetAllMessagesFromASubAccountBasedOnTimeRange");
+        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling messageRouterGetAllMessages");
       }
 
 
@@ -216,8 +277,8 @@
     }
 
     /**
-     * Callback function to receive the result of the messageRouterGetAllMessagesOfASubAccountFromASpecificNodeBasedOnTimeRange operation.
-     * @callback module:api/SubaccountmessageApi~messageRouterGetAllMessagesOfASubAccountFromASpecificNodeBasedOnTimeRangeCallback
+     * Callback function to receive the result of the messageRouterGetAllMessagesFromANode operation.
+     * @callback module:api/SubaccountmessageApi~messageRouterGetAllMessagesFromANodeCallback
      * @param {String} error Error message, if any.
      * @param {Array.<module:model/ModelsQEmailMessage>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -226,15 +287,15 @@
     /**
      * Get all messages of a sub-account from a specific node based on time-range
      * @param {Number} subAccountId the subAccountId whose message you want to retrieve
-     * @param {module:api/SubaccountmessageApi~messageRouterGetAllMessagesOfASubAccountFromASpecificNodeBasedOnTimeRangeCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/SubaccountmessageApi~messageRouterGetAllMessagesFromANodeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsQEmailMessage>}
      */
-    this.messageRouterGetAllMessagesOfASubAccountFromASpecificNodeBasedOnTimeRange = function(subAccountId, callback) {
+    this.messageRouterGetAllMessagesFromANode = function(subAccountId, callback) {
       var postBody = null;
 
       // verify the required parameter 'subAccountId' is set
       if (subAccountId === undefined || subAccountId === null) {
-        throw new Error("Missing the required parameter 'subAccountId' when calling messageRouterGetAllMessagesOfASubAccountFromASpecificNodeBasedOnTimeRange");
+        throw new Error("Missing the required parameter 'subAccountId' when calling messageRouterGetAllMessagesFromANode");
       }
 
 
@@ -263,69 +324,8 @@
     }
 
     /**
-     * Callback function to receive the result of the messageRouterGetMessageEventsFromANode operation.
-     * @callback module:api/SubaccountmessageApi~messageRouterGetMessageEventsFromANodeCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ModelsQEvent>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Find all message events associated with a message id from a specific node
-     * @param {String} xSubAccountApiKey Sub-Account API Key
-     * @param {String} messageId the messageId that you want to retrieve
-     * @param {Number} subAccountId the subAccountId whose message you want to retrieve
-     * @param {module:api/SubaccountmessageApi~messageRouterGetMessageEventsFromANodeCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ModelsQEvent>}
-     */
-    this.messageRouterGetMessageEventsFromANode = function(xSubAccountApiKey, messageId, subAccountId, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'xSubAccountApiKey' is set
-      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling messageRouterGetMessageEventsFromANode");
-      }
-
-      // verify the required parameter 'messageId' is set
-      if (messageId === undefined || messageId === null) {
-        throw new Error("Missing the required parameter 'messageId' when calling messageRouterGetMessageEventsFromANode");
-      }
-
-      // verify the required parameter 'subAccountId' is set
-      if (subAccountId === undefined || subAccountId === null) {
-        throw new Error("Missing the required parameter 'subAccountId' when calling messageRouterGetMessageEventsFromANode");
-      }
-
-
-      var pathParams = {
-        'messageId': messageId,
-        'subAccountId': subAccountId
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-        'X-SubAccount-ApiKey': xSubAccountApiKey
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = [ModelsQEvent];
-
-      return this.apiClient.callApi(
-        '/subaccount/message/node/{subAccountId}/{messageId}/events', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the messageRouterGetMessageFromNodeById operation.
-     * @callback module:api/SubaccountmessageApi~messageRouterGetMessageFromNodeByIdCallback
+     * Callback function to receive the result of the messageRouterGetMessageFromNode operation.
+     * @callback module:api/SubaccountmessageApi~messageRouterGetMessageFromNodeCallback
      * @param {String} error Error message, if any.
      * @param {module:model/ModelsQEmailMessage} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -335,20 +335,20 @@
      * Find Message from node by specific Id
      * @param {Number} subAccountId the subAccountId whose message you want to retrieve
      * @param {String} messageId the messageId that you want to retrieve
-     * @param {module:api/SubaccountmessageApi~messageRouterGetMessageFromNodeByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/SubaccountmessageApi~messageRouterGetMessageFromNodeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsQEmailMessage}
      */
-    this.messageRouterGetMessageFromNodeById = function(subAccountId, messageId, callback) {
+    this.messageRouterGetMessageFromNode = function(subAccountId, messageId, callback) {
       var postBody = null;
 
       // verify the required parameter 'subAccountId' is set
       if (subAccountId === undefined || subAccountId === null) {
-        throw new Error("Missing the required parameter 'subAccountId' when calling messageRouterGetMessageFromNodeById");
+        throw new Error("Missing the required parameter 'subAccountId' when calling messageRouterGetMessageFromNode");
       }
 
       // verify the required parameter 'messageId' is set
       if (messageId === undefined || messageId === null) {
-        throw new Error("Missing the required parameter 'messageId' when calling messageRouterGetMessageFromNodeById");
+        throw new Error("Missing the required parameter 'messageId' when calling messageRouterGetMessageFromNode");
       }
 
 
