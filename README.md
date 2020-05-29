@@ -210,7 +210,6 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsEmailMessage](docs/ModelsEmailMessage.md)
  - [SendPostApi.ModelsEmailResponse](docs/ModelsEmailResponse.md)
  - [SendPostApi.ModelsEventMetadata](docs/ModelsEventMetadata.md)
- - [SendPostApi.ModelsEventType](docs/ModelsEventType.md)
  - [SendPostApi.ModelsFrom](docs/ModelsFrom.md)
  - [SendPostApi.ModelsIP](docs/ModelsIP.md)
  - [SendPostApi.ModelsIPPool](docs/ModelsIPPool.md)

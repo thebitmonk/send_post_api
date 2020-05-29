@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsEventMetadata', 'model/ModelsEventType'], factory);
+    define(['ApiClient', 'model/ModelsEventMetadata'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ModelsEventMetadata'), require('./ModelsEventType'));
+    module.exports = factory(require('../ApiClient'), require('./ModelsEventMetadata'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsQEvent = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsEventMetadata, root.SendPostApi.ModelsEventType);
+    root.SendPostApi.ModelsQEvent = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsEventMetadata);
   }
-}(this, function(ApiClient, ModelsEventMetadata, ModelsEventType) {
+}(this, function(ApiClient, ModelsEventMetadata) {
   'use strict';
 
   /**
@@ -68,7 +68,7 @@
       if (data.hasOwnProperty('submittedAt'))
         obj.submittedAt = ApiClient.convertToType(data['submittedAt'], 'Number');
       if (data.hasOwnProperty('type'))
-        obj.type = ModelsEventType.constructFromObject(data['type']);
+        obj.type = ApiClient.convertToType(data['type'], 'Number');
     }
     return obj;
   }
@@ -104,7 +104,7 @@
   exports.prototype.submittedAt = undefined;
 
   /**
-   * @member {module:model/ModelsEventType} type
+   * @member {Number} type
    */
   exports.prototype.type = undefined;
 

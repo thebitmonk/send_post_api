@@ -9,6 +9,6 @@ Name | Type | Description | Notes
 **messageID** | **String** |  | [optional] 
 **subAccountID** | **Number** |  | [optional] 
 **submittedAt** | **Number** |  | [optional] 
-**type** | [**ModelsEventType**](ModelsEventType.md) |  | [optional] 
+**type** | **Number** |  | [optional] 
 
 

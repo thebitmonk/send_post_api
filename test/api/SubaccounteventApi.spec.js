@@ -138,8 +138,9 @@
             expect(data.subAccountID).to.be("0");
             expect(data.submittedAt).to.be.a('number');
             expect(data.submittedAt).to.be("0");
-            expect(data.type).to.be.a(SendPostApi.ModelsEventType);
-    
+            expect(data.type).to.be.a('number');
+            expect(data.type).to.be("0");
+
             done();
           });
           */
@@ -212,8 +213,8 @@
               expect(data.subAccountID).to.be("0");
               expect(data.submittedAt).to.be.a('number');
               expect(data.submittedAt).to.be("0");
-              expect(data.type).to.be.a(SendPostApi.ModelsEventType);
-      
+              expect(data.type).to.be.a('number');
+              expect(data.type).to.be("0");
             }
 
             done();
@@ -283,8 +284,8 @@
               expect(data.subAccountID).to.be("0");
               expect(data.submittedAt).to.be.a('number');
               expect(data.submittedAt).to.be("0");
-              expect(data.type).to.be.a(SendPostApi.ModelsEventType);
-      
+              expect(data.type).to.be.a('number');
+              expect(data.type).to.be("0");
             }
 
             done();
@@ -349,8 +350,9 @@
             expect(data.subAccountID).to.be("0");
             expect(data.submittedAt).to.be.a('number');
             expect(data.submittedAt).to.be("0");
-            expect(data.type).to.be.a(SendPostApi.ModelsEventType);
-    
+            expect(data.type).to.be.a('number');
+            expect(data.type).to.be("0");
+
             done();
           });
           */
