@@ -60,7 +60,7 @@ No authorization required
 
 <a name="trackRouterTrackLinkClick"></a>
 # **trackRouterTrackLinkClick**
-> trackRouterTrackLinkClick(subAccountId, messageId, encodedurl)
+> trackRouterTrackLinkClick(subAccountId, messageId, redirecturl)
 
 
 
@@ -76,7 +76,7 @@ var subAccountId = 789; // Number | The id of sub-account from which email is be
 
 var messageId = "messageId_example"; // String | The UUID of message which was sent
 
-var encodedurl = "encodedurl_example"; // String | The encoded path
+var redirecturl = "redirecturl_example"; // String | The encoded redirect URL
 
 
 var callback = function(error, data, response) {
@@ -86,7 +86,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.trackRouterTrackLinkClick(subAccountId, messageId, encodedurl, callback);
+apiInstance.trackRouterTrackLinkClick(subAccountId, messageId, redirecturl, callback);
 ```
 
 ### Parameters
@@ -95,7 +95,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **subAccountId** | **Number**| The id of sub-account from which email is being sent | 
  **messageId** | **String**| The UUID of message which was sent | 
- **encodedurl** | **String**| The encoded path | 
+ **redirecturl** | **String**| The encoded redirect URL | 
 
 ### Return type
 

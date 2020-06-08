@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **dkimVerified** | **Boolean** |  | [optional] 
 **id** | **Number** |  | [optional] 
 **name** | **String** |  | [optional] 
-**spf** | [**ModelsDNSRecord**](ModelsDNSRecord.md) |  | [optional] 
-**spfVerified** | **Boolean** |  | [optional] 
+**returnPath** | [**ModelsDNSRecord**](ModelsDNSRecord.md) |  | [optional] 
+**returnPathVerified** | **Boolean** |  | [optional] 
 **track** | [**ModelsDNSRecord**](ModelsDNSRecord.md) |  | [optional] 
 **trackVerified** | **Boolean** |  | [optional] 
 

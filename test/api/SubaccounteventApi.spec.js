@@ -87,10 +87,9 @@
         it('should call eventRouterGet successfully', function(done) {
           // TODO: uncomment, update parameter values for eventRouterGet call and complete the assertions
           /*
-          var subAccountId = 789;
           var eventId = "eventId_example";
 
-          instance.eventRouterGet(subAccountId, eventId, function(error, data, response) {
+          instance.eventRouterGet(eventId, function(error, data, response) {
             if (error) {
               done(error);
               return;

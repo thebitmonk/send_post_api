@@ -71,16 +71,16 @@
         // expect(instance.name).to.be(expectedValueLiteral);
       });
 
-      it('should have the property spf (base name: "spf")', function() {
-        // TODO: update the code to test the property spf
-        expect(instance).to.have.property('spf');
-        // expect(instance.spf).to.be(expectedValueLiteral);
+      it('should have the property returnPath (base name: "returnPath")', function() {
+        // TODO: update the code to test the property returnPath
+        expect(instance).to.have.property('returnPath');
+        // expect(instance.returnPath).to.be(expectedValueLiteral);
       });
 
-      it('should have the property spfVerified (base name: "spfVerified")', function() {
-        // TODO: update the code to test the property spfVerified
-        expect(instance).to.have.property('spfVerified');
-        // expect(instance.spfVerified).to.be(expectedValueLiteral);
+      it('should have the property returnPathVerified (base name: "returnPathVerified")', function() {
+        // TODO: update the code to test the property returnPathVerified
+        expect(instance).to.have.property('returnPathVerified');
+        // expect(instance.returnPathVerified).to.be(expectedValueLiteral);
       });
 
       it('should have the property track (base name: "track")', function() {

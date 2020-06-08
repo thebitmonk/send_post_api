@@ -109,7 +109,7 @@ No authorization required
 
 <a name="eventRouterGet"></a>
 # **eventRouterGet**
-> ModelsQEvent eventRouterGet(subAccountId, eventId)
+> ModelsQEvent eventRouterGet(eventId)
 
 
 
@@ -121,8 +121,6 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.SubaccounteventApi();
 
-var subAccountId = 789; // Number | the subAccountId whose event you want to retrieve
-
 var eventId = "eventId_example"; // String | the eventId that you want to retrieve
 
 
@@ -133,14 +131,13 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.eventRouterGet(subAccountId, eventId, callback);
+apiInstance.eventRouterGet(eventId, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **subAccountId** | **Number**| the subAccountId whose event you want to retrieve | 
  **eventId** | **String**| the eventId that you want to retrieve | 
 
 ### Return type

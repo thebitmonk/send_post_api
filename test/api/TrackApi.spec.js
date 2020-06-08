@@ -62,9 +62,9 @@
           /*
           var subAccountId = 789;
           var messageId = "messageId_example";
-          var encodedurl = "encodedurl_example";
+          var redirecturl = "redirecturl_example";
 
-          instance.trackRouterTrackLinkClick(subAccountId, messageId, encodedurl, function(error, data, response) {
+          instance.trackRouterTrackLinkClick(subAccountId, messageId, redirecturl, function(error, data, response) {
             if (error) {
               done(error);
               return;

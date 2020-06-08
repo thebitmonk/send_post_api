@@ -65,10 +65,10 @@
         obj.id = ApiClient.convertToType(data['id'], 'Number');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
-      if (data.hasOwnProperty('spf'))
-        obj.spf = ModelsDNSRecord.constructFromObject(data['spf']);
-      if (data.hasOwnProperty('spfVerified'))
-        obj.spfVerified = ApiClient.convertToType(data['spfVerified'], 'Boolean');
+      if (data.hasOwnProperty('returnPath'))
+        obj.returnPath = ModelsDNSRecord.constructFromObject(data['returnPath']);
+      if (data.hasOwnProperty('returnPathVerified'))
+        obj.returnPathVerified = ApiClient.convertToType(data['returnPathVerified'], 'Boolean');
       if (data.hasOwnProperty('track'))
         obj.track = ModelsDNSRecord.constructFromObject(data['track']);
       if (data.hasOwnProperty('trackVerified'))
@@ -103,14 +103,14 @@
   exports.prototype.name = undefined;
 
   /**
-   * @member {module:model/ModelsDNSRecord} spf
+   * @member {module:model/ModelsDNSRecord} returnPath
    */
-  exports.prototype.spf = undefined;
+  exports.prototype.returnPath = undefined;
 
   /**
-   * @member {Boolean} spfVerified
+   * @member {Boolean} returnPathVerified
    */
-  exports.prototype.spfVerified = undefined;
+  exports.prototype.returnPathVerified = undefined;
 
   /**
    * @member {module:model/ModelsDNSRecord} track

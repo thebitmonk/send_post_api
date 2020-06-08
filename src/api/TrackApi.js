@@ -113,10 +113,10 @@
      * Track Link Click
      * @param {Number} subAccountId The id of sub-account from which email is being sent
      * @param {String} messageId The UUID of message which was sent
-     * @param {String} encodedurl The encoded path
+     * @param {String} redirecturl The encoded redirect URL
      * @param {module:api/TrackApi~trackRouterTrackLinkClickCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.trackRouterTrackLinkClick = function(subAccountId, messageId, encodedurl, callback) {
+    this.trackRouterTrackLinkClick = function(subAccountId, messageId, redirecturl, callback) {
       var postBody = null;
 
       // verify the required parameter 'subAccountId' is set
@@ -129,18 +129,18 @@
         throw new Error("Missing the required parameter 'messageId' when calling trackRouterTrackLinkClick");
       }
 
-      // verify the required parameter 'encodedurl' is set
-      if (encodedurl === undefined || encodedurl === null) {
-        throw new Error("Missing the required parameter 'encodedurl' when calling trackRouterTrackLinkClick");
+      // verify the required parameter 'redirecturl' is set
+      if (redirecturl === undefined || redirecturl === null) {
+        throw new Error("Missing the required parameter 'redirecturl' when calling trackRouterTrackLinkClick");
       }
 
 
       var pathParams = {
         'subAccountId': subAccountId,
-        'messageId': messageId,
-        'encodedurl': encodedurl
+        'messageId': messageId
       };
       var queryParams = {
+        'redirecturl': redirecturl,
       };
       var collectionQueryParams = {
       };

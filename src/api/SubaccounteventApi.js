@@ -159,18 +159,12 @@
 
     /**
      * Find Event By Id
-     * @param {Number} subAccountId the subAccountId whose event you want to retrieve
      * @param {String} eventId the eventId that you want to retrieve
      * @param {module:api/SubaccounteventApi~eventRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsQEvent}
      */
-    this.eventRouterGet = function(subAccountId, eventId, callback) {
+    this.eventRouterGet = function(eventId, callback) {
       var postBody = null;
-
-      // verify the required parameter 'subAccountId' is set
-      if (subAccountId === undefined || subAccountId === null) {
-        throw new Error("Missing the required parameter 'subAccountId' when calling eventRouterGet");
-      }
 
       // verify the required parameter 'eventId' is set
       if (eventId === undefined || eventId === null) {
@@ -179,7 +173,6 @@
 
 
       var pathParams = {
-        'subAccountId': subAccountId,
         'eventId': eventId
       };
       var queryParams = {
