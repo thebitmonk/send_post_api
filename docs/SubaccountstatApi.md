@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="subAccountStatsRouterGetAllAggregateSubAccountStats"></a>
 # **subAccountStatsRouterGetAllAggregateSubAccountStats**
-> Stats subAccountStatsRouterGetAllAggregateSubAccountStats(xSubAccountApiKey, opts)
+> ModelsStat subAccountStatsRouterGetAllAggregateSubAccountStats(xSubAccountApiKey, opts)
 
 
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Stats**](Stats.md)
+[**ModelsStat**](ModelsStat.md)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ No authorization required
 
 <a name="subAccountStatsRouterGetAllAggregateSubAccountStatsByGroup"></a>
 # **subAccountStatsRouterGetAllAggregateSubAccountStatsByGroup**
-> Stats subAccountStatsRouterGetAllAggregateSubAccountStatsByGroup(xSubAccountApiKey, group, opts)
+> ModelsStat subAccountStatsRouterGetAllAggregateSubAccountStatsByGroup(xSubAccountApiKey, group, opts)
 
 
 
@@ -106,7 +106,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Stats**](Stats.md)
+[**ModelsStat**](ModelsStat.md)
 
 ### Authorization
 
@@ -119,7 +119,7 @@ No authorization required
 
 <a name="subAccountStatsRouterGetAllSubAccountStats"></a>
 # **subAccountStatsRouterGetAllSubAccountStats**
-> [RStats] subAccountStatsRouterGetAllSubAccountStats(xSubAccountApiKey, opts)
+> [ModelsRStat] subAccountStatsRouterGetAllSubAccountStats(xSubAccountApiKey, opts)
 
 
 
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[RStats]**](RStats.md)
+[**[ModelsRStat]**](ModelsRStat.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ No authorization required
 
 <a name="subAccountStatsRouterGetAllSubAccountStatsByGroup"></a>
 # **subAccountStatsRouterGetAllSubAccountStatsByGroup**
-> [RStats] subAccountStatsRouterGetAllSubAccountStatsByGroup(xSubAccountApiKey, group, opts)
+> [ModelsRStat] subAccountStatsRouterGetAllSubAccountStatsByGroup(xSubAccountApiKey, group, opts)
 
 
 
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[RStats]**](RStats.md)
+[**[ModelsRStat]**](ModelsRStat.md)
 
 ### Authorization
 

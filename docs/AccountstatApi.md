@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="accountStatsRouterGetAllAccountStats"></a>
 # **accountStatsRouterGetAllAccountStats**
-> [RStats] accountStatsRouterGetAllAccountStats(xAccountApiKey, opts)
+> [ModelsRStat] accountStatsRouterGetAllAccountStats(xAccountApiKey, opts)
 
 
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[RStats]**](RStats.md)
+[**[ModelsRStat]**](ModelsRStat.md)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ No authorization required
 
 <a name="accountStatsRouterGetAllAccountStatsByGroup"></a>
 # **accountStatsRouterGetAllAccountStatsByGroup**
-> [RStats] accountStatsRouterGetAllAccountStatsByGroup(xAccountApiKey, group, opts)
+> [ModelsRStat] accountStatsRouterGetAllAccountStatsByGroup(xAccountApiKey, group, opts)
 
 
 
@@ -106,7 +106,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[RStats]**](RStats.md)
+[**[ModelsRStat]**](ModelsRStat.md)
 
 ### Authorization
 
@@ -119,7 +119,7 @@ No authorization required
 
 <a name="accountStatsRouterGetAllAggregateAccountStats"></a>
 # **accountStatsRouterGetAllAggregateAccountStats**
-> Stats accountStatsRouterGetAllAggregateAccountStats(xAccountApiKey, opts)
+> ModelsStat accountStatsRouterGetAllAggregateAccountStats(xAccountApiKey, opts)
 
 
 
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Stats**](Stats.md)
+[**ModelsStat**](ModelsStat.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ No authorization required
 
 <a name="accountStatsRouterGetAllAggregateAccountStatsByGroup"></a>
 # **accountStatsRouterGetAllAggregateAccountStatsByGroup**
-> Stats accountStatsRouterGetAllAggregateAccountStatsByGroup(xAccountApiKey, group, opts)
+> ModelsStat accountStatsRouterGetAllAggregateAccountStatsByGroup(xAccountApiKey, group, opts)
 
 
 
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Stats**](Stats.md)
+[**ModelsStat**](ModelsStat.md)
 
 ### Authorization
 
