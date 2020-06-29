@@ -185,16 +185,13 @@ Class | Method | HTTP request | Description
 *SendPostApi.SubaccountwebhookApi* | [**webhookRouterGet**](docs/SubaccountwebhookApi.md#webhookRouterGet) | **GET** /subaccount/webhook/{webhookId} | 
 *SendPostApi.SubaccountwebhookApi* | [**webhookRouterGetAll**](docs/SubaccountwebhookApi.md#webhookRouterGetAll) | **GET** /subaccount/webhook/ | 
 *SendPostApi.SubaccountwebhookApi* | [**webhookRouterUpdate**](docs/SubaccountwebhookApi.md#webhookRouterUpdate) | **PUT** /subaccount/webhook/{webhookId} | 
-*SendPostApi.TrackApi* | [**trackRouterTrackEmailOpen**](docs/TrackApi.md#trackRouterTrackEmailOpen) | **GET** /track/open/{subAccountId}/{ipId}/{emailType}/{messageId}/1.png | 
-*SendPostApi.TrackApi* | [**trackRouterTrackLinkClick**](docs/TrackApi.md#trackRouterTrackLinkClick) | **GET** /track/click/{subAccountId}/{ipId}/{emailType}/{messageId} | 
-*SendPostApi.TrackApi* | [**trackRouterTrackUnsubscribe**](docs/TrackApi.md#trackRouterTrackUnsubscribe) | **GET** /track/unsubscribe/{subAccountId}/{messageId} | 
 
 
 ## Documentation for Models
 
- - [SendPostApi.City](docs/City.md)
  - [SendPostApi.ModelsAccount](docs/ModelsAccount.md)
  - [SendPostApi.ModelsAuthInfo](docs/ModelsAuthInfo.md)
+ - [SendPostApi.ModelsCity](docs/ModelsCity.md)
  - [SendPostApi.ModelsCountStat](docs/ModelsCountStat.md)
  - [SendPostApi.ModelsDNSRecord](docs/ModelsDNSRecord.md)
  - [SendPostApi.ModelsDeleteResponse](docs/ModelsDeleteResponse.md)

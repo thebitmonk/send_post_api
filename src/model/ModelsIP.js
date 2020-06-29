@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/ModelsIPType', 'model/ModelsSystemDomain'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./ModelsIPType'), require('./ModelsSystemDomain'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsIP = factory(root.SendPostApi.ApiClient);
+    root.SendPostApi.ModelsIP = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsIPType, root.SendPostApi.ModelsSystemDomain);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, ModelsIPType, ModelsSystemDomain) {
   'use strict';
 
   /**
@@ -85,6 +85,10 @@
         obj.qqSettings = ApiClient.convertToType(data['qqSettings'], 'String');
       if (data.hasOwnProperty('reverseDNSHostname'))
         obj.reverseDNSHostname = ApiClient.convertToType(data['reverseDNSHostname'], 'String');
+      if (data.hasOwnProperty('systemDomain'))
+        obj.systemDomain = ModelsSystemDomain.constructFromObject(data['systemDomain']);
+      if (data.hasOwnProperty('type'))
+        obj.type = ModelsIPType.constructFromObject(data['type']);
       if (data.hasOwnProperty('yahooSettings'))
         obj.yahooSettings = ApiClient.convertToType(data['yahooSettings'], 'String');
       if (data.hasOwnProperty('yandexSettings'))
@@ -169,6 +173,16 @@
    * @member {String} reverseDNSHostname
    */
   exports.prototype.reverseDNSHostname = undefined;
+
+  /**
+   * @member {module:model/ModelsSystemDomain} systemDomain
+   */
+  exports.prototype.systemDomain = undefined;
+
+  /**
+   * @member {module:model/ModelsIPType} type
+   */
+  exports.prototype.type = undefined;
 
   /**
    * @member {String} yahooSettings

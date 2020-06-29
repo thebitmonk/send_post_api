@@ -18,6 +18,8 @@ Name | Type | Description | Notes
 **publicIP** | **String** |  | [optional] 
 **qqSettings** | **String** |  | [optional] 
 **reverseDNSHostname** | **String** |  | [optional] 
+**systemDomain** | [**ModelsSystemDomain**](ModelsSystemDomain.md) |  | [optional] 
+**type** | [**ModelsIPType**](ModelsIPType.md) |  | [optional] 
 **yahooSettings** | **String** |  | [optional] 
 **yandexSettings** | **String** |  | [optional] 
 **zohoSettings** | **String** |  | [optional] 

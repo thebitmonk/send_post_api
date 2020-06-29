@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Geoip2City', 'model/UaparserDevice', 'model/UaparserOs', 'model/UaparserUserAgent'], factory);
+    define(['ApiClient', 'model/ModelsCity', 'model/UaparserDevice', 'model/UaparserOs', 'model/UaparserUserAgent'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Geoip2City'), require('./UaparserDevice'), require('./UaparserOs'), require('./UaparserUserAgent'));
+    module.exports = factory(require('../ApiClient'), require('./ModelsCity'), require('./UaparserDevice'), require('./UaparserOs'), require('./UaparserUserAgent'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsEventMetadata = factory(root.SendPostApi.ApiClient, root.SendPostApi.Geoip2City, root.SendPostApi.UaparserDevice, root.SendPostApi.UaparserOs, root.SendPostApi.UaparserUserAgent);
+    root.SendPostApi.ModelsEventMetadata = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsCity, root.SendPostApi.UaparserDevice, root.SendPostApi.UaparserOs, root.SendPostApi.UaparserUserAgent);
   }
-}(this, function(ApiClient, Geoip2City, UaparserDevice, UaparserOs, UaparserUserAgent) {
+}(this, function(ApiClient, ModelsCity, UaparserDevice, UaparserOs, UaparserUserAgent) {
   'use strict';
 
   /**
@@ -60,7 +60,7 @@
       if (data.hasOwnProperty('device'))
         obj.device = UaparserDevice.constructFromObject(data['device']);
       if (data.hasOwnProperty('geo'))
-        obj.geo = Geoip2City.constructFromObject(data['geo']);
+        obj.geo = ModelsCity.constructFromObject(data['geo']);
       if (data.hasOwnProperty('os'))
         obj.os = UaparserOs.constructFromObject(data['os']);
       if (data.hasOwnProperty('smtpCode'))
@@ -84,7 +84,7 @@
   exports.prototype.device = undefined;
 
   /**
-   * @member {module:model/Geoip2City} geo
+   * @member {module:model/ModelsCity} geo
    */
   exports.prototype.geo = undefined;
 

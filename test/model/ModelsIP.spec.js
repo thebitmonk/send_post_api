@@ -131,6 +131,18 @@
         // expect(instance.reverseDNSHostname).to.be(expectedValueLiteral);
       });
 
+      it('should have the property systemDomain (base name: "systemDomain")', function() {
+        // TODO: update the code to test the property systemDomain
+        expect(instance).to.have.property('systemDomain');
+        // expect(instance.systemDomain).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property type (base name: "type")', function() {
+        // TODO: update the code to test the property type
+        expect(instance).to.have.property('type');
+        // expect(instance.type).to.be(expectedValueLiteral);
+      });
+
       it('should have the property yahooSettings (base name: "yahooSettings")', function() {
         // TODO: update the code to test the property yahooSettings
         expect(instance).to.have.property('yahooSettings');
