@@ -1,6 +1,6 @@
 # SendPostApi.SubaccountstatApi
 
-All URIs are relative to *https://api.sendpost.io/api/v1*
+All URIs are relative to *http://127.0.0.1:8080/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="subAccountStatsRouterGetAllAggregateSubAccountStats"></a>
 # **subAccountStatsRouterGetAllAggregateSubAccountStats**
-> ModelsStats subAccountStatsRouterGetAllAggregateSubAccountStats(xSubAccountApiKey, opts)
+> Stats subAccountStatsRouterGetAllAggregateSubAccountStats(xSubAccountApiKey, opts)
 
 
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ModelsStats**](ModelsStats.md)
+[**Stats**](Stats.md)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ No authorization required
 
 <a name="subAccountStatsRouterGetAllAggregateSubAccountStatsByGroup"></a>
 # **subAccountStatsRouterGetAllAggregateSubAccountStatsByGroup**
-> ModelsStats subAccountStatsRouterGetAllAggregateSubAccountStatsByGroup(xSubAccountApiKey, group, opts)
+> Stats subAccountStatsRouterGetAllAggregateSubAccountStatsByGroup(xSubAccountApiKey, group, opts)
 
 
 
@@ -106,7 +106,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ModelsStats**](ModelsStats.md)
+[**Stats**](Stats.md)
 
 ### Authorization
 
@@ -119,7 +119,7 @@ No authorization required
 
 <a name="subAccountStatsRouterGetAllSubAccountStats"></a>
 # **subAccountStatsRouterGetAllSubAccountStats**
-> [ModelsRStats] subAccountStatsRouterGetAllSubAccountStats(xSubAccountApiKey, opts)
+> [RStats] subAccountStatsRouterGetAllSubAccountStats(xSubAccountApiKey, opts)
 
 
 
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[ModelsRStats]**](ModelsRStats.md)
+[**[RStats]**](RStats.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ No authorization required
 
 <a name="subAccountStatsRouterGetAllSubAccountStatsByGroup"></a>
 # **subAccountStatsRouterGetAllSubAccountStatsByGroup**
-> [ModelsRStats] subAccountStatsRouterGetAllSubAccountStatsByGroup(xSubAccountApiKey, group, opts)
+> [RStats] subAccountStatsRouterGetAllSubAccountStatsByGroup(xSubAccountApiKey, group, opts)
 
 
 
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[ModelsRStats]**](ModelsRStats.md)
+[**[RStats]**](RStats.md)
 
 ### Authorization
 

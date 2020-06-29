@@ -47,6 +47,12 @@
         // expect(instance.customFields).to.be(expectedValueLiteral);
       });
 
+      it('should have the property emailType (base name: "emailType")', function() {
+        // TODO: update the code to test the property emailType
+        expect(instance).to.have.property('emailType');
+        // expect(instance.emailType).to.be(expectedValueLiteral);
+      });
+
       it('should have the property from (base name: "from")', function() {
         // TODO: update the code to test the property from
         expect(instance).to.have.property('from');
@@ -71,10 +77,22 @@
         // expect(instance.htmlBody).to.be(expectedValueLiteral);
       });
 
+      it('should have the property ipID (base name: "ipID")', function() {
+        // TODO: update the code to test the property ipID
+        expect(instance).to.have.property('ipID');
+        // expect(instance.ipID).to.be(expectedValueLiteral);
+      });
+
       it('should have the property ipPool (base name: "ipPool")', function() {
         // TODO: update the code to test the property ipPool
         expect(instance).to.have.property('ipPool');
         // expect(instance.ipPool).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property localIP (base name: "localIP")', function() {
+        // TODO: update the code to test the property localIP
+        expect(instance).to.have.property('localIP');
+        // expect(instance.localIP).to.be(expectedValueLiteral);
       });
 
       it('should have the property messageID (base name: "messageID")', function() {
@@ -87,6 +105,12 @@
         // TODO: update the code to test the property preText
         expect(instance).to.have.property('preText');
         // expect(instance.preText).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property publicIP (base name: "publicIP")', function() {
+        // TODO: update the code to test the property publicIP
+        expect(instance).to.have.property('publicIP');
+        // expect(instance.publicIP).to.be(expectedValueLiteral);
       });
 
       it('should have the property replyTo (base name: "replyTo")', function() {

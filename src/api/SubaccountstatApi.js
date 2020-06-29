@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsRStats', 'model/ModelsStats'], factory);
+    define(['ApiClient', 'model/RStats', 'model/Stats'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsRStats'), require('../model/ModelsStats'));
+    module.exports = factory(require('../ApiClient'), require('../model/RStats'), require('../model/Stats'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.SubaccountstatApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsRStats, root.SendPostApi.ModelsStats);
+    root.SendPostApi.SubaccountstatApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.RStats, root.SendPostApi.Stats);
   }
-}(this, function(ApiClient, ModelsRStats, ModelsStats) {
+}(this, function(ApiClient, RStats, Stats) {
   'use strict';
 
   /**
@@ -52,7 +52,7 @@
      * Callback function to receive the result of the subAccountStatsRouterGetAllAggregateSubAccountStats operation.
      * @callback module:api/SubaccountstatApi~subAccountStatsRouterGetAllAggregateSubAccountStatsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ModelsStats} data The data returned by the service call.
+     * @param {module:model/Stats} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -63,7 +63,7 @@
      * @param {String} opts.from from date
      * @param {String} opts.to to date
      * @param {module:api/SubaccountstatApi~subAccountStatsRouterGetAllAggregateSubAccountStatsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ModelsStats}
+     * data is of type: {@link module:model/Stats}
      */
     this.subAccountStatsRouterGetAllAggregateSubAccountStats = function(xSubAccountApiKey, opts, callback) {
       opts = opts || {};
@@ -92,7 +92,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = ModelsStats;
+      var returnType = Stats;
 
       return this.apiClient.callApi(
         '/subaccount/stat/aggregate', 'GET',
@@ -105,7 +105,7 @@
      * Callback function to receive the result of the subAccountStatsRouterGetAllAggregateSubAccountStatsByGroup operation.
      * @callback module:api/SubaccountstatApi~subAccountStatsRouterGetAllAggregateSubAccountStatsByGroupCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ModelsStats} data The data returned by the service call.
+     * @param {module:model/Stats} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -117,7 +117,7 @@
      * @param {String} opts.from from date
      * @param {String} opts.to to date
      * @param {module:api/SubaccountstatApi~subAccountStatsRouterGetAllAggregateSubAccountStatsByGroupCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ModelsStats}
+     * data is of type: {@link module:model/Stats}
      */
     this.subAccountStatsRouterGetAllAggregateSubAccountStatsByGroup = function(xSubAccountApiKey, group, opts, callback) {
       opts = opts || {};
@@ -152,7 +152,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = ModelsStats;
+      var returnType = Stats;
 
       return this.apiClient.callApi(
         '/subaccount/stat/aggregate/group', 'GET',
@@ -165,7 +165,7 @@
      * Callback function to receive the result of the subAccountStatsRouterGetAllSubAccountStats operation.
      * @callback module:api/SubaccountstatApi~subAccountStatsRouterGetAllSubAccountStatsCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ModelsRStats>} data The data returned by the service call.
+     * @param {Array.<module:model/RStats>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -176,7 +176,7 @@
      * @param {String} opts.from from date
      * @param {String} opts.to to date
      * @param {module:api/SubaccountstatApi~subAccountStatsRouterGetAllSubAccountStatsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ModelsRStats>}
+     * data is of type: {@link Array.<module:model/RStats>}
      */
     this.subAccountStatsRouterGetAllSubAccountStats = function(xSubAccountApiKey, opts, callback) {
       opts = opts || {};
@@ -205,7 +205,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = [ModelsRStats];
+      var returnType = [RStats];
 
       return this.apiClient.callApi(
         '/subaccount/stat/', 'GET',
@@ -218,7 +218,7 @@
      * Callback function to receive the result of the subAccountStatsRouterGetAllSubAccountStatsByGroup operation.
      * @callback module:api/SubaccountstatApi~subAccountStatsRouterGetAllSubAccountStatsByGroupCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ModelsRStats>} data The data returned by the service call.
+     * @param {Array.<module:model/RStats>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -230,7 +230,7 @@
      * @param {String} opts.from from date
      * @param {String} opts.to to date
      * @param {module:api/SubaccountstatApi~subAccountStatsRouterGetAllSubAccountStatsByGroupCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ModelsRStats>}
+     * data is of type: {@link Array.<module:model/RStats>}
      */
     this.subAccountStatsRouterGetAllSubAccountStatsByGroup = function(xSubAccountApiKey, group, opts, callback) {
       opts = opts || {};
@@ -265,7 +265,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = [ModelsRStats];
+      var returnType = [RStats];
 
       return this.apiClient.callApi(
         '/subaccount/stat/group', 'GET',

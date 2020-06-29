@@ -59,6 +59,8 @@
         obj.created = ApiClient.convertToType(data['created'], 'Number');
       if (data.hasOwnProperty('dkim'))
         obj.dkim = ModelsDNSRecord.constructFromObject(data['dkim']);
+      if (data.hasOwnProperty('dkimConfig'))
+        obj.dkimConfig = ApiClient.convertToType(data['dkimConfig'], 'String');
       if (data.hasOwnProperty('dkimVerified'))
         obj.dkimVerified = ApiClient.convertToType(data['dkimVerified'], 'Boolean');
       if (data.hasOwnProperty('id'))
@@ -86,6 +88,11 @@
    * @member {module:model/ModelsDNSRecord} dkim
    */
   exports.prototype.dkim = undefined;
+
+  /**
+   * @member {String} dkimConfig
+   */
+  exports.prototype.dkimConfig = undefined;
 
   /**
    * @member {Boolean} dkimVerified

@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created** | **Number** |  | [optional] 
 **dkim** | [**ModelsDNSRecord**](ModelsDNSRecord.md) |  | [optional] 
+**dkimConfig** | **String** |  | [optional] 
 **dkimVerified** | **Boolean** |  | [optional] 
 **id** | **Number** |  | [optional] 
 **name** | **String** |  | [optional] 

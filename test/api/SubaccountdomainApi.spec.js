@@ -83,6 +83,8 @@
               expect(data.dkim.textValue).to.be("");
               expect(data.dkim.type).to.be.a('string');
               expect(data.dkim.type).to.be("");
+            expect(data.dkimConfig).to.be.a('string');
+            expect(data.dkimConfig).to.be("");
             expect(data.dkimVerified).to.be.a('boolean');
             expect(data.dkimVerified).to.be(false);
             expect(data.id).to.be.a('number');
@@ -164,6 +166,8 @@
               expect(data.dkim.textValue).to.be("");
               expect(data.dkim.type).to.be.a('string');
               expect(data.dkim.type).to.be("");
+            expect(data.dkimConfig).to.be.a('string');
+            expect(data.dkimConfig).to.be("");
             expect(data.dkimVerified).to.be.a('boolean');
             expect(data.dkimVerified).to.be(false);
             expect(data.id).to.be.a('number');
@@ -227,6 +231,8 @@
                 expect(data.dkim.textValue).to.be("");
                 expect(data.dkim.type).to.be.a('string');
                 expect(data.dkim.type).to.be("");
+              expect(data.dkimConfig).to.be.a('string');
+              expect(data.dkimConfig).to.be("");
               expect(data.dkimVerified).to.be.a('boolean');
               expect(data.dkimVerified).to.be(false);
               expect(data.id).to.be.a('number');
@@ -285,6 +291,8 @@
               expect(data.dkim.textValue).to.be("");
               expect(data.dkim.type).to.be.a('string');
               expect(data.dkim.type).to.be("");
+            expect(data.dkimConfig).to.be.a('string');
+            expect(data.dkimConfig).to.be("");
             expect(data.dkimVerified).to.be.a('boolean');
             expect(data.dkimVerified).to.be(false);
             expect(data.id).to.be.a('number');

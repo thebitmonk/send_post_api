@@ -57,6 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('customFields'))
         obj.customFields = ApiClient.convertToType(data['customFields'], Object);
+      if (data.hasOwnProperty('emailType'))
+        obj.emailType = ApiClient.convertToType(data['emailType'], 'String');
       if (data.hasOwnProperty('from'))
         obj.from = ModelsFrom.constructFromObject(data['from']);
       if (data.hasOwnProperty('groups'))
@@ -65,12 +67,18 @@
         obj.headers = ApiClient.convertToType(data['headers'], Object);
       if (data.hasOwnProperty('htmlBody'))
         obj.htmlBody = ApiClient.convertToType(data['htmlBody'], 'String');
+      if (data.hasOwnProperty('ipID'))
+        obj.ipID = ApiClient.convertToType(data['ipID'], 'Number');
       if (data.hasOwnProperty('ipPool'))
         obj.ipPool = ApiClient.convertToType(data['ipPool'], 'String');
+      if (data.hasOwnProperty('localIP'))
+        obj.localIP = ApiClient.convertToType(data['localIP'], 'String');
       if (data.hasOwnProperty('messageID'))
         obj.messageID = ApiClient.convertToType(data['messageID'], 'String');
       if (data.hasOwnProperty('preText'))
         obj.preText = ApiClient.convertToType(data['preText'], 'String');
+      if (data.hasOwnProperty('publicIP'))
+        obj.publicIP = ApiClient.convertToType(data['publicIP'], 'String');
       if (data.hasOwnProperty('replyTo'))
         obj.replyTo = ModelsReplyTo.constructFromObject(data['replyTo']);
       if (data.hasOwnProperty('subAccountID'))
@@ -97,6 +105,11 @@
   exports.prototype.customFields = undefined;
 
   /**
+   * @member {String} emailType
+   */
+  exports.prototype.emailType = undefined;
+
+  /**
    * @member {module:model/ModelsFrom} from
    */
   exports.prototype.from = undefined;
@@ -117,9 +130,19 @@
   exports.prototype.htmlBody = undefined;
 
   /**
+   * @member {Number} ipID
+   */
+  exports.prototype.ipID = undefined;
+
+  /**
    * @member {String} ipPool
    */
   exports.prototype.ipPool = undefined;
+
+  /**
+   * @member {String} localIP
+   */
+  exports.prototype.localIP = undefined;
 
   /**
    * @member {String} messageID
@@ -130,6 +153,11 @@
    * @member {String} preText
    */
   exports.prototype.preText = undefined;
+
+  /**
+   * @member {String} publicIP
+   */
+  exports.prototype.publicIP = undefined;
 
   /**
    * @member {module:model/ModelsReplyTo} replyTo

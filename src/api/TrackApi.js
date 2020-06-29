@@ -58,12 +58,19 @@
 
     /**
      * Track Email Open
+     * @param {Number} ipId The id of ip from which this email message was sent
      * @param {Number} subAccountId The id of sub-account from which email is being sent
      * @param {String} messageId The UUID of message which was sent
+     * @param {String} emailType The type of email such as gmail, yahoo etc. which was sent. This is inferred from to email address
      * @param {module:api/TrackApi~trackRouterTrackEmailOpenCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.trackRouterTrackEmailOpen = function(subAccountId, messageId, callback) {
+    this.trackRouterTrackEmailOpen = function(ipId, subAccountId, messageId, emailType, callback) {
       var postBody = null;
+
+      // verify the required parameter 'ipId' is set
+      if (ipId === undefined || ipId === null) {
+        throw new Error("Missing the required parameter 'ipId' when calling trackRouterTrackEmailOpen");
+      }
 
       // verify the required parameter 'subAccountId' is set
       if (subAccountId === undefined || subAccountId === null) {
@@ -75,10 +82,17 @@
         throw new Error("Missing the required parameter 'messageId' when calling trackRouterTrackEmailOpen");
       }
 
+      // verify the required parameter 'emailType' is set
+      if (emailType === undefined || emailType === null) {
+        throw new Error("Missing the required parameter 'emailType' when calling trackRouterTrackEmailOpen");
+      }
+
 
       var pathParams = {
+        'ipId': ipId,
         'subAccountId': subAccountId,
-        'messageId': messageId
+        'messageId': messageId,
+        'emailType': emailType
       };
       var queryParams = {
       };
@@ -95,7 +109,7 @@
       var returnType = null;
 
       return this.apiClient.callApi(
-        '/track/open/{subAccountId}/{messageId}/1.png', 'GET',
+        '/track/open/{subAccountId}/{ipId}/{emailType}/{messageId}/1.png', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -111,13 +125,20 @@
 
     /**
      * Track Link Click
+     * @param {Number} ipId The id of ip from which this email message was sent
      * @param {Number} subAccountId The id of sub-account from which email is being sent
      * @param {String} messageId The UUID of message which was sent
+     * @param {String} emailType The type of email such as gmail, yahoo etc. which was sent. This is inferred from to email address
      * @param {String} redirecturl The encoded redirect URL
      * @param {module:api/TrackApi~trackRouterTrackLinkClickCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.trackRouterTrackLinkClick = function(subAccountId, messageId, redirecturl, callback) {
+    this.trackRouterTrackLinkClick = function(ipId, subAccountId, messageId, emailType, redirecturl, callback) {
       var postBody = null;
+
+      // verify the required parameter 'ipId' is set
+      if (ipId === undefined || ipId === null) {
+        throw new Error("Missing the required parameter 'ipId' when calling trackRouterTrackLinkClick");
+      }
 
       // verify the required parameter 'subAccountId' is set
       if (subAccountId === undefined || subAccountId === null) {
@@ -129,6 +150,11 @@
         throw new Error("Missing the required parameter 'messageId' when calling trackRouterTrackLinkClick");
       }
 
+      // verify the required parameter 'emailType' is set
+      if (emailType === undefined || emailType === null) {
+        throw new Error("Missing the required parameter 'emailType' when calling trackRouterTrackLinkClick");
+      }
+
       // verify the required parameter 'redirecturl' is set
       if (redirecturl === undefined || redirecturl === null) {
         throw new Error("Missing the required parameter 'redirecturl' when calling trackRouterTrackLinkClick");
@@ -136,8 +162,10 @@
 
 
       var pathParams = {
+        'ipId': ipId,
         'subAccountId': subAccountId,
-        'messageId': messageId
+        'messageId': messageId,
+        'emailType': emailType
       };
       var queryParams = {
         'redirecturl': redirecturl,
@@ -155,7 +183,7 @@
       var returnType = null;
 
       return this.apiClient.callApi(
-        '/track/click/{subAccountId}/{messageId}', 'GET',
+        '/track/click/{subAccountId}/{ipId}/{emailType}/{messageId}', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

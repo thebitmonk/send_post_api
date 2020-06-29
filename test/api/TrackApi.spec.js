@@ -40,10 +40,12 @@
         it('should call trackRouterTrackEmailOpen successfully', function(done) {
           // TODO: uncomment, update parameter values for trackRouterTrackEmailOpen call
           /*
+          var ipId = 789;
           var subAccountId = 789;
           var messageId = "messageId_example";
+          var emailType = "emailType_example";
 
-          instance.trackRouterTrackEmailOpen(subAccountId, messageId, function(error, data, response) {
+          instance.trackRouterTrackEmailOpen(ipId, subAccountId, messageId, emailType, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -60,11 +62,13 @@
         it('should call trackRouterTrackLinkClick successfully', function(done) {
           // TODO: uncomment, update parameter values for trackRouterTrackLinkClick call
           /*
+          var ipId = 789;
           var subAccountId = 789;
           var messageId = "messageId_example";
+          var emailType = "emailType_example";
           var redirecturl = "redirecturl_example";
 
-          instance.trackRouterTrackLinkClick(subAccountId, messageId, redirecturl, function(error, data, response) {
+          instance.trackRouterTrackLinkClick(ipId, subAccountId, messageId, emailType, redirecturl, function(error, data, response) {
             if (error) {
               done(error);
               return;

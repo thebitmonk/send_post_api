@@ -53,6 +53,12 @@
         // expect(instance.dkim).to.be(expectedValueLiteral);
       });
 
+      it('should have the property dkimConfig (base name: "dkimConfig")', function() {
+        // TODO: update the code to test the property dkimConfig
+        expect(instance).to.have.property('dkimConfig');
+        // expect(instance.dkimConfig).to.be(expectedValueLiteral);
+      });
+
       it('should have the property dkimVerified (base name: "dkimVerified")', function() {
         // TODO: update the code to test the property dkimVerified
         expect(instance).to.have.property('dkimVerified');

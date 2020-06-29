@@ -113,7 +113,7 @@ api.iPRouterAllocateIP(xAccountApiKey, callback);
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api.sendpost.io/api/v1*
+All URIs are relative to *http://127.0.0.1:8080/api/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -136,6 +136,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.AuthApi* | [**authRouterGetAuthInfo**](docs/AuthApi.md#authRouterGetAuthInfo) | **POST** /auth/info | 
 *SendPostApi.ClusterApi* | [**clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster**](docs/ClusterApi.md#clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster) | **POST** /cluster/suppression/filter | 
 *SendPostApi.ClusterApi* | [**clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster**](docs/ClusterApi.md#clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster) | **DELETE** /cluster/suppression/filter | 
+*SendPostApi.SmtpApi* | [**sMTPRouterReceiveWebhooksRaisedFromSMTPServers**](docs/SmtpApi.md#sMTPRouterReceiveWebhooksRaisedFromSMTPServers) | **POST** /smtp/webhook | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterCount**](docs/SubaccountdomainApi.md#domainRouterCount) | **GET** /subaccount/domain/count | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterCreate**](docs/SubaccountdomainApi.md#domainRouterCreate) | **POST** /subaccount/domain/ | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterDelete**](docs/SubaccountdomainApi.md#domainRouterDelete) | **DELETE** /subaccount/domain/{domainId} | 
@@ -185,8 +186,8 @@ Class | Method | HTTP request | Description
 *SendPostApi.SubaccountwebhookApi* | [**webhookRouterGet**](docs/SubaccountwebhookApi.md#webhookRouterGet) | **GET** /subaccount/webhook/{webhookId} | 
 *SendPostApi.SubaccountwebhookApi* | [**webhookRouterGetAll**](docs/SubaccountwebhookApi.md#webhookRouterGetAll) | **GET** /subaccount/webhook/ | 
 *SendPostApi.SubaccountwebhookApi* | [**webhookRouterUpdate**](docs/SubaccountwebhookApi.md#webhookRouterUpdate) | **PUT** /subaccount/webhook/{webhookId} | 
-*SendPostApi.TrackApi* | [**trackRouterTrackEmailOpen**](docs/TrackApi.md#trackRouterTrackEmailOpen) | **GET** /track/open/{subAccountId}/{messageId}/1.png | 
-*SendPostApi.TrackApi* | [**trackRouterTrackLinkClick**](docs/TrackApi.md#trackRouterTrackLinkClick) | **GET** /track/click/{subAccountId}/{messageId} | 
+*SendPostApi.TrackApi* | [**trackRouterTrackEmailOpen**](docs/TrackApi.md#trackRouterTrackEmailOpen) | **GET** /track/open/{subAccountId}/{ipId}/{emailType}/{messageId}/1.png | 
+*SendPostApi.TrackApi* | [**trackRouterTrackLinkClick**](docs/TrackApi.md#trackRouterTrackLinkClick) | **GET** /track/click/{subAccountId}/{ipId}/{emailType}/{messageId} | 
 *SendPostApi.TrackApi* | [**trackRouterTrackUnsubscribe**](docs/TrackApi.md#trackRouterTrackUnsubscribe) | **GET** /track/unsubscribe/{subAccountId}/{messageId} | 
 
 
@@ -210,27 +211,33 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsEmailMessage](docs/ModelsEmailMessage.md)
  - [SendPostApi.ModelsEmailResponse](docs/ModelsEmailResponse.md)
  - [SendPostApi.ModelsEventMetadata](docs/ModelsEventMetadata.md)
+ - [SendPostApi.ModelsEventType](docs/ModelsEventType.md)
  - [SendPostApi.ModelsFrom](docs/ModelsFrom.md)
  - [SendPostApi.ModelsIP](docs/ModelsIP.md)
  - [SendPostApi.ModelsIPPool](docs/ModelsIPPool.md)
  - [SendPostApi.ModelsIPPoolType](docs/ModelsIPPoolType.md)
  - [SendPostApi.ModelsIPType](docs/ModelsIPType.md)
+ - [SendPostApi.ModelsInstance](docs/ModelsInstance.md)
  - [SendPostApi.ModelsMember](docs/ModelsMember.md)
  - [SendPostApi.ModelsQEmailMessage](docs/ModelsQEmailMessage.md)
  - [SendPostApi.ModelsQEvent](docs/ModelsQEvent.md)
  - [SendPostApi.ModelsRDSuppression](docs/ModelsRDSuppression.md)
- - [SendPostApi.ModelsRStats](docs/ModelsRStats.md)
  - [SendPostApi.ModelsRSuppression](docs/ModelsRSuppression.md)
  - [SendPostApi.ModelsReplyTo](docs/ModelsReplyTo.md)
+ - [SendPostApi.ModelsRoutingStrategy](docs/ModelsRoutingStrategy.md)
  - [SendPostApi.ModelsSender](docs/ModelsSender.md)
- - [SendPostApi.ModelsStats](docs/ModelsStats.md)
  - [SendPostApi.ModelsSubAccount](docs/ModelsSubAccount.md)
  - [SendPostApi.ModelsSubAccountType](docs/ModelsSubAccountType.md)
  - [SendPostApi.ModelsSuppression](docs/ModelsSuppression.md)
  - [SendPostApi.ModelsSuppressionEmail](docs/ModelsSuppressionEmail.md)
  - [SendPostApi.ModelsSuppressionReason](docs/ModelsSuppressionReason.md)
+ - [SendPostApi.ModelsSystemDNSRecord](docs/ModelsSystemDNSRecord.md)
+ - [SendPostApi.ModelsSystemDomain](docs/ModelsSystemDomain.md)
  - [SendPostApi.ModelsTo](docs/ModelsTo.md)
+ - [SendPostApi.ModelsWMessage](docs/ModelsWMessage.md)
  - [SendPostApi.ModelsWebhook](docs/ModelsWebhook.md)
+ - [SendPostApi.RStats](docs/RStats.md)
+ - [SendPostApi.Stats](docs/Stats.md)
  - [SendPostApi.UaparserDevice](docs/UaparserDevice.md)
  - [SendPostApi.UaparserOs](docs/UaparserOs.md)
  - [SendPostApi.UaparserUserAgent](docs/UaparserUserAgent.md)

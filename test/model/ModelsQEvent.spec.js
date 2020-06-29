@@ -59,10 +59,22 @@
         // expect(instance.groups).to.be(expectedValueLiteral);
       });
 
+      it('should have the property ipID (base name: "ipID")', function() {
+        // TODO: update the code to test the property ipID
+        expect(instance).to.have.property('ipID');
+        // expect(instance.ipID).to.be(expectedValueLiteral);
+      });
+
       it('should have the property messageID (base name: "messageID")', function() {
         // TODO: update the code to test the property messageID
         expect(instance).to.have.property('messageID');
         // expect(instance.messageID).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property messageType (base name: "messageType")', function() {
+        // TODO: update the code to test the property messageType
+        expect(instance).to.have.property('messageType');
+        // expect(instance.messageType).to.be(expectedValueLiteral);
       });
 
       it('should have the property subAccountID (base name: "subAccountID")', function() {

@@ -55,19 +55,50 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('aolSettings'))
+        obj.aolSettings = ApiClient.convertToType(data['aolSettings'], 'String');
       if (data.hasOwnProperty('autoWarmupEnabled'))
         obj.autoWarmupEnabled = ApiClient.convertToType(data['autoWarmupEnabled'], 'Boolean');
       if (data.hasOwnProperty('autoWarmupStage'))
         obj.autoWarmupStage = ApiClient.convertToType(data['autoWarmupStage'], 'Number');
+      if (data.hasOwnProperty('comcastSettings'))
+        obj.comcastSettings = ApiClient.convertToType(data['comcastSettings'], 'String');
       if (data.hasOwnProperty('created'))
         obj.created = ApiClient.convertToType(data['created'], 'Number');
+      if (data.hasOwnProperty('defaultSettings'))
+        obj.defaultSettings = ApiClient.convertToType(data['defaultSettings'], 'String');
+      if (data.hasOwnProperty('gmailSettings'))
+        obj.gmailSettings = ApiClient.convertToType(data['gmailSettings'], 'String');
+      if (data.hasOwnProperty('gmxSettings'))
+        obj.gmxSettings = ApiClient.convertToType(data['gmxSettings'], 'String');
+      if (data.hasOwnProperty('icloudSettings'))
+        obj.icloudSettings = ApiClient.convertToType(data['icloudSettings'], 'String');
       if (data.hasOwnProperty('id'))
         obj.id = ApiClient.convertToType(data['id'], 'Number');
+      if (data.hasOwnProperty('mailruSettings'))
+        obj.mailruSettings = ApiClient.convertToType(data['mailruSettings'], 'String');
+      if (data.hasOwnProperty('microsoftSettings'))
+        obj.microsoftSettings = ApiClient.convertToType(data['microsoftSettings'], 'String');
       if (data.hasOwnProperty('publicIP'))
         obj.publicIP = ApiClient.convertToType(data['publicIP'], 'String');
+      if (data.hasOwnProperty('qqSettings'))
+        obj.qqSettings = ApiClient.convertToType(data['qqSettings'], 'String');
+      if (data.hasOwnProperty('reverseDNSHostname'))
+        obj.reverseDNSHostname = ApiClient.convertToType(data['reverseDNSHostname'], 'String');
+      if (data.hasOwnProperty('yahooSettings'))
+        obj.yahooSettings = ApiClient.convertToType(data['yahooSettings'], 'String');
+      if (data.hasOwnProperty('yandexSettings'))
+        obj.yandexSettings = ApiClient.convertToType(data['yandexSettings'], 'String');
+      if (data.hasOwnProperty('zohoSettings'))
+        obj.zohoSettings = ApiClient.convertToType(data['zohoSettings'], 'String');
     }
     return obj;
   }
+
+  /**
+   * @member {String} aolSettings
+   */
+  exports.prototype.aolSettings = undefined;
 
   /**
    * @member {Boolean} autoWarmupEnabled
@@ -80,9 +111,34 @@
   exports.prototype.autoWarmupStage = undefined;
 
   /**
+   * @member {String} comcastSettings
+   */
+  exports.prototype.comcastSettings = undefined;
+
+  /**
    * @member {Number} created
    */
   exports.prototype.created = undefined;
+
+  /**
+   * @member {String} defaultSettings
+   */
+  exports.prototype.defaultSettings = undefined;
+
+  /**
+   * @member {String} gmailSettings
+   */
+  exports.prototype.gmailSettings = undefined;
+
+  /**
+   * @member {String} gmxSettings
+   */
+  exports.prototype.gmxSettings = undefined;
+
+  /**
+   * @member {String} icloudSettings
+   */
+  exports.prototype.icloudSettings = undefined;
 
   /**
    * @member {Number} id
@@ -90,9 +146,44 @@
   exports.prototype.id = undefined;
 
   /**
+   * @member {String} mailruSettings
+   */
+  exports.prototype.mailruSettings = undefined;
+
+  /**
+   * @member {String} microsoftSettings
+   */
+  exports.prototype.microsoftSettings = undefined;
+
+  /**
    * @member {String} publicIP
    */
   exports.prototype.publicIP = undefined;
+
+  /**
+   * @member {String} qqSettings
+   */
+  exports.prototype.qqSettings = undefined;
+
+  /**
+   * @member {String} reverseDNSHostname
+   */
+  exports.prototype.reverseDNSHostname = undefined;
+
+  /**
+   * @member {String} yahooSettings
+   */
+  exports.prototype.yahooSettings = undefined;
+
+  /**
+   * @member {String} yandexSettings
+   */
+  exports.prototype.yandexSettings = undefined;
+
+  /**
+   * @member {String} zohoSettings
+   */
+  exports.prototype.zohoSettings = undefined;
 
   return exports;
 

@@ -1,6 +1,6 @@
 # SendPostApi.AccountstatApi
 
-All URIs are relative to *https://api.sendpost.io/api/v1*
+All URIs are relative to *http://127.0.0.1:8080/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="accountStatsRouterGetAllAccountStats"></a>
 # **accountStatsRouterGetAllAccountStats**
-> [ModelsRStats] accountStatsRouterGetAllAccountStats(xAccountApiKey, opts)
+> [RStats] accountStatsRouterGetAllAccountStats(xAccountApiKey, opts)
 
 
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[ModelsRStats]**](ModelsRStats.md)
+[**[RStats]**](RStats.md)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ No authorization required
 
 <a name="accountStatsRouterGetAllAccountStatsByGroup"></a>
 # **accountStatsRouterGetAllAccountStatsByGroup**
-> [ModelsRStats] accountStatsRouterGetAllAccountStatsByGroup(xAccountApiKey, group, opts)
+> [RStats] accountStatsRouterGetAllAccountStatsByGroup(xAccountApiKey, group, opts)
 
 
 
@@ -106,7 +106,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[ModelsRStats]**](ModelsRStats.md)
+[**[RStats]**](RStats.md)
 
 ### Authorization
 
@@ -119,7 +119,7 @@ No authorization required
 
 <a name="accountStatsRouterGetAllAggregateAccountStats"></a>
 # **accountStatsRouterGetAllAggregateAccountStats**
-> ModelsStats accountStatsRouterGetAllAggregateAccountStats(xAccountApiKey, opts)
+> Stats accountStatsRouterGetAllAggregateAccountStats(xAccountApiKey, opts)
 
 
 
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ModelsStats**](ModelsStats.md)
+[**Stats**](Stats.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ No authorization required
 
 <a name="accountStatsRouterGetAllAggregateAccountStatsByGroup"></a>
 # **accountStatsRouterGetAllAggregateAccountStatsByGroup**
-> ModelsStats accountStatsRouterGetAllAggregateAccountStatsByGroup(xAccountApiKey, group, opts)
+> Stats accountStatsRouterGetAllAggregateAccountStatsByGroup(xAccountApiKey, group, opts)
 
 
 
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ModelsStats**](ModelsStats.md)
+[**Stats**](Stats.md)
 
 ### Authorization
 

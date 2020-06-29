@@ -56,28 +56,7 @@
             expect(dataCtr).to.not.be.empty();
             for (let p in dataCtr) {
               let data = dataCtr[p];
-              expect(data).to.be.a(SendPostApi.ModelsRStats);
-              expect(data._date).to.be.a('string');
-              expect(data._date).to.be("");
-              expect(data.stats).to.be.a(SendPostApi.ModelsStats);
-                    expect(data.stats.clicked).to.be.a('number');
-                expect(data.stats.clicked).to.be("0");
-                expect(data.stats.delivered).to.be.a('number');
-                expect(data.stats.delivered).to.be("0");
-                expect(data.stats.dropped).to.be.a('number');
-                expect(data.stats.dropped).to.be("0");
-                expect(data.stats.hardBounced).to.be.a('number');
-                expect(data.stats.hardBounced).to.be("0");
-                expect(data.stats.opened).to.be.a('number');
-                expect(data.stats.opened).to.be("0");
-                expect(data.stats.processed).to.be.a('number');
-                expect(data.stats.processed).to.be("0");
-                expect(data.stats.softBounced).to.be.a('number');
-                expect(data.stats.softBounced).to.be("0");
-                expect(data.stats.spam).to.be.a('number');
-                expect(data.stats.spam).to.be("0");
-                expect(data.stats.unsubscribed).to.be.a('number');
-                expect(data.stats.unsubscribed).to.be("0");
+              expect(data).to.be.a(SendPostApi.RStats);
             }
 
             done();
@@ -108,28 +87,7 @@
             expect(dataCtr).to.not.be.empty();
             for (let p in dataCtr) {
               let data = dataCtr[p];
-              expect(data).to.be.a(SendPostApi.ModelsRStats);
-              expect(data._date).to.be.a('string');
-              expect(data._date).to.be("");
-              expect(data.stats).to.be.a(SendPostApi.ModelsStats);
-                    expect(data.stats.clicked).to.be.a('number');
-                expect(data.stats.clicked).to.be("0");
-                expect(data.stats.delivered).to.be.a('number');
-                expect(data.stats.delivered).to.be("0");
-                expect(data.stats.dropped).to.be.a('number');
-                expect(data.stats.dropped).to.be("0");
-                expect(data.stats.hardBounced).to.be.a('number');
-                expect(data.stats.hardBounced).to.be("0");
-                expect(data.stats.opened).to.be.a('number');
-                expect(data.stats.opened).to.be("0");
-                expect(data.stats.processed).to.be.a('number');
-                expect(data.stats.processed).to.be("0");
-                expect(data.stats.softBounced).to.be.a('number');
-                expect(data.stats.softBounced).to.be("0");
-                expect(data.stats.spam).to.be.a('number');
-                expect(data.stats.spam).to.be("0");
-                expect(data.stats.unsubscribed).to.be.a('number');
-                expect(data.stats.unsubscribed).to.be("0");
+              expect(data).to.be.a(SendPostApi.RStats);
             }
 
             done();
@@ -154,25 +112,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SendPostApi.ModelsStats);
-            expect(data.clicked).to.be.a('number');
-            expect(data.clicked).to.be("0");
-            expect(data.delivered).to.be.a('number');
-            expect(data.delivered).to.be("0");
-            expect(data.dropped).to.be.a('number');
-            expect(data.dropped).to.be("0");
-            expect(data.hardBounced).to.be.a('number');
-            expect(data.hardBounced).to.be("0");
-            expect(data.opened).to.be.a('number');
-            expect(data.opened).to.be("0");
-            expect(data.processed).to.be.a('number');
-            expect(data.processed).to.be("0");
-            expect(data.softBounced).to.be.a('number');
-            expect(data.softBounced).to.be("0");
-            expect(data.spam).to.be.a('number');
-            expect(data.spam).to.be("0");
-            expect(data.unsubscribed).to.be.a('number');
-            expect(data.unsubscribed).to.be("0");
+            expect(data).to.be.a(SendPostApi.Stats);
 
             done();
           });
@@ -197,25 +137,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SendPostApi.ModelsStats);
-            expect(data.clicked).to.be.a('number');
-            expect(data.clicked).to.be("0");
-            expect(data.delivered).to.be.a('number');
-            expect(data.delivered).to.be("0");
-            expect(data.dropped).to.be.a('number');
-            expect(data.dropped).to.be("0");
-            expect(data.hardBounced).to.be.a('number');
-            expect(data.hardBounced).to.be("0");
-            expect(data.opened).to.be.a('number');
-            expect(data.opened).to.be("0");
-            expect(data.processed).to.be.a('number');
-            expect(data.processed).to.be("0");
-            expect(data.softBounced).to.be.a('number');
-            expect(data.softBounced).to.be("0");
-            expect(data.spam).to.be.a('number');
-            expect(data.spam).to.be("0");
-            expect(data.unsubscribed).to.be.a('number');
-            expect(data.unsubscribed).to.be("0");
+            expect(data).to.be.a(SendPostApi.Stats);
 
             done();
           });
