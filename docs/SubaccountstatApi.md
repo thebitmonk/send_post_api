@@ -4,15 +4,18 @@ All URIs are relative to *http://127.0.0.1:8080/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**subAccountStatsRouterGetAllAggregateSubAccountStats**](SubaccountstatApi.md#subAccountStatsRouterGetAllAggregateSubAccountStats) | **GET** /subaccount/stat/aggregate | 
-[**subAccountStatsRouterGetAllAggregateSubAccountStatsByGroup**](SubaccountstatApi.md#subAccountStatsRouterGetAllAggregateSubAccountStatsByGroup) | **GET** /subaccount/stat/aggregate/group | 
-[**subAccountStatsRouterGetAllSubAccountStats**](SubaccountstatApi.md#subAccountStatsRouterGetAllSubAccountStats) | **GET** /subaccount/stat/ | 
-[**subAccountStatsRouterGetAllSubAccountStatsByGroup**](SubaccountstatApi.md#subAccountStatsRouterGetAllSubAccountStatsByGroup) | **GET** /subaccount/stat/group | 
+[**subAccountStatRouterGetAllAggregateSubAccountStats**](SubaccountstatApi.md#subAccountStatRouterGetAllAggregateSubAccountStats) | **GET** /subaccount/stat/aggregate | 
+[**subAccountStatRouterGetAllAggregateSubAccountStatsByGroup**](SubaccountstatApi.md#subAccountStatRouterGetAllAggregateSubAccountStatsByGroup) | **GET** /subaccount/stat/aggregate/group | 
+[**subAccountStatRouterGetAllAggregatedIPStatsForASubAccount**](SubaccountstatApi.md#subAccountStatRouterGetAllAggregatedIPStatsForASubAccount) | **GET** /subaccount/stat/aggregate/ips | 
+[**subAccountStatRouterGetAllAggregatedProviderStatsForASpecificIPOfASubAccount**](SubaccountstatApi.md#subAccountStatRouterGetAllAggregatedProviderStatsForASpecificIPOfASubAccount) | **GET** /subaccount/stat/aggregate/ip/{ipid}/providers | 
+[**subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount**](SubaccountstatApi.md#subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount) | **GET** /subaccount/stat/aggregate/providers | 
+[**subAccountStatRouterGetAllSubAccountStats**](SubaccountstatApi.md#subAccountStatRouterGetAllSubAccountStats) | **GET** /subaccount/stat/ | 
+[**subAccountStatRouterGetAllSubAccountStatsByGroup**](SubaccountstatApi.md#subAccountStatRouterGetAllSubAccountStatsByGroup) | **GET** /subaccount/stat/group | 
 
 
-<a name="subAccountStatsRouterGetAllAggregateSubAccountStats"></a>
-# **subAccountStatsRouterGetAllAggregateSubAccountStats**
-> ModelsStat subAccountStatsRouterGetAllAggregateSubAccountStats(xSubAccountApiKey, opts)
+<a name="subAccountStatRouterGetAllAggregateSubAccountStats"></a>
+# **subAccountStatRouterGetAllAggregateSubAccountStats**
+> ModelsStat subAccountStatRouterGetAllAggregateSubAccountStats(xSubAccountApiKey, opts)
 
 
 
@@ -38,7 +41,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.subAccountStatsRouterGetAllAggregateSubAccountStats(xSubAccountApiKey, opts, callback);
+apiInstance.subAccountStatRouterGetAllAggregateSubAccountStats(xSubAccountApiKey, opts, callback);
 ```
 
 ### Parameters
@@ -62,9 +65,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="subAccountStatsRouterGetAllAggregateSubAccountStatsByGroup"></a>
-# **subAccountStatsRouterGetAllAggregateSubAccountStatsByGroup**
-> ModelsStat subAccountStatsRouterGetAllAggregateSubAccountStatsByGroup(xSubAccountApiKey, group, opts)
+<a name="subAccountStatRouterGetAllAggregateSubAccountStatsByGroup"></a>
+# **subAccountStatRouterGetAllAggregateSubAccountStatsByGroup**
+> ModelsStat subAccountStatRouterGetAllAggregateSubAccountStatsByGroup(xSubAccountApiKey, group, opts)
 
 
 
@@ -92,7 +95,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.subAccountStatsRouterGetAllAggregateSubAccountStatsByGroup(xSubAccountApiKey, group, opts, callback);
+apiInstance.subAccountStatRouterGetAllAggregateSubAccountStatsByGroup(xSubAccountApiKey, group, opts, callback);
 ```
 
 ### Parameters
@@ -117,9 +120,168 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="subAccountStatsRouterGetAllSubAccountStats"></a>
-# **subAccountStatsRouterGetAllSubAccountStats**
-> [ModelsRStat] subAccountStatsRouterGetAllSubAccountStats(xSubAccountApiKey, opts)
+<a name="subAccountStatRouterGetAllAggregatedIPStatsForASubAccount"></a>
+# **subAccountStatRouterGetAllAggregatedIPStatsForASubAccount**
+> [ModelsAIPStat] subAccountStatRouterGetAllAggregatedIPStatsForASubAccount(xSubAccountApiKey, opts)
+
+
+
+Get All Aggregated IP Stats for a Sub-Account
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.SubaccountstatApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var opts = { 
+  'from': "from_example", // String | from date
+  'to': "to_example" // String | to date
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.subAccountStatRouterGetAllAggregatedIPStatsForASubAccount(xSubAccountApiKey, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **from** | **String**| from date | [optional] 
+ **to** | **String**| to date | [optional] 
+
+### Return type
+
+[**[ModelsAIPStat]**](ModelsAIPStat.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="subAccountStatRouterGetAllAggregatedProviderStatsForASpecificIPOfASubAccount"></a>
+# **subAccountStatRouterGetAllAggregatedProviderStatsForASpecificIPOfASubAccount**
+> [ModelsPIPStat] subAccountStatRouterGetAllAggregatedProviderStatsForASpecificIPOfASubAccount(xSubAccountApiKey, ipid, opts)
+
+
+
+Get All Aggregated Provider Stats for a Specific IP of a Sub-Account
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.SubaccountstatApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var ipid = 789; // Number | the IPId you want to get
+
+var opts = { 
+  'from': "from_example", // String | from date
+  'to': "to_example" // String | to date
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.subAccountStatRouterGetAllAggregatedProviderStatsForASpecificIPOfASubAccount(xSubAccountApiKey, ipid, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **ipid** | **Number**| the IPId you want to get | 
+ **from** | **String**| from date | [optional] 
+ **to** | **String**| to date | [optional] 
+
+### Return type
+
+[**[ModelsPIPStat]**](ModelsPIPStat.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount"></a>
+# **subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount**
+> [ModelsPIPStat] subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount(xSubAccountApiKey, opts)
+
+
+
+Get All Aggregated Provider Stats for a Sub-Account
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.SubaccountstatApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var opts = { 
+  'from': "from_example", // String | from date
+  'to': "to_example" // String | to date
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount(xSubAccountApiKey, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **from** | **String**| from date | [optional] 
+ **to** | **String**| to date | [optional] 
+
+### Return type
+
+[**[ModelsPIPStat]**](ModelsPIPStat.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="subAccountStatRouterGetAllSubAccountStats"></a>
+# **subAccountStatRouterGetAllSubAccountStats**
+> [ModelsRStat] subAccountStatRouterGetAllSubAccountStats(xSubAccountApiKey, opts)
 
 
 
@@ -145,7 +307,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.subAccountStatsRouterGetAllSubAccountStats(xSubAccountApiKey, opts, callback);
+apiInstance.subAccountStatRouterGetAllSubAccountStats(xSubAccountApiKey, opts, callback);
 ```
 
 ### Parameters
@@ -169,9 +331,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="subAccountStatsRouterGetAllSubAccountStatsByGroup"></a>
-# **subAccountStatsRouterGetAllSubAccountStatsByGroup**
-> [ModelsRStat] subAccountStatsRouterGetAllSubAccountStatsByGroup(xSubAccountApiKey, group, opts)
+<a name="subAccountStatRouterGetAllSubAccountStatsByGroup"></a>
+# **subAccountStatRouterGetAllSubAccountStatsByGroup**
+> [ModelsRStat] subAccountStatRouterGetAllSubAccountStatsByGroup(xSubAccountApiKey, group, opts)
 
 
 
@@ -199,7 +361,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.subAccountStatsRouterGetAllSubAccountStatsByGroup(xSubAccountApiKey, group, opts, callback);
+apiInstance.subAccountStatRouterGetAllSubAccountStatsByGroup(xSubAccountApiKey, group, opts, callback);
 ```
 
 ### Parameters

@@ -49,8 +49,8 @@
 
 
     /**
-     * Callback function to receive the result of the accountStatsRouterGetAllAccountStats operation.
-     * @callback module:api/AccountstatApi~accountStatsRouterGetAllAccountStatsCallback
+     * Callback function to receive the result of the accountStatRouterGetAllAccountStats operation.
+     * @callback module:api/AccountstatApi~accountStatRouterGetAllAccountStatsCallback
      * @param {String} error Error message, if any.
      * @param {Array.<module:model/ModelsRStat>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -62,16 +62,16 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
      * @param {String} opts.to to date
-     * @param {module:api/AccountstatApi~accountStatsRouterGetAllAccountStatsCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/AccountstatApi~accountStatRouterGetAllAccountStatsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsRStat>}
      */
-    this.accountStatsRouterGetAllAccountStats = function(xAccountApiKey, opts, callback) {
+    this.accountStatRouterGetAllAccountStats = function(xAccountApiKey, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'xAccountApiKey' is set
       if (xAccountApiKey === undefined || xAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xAccountApiKey' when calling accountStatsRouterGetAllAccountStats");
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling accountStatRouterGetAllAccountStats");
       }
 
 
@@ -102,8 +102,8 @@
     }
 
     /**
-     * Callback function to receive the result of the accountStatsRouterGetAllAccountStatsByGroup operation.
-     * @callback module:api/AccountstatApi~accountStatsRouterGetAllAccountStatsByGroupCallback
+     * Callback function to receive the result of the accountStatRouterGetAllAccountStatsByGroup operation.
+     * @callback module:api/AccountstatApi~accountStatRouterGetAllAccountStatsByGroupCallback
      * @param {String} error Error message, if any.
      * @param {Array.<module:model/ModelsRStat>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -116,21 +116,21 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
      * @param {String} opts.to to date
-     * @param {module:api/AccountstatApi~accountStatsRouterGetAllAccountStatsByGroupCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/AccountstatApi~accountStatRouterGetAllAccountStatsByGroupCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsRStat>}
      */
-    this.accountStatsRouterGetAllAccountStatsByGroup = function(xAccountApiKey, group, opts, callback) {
+    this.accountStatRouterGetAllAccountStatsByGroup = function(xAccountApiKey, group, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'xAccountApiKey' is set
       if (xAccountApiKey === undefined || xAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xAccountApiKey' when calling accountStatsRouterGetAllAccountStatsByGroup");
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling accountStatRouterGetAllAccountStatsByGroup");
       }
 
       // verify the required parameter 'group' is set
       if (group === undefined || group === null) {
-        throw new Error("Missing the required parameter 'group' when calling accountStatsRouterGetAllAccountStatsByGroup");
+        throw new Error("Missing the required parameter 'group' when calling accountStatRouterGetAllAccountStatsByGroup");
       }
 
 
@@ -162,8 +162,8 @@
     }
 
     /**
-     * Callback function to receive the result of the accountStatsRouterGetAllAggregateAccountStats operation.
-     * @callback module:api/AccountstatApi~accountStatsRouterGetAllAggregateAccountStatsCallback
+     * Callback function to receive the result of the accountStatRouterGetAllAggregateAccountStats operation.
+     * @callback module:api/AccountstatApi~accountStatRouterGetAllAggregateAccountStatsCallback
      * @param {String} error Error message, if any.
      * @param {module:model/ModelsStat} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -175,16 +175,16 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
      * @param {String} opts.to to date
-     * @param {module:api/AccountstatApi~accountStatsRouterGetAllAggregateAccountStatsCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/AccountstatApi~accountStatRouterGetAllAggregateAccountStatsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsStat}
      */
-    this.accountStatsRouterGetAllAggregateAccountStats = function(xAccountApiKey, opts, callback) {
+    this.accountStatRouterGetAllAggregateAccountStats = function(xAccountApiKey, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'xAccountApiKey' is set
       if (xAccountApiKey === undefined || xAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xAccountApiKey' when calling accountStatsRouterGetAllAggregateAccountStats");
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling accountStatRouterGetAllAggregateAccountStats");
       }
 
 
@@ -215,8 +215,8 @@
     }
 
     /**
-     * Callback function to receive the result of the accountStatsRouterGetAllAggregateAccountStatsByGroup operation.
-     * @callback module:api/AccountstatApi~accountStatsRouterGetAllAggregateAccountStatsByGroupCallback
+     * Callback function to receive the result of the accountStatRouterGetAllAggregateAccountStatsByGroup operation.
+     * @callback module:api/AccountstatApi~accountStatRouterGetAllAggregateAccountStatsByGroupCallback
      * @param {String} error Error message, if any.
      * @param {module:model/ModelsStat} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -229,21 +229,21 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
      * @param {String} opts.to to date
-     * @param {module:api/AccountstatApi~accountStatsRouterGetAllAggregateAccountStatsByGroupCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/AccountstatApi~accountStatRouterGetAllAggregateAccountStatsByGroupCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsStat}
      */
-    this.accountStatsRouterGetAllAggregateAccountStatsByGroup = function(xAccountApiKey, group, opts, callback) {
+    this.accountStatRouterGetAllAggregateAccountStatsByGroup = function(xAccountApiKey, group, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'xAccountApiKey' is set
       if (xAccountApiKey === undefined || xAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xAccountApiKey' when calling accountStatsRouterGetAllAggregateAccountStatsByGroup");
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling accountStatRouterGetAllAggregateAccountStatsByGroup");
       }
 
       // verify the required parameter 'group' is set
       if (group === undefined || group === null) {
-        throw new Error("Missing the required parameter 'group' when calling accountStatsRouterGetAllAggregateAccountStatsByGroup");
+        throw new Error("Missing the required parameter 'group' when calling accountStatRouterGetAllAggregateAccountStatsByGroup");
       }
 
 

@@ -36,16 +36,16 @@
 
   describe('(package)', function() {
     describe('AccountstatApi', function() {
-      describe('accountStatsRouterGetAllAccountStats', function() {
-        it('should call accountStatsRouterGetAllAccountStats successfully', function(done) {
-          // TODO: uncomment, update parameter values for accountStatsRouterGetAllAccountStats call and complete the assertions
+      describe('accountStatRouterGetAllAccountStats', function() {
+        it('should call accountStatRouterGetAllAccountStats successfully', function(done) {
+          // TODO: uncomment, update parameter values for accountStatRouterGetAllAccountStats call and complete the assertions
           /*
           var xAccountApiKey = "xAccountApiKey_example";
           var opts = {};
           opts.from = "from_example";
           opts.to = "to_example";
 
-          instance.accountStatsRouterGetAllAccountStats(xAccountApiKey, opts, function(error, data, response) {
+          instance.accountStatRouterGetAllAccountStats(xAccountApiKey, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -87,9 +87,9 @@
           done();
         });
       });
-      describe('accountStatsRouterGetAllAccountStatsByGroup', function() {
-        it('should call accountStatsRouterGetAllAccountStatsByGroup successfully', function(done) {
-          // TODO: uncomment, update parameter values for accountStatsRouterGetAllAccountStatsByGroup call and complete the assertions
+      describe('accountStatRouterGetAllAccountStatsByGroup', function() {
+        it('should call accountStatRouterGetAllAccountStatsByGroup successfully', function(done) {
+          // TODO: uncomment, update parameter values for accountStatRouterGetAllAccountStatsByGroup call and complete the assertions
           /*
           var xAccountApiKey = "xAccountApiKey_example";
           var group = "group_example";
@@ -97,7 +97,7 @@
           opts.from = "from_example";
           opts.to = "to_example";
 
-          instance.accountStatsRouterGetAllAccountStatsByGroup(xAccountApiKey, group, opts, function(error, data, response) {
+          instance.accountStatRouterGetAllAccountStatsByGroup(xAccountApiKey, group, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -139,16 +139,16 @@
           done();
         });
       });
-      describe('accountStatsRouterGetAllAggregateAccountStats', function() {
-        it('should call accountStatsRouterGetAllAggregateAccountStats successfully', function(done) {
-          // TODO: uncomment, update parameter values for accountStatsRouterGetAllAggregateAccountStats call and complete the assertions
+      describe('accountStatRouterGetAllAggregateAccountStats', function() {
+        it('should call accountStatRouterGetAllAggregateAccountStats successfully', function(done) {
+          // TODO: uncomment, update parameter values for accountStatRouterGetAllAggregateAccountStats call and complete the assertions
           /*
           var xAccountApiKey = "xAccountApiKey_example";
           var opts = {};
           opts.from = "from_example";
           opts.to = "to_example";
 
-          instance.accountStatsRouterGetAllAggregateAccountStats(xAccountApiKey, opts, function(error, data, response) {
+          instance.accountStatRouterGetAllAggregateAccountStats(xAccountApiKey, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -181,9 +181,9 @@
           done();
         });
       });
-      describe('accountStatsRouterGetAllAggregateAccountStatsByGroup', function() {
-        it('should call accountStatsRouterGetAllAggregateAccountStatsByGroup successfully', function(done) {
-          // TODO: uncomment, update parameter values for accountStatsRouterGetAllAggregateAccountStatsByGroup call and complete the assertions
+      describe('accountStatRouterGetAllAggregateAccountStatsByGroup', function() {
+        it('should call accountStatRouterGetAllAggregateAccountStatsByGroup successfully', function(done) {
+          // TODO: uncomment, update parameter values for accountStatRouterGetAllAggregateAccountStatsByGroup call and complete the assertions
           /*
           var xAccountApiKey = "xAccountApiKey_example";
           var group = "group_example";
@@ -191,7 +191,7 @@
           opts.from = "from_example";
           opts.to = "to_example";
 
-          instance.accountStatsRouterGetAllAggregateAccountStatsByGroup(xAccountApiKey, group, opts, function(error, data, response) {
+          instance.accountStatRouterGetAllAggregateAccountStatsByGroup(xAccountApiKey, group, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;

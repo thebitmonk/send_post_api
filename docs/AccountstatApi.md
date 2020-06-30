@@ -4,15 +4,15 @@ All URIs are relative to *http://127.0.0.1:8080/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**accountStatsRouterGetAllAccountStats**](AccountstatApi.md#accountStatsRouterGetAllAccountStats) | **GET** /account/stat/ | 
-[**accountStatsRouterGetAllAccountStatsByGroup**](AccountstatApi.md#accountStatsRouterGetAllAccountStatsByGroup) | **GET** /account/stat/group | 
-[**accountStatsRouterGetAllAggregateAccountStats**](AccountstatApi.md#accountStatsRouterGetAllAggregateAccountStats) | **GET** /account/stat/aggregate | 
-[**accountStatsRouterGetAllAggregateAccountStatsByGroup**](AccountstatApi.md#accountStatsRouterGetAllAggregateAccountStatsByGroup) | **GET** /account/stat/aggregate/group | 
+[**accountStatRouterGetAllAccountStats**](AccountstatApi.md#accountStatRouterGetAllAccountStats) | **GET** /account/stat/ | 
+[**accountStatRouterGetAllAccountStatsByGroup**](AccountstatApi.md#accountStatRouterGetAllAccountStatsByGroup) | **GET** /account/stat/group | 
+[**accountStatRouterGetAllAggregateAccountStats**](AccountstatApi.md#accountStatRouterGetAllAggregateAccountStats) | **GET** /account/stat/aggregate | 
+[**accountStatRouterGetAllAggregateAccountStatsByGroup**](AccountstatApi.md#accountStatRouterGetAllAggregateAccountStatsByGroup) | **GET** /account/stat/aggregate/group | 
 
 
-<a name="accountStatsRouterGetAllAccountStats"></a>
-# **accountStatsRouterGetAllAccountStats**
-> [ModelsRStat] accountStatsRouterGetAllAccountStats(xAccountApiKey, opts)
+<a name="accountStatRouterGetAllAccountStats"></a>
+# **accountStatRouterGetAllAccountStats**
+> [ModelsRStat] accountStatRouterGetAllAccountStats(xAccountApiKey, opts)
 
 
 
@@ -38,7 +38,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.accountStatsRouterGetAllAccountStats(xAccountApiKey, opts, callback);
+apiInstance.accountStatRouterGetAllAccountStats(xAccountApiKey, opts, callback);
 ```
 
 ### Parameters
@@ -62,9 +62,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="accountStatsRouterGetAllAccountStatsByGroup"></a>
-# **accountStatsRouterGetAllAccountStatsByGroup**
-> [ModelsRStat] accountStatsRouterGetAllAccountStatsByGroup(xAccountApiKey, group, opts)
+<a name="accountStatRouterGetAllAccountStatsByGroup"></a>
+# **accountStatRouterGetAllAccountStatsByGroup**
+> [ModelsRStat] accountStatRouterGetAllAccountStatsByGroup(xAccountApiKey, group, opts)
 
 
 
@@ -92,7 +92,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.accountStatsRouterGetAllAccountStatsByGroup(xAccountApiKey, group, opts, callback);
+apiInstance.accountStatRouterGetAllAccountStatsByGroup(xAccountApiKey, group, opts, callback);
 ```
 
 ### Parameters
@@ -117,9 +117,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="accountStatsRouterGetAllAggregateAccountStats"></a>
-# **accountStatsRouterGetAllAggregateAccountStats**
-> ModelsStat accountStatsRouterGetAllAggregateAccountStats(xAccountApiKey, opts)
+<a name="accountStatRouterGetAllAggregateAccountStats"></a>
+# **accountStatRouterGetAllAggregateAccountStats**
+> ModelsStat accountStatRouterGetAllAggregateAccountStats(xAccountApiKey, opts)
 
 
 
@@ -145,7 +145,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.accountStatsRouterGetAllAggregateAccountStats(xAccountApiKey, opts, callback);
+apiInstance.accountStatRouterGetAllAggregateAccountStats(xAccountApiKey, opts, callback);
 ```
 
 ### Parameters
@@ -169,9 +169,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="accountStatsRouterGetAllAggregateAccountStatsByGroup"></a>
-# **accountStatsRouterGetAllAggregateAccountStatsByGroup**
-> ModelsStat accountStatsRouterGetAllAggregateAccountStatsByGroup(xAccountApiKey, group, opts)
+<a name="accountStatRouterGetAllAggregateAccountStatsByGroup"></a>
+# **accountStatRouterGetAllAggregateAccountStatsByGroup**
+> ModelsStat accountStatRouterGetAllAggregateAccountStatsByGroup(xAccountApiKey, group, opts)
 
 
 
@@ -199,7 +199,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.accountStatsRouterGetAllAggregateAccountStatsByGroup(xAccountApiKey, group, opts, callback);
+apiInstance.accountStatRouterGetAllAggregateAccountStatsByGroup(xAccountApiKey, group, opts, callback);
 ```
 
 ### Parameters
