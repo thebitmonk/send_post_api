@@ -129,6 +129,12 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountipstatApi* | [**iPStatRouterGetAllAggregatedSubAccountStatsForAnIP**](docs/AccountipstatApi.md#iPStatRouterGetAllAggregatedSubAccountStatsForAnIP) | **GET** /account/ip/stat/{ipid}/aggregate/subaccounts | 
 *SendPostApi.AccountipstatApi* | [**iPStatRouterGetAllIPStats**](docs/AccountipstatApi.md#iPStatRouterGetAllIPStats) | **GET** /account/ip/stat/{ipid} | 
 *SendPostApi.AccountipstatApi* | [**iPStatRouterGetAllIPStatsByGroup**](docs/AccountipstatApi.md#iPStatRouterGetAllIPStatsByGroup) | **GET** /account/ip/stat/{ipid}/provider | 
+*SendPostApi.AccountsmtpstatApi* | [**sMTPStatRouterGetAllAggregateIPProviderSMTPStats**](docs/AccountsmtpstatApi.md#sMTPStatRouterGetAllAggregateIPProviderSMTPStats) | **GET** /account/smtp/stat/ip/{ipid}/provider/{pname}/aggregate | 
+*SendPostApi.AccountsmtpstatApi* | [**sMTPStatRouterGetAllAggregateIPSMTPStats**](docs/AccountsmtpstatApi.md#sMTPStatRouterGetAllAggregateIPSMTPStats) | **GET** /account/smtp/stat/ip/{ipid}/aggregate | 
+*SendPostApi.AccountsmtpstatApi* | [**sMTPStatRouterGetAllAggregateIPSMTPStatsForSubAccount**](docs/AccountsmtpstatApi.md#sMTPStatRouterGetAllAggregateIPSMTPStatsForSubAccount) | **GET** /account/smtp/stat/ip/{ipid}/subaccount/{sid}/aggregate | 
+*SendPostApi.AccountsmtpstatApi* | [**sMTPStatRouterGetAllAggregateSubAccountProviderSMTPStats**](docs/AccountsmtpstatApi.md#sMTPStatRouterGetAllAggregateSubAccountProviderSMTPStats) | **GET** /account/smtp/stat/subaccount/{sid}/provider/{pname}/aggregate | 
+*SendPostApi.AccountsmtpstatApi* | [**sMTPStatRouterGetAllAggregateSubAccountSMTPStats**](docs/AccountsmtpstatApi.md#sMTPStatRouterGetAllAggregateSubAccountSMTPStats) | **GET** /account/smtp/stat/subaccount/{sid}/aggregate | 
+*SendPostApi.AccountsmtpstatApi* | [**sMTPStatRouterGetAllAggregateSubAccountSMTPStatsForIP**](docs/AccountsmtpstatApi.md#sMTPStatRouterGetAllAggregateSubAccountSMTPStatsForIP) | **GET** /account/smtp/stat/subaccount/{sid}/ip/{ipid}/aggregate | 
 *SendPostApi.AccountstatApi* | [**accountStatRouterGetAllAccountStats**](docs/AccountstatApi.md#accountStatRouterGetAllAccountStats) | **GET** /account/stat/ | 
 *SendPostApi.AccountstatApi* | [**accountStatRouterGetAllAccountStatsByGroup**](docs/AccountstatApi.md#accountStatRouterGetAllAccountStatsByGroup) | **GET** /account/stat/group | 
 *SendPostApi.AccountstatApi* | [**accountStatRouterGetAllAggregateAccountStats**](docs/AccountstatApi.md#accountStatRouterGetAllAggregateAccountStats) | **GET** /account/stat/aggregate | 
@@ -240,6 +246,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsReplyTo](docs/ModelsReplyTo.md)
  - [SendPostApi.ModelsRoutingStrategy](docs/ModelsRoutingStrategy.md)
  - [SendPostApi.ModelsSIPStat](docs/ModelsSIPStat.md)
+ - [SendPostApi.ModelsSMTPStat](docs/ModelsSMTPStat.md)
  - [SendPostApi.ModelsSender](docs/ModelsSender.md)
  - [SendPostApi.ModelsStat](docs/ModelsStat.md)
  - [SendPostApi.ModelsSubAccount](docs/ModelsSubAccount.md)
