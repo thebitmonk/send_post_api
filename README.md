@@ -122,6 +122,12 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountipApi* | [**iPRouterGet**](docs/AccountipApi.md#iPRouterGet) | **GET** /account/ip/{ipid} | 
 *SendPostApi.AccountipApi* | [**iPRouterGetAll**](docs/AccountipApi.md#iPRouterGetAll) | **GET** /account/ip/ | 
 *SendPostApi.AccountipApi* | [**iPRouterUpdate**](docs/AccountipApi.md#iPRouterUpdate) | **PUT** /account/ip/{ipid} | 
+*SendPostApi.AccountippoolApi* | [**accountIPPoolRouterCount**](docs/AccountippoolApi.md#accountIPPoolRouterCount) | **GET** /account/ippool/count | 
+*SendPostApi.AccountippoolApi* | [**accountIPPoolRouterCreate**](docs/AccountippoolApi.md#accountIPPoolRouterCreate) | **POST** /account/ippool/ | 
+*SendPostApi.AccountippoolApi* | [**accountIPPoolRouterDelete**](docs/AccountippoolApi.md#accountIPPoolRouterDelete) | **DELETE** /account/ippool/{ippoolid} | 
+*SendPostApi.AccountippoolApi* | [**accountIPPoolRouterGet**](docs/AccountippoolApi.md#accountIPPoolRouterGet) | **GET** /account/ippool/{ippoolid} | 
+*SendPostApi.AccountippoolApi* | [**accountIPPoolRouterGetAll**](docs/AccountippoolApi.md#accountIPPoolRouterGetAll) | **GET** /account/ippool/ | 
+*SendPostApi.AccountippoolApi* | [**accountIPPoolRouterUpdate**](docs/AccountippoolApi.md#accountIPPoolRouterUpdate) | **PUT** /account/ippool/{ippoolid} | 
 *SendPostApi.AccountipstatApi* | [**iPStatRouterGetAllAggregateIPStats**](docs/AccountipstatApi.md#iPStatRouterGetAllAggregateIPStats) | **GET** /account/ip/stat/{ipid}/aggregate | 
 *SendPostApi.AccountipstatApi* | [**iPStatRouterGetAllAggregateIPStatsByGroup**](docs/AccountipstatApi.md#iPStatRouterGetAllAggregateIPStatsByGroup) | **GET** /account/ip/stat/{ipid}/aggregate/provider | 
 *SendPostApi.AccountipstatApi* | [**iPStatRouterGetAllAggregatedProviderStatsForAIP**](docs/AccountipstatApi.md#iPStatRouterGetAllAggregatedProviderStatsForAIP) | **GET** /account/ip/stat/{ipid}/aggregate/providers | 
@@ -145,6 +151,12 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterGet**](docs/AccountsubaccountApi.md#subAccountRouterGet) | **GET** /account/subaccount/{subAccountId} | 
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterGetAll**](docs/AccountsubaccountApi.md#subAccountRouterGetAll) | **GET** /account/subaccount/ | 
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterUpdate**](docs/AccountsubaccountApi.md#subAccountRouterUpdate) | **PUT** /account/subaccount/{subAccountId} | 
+*SendPostApi.AccountwebhookApi* | [**accountWebhookRouterCount**](docs/AccountwebhookApi.md#accountWebhookRouterCount) | **GET** /account/webhook/count | 
+*SendPostApi.AccountwebhookApi* | [**accountWebhookRouterCreate**](docs/AccountwebhookApi.md#accountWebhookRouterCreate) | **POST** /account/webhook/ | 
+*SendPostApi.AccountwebhookApi* | [**accountWebhookRouterDelete**](docs/AccountwebhookApi.md#accountWebhookRouterDelete) | **DELETE** /account/webhook/{webhookId} | 
+*SendPostApi.AccountwebhookApi* | [**accountWebhookRouterGet**](docs/AccountwebhookApi.md#accountWebhookRouterGet) | **GET** /account/webhook/{webhookId} | 
+*SendPostApi.AccountwebhookApi* | [**accountWebhookRouterGetAll**](docs/AccountwebhookApi.md#accountWebhookRouterGetAll) | **GET** /account/webhook/ | 
+*SendPostApi.AccountwebhookApi* | [**accountWebhookRouterUpdate**](docs/AccountwebhookApi.md#accountWebhookRouterUpdate) | **PUT** /account/webhook/{webhookId} | 
 *SendPostApi.AuthApi* | [**authRouterCreate**](docs/AuthApi.md#authRouterCreate) | **POST** /auth/create | 
 *SendPostApi.AuthApi* | [**authRouterGetAuthInfo**](docs/AuthApi.md#authRouterGetAuthInfo) | **POST** /auth/info | 
 *SendPostApi.ClusterApi* | [**clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster**](docs/ClusterApi.md#clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster) | **POST** /cluster/suppression/filter | 
@@ -210,6 +222,8 @@ Class | Method | HTTP request | Description
 
  - [SendPostApi.ModelsAIPStat](docs/ModelsAIPStat.md)
  - [SendPostApi.ModelsAccount](docs/ModelsAccount.md)
+ - [SendPostApi.ModelsAccountIPPool](docs/ModelsAccountIPPool.md)
+ - [SendPostApi.ModelsAccountWebhook](docs/ModelsAccountWebhook.md)
  - [SendPostApi.ModelsAuthInfo](docs/ModelsAuthInfo.md)
  - [SendPostApi.ModelsCity](docs/ModelsCity.md)
  - [SendPostApi.ModelsCountStat](docs/ModelsCountStat.md)
