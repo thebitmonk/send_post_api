@@ -40,9 +40,9 @@
         it('should call accountWebhookRouterCount successfully', function(done) {
           // TODO: uncomment, update parameter values for accountWebhookRouterCount call and complete the assertions
           /*
-          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var xAccountApiKey = "xAccountApiKey_example";
 
-          instance.accountWebhookRouterCount(xSubAccountApiKey, function(error, data, response) {
+          instance.accountWebhookRouterCount(xAccountApiKey, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -63,7 +63,7 @@
         it('should call accountWebhookRouterCreate successfully', function(done) {
           // TODO: uncomment, update parameter values for accountWebhookRouterCreate call and complete the assertions
           /*
-          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var xAccountApiKey = "xAccountApiKey_example";
           var body = new SendPostApi.ModelsEWebhook();
           body.clicked = false;
           body.delivered = false;
@@ -77,7 +77,7 @@
           body.unsubscribed = false;
           body.url = "";
 
-          instance.accountWebhookRouterCreate(xSubAccountApiKey, body, function(error, data, response) {
+          instance.accountWebhookRouterCreate(xAccountApiKey, body, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -122,10 +122,10 @@
         it('should call accountWebhookRouterDelete successfully', function(done) {
           // TODO: uncomment, update parameter values for accountWebhookRouterDelete call and complete the assertions
           /*
-          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var xAccountApiKey = "xAccountApiKey_example";
           var webhookId = 789;
 
-          instance.accountWebhookRouterDelete(xSubAccountApiKey, webhookId, function(error, data, response) {
+          instance.accountWebhookRouterDelete(xAccountApiKey, webhookId, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -148,10 +148,10 @@
         it('should call accountWebhookRouterGet successfully', function(done) {
           // TODO: uncomment, update parameter values for accountWebhookRouterGet call and complete the assertions
           /*
-          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var xAccountApiKey = "xAccountApiKey_example";
           var webhookId = 789;
 
-          instance.accountWebhookRouterGet(xSubAccountApiKey, webhookId, function(error, data, response) {
+          instance.accountWebhookRouterGet(xAccountApiKey, webhookId, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -196,13 +196,13 @@
         it('should call accountWebhookRouterGetAll successfully', function(done) {
           // TODO: uncomment, update parameter values for accountWebhookRouterGetAll call and complete the assertions
           /*
-          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var xAccountApiKey = "xAccountApiKey_example";
           var opts = {};
           opts.offset = 789;
           opts.limit = 789;
           opts.search = "search_example";
 
-          instance.accountWebhookRouterGetAll(xSubAccountApiKey, opts, function(error, data, response) {
+          instance.accountWebhookRouterGetAll(xAccountApiKey, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -253,7 +253,7 @@
         it('should call accountWebhookRouterUpdate successfully', function(done) {
           // TODO: uncomment, update parameter values for accountWebhookRouterUpdate call and complete the assertions
           /*
-          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var xAccountApiKey = "xAccountApiKey_example";
           var webhookId = 789;
           var body = new SendPostApi.ModelsEWebhook();
           body.clicked = false;
@@ -268,7 +268,7 @@
           body.unsubscribed = false;
           body.url = "";
 
-          instance.accountWebhookRouterUpdate(xSubAccountApiKey, webhookId, body, function(error, data, response) {
+          instance.accountWebhookRouterUpdate(xAccountApiKey, webhookId, body, function(error, data, response) {
             if (error) {
               done(error);
               return;

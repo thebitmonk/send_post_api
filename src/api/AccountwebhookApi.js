@@ -58,16 +58,16 @@
 
     /**
      * Count Total AccountWebhooks
-     * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountwebhookApi~accountWebhookRouterCountCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsCountStat}
      */
-    this.accountWebhookRouterCount = function(xSubAccountApiKey, callback) {
+    this.accountWebhookRouterCount = function(xAccountApiKey, callback) {
       var postBody = null;
 
-      // verify the required parameter 'xSubAccountApiKey' is set
-      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling accountWebhookRouterCount");
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling accountWebhookRouterCount");
       }
 
 
@@ -78,7 +78,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
-        'X-SubAccount-ApiKey': xSubAccountApiKey
+        'X-Account-ApiKey': xAccountApiKey
       };
       var formParams = {
       };
@@ -105,17 +105,17 @@
 
     /**
      * Create AccountWebhook
-     * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {String} xAccountApiKey Account API Key
      * @param {module:model/ModelsEWebhook} body The AccountWebhook content
      * @param {module:api/AccountwebhookApi~accountWebhookRouterCreateCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsAccountWebhook}
      */
-    this.accountWebhookRouterCreate = function(xSubAccountApiKey, body, callback) {
+    this.accountWebhookRouterCreate = function(xAccountApiKey, body, callback) {
       var postBody = body;
 
-      // verify the required parameter 'xSubAccountApiKey' is set
-      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling accountWebhookRouterCreate");
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling accountWebhookRouterCreate");
       }
 
       // verify the required parameter 'body' is set
@@ -131,7 +131,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
-        'X-SubAccount-ApiKey': xSubAccountApiKey
+        'X-Account-ApiKey': xAccountApiKey
       };
       var formParams = {
       };
@@ -158,17 +158,17 @@
 
     /**
      * Delete AccountWebhook
-     * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {String} xAccountApiKey Account API Key
      * @param {Number} webhookId The AccountWebhookId you want to delete
      * @param {module:api/AccountwebhookApi~accountWebhookRouterDeleteCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsDeleteResponse}
      */
-    this.accountWebhookRouterDelete = function(xSubAccountApiKey, webhookId, callback) {
+    this.accountWebhookRouterDelete = function(xAccountApiKey, webhookId, callback) {
       var postBody = null;
 
-      // verify the required parameter 'xSubAccountApiKey' is set
-      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling accountWebhookRouterDelete");
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling accountWebhookRouterDelete");
       }
 
       // verify the required parameter 'webhookId' is set
@@ -185,7 +185,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
-        'X-SubAccount-ApiKey': xSubAccountApiKey
+        'X-Account-ApiKey': xAccountApiKey
       };
       var formParams = {
       };
@@ -212,17 +212,17 @@
 
     /**
      * Find AccountWebhook by AccountWebhookId
-     * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {String} xAccountApiKey Account API Key
      * @param {Number} webhookId the AccountWebhookId you want to get
      * @param {module:api/AccountwebhookApi~accountWebhookRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsAccountWebhook}
      */
-    this.accountWebhookRouterGet = function(xSubAccountApiKey, webhookId, callback) {
+    this.accountWebhookRouterGet = function(xAccountApiKey, webhookId, callback) {
       var postBody = null;
 
-      // verify the required parameter 'xSubAccountApiKey' is set
-      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling accountWebhookRouterGet");
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling accountWebhookRouterGet");
       }
 
       // verify the required parameter 'webhookId' is set
@@ -239,7 +239,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
-        'X-SubAccount-ApiKey': xSubAccountApiKey
+        'X-Account-ApiKey': xAccountApiKey
       };
       var formParams = {
       };
@@ -266,7 +266,7 @@
 
     /**
      * Get All AccountWebhooks
-     * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
      * @param {Number} opts.limit limit
@@ -274,13 +274,13 @@
      * @param {module:api/AccountwebhookApi~accountWebhookRouterGetAllCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsAccountWebhook>}
      */
-    this.accountWebhookRouterGetAll = function(xSubAccountApiKey, opts, callback) {
+    this.accountWebhookRouterGetAll = function(xAccountApiKey, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'xSubAccountApiKey' is set
-      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling accountWebhookRouterGetAll");
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling accountWebhookRouterGetAll");
       }
 
 
@@ -294,7 +294,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
-        'X-SubAccount-ApiKey': xSubAccountApiKey
+        'X-Account-ApiKey': xAccountApiKey
       };
       var formParams = {
       };
@@ -321,18 +321,18 @@
 
     /**
      * Update AccountWebhook
-     * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {String} xAccountApiKey Account API Key
      * @param {Number} webhookId The AccountWebhookId you want to update
      * @param {module:model/ModelsEWebhook} body The body
      * @param {module:api/AccountwebhookApi~accountWebhookRouterUpdateCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsAccountWebhook}
      */
-    this.accountWebhookRouterUpdate = function(xSubAccountApiKey, webhookId, body, callback) {
+    this.accountWebhookRouterUpdate = function(xAccountApiKey, webhookId, body, callback) {
       var postBody = body;
 
-      // verify the required parameter 'xSubAccountApiKey' is set
-      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling accountWebhookRouterUpdate");
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling accountWebhookRouterUpdate");
       }
 
       // verify the required parameter 'webhookId' is set
@@ -354,7 +354,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
-        'X-SubAccount-ApiKey': xSubAccountApiKey
+        'X-Account-ApiKey': xAccountApiKey
       };
       var formParams = {
       };

@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsAIPStat', 'model/ModelsPIPStat', 'model/ModelsRStat', 'model/ModelsStat'], factory);
+    define(['ApiClient', 'model/ModelsAGStat', 'model/ModelsAIPStat', 'model/ModelsPIPStat', 'model/ModelsRStat', 'model/ModelsStat'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsAIPStat'), require('../model/ModelsPIPStat'), require('../model/ModelsRStat'), require('../model/ModelsStat'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsAGStat'), require('../model/ModelsAIPStat'), require('../model/ModelsPIPStat'), require('../model/ModelsRStat'), require('../model/ModelsStat'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.SubaccountstatApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsAIPStat, root.SendPostApi.ModelsPIPStat, root.SendPostApi.ModelsRStat, root.SendPostApi.ModelsStat);
+    root.SendPostApi.SubaccountstatApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsAGStat, root.SendPostApi.ModelsAIPStat, root.SendPostApi.ModelsPIPStat, root.SendPostApi.ModelsRStat, root.SendPostApi.ModelsStat);
   }
-}(this, function(ApiClient, ModelsAIPStat, ModelsPIPStat, ModelsRStat, ModelsStat) {
+}(this, function(ApiClient, ModelsAGStat, ModelsAIPStat, ModelsPIPStat, ModelsRStat, ModelsStat) {
   'use strict';
 
   /**
@@ -156,6 +156,59 @@
 
       return this.apiClient.callApi(
         '/subaccount/stat/aggregate/group', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount operation.
+     * @callback module:api/SubaccountstatApi~subAccountStatRouterGetAllAggregatedGroupStatsForASubAccountCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/ModelsAGStat>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get All Aggregated Group Stats for a Sub-Account
+     * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.from from date
+     * @param {String} opts.to to date
+     * @param {module:api/SubaccountstatApi~subAccountStatRouterGetAllAggregatedGroupStatsForASubAccountCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/ModelsAGStat>}
+     */
+    this.subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount = function(xSubAccountApiKey, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'xSubAccountApiKey' is set
+      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'from': opts['from'],
+        'to': opts['to'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-SubAccount-ApiKey': xSubAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = [ModelsAGStat];
+
+      return this.apiClient.callApi(
+        '/subaccount/stat/aggregate/groups', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

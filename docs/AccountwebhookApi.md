@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="accountWebhookRouterCount"></a>
 # **accountWebhookRouterCount**
-> ModelsCountStat accountWebhookRouterCount(xSubAccountApiKey)
+> ModelsCountStat accountWebhookRouterCount(xAccountApiKey)
 
 
 
@@ -26,7 +26,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.AccountwebhookApi();
 
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 
 var callback = function(error, data, response) {
@@ -36,14 +36,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.accountWebhookRouterCount(xSubAccountApiKey, callback);
+apiInstance.accountWebhookRouterCount(xAccountApiKey, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **xAccountApiKey** | **String**| Account API Key | 
 
 ### Return type
 
@@ -60,7 +60,7 @@ No authorization required
 
 <a name="accountWebhookRouterCreate"></a>
 # **accountWebhookRouterCreate**
-> ModelsAccountWebhook accountWebhookRouterCreate(xSubAccountApiKey, body)
+> ModelsAccountWebhook accountWebhookRouterCreate(xAccountApiKey, body)
 
 
 
@@ -72,7 +72,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.AccountwebhookApi();
 
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var body = new SendPostApi.ModelsEWebhook(); // ModelsEWebhook | The AccountWebhook content
 
@@ -84,14 +84,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.accountWebhookRouterCreate(xSubAccountApiKey, body, callback);
+apiInstance.accountWebhookRouterCreate(xAccountApiKey, body, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **xAccountApiKey** | **String**| Account API Key | 
  **body** | [**ModelsEWebhook**](ModelsEWebhook.md)| The AccountWebhook content | 
 
 ### Return type
@@ -109,7 +109,7 @@ No authorization required
 
 <a name="accountWebhookRouterDelete"></a>
 # **accountWebhookRouterDelete**
-> ModelsDeleteResponse accountWebhookRouterDelete(xSubAccountApiKey, webhookId)
+> ModelsDeleteResponse accountWebhookRouterDelete(xAccountApiKey, webhookId)
 
 
 
@@ -121,7 +121,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.AccountwebhookApi();
 
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var webhookId = 789; // Number | The AccountWebhookId you want to delete
 
@@ -133,14 +133,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.accountWebhookRouterDelete(xSubAccountApiKey, webhookId, callback);
+apiInstance.accountWebhookRouterDelete(xAccountApiKey, webhookId, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **xAccountApiKey** | **String**| Account API Key | 
  **webhookId** | **Number**| The AccountWebhookId you want to delete | 
 
 ### Return type
@@ -158,7 +158,7 @@ No authorization required
 
 <a name="accountWebhookRouterGet"></a>
 # **accountWebhookRouterGet**
-> ModelsAccountWebhook accountWebhookRouterGet(xSubAccountApiKey, webhookId)
+> ModelsAccountWebhook accountWebhookRouterGet(xAccountApiKey, webhookId)
 
 
 
@@ -170,7 +170,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.AccountwebhookApi();
 
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var webhookId = 789; // Number | the AccountWebhookId you want to get
 
@@ -182,14 +182,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.accountWebhookRouterGet(xSubAccountApiKey, webhookId, callback);
+apiInstance.accountWebhookRouterGet(xAccountApiKey, webhookId, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **xAccountApiKey** | **String**| Account API Key | 
  **webhookId** | **Number**| the AccountWebhookId you want to get | 
 
 ### Return type
@@ -207,7 +207,7 @@ No authorization required
 
 <a name="accountWebhookRouterGetAll"></a>
 # **accountWebhookRouterGetAll**
-> [ModelsAccountWebhook] accountWebhookRouterGetAll(xSubAccountApiKey, opts)
+> [ModelsAccountWebhook] accountWebhookRouterGetAll(xAccountApiKey, opts)
 
 
 
@@ -219,7 +219,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.AccountwebhookApi();
 
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var opts = { 
   'offset': 789, // Number | offset
@@ -234,14 +234,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.accountWebhookRouterGetAll(xSubAccountApiKey, opts, callback);
+apiInstance.accountWebhookRouterGetAll(xAccountApiKey, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **xAccountApiKey** | **String**| Account API Key | 
  **offset** | **Number**| offset | [optional] 
  **limit** | **Number**| limit | [optional] 
  **search** | **String**| search | [optional] 
@@ -261,7 +261,7 @@ No authorization required
 
 <a name="accountWebhookRouterUpdate"></a>
 # **accountWebhookRouterUpdate**
-> ModelsAccountWebhook accountWebhookRouterUpdate(xSubAccountApiKey, webhookId, body)
+> ModelsAccountWebhook accountWebhookRouterUpdate(xAccountApiKey, webhookId, body)
 
 
 
@@ -273,7 +273,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.AccountwebhookApi();
 
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var webhookId = 789; // Number | The AccountWebhookId you want to update
 
@@ -287,14 +287,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.accountWebhookRouterUpdate(xSubAccountApiKey, webhookId, body, callback);
+apiInstance.accountWebhookRouterUpdate(xAccountApiKey, webhookId, body, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **xAccountApiKey** | **String**| Account API Key | 
  **webhookId** | **Number**| The AccountWebhookId you want to update | 
  **body** | [**ModelsEWebhook**](ModelsEWebhook.md)| The body | 
 
