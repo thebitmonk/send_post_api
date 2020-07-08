@@ -138,6 +138,29 @@
           done();
         });
       });
+      describe('iPRouterCount', function() {
+        it('should call iPRouterCount successfully', function(done) {
+          // TODO: uncomment, update parameter values for iPRouterCount call and complete the assertions
+          /*
+          var xAccountApiKey = "xAccountApiKey_example";
+
+          instance.iPRouterCount(xAccountApiKey, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelsCountStat);
+            expect(data.count).to.be.a('number');
+            expect(data.count).to.be("0");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('iPRouterDelete', function() {
         it('should call iPRouterDelete successfully', function(done) {
           // TODO: uncomment, update parameter values for iPRouterDelete call and complete the assertions

@@ -26,7 +26,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.AccountippoolApi();
 
-var xAccountApiKey = "xAccountApiKey_example"; // String | Sub-Account API Key
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 
 var callback = function(error, data, response) {
@@ -43,7 +43,7 @@ apiInstance.accountIPPoolRouterCount(xAccountApiKey, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Sub-Account API Key | 
+ **xAccountApiKey** | **String**| Account API Key | 
 
 ### Return type
 
@@ -72,7 +72,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.AccountippoolApi();
 
-var xAccountApiKey = "xAccountApiKey_example"; // String | Sub-Account API Key
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var body = new SendPostApi.ModelsEIPPool(); // ModelsEIPPool | The AccountIPPool content
 
@@ -91,7 +91,7 @@ apiInstance.accountIPPoolRouterCreate(xAccountApiKey, body, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Sub-Account API Key | 
+ **xAccountApiKey** | **String**| Account API Key | 
  **body** | [**ModelsEIPPool**](ModelsEIPPool.md)| The AccountIPPool content | 
 
 ### Return type
@@ -121,7 +121,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.AccountippoolApi();
 
-var xAccountApiKey = "xAccountApiKey_example"; // String | Sub-Account API Key
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var ippoolid = 789; // Number | The AccountIPPoolId you want to delete
 
@@ -140,7 +140,7 @@ apiInstance.accountIPPoolRouterDelete(xAccountApiKey, ippoolid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Sub-Account API Key | 
+ **xAccountApiKey** | **String**| Account API Key | 
  **ippoolid** | **Number**| The AccountIPPoolId you want to delete | 
 
 ### Return type
@@ -170,7 +170,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.AccountippoolApi();
 
-var xAccountApiKey = "xAccountApiKey_example"; // String | Sub-Account API Key
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var ippoolid = 789; // Number | the AccountIPPoolId you want to get
 
@@ -189,7 +189,7 @@ apiInstance.accountIPPoolRouterGet(xAccountApiKey, ippoolid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Sub-Account API Key | 
+ **xAccountApiKey** | **String**| Account API Key | 
  **ippoolid** | **Number**| the AccountIPPoolId you want to get | 
 
 ### Return type
@@ -219,7 +219,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.AccountippoolApi();
 
-var xAccountApiKey = "xAccountApiKey_example"; // String | Sub-Account API Key
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var opts = { 
   'offset': 789, // Number | offset
@@ -241,7 +241,7 @@ apiInstance.accountIPPoolRouterGetAll(xAccountApiKey, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Sub-Account API Key | 
+ **xAccountApiKey** | **String**| Account API Key | 
  **offset** | **Number**| offset | [optional] 
  **limit** | **Number**| limit | [optional] 
  **search** | **String**| search term | [optional] 
@@ -273,7 +273,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.AccountippoolApi();
 
-var xAccountApiKey = "xAccountApiKey_example"; // String | Sub-Account API Key
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var ippoolid = 789; // Number | The AccountIPPoolId you want to update
 
@@ -294,7 +294,7 @@ apiInstance.accountIPPoolRouterUpdate(xAccountApiKey, ippoolid, body, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Sub-Account API Key | 
+ **xAccountApiKey** | **String**| Account API Key | 
  **ippoolid** | **Number**| The AccountIPPoolId you want to update | 
  **body** | [**ModelsEIPPool**](ModelsEIPPool.md)| The body | 
 

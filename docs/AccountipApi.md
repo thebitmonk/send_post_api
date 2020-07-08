@@ -5,6 +5,7 @@ All URIs are relative to *http://127.0.0.1:8080/api/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**iPRouterAllocateIP**](AccountipApi.md#iPRouterAllocateIP) | **POST** /account/ip/allocate | 
+[**iPRouterCount**](AccountipApi.md#iPRouterCount) | **GET** /account/ip/count | 
 [**iPRouterDelete**](AccountipApi.md#iPRouterDelete) | **DELETE** /account/ip/{ipid} | 
 [**iPRouterGet**](AccountipApi.md#iPRouterGet) | **GET** /account/ip/{ipid} | 
 [**iPRouterGetAll**](AccountipApi.md#iPRouterGetAll) | **GET** /account/ip/ | 
@@ -47,6 +48,52 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[ModelsIP]**](ModelsIP.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="iPRouterCount"></a>
+# **iPRouterCount**
+> ModelsCountStat iPRouterCount(xAccountApiKey)
+
+
+
+Count Total AccountIPs
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccountipApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Sub-Account API Key
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.iPRouterCount(xAccountApiKey, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xAccountApiKey** | **String**| Sub-Account API Key | 
+
+### Return type
+
+[**ModelsCountStat**](ModelsCountStat.md)
 
 ### Authorization
 
