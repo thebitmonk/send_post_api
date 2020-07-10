@@ -72,7 +72,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.AccountipApi();
 
-var xAccountApiKey = "xAccountApiKey_example"; // String | Sub-Account API Key
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 
 var callback = function(error, data, response) {
@@ -89,7 +89,7 @@ apiInstance.iPRouterCount(xAccountApiKey, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Sub-Account API Key | 
+ **xAccountApiKey** | **String**| Account API Key | 
 
 ### Return type
 
@@ -258,7 +258,7 @@ No authorization required
 
 <a name="iPRouterUpdate"></a>
 # **iPRouterUpdate**
-> ModelsIP iPRouterUpdate(xAccountApiKey, ipid)
+> ModelsIP iPRouterUpdate(xAccountApiKey, ipid, body)
 
 
 
@@ -272,7 +272,9 @@ var apiInstance = new SendPostApi.AccountipApi();
 
 var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
-var ipid = 789; // Number | The IPId you want to delete
+var ipid = 789; // Number | The IP you want to update
+
+var body = new SendPostApi.ModelsIIP(); // ModelsIIP | The IP Email Provider Settings
 
 
 var callback = function(error, data, response) {
@@ -282,7 +284,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.iPRouterUpdate(xAccountApiKey, ipid, callback);
+apiInstance.iPRouterUpdate(xAccountApiKey, ipid, body, callback);
 ```
 
 ### Parameters
@@ -290,7 +292,8 @@ apiInstance.iPRouterUpdate(xAccountApiKey, ipid, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
- **ipid** | **Number**| The IPId you want to delete | 
+ **ipid** | **Number**| The IP you want to update | 
+ **body** | [**ModelsIIP**](ModelsIIP.md)| The IP Email Provider Settings | 
 
 ### Return type
 

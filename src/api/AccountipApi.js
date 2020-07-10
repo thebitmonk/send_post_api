@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsIP'], factory);
+    define(['ApiClient', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsIIP', 'model/ModelsIP'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsIP'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsIIP'), require('../model/ModelsIP'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.AccountipApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsIP);
+    root.SendPostApi.AccountipApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsIIP, root.SendPostApi.ModelsIP);
   }
-}(this, function(ApiClient, ModelsCountStat, ModelsDeleteResponse, ModelsIP) {
+}(this, function(ApiClient, ModelsCountStat, ModelsDeleteResponse, ModelsIIP, ModelsIP) {
   'use strict';
 
   /**
@@ -105,7 +105,7 @@
 
     /**
      * Count Total AccountIPs
-     * @param {String} xAccountApiKey Sub-Account API Key
+     * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountipApi~iPRouterCountCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsCountStat}
      */
@@ -316,12 +316,13 @@
     /**
      * Update an IP
      * @param {String} xAccountApiKey Account API Key
-     * @param {Number} ipid The IPId you want to delete
+     * @param {Number} ipid The IP you want to update
+     * @param {module:model/ModelsIIP} body The IP Email Provider Settings
      * @param {module:api/AccountipApi~iPRouterUpdateCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsIP}
      */
-    this.iPRouterUpdate = function(xAccountApiKey, ipid, callback) {
-      var postBody = null;
+    this.iPRouterUpdate = function(xAccountApiKey, ipid, body, callback) {
+      var postBody = body;
 
       // verify the required parameter 'xAccountApiKey' is set
       if (xAccountApiKey === undefined || xAccountApiKey === null) {
@@ -331,6 +332,11 @@
       // verify the required parameter 'ipid' is set
       if (ipid === undefined || ipid === null) {
         throw new Error("Missing the required parameter 'ipid' when calling iPRouterUpdate");
+      }
+
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling iPRouterUpdate");
       }
 
 
