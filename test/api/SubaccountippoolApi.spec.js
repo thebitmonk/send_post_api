@@ -68,7 +68,8 @@
           body.ips = [new SendPostApi.ModelsEIP()];
           body.ips[0].publicIP = "";
           body.name = "";
-          body.overflowPool = false;
+          body.routingMapping = ;
+          body.routingStrategy = "0";
 
           instance.iPPoolRouterCreate(xSubAccountApiKey, body, function(error, data, response) {
             if (error) {
@@ -168,8 +169,6 @@
             }
             expect(data.name).to.be.a('string');
             expect(data.name).to.be("");
-            expect(data.overflowPool).to.be.a('boolean');
-            expect(data.overflowPool).to.be(false);
             expect(data.type).to.be.a(SendPostApi.ModelsIPPoolType);
     
             done();
@@ -310,8 +309,6 @@
             }
             expect(data.name).to.be.a('string');
             expect(data.name).to.be("");
-            expect(data.overflowPool).to.be.a('boolean');
-            expect(data.overflowPool).to.be(false);
             expect(data.type).to.be.a(SendPostApi.ModelsIPPoolType);
     
             done();
@@ -434,8 +431,6 @@
               }
               expect(data.name).to.be.a('string');
               expect(data.name).to.be("");
-              expect(data.overflowPool).to.be.a('boolean');
-              expect(data.overflowPool).to.be(false);
               expect(data.type).to.be.a(SendPostApi.ModelsIPPoolType);
       
             }
@@ -457,7 +452,8 @@
           body.ips = [new SendPostApi.ModelsEIP()];
           body.ips[0].publicIP = "";
           body.name = "";
-          body.overflowPool = false;
+          body.routingMapping = ;
+          body.routingStrategy = "0";
 
           instance.iPPoolRouterUpdate(xSubAccountApiKey, ippoolid, body, function(error, data, response) {
             if (error) {
@@ -557,8 +553,6 @@
             }
             expect(data.name).to.be.a('string');
             expect(data.name).to.be("");
-            expect(data.overflowPool).to.be.a('boolean');
-            expect(data.overflowPool).to.be(false);
             expect(data.type).to.be.a(SendPostApi.ModelsIPPoolType);
     
             done();

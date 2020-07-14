@@ -7,7 +7,6 @@ Name | Type | Description | Notes
 **id** | **Number** |  | [optional] 
 **ips** | [**[ModelsIP]**](ModelsIP.md) |  | [optional] 
 **name** | **String** |  | [optional] 
-**overflowPool** | **Boolean** |  | [optional] 
 **type** | [**ModelsIPPoolType**](ModelsIPPoolType.md) |  | [optional] 
 
 

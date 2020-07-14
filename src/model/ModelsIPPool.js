@@ -63,8 +63,6 @@
         obj.ips = ApiClient.convertToType(data['ips'], [ModelsIP]);
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
-      if (data.hasOwnProperty('overflowPool'))
-        obj.overflowPool = ApiClient.convertToType(data['overflowPool'], 'Boolean');
       if (data.hasOwnProperty('type'))
         obj.type = ModelsIPPoolType.constructFromObject(data['type']);
     }
@@ -90,11 +88,6 @@
    * @member {String} name
    */
   exports.prototype.name = undefined;
-
-  /**
-   * @member {Boolean} overflowPool
-   */
-  exports.prototype.overflowPool = undefined;
 
   /**
    * @member {module:model/ModelsIPPoolType} type

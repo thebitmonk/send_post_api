@@ -65,12 +65,6 @@
         // expect(instance.name).to.be(expectedValueLiteral);
       });
 
-      it('should have the property overflowPool (base name: "overflowPool")', function() {
-        // TODO: update the code to test the property overflowPool
-        expect(instance).to.have.property('overflowPool');
-        // expect(instance.overflowPool).to.be(expectedValueLiteral);
-      });
-
       it('should have the property type (base name: "type")', function() {
         // TODO: update the code to test the property type
         expect(instance).to.have.property('type');

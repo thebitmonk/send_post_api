@@ -59,8 +59,10 @@
         obj.ips = ApiClient.convertToType(data['ips'], [ModelsEIP]);
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
-      if (data.hasOwnProperty('overflowPool'))
-        obj.overflowPool = ApiClient.convertToType(data['overflowPool'], 'Boolean');
+      if (data.hasOwnProperty('routingMapping'))
+        obj.routingMapping = ApiClient.convertToType(data['routingMapping'], Object);
+      if (data.hasOwnProperty('routingStrategy'))
+        obj.routingStrategy = ApiClient.convertToType(data['routingStrategy'], 'Number');
     }
     return obj;
   }
@@ -76,9 +78,14 @@
   exports.prototype.name = undefined;
 
   /**
-   * @member {Boolean} overflowPool
+   * @member {Object} routingMapping
    */
-  exports.prototype.overflowPool = undefined;
+  exports.prototype.routingMapping = undefined;
+
+  /**
+   * @member {Number} routingStrategy
+   */
+  exports.prototype.routingStrategy = undefined;
 
   return exports;
 

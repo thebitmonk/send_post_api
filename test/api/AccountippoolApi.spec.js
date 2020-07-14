@@ -68,7 +68,8 @@
           body.ips = [new SendPostApi.ModelsEIP()];
           body.ips[0].publicIP = "";
           body.name = "";
-          body.overflowPool = false;
+          body.routingMapping = ;
+          body.routingStrategy = "0";
 
           instance.accountIPPoolRouterCreate(xAccountApiKey, body, function(error, data, response) {
             if (error) {
@@ -457,7 +458,8 @@
           body.ips = [new SendPostApi.ModelsEIP()];
           body.ips[0].publicIP = "";
           body.name = "";
-          body.overflowPool = false;
+          body.routingMapping = ;
+          body.routingStrategy = "0";
 
           instance.accountIPPoolRouterUpdate(xAccountApiKey, ippoolid, body, function(error, data, response) {
             if (error) {

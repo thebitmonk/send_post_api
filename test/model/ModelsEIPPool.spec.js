@@ -53,10 +53,16 @@
         // expect(instance.name).to.be(expectedValueLiteral);
       });
 
-      it('should have the property overflowPool (base name: "overflowPool")', function() {
-        // TODO: update the code to test the property overflowPool
-        expect(instance).to.have.property('overflowPool');
-        // expect(instance.overflowPool).to.be(expectedValueLiteral);
+      it('should have the property routingMapping (base name: "routingMapping")', function() {
+        // TODO: update the code to test the property routingMapping
+        expect(instance).to.have.property('routingMapping');
+        // expect(instance.routingMapping).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property routingStrategy (base name: "routingStrategy")', function() {
+        // TODO: update the code to test the property routingStrategy
+        expect(instance).to.have.property('routingStrategy');
+        // expect(instance.routingStrategy).to.be(expectedValueLiteral);
       });
 
     });
