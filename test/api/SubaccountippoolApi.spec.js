@@ -169,7 +169,10 @@
             }
             expect(data.name).to.be.a('string');
             expect(data.name).to.be("");
-            expect(data.type).to.be.a(SendPostApi.ModelsIPPoolType);
+            expect(data.routingMetaData).to.be.a('string');
+            expect(data.routingMetaData).to.be("");
+            expect(data.routingStrategy).to.be.a(SendPostApi.ModelsRoutingStrategy);
+                expect(data.type).to.be.a(SendPostApi.ModelsIPPoolType);
     
             done();
           });
@@ -309,7 +312,10 @@
             }
             expect(data.name).to.be.a('string');
             expect(data.name).to.be("");
-            expect(data.type).to.be.a(SendPostApi.ModelsIPPoolType);
+            expect(data.routingMetaData).to.be.a('string');
+            expect(data.routingMetaData).to.be("");
+            expect(data.routingStrategy).to.be.a(SendPostApi.ModelsRoutingStrategy);
+                expect(data.type).to.be.a(SendPostApi.ModelsIPPoolType);
     
             done();
           });
@@ -431,7 +437,10 @@
               }
               expect(data.name).to.be.a('string');
               expect(data.name).to.be("");
-              expect(data.type).to.be.a(SendPostApi.ModelsIPPoolType);
+              expect(data.routingMetaData).to.be.a('string');
+              expect(data.routingMetaData).to.be("");
+              expect(data.routingStrategy).to.be.a(SendPostApi.ModelsRoutingStrategy);
+                  expect(data.type).to.be.a(SendPostApi.ModelsIPPoolType);
       
             }
 
@@ -553,7 +562,10 @@
             }
             expect(data.name).to.be.a('string');
             expect(data.name).to.be("");
-            expect(data.type).to.be.a(SendPostApi.ModelsIPPoolType);
+            expect(data.routingMetaData).to.be.a('string');
+            expect(data.routingMetaData).to.be("");
+            expect(data.routingStrategy).to.be.a(SendPostApi.ModelsRoutingStrategy);
+                expect(data.type).to.be.a(SendPostApi.ModelsIPPoolType);
     
             done();
           });

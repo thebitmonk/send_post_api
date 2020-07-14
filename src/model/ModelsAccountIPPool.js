@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsIP', 'model/ModelsIPPoolType'], factory);
+    define(['ApiClient', 'model/ModelsIP', 'model/ModelsIPPoolType', 'model/ModelsRoutingStrategy'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ModelsIP'), require('./ModelsIPPoolType'));
+    module.exports = factory(require('../ApiClient'), require('./ModelsIP'), require('./ModelsIPPoolType'), require('./ModelsRoutingStrategy'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsAccountIPPool = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsIP, root.SendPostApi.ModelsIPPoolType);
+    root.SendPostApi.ModelsAccountIPPool = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsIP, root.SendPostApi.ModelsIPPoolType, root.SendPostApi.ModelsRoutingStrategy);
   }
-}(this, function(ApiClient, ModelsIP, ModelsIPPoolType) {
+}(this, function(ApiClient, ModelsIP, ModelsIPPoolType, ModelsRoutingStrategy) {
   'use strict';
 
   /**
@@ -63,8 +63,10 @@
         obj.ips = ApiClient.convertToType(data['ips'], [ModelsIP]);
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
-      if (data.hasOwnProperty('overflowPool'))
-        obj.overflowPool = ApiClient.convertToType(data['overflowPool'], 'Boolean');
+      if (data.hasOwnProperty('routingMetaData'))
+        obj.routingMetaData = ApiClient.convertToType(data['routingMetaData'], 'String');
+      if (data.hasOwnProperty('routingStrategy'))
+        obj.routingStrategy = ModelsRoutingStrategy.constructFromObject(data['routingStrategy']);
       if (data.hasOwnProperty('type'))
         obj.type = ModelsIPPoolType.constructFromObject(data['type']);
     }
@@ -92,9 +94,14 @@
   exports.prototype.name = undefined;
 
   /**
-   * @member {Boolean} overflowPool
+   * @member {String} routingMetaData
    */
-  exports.prototype.overflowPool = undefined;
+  exports.prototype.routingMetaData = undefined;
+
+  /**
+   * @member {module:model/ModelsRoutingStrategy} routingStrategy
+   */
+  exports.prototype.routingStrategy = undefined;
 
   /**
    * @member {module:model/ModelsIPPoolType} type

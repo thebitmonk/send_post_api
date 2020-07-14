@@ -65,6 +65,18 @@
         // expect(instance.name).to.be(expectedValueLiteral);
       });
 
+      it('should have the property routingMetaData (base name: "routingMetaData")', function() {
+        // TODO: update the code to test the property routingMetaData
+        expect(instance).to.have.property('routingMetaData');
+        // expect(instance.routingMetaData).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property routingStrategy (base name: "routingStrategy")', function() {
+        // TODO: update the code to test the property routingStrategy
+        expect(instance).to.have.property('routingStrategy');
+        // expect(instance.routingStrategy).to.be(expectedValueLiteral);
+      });
+
       it('should have the property type (base name: "type")', function() {
         // TODO: update the code to test the property type
         expect(instance).to.have.property('type');
