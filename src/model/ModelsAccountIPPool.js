@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsIP', 'model/ModelsIPPoolType', 'model/ModelsRoutingStrategy'], factory);
+    define(['ApiClient', 'model/ModelsIP', 'model/ModelsIPPoolType'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ModelsIP'), require('./ModelsIPPoolType'), require('./ModelsRoutingStrategy'));
+    module.exports = factory(require('../ApiClient'), require('./ModelsIP'), require('./ModelsIPPoolType'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsAccountIPPool = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsIP, root.SendPostApi.ModelsIPPoolType, root.SendPostApi.ModelsRoutingStrategy);
+    root.SendPostApi.ModelsAccountIPPool = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsIP, root.SendPostApi.ModelsIPPoolType);
   }
-}(this, function(ApiClient, ModelsIP, ModelsIPPoolType, ModelsRoutingStrategy) {
+}(this, function(ApiClient, ModelsIP, ModelsIPPoolType) {
   'use strict';
 
   /**
@@ -66,7 +66,7 @@
       if (data.hasOwnProperty('routingMetaData'))
         obj.routingMetaData = ApiClient.convertToType(data['routingMetaData'], 'String');
       if (data.hasOwnProperty('routingStrategy'))
-        obj.routingStrategy = ModelsRoutingStrategy.constructFromObject(data['routingStrategy']);
+        obj.routingStrategy = ApiClient.convertToType(data['routingStrategy'], 'Number');
       if (data.hasOwnProperty('type'))
         obj.type = ModelsIPPoolType.constructFromObject(data['type']);
     }
@@ -99,7 +99,7 @@
   exports.prototype.routingMetaData = undefined;
 
   /**
-   * @member {module:model/ModelsRoutingStrategy} routingStrategy
+   * @member {Number} routingStrategy
    */
   exports.prototype.routingStrategy = undefined;
 

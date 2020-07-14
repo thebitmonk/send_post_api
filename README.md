@@ -265,7 +265,6 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsRStat](docs/ModelsRStat.md)
  - [SendPostApi.ModelsRSuppression](docs/ModelsRSuppression.md)
  - [SendPostApi.ModelsReplyTo](docs/ModelsReplyTo.md)
- - [SendPostApi.ModelsRoutingStrategy](docs/ModelsRoutingStrategy.md)
  - [SendPostApi.ModelsSIPStat](docs/ModelsSIPStat.md)
  - [SendPostApi.ModelsSMTPStat](docs/ModelsSMTPStat.md)
  - [SendPostApi.ModelsSender](docs/ModelsSender.md)

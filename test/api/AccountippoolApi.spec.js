@@ -171,8 +171,9 @@
             expect(data.name).to.be("");
             expect(data.routingMetaData).to.be.a('string');
             expect(data.routingMetaData).to.be("");
-            expect(data.routingStrategy).to.be.a(SendPostApi.ModelsRoutingStrategy);
-                expect(data.type).to.be.a(SendPostApi.ModelsIPPoolType);
+            expect(data.routingStrategy).to.be.a('number');
+            expect(data.routingStrategy).to.be("0");
+            expect(data.type).to.be.a(SendPostApi.ModelsIPPoolType);
     
             done();
           });
@@ -314,8 +315,9 @@
             expect(data.name).to.be("");
             expect(data.routingMetaData).to.be.a('string');
             expect(data.routingMetaData).to.be("");
-            expect(data.routingStrategy).to.be.a(SendPostApi.ModelsRoutingStrategy);
-                expect(data.type).to.be.a(SendPostApi.ModelsIPPoolType);
+            expect(data.routingStrategy).to.be.a('number');
+            expect(data.routingStrategy).to.be("0");
+            expect(data.type).to.be.a(SendPostApi.ModelsIPPoolType);
     
             done();
           });
@@ -439,8 +441,9 @@
               expect(data.name).to.be("");
               expect(data.routingMetaData).to.be.a('string');
               expect(data.routingMetaData).to.be("");
-              expect(data.routingStrategy).to.be.a(SendPostApi.ModelsRoutingStrategy);
-                  expect(data.type).to.be.a(SendPostApi.ModelsIPPoolType);
+              expect(data.routingStrategy).to.be.a('number');
+              expect(data.routingStrategy).to.be("0");
+              expect(data.type).to.be.a(SendPostApi.ModelsIPPoolType);
       
             }
 
@@ -564,8 +567,9 @@
             expect(data.name).to.be("");
             expect(data.routingMetaData).to.be.a('string');
             expect(data.routingMetaData).to.be("");
-            expect(data.routingStrategy).to.be.a(SendPostApi.ModelsRoutingStrategy);
-                expect(data.type).to.be.a(SendPostApi.ModelsIPPoolType);
+            expect(data.routingStrategy).to.be.a('number');
+            expect(data.routingStrategy).to.be("0");
+            expect(data.type).to.be.a(SendPostApi.ModelsIPPoolType);
     
             done();
           });

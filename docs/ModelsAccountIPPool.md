@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **ips** | [**[ModelsIP]**](ModelsIP.md) |  | [optional] 
 **name** | **String** |  | [optional] 
 **routingMetaData** | **String** |  | [optional] 
-**routingStrategy** | [**ModelsRoutingStrategy**](ModelsRoutingStrategy.md) |  | [optional] 
+**routingStrategy** | **Number** |  | [optional] 
 **type** | [**ModelsIPPoolType**](ModelsIPPoolType.md) |  | [optional] 
 
 
