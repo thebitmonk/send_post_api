@@ -113,7 +113,7 @@ api.iPRouterAllocateIP(xAccountApiKey, callback);
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://127.0.0.1:8080/api/v1*
+All URIs are relative to *https://api.sendpost.io/api/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
