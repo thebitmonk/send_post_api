@@ -1,6 +1,6 @@
 # SendPostApi.AccountipstatApi
 
-All URIs are relative to *https://api.sendpost.io/api/v1*
+All URIs are relative to *https://localhost/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -65,8 +65,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 <a name="iPStatRouterGetAllAggregateIPStatsByGroup"></a>
 # **iPStatRouterGetAllAggregateIPStatsByGroup**
@@ -123,8 +123,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 <a name="iPStatRouterGetAllAggregatedProviderStatsForAIP"></a>
 # **iPStatRouterGetAllAggregatedProviderStatsForAIP**
@@ -178,8 +178,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 <a name="iPStatRouterGetAllAggregatedProviderStatsForASpecificSubAccountOfAIP"></a>
 # **iPStatRouterGetAllAggregatedProviderStatsForASpecificSubAccountOfAIP**
@@ -236,8 +236,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 <a name="iPStatRouterGetAllAggregatedSubAccountStatsForAnIP"></a>
 # **iPStatRouterGetAllAggregatedSubAccountStatsForAnIP**
@@ -291,8 +291,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 <a name="iPStatRouterGetAllIPStats"></a>
 # **iPStatRouterGetAllIPStats**
@@ -346,8 +346,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 <a name="iPStatRouterGetAllIPStatsByGroup"></a>
 # **iPStatRouterGetAllIPStatsByGroup**
@@ -404,6 +404,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 

@@ -1,7 +1,8 @@
-# SendPostApi.Geoip2City
+# SendPostApi.ModelsEmailList
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**emailIds** | **[String]** |  | [optional] 
 
 

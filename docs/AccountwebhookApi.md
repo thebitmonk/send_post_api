@@ -1,6 +1,6 @@
 # SendPostApi.AccountwebhookApi
 
-All URIs are relative to *https://api.sendpost.io/api/v1*
+All URIs are relative to *https://localhost/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -55,8 +55,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 <a name="accountWebhookRouterCreate"></a>
 # **accountWebhookRouterCreate**
@@ -104,8 +104,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 <a name="accountWebhookRouterDelete"></a>
 # **accountWebhookRouterDelete**
@@ -153,8 +153,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 <a name="accountWebhookRouterGet"></a>
 # **accountWebhookRouterGet**
@@ -202,8 +202,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 <a name="accountWebhookRouterGetAll"></a>
 # **accountWebhookRouterGetAll**
@@ -256,8 +256,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 <a name="accountWebhookRouterUpdate"></a>
 # **accountWebhookRouterUpdate**
@@ -308,6 +308,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 

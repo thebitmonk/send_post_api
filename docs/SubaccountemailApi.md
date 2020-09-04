@@ -1,6 +1,6 @@
 # SendPostApi.SubaccountemailApi
 
-All URIs are relative to *https://api.sendpost.io/api/v1*
+All URIs are relative to *https://localhost/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -53,6 +53,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 

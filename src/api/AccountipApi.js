@@ -84,8 +84,8 @@
       };
 
       var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
+      var contentTypes = [];
+      var accepts = [];
       var returnType = [ModelsIP];
 
       return this.apiClient.callApi(
@@ -131,8 +131,8 @@
       };
 
       var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
+      var contentTypes = [];
+      var accepts = [];
       var returnType = ModelsCountStat;
 
       return this.apiClient.callApi(
@@ -185,8 +185,8 @@
       };
 
       var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
+      var contentTypes = [];
+      var accepts = [];
       var returnType = ModelsDeleteResponse;
 
       return this.apiClient.callApi(
@@ -239,8 +239,8 @@
       };
 
       var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
+      var contentTypes = [];
+      var accepts = [];
       var returnType = ModelsIP;
 
       return this.apiClient.callApi(
@@ -294,8 +294,8 @@
       };
 
       var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
+      var contentTypes = [];
+      var accepts = [];
       var returnType = [ModelsIP];
 
       return this.apiClient.callApi(
@@ -354,8 +354,8 @@
       };
 
       var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
+      var contentTypes = [];
+      var accepts = [];
       var returnType = ModelsIP;
 
       return this.apiClient.callApi(

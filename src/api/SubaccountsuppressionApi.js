@@ -84,8 +84,8 @@
       };
 
       var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
+      var contentTypes = [];
+      var accepts = [];
       var returnType = ModelsCountStat;
 
       return this.apiClient.callApi(
@@ -137,8 +137,8 @@
       };
 
       var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
+      var contentTypes = [];
+      var accepts = [];
       var returnType = ModelsSuppression;
 
       return this.apiClient.callApi(
@@ -182,8 +182,8 @@
       };
 
       var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
+      var contentTypes = [];
+      var accepts = [];
       var returnType = null;
 
       return this.apiClient.callApi(
@@ -235,8 +235,8 @@
       };
 
       var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
+      var contentTypes = [];
+      var accepts = [];
       var returnType = ModelsSuppression;
 
       return this.apiClient.callApi(
@@ -280,8 +280,8 @@
       };
 
       var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
+      var contentTypes = [];
+      var accepts = [];
       var returnType = null;
 
       return this.apiClient.callApi(
@@ -335,8 +335,8 @@
       };
 
       var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
+      var contentTypes = [];
+      var accepts = [];
       var returnType = [ModelsSuppression];
 
       return this.apiClient.callApi(

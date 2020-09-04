@@ -90,8 +90,8 @@
       };
 
       var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
+      var contentTypes = [];
+      var accepts = [];
       var returnType = [ModelsEmailResponse];
 
       return this.apiClient.callApi(

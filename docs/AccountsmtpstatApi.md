@@ -1,6 +1,6 @@
 # SendPostApi.AccountsmtpstatApi
 
-All URIs are relative to *https://api.sendpost.io/api/v1*
+All URIs are relative to *https://localhost/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -67,8 +67,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 <a name="sMTPStatRouterGetAllAggregateIPSMTPStats"></a>
 # **sMTPStatRouterGetAllAggregateIPSMTPStats**
@@ -122,8 +122,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 <a name="sMTPStatRouterGetAllAggregateIPSMTPStatsForSubAccount"></a>
 # **sMTPStatRouterGetAllAggregateIPSMTPStatsForSubAccount**
@@ -180,8 +180,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 <a name="sMTPStatRouterGetAllAggregateSubAccountProviderSMTPStats"></a>
 # **sMTPStatRouterGetAllAggregateSubAccountProviderSMTPStats**
@@ -238,8 +238,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 <a name="sMTPStatRouterGetAllAggregateSubAccountSMTPStats"></a>
 # **sMTPStatRouterGetAllAggregateSubAccountSMTPStats**
@@ -293,8 +293,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 <a name="sMTPStatRouterGetAllAggregateSubAccountSMTPStatsForIP"></a>
 # **sMTPStatRouterGetAllAggregateSubAccountSMTPStatsForIP**
@@ -351,6 +351,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 

@@ -1,6 +1,6 @@
 # SendPostApi.AccountippoolApi
 
-All URIs are relative to *https://api.sendpost.io/api/v1*
+All URIs are relative to *https://localhost/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -55,8 +55,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 <a name="accountIPPoolRouterCreate"></a>
 # **accountIPPoolRouterCreate**
@@ -104,8 +104,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 <a name="accountIPPoolRouterDelete"></a>
 # **accountIPPoolRouterDelete**
@@ -153,8 +153,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 <a name="accountIPPoolRouterGet"></a>
 # **accountIPPoolRouterGet**
@@ -202,8 +202,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 <a name="accountIPPoolRouterGetAll"></a>
 # **accountIPPoolRouterGetAll**
@@ -256,8 +256,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 <a name="accountIPPoolRouterUpdate"></a>
 # **accountIPPoolRouterUpdate**
@@ -308,6 +308,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 

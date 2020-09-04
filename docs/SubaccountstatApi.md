@@ -1,6 +1,6 @@
 # SendPostApi.SubaccountstatApi
 
-All URIs are relative to *https://api.sendpost.io/api/v1*
+All URIs are relative to *https://localhost/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -63,8 +63,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 <a name="subAccountStatRouterGetAllAggregateSubAccountStatsByGroup"></a>
 # **subAccountStatRouterGetAllAggregateSubAccountStatsByGroup**
@@ -118,8 +118,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 <a name="subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount"></a>
 # **subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount**
@@ -170,8 +170,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 <a name="subAccountStatRouterGetAllAggregatedIPStatsForASubAccount"></a>
 # **subAccountStatRouterGetAllAggregatedIPStatsForASubAccount**
@@ -222,8 +222,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 <a name="subAccountStatRouterGetAllAggregatedProviderStatsForASpecificIPOfASubAccount"></a>
 # **subAccountStatRouterGetAllAggregatedProviderStatsForASpecificIPOfASubAccount**
@@ -277,8 +277,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 <a name="subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount"></a>
 # **subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount**
@@ -329,8 +329,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 <a name="subAccountStatRouterGetAllSubAccountStats"></a>
 # **subAccountStatRouterGetAllSubAccountStats**
@@ -381,8 +381,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 <a name="subAccountStatRouterGetAllSubAccountStatsByGroup"></a>
 # **subAccountStatRouterGetAllSubAccountStatsByGroup**
@@ -436,6 +436,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
