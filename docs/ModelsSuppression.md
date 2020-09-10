@@ -7,5 +7,6 @@ Name | Type | Description | Notes
 **email** | **String** |  | [optional] 
 **id** | **Number** |  | [optional] 
 **reason** | [**ModelsSuppressionReason**](ModelsSuppressionReason.md) |  | [optional] 
+**smtpError** | **String** |  | [optional] 
 
 

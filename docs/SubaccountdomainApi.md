@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**domainRouterGet**](SubaccountdomainApi.md#domainRouterGet) | **GET** /subaccount/domain/{domainId} | 
 [**domainRouterGetAll**](SubaccountdomainApi.md#domainRouterGetAll) | **GET** /subaccount/domain/ | 
 [**domainRouterUpdate**](SubaccountdomainApi.md#domainRouterUpdate) | **PUT** /subaccount/domain/{domainId} | 
+[**domainRouterVerify**](SubaccountdomainApi.md#domainRouterVerify) | **POST** /subaccount/domain/{domainId}/verify | 
 
 
 <a name="domainRouterCount"></a>
@@ -297,6 +298,55 @@ Name | Type | Description  | Notes
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
  **domainId** | **Number**| The DomainId you want to update | 
  **body** | [**ModelsEDomain**](ModelsEDomain.md)| The body | 
+
+### Return type
+
+[**ModelsDomain**](ModelsDomain.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="domainRouterVerify"></a>
+# **domainRouterVerify**
+> ModelsDomain domainRouterVerify(xSubAccountApiKey, domainId)
+
+
+
+Verify Domain By Domain Id
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.SubaccountdomainApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var domainId = 789; // Number | the DomainId you want to get
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.domainRouterVerify(xSubAccountApiKey, domainId, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **domainId** | **Number**| the DomainId you want to get | 
 
 ### Return type
 

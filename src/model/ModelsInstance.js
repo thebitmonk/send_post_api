@@ -57,6 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('created'))
         obj.created = ApiClient.convertToType(data['created'], 'Number');
+      if (data.hasOwnProperty('endpoint'))
+        obj.endpoint = ApiClient.convertToType(data['endpoint'], 'String');
       if (data.hasOwnProperty('id'))
         obj.id = ApiClient.convertToType(data['id'], 'Number');
       if (data.hasOwnProperty('ips'))
@@ -71,6 +73,11 @@
    * @member {Number} created
    */
   exports.prototype.created = undefined;
+
+  /**
+   * @member {String} endpoint
+   */
+  exports.prototype.endpoint = undefined;
 
   /**
    * @member {Number} id

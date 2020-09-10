@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**messageRouterGetAllEventsForAMessageId**](SubaccountmessageApi.md#messageRouterGetAllEventsForAMessageId) | **GET** /subaccount/message/{messageId}/events | 
 [**messageRouterGetAllEventsForAMessageIdFromANode**](SubaccountmessageApi.md#messageRouterGetAllEventsForAMessageIdFromANode) | **GET** /subaccount/message/node/{subAccountId}/{messageId}/events | 
 [**messageRouterGetAllMessages**](SubaccountmessageApi.md#messageRouterGetAllMessages) | **GET** /subaccount/message/ | 
-[**messageRouterGetAllMessagesFromANode**](SubaccountmessageApi.md#messageRouterGetAllMessagesFromANode) | **GET** /subaccount/message/node/{subAccountId} | 
+[**messageRouterGetAllMessagesFromANode**](SubaccountmessageApi.md#messageRouterGetAllMessagesFromANode) | **POST** /subaccount/message/node/{subAccountId} | 
 [**messageRouterGetMessageFromNode**](SubaccountmessageApi.md#messageRouterGetMessageFromNode) | **GET** /subaccount/message/node/{subAccountId}/{messageId} | 
 
 
