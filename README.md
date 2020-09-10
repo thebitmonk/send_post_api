@@ -95,7 +95,7 @@ Please follow the [installation](#installation) instruction and execute the foll
 ```javascript
 var SendPostApi = require('send_post_api');
 
-var api = new SendPostApi.AccountipApi()
+var api = new SendPostApi.AccountintegrationApi()
 
 var xAccountApiKey = "xAccountApiKey_example"; // {String} Account API Key
 
@@ -107,16 +107,24 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.iPRouterAllocateIP(xAccountApiKey, callback);
+api.accountIntegrationRouterCount(xAccountApiKey, callback);
 
 ```
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api.sendpost.io/api/v1*
+All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterCount**](docs/AccountintegrationApi.md#accountIntegrationRouterCount) | **GET** /account/integration/count | 
+*SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterCreate**](docs/AccountintegrationApi.md#accountIntegrationRouterCreate) | **POST** /account/integration/{itype} | 
+*SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterDelete**](docs/AccountintegrationApi.md#accountIntegrationRouterDelete) | **DELETE** /account/integration/{itype} | 
+*SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterDisableGlockappsIPMonitoring**](docs/AccountintegrationApi.md#accountIntegrationRouterDisableGlockappsIPMonitoring) | **DELETE** /account/integration/glockapps/monitor/{ipid} | 
+*SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterEnableGlockappsIPMonitoring**](docs/AccountintegrationApi.md#accountIntegrationRouterEnableGlockappsIPMonitoring) | **POST** /account/integration/glockapps/monitor/{ipid} | 
+*SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterGetAll**](docs/AccountintegrationApi.md#accountIntegrationRouterGetAll) | **GET** /account/integration/ | 
+*SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterGetMonitoredIPStats**](docs/AccountintegrationApi.md#accountIntegrationRouterGetMonitoredIPStats) | **GET** /account/integration/glockapps/monitor/stat/{ipid} | 
+*SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterUpdate**](docs/AccountintegrationApi.md#accountIntegrationRouterUpdate) | **PUT** /account/integration/{itype} | 
 *SendPostApi.AccountipApi* | [**iPRouterAllocateIP**](docs/AccountipApi.md#iPRouterAllocateIP) | **POST** /account/ip/allocate | 
 *SendPostApi.AccountipApi* | [**iPRouterCount**](docs/AccountipApi.md#iPRouterCount) | **GET** /account/ip/count | 
 *SendPostApi.AccountipApi* | [**iPRouterDelete**](docs/AccountipApi.md#iPRouterDelete) | **DELETE** /account/ip/{ipid} | 
@@ -162,23 +170,18 @@ Class | Method | HTTP request | Description
 *SendPostApi.AuthApi* | [**authRouterGetAuthInfo**](docs/AuthApi.md#authRouterGetAuthInfo) | **POST** /auth/info | 
 *SendPostApi.ClusterApi* | [**clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster**](docs/ClusterApi.md#clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster) | **POST** /cluster/suppression/filter | 
 *SendPostApi.ClusterApi* | [**clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster**](docs/ClusterApi.md#clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster) | **DELETE** /cluster/suppression/filter | 
-*SendPostApi.SmtpApi* | [**sMTPRouterReceiveWebhooksRaisedFromSMTPServers**](docs/SmtpApi.md#sMTPRouterReceiveWebhooksRaisedFromSMTPServers) | **POST** /smtp/webhook | 
-*SendPostApi.SubaccountcleanlistApi* | [**listCleaningRouterCleanBulkEmailList**](docs/SubaccountcleanlistApi.md#listCleaningRouterCleanBulkEmailList) | **POST** /subaccount/cleanlist/bulk | 
-*SendPostApi.SubaccountcleanlistApi* | [**listCleaningRouterCleanEmailist**](docs/SubaccountcleanlistApi.md#listCleaningRouterCleanEmailist) | **POST** /subaccount/cleanlist/ | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterCount**](docs/SubaccountdomainApi.md#domainRouterCount) | **GET** /subaccount/domain/count | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterCreate**](docs/SubaccountdomainApi.md#domainRouterCreate) | **POST** /subaccount/domain/ | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterDelete**](docs/SubaccountdomainApi.md#domainRouterDelete) | **DELETE** /subaccount/domain/{domainId} | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterGet**](docs/SubaccountdomainApi.md#domainRouterGet) | **GET** /subaccount/domain/{domainId} | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterGetAll**](docs/SubaccountdomainApi.md#domainRouterGetAll) | **GET** /subaccount/domain/ | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterUpdate**](docs/SubaccountdomainApi.md#domainRouterUpdate) | **PUT** /subaccount/domain/{domainId} | 
-*SendPostApi.SubaccountdomainApi* | [**domainRouterVerify**](docs/SubaccountdomainApi.md#domainRouterVerify) | **POST** /subaccount/domain/{domainId}/verify | 
 *SendPostApi.SubaccountemailApi* | [**emailRouterSendEmail**](docs/SubaccountemailApi.md#emailRouterSendEmail) | **POST** /subaccount/email/ | 
 *SendPostApi.SubaccounteventApi* | [**eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange**](docs/SubaccounteventApi.md#eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange) | **GET** /subaccount/event/node/{subAccountId}/count | 
 *SendPostApi.SubaccounteventApi* | [**eventRouterCountAllEventsFromASubAccountForAGivenTimeRange**](docs/SubaccounteventApi.md#eventRouterCountAllEventsFromASubAccountForAGivenTimeRange) | **GET** /subaccount/event/count | 
 *SendPostApi.SubaccounteventApi* | [**eventRouterGet**](docs/SubaccounteventApi.md#eventRouterGet) | **GET** /subaccount/event/{eventId} | 
-*SendPostApi.SubaccounteventApi* | [**eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange**](docs/SubaccounteventApi.md#eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange) | **GET** /subaccount/event/node/{subAccountId}/timestampkeys | 
 *SendPostApi.SubaccounteventApi* | [**eventRouterGetAllEventsFromASubAccountForAGivenTimeRange**](docs/SubaccounteventApi.md#eventRouterGetAllEventsFromASubAccountForAGivenTimeRange) | **GET** /subaccount/event/ | 
-*SendPostApi.SubaccounteventApi* | [**eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange**](docs/SubaccounteventApi.md#eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange) | **POST** /subaccount/event/node/{subAccountId} | 
+*SendPostApi.SubaccounteventApi* | [**eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange**](docs/SubaccounteventApi.md#eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange) | **GET** /subaccount/event/node/{subAccountId} | 
 *SendPostApi.SubaccounteventApi* | [**eventRouterGetEventInNode**](docs/SubaccounteventApi.md#eventRouterGetEventInNode) | **GET** /subaccount/event/node/{subAccountId}/{eventId} | 
 *SendPostApi.SubaccountippoolApi* | [**iPPoolRouterCount**](docs/SubaccountippoolApi.md#iPPoolRouterCount) | **GET** /subaccount/ippool/count | 
 *SendPostApi.SubaccountippoolApi* | [**iPPoolRouterCreate**](docs/SubaccountippoolApi.md#iPPoolRouterCreate) | **POST** /subaccount/ippool/ | 
@@ -190,7 +193,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.SubaccountmessageApi* | [**messageRouterGetAllEventsForAMessageId**](docs/SubaccountmessageApi.md#messageRouterGetAllEventsForAMessageId) | **GET** /subaccount/message/{messageId}/events | 
 *SendPostApi.SubaccountmessageApi* | [**messageRouterGetAllEventsForAMessageIdFromANode**](docs/SubaccountmessageApi.md#messageRouterGetAllEventsForAMessageIdFromANode) | **GET** /subaccount/message/node/{subAccountId}/{messageId}/events | 
 *SendPostApi.SubaccountmessageApi* | [**messageRouterGetAllMessages**](docs/SubaccountmessageApi.md#messageRouterGetAllMessages) | **GET** /subaccount/message/ | 
-*SendPostApi.SubaccountmessageApi* | [**messageRouterGetAllMessagesFromANode**](docs/SubaccountmessageApi.md#messageRouterGetAllMessagesFromANode) | **POST** /subaccount/message/node/{subAccountId} | 
+*SendPostApi.SubaccountmessageApi* | [**messageRouterGetAllMessagesFromANode**](docs/SubaccountmessageApi.md#messageRouterGetAllMessagesFromANode) | **GET** /subaccount/message/node/{subAccountId} | 
 *SendPostApi.SubaccountmessageApi* | [**messageRouterGetMessageFromNode**](docs/SubaccountmessageApi.md#messageRouterGetMessageFromNode) | **GET** /subaccount/message/node/{subAccountId}/{messageId} | 
 *SendPostApi.SubaccountrecipientApi* | [**recipientRouterGetAllMessagesForARecipient**](docs/SubaccountrecipientApi.md#recipientRouterGetAllMessagesForARecipient) | **GET** /subaccount/recipient/{recipient}/messages | 
 *SendPostApi.SubaccountrecipientApi* | [**recipientRouterGetAllMessagesForARecipientFromANode**](docs/SubaccountrecipientApi.md#recipientRouterGetAllMessagesForARecipientFromANode) | **GET** /subaccount/recipient/node/{subAccountId}/{recipient}/messages | 
@@ -230,8 +233,8 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsBackOffConfiguration](docs/ModelsBackOffConfiguration.md)
  - [SendPostApi.ModelsBackOffDecreaseType](docs/ModelsBackOffDecreaseType.md)
  - [SendPostApi.ModelsBackOffTrigger](docs/ModelsBackOffTrigger.md)
+ - [SendPostApi.ModelsBlacklistStatus](docs/ModelsBlacklistStatus.md)
  - [SendPostApi.ModelsCity](docs/ModelsCity.md)
- - [SendPostApi.ModelsCleanedList](docs/ModelsCleanedList.md)
  - [SendPostApi.ModelsCountStat](docs/ModelsCountStat.md)
  - [SendPostApi.ModelsDNSRecord](docs/ModelsDNSRecord.md)
  - [SendPostApi.ModelsDeleteResponse](docs/ModelsDeleteResponse.md)
@@ -240,6 +243,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsEDomain](docs/ModelsEDomain.md)
  - [SendPostApi.ModelsEIP](docs/ModelsEIP.md)
  - [SendPostApi.ModelsEIPPool](docs/ModelsEIPPool.md)
+ - [SendPostApi.ModelsEIntegration](docs/ModelsEIntegration.md)
  - [SendPostApi.ModelsESender](docs/ModelsESender.md)
  - [SendPostApi.ModelsESubAccount](docs/ModelsESubAccount.md)
  - [SendPostApi.ModelsEWebhook](docs/ModelsEWebhook.md)
@@ -248,7 +252,10 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsEmailResponse](docs/ModelsEmailResponse.md)
  - [SendPostApi.ModelsEventMetadata](docs/ModelsEventMetadata.md)
  - [SendPostApi.ModelsEventType](docs/ModelsEventType.md)
+ - [SendPostApi.ModelsFrequencyType](docs/ModelsFrequencyType.md)
  - [SendPostApi.ModelsFrom](docs/ModelsFrom.md)
+ - [SendPostApi.ModelsGlockappsBlacklist](docs/ModelsGlockappsBlacklist.md)
+ - [SendPostApi.ModelsGlockappsMonitorStat](docs/ModelsGlockappsMonitorStat.md)
  - [SendPostApi.ModelsIIP](docs/ModelsIIP.md)
  - [SendPostApi.ModelsIP](docs/ModelsIP.md)
  - [SendPostApi.ModelsIPPool](docs/ModelsIPPool.md)
@@ -256,19 +263,23 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsIPStat](docs/ModelsIPStat.md)
  - [SendPostApi.ModelsIPType](docs/ModelsIPType.md)
  - [SendPostApi.ModelsInstance](docs/ModelsInstance.md)
+ - [SendPostApi.ModelsIntegration](docs/ModelsIntegration.md)
+ - [SendPostApi.ModelsIntegrationSettings](docs/ModelsIntegrationSettings.md)
+ - [SendPostApi.ModelsIntegrationType](docs/ModelsIntegrationType.md)
  - [SendPostApi.ModelsMember](docs/ModelsMember.md)
  - [SendPostApi.ModelsPIPStat](docs/ModelsPIPStat.md)
  - [SendPostApi.ModelsQEmailMessage](docs/ModelsQEmailMessage.md)
  - [SendPostApi.ModelsQEvent](docs/ModelsQEvent.md)
  - [SendPostApi.ModelsRDSuppression](docs/ModelsRDSuppression.md)
+ - [SendPostApi.ModelsRGlockappsMonitorStat](docs/ModelsRGlockappsMonitorStat.md)
  - [SendPostApi.ModelsRIPStat](docs/ModelsRIPStat.md)
  - [SendPostApi.ModelsRStat](docs/ModelsRStat.md)
  - [SendPostApi.ModelsRSuppression](docs/ModelsRSuppression.md)
  - [SendPostApi.ModelsReplyTo](docs/ModelsReplyTo.md)
+ - [SendPostApi.ModelsResponse](docs/ModelsResponse.md)
  - [SendPostApi.ModelsSIPStat](docs/ModelsSIPStat.md)
  - [SendPostApi.ModelsSMTPStat](docs/ModelsSMTPStat.md)
  - [SendPostApi.ModelsSender](docs/ModelsSender.md)
- - [SendPostApi.ModelsSingleCleanedMail](docs/ModelsSingleCleanedMail.md)
  - [SendPostApi.ModelsStat](docs/ModelsStat.md)
  - [SendPostApi.ModelsSubAccount](docs/ModelsSubAccount.md)
  - [SendPostApi.ModelsSubAccountType](docs/ModelsSubAccountType.md)

@@ -45,7 +45,6 @@
           body.email = "";
           body.id = "0";
           body.reason = new SendPostApi.ModelsSuppressionReason();
-          body.smtpError = "";
 
           instance.clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster(body, function(error, data, response) {
             if (error) {
@@ -69,7 +68,6 @@
           body.email = "";
           body.id = "0";
           body.reason = new SendPostApi.ModelsSuppressionReason();
-          body.smtpError = "";
 
           instance.clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster(body, function(error, data, response) {
             if (error) {

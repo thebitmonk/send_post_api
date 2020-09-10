@@ -370,60 +370,6 @@
         authNames, contentTypes, accepts, returnType, callback
       );
     }
-
-    /**
-     * Callback function to receive the result of the domainRouterVerify operation.
-     * @callback module:api/SubaccountdomainApi~domainRouterVerifyCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ModelsDomain} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Verify Domain By Domain Id
-     * @param {String} xSubAccountApiKey Sub-Account API Key
-     * @param {Number} domainId the DomainId you want to get
-     * @param {module:api/SubaccountdomainApi~domainRouterVerifyCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ModelsDomain}
-     */
-    this.domainRouterVerify = function(xSubAccountApiKey, domainId, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'xSubAccountApiKey' is set
-      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling domainRouterVerify");
-      }
-
-      // verify the required parameter 'domainId' is set
-      if (domainId === undefined || domainId === null) {
-        throw new Error("Missing the required parameter 'domainId' when calling domainRouterVerify");
-      }
-
-
-      var pathParams = {
-        'domainId': domainId
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-        'X-SubAccount-ApiKey': xSubAccountApiKey
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = ModelsDomain;
-
-      return this.apiClient.callApi(
-        '/subaccount/domain/{domainId}/verify', 'POST',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
   };
 
   return exports;

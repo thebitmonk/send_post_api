@@ -88,9 +88,7 @@
             expect(data.id).to.be.a('number');
             expect(data.id).to.be("0");
             expect(data.reason).to.be.a(SendPostApi.ModelsSuppressionReason);
-                expect(data.smtpError).to.be.a('string');
-            expect(data.smtpError).to.be("");
-
+    
             done();
           });
           */
@@ -107,7 +105,6 @@
           body.email = "";
           body.id = "0";
           body.reason = new SendPostApi.ModelsSuppressionReason();
-          body.smtpError = "";
 
           instance.suppressionRouterCreateSuppressionsInSuppressionFilter(body, function(error, data, response) {
             if (error) {
@@ -145,9 +142,7 @@
             expect(data.id).to.be.a('number');
             expect(data.id).to.be("0");
             expect(data.reason).to.be.a(SendPostApi.ModelsSuppressionReason);
-                expect(data.smtpError).to.be.a('string');
-            expect(data.smtpError).to.be("");
-
+    
             done();
           });
           */
@@ -164,7 +159,6 @@
           body.email = "";
           body.id = "0";
           body.reason = new SendPostApi.ModelsSuppressionReason();
-          body.smtpError = "";
 
           instance.suppressionRouterDeleteSuppressionsInSuppressionFilter(body, function(error, data, response) {
             if (error) {
@@ -208,8 +202,7 @@
               expect(data.id).to.be.a('number');
               expect(data.id).to.be("0");
               expect(data.reason).to.be.a(SendPostApi.ModelsSuppressionReason);
-                  expect(data.smtpError).to.be.a('string');
-              expect(data.smtpError).to.be("");
+      
             }
 
             done();

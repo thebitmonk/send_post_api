@@ -317,7 +317,7 @@
       var returnType = [ModelsQEmailMessage];
 
       return this.apiClient.callApi(
-        '/subaccount/message/node/{subAccountId}', 'POST',
+        '/subaccount/message/node/{subAccountId}', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
