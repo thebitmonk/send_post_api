@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="listCleaningRouterCleanBulkEmailList"></a>
 # **listCleaningRouterCleanBulkEmailList**
-> ModelsCleanedList listCleaningRouterCleanBulkEmailList(xSubAccountApiKey)
+> ApiBulkResponse listCleaningRouterCleanBulkEmailList(fileinput, xSubAccountApiKey)
 
 
 
@@ -22,6 +22,8 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.SubaccountcleanlistApi();
 
+var fileinput = "/path/to/file.txt"; // File | csv to send
+
 var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
 
 
@@ -32,18 +34,19 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.listCleaningRouterCleanBulkEmailList(xSubAccountApiKey, callback);
+apiInstance.listCleaningRouterCleanBulkEmailList(fileinput, xSubAccountApiKey, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **fileinput** | **File**| csv to send | 
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
 
 ### Return type
 
-[**ModelsCleanedList**](ModelsCleanedList.md)
+[**ApiBulkResponse**](ApiBulkResponse.md)
 
 ### Authorization
 
@@ -56,7 +59,7 @@ No authorization required
 
 <a name="listCleaningRouterCleanEmailist"></a>
 # **listCleaningRouterCleanEmailist**
-> ModelsCleanedList listCleaningRouterCleanEmailist(xSubAccountApiKey)
+> ModelsCleanedList listCleaningRouterCleanEmailist(xSubAccountApiKey, body)
 
 
 
@@ -70,6 +73,8 @@ var apiInstance = new SendPostApi.SubaccountcleanlistApi();
 
 var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
 
+var body = new SendPostApi.ModelsEmailList(); // ModelsEmailList | The List to br sent
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -78,7 +83,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.listCleaningRouterCleanEmailist(xSubAccountApiKey, callback);
+apiInstance.listCleaningRouterCleanEmailist(xSubAccountApiKey, body, callback);
 ```
 
 ### Parameters
@@ -86,6 +91,7 @@ apiInstance.listCleaningRouterCleanEmailist(xSubAccountApiKey, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **body** | [**ModelsEmailList**](ModelsEmailList.md)| The List to br sent | 
 
 ### Return type
 

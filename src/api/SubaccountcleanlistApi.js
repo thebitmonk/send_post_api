@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsCleanedList'], factory);
+    define(['ApiClient', 'model/ApiBulkResponse', 'model/ModelsCleanedList', 'model/ModelsEmailList'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsCleanedList'));
+    module.exports = factory(require('../ApiClient'), require('../model/ApiBulkResponse'), require('../model/ModelsCleanedList'), require('../model/ModelsEmailList'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.SubaccountcleanlistApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsCleanedList);
+    root.SendPostApi.SubaccountcleanlistApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ApiBulkResponse, root.SendPostApi.ModelsCleanedList, root.SendPostApi.ModelsEmailList);
   }
-}(this, function(ApiClient, ModelsCleanedList) {
+}(this, function(ApiClient, ApiBulkResponse, ModelsCleanedList, ModelsEmailList) {
   'use strict';
 
   /**
@@ -52,18 +52,24 @@
      * Callback function to receive the result of the listCleaningRouterCleanBulkEmailList operation.
      * @callback module:api/SubaccountcleanlistApi~listCleaningRouterCleanBulkEmailListCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ModelsCleanedList} data The data returned by the service call.
+     * @param {module:model/ApiBulkResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Send Email To Contacts
+     * @param {File} fileinput csv to send
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {module:api/SubaccountcleanlistApi~listCleaningRouterCleanBulkEmailListCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ModelsCleanedList}
+     * data is of type: {@link module:model/ApiBulkResponse}
      */
-    this.listCleaningRouterCleanBulkEmailList = function(xSubAccountApiKey, callback) {
+    this.listCleaningRouterCleanBulkEmailList = function(fileinput, xSubAccountApiKey, callback) {
       var postBody = null;
+
+      // verify the required parameter 'fileinput' is set
+      if (fileinput === undefined || fileinput === null) {
+        throw new Error("Missing the required parameter 'fileinput' when calling listCleaningRouterCleanBulkEmailList");
+      }
 
       // verify the required parameter 'xSubAccountApiKey' is set
       if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
@@ -81,12 +87,13 @@
         'X-SubAccount-ApiKey': xSubAccountApiKey
       };
       var formParams = {
+        'fileinput': fileinput
       };
 
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = ModelsCleanedList;
+      var returnType = ApiBulkResponse;
 
       return this.apiClient.callApi(
         '/subaccount/cleanlist/bulk', 'POST',
@@ -106,15 +113,21 @@
     /**
      * Clean email list
      * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {module:model/ModelsEmailList} body The List to br sent
      * @param {module:api/SubaccountcleanlistApi~listCleaningRouterCleanEmailistCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsCleanedList}
      */
-    this.listCleaningRouterCleanEmailist = function(xSubAccountApiKey, callback) {
-      var postBody = null;
+    this.listCleaningRouterCleanEmailist = function(xSubAccountApiKey, body, callback) {
+      var postBody = body;
 
       // verify the required parameter 'xSubAccountApiKey' is set
       if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
         throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling listCleaningRouterCleanEmailist");
+      }
+
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling listCleaningRouterCleanEmailist");
       }
 
 

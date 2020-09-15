@@ -40,37 +40,20 @@
         it('should call listCleaningRouterCleanBulkEmailList successfully', function(done) {
           // TODO: uncomment, update parameter values for listCleaningRouterCleanBulkEmailList call and complete the assertions
           /*
+          var fileinput = "/path/to/file.txt";
           var xSubAccountApiKey = "xSubAccountApiKey_example";
 
-          instance.listCleaningRouterCleanBulkEmailList(xSubAccountApiKey, function(error, data, response) {
+          instance.listCleaningRouterCleanBulkEmailList(fileinput, xSubAccountApiKey, function(error, data, response) {
             if (error) {
               done(error);
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SendPostApi.ModelsCleanedList);
-            {
-              let dataCtr = data.detailedResponse;
-              expect(dataCtr).to.be.an(Array);
-              expect(dataCtr).to.not.be.empty();
-              for (let p in dataCtr) {
-                let data = dataCtr[p];
-                expect(data).to.be.a(SendPostApi.ModelsSingleCleanedMail);
-                expect(data.err).to.be.a('string');
-                expect(data.err).to.be("");
-                expect(data.mailId).to.be.a('string');
-                expect(data.mailId).to.be("");
-                expect(data.reason).to.be.a('string');
-                expect(data.reason).to.be("");
-                expect(data.valid).to.be.a('boolean');
-                expect(data.valid).to.be(false);
-
-                      }
-            }
-            expect(data.invalid).to.be.a(Object);
-            expect(data.invalid).to.be();
-            expect(data.valid).to.be.a(Object);
-            expect(data.valid).to.be();
+            expect(data).to.be.a(SendPostApi.ApiBulkResponse);
+            expect(data.jobId).to.be.a('number');
+            expect(data.jobId).to.be("0");
+            expect(data.message).to.be.a('string');
+            expect(data.message).to.be("");
 
             done();
           });
@@ -84,8 +67,10 @@
           // TODO: uncomment, update parameter values for listCleaningRouterCleanEmailist call and complete the assertions
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var body = new SendPostApi.ModelsEmailList();
+          body.emailIds = ;
 
-          instance.listCleaningRouterCleanEmailist(xSubAccountApiKey, function(error, data, response) {
+          instance.listCleaningRouterCleanEmailist(xSubAccountApiKey, body, function(error, data, response) {
             if (error) {
               done(error);
               return;

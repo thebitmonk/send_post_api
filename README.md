@@ -95,7 +95,7 @@ Please follow the [installation](#installation) instruction and execute the foll
 ```javascript
 var SendPostApi = require('send_post_api');
 
-var api = new SendPostApi.AccountipApi()
+var api = new SendPostApi.AccountintegrationApi()
 
 var xAccountApiKey = "xAccountApiKey_example"; // {String} Account API Key
 
@@ -107,7 +107,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.iPRouterAllocateIP(xAccountApiKey, callback);
+api.accountIntegrationRouterCount(xAccountApiKey, callback);
 
 ```
 
@@ -117,6 +117,14 @@ All URIs are relative to *https://api.sendpost.io/api/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterCount**](docs/AccountintegrationApi.md#accountIntegrationRouterCount) | **GET** /account/integration/count | 
+*SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterCreate**](docs/AccountintegrationApi.md#accountIntegrationRouterCreate) | **POST** /account/integration/{itype} | 
+*SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterDelete**](docs/AccountintegrationApi.md#accountIntegrationRouterDelete) | **DELETE** /account/integration/{itype} | 
+*SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterDisableGlockappsIPMonitoring**](docs/AccountintegrationApi.md#accountIntegrationRouterDisableGlockappsIPMonitoring) | **DELETE** /account/integration/glockapps/monitor/{ipid} | 
+*SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterEnableGlockappsIPMonitoring**](docs/AccountintegrationApi.md#accountIntegrationRouterEnableGlockappsIPMonitoring) | **POST** /account/integration/glockapps/monitor/{ipid} | 
+*SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterGetAll**](docs/AccountintegrationApi.md#accountIntegrationRouterGetAll) | **GET** /account/integration/ | 
+*SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterGetMonitoredIPStats**](docs/AccountintegrationApi.md#accountIntegrationRouterGetMonitoredIPStats) | **GET** /account/integration/glockapps/monitor/stat/{ipid} | 
+*SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterUpdate**](docs/AccountintegrationApi.md#accountIntegrationRouterUpdate) | **PUT** /account/integration/{itype} | 
 *SendPostApi.AccountipApi* | [**iPRouterAllocateIP**](docs/AccountipApi.md#iPRouterAllocateIP) | **POST** /account/ip/allocate | 
 *SendPostApi.AccountipApi* | [**iPRouterCount**](docs/AccountipApi.md#iPRouterCount) | **GET** /account/ip/count | 
 *SendPostApi.AccountipApi* | [**iPRouterDelete**](docs/AccountipApi.md#iPRouterDelete) | **DELETE** /account/ip/{ipid} | 
@@ -221,6 +229,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [SendPostApi.ApiBulkResponse](docs/ApiBulkResponse.md)
  - [SendPostApi.ModelsAGStat](docs/ModelsAGStat.md)
  - [SendPostApi.ModelsAIPStat](docs/ModelsAIPStat.md)
  - [SendPostApi.ModelsAccount](docs/ModelsAccount.md)
@@ -230,6 +239,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsBackOffConfiguration](docs/ModelsBackOffConfiguration.md)
  - [SendPostApi.ModelsBackOffDecreaseType](docs/ModelsBackOffDecreaseType.md)
  - [SendPostApi.ModelsBackOffTrigger](docs/ModelsBackOffTrigger.md)
+ - [SendPostApi.ModelsBlacklistStatus](docs/ModelsBlacklistStatus.md)
  - [SendPostApi.ModelsCity](docs/ModelsCity.md)
  - [SendPostApi.ModelsCleanedList](docs/ModelsCleanedList.md)
  - [SendPostApi.ModelsCountStat](docs/ModelsCountStat.md)
@@ -240,15 +250,20 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsEDomain](docs/ModelsEDomain.md)
  - [SendPostApi.ModelsEIP](docs/ModelsEIP.md)
  - [SendPostApi.ModelsEIPPool](docs/ModelsEIPPool.md)
+ - [SendPostApi.ModelsEIntegration](docs/ModelsEIntegration.md)
  - [SendPostApi.ModelsESender](docs/ModelsESender.md)
  - [SendPostApi.ModelsESubAccount](docs/ModelsESubAccount.md)
  - [SendPostApi.ModelsEWebhook](docs/ModelsEWebhook.md)
  - [SendPostApi.ModelsEmailErrorCode](docs/ModelsEmailErrorCode.md)
+ - [SendPostApi.ModelsEmailList](docs/ModelsEmailList.md)
  - [SendPostApi.ModelsEmailMessage](docs/ModelsEmailMessage.md)
  - [SendPostApi.ModelsEmailResponse](docs/ModelsEmailResponse.md)
  - [SendPostApi.ModelsEventMetadata](docs/ModelsEventMetadata.md)
  - [SendPostApi.ModelsEventType](docs/ModelsEventType.md)
+ - [SendPostApi.ModelsFrequencyType](docs/ModelsFrequencyType.md)
  - [SendPostApi.ModelsFrom](docs/ModelsFrom.md)
+ - [SendPostApi.ModelsGlockappsBlacklist](docs/ModelsGlockappsBlacklist.md)
+ - [SendPostApi.ModelsGlockappsMonitorStat](docs/ModelsGlockappsMonitorStat.md)
  - [SendPostApi.ModelsIIP](docs/ModelsIIP.md)
  - [SendPostApi.ModelsIP](docs/ModelsIP.md)
  - [SendPostApi.ModelsIPPool](docs/ModelsIPPool.md)
@@ -256,15 +271,20 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsIPStat](docs/ModelsIPStat.md)
  - [SendPostApi.ModelsIPType](docs/ModelsIPType.md)
  - [SendPostApi.ModelsInstance](docs/ModelsInstance.md)
+ - [SendPostApi.ModelsIntegration](docs/ModelsIntegration.md)
+ - [SendPostApi.ModelsIntegrationSettings](docs/ModelsIntegrationSettings.md)
+ - [SendPostApi.ModelsIntegrationType](docs/ModelsIntegrationType.md)
  - [SendPostApi.ModelsMember](docs/ModelsMember.md)
  - [SendPostApi.ModelsPIPStat](docs/ModelsPIPStat.md)
  - [SendPostApi.ModelsQEmailMessage](docs/ModelsQEmailMessage.md)
  - [SendPostApi.ModelsQEvent](docs/ModelsQEvent.md)
  - [SendPostApi.ModelsRDSuppression](docs/ModelsRDSuppression.md)
+ - [SendPostApi.ModelsRGlockappsMonitorStat](docs/ModelsRGlockappsMonitorStat.md)
  - [SendPostApi.ModelsRIPStat](docs/ModelsRIPStat.md)
  - [SendPostApi.ModelsRStat](docs/ModelsRStat.md)
  - [SendPostApi.ModelsRSuppression](docs/ModelsRSuppression.md)
  - [SendPostApi.ModelsReplyTo](docs/ModelsReplyTo.md)
+ - [SendPostApi.ModelsResponse](docs/ModelsResponse.md)
  - [SendPostApi.ModelsSIPStat](docs/ModelsSIPStat.md)
  - [SendPostApi.ModelsSMTPStat](docs/ModelsSMTPStat.md)
  - [SendPostApi.ModelsSender](docs/ModelsSender.md)

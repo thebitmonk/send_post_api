@@ -41,6 +41,7 @@
           // TODO: uncomment, update parameter values for sMTPRouterReceiveWebhooksRaisedFromSMTPServers call
           /*
           var body = new SendPostApi.ModelsWMessage();
+          body.groups = ;
           body.IPID = "0";
           body.messageType = "";
           body.messageUUID = "";
