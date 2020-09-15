@@ -41,6 +41,12 @@
         expect(instance).to.be.a(SendPostApi.ModelsWMessage);
       });
 
+      it('should have the property groups (base name: "Groups")', function() {
+        // TODO: update the code to test the property groups
+        expect(instance).to.have.property('groups');
+        // expect(instance.groups).to.be(expectedValueLiteral);
+      });
+
       it('should have the property IPID (base name: "IPID")', function() {
         // TODO: update the code to test the property IPID
         expect(instance).to.have.property('IPID');

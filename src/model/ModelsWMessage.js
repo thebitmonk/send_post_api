@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('Groups'))
+        obj.groups = ApiClient.convertToType(data['Groups'], Object);
       if (data.hasOwnProperty('IPID'))
         obj.IPID = ApiClient.convertToType(data['IPID'], 'Number');
       if (data.hasOwnProperty('MessageType'))
@@ -72,6 +74,11 @@
     }
     return obj;
   }
+
+  /**
+   * @member {Object} groups
+   */
+  exports.prototype.groups = undefined;
 
   /**
    * @member {Number} IPID

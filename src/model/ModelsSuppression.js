@@ -63,6 +63,8 @@
         obj.id = ApiClient.convertToType(data['id'], 'Number');
       if (data.hasOwnProperty('reason'))
         obj.reason = ModelsSuppressionReason.constructFromObject(data['reason']);
+      if (data.hasOwnProperty('smtp_error'))
+        obj.smtpError = ApiClient.convertToType(data['smtp_error'], 'String');
     }
     return obj;
   }
@@ -86,6 +88,11 @@
    * @member {module:model/ModelsSuppressionReason} reason
    */
   exports.prototype.reason = undefined;
+
+  /**
+   * @member {String} smtpError
+   */
+  exports.prototype.smtpError = undefined;
 
   return exports;
 
