@@ -58,7 +58,7 @@
       if (data.hasOwnProperty('autoEnableMonitoring'))
         obj.autoEnableMonitoring = ApiClient.convertToType(data['autoEnableMonitoring'], 'Boolean');
       if (data.hasOwnProperty('emailTo'))
-        obj.emailTo = ApiClient.convertToType(data['emailTo'], Object);
+        obj.emailTo = ApiClient.convertToType(data['emailTo'], ['String']);
       if (data.hasOwnProperty('frequency'))
         obj.frequency = ModelsFrequencyType.constructFromObject(data['frequency']);
       if (data.hasOwnProperty('receiveReports'))
@@ -73,7 +73,7 @@
   exports.prototype.autoEnableMonitoring = undefined;
 
   /**
-   * @member {Object} emailTo
+   * @member {Array.<String>} emailTo
    */
   exports.prototype.emailTo = undefined;
 

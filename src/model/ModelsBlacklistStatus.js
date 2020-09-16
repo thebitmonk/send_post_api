@@ -53,10 +53,7 @@
    * @return {module:model/ModelsBlacklistStatus} The populated <code>ModelsBlacklistStatus</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
-    if (data) {
-      obj = obj || new exports();
-    }
-    return obj;
+    return data;
   }
 
   return exports;

@@ -69,7 +69,7 @@
           body.key = "";
           body.settings = new SendPostApi.ModelsIntegrationSettings();
           body.settings.autoEnableMonitoring = false;
-          body.settings.emailTo = ;
+          body.settings.emailTo = [""];
           body.settings.frequency = new SendPostApi.ModelsFrequencyType();
           body.settings.receiveReports = false;
 
@@ -281,7 +281,7 @@
           body.key = "";
           body.settings = new SendPostApi.ModelsIntegrationSettings();
           body.settings.autoEnableMonitoring = false;
-          body.settings.emailTo = ;
+          body.settings.emailTo = [""];
           body.settings.frequency = new SendPostApi.ModelsFrequencyType();
           body.settings.receiveReports = false;
 
