@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="listCleaningRouterCleanBulkEmailList"></a>
 # **listCleaningRouterCleanBulkEmailList**
-> ApiBulkResponse listCleaningRouterCleanBulkEmailList(fileinput, xSubAccountApiKey)
+> ModelsBulkResponse listCleaningRouterCleanBulkEmailList(fileinput, xSubAccountApiKey)
 
 
 
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ApiBulkResponse**](ApiBulkResponse.md)
+[**ModelsBulkResponse**](ModelsBulkResponse.md)
 
 ### Authorization
 
@@ -54,7 +54,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json
 
 <a name="listCleaningRouterCleanEmailist"></a>

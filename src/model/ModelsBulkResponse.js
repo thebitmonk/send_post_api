@@ -26,35 +26,52 @@
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsBlacklistStatus = factory(root.SendPostApi.ApiClient);
+    root.SendPostApi.ModelsBulkResponse = factory(root.SendPostApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The ModelsBlacklistStatus model module.
-   * @module model/ModelsBlacklistStatus
+   * The ModelsBulkResponse model module.
+   * @module model/ModelsBulkResponse
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>ModelsBlacklistStatus</code>.
-   * @alias module:model/ModelsBlacklistStatus
+   * Constructs a new <code>ModelsBulkResponse</code>.
+   * @alias module:model/ModelsBulkResponse
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>ModelsBlacklistStatus</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ModelsBulkResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ModelsBlacklistStatus} obj Optional instance to populate.
-   * @return {module:model/ModelsBlacklistStatus} The populated <code>ModelsBlacklistStatus</code> instance.
+   * @param {module:model/ModelsBulkResponse} obj Optional instance to populate.
+   * @return {module:model/ModelsBulkResponse} The populated <code>ModelsBulkResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
-    return data;
+    if (data) {
+      obj = obj || new exports();
+      if (data.hasOwnProperty('job_id'))
+        obj.jobId = ApiClient.convertToType(data['job_id'], 'Number');
+      if (data.hasOwnProperty('message'))
+        obj.message = ApiClient.convertToType(data['message'], 'String');
+    }
+    return obj;
   }
+
+  /**
+   * @member {Number} jobId
+   */
+  exports.prototype.jobId = undefined;
+
+  /**
+   * @member {String} message
+   */
+  exports.prototype.message = undefined;
 
   return exports;
 

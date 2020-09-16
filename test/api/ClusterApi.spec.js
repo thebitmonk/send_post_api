@@ -36,6 +36,38 @@
 
   describe('(package)', function() {
     describe('ClusterApi', function() {
+      describe('clusterRouterAddItemsToAccountWebhookCacheOfEveryNodeInCluster', function() {
+        it('should call clusterRouterAddItemsToAccountWebhookCacheOfEveryNodeInCluster successfully', function(done) {
+          // TODO: uncomment, update parameter values for clusterRouterAddItemsToAccountWebhookCacheOfEveryNodeInCluster call
+          /*
+          var body = new SendPostApi.ModelsAccountWebhook();
+          body.clicked = false;
+          body.created = "0";
+          body.delivered = false;
+          body.dropped = false;
+          body.enabled = false;
+          body.hardBounced = false;
+          body.id = "0";
+          body.opened = false;
+          body.processed = false;
+          body.softBounced = false;
+          body.spam = false;
+          body.unsubscribed = false;
+          body.url = "";
+
+          instance.clusterRouterAddItemsToAccountWebhookCacheOfEveryNodeInCluster(body, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster', function() {
         it('should call clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster successfully', function(done) {
           // TODO: uncomment, update parameter values for clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster call
@@ -72,6 +104,38 @@
           body.smtpError = "";
 
           instance.clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster(body, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('clusterRouterDeleteItemsFromWebhookFilterOfEveryNodeInCluster', function() {
+        it('should call clusterRouterDeleteItemsFromWebhookFilterOfEveryNodeInCluster successfully', function(done) {
+          // TODO: uncomment, update parameter values for clusterRouterDeleteItemsFromWebhookFilterOfEveryNodeInCluster call
+          /*
+          var body = new SendPostApi.ModelsAccountWebhook();
+          body.clicked = false;
+          body.created = "0";
+          body.delivered = false;
+          body.dropped = false;
+          body.enabled = false;
+          body.hardBounced = false;
+          body.id = "0";
+          body.opened = false;
+          body.processed = false;
+          body.softBounced = false;
+          body.spam = false;
+          body.unsubscribed = false;
+          body.url = "";
+
+          instance.clusterRouterDeleteItemsFromWebhookFilterOfEveryNodeInCluster(body, function(error, data, response) {
             if (error) {
               done(error);
               return;

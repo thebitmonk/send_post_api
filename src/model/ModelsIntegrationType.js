@@ -53,10 +53,7 @@
    * @return {module:model/ModelsIntegrationType} The populated <code>ModelsIntegrationType</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
-    if (data) {
-      obj = obj || new exports();
-    }
-    return obj;
+    return data;
   }
 
   return exports;
