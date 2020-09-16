@@ -1,11 +1,13 @@
-# SendPostApi.ModelsSingleCleanedMail
+# ModelsSingleCleanedMail
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**err** | **String** |  | [optional] 
-**mailId** | **String** |  | [optional] 
-**reason** | **String** |  | [optional] 
-**valid** | **Boolean** |  | [optional] 
+**Err** | **string** |  | [optional] [default to null]
+**MailId** | **string** |  | [optional] [default to null]
+**Reason** | **string** |  | [optional] [default to null]
+**Valid** | **bool** |  | [optional] [default to null]
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

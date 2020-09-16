@@ -1,53 +1,33 @@
-# SendPostApi.SubaccountsenderApi
+# \SubaccountsenderApi
 
 All URIs are relative to *https://localhost/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**senderRouterCount**](SubaccountsenderApi.md#senderRouterCount) | **GET** /subaccount/sender/count | 
-[**senderRouterCreate**](SubaccountsenderApi.md#senderRouterCreate) | **POST** /subaccount/sender/ | 
-[**senderRouterDelete**](SubaccountsenderApi.md#senderRouterDelete) | **DELETE** /subaccount/sender/{senderId} | 
-[**senderRouterGet**](SubaccountsenderApi.md#senderRouterGet) | **GET** /subaccount/sender/{senderId} | 
-[**senderRouterGetAll**](SubaccountsenderApi.md#senderRouterGetAll) | **GET** /subaccount/sender/ | 
-[**senderRouterUpdate**](SubaccountsenderApi.md#senderRouterUpdate) | **PUT** /subaccount/sender/{senderId} | 
+[**SenderRouterCount**](SubaccountsenderApi.md#SenderRouterCount) | **Get** /subaccount/sender/count | 
+[**SenderRouterCreate**](SubaccountsenderApi.md#SenderRouterCreate) | **Post** /subaccount/sender/ | 
+[**SenderRouterDelete**](SubaccountsenderApi.md#SenderRouterDelete) | **Delete** /subaccount/sender/{senderId} | 
+[**SenderRouterGet**](SubaccountsenderApi.md#SenderRouterGet) | **Get** /subaccount/sender/{senderId} | 
+[**SenderRouterGetAll**](SubaccountsenderApi.md#SenderRouterGetAll) | **Get** /subaccount/sender/ | 
+[**SenderRouterUpdate**](SubaccountsenderApi.md#SenderRouterUpdate) | **Put** /subaccount/sender/{senderId} | 
 
 
-<a name="senderRouterCount"></a>
-# **senderRouterCount**
-> ModelsCountStat senderRouterCount(xSubAccountApiKey)
-
+# **SenderRouterCount**
+> ModelsCountStat SenderRouterCount(ctx, xSubAccountApiKey)
 
 
 Count Total Senders
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountsenderApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.senderRouterCount(xSubAccountApiKey, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xSubAccountApiKey** | **string**| Sub-Account API Key | 
 
 ### Return type
 
-[**ModelsCountStat**](ModelsCountStat.md)
+[**ModelsCountStat**](models.CountStat.md)
 
 ### Authorization
 
@@ -58,45 +38,25 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="senderRouterCreate"></a>
-# **senderRouterCreate**
-> ModelsSender senderRouterCreate(xSubAccountApiKey, body)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **SenderRouterCreate**
+> ModelsSender SenderRouterCreate(ctx, xSubAccountApiKey, body)
 
 
 Create Sender
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountsenderApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var body = new SendPostApi.ModelsESender(); // ModelsESender | The Sender content
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.senderRouterCreate(xSubAccountApiKey, body, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **body** | [**ModelsESender**](ModelsESender.md)| The Sender content | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xSubAccountApiKey** | **string**| Sub-Account API Key | 
+  **body** | [**ModelsESender**](ModelsESender.md)| The Sender content | 
 
 ### Return type
 
-[**ModelsSender**](ModelsSender.md)
+[**ModelsSender**](models.Sender.md)
 
 ### Authorization
 
@@ -107,45 +67,25 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="senderRouterDelete"></a>
-# **senderRouterDelete**
-> ModelsDeleteResponse senderRouterDelete(xSubAccountApiKey, senderId)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **SenderRouterDelete**
+> ModelsDeleteResponse SenderRouterDelete(ctx, xSubAccountApiKey, senderId)
 
 
 Delete Sender
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountsenderApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var senderId = 789; // Number | The SenderId you want to delete
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.senderRouterDelete(xSubAccountApiKey, senderId, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **senderId** | **Number**| The SenderId you want to delete | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xSubAccountApiKey** | **string**| Sub-Account API Key | 
+  **senderId** | **int64**| The SenderId you want to delete | 
 
 ### Return type
 
-[**ModelsDeleteResponse**](ModelsDeleteResponse.md)
+[**ModelsDeleteResponse**](models.DeleteResponse.md)
 
 ### Authorization
 
@@ -156,45 +96,25 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="senderRouterGet"></a>
-# **senderRouterGet**
-> ModelsSender senderRouterGet(xSubAccountApiKey, senderId)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **SenderRouterGet**
+> ModelsSender SenderRouterGet(ctx, xSubAccountApiKey, senderId)
 
 
 Find Sender by SenderId
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountsenderApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var senderId = 789; // Number | the SenderId you want to get
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.senderRouterGet(xSubAccountApiKey, senderId, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **senderId** | **Number**| the SenderId you want to get | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xSubAccountApiKey** | **string**| Sub-Account API Key | 
+  **senderId** | **int64**| the SenderId you want to get | 
 
 ### Return type
 
-[**ModelsSender**](ModelsSender.md)
+[**ModelsSender**](models.Sender.md)
 
 ### Authorization
 
@@ -205,50 +125,35 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="senderRouterGetAll"></a>
-# **senderRouterGetAll**
-> [ModelsSender] senderRouterGetAll(xSubAccountApiKey, opts)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **SenderRouterGetAll**
+> []ModelsSender SenderRouterGetAll(ctx, xSubAccountApiKey, optional)
 
 
 Get All Senders
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountsenderApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var opts = { 
-  'offset': 789, // Number | offset
-  'limit': 789, // Number | limit
-  'search': "search_example" // String | search term
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.senderRouterGetAll(xSubAccountApiKey, opts, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **offset** | **Number**| offset | [optional] 
- **limit** | **Number**| limit | [optional] 
- **search** | **String**| search term | [optional] 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xSubAccountApiKey** | **string**| Sub-Account API Key | 
+ **optional** | ***SubaccountsenderApiSenderRouterGetAllOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+Optional parameters are passed through a pointer to a SubaccountsenderApiSenderRouterGetAllOpts struct
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **offset** | **optional.Int64**| offset | 
+ **limit** | **optional.Int64**| limit | 
+ **search** | **optional.String**| search term | 
 
 ### Return type
 
-[**[ModelsSender]**](ModelsSender.md)
+[**[]ModelsSender**](models.Sender.md)
 
 ### Authorization
 
@@ -259,48 +164,26 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="senderRouterUpdate"></a>
-# **senderRouterUpdate**
-> ModelsSender senderRouterUpdate(xSubAccountApiKey, senderId, body)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **SenderRouterUpdate**
+> ModelsSender SenderRouterUpdate(ctx, xSubAccountApiKey, senderId, body)
 
 
 Update Sender
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountsenderApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var senderId = 789; // Number | The SenderId you want to update
-
-var body = new SendPostApi.ModelsESender(); // ModelsESender | The body
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.senderRouterUpdate(xSubAccountApiKey, senderId, body, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **senderId** | **Number**| The SenderId you want to update | 
- **body** | [**ModelsESender**](ModelsESender.md)| The body | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xSubAccountApiKey** | **string**| Sub-Account API Key | 
+  **senderId** | **int64**| The SenderId you want to update | 
+  **body** | [**ModelsESender**](ModelsESender.md)| The body | 
 
 ### Return type
 
-[**ModelsSender**](ModelsSender.md)
+[**ModelsSender**](models.Sender.md)
 
 ### Authorization
 
@@ -310,4 +193,6 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

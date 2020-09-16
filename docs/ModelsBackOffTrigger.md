@@ -1,11 +1,13 @@
-# SendPostApi.ModelsBackOffTrigger
+# ModelsBackOffTrigger
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**deferralPercentage** | **Number** |  | [optional] 
-**durationInMinutes** | **Number** |  | [optional] 
-**hardBouncePercentage** | **Number** |  | [optional] 
-**minimumAttempts** | **Number** |  | [optional] 
+**DeferralPercentage** | **int64** |  | [optional] [default to null]
+**DurationInMinutes** | **int64** |  | [optional] [default to null]
+**HardBouncePercentage** | **int64** |  | [optional] [default to null]
+**MinimumAttempts** | **int64** |  | [optional] [default to null]
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

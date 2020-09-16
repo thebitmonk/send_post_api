@@ -1,56 +1,34 @@
-# SendPostApi.SubaccountmessageApi
+# \SubaccountmessageApi
 
 All URIs are relative to *https://localhost/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**messageRouterGet**](SubaccountmessageApi.md#messageRouterGet) | **GET** /subaccount/message/{messageId} | 
-[**messageRouterGetAllEventsForAMessageId**](SubaccountmessageApi.md#messageRouterGetAllEventsForAMessageId) | **GET** /subaccount/message/{messageId}/events | 
-[**messageRouterGetAllEventsForAMessageIdFromANode**](SubaccountmessageApi.md#messageRouterGetAllEventsForAMessageIdFromANode) | **GET** /subaccount/message/node/{subAccountId}/{messageId}/events | 
-[**messageRouterGetAllMessages**](SubaccountmessageApi.md#messageRouterGetAllMessages) | **GET** /subaccount/message/ | 
-[**messageRouterGetAllMessagesFromANode**](SubaccountmessageApi.md#messageRouterGetAllMessagesFromANode) | **GET** /subaccount/message/node/{subAccountId} | 
-[**messageRouterGetMessageFromNode**](SubaccountmessageApi.md#messageRouterGetMessageFromNode) | **GET** /subaccount/message/node/{subAccountId}/{messageId} | 
+[**MessageRouterGet**](SubaccountmessageApi.md#MessageRouterGet) | **Get** /subaccount/message/{messageId} | 
+[**MessageRouterGetAllEventsForAMessageId**](SubaccountmessageApi.md#MessageRouterGetAllEventsForAMessageId) | **Get** /subaccount/message/{messageId}/events | 
+[**MessageRouterGetAllEventsForAMessageIdFromANode**](SubaccountmessageApi.md#MessageRouterGetAllEventsForAMessageIdFromANode) | **Get** /subaccount/message/node/{subAccountId}/{messageId}/events | 
+[**MessageRouterGetAllMessages**](SubaccountmessageApi.md#MessageRouterGetAllMessages) | **Get** /subaccount/message/ | 
+[**MessageRouterGetAllMessagesFromANode**](SubaccountmessageApi.md#MessageRouterGetAllMessagesFromANode) | **Get** /subaccount/message/node/{subAccountId} | 
+[**MessageRouterGetMessageFromNode**](SubaccountmessageApi.md#MessageRouterGetMessageFromNode) | **Get** /subaccount/message/node/{subAccountId}/{messageId} | 
 
 
-<a name="messageRouterGet"></a>
-# **messageRouterGet**
-> ModelsQEmailMessage messageRouterGet(xSubAccountApiKey, messageId)
-
+# **MessageRouterGet**
+> ModelsQEmailMessage MessageRouterGet(ctx, xSubAccountApiKey, messageId)
 
 
 Find Message By Id
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountmessageApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var messageId = "messageId_example"; // String | the messageId that you want to retrieve
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.messageRouterGet(xSubAccountApiKey, messageId, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **messageId** | **String**| the messageId that you want to retrieve | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xSubAccountApiKey** | **string**| Sub-Account API Key | 
+  **messageId** | **string**| the messageId that you want to retrieve | 
 
 ### Return type
 
-[**ModelsQEmailMessage**](ModelsQEmailMessage.md)
+[**ModelsQEmailMessage**](models.QEmailMessage.md)
 
 ### Authorization
 
@@ -61,45 +39,25 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="messageRouterGetAllEventsForAMessageId"></a>
-# **messageRouterGetAllEventsForAMessageId**
-> [ModelsQEvent] messageRouterGetAllEventsForAMessageId(xSubAccountApiKey, messageId)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **MessageRouterGetAllEventsForAMessageId**
+> []ModelsQEvent MessageRouterGetAllEventsForAMessageId(ctx, xSubAccountApiKey, messageId)
 
 
 Find all events associated with a message id
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountmessageApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var messageId = "messageId_example"; // String | the messageId that you want to retrieve
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.messageRouterGetAllEventsForAMessageId(xSubAccountApiKey, messageId, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **messageId** | **String**| the messageId that you want to retrieve | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xSubAccountApiKey** | **string**| Sub-Account API Key | 
+  **messageId** | **string**| the messageId that you want to retrieve | 
 
 ### Return type
 
-[**[ModelsQEvent]**](ModelsQEvent.md)
+[**[]ModelsQEvent**](models.QEvent.md)
 
 ### Authorization
 
@@ -110,48 +68,26 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="messageRouterGetAllEventsForAMessageIdFromANode"></a>
-# **messageRouterGetAllEventsForAMessageIdFromANode**
-> [ModelsQEvent] messageRouterGetAllEventsForAMessageIdFromANode(xSubAccountApiKey, messageId, subAccountId)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **MessageRouterGetAllEventsForAMessageIdFromANode**
+> []ModelsQEvent MessageRouterGetAllEventsForAMessageIdFromANode(ctx, xSubAccountApiKey, messageId, subAccountId)
 
 
 Find all message events associated with a message id from a specific node
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountmessageApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var messageId = "messageId_example"; // String | the messageId that you want to retrieve
-
-var subAccountId = 789; // Number | the subAccountId whose message you want to retrieve
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.messageRouterGetAllEventsForAMessageIdFromANode(xSubAccountApiKey, messageId, subAccountId, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **messageId** | **String**| the messageId that you want to retrieve | 
- **subAccountId** | **Number**| the subAccountId whose message you want to retrieve | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xSubAccountApiKey** | **string**| Sub-Account API Key | 
+  **messageId** | **string**| the messageId that you want to retrieve | 
+  **subAccountId** | **int64**| the subAccountId whose message you want to retrieve | 
 
 ### Return type
 
-[**[ModelsQEvent]**](ModelsQEvent.md)
+[**[]ModelsQEvent**](models.QEvent.md)
 
 ### Authorization
 
@@ -162,54 +98,37 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="messageRouterGetAllMessages"></a>
-# **messageRouterGetAllMessages**
-> [ModelsQEmailMessage] messageRouterGetAllMessages(xSubAccountApiKey, opts)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **MessageRouterGetAllMessages**
+> []ModelsQEmailMessage MessageRouterGetAllMessages(ctx, xSubAccountApiKey, optional)
 
 
 Find all messages of a sub-account based on time-range
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountmessageApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var opts = { 
-  'offset': 789, // Number | offset
-  'limit': 789, // Number | limit
-  'search': "search_example", // String | search term
-  'from': "from_example", // String | from date
-  'to': "to_example" // String | to date
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.messageRouterGetAllMessages(xSubAccountApiKey, opts, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **offset** | **Number**| offset | [optional] 
- **limit** | **Number**| limit | [optional] 
- **search** | **String**| search term | [optional] 
- **from** | **String**| from date | [optional] 
- **to** | **String**| to date | [optional] 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xSubAccountApiKey** | **string**| Sub-Account API Key | 
+ **optional** | ***SubaccountmessageApiMessageRouterGetAllMessagesOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+Optional parameters are passed through a pointer to a SubaccountmessageApiMessageRouterGetAllMessagesOpts struct
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **offset** | **optional.Int64**| offset | 
+ **limit** | **optional.Int64**| limit | 
+ **search** | **optional.String**| search term | 
+ **from** | **optional.String**| from date | 
+ **to** | **optional.String**| to date | 
 
 ### Return type
 
-[**[ModelsQEmailMessage]**](ModelsQEmailMessage.md)
+[**[]ModelsQEmailMessage**](models.QEmailMessage.md)
 
 ### Authorization
 
@@ -220,42 +139,24 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="messageRouterGetAllMessagesFromANode"></a>
-# **messageRouterGetAllMessagesFromANode**
-> [ModelsQEmailMessage] messageRouterGetAllMessagesFromANode(subAccountId)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **MessageRouterGetAllMessagesFromANode**
+> []ModelsQEmailMessage MessageRouterGetAllMessagesFromANode(ctx, subAccountId)
 
 
 Get all messages of a sub-account from a specific node based on time-range
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountmessageApi();
-
-var subAccountId = 789; // Number | the subAccountId whose message you want to retrieve
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.messageRouterGetAllMessagesFromANode(subAccountId, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **subAccountId** | **Number**| the subAccountId whose message you want to retrieve | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **subAccountId** | **int64**| the subAccountId whose message you want to retrieve | 
 
 ### Return type
 
-[**[ModelsQEmailMessage]**](ModelsQEmailMessage.md)
+[**[]ModelsQEmailMessage**](models.QEmailMessage.md)
 
 ### Authorization
 
@@ -266,45 +167,25 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="messageRouterGetMessageFromNode"></a>
-# **messageRouterGetMessageFromNode**
-> ModelsQEmailMessage messageRouterGetMessageFromNode(subAccountId, messageId)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **MessageRouterGetMessageFromNode**
+> ModelsQEmailMessage MessageRouterGetMessageFromNode(ctx, subAccountId, messageId)
 
 
 Find Message from node by specific Id
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountmessageApi();
-
-var subAccountId = 789; // Number | the subAccountId whose message you want to retrieve
-
-var messageId = "messageId_example"; // String | the messageId that you want to retrieve
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.messageRouterGetMessageFromNode(subAccountId, messageId, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **subAccountId** | **Number**| the subAccountId whose message you want to retrieve | 
- **messageId** | **String**| the messageId that you want to retrieve | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **subAccountId** | **int64**| the subAccountId whose message you want to retrieve | 
+  **messageId** | **string**| the messageId that you want to retrieve | 
 
 ### Return type
 
-[**ModelsQEmailMessage**](ModelsQEmailMessage.md)
+[**ModelsQEmailMessage**](models.QEmailMessage.md)
 
 ### Authorization
 
@@ -314,4 +195,6 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

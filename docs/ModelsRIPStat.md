@@ -1,9 +1,11 @@
-# SendPostApi.ModelsRIPStat
+# ModelsRipStat
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**_date** | **String** |  | [optional] 
-**stat** | [**ModelsIPStat**](ModelsIPStat.md) |  | [optional] 
+**Date** | **string** |  | [optional] [default to null]
+**Stat** | [***ModelsIpStat**](models.IPStat.md) |  | [optional] [default to null]
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

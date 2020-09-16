@@ -1,52 +1,30 @@
-# SendPostApi.SubaccountrecipientApi
+# \SubaccountrecipientApi
 
 All URIs are relative to *https://localhost/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**recipientRouterGetAllMessagesForARecipient**](SubaccountrecipientApi.md#recipientRouterGetAllMessagesForARecipient) | **GET** /subaccount/recipient/{recipient}/messages | 
-[**recipientRouterGetAllMessagesForARecipientFromANode**](SubaccountrecipientApi.md#recipientRouterGetAllMessagesForARecipientFromANode) | **GET** /subaccount/recipient/node/{subAccountId}/{recipient}/messages | 
+[**RecipientRouterGetAllMessagesForARecipient**](SubaccountrecipientApi.md#RecipientRouterGetAllMessagesForARecipient) | **Get** /subaccount/recipient/{recipient}/messages | 
+[**RecipientRouterGetAllMessagesForARecipientFromANode**](SubaccountrecipientApi.md#RecipientRouterGetAllMessagesForARecipientFromANode) | **Get** /subaccount/recipient/node/{subAccountId}/{recipient}/messages | 
 
 
-<a name="recipientRouterGetAllMessagesForARecipient"></a>
-# **recipientRouterGetAllMessagesForARecipient**
-> [ModelsQEmailMessage] recipientRouterGetAllMessagesForARecipient(xSubAccountApiKey, recipient)
-
+# **RecipientRouterGetAllMessagesForARecipient**
+> []ModelsQEmailMessage RecipientRouterGetAllMessagesForARecipient(ctx, xSubAccountApiKey, recipient)
 
 
 Find all messages sent to a specific recipient
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountrecipientApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var recipient = "recipient_example"; // String | email of the recipient
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.recipientRouterGetAllMessagesForARecipient(xSubAccountApiKey, recipient, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **recipient** | **String**| email of the recipient | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xSubAccountApiKey** | **string**| Sub-Account API Key | 
+  **recipient** | **string**| email of the recipient | 
 
 ### Return type
 
-[**[ModelsQEmailMessage]**](ModelsQEmailMessage.md)
+[**[]ModelsQEmailMessage**](models.QEmailMessage.md)
 
 ### Authorization
 
@@ -57,48 +35,26 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="recipientRouterGetAllMessagesForARecipientFromANode"></a>
-# **recipientRouterGetAllMessagesForARecipientFromANode**
-> [ModelsQEmailMessage] recipientRouterGetAllMessagesForARecipientFromANode(xSubAccountApiKey, subAccountId, recipient)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **RecipientRouterGetAllMessagesForARecipientFromANode**
+> []ModelsQEmailMessage RecipientRouterGetAllMessagesForARecipientFromANode(ctx, xSubAccountApiKey, subAccountId, recipient)
 
 
 Find all message sent to a recipient from a specific node
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountrecipientApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var subAccountId = 789; // Number | the subAccountId whose message you want to retrieve
-
-var recipient = "recipient_example"; // String | email of the recipient
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.recipientRouterGetAllMessagesForARecipientFromANode(xSubAccountApiKey, subAccountId, recipient, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **subAccountId** | **Number**| the subAccountId whose message you want to retrieve | 
- **recipient** | **String**| email of the recipient | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xSubAccountApiKey** | **string**| Sub-Account API Key | 
+  **subAccountId** | **int64**| the subAccountId whose message you want to retrieve | 
+  **recipient** | **string**| email of the recipient | 
 
 ### Return type
 
-[**[ModelsQEmailMessage]**](ModelsQEmailMessage.md)
+[**[]ModelsQEmailMessage**](models.QEmailMessage.md)
 
 ### Authorization
 
@@ -108,4 +64,6 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

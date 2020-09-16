@@ -1,53 +1,33 @@
-# SendPostApi.SubaccountsuppressionApi
+# \SubaccountsuppressionApi
 
 All URIs are relative to *https://localhost/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**suppressionRouterCount**](SubaccountsuppressionApi.md#suppressionRouterCount) | **GET** /subaccount/suppression/count | 
-[**suppressionRouterCreateSuppressions**](SubaccountsuppressionApi.md#suppressionRouterCreateSuppressions) | **POST** /subaccount/suppression/ | 
-[**suppressionRouterCreateSuppressionsInSuppressionFilter**](SubaccountsuppressionApi.md#suppressionRouterCreateSuppressionsInSuppressionFilter) | **POST** /subaccount/suppression/filter | 
-[**suppressionRouterDeleteSuppression**](SubaccountsuppressionApi.md#suppressionRouterDeleteSuppression) | **DELETE** /subaccount/suppression/ | 
-[**suppressionRouterDeleteSuppressionsInSuppressionFilter**](SubaccountsuppressionApi.md#suppressionRouterDeleteSuppressionsInSuppressionFilter) | **DELETE** /subaccount/suppression/filter | 
-[**suppressionRouterGetAllSuppressions**](SubaccountsuppressionApi.md#suppressionRouterGetAllSuppressions) | **GET** /subaccount/suppression/ | 
+[**SuppressionRouterCount**](SubaccountsuppressionApi.md#SuppressionRouterCount) | **Get** /subaccount/suppression/count | 
+[**SuppressionRouterCreateSuppressions**](SubaccountsuppressionApi.md#SuppressionRouterCreateSuppressions) | **Post** /subaccount/suppression/ | 
+[**SuppressionRouterCreateSuppressionsInSuppressionFilter**](SubaccountsuppressionApi.md#SuppressionRouterCreateSuppressionsInSuppressionFilter) | **Post** /subaccount/suppression/filter | 
+[**SuppressionRouterDeleteSuppression**](SubaccountsuppressionApi.md#SuppressionRouterDeleteSuppression) | **Delete** /subaccount/suppression/ | 
+[**SuppressionRouterDeleteSuppressionsInSuppressionFilter**](SubaccountsuppressionApi.md#SuppressionRouterDeleteSuppressionsInSuppressionFilter) | **Delete** /subaccount/suppression/filter | 
+[**SuppressionRouterGetAllSuppressions**](SubaccountsuppressionApi.md#SuppressionRouterGetAllSuppressions) | **Get** /subaccount/suppression/ | 
 
 
-<a name="suppressionRouterCount"></a>
-# **suppressionRouterCount**
-> ModelsCountStat suppressionRouterCount(xSubAccountApiKey)
-
+# **SuppressionRouterCount**
+> ModelsCountStat SuppressionRouterCount(ctx, xSubAccountApiKey)
 
 
 Count Total Suppressions
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountsuppressionApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.suppressionRouterCount(xSubAccountApiKey, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xSubAccountApiKey** | **string**| Sub-Account API Key | 
 
 ### Return type
 
-[**ModelsCountStat**](ModelsCountStat.md)
+[**ModelsCountStat**](models.CountStat.md)
 
 ### Authorization
 
@@ -58,45 +38,25 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="suppressionRouterCreateSuppressions"></a>
-# **suppressionRouterCreateSuppressions**
-> ModelsSuppression suppressionRouterCreateSuppressions(xSubAccountApiKey, body)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **SuppressionRouterCreateSuppressions**
+> ModelsSuppression SuppressionRouterCreateSuppressions(ctx, xSubAccountApiKey, body)
 
 
 Add Email Addresses To Suppression List
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountsuppressionApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var body = new SendPostApi.ModelsRSuppression(); // ModelsRSuppression | Suppression content
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.suppressionRouterCreateSuppressions(xSubAccountApiKey, body, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **body** | [**ModelsRSuppression**](ModelsRSuppression.md)| Suppression content | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xSubAccountApiKey** | **string**| Sub-Account API Key | 
+  **body** | [**ModelsRSuppression**](ModelsRSuppression.md)| Suppression content | 
 
 ### Return type
 
-[**ModelsSuppression**](ModelsSuppression.md)
+[**ModelsSuppression**](models.Suppression.md)
 
 ### Authorization
 
@@ -107,42 +67,24 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="suppressionRouterCreateSuppressionsInSuppressionFilter"></a>
-# **suppressionRouterCreateSuppressionsInSuppressionFilter**
-> suppressionRouterCreateSuppressionsInSuppressionFilter(body)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **SuppressionRouterCreateSuppressionsInSuppressionFilter**
+> SuppressionRouterCreateSuppressionsInSuppressionFilter(ctx, body)
 
 
 Add Email Addresses To Suppression Filter
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountsuppressionApi();
-
-var body = new SendPostApi.ModelsSuppression(); // ModelsSuppression | Add suppressions to suppression filter
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.suppressionRouterCreateSuppressionsInSuppressionFilter(body, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ModelsSuppression**](ModelsSuppression.md)| Add suppressions to suppression filter | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **body** | [**ModelsSuppression**](ModelsSuppression.md)| Add suppressions to suppression filter | 
 
 ### Return type
 
-null (empty response body)
+ (empty response body)
 
 ### Authorization
 
@@ -153,45 +95,25 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="suppressionRouterDeleteSuppression"></a>
-# **suppressionRouterDeleteSuppression**
-> ModelsSuppression suppressionRouterDeleteSuppression(xSubAccountApiKey, body)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **SuppressionRouterDeleteSuppression**
+> ModelsSuppression SuppressionRouterDeleteSuppression(ctx, xSubAccountApiKey, body)
 
 
 Delete specific emails which are in suppression list
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountsuppressionApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var body = new SendPostApi.ModelsRDSuppression(); // ModelsRDSuppression | Suppression content
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.suppressionRouterDeleteSuppression(xSubAccountApiKey, body, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **body** | [**ModelsRDSuppression**](ModelsRDSuppression.md)| Suppression content | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xSubAccountApiKey** | **string**| Sub-Account API Key | 
+  **body** | [**ModelsRdSuppression**](ModelsRdSuppression.md)| Suppression content | 
 
 ### Return type
 
-[**ModelsSuppression**](ModelsSuppression.md)
+[**ModelsSuppression**](models.Suppression.md)
 
 ### Authorization
 
@@ -202,42 +124,24 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="suppressionRouterDeleteSuppressionsInSuppressionFilter"></a>
-# **suppressionRouterDeleteSuppressionsInSuppressionFilter**
-> suppressionRouterDeleteSuppressionsInSuppressionFilter(body)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **SuppressionRouterDeleteSuppressionsInSuppressionFilter**
+> SuppressionRouterDeleteSuppressionsInSuppressionFilter(ctx, body)
 
 
 Delete specific emails which are in suppression list
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountsuppressionApi();
-
-var body = new SendPostApi.ModelsSuppression(); // ModelsSuppression | Suppression content
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.suppressionRouterDeleteSuppressionsInSuppressionFilter(body, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ModelsSuppression**](ModelsSuppression.md)| Suppression content | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **body** | [**ModelsSuppression**](ModelsSuppression.md)| Suppression content | 
 
 ### Return type
 
-null (empty response body)
+ (empty response body)
 
 ### Authorization
 
@@ -248,50 +152,35 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="suppressionRouterGetAllSuppressions"></a>
-# **suppressionRouterGetAllSuppressions**
-> [ModelsSuppression] suppressionRouterGetAllSuppressions(xSubAccountApiKey, opts)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **SuppressionRouterGetAllSuppressions**
+> []ModelsSuppression SuppressionRouterGetAllSuppressions(ctx, xSubAccountApiKey, optional)
 
 
 Get all suppressions
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountsuppressionApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var opts = { 
-  'offset': 789, // Number | offset
-  'limit': 789, // Number | limit
-  'search': "search_example" // String | search
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.suppressionRouterGetAllSuppressions(xSubAccountApiKey, opts, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **offset** | **Number**| offset | [optional] 
- **limit** | **Number**| limit | [optional] 
- **search** | **String**| search | [optional] 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xSubAccountApiKey** | **string**| Sub-Account API Key | 
+ **optional** | ***SubaccountsuppressionApiSuppressionRouterGetAllSuppressionsOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+Optional parameters are passed through a pointer to a SubaccountsuppressionApiSuppressionRouterGetAllSuppressionsOpts struct
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **offset** | **optional.Int64**| offset | 
+ **limit** | **optional.Int64**| limit | 
+ **search** | **optional.String**| search | 
 
 ### Return type
 
-[**[ModelsSuppression]**](ModelsSuppression.md)
+[**[]ModelsSuppression**](models.Suppression.md)
 
 ### Authorization
 
@@ -301,4 +190,6 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

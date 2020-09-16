@@ -1,53 +1,33 @@
-# SendPostApi.AccountipApi
+# \AccountipApi
 
 All URIs are relative to *https://localhost/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**iPRouterAllocateIP**](AccountipApi.md#iPRouterAllocateIP) | **POST** /account/ip/allocate | 
-[**iPRouterCount**](AccountipApi.md#iPRouterCount) | **GET** /account/ip/count | 
-[**iPRouterDelete**](AccountipApi.md#iPRouterDelete) | **DELETE** /account/ip/{ipid} | 
-[**iPRouterGet**](AccountipApi.md#iPRouterGet) | **GET** /account/ip/{ipid} | 
-[**iPRouterGetAll**](AccountipApi.md#iPRouterGetAll) | **GET** /account/ip/ | 
-[**iPRouterUpdate**](AccountipApi.md#iPRouterUpdate) | **PUT** /account/ip/{ipid} | 
+[**IPRouterAllocateIP**](AccountipApi.md#IPRouterAllocateIP) | **Post** /account/ip/allocate | 
+[**IPRouterCount**](AccountipApi.md#IPRouterCount) | **Get** /account/ip/count | 
+[**IPRouterDelete**](AccountipApi.md#IPRouterDelete) | **Delete** /account/ip/{ipid} | 
+[**IPRouterGet**](AccountipApi.md#IPRouterGet) | **Get** /account/ip/{ipid} | 
+[**IPRouterGetAll**](AccountipApi.md#IPRouterGetAll) | **Get** /account/ip/ | 
+[**IPRouterUpdate**](AccountipApi.md#IPRouterUpdate) | **Put** /account/ip/{ipid} | 
 
 
-<a name="iPRouterAllocateIP"></a>
-# **iPRouterAllocateIP**
-> [ModelsIP] iPRouterAllocateIP(xAccountApiKey)
-
+# **IPRouterAllocateIP**
+> []ModelsIp IPRouterAllocateIP(ctx, xAccountApiKey)
 
 
 Allocate IP To Account
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.AccountipApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.iPRouterAllocateIP(xAccountApiKey, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Account API Key | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xAccountApiKey** | **string**| Account API Key | 
 
 ### Return type
 
-[**[ModelsIP]**](ModelsIP.md)
+[**[]ModelsIp**](models.IP.md)
 
 ### Authorization
 
@@ -58,42 +38,24 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="iPRouterCount"></a>
-# **iPRouterCount**
-> ModelsCountStat iPRouterCount(xAccountApiKey)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **IPRouterCount**
+> ModelsCountStat IPRouterCount(ctx, xAccountApiKey)
 
 
 Count Total AccountIPs
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.AccountipApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.iPRouterCount(xAccountApiKey, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Account API Key | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xAccountApiKey** | **string**| Account API Key | 
 
 ### Return type
 
-[**ModelsCountStat**](ModelsCountStat.md)
+[**ModelsCountStat**](models.CountStat.md)
 
 ### Authorization
 
@@ -104,45 +66,25 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="iPRouterDelete"></a>
-# **iPRouterDelete**
-> ModelsDeleteResponse iPRouterDelete(xAccountApiKey, ipid)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **IPRouterDelete**
+> ModelsDeleteResponse IPRouterDelete(ctx, xAccountApiKey, ipid)
 
 
 Delete IP
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.AccountipApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var ipid = 789; // Number | The IPId you want to delete
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.iPRouterDelete(xAccountApiKey, ipid, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Account API Key | 
- **ipid** | **Number**| The IPId you want to delete | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xAccountApiKey** | **string**| Account API Key | 
+  **ipid** | **int64**| The IPId you want to delete | 
 
 ### Return type
 
-[**ModelsDeleteResponse**](ModelsDeleteResponse.md)
+[**ModelsDeleteResponse**](models.DeleteResponse.md)
 
 ### Authorization
 
@@ -153,45 +95,25 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="iPRouterGet"></a>
-# **iPRouterGet**
-> ModelsIP iPRouterGet(xAccountApiKey, ipid)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **IPRouterGet**
+> ModelsIp IPRouterGet(ctx, xAccountApiKey, ipid)
 
 
 Find IP by IPId
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.AccountipApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var ipid = 789; // Number | the IPId you want to get
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.iPRouterGet(xAccountApiKey, ipid, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Account API Key | 
- **ipid** | **Number**| the IPId you want to get | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xAccountApiKey** | **string**| Account API Key | 
+  **ipid** | **int64**| the IPId you want to get | 
 
 ### Return type
 
-[**ModelsIP**](ModelsIP.md)
+[**ModelsIp**](models.IP.md)
 
 ### Authorization
 
@@ -202,50 +124,35 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="iPRouterGetAll"></a>
-# **iPRouterGetAll**
-> [ModelsIP] iPRouterGetAll(xAccountApiKey, opts)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **IPRouterGetAll**
+> []ModelsIp IPRouterGetAll(ctx, xAccountApiKey, optional)
 
 
 Get All IPs
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.AccountipApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var opts = { 
-  'offset': 789, // Number | offset
-  'limit': 789, // Number | limit
-  'search': "search_example" // String | search term
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.iPRouterGetAll(xAccountApiKey, opts, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Account API Key | 
- **offset** | **Number**| offset | [optional] 
- **limit** | **Number**| limit | [optional] 
- **search** | **String**| search term | [optional] 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xAccountApiKey** | **string**| Account API Key | 
+ **optional** | ***AccountipApiIPRouterGetAllOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+Optional parameters are passed through a pointer to a AccountipApiIPRouterGetAllOpts struct
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **offset** | **optional.Int64**| offset | 
+ **limit** | **optional.Int64**| limit | 
+ **search** | **optional.String**| search term | 
 
 ### Return type
 
-[**[ModelsIP]**](ModelsIP.md)
+[**[]ModelsIp**](models.IP.md)
 
 ### Authorization
 
@@ -256,48 +163,26 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="iPRouterUpdate"></a>
-# **iPRouterUpdate**
-> ModelsIP iPRouterUpdate(xAccountApiKey, ipid, body)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **IPRouterUpdate**
+> ModelsIp IPRouterUpdate(ctx, xAccountApiKey, ipid, body)
 
 
 Update an IP
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.AccountipApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var ipid = 789; // Number | The IP you want to update
-
-var body = new SendPostApi.ModelsIIP(); // ModelsIIP | The IP Email Provider Settings
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.iPRouterUpdate(xAccountApiKey, ipid, body, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Account API Key | 
- **ipid** | **Number**| The IP you want to update | 
- **body** | [**ModelsIIP**](ModelsIIP.md)| The IP Email Provider Settings | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xAccountApiKey** | **string**| Account API Key | 
+  **ipid** | **int64**| The IP you want to update | 
+  **body** | [**ModelsIip**](ModelsIip.md)| The IP Email Provider Settings | 
 
 ### Return type
 
-[**ModelsIP**](ModelsIP.md)
+[**ModelsIp**](models.IP.md)
 
 ### Authorization
 
@@ -307,4 +192,6 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

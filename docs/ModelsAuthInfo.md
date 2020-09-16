@@ -1,9 +1,11 @@
-# SendPostApi.ModelsAuthInfo
+# ModelsAuthInfo
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**accounts** | [**[ModelsAccount]**](ModelsAccount.md) |  | [optional] 
-**member** | [**ModelsMember**](ModelsMember.md) |  | [optional] 
+**Accounts** | [**[]ModelsAccount**](models.Account.md) |  | [optional] [default to null]
+**Member** | [***ModelsMember**](models.Member.md) |  | [optional] [default to null]
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

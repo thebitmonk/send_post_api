@@ -1,51 +1,29 @@
-# SendPostApi.SubaccountemailApi
+# \SubaccountemailApi
 
 All URIs are relative to *https://localhost/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**emailRouterSendEmail**](SubaccountemailApi.md#emailRouterSendEmail) | **POST** /subaccount/email/ | 
+[**EmailRouterSendEmail**](SubaccountemailApi.md#EmailRouterSendEmail) | **Post** /subaccount/email/ | 
 
 
-<a name="emailRouterSendEmail"></a>
-# **emailRouterSendEmail**
-> [ModelsEmailResponse] emailRouterSendEmail(xSubAccountApiKey, body)
-
+# **EmailRouterSendEmail**
+> []ModelsEmailResponse EmailRouterSendEmail(ctx, xSubAccountApiKey, body)
 
 
 Send Email To Contacts
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountemailApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var body = new SendPostApi.ModelsEmailMessage(); // ModelsEmailMessage | The Email Message
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.emailRouterSendEmail(xSubAccountApiKey, body, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **body** | [**ModelsEmailMessage**](ModelsEmailMessage.md)| The Email Message | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xSubAccountApiKey** | **string**| Sub-Account API Key | 
+  **body** | [**ModelsEmailMessage**](ModelsEmailMessage.md)| The Email Message | 
 
 ### Return type
 
-[**[ModelsEmailResponse]**](ModelsEmailResponse.md)
+[**[]ModelsEmailResponse**](models.EmailResponse.md)
 
 ### Authorization
 
@@ -55,4 +33,6 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

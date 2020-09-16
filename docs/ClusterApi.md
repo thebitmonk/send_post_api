@@ -1,49 +1,29 @@
-# SendPostApi.ClusterApi
+# \ClusterApi
 
 All URIs are relative to *https://localhost/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster**](ClusterApi.md#clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster) | **POST** /cluster/suppression/filter | 
-[**clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster**](ClusterApi.md#clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster) | **DELETE** /cluster/suppression/filter | 
+[**ClusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster**](ClusterApi.md#ClusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster) | **Post** /cluster/suppression/filter | 
+[**ClusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster**](ClusterApi.md#ClusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster) | **Delete** /cluster/suppression/filter | 
 
 
-<a name="clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster"></a>
-# **clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster**
-> clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster(body)
-
+# **ClusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster**
+> ClusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster(ctx, body)
 
 
 Add items to suppression filter of every node in cluster
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.ClusterApi();
-
-var body = new SendPostApi.ModelsSuppression(); // ModelsSuppression | Add suppressions to suppression filter
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster(body, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ModelsSuppression**](ModelsSuppression.md)| Add suppressions to suppression filter | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **body** | [**ModelsSuppression**](ModelsSuppression.md)| Add suppressions to suppression filter | 
 
 ### Return type
 
-null (empty response body)
+ (empty response body)
 
 ### Authorization
 
@@ -54,42 +34,24 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster"></a>
-# **clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster**
-> clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster(body)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **ClusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster**
+> ClusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster(ctx, body)
 
 
 Delete items from suppression filter of every node in cluster
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.ClusterApi();
-
-var body = new SendPostApi.ModelsSuppression(); // ModelsSuppression | Delete suppressions from suppression filter
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster(body, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ModelsSuppression**](ModelsSuppression.md)| Delete suppressions from suppression filter | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **body** | [**ModelsSuppression**](ModelsSuppression.md)| Delete suppressions from suppression filter | 
 
 ### Return type
 
-null (empty response body)
+ (empty response body)
 
 ### Authorization
 
@@ -99,4 +61,6 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

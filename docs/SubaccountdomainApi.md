@@ -1,53 +1,33 @@
-# SendPostApi.SubaccountdomainApi
+# \SubaccountdomainApi
 
 All URIs are relative to *https://localhost/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**domainRouterCount**](SubaccountdomainApi.md#domainRouterCount) | **GET** /subaccount/domain/count | 
-[**domainRouterCreate**](SubaccountdomainApi.md#domainRouterCreate) | **POST** /subaccount/domain/ | 
-[**domainRouterDelete**](SubaccountdomainApi.md#domainRouterDelete) | **DELETE** /subaccount/domain/{domainId} | 
-[**domainRouterGet**](SubaccountdomainApi.md#domainRouterGet) | **GET** /subaccount/domain/{domainId} | 
-[**domainRouterGetAll**](SubaccountdomainApi.md#domainRouterGetAll) | **GET** /subaccount/domain/ | 
-[**domainRouterUpdate**](SubaccountdomainApi.md#domainRouterUpdate) | **PUT** /subaccount/domain/{domainId} | 
+[**DomainRouterCount**](SubaccountdomainApi.md#DomainRouterCount) | **Get** /subaccount/domain/count | 
+[**DomainRouterCreate**](SubaccountdomainApi.md#DomainRouterCreate) | **Post** /subaccount/domain/ | 
+[**DomainRouterDelete**](SubaccountdomainApi.md#DomainRouterDelete) | **Delete** /subaccount/domain/{domainId} | 
+[**DomainRouterGet**](SubaccountdomainApi.md#DomainRouterGet) | **Get** /subaccount/domain/{domainId} | 
+[**DomainRouterGetAll**](SubaccountdomainApi.md#DomainRouterGetAll) | **Get** /subaccount/domain/ | 
+[**DomainRouterUpdate**](SubaccountdomainApi.md#DomainRouterUpdate) | **Put** /subaccount/domain/{domainId} | 
 
 
-<a name="domainRouterCount"></a>
-# **domainRouterCount**
-> ModelsCountStat domainRouterCount(xSubAccountApiKey)
-
+# **DomainRouterCount**
+> ModelsCountStat DomainRouterCount(ctx, xSubAccountApiKey)
 
 
 Count Total Domains
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountdomainApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.domainRouterCount(xSubAccountApiKey, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xSubAccountApiKey** | **string**| Sub-Account API Key | 
 
 ### Return type
 
-[**ModelsCountStat**](ModelsCountStat.md)
+[**ModelsCountStat**](models.CountStat.md)
 
 ### Authorization
 
@@ -58,45 +38,25 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="domainRouterCreate"></a>
-# **domainRouterCreate**
-> ModelsDomain domainRouterCreate(xSubAccountApiKey, body)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **DomainRouterCreate**
+> ModelsDomain DomainRouterCreate(ctx, xSubAccountApiKey, body)
 
 
 Create Domain
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountdomainApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var body = new SendPostApi.ModelsEDomain(); // ModelsEDomain | The Domain content
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.domainRouterCreate(xSubAccountApiKey, body, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **body** | [**ModelsEDomain**](ModelsEDomain.md)| The Domain content | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xSubAccountApiKey** | **string**| Sub-Account API Key | 
+  **body** | [**ModelsEDomain**](ModelsEDomain.md)| The Domain content | 
 
 ### Return type
 
-[**ModelsDomain**](ModelsDomain.md)
+[**ModelsDomain**](models.Domain.md)
 
 ### Authorization
 
@@ -107,45 +67,25 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="domainRouterDelete"></a>
-# **domainRouterDelete**
-> ModelsDeleteResponse domainRouterDelete(xSubAccountApiKey, domainId)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **DomainRouterDelete**
+> ModelsDeleteResponse DomainRouterDelete(ctx, xSubAccountApiKey, domainId)
 
 
 Delete Domain
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountdomainApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var domainId = 789; // Number | The DomainId you want to delete
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.domainRouterDelete(xSubAccountApiKey, domainId, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **domainId** | **Number**| The DomainId you want to delete | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xSubAccountApiKey** | **string**| Sub-Account API Key | 
+  **domainId** | **int64**| The DomainId you want to delete | 
 
 ### Return type
 
-[**ModelsDeleteResponse**](ModelsDeleteResponse.md)
+[**ModelsDeleteResponse**](models.DeleteResponse.md)
 
 ### Authorization
 
@@ -156,45 +96,25 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="domainRouterGet"></a>
-# **domainRouterGet**
-> ModelsDomain domainRouterGet(xSubAccountApiKey, domainId)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **DomainRouterGet**
+> ModelsDomain DomainRouterGet(ctx, xSubAccountApiKey, domainId)
 
 
 Find Domain by DomainId
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountdomainApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var domainId = 789; // Number | the DomainId you want to get
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.domainRouterGet(xSubAccountApiKey, domainId, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **domainId** | **Number**| the DomainId you want to get | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xSubAccountApiKey** | **string**| Sub-Account API Key | 
+  **domainId** | **int64**| the DomainId you want to get | 
 
 ### Return type
 
-[**ModelsDomain**](ModelsDomain.md)
+[**ModelsDomain**](models.Domain.md)
 
 ### Authorization
 
@@ -205,50 +125,35 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="domainRouterGetAll"></a>
-# **domainRouterGetAll**
-> [ModelsDomain] domainRouterGetAll(xSubAccountApiKey, opts)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **DomainRouterGetAll**
+> []ModelsDomain DomainRouterGetAll(ctx, xSubAccountApiKey, optional)
 
 
 Get All Domains
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountdomainApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var opts = { 
-  'offset': 789, // Number | offset
-  'limit': 789, // Number | limit
-  'search': "search_example" // String | search term
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.domainRouterGetAll(xSubAccountApiKey, opts, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **offset** | **Number**| offset | [optional] 
- **limit** | **Number**| limit | [optional] 
- **search** | **String**| search term | [optional] 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xSubAccountApiKey** | **string**| Sub-Account API Key | 
+ **optional** | ***SubaccountdomainApiDomainRouterGetAllOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+Optional parameters are passed through a pointer to a SubaccountdomainApiDomainRouterGetAllOpts struct
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **offset** | **optional.Int64**| offset | 
+ **limit** | **optional.Int64**| limit | 
+ **search** | **optional.String**| search term | 
 
 ### Return type
 
-[**[ModelsDomain]**](ModelsDomain.md)
+[**[]ModelsDomain**](models.Domain.md)
 
 ### Authorization
 
@@ -259,48 +164,26 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="domainRouterUpdate"></a>
-# **domainRouterUpdate**
-> ModelsDomain domainRouterUpdate(xSubAccountApiKey, domainId, body)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **DomainRouterUpdate**
+> ModelsDomain DomainRouterUpdate(ctx, xSubAccountApiKey, domainId, body)
 
 
 Update Domain
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountdomainApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var domainId = 789; // Number | The DomainId you want to update
-
-var body = new SendPostApi.ModelsEDomain(); // ModelsEDomain | The body
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.domainRouterUpdate(xSubAccountApiKey, domainId, body, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **domainId** | **Number**| The DomainId you want to update | 
- **body** | [**ModelsEDomain**](ModelsEDomain.md)| The body | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xSubAccountApiKey** | **string**| Sub-Account API Key | 
+  **domainId** | **int64**| The DomainId you want to update | 
+  **body** | [**ModelsEDomain**](ModelsEDomain.md)| The body | 
 
 ### Return type
 
-[**ModelsDomain**](ModelsDomain.md)
+[**ModelsDomain**](models.Domain.md)
 
 ### Authorization
 
@@ -310,4 +193,6 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -1,53 +1,33 @@
-# SendPostApi.AccountwebhookApi
+# \AccountwebhookApi
 
 All URIs are relative to *https://localhost/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**accountWebhookRouterCount**](AccountwebhookApi.md#accountWebhookRouterCount) | **GET** /account/webhook/count | 
-[**accountWebhookRouterCreate**](AccountwebhookApi.md#accountWebhookRouterCreate) | **POST** /account/webhook/ | 
-[**accountWebhookRouterDelete**](AccountwebhookApi.md#accountWebhookRouterDelete) | **DELETE** /account/webhook/{webhookId} | 
-[**accountWebhookRouterGet**](AccountwebhookApi.md#accountWebhookRouterGet) | **GET** /account/webhook/{webhookId} | 
-[**accountWebhookRouterGetAll**](AccountwebhookApi.md#accountWebhookRouterGetAll) | **GET** /account/webhook/ | 
-[**accountWebhookRouterUpdate**](AccountwebhookApi.md#accountWebhookRouterUpdate) | **PUT** /account/webhook/{webhookId} | 
+[**AccountWebhookRouterCount**](AccountwebhookApi.md#AccountWebhookRouterCount) | **Get** /account/webhook/count | 
+[**AccountWebhookRouterCreate**](AccountwebhookApi.md#AccountWebhookRouterCreate) | **Post** /account/webhook/ | 
+[**AccountWebhookRouterDelete**](AccountwebhookApi.md#AccountWebhookRouterDelete) | **Delete** /account/webhook/{webhookId} | 
+[**AccountWebhookRouterGet**](AccountwebhookApi.md#AccountWebhookRouterGet) | **Get** /account/webhook/{webhookId} | 
+[**AccountWebhookRouterGetAll**](AccountwebhookApi.md#AccountWebhookRouterGetAll) | **Get** /account/webhook/ | 
+[**AccountWebhookRouterUpdate**](AccountwebhookApi.md#AccountWebhookRouterUpdate) | **Put** /account/webhook/{webhookId} | 
 
 
-<a name="accountWebhookRouterCount"></a>
-# **accountWebhookRouterCount**
-> ModelsCountStat accountWebhookRouterCount(xAccountApiKey)
-
+# **AccountWebhookRouterCount**
+> ModelsCountStat AccountWebhookRouterCount(ctx, xAccountApiKey)
 
 
 Count Total AccountWebhooks
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.AccountwebhookApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.accountWebhookRouterCount(xAccountApiKey, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Account API Key | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xAccountApiKey** | **string**| Account API Key | 
 
 ### Return type
 
-[**ModelsCountStat**](ModelsCountStat.md)
+[**ModelsCountStat**](models.CountStat.md)
 
 ### Authorization
 
@@ -58,45 +38,25 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="accountWebhookRouterCreate"></a>
-# **accountWebhookRouterCreate**
-> ModelsAccountWebhook accountWebhookRouterCreate(xAccountApiKey, body)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **AccountWebhookRouterCreate**
+> ModelsAccountWebhook AccountWebhookRouterCreate(ctx, xAccountApiKey, body)
 
 
 Create AccountWebhook
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.AccountwebhookApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var body = new SendPostApi.ModelsEWebhook(); // ModelsEWebhook | The AccountWebhook content
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.accountWebhookRouterCreate(xAccountApiKey, body, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Account API Key | 
- **body** | [**ModelsEWebhook**](ModelsEWebhook.md)| The AccountWebhook content | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xAccountApiKey** | **string**| Account API Key | 
+  **body** | [**ModelsEWebhook**](ModelsEWebhook.md)| The AccountWebhook content | 
 
 ### Return type
 
-[**ModelsAccountWebhook**](ModelsAccountWebhook.md)
+[**ModelsAccountWebhook**](models.AccountWebhook.md)
 
 ### Authorization
 
@@ -107,45 +67,25 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="accountWebhookRouterDelete"></a>
-# **accountWebhookRouterDelete**
-> ModelsDeleteResponse accountWebhookRouterDelete(xAccountApiKey, webhookId)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **AccountWebhookRouterDelete**
+> ModelsDeleteResponse AccountWebhookRouterDelete(ctx, xAccountApiKey, webhookId)
 
 
 Delete AccountWebhook
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.AccountwebhookApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var webhookId = 789; // Number | The AccountWebhookId you want to delete
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.accountWebhookRouterDelete(xAccountApiKey, webhookId, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Account API Key | 
- **webhookId** | **Number**| The AccountWebhookId you want to delete | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xAccountApiKey** | **string**| Account API Key | 
+  **webhookId** | **int64**| The AccountWebhookId you want to delete | 
 
 ### Return type
 
-[**ModelsDeleteResponse**](ModelsDeleteResponse.md)
+[**ModelsDeleteResponse**](models.DeleteResponse.md)
 
 ### Authorization
 
@@ -156,45 +96,25 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="accountWebhookRouterGet"></a>
-# **accountWebhookRouterGet**
-> ModelsAccountWebhook accountWebhookRouterGet(xAccountApiKey, webhookId)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **AccountWebhookRouterGet**
+> ModelsAccountWebhook AccountWebhookRouterGet(ctx, xAccountApiKey, webhookId)
 
 
 Find AccountWebhook by AccountWebhookId
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.AccountwebhookApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var webhookId = 789; // Number | the AccountWebhookId you want to get
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.accountWebhookRouterGet(xAccountApiKey, webhookId, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Account API Key | 
- **webhookId** | **Number**| the AccountWebhookId you want to get | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xAccountApiKey** | **string**| Account API Key | 
+  **webhookId** | **int64**| the AccountWebhookId you want to get | 
 
 ### Return type
 
-[**ModelsAccountWebhook**](ModelsAccountWebhook.md)
+[**ModelsAccountWebhook**](models.AccountWebhook.md)
 
 ### Authorization
 
@@ -205,50 +125,35 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="accountWebhookRouterGetAll"></a>
-# **accountWebhookRouterGetAll**
-> [ModelsAccountWebhook] accountWebhookRouterGetAll(xAccountApiKey, opts)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **AccountWebhookRouterGetAll**
+> []ModelsAccountWebhook AccountWebhookRouterGetAll(ctx, xAccountApiKey, optional)
 
 
 Get All AccountWebhooks
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.AccountwebhookApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var opts = { 
-  'offset': 789, // Number | offset
-  'limit': 789, // Number | limit
-  'search': "search_example" // String | search
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.accountWebhookRouterGetAll(xAccountApiKey, opts, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Account API Key | 
- **offset** | **Number**| offset | [optional] 
- **limit** | **Number**| limit | [optional] 
- **search** | **String**| search | [optional] 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xAccountApiKey** | **string**| Account API Key | 
+ **optional** | ***AccountwebhookApiAccountWebhookRouterGetAllOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+Optional parameters are passed through a pointer to a AccountwebhookApiAccountWebhookRouterGetAllOpts struct
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **offset** | **optional.Int64**| offset | 
+ **limit** | **optional.Int64**| limit | 
+ **search** | **optional.String**| search | 
 
 ### Return type
 
-[**[ModelsAccountWebhook]**](ModelsAccountWebhook.md)
+[**[]ModelsAccountWebhook**](models.AccountWebhook.md)
 
 ### Authorization
 
@@ -259,48 +164,26 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="accountWebhookRouterUpdate"></a>
-# **accountWebhookRouterUpdate**
-> ModelsAccountWebhook accountWebhookRouterUpdate(xAccountApiKey, webhookId, body)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **AccountWebhookRouterUpdate**
+> ModelsAccountWebhook AccountWebhookRouterUpdate(ctx, xAccountApiKey, webhookId, body)
 
 
 Update AccountWebhook
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.AccountwebhookApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var webhookId = 789; // Number | The AccountWebhookId you want to update
-
-var body = new SendPostApi.ModelsEWebhook(); // ModelsEWebhook | The body
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.accountWebhookRouterUpdate(xAccountApiKey, webhookId, body, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Account API Key | 
- **webhookId** | **Number**| The AccountWebhookId you want to update | 
- **body** | [**ModelsEWebhook**](ModelsEWebhook.md)| The body | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xAccountApiKey** | **string**| Account API Key | 
+  **webhookId** | **int64**| The AccountWebhookId you want to update | 
+  **body** | [**ModelsEWebhook**](ModelsEWebhook.md)| The body | 
 
 ### Return type
 
-[**ModelsAccountWebhook**](ModelsAccountWebhook.md)
+[**ModelsAccountWebhook**](models.AccountWebhook.md)
 
 ### Authorization
 
@@ -310,4 +193,6 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

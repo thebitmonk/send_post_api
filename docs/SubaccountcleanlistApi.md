@@ -1,53 +1,38 @@
-# SendPostApi.SubaccountcleanlistApi
+# \SubaccountcleanlistApi
 
 All URIs are relative to *https://localhost/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**listCleaningRouterCleanBulkEmailList**](SubaccountcleanlistApi.md#listCleaningRouterCleanBulkEmailList) | **POST** /subaccount/cleanlist/bulk | 
-[**listCleaningRouterCleanEmailist**](SubaccountcleanlistApi.md#listCleaningRouterCleanEmailist) | **POST** /subaccount/cleanlist/ | 
+[**ListCleaningRouterCleanBulkEmailList**](SubaccountcleanlistApi.md#ListCleaningRouterCleanBulkEmailList) | **Post** /subaccount/cleanlist/bulk | 
+[**ListCleaningRouterCleanEmailist**](SubaccountcleanlistApi.md#ListCleaningRouterCleanEmailist) | **Post** /subaccount/cleanlist/ | 
 
 
-<a name="listCleaningRouterCleanBulkEmailList"></a>
-# **listCleaningRouterCleanBulkEmailList**
-> ModelsBulkResponse listCleaningRouterCleanBulkEmailList(xSubAccountApiKey, opts)
-
+# **ListCleaningRouterCleanBulkEmailList**
+> ModelsBulkResponse ListCleaningRouterCleanBulkEmailList(ctx, xSubAccountApiKey, optional)
 
 
 Upload a csv of emails which will be processed and sent as a mail
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountcleanlistApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var opts = { 
-  'fileinput': "/path/to/file.txt" // File | true
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.listCleaningRouterCleanBulkEmailList(xSubAccountApiKey, opts, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **fileinput** | **File**| true | [optional] 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xSubAccountApiKey** | **string**| Sub-Account API Key | 
+ **optional** | ***SubaccountcleanlistApiListCleaningRouterCleanBulkEmailListOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+Optional parameters are passed through a pointer to a SubaccountcleanlistApiListCleaningRouterCleanBulkEmailListOpts struct
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **fileinput** | **optional.Interface of *os.File**| true | 
 
 ### Return type
 
-[**ModelsBulkResponse**](ModelsBulkResponse.md)
+[**ModelsBulkResponse**](models.BulkResponse.md)
 
 ### Authorization
 
@@ -58,45 +43,25 @@ No authorization required
  - **Content-Type**: multipart/form-data
  - **Accept**: Not defined
 
-<a name="listCleaningRouterCleanEmailist"></a>
-# **listCleaningRouterCleanEmailist**
-> ModelsCleanedList listCleaningRouterCleanEmailist(xSubAccountApiKey, body)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **ListCleaningRouterCleanEmailist**
+> ModelsCleanedList ListCleaningRouterCleanEmailist(ctx, xSubAccountApiKey, body)
 
 
 Send a list of emails and will get a result containing valid,invalid and detailed list response
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountcleanlistApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var body = new SendPostApi.ModelsEmailList(); // ModelsEmailList | The list of emails to clean
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.listCleaningRouterCleanEmailist(xSubAccountApiKey, body, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **body** | [**ModelsEmailList**](ModelsEmailList.md)| The list of emails to clean | 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xSubAccountApiKey** | **string**| Sub-Account API Key | 
+  **body** | [**ModelsEmailList**](ModelsEmailList.md)| The list of emails to clean | 
 
 ### Return type
 
-[**ModelsCleanedList**](ModelsCleanedList.md)
+[**ModelsCleanedList**](models.CleanedList.md)
 
 ### Authorization
 
@@ -106,4 +71,6 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

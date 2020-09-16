@@ -1,14 +1,16 @@
-# SendPostApi.ModelsIPPool
+# ModelsIpPool
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**created** | **Number** |  | [optional] 
-**id** | **Number** |  | [optional] 
-**ips** | [**[ModelsIP]**](ModelsIP.md) |  | [optional] 
-**name** | **String** |  | [optional] 
-**routingMetaData** | **String** |  | [optional] 
-**routingStrategy** | **Number** |  | [optional] 
-**type** | [**ModelsIPPoolType**](ModelsIPPoolType.md) |  | [optional] 
+**Created** | **int64** |  | [optional] [default to null]
+**Id** | **int64** |  | [optional] [default to null]
+**Ips** | [**[]ModelsIp**](models.IP.md) |  | [optional] [default to null]
+**Name** | **string** |  | [optional] [default to null]
+**RoutingMetaData** | **string** |  | [optional] [default to null]
+**RoutingStrategy** | **int64** |  | [optional] [default to null]
+**Type_** | [***ModelsIpPoolType**](models.IPPoolType.md) |  | [optional] [default to null]
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

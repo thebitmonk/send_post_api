@@ -1,57 +1,41 @@
-# SendPostApi.AccountstatApi
+# \AccountstatApi
 
 All URIs are relative to *https://localhost/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**accountStatRouterGetAllAccountStats**](AccountstatApi.md#accountStatRouterGetAllAccountStats) | **GET** /account/stat/ | 
-[**accountStatRouterGetAllAccountStatsByGroup**](AccountstatApi.md#accountStatRouterGetAllAccountStatsByGroup) | **GET** /account/stat/group | 
-[**accountStatRouterGetAllAggregateAccountStats**](AccountstatApi.md#accountStatRouterGetAllAggregateAccountStats) | **GET** /account/stat/aggregate | 
-[**accountStatRouterGetAllAggregateAccountStatsByGroup**](AccountstatApi.md#accountStatRouterGetAllAggregateAccountStatsByGroup) | **GET** /account/stat/aggregate/group | 
+[**AccountStatRouterGetAllAccountStats**](AccountstatApi.md#AccountStatRouterGetAllAccountStats) | **Get** /account/stat/ | 
+[**AccountStatRouterGetAllAccountStatsByGroup**](AccountstatApi.md#AccountStatRouterGetAllAccountStatsByGroup) | **Get** /account/stat/group | 
+[**AccountStatRouterGetAllAggregateAccountStats**](AccountstatApi.md#AccountStatRouterGetAllAggregateAccountStats) | **Get** /account/stat/aggregate | 
+[**AccountStatRouterGetAllAggregateAccountStatsByGroup**](AccountstatApi.md#AccountStatRouterGetAllAggregateAccountStatsByGroup) | **Get** /account/stat/aggregate/group | 
 
 
-<a name="accountStatRouterGetAllAccountStats"></a>
-# **accountStatRouterGetAllAccountStats**
-> [ModelsRStat] accountStatRouterGetAllAccountStats(xAccountApiKey, opts)
-
+# **AccountStatRouterGetAllAccountStats**
+> []ModelsRStat AccountStatRouterGetAllAccountStats(ctx, xAccountApiKey, optional)
 
 
 Get All Account Stats
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.AccountstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Sub-Account API Key
-
-var opts = { 
-  'from': "from_example", // String | from date
-  'to': "to_example" // String | to date
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.accountStatRouterGetAllAccountStats(xAccountApiKey, opts, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Sub-Account API Key | 
- **from** | **String**| from date | [optional] 
- **to** | **String**| to date | [optional] 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xAccountApiKey** | **string**| Sub-Account API Key | 
+ **optional** | ***AccountstatApiAccountStatRouterGetAllAccountStatsOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+Optional parameters are passed through a pointer to a AccountstatApiAccountStatRouterGetAllAccountStatsOpts struct
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **from** | **optional.String**| from date | 
+ **to** | **optional.String**| to date | 
 
 ### Return type
 
-[**[ModelsRStat]**](ModelsRStat.md)
+[**[]ModelsRStat**](models.RStat.md)
 
 ### Authorization
 
@@ -62,51 +46,36 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="accountStatRouterGetAllAccountStatsByGroup"></a>
-# **accountStatRouterGetAllAccountStatsByGroup**
-> [ModelsRStat] accountStatRouterGetAllAccountStatsByGroup(xAccountApiKey, group, opts)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **AccountStatRouterGetAllAccountStatsByGroup**
+> []ModelsRStat AccountStatRouterGetAllAccountStatsByGroup(ctx, xAccountApiKey, group, optional)
 
 
 Get All Account Stats by Group
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.AccountstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Sub-Account API Key
-
-var group = "group_example"; // String | the group whose stats you want
-
-var opts = { 
-  'from': "from_example", // String | from date
-  'to': "to_example" // String | to date
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.accountStatRouterGetAllAccountStatsByGroup(xAccountApiKey, group, opts, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Sub-Account API Key | 
- **group** | **String**| the group whose stats you want | 
- **from** | **String**| from date | [optional] 
- **to** | **String**| to date | [optional] 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xAccountApiKey** | **string**| Sub-Account API Key | 
+  **group** | **string**| the group whose stats you want | 
+ **optional** | ***AccountstatApiAccountStatRouterGetAllAccountStatsByGroupOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+Optional parameters are passed through a pointer to a AccountstatApiAccountStatRouterGetAllAccountStatsByGroupOpts struct
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+ **from** | **optional.String**| from date | 
+ **to** | **optional.String**| to date | 
 
 ### Return type
 
-[**[ModelsRStat]**](ModelsRStat.md)
+[**[]ModelsRStat**](models.RStat.md)
 
 ### Authorization
 
@@ -117,48 +86,34 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="accountStatRouterGetAllAggregateAccountStats"></a>
-# **accountStatRouterGetAllAggregateAccountStats**
-> ModelsStat accountStatRouterGetAllAggregateAccountStats(xAccountApiKey, opts)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **AccountStatRouterGetAllAggregateAccountStats**
+> ModelsStat AccountStatRouterGetAllAggregateAccountStats(ctx, xAccountApiKey, optional)
 
 
 Get All Aggregate Stats
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.AccountstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Sub-Account API Key
-
-var opts = { 
-  'from': "from_example", // String | from date
-  'to': "to_example" // String | to date
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.accountStatRouterGetAllAggregateAccountStats(xAccountApiKey, opts, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Sub-Account API Key | 
- **from** | **String**| from date | [optional] 
- **to** | **String**| to date | [optional] 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xAccountApiKey** | **string**| Sub-Account API Key | 
+ **optional** | ***AccountstatApiAccountStatRouterGetAllAggregateAccountStatsOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+Optional parameters are passed through a pointer to a AccountstatApiAccountStatRouterGetAllAggregateAccountStatsOpts struct
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **from** | **optional.String**| from date | 
+ **to** | **optional.String**| to date | 
 
 ### Return type
 
-[**ModelsStat**](ModelsStat.md)
+[**ModelsStat**](models.Stat.md)
 
 ### Authorization
 
@@ -169,51 +124,36 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="accountStatRouterGetAllAggregateAccountStatsByGroup"></a>
-# **accountStatRouterGetAllAggregateAccountStatsByGroup**
-> ModelsStat accountStatRouterGetAllAggregateAccountStatsByGroup(xAccountApiKey, group, opts)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **AccountStatRouterGetAllAggregateAccountStatsByGroup**
+> ModelsStat AccountStatRouterGetAllAggregateAccountStatsByGroup(ctx, xAccountApiKey, group, optional)
 
 
 Get All Aggregate Stats by Group
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.AccountstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Sub-Account API Key
-
-var group = "group_example"; // String | the group whose stats you want
-
-var opts = { 
-  'from': "from_example", // String | from date
-  'to': "to_example" // String | to date
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.accountStatRouterGetAllAggregateAccountStatsByGroup(xAccountApiKey, group, opts, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Sub-Account API Key | 
- **group** | **String**| the group whose stats you want | 
- **from** | **String**| from date | [optional] 
- **to** | **String**| to date | [optional] 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xAccountApiKey** | **string**| Sub-Account API Key | 
+  **group** | **string**| the group whose stats you want | 
+ **optional** | ***AccountstatApiAccountStatRouterGetAllAggregateAccountStatsByGroupOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+Optional parameters are passed through a pointer to a AccountstatApiAccountStatRouterGetAllAggregateAccountStatsByGroupOpts struct
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+ **from** | **optional.String**| from date | 
+ **to** | **optional.String**| to date | 
 
 ### Return type
 
-[**ModelsStat**](ModelsStat.md)
+[**ModelsStat**](models.Stat.md)
 
 ### Authorization
 
@@ -223,4 +163,6 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

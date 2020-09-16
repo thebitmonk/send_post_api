@@ -1,14 +1,16 @@
-# SendPostApi.ModelsSender
+# ModelsSender
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**created** | **Number** |  | [optional] 
-**domain** | **String** |  | [optional] 
-**fromEmail** | **String** |  | [optional] 
-**id** | **Number** |  | [optional] 
-**name** | **String** |  | [optional] 
-**replyToEmail** | **String** |  | [optional] 
-**verified** | **Boolean** |  | [optional] 
+**Created** | **int64** |  | [optional] [default to null]
+**Domain** | **string** |  | [optional] [default to null]
+**FromEmail** | **string** |  | [optional] [default to null]
+**Id** | **int64** |  | [optional] [default to null]
+**Name** | **string** |  | [optional] [default to null]
+**ReplyToEmail** | **string** |  | [optional] [default to null]
+**Verified** | **bool** |  | [optional] [default to null]
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

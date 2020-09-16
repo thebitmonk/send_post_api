@@ -1,61 +1,45 @@
-# SendPostApi.SubaccountstatApi
+# \SubaccountstatApi
 
 All URIs are relative to *https://localhost/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**subAccountStatRouterGetAllAggregateSubAccountStats**](SubaccountstatApi.md#subAccountStatRouterGetAllAggregateSubAccountStats) | **GET** /subaccount/stat/aggregate | 
-[**subAccountStatRouterGetAllAggregateSubAccountStatsByGroup**](SubaccountstatApi.md#subAccountStatRouterGetAllAggregateSubAccountStatsByGroup) | **GET** /subaccount/stat/aggregate/group | 
-[**subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount**](SubaccountstatApi.md#subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount) | **GET** /subaccount/stat/aggregate/groups | 
-[**subAccountStatRouterGetAllAggregatedIPStatsForASubAccount**](SubaccountstatApi.md#subAccountStatRouterGetAllAggregatedIPStatsForASubAccount) | **GET** /subaccount/stat/aggregate/ips | 
-[**subAccountStatRouterGetAllAggregatedProviderStatsForASpecificIPOfASubAccount**](SubaccountstatApi.md#subAccountStatRouterGetAllAggregatedProviderStatsForASpecificIPOfASubAccount) | **GET** /subaccount/stat/aggregate/ip/{ipid}/providers | 
-[**subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount**](SubaccountstatApi.md#subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount) | **GET** /subaccount/stat/aggregate/providers | 
-[**subAccountStatRouterGetAllSubAccountStats**](SubaccountstatApi.md#subAccountStatRouterGetAllSubAccountStats) | **GET** /subaccount/stat/ | 
-[**subAccountStatRouterGetAllSubAccountStatsByGroup**](SubaccountstatApi.md#subAccountStatRouterGetAllSubAccountStatsByGroup) | **GET** /subaccount/stat/group | 
+[**SubAccountStatRouterGetAllAggregateSubAccountStats**](SubaccountstatApi.md#SubAccountStatRouterGetAllAggregateSubAccountStats) | **Get** /subaccount/stat/aggregate | 
+[**SubAccountStatRouterGetAllAggregateSubAccountStatsByGroup**](SubaccountstatApi.md#SubAccountStatRouterGetAllAggregateSubAccountStatsByGroup) | **Get** /subaccount/stat/aggregate/group | 
+[**SubAccountStatRouterGetAllAggregatedGroupStatsForASubAccount**](SubaccountstatApi.md#SubAccountStatRouterGetAllAggregatedGroupStatsForASubAccount) | **Get** /subaccount/stat/aggregate/groups | 
+[**SubAccountStatRouterGetAllAggregatedIPStatsForASubAccount**](SubaccountstatApi.md#SubAccountStatRouterGetAllAggregatedIPStatsForASubAccount) | **Get** /subaccount/stat/aggregate/ips | 
+[**SubAccountStatRouterGetAllAggregatedProviderStatsForASpecificIPOfASubAccount**](SubaccountstatApi.md#SubAccountStatRouterGetAllAggregatedProviderStatsForASpecificIPOfASubAccount) | **Get** /subaccount/stat/aggregate/ip/{ipid}/providers | 
+[**SubAccountStatRouterGetAllAggregatedProviderStatsForASubAccount**](SubaccountstatApi.md#SubAccountStatRouterGetAllAggregatedProviderStatsForASubAccount) | **Get** /subaccount/stat/aggregate/providers | 
+[**SubAccountStatRouterGetAllSubAccountStats**](SubaccountstatApi.md#SubAccountStatRouterGetAllSubAccountStats) | **Get** /subaccount/stat/ | 
+[**SubAccountStatRouterGetAllSubAccountStatsByGroup**](SubaccountstatApi.md#SubAccountStatRouterGetAllSubAccountStatsByGroup) | **Get** /subaccount/stat/group | 
 
 
-<a name="subAccountStatRouterGetAllAggregateSubAccountStats"></a>
-# **subAccountStatRouterGetAllAggregateSubAccountStats**
-> ModelsStat subAccountStatRouterGetAllAggregateSubAccountStats(xSubAccountApiKey, opts)
-
+# **SubAccountStatRouterGetAllAggregateSubAccountStats**
+> ModelsStat SubAccountStatRouterGetAllAggregateSubAccountStats(ctx, xSubAccountApiKey, optional)
 
 
 Get All Aggregate Sub-Account Stats
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountstatApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var opts = { 
-  'from': "from_example", // String | from date
-  'to': "to_example" // String | to date
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.subAccountStatRouterGetAllAggregateSubAccountStats(xSubAccountApiKey, opts, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **from** | **String**| from date | [optional] 
- **to** | **String**| to date | [optional] 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xSubAccountApiKey** | **string**| Sub-Account API Key | 
+ **optional** | ***SubaccountstatApiSubAccountStatRouterGetAllAggregateSubAccountStatsOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+Optional parameters are passed through a pointer to a SubaccountstatApiSubAccountStatRouterGetAllAggregateSubAccountStatsOpts struct
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **from** | **optional.String**| from date | 
+ **to** | **optional.String**| to date | 
 
 ### Return type
 
-[**ModelsStat**](ModelsStat.md)
+[**ModelsStat**](models.Stat.md)
 
 ### Authorization
 
@@ -66,51 +50,36 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="subAccountStatRouterGetAllAggregateSubAccountStatsByGroup"></a>
-# **subAccountStatRouterGetAllAggregateSubAccountStatsByGroup**
-> ModelsStat subAccountStatRouterGetAllAggregateSubAccountStatsByGroup(xSubAccountApiKey, group, opts)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **SubAccountStatRouterGetAllAggregateSubAccountStatsByGroup**
+> ModelsStat SubAccountStatRouterGetAllAggregateSubAccountStatsByGroup(ctx, xSubAccountApiKey, group, optional)
 
 
 Get All Aggregate Sub-Account Stats by Group
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountstatApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var group = "group_example"; // String | the group whose stats you want
-
-var opts = { 
-  'from': "from_example", // String | from date
-  'to': "to_example" // String | to date
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.subAccountStatRouterGetAllAggregateSubAccountStatsByGroup(xSubAccountApiKey, group, opts, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **group** | **String**| the group whose stats you want | 
- **from** | **String**| from date | [optional] 
- **to** | **String**| to date | [optional] 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xSubAccountApiKey** | **string**| Sub-Account API Key | 
+  **group** | **string**| the group whose stats you want | 
+ **optional** | ***SubaccountstatApiSubAccountStatRouterGetAllAggregateSubAccountStatsByGroupOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+Optional parameters are passed through a pointer to a SubaccountstatApiSubAccountStatRouterGetAllAggregateSubAccountStatsByGroupOpts struct
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+ **from** | **optional.String**| from date | 
+ **to** | **optional.String**| to date | 
 
 ### Return type
 
-[**ModelsStat**](ModelsStat.md)
+[**ModelsStat**](models.Stat.md)
 
 ### Authorization
 
@@ -121,48 +90,34 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount"></a>
-# **subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount**
-> [ModelsAGStat] subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount(xSubAccountApiKey, opts)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **SubAccountStatRouterGetAllAggregatedGroupStatsForASubAccount**
+> []ModelsAgStat SubAccountStatRouterGetAllAggregatedGroupStatsForASubAccount(ctx, xSubAccountApiKey, optional)
 
 
 Get All Aggregated Group Stats for a Sub-Account
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountstatApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var opts = { 
-  'from': "from_example", // String | from date
-  'to': "to_example" // String | to date
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount(xSubAccountApiKey, opts, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **from** | **String**| from date | [optional] 
- **to** | **String**| to date | [optional] 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xSubAccountApiKey** | **string**| Sub-Account API Key | 
+ **optional** | ***SubaccountstatApiSubAccountStatRouterGetAllAggregatedGroupStatsForASubAccountOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+Optional parameters are passed through a pointer to a SubaccountstatApiSubAccountStatRouterGetAllAggregatedGroupStatsForASubAccountOpts struct
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **from** | **optional.String**| from date | 
+ **to** | **optional.String**| to date | 
 
 ### Return type
 
-[**[ModelsAGStat]**](ModelsAGStat.md)
+[**[]ModelsAgStat**](models.AGStat.md)
 
 ### Authorization
 
@@ -173,48 +128,34 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="subAccountStatRouterGetAllAggregatedIPStatsForASubAccount"></a>
-# **subAccountStatRouterGetAllAggregatedIPStatsForASubAccount**
-> [ModelsAIPStat] subAccountStatRouterGetAllAggregatedIPStatsForASubAccount(xSubAccountApiKey, opts)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **SubAccountStatRouterGetAllAggregatedIPStatsForASubAccount**
+> []ModelsAipStat SubAccountStatRouterGetAllAggregatedIPStatsForASubAccount(ctx, xSubAccountApiKey, optional)
 
 
 Get All Aggregated IP Stats for a Sub-Account
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountstatApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var opts = { 
-  'from': "from_example", // String | from date
-  'to': "to_example" // String | to date
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.subAccountStatRouterGetAllAggregatedIPStatsForASubAccount(xSubAccountApiKey, opts, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **from** | **String**| from date | [optional] 
- **to** | **String**| to date | [optional] 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xSubAccountApiKey** | **string**| Sub-Account API Key | 
+ **optional** | ***SubaccountstatApiSubAccountStatRouterGetAllAggregatedIPStatsForASubAccountOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+Optional parameters are passed through a pointer to a SubaccountstatApiSubAccountStatRouterGetAllAggregatedIPStatsForASubAccountOpts struct
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **from** | **optional.String**| from date | 
+ **to** | **optional.String**| to date | 
 
 ### Return type
 
-[**[ModelsAIPStat]**](ModelsAIPStat.md)
+[**[]ModelsAipStat**](models.AIPStat.md)
 
 ### Authorization
 
@@ -225,51 +166,36 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="subAccountStatRouterGetAllAggregatedProviderStatsForASpecificIPOfASubAccount"></a>
-# **subAccountStatRouterGetAllAggregatedProviderStatsForASpecificIPOfASubAccount**
-> [ModelsPIPStat] subAccountStatRouterGetAllAggregatedProviderStatsForASpecificIPOfASubAccount(xSubAccountApiKey, ipid, opts)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **SubAccountStatRouterGetAllAggregatedProviderStatsForASpecificIPOfASubAccount**
+> []ModelsPipStat SubAccountStatRouterGetAllAggregatedProviderStatsForASpecificIPOfASubAccount(ctx, xSubAccountApiKey, ipid, optional)
 
 
 Get All Aggregated Provider Stats for a Specific IP of a Sub-Account
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountstatApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var ipid = 789; // Number | the IPId you want to get
-
-var opts = { 
-  'from': "from_example", // String | from date
-  'to': "to_example" // String | to date
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.subAccountStatRouterGetAllAggregatedProviderStatsForASpecificIPOfASubAccount(xSubAccountApiKey, ipid, opts, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **ipid** | **Number**| the IPId you want to get | 
- **from** | **String**| from date | [optional] 
- **to** | **String**| to date | [optional] 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xSubAccountApiKey** | **string**| Sub-Account API Key | 
+  **ipid** | **int64**| the IPId you want to get | 
+ **optional** | ***SubaccountstatApiSubAccountStatRouterGetAllAggregatedProviderStatsForASpecificIPOfASubAccountOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+Optional parameters are passed through a pointer to a SubaccountstatApiSubAccountStatRouterGetAllAggregatedProviderStatsForASpecificIPOfASubAccountOpts struct
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+ **from** | **optional.String**| from date | 
+ **to** | **optional.String**| to date | 
 
 ### Return type
 
-[**[ModelsPIPStat]**](ModelsPIPStat.md)
+[**[]ModelsPipStat**](models.PIPStat.md)
 
 ### Authorization
 
@@ -280,48 +206,34 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount"></a>
-# **subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount**
-> [ModelsPIPStat] subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount(xSubAccountApiKey, opts)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **SubAccountStatRouterGetAllAggregatedProviderStatsForASubAccount**
+> []ModelsPipStat SubAccountStatRouterGetAllAggregatedProviderStatsForASubAccount(ctx, xSubAccountApiKey, optional)
 
 
 Get All Aggregated Provider Stats for a Sub-Account
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountstatApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var opts = { 
-  'from': "from_example", // String | from date
-  'to': "to_example" // String | to date
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount(xSubAccountApiKey, opts, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **from** | **String**| from date | [optional] 
- **to** | **String**| to date | [optional] 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xSubAccountApiKey** | **string**| Sub-Account API Key | 
+ **optional** | ***SubaccountstatApiSubAccountStatRouterGetAllAggregatedProviderStatsForASubAccountOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+Optional parameters are passed through a pointer to a SubaccountstatApiSubAccountStatRouterGetAllAggregatedProviderStatsForASubAccountOpts struct
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **from** | **optional.String**| from date | 
+ **to** | **optional.String**| to date | 
 
 ### Return type
 
-[**[ModelsPIPStat]**](ModelsPIPStat.md)
+[**[]ModelsPipStat**](models.PIPStat.md)
 
 ### Authorization
 
@@ -332,48 +244,34 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="subAccountStatRouterGetAllSubAccountStats"></a>
-# **subAccountStatRouterGetAllSubAccountStats**
-> [ModelsRStat] subAccountStatRouterGetAllSubAccountStats(xSubAccountApiKey, opts)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **SubAccountStatRouterGetAllSubAccountStats**
+> []ModelsRStat SubAccountStatRouterGetAllSubAccountStats(ctx, xSubAccountApiKey, optional)
 
 
 Get All Sub-Account Stats
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountstatApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var opts = { 
-  'from': "from_example", // String | from date
-  'to': "to_example" // String | to date
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.subAccountStatRouterGetAllSubAccountStats(xSubAccountApiKey, opts, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **from** | **String**| from date | [optional] 
- **to** | **String**| to date | [optional] 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xSubAccountApiKey** | **string**| Sub-Account API Key | 
+ **optional** | ***SubaccountstatApiSubAccountStatRouterGetAllSubAccountStatsOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+Optional parameters are passed through a pointer to a SubaccountstatApiSubAccountStatRouterGetAllSubAccountStatsOpts struct
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **from** | **optional.String**| from date | 
+ **to** | **optional.String**| to date | 
 
 ### Return type
 
-[**[ModelsRStat]**](ModelsRStat.md)
+[**[]ModelsRStat**](models.RStat.md)
 
 ### Authorization
 
@@ -384,51 +282,36 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="subAccountStatRouterGetAllSubAccountStatsByGroup"></a>
-# **subAccountStatRouterGetAllSubAccountStatsByGroup**
-> [ModelsRStat] subAccountStatRouterGetAllSubAccountStatsByGroup(xSubAccountApiKey, group, opts)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **SubAccountStatRouterGetAllSubAccountStatsByGroup**
+> []ModelsRStat SubAccountStatRouterGetAllSubAccountStatsByGroup(ctx, xSubAccountApiKey, group, optional)
 
 
 Get All Sub-Account Stats by Group
 
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.SubaccountstatApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var group = "group_example"; // String | the tag whose stats you want
-
-var opts = { 
-  'from': "from_example", // String | from date
-  'to': "to_example" // String | to date
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.subAccountStatRouterGetAllSubAccountStatsByGroup(xSubAccountApiKey, group, opts, callback);
-```
-
-### Parameters
+### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **group** | **String**| the tag whose stats you want | 
- **from** | **String**| from date | [optional] 
- **to** | **String**| to date | [optional] 
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **xSubAccountApiKey** | **string**| Sub-Account API Key | 
+  **group** | **string**| the tag whose stats you want | 
+ **optional** | ***SubaccountstatApiSubAccountStatRouterGetAllSubAccountStatsByGroupOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+Optional parameters are passed through a pointer to a SubaccountstatApiSubAccountStatRouterGetAllSubAccountStatsByGroupOpts struct
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+ **from** | **optional.String**| from date | 
+ **to** | **optional.String**| to date | 
 
 ### Return type
 
-[**[ModelsRStat]**](ModelsRStat.md)
+[**[]ModelsRStat**](models.RStat.md)
 
 ### Authorization
 
@@ -438,4 +321,6 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

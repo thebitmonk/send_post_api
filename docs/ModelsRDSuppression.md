@@ -1,8 +1,10 @@
-# SendPostApi.ModelsRDSuppression
+# ModelsRdSuppression
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**suppressions** | [**[ModelsSuppressionEmail]**](ModelsSuppressionEmail.md) |  | [optional] 
+**Suppressions** | [**[]ModelsSuppressionEmail**](models.SuppressionEmail.md) |  | [optional] [default to null]
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 
