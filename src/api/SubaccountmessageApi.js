@@ -168,11 +168,10 @@
      * Find all message events associated with a message id from a specific node
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {String} messageId the messageId that you want to retrieve
-     * @param {Number} subAccountId the subAccountId whose message you want to retrieve
      * @param {module:api/SubaccountmessageApi~messageRouterGetAllEventsForAMessageIdFromANodeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsQEvent>}
      */
-    this.messageRouterGetAllEventsForAMessageIdFromANode = function(xSubAccountApiKey, messageId, subAccountId, callback) {
+    this.messageRouterGetAllEventsForAMessageIdFromANode = function(xSubAccountApiKey, messageId, callback) {
       var postBody = null;
 
       // verify the required parameter 'xSubAccountApiKey' is set
@@ -185,15 +184,9 @@
         throw new Error("Missing the required parameter 'messageId' when calling messageRouterGetAllEventsForAMessageIdFromANode");
       }
 
-      // verify the required parameter 'subAccountId' is set
-      if (subAccountId === undefined || subAccountId === null) {
-        throw new Error("Missing the required parameter 'subAccountId' when calling messageRouterGetAllEventsForAMessageIdFromANode");
-      }
-
 
       var pathParams = {
-        'messageId': messageId,
-        'subAccountId': subAccountId
+        'messageId': messageId
       };
       var queryParams = {
       };
@@ -211,7 +204,7 @@
       var returnType = [ModelsQEvent];
 
       return this.apiClient.callApi(
-        '/subaccount/message/node/{subAccountId}/{messageId}/events', 'GET',
+        '/subaccount/message/node/{messageId}/events', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -286,27 +279,27 @@
 
     /**
      * Get all messages of a sub-account from a specific node based on time-range
-     * @param {Number} subAccountId the subAccountId whose message you want to retrieve
+     * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {module:api/SubaccountmessageApi~messageRouterGetAllMessagesFromANodeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsQEmailMessage>}
      */
-    this.messageRouterGetAllMessagesFromANode = function(subAccountId, callback) {
+    this.messageRouterGetAllMessagesFromANode = function(xSubAccountApiKey, callback) {
       var postBody = null;
 
-      // verify the required parameter 'subAccountId' is set
-      if (subAccountId === undefined || subAccountId === null) {
-        throw new Error("Missing the required parameter 'subAccountId' when calling messageRouterGetAllMessagesFromANode");
+      // verify the required parameter 'xSubAccountApiKey' is set
+      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling messageRouterGetAllMessagesFromANode");
       }
 
 
       var pathParams = {
-        'subAccountId': subAccountId
       };
       var queryParams = {
       };
       var collectionQueryParams = {
       };
       var headerParams = {
+        'X-SubAccount-ApiKey': xSubAccountApiKey
       };
       var formParams = {
       };
@@ -317,7 +310,7 @@
       var returnType = [ModelsQEmailMessage];
 
       return this.apiClient.callApi(
-        '/subaccount/message/node/{subAccountId}', 'POST',
+        '/subaccount/message/node', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -333,17 +326,17 @@
 
     /**
      * Find Message from node by specific Id
-     * @param {Number} subAccountId the subAccountId whose message you want to retrieve
+     * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {String} messageId the messageId that you want to retrieve
      * @param {module:api/SubaccountmessageApi~messageRouterGetMessageFromNodeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsQEmailMessage}
      */
-    this.messageRouterGetMessageFromNode = function(subAccountId, messageId, callback) {
+    this.messageRouterGetMessageFromNode = function(xSubAccountApiKey, messageId, callback) {
       var postBody = null;
 
-      // verify the required parameter 'subAccountId' is set
-      if (subAccountId === undefined || subAccountId === null) {
-        throw new Error("Missing the required parameter 'subAccountId' when calling messageRouterGetMessageFromNode");
+      // verify the required parameter 'xSubAccountApiKey' is set
+      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling messageRouterGetMessageFromNode");
       }
 
       // verify the required parameter 'messageId' is set
@@ -353,7 +346,6 @@
 
 
       var pathParams = {
-        'subAccountId': subAccountId,
         'messageId': messageId
       };
       var queryParams = {
@@ -361,6 +353,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
+        'X-SubAccount-ApiKey': xSubAccountApiKey
       };
       var formParams = {
       };
@@ -371,7 +364,7 @@
       var returnType = ModelsQEmailMessage;
 
       return this.apiClient.callApi(
-        '/subaccount/message/node/{subAccountId}/{messageId}', 'GET',
+        '/subaccount/message/node/{messageId}', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

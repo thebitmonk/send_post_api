@@ -83,6 +83,12 @@
         // expect(instance.subAccountID).to.be(expectedValueLiteral);
       });
 
+      it('should have the property to (base name: "To")', function() {
+        // TODO: update the code to test the property to
+        expect(instance).to.have.property('to');
+        // expect(instance.to).to.be(expectedValueLiteral);
+      });
+
       it('should have the property type (base name: "Type")', function() {
         // TODO: update the code to test the property type
         expect(instance).to.have.property('type');

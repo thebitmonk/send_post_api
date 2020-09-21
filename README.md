@@ -185,13 +185,13 @@ Class | Method | HTTP request | Description
 *SendPostApi.SubaccountdomainApi* | [**domainRouterUpdate**](docs/SubaccountdomainApi.md#domainRouterUpdate) | **PUT** /subaccount/domain/{domainId} | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterVerify**](docs/SubaccountdomainApi.md#domainRouterVerify) | **POST** /subaccount/domain/{domainId}/verify | 
 *SendPostApi.SubaccountemailApi* | [**emailRouterSendEmail**](docs/SubaccountemailApi.md#emailRouterSendEmail) | **POST** /subaccount/email/ | 
-*SendPostApi.SubaccounteventApi* | [**eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange**](docs/SubaccounteventApi.md#eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange) | **GET** /subaccount/event/node/{subAccountId}/count | 
+*SendPostApi.SubaccounteventApi* | [**eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange**](docs/SubaccounteventApi.md#eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange) | **GET** /subaccount/event/node/count | 
 *SendPostApi.SubaccounteventApi* | [**eventRouterCountAllEventsFromASubAccountForAGivenTimeRange**](docs/SubaccounteventApi.md#eventRouterCountAllEventsFromASubAccountForAGivenTimeRange) | **GET** /subaccount/event/count | 
 *SendPostApi.SubaccounteventApi* | [**eventRouterGet**](docs/SubaccounteventApi.md#eventRouterGet) | **GET** /subaccount/event/{eventId} | 
-*SendPostApi.SubaccounteventApi* | [**eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange**](docs/SubaccounteventApi.md#eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange) | **GET** /subaccount/event/node/{subAccountId}/timestampkeys | 
+*SendPostApi.SubaccounteventApi* | [**eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange**](docs/SubaccounteventApi.md#eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange) | **GET** /subaccount/event/node/timestampkeys | 
 *SendPostApi.SubaccounteventApi* | [**eventRouterGetAllEventsFromASubAccountForAGivenTimeRange**](docs/SubaccounteventApi.md#eventRouterGetAllEventsFromASubAccountForAGivenTimeRange) | **GET** /subaccount/event/ | 
-*SendPostApi.SubaccounteventApi* | [**eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange**](docs/SubaccounteventApi.md#eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange) | **POST** /subaccount/event/node/{subAccountId} | 
-*SendPostApi.SubaccounteventApi* | [**eventRouterGetEventInNode**](docs/SubaccounteventApi.md#eventRouterGetEventInNode) | **GET** /subaccount/event/node/{subAccountId}/{eventId} | 
+*SendPostApi.SubaccounteventApi* | [**eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange**](docs/SubaccounteventApi.md#eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange) | **POST** /subaccount/event/node | 
+*SendPostApi.SubaccounteventApi* | [**eventRouterGetEventInNode**](docs/SubaccounteventApi.md#eventRouterGetEventInNode) | **GET** /subaccount/event/node/{eventId} | 
 *SendPostApi.SubaccountippoolApi* | [**iPPoolRouterCount**](docs/SubaccountippoolApi.md#iPPoolRouterCount) | **GET** /subaccount/ippool/count | 
 *SendPostApi.SubaccountippoolApi* | [**iPPoolRouterCreate**](docs/SubaccountippoolApi.md#iPPoolRouterCreate) | **POST** /subaccount/ippool/ | 
 *SendPostApi.SubaccountippoolApi* | [**iPPoolRouterDelete**](docs/SubaccountippoolApi.md#iPPoolRouterDelete) | **DELETE** /subaccount/ippool/{ippoolid} | 
@@ -200,10 +200,10 @@ Class | Method | HTTP request | Description
 *SendPostApi.SubaccountippoolApi* | [**iPPoolRouterUpdate**](docs/SubaccountippoolApi.md#iPPoolRouterUpdate) | **PUT** /subaccount/ippool/{ippoolid} | 
 *SendPostApi.SubaccountmessageApi* | [**messageRouterGet**](docs/SubaccountmessageApi.md#messageRouterGet) | **GET** /subaccount/message/{messageId} | 
 *SendPostApi.SubaccountmessageApi* | [**messageRouterGetAllEventsForAMessageId**](docs/SubaccountmessageApi.md#messageRouterGetAllEventsForAMessageId) | **GET** /subaccount/message/{messageId}/events | 
-*SendPostApi.SubaccountmessageApi* | [**messageRouterGetAllEventsForAMessageIdFromANode**](docs/SubaccountmessageApi.md#messageRouterGetAllEventsForAMessageIdFromANode) | **GET** /subaccount/message/node/{subAccountId}/{messageId}/events | 
+*SendPostApi.SubaccountmessageApi* | [**messageRouterGetAllEventsForAMessageIdFromANode**](docs/SubaccountmessageApi.md#messageRouterGetAllEventsForAMessageIdFromANode) | **GET** /subaccount/message/node/{messageId}/events | 
 *SendPostApi.SubaccountmessageApi* | [**messageRouterGetAllMessages**](docs/SubaccountmessageApi.md#messageRouterGetAllMessages) | **GET** /subaccount/message/ | 
-*SendPostApi.SubaccountmessageApi* | [**messageRouterGetAllMessagesFromANode**](docs/SubaccountmessageApi.md#messageRouterGetAllMessagesFromANode) | **POST** /subaccount/message/node/{subAccountId} | 
-*SendPostApi.SubaccountmessageApi* | [**messageRouterGetMessageFromNode**](docs/SubaccountmessageApi.md#messageRouterGetMessageFromNode) | **GET** /subaccount/message/node/{subAccountId}/{messageId} | 
+*SendPostApi.SubaccountmessageApi* | [**messageRouterGetAllMessagesFromANode**](docs/SubaccountmessageApi.md#messageRouterGetAllMessagesFromANode) | **POST** /subaccount/message/node | 
+*SendPostApi.SubaccountmessageApi* | [**messageRouterGetMessageFromNode**](docs/SubaccountmessageApi.md#messageRouterGetMessageFromNode) | **GET** /subaccount/message/node/{messageId} | 
 *SendPostApi.SubaccountrecipientApi* | [**recipientRouterGetAllMessagesForARecipient**](docs/SubaccountrecipientApi.md#recipientRouterGetAllMessagesForARecipient) | **GET** /subaccount/recipient/{recipient}/messages | 
 *SendPostApi.SubaccountrecipientApi* | [**recipientRouterGetAllMessagesForARecipientFromANode**](docs/SubaccountrecipientApi.md#recipientRouterGetAllMessagesForARecipientFromANode) | **GET** /subaccount/recipient/node/{subAccountId}/{recipient}/messages | 
 *SendPostApi.SubaccountsenderApi* | [**senderRouterCount**](docs/SubaccountsenderApi.md#senderRouterCount) | **GET** /subaccount/sender/count | 
@@ -233,6 +233,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [SendPostApi.ApiBulkResponse](docs/ApiBulkResponse.md)
  - [SendPostApi.ModelsAGStat](docs/ModelsAGStat.md)
  - [SendPostApi.ModelsAIPStat](docs/ModelsAIPStat.md)
  - [SendPostApi.ModelsAccount](docs/ModelsAccount.md)
@@ -243,7 +244,6 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsBackOffDecreaseType](docs/ModelsBackOffDecreaseType.md)
  - [SendPostApi.ModelsBackOffTrigger](docs/ModelsBackOffTrigger.md)
  - [SendPostApi.ModelsBlacklistStatus](docs/ModelsBlacklistStatus.md)
- - [SendPostApi.ModelsBulkResponse](docs/ModelsBulkResponse.md)
  - [SendPostApi.ModelsCity](docs/ModelsCity.md)
  - [SendPostApi.ModelsCleanedList](docs/ModelsCleanedList.md)
  - [SendPostApi.ModelsCountStat](docs/ModelsCountStat.md)

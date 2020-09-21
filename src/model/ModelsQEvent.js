@@ -71,6 +71,8 @@
         obj.subAccountID = ApiClient.convertToType(data['subAccountID'], 'Number');
       if (data.hasOwnProperty('submittedAt'))
         obj.submittedAt = ApiClient.convertToType(data['submittedAt'], 'Number');
+      if (data.hasOwnProperty('to'))
+        obj.to = ApiClient.convertToType(data['to'], 'String');
       if (data.hasOwnProperty('type'))
         obj.type = ApiClient.convertToType(data['type'], 'Number');
     }
@@ -116,6 +118,11 @@
    * @member {Number} submittedAt
    */
   exports.prototype.submittedAt = undefined;
+
+  /**
+   * @member {String} to
+   */
+  exports.prototype.to = undefined;
 
   /**
    * @member {Number} type

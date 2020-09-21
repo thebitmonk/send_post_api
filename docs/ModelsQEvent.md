@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **messageType** | **String** |  | [optional] 
 **subAccountID** | **Number** |  | [optional] 
 **submittedAt** | **Number** |  | [optional] 
+**to** | **String** |  | [optional] 
 **type** | **Number** |  | [optional] 
 
 

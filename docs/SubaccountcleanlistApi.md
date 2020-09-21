@@ -73,7 +73,7 @@ var apiInstance = new SendPostApi.SubaccountcleanlistApi();
 
 var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
 
-var body = new SendPostApi.ModelsEmailList(); // ModelsEmailList | The List to be sent
+var body = new SendPostApi.ModelsEmailList(); // ModelsEmailList | The List to br sent
 
 
 var callback = function(error, data, response) {
@@ -91,7 +91,7 @@ apiInstance.listCleaningRouterCleanEmailist(xSubAccountApiKey, body, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **body** | [**ModelsEmailList**](ModelsEmailList.md)| The List to be sent | 
+ **body** | [**ModelsEmailList**](ModelsEmailList.md)| The List to br sent | 
 
 ### Return type
 

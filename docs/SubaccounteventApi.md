@@ -4,18 +4,18 @@ All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange**](SubaccounteventApi.md#eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange) | **GET** /subaccount/event/node/{subAccountId}/count | 
+[**eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange**](SubaccounteventApi.md#eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange) | **GET** /subaccount/event/node/count | 
 [**eventRouterCountAllEventsFromASubAccountForAGivenTimeRange**](SubaccounteventApi.md#eventRouterCountAllEventsFromASubAccountForAGivenTimeRange) | **GET** /subaccount/event/count | 
 [**eventRouterGet**](SubaccounteventApi.md#eventRouterGet) | **GET** /subaccount/event/{eventId} | 
-[**eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange**](SubaccounteventApi.md#eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange) | **GET** /subaccount/event/node/{subAccountId}/timestampkeys | 
+[**eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange**](SubaccounteventApi.md#eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange) | **GET** /subaccount/event/node/timestampkeys | 
 [**eventRouterGetAllEventsFromASubAccountForAGivenTimeRange**](SubaccounteventApi.md#eventRouterGetAllEventsFromASubAccountForAGivenTimeRange) | **GET** /subaccount/event/ | 
-[**eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange**](SubaccounteventApi.md#eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange) | **POST** /subaccount/event/node/{subAccountId} | 
-[**eventRouterGetEventInNode**](SubaccounteventApi.md#eventRouterGetEventInNode) | **GET** /subaccount/event/node/{subAccountId}/{eventId} | 
+[**eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange**](SubaccounteventApi.md#eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange) | **POST** /subaccount/event/node | 
+[**eventRouterGetEventInNode**](SubaccounteventApi.md#eventRouterGetEventInNode) | **GET** /subaccount/event/node/{eventId} | 
 
 
 <a name="eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange"></a>
 # **eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange**
-> ModelsCountStat eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange(xSubAccountApiKey, subAccountId)
+> ModelsCountStat eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange(xSubAccountApiKey)
 
 
 
@@ -29,8 +29,6 @@ var apiInstance = new SendPostApi.SubaccounteventApi();
 
 var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
 
-var subAccountId = 789; // Number | the subAccountId whose event you want to retrieve
-
 
 var callback = function(error, data, response) {
   if (error) {
@@ -39,7 +37,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange(xSubAccountApiKey, subAccountId, callback);
+apiInstance.eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange(xSubAccountApiKey, callback);
 ```
 
 ### Parameters
@@ -47,7 +45,6 @@ apiInstance.eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange(xS
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **subAccountId** | **Number**| the subAccountId whose event you want to retrieve | 
 
 ### Return type
 
@@ -110,7 +107,7 @@ No authorization required
 
 <a name="eventRouterGet"></a>
 # **eventRouterGet**
-> ModelsQEvent eventRouterGet(eventId)
+> ModelsQEvent eventRouterGet(xSubAccountApiKey, eventId)
 
 
 
@@ -122,6 +119,8 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.SubaccounteventApi();
 
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
 var eventId = "eventId_example"; // String | the eventId that you want to retrieve
 
 
@@ -132,13 +131,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.eventRouterGet(eventId, callback);
+apiInstance.eventRouterGet(xSubAccountApiKey, eventId, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
  **eventId** | **String**| the eventId that you want to retrieve | 
 
 ### Return type
@@ -156,7 +156,7 @@ No authorization required
 
 <a name="eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange"></a>
 # **eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange**
-> [ModelsQEvent] eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange(xSubAccountApiKey, subAccountId)
+> [ModelsQEvent] eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange(xSubAccountApiKey, opts)
 
 
 
@@ -170,8 +170,12 @@ var apiInstance = new SendPostApi.SubaccounteventApi();
 
 var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
 
-var subAccountId = 789; // Number | the subAccountId whose event you want to retrieve
-
+var opts = { 
+  'search': "search_example", // String | search term
+  'type': "type_example", // String | search type
+  'from': "from_example", // String | from date
+  'to': "to_example" // String | to date
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -180,7 +184,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange(xSubAccountApiKey, subAccountId, callback);
+apiInstance.eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange(xSubAccountApiKey, opts, callback);
 ```
 
 ### Parameters
@@ -188,7 +192,10 @@ apiInstance.eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeFor
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **subAccountId** | **Number**| the subAccountId whose event you want to retrieve | 
+ **search** | **String**| search term | [optional] 
+ **type** | **String**| search type | [optional] 
+ **from** | **String**| from date | [optional] 
+ **to** | **String**| to date | [optional] 
 
 ### Return type
 
@@ -223,6 +230,7 @@ var opts = {
   'offset': 789, // Number | offset
   'limit': 789, // Number | limit
   'search': "search_example", // String | search term
+  'type': "type_example", // String | search type
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
 };
@@ -245,6 +253,7 @@ Name | Type | Description  | Notes
  **offset** | **Number**| offset | [optional] 
  **limit** | **Number**| limit | [optional] 
  **search** | **String**| search term | [optional] 
+ **type** | **String**| search type | [optional] 
  **from** | **String**| from date | [optional] 
  **to** | **String**| to date | [optional] 
 
@@ -263,7 +272,7 @@ No authorization required
 
 <a name="eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange"></a>
 # **eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange**
-> [ModelsQEvent] eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange(xSubAccountApiKey, subAccountId)
+> [ModelsQEvent] eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange(xSubAccountApiKey)
 
 
 
@@ -277,8 +286,6 @@ var apiInstance = new SendPostApi.SubaccounteventApi();
 
 var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
 
-var subAccountId = 789; // Number | the subAccountId whose event you want to retrieve
-
 
 var callback = function(error, data, response) {
   if (error) {
@@ -287,7 +294,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange(xSubAccountApiKey, subAccountId, callback);
+apiInstance.eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange(xSubAccountApiKey, callback);
 ```
 
 ### Parameters
@@ -295,7 +302,6 @@ apiInstance.eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRa
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **subAccountId** | **Number**| the subAccountId whose event you want to retrieve | 
 
 ### Return type
 
@@ -312,7 +318,7 @@ No authorization required
 
 <a name="eventRouterGetEventInNode"></a>
 # **eventRouterGetEventInNode**
-> ModelsQEvent eventRouterGetEventInNode(subAccountId, eventId)
+> ModelsQEvent eventRouterGetEventInNode(xSubAccountApiKey, eventId)
 
 
 
@@ -324,7 +330,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.SubaccounteventApi();
 
-var subAccountId = 789; // Number | the subAccountId whose event you want to retrieve
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
 
 var eventId = "eventId_example"; // String | the eventId that you want to retrieve
 
@@ -336,14 +342,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.eventRouterGetEventInNode(subAccountId, eventId, callback);
+apiInstance.eventRouterGetEventInNode(xSubAccountApiKey, eventId, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **subAccountId** | **Number**| the subAccountId whose event you want to retrieve | 
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
  **eventId** | **String**| the eventId that you want to retrieve | 
 
 ### Return type

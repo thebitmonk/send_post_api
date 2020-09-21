@@ -69,6 +69,8 @@
         obj.sMTPDescription = ApiClient.convertToType(data['SMTPDescription'], 'String');
       if (data.hasOwnProperty('SubAccountID'))
         obj.subAccountID = ApiClient.convertToType(data['SubAccountID'], 'Number');
+      if (data.hasOwnProperty('To'))
+        obj.to = ApiClient.convertToType(data['To'], 'String');
       if (data.hasOwnProperty('Type'))
         obj.type = ModelsEventType.constructFromObject(data['Type']);
     }
@@ -109,6 +111,11 @@
    * @member {Number} subAccountID
    */
   exports.prototype.subAccountID = undefined;
+
+  /**
+   * @member {String} to
+   */
+  exports.prototype.to = undefined;
 
   /**
    * @member {module:model/ModelsEventType} type

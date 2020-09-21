@@ -185,6 +185,8 @@
               expect(data.subAccountID).to.be("0");
               expect(data.submittedAt).to.be.a('number');
               expect(data.submittedAt).to.be("0");
+              expect(data.to).to.be.a('string');
+              expect(data.to).to.be("");
               expect(data.type).to.be.a('number');
               expect(data.type).to.be("0");
             }
@@ -202,9 +204,8 @@
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
           var messageId = "messageId_example";
-          var subAccountId = 789;
 
-          instance.messageRouterGetAllEventsForAMessageIdFromANode(xSubAccountApiKey, messageId, subAccountId, function(error, data, response) {
+          instance.messageRouterGetAllEventsForAMessageIdFromANode(xSubAccountApiKey, messageId, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -271,6 +272,8 @@
               expect(data.subAccountID).to.be("0");
               expect(data.submittedAt).to.be.a('number');
               expect(data.submittedAt).to.be("0");
+              expect(data.to).to.be.a('string');
+              expect(data.to).to.be("");
               expect(data.type).to.be.a('number');
               expect(data.type).to.be("0");
             }
@@ -372,9 +375,9 @@
         it('should call messageRouterGetAllMessagesFromANode successfully', function(done) {
           // TODO: uncomment, update parameter values for messageRouterGetAllMessagesFromANode call and complete the assertions
           /*
-          var subAccountId = 789;
+          var xSubAccountApiKey = "xSubAccountApiKey_example";
 
-          instance.messageRouterGetAllMessagesFromANode(subAccountId, function(error, data, response) {
+          instance.messageRouterGetAllMessagesFromANode(xSubAccountApiKey, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -452,10 +455,10 @@
         it('should call messageRouterGetMessageFromNode successfully', function(done) {
           // TODO: uncomment, update parameter values for messageRouterGetMessageFromNode call and complete the assertions
           /*
-          var subAccountId = 789;
+          var xSubAccountApiKey = "xSubAccountApiKey_example";
           var messageId = "messageId_example";
 
-          instance.messageRouterGetMessageFromNode(subAccountId, messageId, function(error, data, response) {
+          instance.messageRouterGetMessageFromNode(xSubAccountApiKey, messageId, function(error, data, response) {
             if (error) {
               done(error);
               return;
