@@ -42,6 +42,7 @@
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
           var body = new SendPostApi.ModelsEmailMessage();
+          body.ampBody = "";
           body.from = new SendPostApi.ModelsFrom();
           body.from.email = "";
           body.from.name = "";

@@ -41,6 +41,12 @@
         expect(instance).to.be.a(SendPostApi.ModelsQEmailMessage);
       });
 
+      it('should have the property ampBody (base name: "ampBody")', function() {
+        // TODO: update the code to test the property ampBody
+        expect(instance).to.have.property('ampBody');
+        // expect(instance.ampBody).to.be(expectedValueLiteral);
+      });
+
       it('should have the property customFields (base name: "customFields")', function() {
         // TODO: update the code to test the property customFields
         expect(instance).to.have.property('customFields');

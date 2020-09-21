@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ampBody** | **String** |  | [optional] 
 **from** | [**ModelsFrom**](ModelsFrom.md) |  | [optional] 
 **groups** | **Object** |  | [optional] 
 **headers** | **Object** |  | [optional] 

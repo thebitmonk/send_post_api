@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ampBody** | **String** |  | [optional] 
 **customFields** | **Object** |  | [optional] 
 **emailType** | **String** |  | [optional] 
 **from** | [**ModelsFrom**](ModelsFrom.md) |  | [optional] 
