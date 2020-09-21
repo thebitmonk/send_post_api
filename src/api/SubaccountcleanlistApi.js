@@ -113,7 +113,7 @@
     /**
      * Clean email list
      * @param {String} xSubAccountApiKey Sub-Account API Key
-     * @param {module:model/ModelsEmailList} body The List to be sent
+     * @param {module:model/ModelsEmailList} body The List to br sent
      * @param {module:api/SubaccountcleanlistApi~listCleaningRouterCleanEmailistCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsCleanedList}
      */

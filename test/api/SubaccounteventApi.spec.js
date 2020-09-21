@@ -41,9 +41,13 @@
           // TODO: uncomment, update parameter values for eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange call and complete the assertions
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
-          var subAccountId = 789;
+          var opts = {};
+          opts.search = "search_example";
+          opts.type = "type_example";
+          opts.from = "from_example";
+          opts.to = "to_example";
 
-          instance.eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange(xSubAccountApiKey, subAccountId, function(error, data, response) {
+          instance.eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange(xSubAccountApiKey, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -65,8 +69,13 @@
           // TODO: uncomment, update parameter values for eventRouterCountAllEventsFromASubAccountForAGivenTimeRange call and complete the assertions
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var opts = {};
+          opts.search = "search_example";
+          opts.type = "type_example";
+          opts.from = "from_example";
+          opts.to = "to_example";
 
-          instance.eventRouterCountAllEventsFromASubAccountForAGivenTimeRange(xSubAccountApiKey, function(error, data, response) {
+          instance.eventRouterCountAllEventsFromASubAccountForAGivenTimeRange(xSubAccountApiKey, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -87,9 +96,10 @@
         it('should call eventRouterGet successfully', function(done) {
           // TODO: uncomment, update parameter values for eventRouterGet call and complete the assertions
           /*
+          var xSubAccountApiKey = "xSubAccountApiKey_example";
           var eventId = "eventId_example";
 
-          instance.eventRouterGet(eventId, function(error, data, response) {
+          instance.eventRouterGet(xSubAccountApiKey, eventId, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -151,6 +161,8 @@
             expect(data.subAccountID).to.be("0");
             expect(data.submittedAt).to.be.a('number');
             expect(data.submittedAt).to.be("0");
+            expect(data.to).to.be.a('string');
+            expect(data.to).to.be("");
             expect(data.type).to.be.a('number');
             expect(data.type).to.be("0");
 
@@ -166,9 +178,13 @@
           // TODO: uncomment, update parameter values for eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange call and complete the assertions
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
-          var subAccountId = 789;
+          var opts = {};
+          opts.search = "search_example";
+          opts.type = "type_example";
+          opts.from = "from_example";
+          opts.to = "to_example";
 
-          instance.eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange(xSubAccountApiKey, subAccountId, function(error, data, response) {
+          instance.eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange(xSubAccountApiKey, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -235,6 +251,8 @@
               expect(data.subAccountID).to.be("0");
               expect(data.submittedAt).to.be.a('number');
               expect(data.submittedAt).to.be("0");
+              expect(data.to).to.be.a('string');
+              expect(data.to).to.be("");
               expect(data.type).to.be.a('number');
               expect(data.type).to.be("0");
             }
@@ -255,6 +273,7 @@
           opts.offset = 789;
           opts.limit = 789;
           opts.search = "search_example";
+          opts.type = "type_example";
           opts.from = "from_example";
           opts.to = "to_example";
 
@@ -325,6 +344,8 @@
               expect(data.subAccountID).to.be("0");
               expect(data.submittedAt).to.be.a('number');
               expect(data.submittedAt).to.be("0");
+              expect(data.to).to.be.a('string');
+              expect(data.to).to.be("");
               expect(data.type).to.be.a('number');
               expect(data.type).to.be("0");
             }
@@ -341,9 +362,8 @@
           // TODO: uncomment, update parameter values for eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange call and complete the assertions
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
-          var subAccountId = 789;
 
-          instance.eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange(xSubAccountApiKey, subAccountId, function(error, data, response) {
+          instance.eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange(xSubAccountApiKey, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -410,6 +430,8 @@
               expect(data.subAccountID).to.be("0");
               expect(data.submittedAt).to.be.a('number');
               expect(data.submittedAt).to.be("0");
+              expect(data.to).to.be.a('string');
+              expect(data.to).to.be("");
               expect(data.type).to.be.a('number');
               expect(data.type).to.be("0");
             }
@@ -425,10 +447,10 @@
         it('should call eventRouterGetEventInNode successfully', function(done) {
           // TODO: uncomment, update parameter values for eventRouterGetEventInNode call and complete the assertions
           /*
-          var subAccountId = 789;
+          var xSubAccountApiKey = "xSubAccountApiKey_example";
           var eventId = "eventId_example";
 
-          instance.eventRouterGetEventInNode(subAccountId, eventId, function(error, data, response) {
+          instance.eventRouterGetEventInNode(xSubAccountApiKey, eventId, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -490,6 +512,8 @@
             expect(data.subAccountID).to.be("0");
             expect(data.submittedAt).to.be.a('number');
             expect(data.submittedAt).to.be("0");
+            expect(data.to).to.be.a('string');
+            expect(data.to).to.be("");
             expect(data.type).to.be.a('number');
             expect(data.type).to.be("0");
 

@@ -6,10 +6,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**messageRouterGet**](SubaccountmessageApi.md#messageRouterGet) | **GET** /subaccount/message/{messageId} | 
 [**messageRouterGetAllEventsForAMessageId**](SubaccountmessageApi.md#messageRouterGetAllEventsForAMessageId) | **GET** /subaccount/message/{messageId}/events | 
-[**messageRouterGetAllEventsForAMessageIdFromANode**](SubaccountmessageApi.md#messageRouterGetAllEventsForAMessageIdFromANode) | **GET** /subaccount/message/node/{subAccountId}/{messageId}/events | 
+[**messageRouterGetAllEventsForAMessageIdFromANode**](SubaccountmessageApi.md#messageRouterGetAllEventsForAMessageIdFromANode) | **GET** /subaccount/message/node/{messageId}/events | 
 [**messageRouterGetAllMessages**](SubaccountmessageApi.md#messageRouterGetAllMessages) | **GET** /subaccount/message/ | 
-[**messageRouterGetAllMessagesFromANode**](SubaccountmessageApi.md#messageRouterGetAllMessagesFromANode) | **POST** /subaccount/message/node/{subAccountId} | 
-[**messageRouterGetMessageFromNode**](SubaccountmessageApi.md#messageRouterGetMessageFromNode) | **GET** /subaccount/message/node/{subAccountId}/{messageId} | 
+[**messageRouterGetAllMessagesFromANode**](SubaccountmessageApi.md#messageRouterGetAllMessagesFromANode) | **POST** /subaccount/message/node | 
+[**messageRouterGetMessageFromNode**](SubaccountmessageApi.md#messageRouterGetMessageFromNode) | **GET** /subaccount/message/node/{messageId} | 
 
 
 <a name="messageRouterGet"></a>
@@ -112,7 +112,7 @@ No authorization required
 
 <a name="messageRouterGetAllEventsForAMessageIdFromANode"></a>
 # **messageRouterGetAllEventsForAMessageIdFromANode**
-> [ModelsQEvent] messageRouterGetAllEventsForAMessageIdFromANode(xSubAccountApiKey, messageId, subAccountId)
+> [ModelsQEvent] messageRouterGetAllEventsForAMessageIdFromANode(xSubAccountApiKey, messageId)
 
 
 
@@ -128,8 +128,6 @@ var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API
 
 var messageId = "messageId_example"; // String | the messageId that you want to retrieve
 
-var subAccountId = 789; // Number | the subAccountId whose message you want to retrieve
-
 
 var callback = function(error, data, response) {
   if (error) {
@@ -138,7 +136,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.messageRouterGetAllEventsForAMessageIdFromANode(xSubAccountApiKey, messageId, subAccountId, callback);
+apiInstance.messageRouterGetAllEventsForAMessageIdFromANode(xSubAccountApiKey, messageId, callback);
 ```
 
 ### Parameters
@@ -147,7 +145,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
  **messageId** | **String**| the messageId that you want to retrieve | 
- **subAccountId** | **Number**| the subAccountId whose message you want to retrieve | 
 
 ### Return type
 
@@ -222,7 +219,7 @@ No authorization required
 
 <a name="messageRouterGetAllMessagesFromANode"></a>
 # **messageRouterGetAllMessagesFromANode**
-> [ModelsQEmailMessage] messageRouterGetAllMessagesFromANode(subAccountId)
+> [ModelsQEmailMessage] messageRouterGetAllMessagesFromANode(xSubAccountApiKey)
 
 
 
@@ -234,7 +231,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.SubaccountmessageApi();
 
-var subAccountId = 789; // Number | the subAccountId whose message you want to retrieve
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
 
 
 var callback = function(error, data, response) {
@@ -244,14 +241,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.messageRouterGetAllMessagesFromANode(subAccountId, callback);
+apiInstance.messageRouterGetAllMessagesFromANode(xSubAccountApiKey, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **subAccountId** | **Number**| the subAccountId whose message you want to retrieve | 
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
 
 ### Return type
 
@@ -268,7 +265,7 @@ No authorization required
 
 <a name="messageRouterGetMessageFromNode"></a>
 # **messageRouterGetMessageFromNode**
-> ModelsQEmailMessage messageRouterGetMessageFromNode(subAccountId, messageId)
+> ModelsQEmailMessage messageRouterGetMessageFromNode(xSubAccountApiKey, messageId)
 
 
 
@@ -280,7 +277,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.SubaccountmessageApi();
 
-var subAccountId = 789; // Number | the subAccountId whose message you want to retrieve
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
 
 var messageId = "messageId_example"; // String | the messageId that you want to retrieve
 
@@ -292,14 +289,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.messageRouterGetMessageFromNode(subAccountId, messageId, callback);
+apiInstance.messageRouterGetMessageFromNode(xSubAccountApiKey, messageId, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **subAccountId** | **Number**| the subAccountId whose message you want to retrieve | 
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
  **messageId** | **String**| the messageId that you want to retrieve | 
 
 ### Return type

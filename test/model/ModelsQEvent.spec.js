@@ -89,6 +89,12 @@
         // expect(instance.submittedAt).to.be(expectedValueLiteral);
       });
 
+      it('should have the property to (base name: "to")', function() {
+        // TODO: update the code to test the property to
+        expect(instance).to.have.property('to');
+        // expect(instance.to).to.be(expectedValueLiteral);
+      });
+
       it('should have the property type (base name: "type")', function() {
         // TODO: update the code to test the property type
         expect(instance).to.have.property('type');

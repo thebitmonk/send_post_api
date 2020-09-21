@@ -48,6 +48,7 @@
           body.sMTPCode = "0";
           body.sMTPDescription = "";
           body.subAccountID = "0";
+          body.to = "";
           body.type = new SendPostApi.ModelsEventType();
 
           instance.sMTPRouterReceiveWebhooksRaisedFromSMTPServers(body, function(error, data, response) {
