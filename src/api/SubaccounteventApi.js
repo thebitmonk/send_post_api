@@ -59,10 +59,16 @@
     /**
      * Count all events from a node of a sub-account for a given time-range
      * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.search search term
+     * @param {String} opts.type search type
+     * @param {String} opts.from from date
+     * @param {String} opts.to to date
      * @param {module:api/SubaccounteventApi~eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRangeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsCountStat}
      */
-    this.eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange = function(xSubAccountApiKey, callback) {
+    this.eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange = function(xSubAccountApiKey, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'xSubAccountApiKey' is set
@@ -74,6 +80,10 @@
       var pathParams = {
       };
       var queryParams = {
+        'search': opts['search'],
+        'type': opts['type'],
+        'from': opts['from'],
+        'to': opts['to'],
       };
       var collectionQueryParams = {
       };
@@ -106,10 +116,16 @@
     /**
      * Count all events from a sub-account for a given time-range
      * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.search search term
+     * @param {String} opts.type search type
+     * @param {String} opts.from from date
+     * @param {String} opts.to to date
      * @param {module:api/SubaccounteventApi~eventRouterCountAllEventsFromASubAccountForAGivenTimeRangeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsCountStat}
      */
-    this.eventRouterCountAllEventsFromASubAccountForAGivenTimeRange = function(xSubAccountApiKey, callback) {
+    this.eventRouterCountAllEventsFromASubAccountForAGivenTimeRange = function(xSubAccountApiKey, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'xSubAccountApiKey' is set
@@ -121,6 +137,10 @@
       var pathParams = {
       };
       var queryParams = {
+        'search': opts['search'],
+        'type': opts['type'],
+        'from': opts['from'],
+        'to': opts['to'],
       };
       var collectionQueryParams = {
       };

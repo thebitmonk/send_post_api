@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 <a name="eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange"></a>
 # **eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange**
-> ModelsCountStat eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange(xSubAccountApiKey)
+> ModelsCountStat eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange(xSubAccountApiKey, opts)
 
 
 
@@ -29,6 +29,12 @@ var apiInstance = new SendPostApi.SubaccounteventApi();
 
 var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
 
+var opts = { 
+  'search': "search_example", // String | search term
+  'type': "type_example", // String | search type
+  'from': "from_example", // String | from date
+  'to': "to_example" // String | to date
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -37,7 +43,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange(xSubAccountApiKey, callback);
+apiInstance.eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange(xSubAccountApiKey, opts, callback);
 ```
 
 ### Parameters
@@ -45,6 +51,10 @@ apiInstance.eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange(xS
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **search** | **String**| search term | [optional] 
+ **type** | **String**| search type | [optional] 
+ **from** | **String**| from date | [optional] 
+ **to** | **String**| to date | [optional] 
 
 ### Return type
 
@@ -61,7 +71,7 @@ No authorization required
 
 <a name="eventRouterCountAllEventsFromASubAccountForAGivenTimeRange"></a>
 # **eventRouterCountAllEventsFromASubAccountForAGivenTimeRange**
-> ModelsCountStat eventRouterCountAllEventsFromASubAccountForAGivenTimeRange(xSubAccountApiKey)
+> ModelsCountStat eventRouterCountAllEventsFromASubAccountForAGivenTimeRange(xSubAccountApiKey, opts)
 
 
 
@@ -75,6 +85,12 @@ var apiInstance = new SendPostApi.SubaccounteventApi();
 
 var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
 
+var opts = { 
+  'search': "search_example", // String | search term
+  'type': "type_example", // String | search type
+  'from': "from_example", // String | from date
+  'to': "to_example" // String | to date
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -83,7 +99,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.eventRouterCountAllEventsFromASubAccountForAGivenTimeRange(xSubAccountApiKey, callback);
+apiInstance.eventRouterCountAllEventsFromASubAccountForAGivenTimeRange(xSubAccountApiKey, opts, callback);
 ```
 
 ### Parameters
@@ -91,6 +107,10 @@ apiInstance.eventRouterCountAllEventsFromASubAccountForAGivenTimeRange(xSubAccou
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **search** | **String**| search term | [optional] 
+ **type** | **String**| search type | [optional] 
+ **from** | **String**| from date | [optional] 
+ **to** | **String**| to date | [optional] 
 
 ### Return type
 

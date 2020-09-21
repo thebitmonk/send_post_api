@@ -41,8 +41,13 @@
           // TODO: uncomment, update parameter values for eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange call and complete the assertions
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var opts = {};
+          opts.search = "search_example";
+          opts.type = "type_example";
+          opts.from = "from_example";
+          opts.to = "to_example";
 
-          instance.eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange(xSubAccountApiKey, function(error, data, response) {
+          instance.eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange(xSubAccountApiKey, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -64,8 +69,13 @@
           // TODO: uncomment, update parameter values for eventRouterCountAllEventsFromASubAccountForAGivenTimeRange call and complete the assertions
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var opts = {};
+          opts.search = "search_example";
+          opts.type = "type_example";
+          opts.from = "from_example";
+          opts.to = "to_example";
 
-          instance.eventRouterCountAllEventsFromASubAccountForAGivenTimeRange(xSubAccountApiKey, function(error, data, response) {
+          instance.eventRouterCountAllEventsFromASubAccountForAGivenTimeRange(xSubAccountApiKey, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
