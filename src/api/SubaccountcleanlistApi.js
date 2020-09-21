@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsBulkResponse', 'model/ModelsCleanedList', 'model/ModelsEmailList'], factory);
+    define(['ApiClient', 'model/ApiBulkResponse', 'model/ModelsCleanedList', 'model/ModelsEmailList'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsBulkResponse'), require('../model/ModelsCleanedList'), require('../model/ModelsEmailList'));
+    module.exports = factory(require('../ApiClient'), require('../model/ApiBulkResponse'), require('../model/ModelsCleanedList'), require('../model/ModelsEmailList'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.SubaccountcleanlistApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsBulkResponse, root.SendPostApi.ModelsCleanedList, root.SendPostApi.ModelsEmailList);
+    root.SendPostApi.SubaccountcleanlistApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ApiBulkResponse, root.SendPostApi.ModelsCleanedList, root.SendPostApi.ModelsEmailList);
   }
-}(this, function(ApiClient, ModelsBulkResponse, ModelsCleanedList, ModelsEmailList) {
+}(this, function(ApiClient, ApiBulkResponse, ModelsCleanedList, ModelsEmailList) {
   'use strict';
 
   /**
@@ -52,7 +52,7 @@
      * Callback function to receive the result of the listCleaningRouterCleanBulkEmailList operation.
      * @callback module:api/SubaccountcleanlistApi~listCleaningRouterCleanBulkEmailListCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ModelsBulkResponse} data The data returned by the service call.
+     * @param {module:model/ApiBulkResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -61,7 +61,7 @@
      * @param {File} fileinput csv to send
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {module:api/SubaccountcleanlistApi~listCleaningRouterCleanBulkEmailListCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ModelsBulkResponse}
+     * data is of type: {@link module:model/ApiBulkResponse}
      */
     this.listCleaningRouterCleanBulkEmailList = function(fileinput, xSubAccountApiKey, callback) {
       var postBody = null;
@@ -93,7 +93,7 @@
       var authNames = [];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/json'];
-      var returnType = ModelsBulkResponse;
+      var returnType = ApiBulkResponse;
 
       return this.apiClient.callApi(
         '/subaccount/cleanlist/bulk', 'POST',
@@ -113,7 +113,7 @@
     /**
      * Clean email list
      * @param {String} xSubAccountApiKey Sub-Account API Key
-     * @param {module:model/ModelsEmailList} body The List to br sent
+     * @param {module:model/ModelsEmailList} body The List to be sent
      * @param {module:api/SubaccountcleanlistApi~listCleaningRouterCleanEmailistCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsCleanedList}
      */

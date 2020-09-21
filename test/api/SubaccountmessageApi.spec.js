@@ -50,6 +50,8 @@
             }
             // TODO: update response assertions
             expect(data).to.be.a(SendPostApi.ModelsQEmailMessage);
+            expect(data.ampBody).to.be.a('string');
+            expect(data.ampBody).to.be("");
             expect(data.customFields).to.be.a(Object);
             expect(data.customFields).to.be();
             expect(data.emailType).to.be.a('string');
@@ -304,6 +306,8 @@
             for (let p in dataCtr) {
               let data = dataCtr[p];
               expect(data).to.be.a(SendPostApi.ModelsQEmailMessage);
+              expect(data.ampBody).to.be.a('string');
+              expect(data.ampBody).to.be("");
               expect(data.customFields).to.be.a(Object);
               expect(data.customFields).to.be();
               expect(data.emailType).to.be.a('string');
@@ -382,6 +386,8 @@
             for (let p in dataCtr) {
               let data = dataCtr[p];
               expect(data).to.be.a(SendPostApi.ModelsQEmailMessage);
+              expect(data.ampBody).to.be.a('string');
+              expect(data.ampBody).to.be("");
               expect(data.customFields).to.be.a(Object);
               expect(data.customFields).to.be();
               expect(data.emailType).to.be.a('string');
@@ -456,6 +462,8 @@
             }
             // TODO: update response assertions
             expect(data).to.be.a(SendPostApi.ModelsQEmailMessage);
+            expect(data.ampBody).to.be.a('string');
+            expect(data.ampBody).to.be("");
             expect(data.customFields).to.be.a(Object);
             expect(data.customFields).to.be();
             expect(data.emailType).to.be.a('string');

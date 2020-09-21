@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('ampBody'))
+        obj.ampBody = ApiClient.convertToType(data['ampBody'], 'String');
       if (data.hasOwnProperty('from'))
         obj.from = ModelsFrom.constructFromObject(data['from']);
       if (data.hasOwnProperty('groups'))
@@ -82,6 +84,11 @@
     }
     return obj;
   }
+
+  /**
+   * @member {String} ampBody
+   */
+  exports.prototype.ampBody = undefined;
 
   /**
    * @member {module:model/ModelsFrom} from

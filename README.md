@@ -233,6 +233,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [SendPostApi.ApiBulkResponse](docs/ApiBulkResponse.md)
  - [SendPostApi.ModelsAGStat](docs/ModelsAGStat.md)
  - [SendPostApi.ModelsAIPStat](docs/ModelsAIPStat.md)
  - [SendPostApi.ModelsAccount](docs/ModelsAccount.md)
@@ -243,7 +244,6 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsBackOffDecreaseType](docs/ModelsBackOffDecreaseType.md)
  - [SendPostApi.ModelsBackOffTrigger](docs/ModelsBackOffTrigger.md)
  - [SendPostApi.ModelsBlacklistStatus](docs/ModelsBlacklistStatus.md)
- - [SendPostApi.ModelsBulkResponse](docs/ModelsBulkResponse.md)
  - [SendPostApi.ModelsCity](docs/ModelsCity.md)
  - [SendPostApi.ModelsCleanedList](docs/ModelsCleanedList.md)
  - [SendPostApi.ModelsCountStat](docs/ModelsCountStat.md)

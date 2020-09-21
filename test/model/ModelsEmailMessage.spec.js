@@ -41,6 +41,12 @@
         expect(instance).to.be.a(SendPostApi.ModelsEmailMessage);
       });
 
+      it('should have the property ampBody (base name: "ampBody")', function() {
+        // TODO: update the code to test the property ampBody
+        expect(instance).to.have.property('ampBody');
+        // expect(instance.ampBody).to.be(expectedValueLiteral);
+      });
+
       it('should have the property from (base name: "from")', function() {
         // TODO: update the code to test the property from
         expect(instance).to.have.property('from');
