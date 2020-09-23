@@ -113,22 +113,16 @@
     /**
      * Find all message sent to a recipient from a specific node
      * @param {String} xSubAccountApiKey Sub-Account API Key
-     * @param {Number} subAccountId the subAccountId whose message you want to retrieve
      * @param {String} recipient email of the recipient
      * @param {module:api/SubaccountrecipientApi~recipientRouterGetAllMessagesForARecipientFromANodeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsQEmailMessage>}
      */
-    this.recipientRouterGetAllMessagesForARecipientFromANode = function(xSubAccountApiKey, subAccountId, recipient, callback) {
+    this.recipientRouterGetAllMessagesForARecipientFromANode = function(xSubAccountApiKey, recipient, callback) {
       var postBody = null;
 
       // verify the required parameter 'xSubAccountApiKey' is set
       if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
         throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling recipientRouterGetAllMessagesForARecipientFromANode");
-      }
-
-      // verify the required parameter 'subAccountId' is set
-      if (subAccountId === undefined || subAccountId === null) {
-        throw new Error("Missing the required parameter 'subAccountId' when calling recipientRouterGetAllMessagesForARecipientFromANode");
       }
 
       // verify the required parameter 'recipient' is set
@@ -138,7 +132,6 @@
 
 
       var pathParams = {
-        'subAccountId': subAccountId,
         'recipient': recipient
       };
       var queryParams = {
@@ -157,7 +150,7 @@
       var returnType = [ModelsQEmailMessage];
 
       return this.apiClient.callApi(
-        '/subaccount/recipient/node/{subAccountId}/{recipient}/messages', 'GET',
+        '/subaccount/recipient/node/{recipient}/messages', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

@@ -176,7 +176,7 @@ No authorization required
 
 <a name="eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange"></a>
 # **eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange**
-> [ModelsQEvent] eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange(xSubAccountApiKey, opts)
+> [ModelsQEvent] eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange(xSubAccountApiKey, source, sourceId, opts)
 
 
 
@@ -189,6 +189,10 @@ var SendPostApi = require('send_post_api');
 var apiInstance = new SendPostApi.SubaccounteventApi();
 
 var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var source = "source_example"; // String | data source from which to get timestamp keys - subaccount or ip
+
+var sourceId = "sourceId_example"; // String | source id from which to get timestamp keys - subaccount or ip
 
 var opts = { 
   'search': "search_example", // String | search term
@@ -204,7 +208,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange(xSubAccountApiKey, opts, callback);
+apiInstance.eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange(xSubAccountApiKey, source, sourceId, opts, callback);
 ```
 
 ### Parameters
@@ -212,6 +216,8 @@ apiInstance.eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeFor
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **source** | **String**| data source from which to get timestamp keys - subaccount or ip | 
+ **sourceId** | **String**| source id from which to get timestamp keys - subaccount or ip | 
  **search** | **String**| search term | [optional] 
  **type** | **String**| search type | [optional] 
  **from** | **String**| from date | [optional] 
@@ -232,7 +238,7 @@ No authorization required
 
 <a name="eventRouterGetAllEventsFromASubAccountForAGivenTimeRange"></a>
 # **eventRouterGetAllEventsFromASubAccountForAGivenTimeRange**
-> [ModelsQEvent] eventRouterGetAllEventsFromASubAccountForAGivenTimeRange(xSubAccountApiKey, opts)
+> [ModelsQEvent] eventRouterGetAllEventsFromASubAccountForAGivenTimeRange(xSubAccountApiKey, source, sourceId, opts)
 
 
 
@@ -245,6 +251,10 @@ var SendPostApi = require('send_post_api');
 var apiInstance = new SendPostApi.SubaccounteventApi();
 
 var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var source = "source_example"; // String | data source from which to get timestamp keys - subaccount or ip
+
+var sourceId = "sourceId_example"; // String | source id from which to get timestamp keys - subaccount or ip
 
 var opts = { 
   'offset': 789, // Number | offset
@@ -262,7 +272,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.eventRouterGetAllEventsFromASubAccountForAGivenTimeRange(xSubAccountApiKey, opts, callback);
+apiInstance.eventRouterGetAllEventsFromASubAccountForAGivenTimeRange(xSubAccountApiKey, source, sourceId, opts, callback);
 ```
 
 ### Parameters
@@ -270,6 +280,8 @@ apiInstance.eventRouterGetAllEventsFromASubAccountForAGivenTimeRange(xSubAccount
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **source** | **String**| data source from which to get timestamp keys - subaccount or ip | 
+ **sourceId** | **String**| source id from which to get timestamp keys - subaccount or ip | 
  **offset** | **Number**| offset | [optional] 
  **limit** | **Number**| limit | [optional] 
  **search** | **String**| search term | [optional] 

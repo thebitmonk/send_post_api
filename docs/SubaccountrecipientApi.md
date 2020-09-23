@@ -5,7 +5,7 @@ All URIs are relative to *http://127.0.0.1:8081/api/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**recipientRouterGetAllMessagesForARecipient**](SubaccountrecipientApi.md#recipientRouterGetAllMessagesForARecipient) | **GET** /subaccount/recipient/{recipient}/messages | 
-[**recipientRouterGetAllMessagesForARecipientFromANode**](SubaccountrecipientApi.md#recipientRouterGetAllMessagesForARecipientFromANode) | **GET** /subaccount/recipient/node/{subAccountId}/{recipient}/messages | 
+[**recipientRouterGetAllMessagesForARecipientFromANode**](SubaccountrecipientApi.md#recipientRouterGetAllMessagesForARecipientFromANode) | **GET** /subaccount/recipient/node/{recipient}/messages | 
 
 
 <a name="recipientRouterGetAllMessagesForARecipient"></a>
@@ -59,7 +59,7 @@ No authorization required
 
 <a name="recipientRouterGetAllMessagesForARecipientFromANode"></a>
 # **recipientRouterGetAllMessagesForARecipientFromANode**
-> [ModelsQEmailMessage] recipientRouterGetAllMessagesForARecipientFromANode(xSubAccountApiKey, subAccountId, recipient)
+> [ModelsQEmailMessage] recipientRouterGetAllMessagesForARecipientFromANode(xSubAccountApiKey, recipient)
 
 
 
@@ -73,8 +73,6 @@ var apiInstance = new SendPostApi.SubaccountrecipientApi();
 
 var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
 
-var subAccountId = 789; // Number | the subAccountId whose message you want to retrieve
-
 var recipient = "recipient_example"; // String | email of the recipient
 
 
@@ -85,7 +83,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.recipientRouterGetAllMessagesForARecipientFromANode(xSubAccountApiKey, subAccountId, recipient, callback);
+apiInstance.recipientRouterGetAllMessagesForARecipientFromANode(xSubAccountApiKey, recipient, callback);
 ```
 
 ### Parameters
@@ -93,7 +91,6 @@ apiInstance.recipientRouterGetAllMessagesForARecipientFromANode(xSubAccountApiKe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **subAccountId** | **Number**| the subAccountId whose message you want to retrieve | 
  **recipient** | **String**| email of the recipient | 
 
 ### Return type

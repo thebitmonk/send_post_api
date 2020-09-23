@@ -122,10 +122,9 @@
           // TODO: uncomment, update parameter values for recipientRouterGetAllMessagesForARecipientFromANode call and complete the assertions
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
-          var subAccountId = 789;
           var recipient = "recipient_example";
 
-          instance.recipientRouterGetAllMessagesForARecipientFromANode(xSubAccountApiKey, subAccountId, recipient, function(error, data, response) {
+          instance.recipientRouterGetAllMessagesForARecipientFromANode(xSubAccountApiKey, recipient, function(error, data, response) {
             if (error) {
               done(error);
               return;
