@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**accountID** | **Number** |  | [optional] 
 **eventID** | **String** |  | [optional] 
 **eventMetadata** | [**ModelsEventMetadata**](ModelsEventMetadata.md) |  | [optional] 
 **groups** | **Object** |  | [optional] 

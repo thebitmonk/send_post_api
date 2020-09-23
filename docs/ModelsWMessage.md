@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**accountID** | **Number** |  | [optional] 
 **groups** | **Object** |  | [optional] 
 **IPID** | **Number** |  | [optional] 
 **messageType** | **String** |  | [optional] 

@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('accountID'))
+        obj.accountID = ApiClient.convertToType(data['accountID'], 'Number');
       if (data.hasOwnProperty('eventID'))
         obj.eventID = ApiClient.convertToType(data['eventID'], 'String');
       if (data.hasOwnProperty('eventMetadata'))
@@ -78,6 +80,11 @@
     }
     return obj;
   }
+
+  /**
+   * @member {Number} accountID
+   */
+  exports.prototype.accountID = undefined;
 
   /**
    * @member {String} eventID

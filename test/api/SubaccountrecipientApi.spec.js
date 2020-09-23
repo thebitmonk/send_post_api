@@ -55,6 +55,8 @@
             for (let p in dataCtr) {
               let data = dataCtr[p];
               expect(data).to.be.a(SendPostApi.ModelsQEmailMessage);
+              expect(data.accountID).to.be.a('number');
+              expect(data.accountID).to.be("0");
               expect(data.ampBody).to.be.a('string');
               expect(data.ampBody).to.be("");
               expect(data.customFields).to.be.a(Object);
@@ -121,10 +123,10 @@
         it('should call recipientRouterGetAllMessagesForARecipientFromANode successfully', function(done) {
           // TODO: uncomment, update parameter values for recipientRouterGetAllMessagesForARecipientFromANode call and complete the assertions
           /*
-          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var xAccountApiKey = "xAccountApiKey_example";
           var recipient = "recipient_example";
 
-          instance.recipientRouterGetAllMessagesForARecipientFromANode(xSubAccountApiKey, recipient, function(error, data, response) {
+          instance.recipientRouterGetAllMessagesForARecipientFromANode(xAccountApiKey, recipient, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -136,6 +138,8 @@
             for (let p in dataCtr) {
               let data = dataCtr[p];
               expect(data).to.be.a(SendPostApi.ModelsQEmailMessage);
+              expect(data.accountID).to.be.a('number');
+              expect(data.accountID).to.be("0");
               expect(data.ampBody).to.be.a('string');
               expect(data.ampBody).to.be("");
               expect(data.customFields).to.be.a(Object);

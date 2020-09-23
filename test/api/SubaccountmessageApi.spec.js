@@ -40,16 +40,18 @@
         it('should call messageRouterGet successfully', function(done) {
           // TODO: uncomment, update parameter values for messageRouterGet call and complete the assertions
           /*
-          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var xAccountApiKey = "xAccountApiKey_example";
           var messageId = "messageId_example";
 
-          instance.messageRouterGet(xSubAccountApiKey, messageId, function(error, data, response) {
+          instance.messageRouterGet(xAccountApiKey, messageId, function(error, data, response) {
             if (error) {
               done(error);
               return;
             }
             // TODO: update response assertions
             expect(data).to.be.a(SendPostApi.ModelsQEmailMessage);
+            expect(data.accountID).to.be.a('number');
+            expect(data.accountID).to.be("0");
             expect(data.ampBody).to.be.a('string');
             expect(data.ampBody).to.be("");
             expect(data.customFields).to.be.a(Object);
@@ -115,10 +117,10 @@
         it('should call messageRouterGetAllEventsForAMessageId successfully', function(done) {
           // TODO: uncomment, update parameter values for messageRouterGetAllEventsForAMessageId call and complete the assertions
           /*
-          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var xAccountApiKey = "xAccountApiKey_example";
           var messageId = "messageId_example";
 
-          instance.messageRouterGetAllEventsForAMessageId(xSubAccountApiKey, messageId, function(error, data, response) {
+          instance.messageRouterGetAllEventsForAMessageId(xAccountApiKey, messageId, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -130,6 +132,8 @@
             for (let p in dataCtr) {
               let data = dataCtr[p];
               expect(data).to.be.a(SendPostApi.ModelsQEvent);
+              expect(data.accountID).to.be.a('number');
+              expect(data.accountID).to.be("0");
               expect(data.eventID).to.be.a('string');
               expect(data.eventID).to.be("");
               expect(data.eventMetadata).to.be.a(SendPostApi.ModelsEventMetadata);
@@ -202,10 +206,10 @@
         it('should call messageRouterGetAllEventsForAMessageIdFromANode successfully', function(done) {
           // TODO: uncomment, update parameter values for messageRouterGetAllEventsForAMessageIdFromANode call and complete the assertions
           /*
-          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var xAccountApiKey = "xAccountApiKey_example";
           var messageId = "messageId_example";
 
-          instance.messageRouterGetAllEventsForAMessageIdFromANode(xSubAccountApiKey, messageId, function(error, data, response) {
+          instance.messageRouterGetAllEventsForAMessageIdFromANode(xAccountApiKey, messageId, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -217,6 +221,8 @@
             for (let p in dataCtr) {
               let data = dataCtr[p];
               expect(data).to.be.a(SendPostApi.ModelsQEvent);
+              expect(data.accountID).to.be.a('number');
+              expect(data.accountID).to.be("0");
               expect(data.eventID).to.be.a('string');
               expect(data.eventID).to.be("");
               expect(data.eventMetadata).to.be.a(SendPostApi.ModelsEventMetadata);
@@ -285,186 +291,22 @@
           done();
         });
       });
-      describe('messageRouterGetAllMessages', function() {
-        it('should call messageRouterGetAllMessages successfully', function(done) {
-          // TODO: uncomment, update parameter values for messageRouterGetAllMessages call and complete the assertions
-          /*
-          var xSubAccountApiKey = "xSubAccountApiKey_example";
-          var opts = {};
-          opts.offset = 789;
-          opts.limit = 789;
-          opts.search = "search_example";
-          opts.from = "from_example";
-          opts.to = "to_example";
-
-          instance.messageRouterGetAllMessages(xSubAccountApiKey, opts, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            let dataCtr = data;
-            expect(dataCtr).to.be.an(Array);
-            expect(dataCtr).to.not.be.empty();
-            for (let p in dataCtr) {
-              let data = dataCtr[p];
-              expect(data).to.be.a(SendPostApi.ModelsQEmailMessage);
-              expect(data.ampBody).to.be.a('string');
-              expect(data.ampBody).to.be("");
-              expect(data.customFields).to.be.a(Object);
-              expect(data.customFields).to.be();
-              expect(data.emailType).to.be.a('string');
-              expect(data.emailType).to.be("");
-              expect(data.from).to.be.a(SendPostApi.ModelsFrom);
-                    expect(data.from.email).to.be.a('string');
-                expect(data.from.email).to.be("");
-                expect(data.from.name).to.be.a('string');
-                expect(data.from.name).to.be("");
-              expect(data.groups).to.be.a(Object);
-              expect(data.groups).to.be();
-              expect(data.headers).to.be.a(Object);
-              expect(data.headers).to.be();
-              expect(data.htmlBody).to.be.a('string');
-              expect(data.htmlBody).to.be("");
-              expect(data.ipID).to.be.a('number');
-              expect(data.ipID).to.be("0");
-              expect(data.ipPool).to.be.a('string');
-              expect(data.ipPool).to.be("");
-              expect(data.localIP).to.be.a('string');
-              expect(data.localIP).to.be("");
-              expect(data.messageID).to.be.a('string');
-              expect(data.messageID).to.be("");
-              expect(data.preText).to.be.a('string');
-              expect(data.preText).to.be("");
-              expect(data.publicIP).to.be.a('string');
-              expect(data.publicIP).to.be("");
-              expect(data.replyTo).to.be.a(SendPostApi.ModelsReplyTo);
-                    expect(data.replyTo.email).to.be.a('string');
-                expect(data.replyTo.email).to.be("");
-                expect(data.replyTo.name).to.be.a('string');
-                expect(data.replyTo.name).to.be("");
-              expect(data.subAccountID).to.be.a('number');
-              expect(data.subAccountID).to.be("0");
-              expect(data.subject).to.be.a('string');
-              expect(data.subject).to.be("");
-              expect(data.submittedAt).to.be.a('number');
-              expect(data.submittedAt).to.be("0");
-              expect(data.textBody).to.be.a('string');
-              expect(data.textBody).to.be("");
-              expect(data.to).to.be.a(SendPostApi.ModelsTo);
-                    expect(data.to.customFields).to.be.a(Object);
-                expect(data.to.customFields).to.be();
-                expect(data.to.email).to.be.a('string');
-                expect(data.to.email).to.be("");
-                expect(data.to.name).to.be.a('string');
-                expect(data.to.name).to.be("");
-              expect(data.trackClicks).to.be.a('boolean');
-              expect(data.trackClicks).to.be(false);
-              expect(data.trackOpens).to.be.a('boolean');
-              expect(data.trackOpens).to.be(false);
-            }
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('messageRouterGetAllMessagesFromANode', function() {
-        it('should call messageRouterGetAllMessagesFromANode successfully', function(done) {
-          // TODO: uncomment, update parameter values for messageRouterGetAllMessagesFromANode call and complete the assertions
-          /*
-          var xSubAccountApiKey = "xSubAccountApiKey_example";
-
-          instance.messageRouterGetAllMessagesFromANode(xSubAccountApiKey, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            let dataCtr = data;
-            expect(dataCtr).to.be.an(Array);
-            expect(dataCtr).to.not.be.empty();
-            for (let p in dataCtr) {
-              let data = dataCtr[p];
-              expect(data).to.be.a(SendPostApi.ModelsQEmailMessage);
-              expect(data.ampBody).to.be.a('string');
-              expect(data.ampBody).to.be("");
-              expect(data.customFields).to.be.a(Object);
-              expect(data.customFields).to.be();
-              expect(data.emailType).to.be.a('string');
-              expect(data.emailType).to.be("");
-              expect(data.from).to.be.a(SendPostApi.ModelsFrom);
-                    expect(data.from.email).to.be.a('string');
-                expect(data.from.email).to.be("");
-                expect(data.from.name).to.be.a('string');
-                expect(data.from.name).to.be("");
-              expect(data.groups).to.be.a(Object);
-              expect(data.groups).to.be();
-              expect(data.headers).to.be.a(Object);
-              expect(data.headers).to.be();
-              expect(data.htmlBody).to.be.a('string');
-              expect(data.htmlBody).to.be("");
-              expect(data.ipID).to.be.a('number');
-              expect(data.ipID).to.be("0");
-              expect(data.ipPool).to.be.a('string');
-              expect(data.ipPool).to.be("");
-              expect(data.localIP).to.be.a('string');
-              expect(data.localIP).to.be("");
-              expect(data.messageID).to.be.a('string');
-              expect(data.messageID).to.be("");
-              expect(data.preText).to.be.a('string');
-              expect(data.preText).to.be("");
-              expect(data.publicIP).to.be.a('string');
-              expect(data.publicIP).to.be("");
-              expect(data.replyTo).to.be.a(SendPostApi.ModelsReplyTo);
-                    expect(data.replyTo.email).to.be.a('string');
-                expect(data.replyTo.email).to.be("");
-                expect(data.replyTo.name).to.be.a('string');
-                expect(data.replyTo.name).to.be("");
-              expect(data.subAccountID).to.be.a('number');
-              expect(data.subAccountID).to.be("0");
-              expect(data.subject).to.be.a('string');
-              expect(data.subject).to.be("");
-              expect(data.submittedAt).to.be.a('number');
-              expect(data.submittedAt).to.be("0");
-              expect(data.textBody).to.be.a('string');
-              expect(data.textBody).to.be("");
-              expect(data.to).to.be.a(SendPostApi.ModelsTo);
-                    expect(data.to.customFields).to.be.a(Object);
-                expect(data.to.customFields).to.be();
-                expect(data.to.email).to.be.a('string');
-                expect(data.to.email).to.be("");
-                expect(data.to.name).to.be.a('string');
-                expect(data.to.name).to.be("");
-              expect(data.trackClicks).to.be.a('boolean');
-              expect(data.trackClicks).to.be(false);
-              expect(data.trackOpens).to.be.a('boolean');
-              expect(data.trackOpens).to.be(false);
-            }
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
       describe('messageRouterGetMessageFromNode', function() {
         it('should call messageRouterGetMessageFromNode successfully', function(done) {
           // TODO: uncomment, update parameter values for messageRouterGetMessageFromNode call and complete the assertions
           /*
-          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var xAccountApiKey = "xAccountApiKey_example";
           var messageId = "messageId_example";
 
-          instance.messageRouterGetMessageFromNode(xSubAccountApiKey, messageId, function(error, data, response) {
+          instance.messageRouterGetMessageFromNode(xAccountApiKey, messageId, function(error, data, response) {
             if (error) {
               done(error);
               return;
             }
             // TODO: update response assertions
             expect(data).to.be.a(SendPostApi.ModelsQEmailMessage);
+            expect(data.accountID).to.be.a('number');
+            expect(data.accountID).to.be("0");
             expect(data.ampBody).to.be.a('string');
             expect(data.ampBody).to.be("");
             expect(data.customFields).to.be.a(Object);

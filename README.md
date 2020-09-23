@@ -185,12 +185,12 @@ Class | Method | HTTP request | Description
 *SendPostApi.SubaccountdomainApi* | [**domainRouterUpdate**](docs/SubaccountdomainApi.md#domainRouterUpdate) | **PUT** /subaccount/domain/{domainId} | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterVerify**](docs/SubaccountdomainApi.md#domainRouterVerify) | **POST** /subaccount/domain/{domainId}/verify | 
 *SendPostApi.SubaccountemailApi* | [**emailRouterSendEmail**](docs/SubaccountemailApi.md#emailRouterSendEmail) | **POST** /subaccount/email/ | 
+*SendPostApi.SubaccounteventApi* | [**eventRouterCountAllEventsFromAAccountForAGivenTimeRange**](docs/SubaccounteventApi.md#eventRouterCountAllEventsFromAAccountForAGivenTimeRange) | **GET** /subaccount/event/count | 
 *SendPostApi.SubaccounteventApi* | [**eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange**](docs/SubaccounteventApi.md#eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange) | **GET** /subaccount/event/node/count | 
-*SendPostApi.SubaccounteventApi* | [**eventRouterCountAllEventsFromASubAccountForAGivenTimeRange**](docs/SubaccounteventApi.md#eventRouterCountAllEventsFromASubAccountForAGivenTimeRange) | **GET** /subaccount/event/count | 
 *SendPostApi.SubaccounteventApi* | [**eventRouterGet**](docs/SubaccounteventApi.md#eventRouterGet) | **GET** /subaccount/event/{eventId} | 
 *SendPostApi.SubaccounteventApi* | [**eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange**](docs/SubaccounteventApi.md#eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange) | **GET** /subaccount/event/node/timestampkeys | 
-*SendPostApi.SubaccounteventApi* | [**eventRouterGetAllEventsFromASubAccountForAGivenTimeRange**](docs/SubaccounteventApi.md#eventRouterGetAllEventsFromASubAccountForAGivenTimeRange) | **GET** /subaccount/event/ | 
-*SendPostApi.SubaccounteventApi* | [**eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange**](docs/SubaccounteventApi.md#eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange) | **POST** /subaccount/event/node | 
+*SendPostApi.SubaccounteventApi* | [**eventRouterGetAllEventsFromAAccountForAGivenTimeRange**](docs/SubaccounteventApi.md#eventRouterGetAllEventsFromAAccountForAGivenTimeRange) | **GET** /subaccount/event/ | 
+*SendPostApi.SubaccounteventApi* | [**eventRouterGetAllEventsOfAAccountFromASpecificNode**](docs/SubaccounteventApi.md#eventRouterGetAllEventsOfAAccountFromASpecificNode) | **POST** /subaccount/event/node | 
 *SendPostApi.SubaccounteventApi* | [**eventRouterGetEventInNode**](docs/SubaccounteventApi.md#eventRouterGetEventInNode) | **GET** /subaccount/event/node/{eventId} | 
 *SendPostApi.SubaccountippoolApi* | [**iPPoolRouterCount**](docs/SubaccountippoolApi.md#iPPoolRouterCount) | **GET** /subaccount/ippool/count | 
 *SendPostApi.SubaccountippoolApi* | [**iPPoolRouterCreate**](docs/SubaccountippoolApi.md#iPPoolRouterCreate) | **POST** /subaccount/ippool/ | 
@@ -201,8 +201,6 @@ Class | Method | HTTP request | Description
 *SendPostApi.SubaccountmessageApi* | [**messageRouterGet**](docs/SubaccountmessageApi.md#messageRouterGet) | **GET** /subaccount/message/{messageId} | 
 *SendPostApi.SubaccountmessageApi* | [**messageRouterGetAllEventsForAMessageId**](docs/SubaccountmessageApi.md#messageRouterGetAllEventsForAMessageId) | **GET** /subaccount/message/{messageId}/events | 
 *SendPostApi.SubaccountmessageApi* | [**messageRouterGetAllEventsForAMessageIdFromANode**](docs/SubaccountmessageApi.md#messageRouterGetAllEventsForAMessageIdFromANode) | **GET** /subaccount/message/node/{messageId}/events | 
-*SendPostApi.SubaccountmessageApi* | [**messageRouterGetAllMessages**](docs/SubaccountmessageApi.md#messageRouterGetAllMessages) | **GET** /subaccount/message/ | 
-*SendPostApi.SubaccountmessageApi* | [**messageRouterGetAllMessagesFromANode**](docs/SubaccountmessageApi.md#messageRouterGetAllMessagesFromANode) | **POST** /subaccount/message/node | 
 *SendPostApi.SubaccountmessageApi* | [**messageRouterGetMessageFromNode**](docs/SubaccountmessageApi.md#messageRouterGetMessageFromNode) | **GET** /subaccount/message/node/{messageId} | 
 *SendPostApi.SubaccountrecipientApi* | [**recipientRouterGetAllMessagesForARecipient**](docs/SubaccountrecipientApi.md#recipientRouterGetAllMessagesForARecipient) | **GET** /subaccount/recipient/{recipient}/messages | 
 *SendPostApi.SubaccountrecipientApi* | [**recipientRouterGetAllMessagesForARecipientFromANode**](docs/SubaccountrecipientApi.md#recipientRouterGetAllMessagesForARecipientFromANode) | **GET** /subaccount/recipient/node/{recipient}/messages | 

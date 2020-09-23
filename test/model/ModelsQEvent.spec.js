@@ -41,6 +41,12 @@
         expect(instance).to.be.a(SendPostApi.ModelsQEvent);
       });
 
+      it('should have the property accountID (base name: "accountID")', function() {
+        // TODO: update the code to test the property accountID
+        expect(instance).to.have.property('accountID');
+        // expect(instance.accountID).to.be(expectedValueLiteral);
+      });
+
       it('should have the property eventID (base name: "eventID")', function() {
         // TODO: update the code to test the property eventID
         expect(instance).to.have.property('eventID');

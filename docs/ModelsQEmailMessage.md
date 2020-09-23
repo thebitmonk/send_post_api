@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**accountID** | **Number** |  | [optional] 
 **ampBody** | **String** |  | [optional] 
 **customFields** | **Object** |  | [optional] 
 **emailType** | **String** |  | [optional] 

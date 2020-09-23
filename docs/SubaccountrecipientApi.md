@@ -59,7 +59,7 @@ No authorization required
 
 <a name="recipientRouterGetAllMessagesForARecipientFromANode"></a>
 # **recipientRouterGetAllMessagesForARecipientFromANode**
-> [ModelsQEmailMessage] recipientRouterGetAllMessagesForARecipientFromANode(xSubAccountApiKey, recipient)
+> [ModelsQEmailMessage] recipientRouterGetAllMessagesForARecipientFromANode(xAccountApiKey, recipient)
 
 
 
@@ -71,7 +71,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.SubaccountrecipientApi();
 
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var recipient = "recipient_example"; // String | email of the recipient
 
@@ -83,14 +83,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.recipientRouterGetAllMessagesForARecipientFromANode(xSubAccountApiKey, recipient, callback);
+apiInstance.recipientRouterGetAllMessagesForARecipientFromANode(xAccountApiKey, recipient, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **xAccountApiKey** | **String**| Account API Key | 
  **recipient** | **String**| email of the recipient | 
 
 ### Return type
