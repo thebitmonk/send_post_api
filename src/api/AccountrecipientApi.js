@@ -58,17 +58,17 @@
 
     /**
      * Find all messages sent to a specific recipient
-     * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {String} xAccountApiKey Account API Key
      * @param {String} recipient email of the recipient
      * @param {module:api/AccountrecipientApi~recipientRouterGetAllMessagesForARecipientCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsQEmailMessage>}
      */
-    this.recipientRouterGetAllMessagesForARecipient = function(xSubAccountApiKey, recipient, callback) {
+    this.recipientRouterGetAllMessagesForARecipient = function(xAccountApiKey, recipient, callback) {
       var postBody = null;
 
-      // verify the required parameter 'xSubAccountApiKey' is set
-      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling recipientRouterGetAllMessagesForARecipient");
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling recipientRouterGetAllMessagesForARecipient");
       }
 
       // verify the required parameter 'recipient' is set
@@ -85,7 +85,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
-        'X-SubAccount-ApiKey': xSubAccountApiKey
+        'X-Account-ApiKey': xAccountApiKey
       };
       var formParams = {
       };

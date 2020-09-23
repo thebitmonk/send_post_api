@@ -40,10 +40,10 @@
         it('should call recipientRouterGetAllMessagesForARecipient successfully', function(done) {
           // TODO: uncomment, update parameter values for recipientRouterGetAllMessagesForARecipient call and complete the assertions
           /*
-          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var xAccountApiKey = "xAccountApiKey_example";
           var recipient = "recipient_example";
 
-          instance.recipientRouterGetAllMessagesForARecipient(xSubAccountApiKey, recipient, function(error, data, response) {
+          instance.recipientRouterGetAllMessagesForARecipient(xAccountApiKey, recipient, function(error, data, response) {
             if (error) {
               done(error);
               return;
