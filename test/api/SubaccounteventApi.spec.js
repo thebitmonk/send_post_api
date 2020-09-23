@@ -178,15 +178,15 @@
           // TODO: uncomment, update parameter values for eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange call and complete the assertions
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
-          var source = "source_example";
-          var sourceId = "sourceId_example";
           var opts = {};
           opts.search = "search_example";
           opts.type = "type_example";
           opts.from = "from_example";
           opts.to = "to_example";
+          opts.source = "source_example";
+          opts.sourceId = "sourceId_example";
 
-          instance.eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange(xSubAccountApiKey, source, sourceId, opts, function(error, data, response) {
+          instance.eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange(xSubAccountApiKey, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -271,8 +271,6 @@
           // TODO: uncomment, update parameter values for eventRouterGetAllEventsFromASubAccountForAGivenTimeRange call and complete the assertions
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
-          var source = "source_example";
-          var sourceId = "sourceId_example";
           var opts = {};
           opts.offset = 789;
           opts.limit = 789;
@@ -280,8 +278,10 @@
           opts.type = "type_example";
           opts.from = "from_example";
           opts.to = "to_example";
+          opts.source = "source_example";
+          opts.sourceId = "sourceId_example";
 
-          instance.eventRouterGetAllEventsFromASubAccountForAGivenTimeRange(xSubAccountApiKey, source, sourceId, opts, function(error, data, response) {
+          instance.eventRouterGetAllEventsFromASubAccountForAGivenTimeRange(xSubAccountApiKey, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;

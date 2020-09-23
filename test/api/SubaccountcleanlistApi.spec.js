@@ -50,10 +50,6 @@
             }
             // TODO: update response assertions
             expect(data).to.be.a(SendPostApi.ApiBulkResponse);
-            expect(data.jobId).to.be.a('number');
-            expect(data.jobId).to.be("0");
-            expect(data.message).to.be.a('string');
-            expect(data.message).to.be("");
 
             done();
           });

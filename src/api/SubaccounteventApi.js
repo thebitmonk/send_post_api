@@ -227,33 +227,23 @@
     /**
      * Find all events of a sub-account from a specific node for a give time-range
      * @param {String} xSubAccountApiKey Sub-Account API Key
-     * @param {String} source data source from which to get timestamp keys - subaccount or ip
-     * @param {String} sourceId source id from which to get timestamp keys - subaccount or ip
      * @param {Object} opts Optional parameters
      * @param {String} opts.search search term
      * @param {String} opts.type search type
      * @param {String} opts.from from date
      * @param {String} opts.to to date
+     * @param {String} opts.source data source from which to get timestamp keys subaccount or ip
+     * @param {String} opts.sourceId source id from which to get timestamp keys subaccount or ip
      * @param {module:api/SubaccounteventApi~eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRangeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsQEvent>}
      */
-    this.eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange = function(xSubAccountApiKey, source, sourceId, opts, callback) {
+    this.eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange = function(xSubAccountApiKey, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'xSubAccountApiKey' is set
       if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
         throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange");
-      }
-
-      // verify the required parameter 'source' is set
-      if (source === undefined || source === null) {
-        throw new Error("Missing the required parameter 'source' when calling eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange");
-      }
-
-      // verify the required parameter 'sourceId' is set
-      if (sourceId === undefined || sourceId === null) {
-        throw new Error("Missing the required parameter 'sourceId' when calling eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange");
       }
 
 
@@ -264,8 +254,8 @@
         'type': opts['type'],
         'from': opts['from'],
         'to': opts['to'],
-        'source': source,
-        'sourceId': sourceId,
+        'source': opts['source'],
+        'sourceId': opts['sourceId'],
       };
       var collectionQueryParams = {
       };
@@ -298,8 +288,6 @@
     /**
      * Find all events from a sub-account for a given time-range
      * @param {String} xSubAccountApiKey Sub-Account API Key
-     * @param {String} source data source from which to get timestamp keys - subaccount or ip
-     * @param {String} sourceId source id from which to get timestamp keys - subaccount or ip
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
      * @param {Number} opts.limit limit
@@ -307,26 +295,18 @@
      * @param {String} opts.type search type
      * @param {String} opts.from from date
      * @param {String} opts.to to date
+     * @param {String} opts.source data source from which to get timestamp keys subaccount or ip
+     * @param {String} opts.sourceId source id from which to get timestamp keys subaccount or ip
      * @param {module:api/SubaccounteventApi~eventRouterGetAllEventsFromASubAccountForAGivenTimeRangeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsQEvent>}
      */
-    this.eventRouterGetAllEventsFromASubAccountForAGivenTimeRange = function(xSubAccountApiKey, source, sourceId, opts, callback) {
+    this.eventRouterGetAllEventsFromASubAccountForAGivenTimeRange = function(xSubAccountApiKey, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'xSubAccountApiKey' is set
       if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
         throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling eventRouterGetAllEventsFromASubAccountForAGivenTimeRange");
-      }
-
-      // verify the required parameter 'source' is set
-      if (source === undefined || source === null) {
-        throw new Error("Missing the required parameter 'source' when calling eventRouterGetAllEventsFromASubAccountForAGivenTimeRange");
-      }
-
-      // verify the required parameter 'sourceId' is set
-      if (sourceId === undefined || sourceId === null) {
-        throw new Error("Missing the required parameter 'sourceId' when calling eventRouterGetAllEventsFromASubAccountForAGivenTimeRange");
       }
 
 
@@ -339,8 +319,8 @@
         'type': opts['type'],
         'from': opts['from'],
         'to': opts['to'],
-        'source': source,
-        'sourceId': sourceId,
+        'source': opts['source'],
+        'sourceId': opts['sourceId'],
       };
       var collectionQueryParams = {
       };
