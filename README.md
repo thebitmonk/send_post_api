@@ -246,7 +246,6 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [SendPostApi.ApiBulkResponse](docs/ApiBulkResponse.md)
- - [SendPostApi.ELabel](docs/ELabel.md)
  - [SendPostApi.ModelsAGStat](docs/ModelsAGStat.md)
  - [SendPostApi.ModelsAIPStat](docs/ModelsAIPStat.md)
  - [SendPostApi.ModelsAccount](docs/ModelsAccount.md)

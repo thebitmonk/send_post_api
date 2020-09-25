@@ -74,7 +74,7 @@ var apiInstance = new SendPostApi.AccountlabelApi();
 
 var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
-var body = new SendPostApi.ELabel(); // ELabel | The Label content
+var body = new SendPostApi.ModelsLabel(); // ModelsLabel | The Label content
 
 
 var callback = function(error, data, response) {
@@ -92,7 +92,7 @@ apiInstance.labelRouterCreate(xAccountApiKey, body, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
- **body** | [**ELabel**](ELabel.md)| The Label content | 
+ **body** | [**ModelsLabel**](ModelsLabel.md)| The Label content | 
 
 ### Return type
 
@@ -269,7 +269,7 @@ var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var labelId = 789; // Number | The LabelId you want to update
 
-var body = new SendPostApi.ELabel(); // ELabel | The body
+var body = new SendPostApi.ModelsLabel(); // ModelsLabel | The body
 
 
 var callback = function(error, data, response) {
@@ -288,7 +288,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
  **labelId** | **Number**| The LabelId you want to update | 
- **body** | [**ELabel**](ELabel.md)| The body | 
+ **body** | [**ModelsLabel**](ModelsLabel.md)| The body | 
 
 ### Return type
 

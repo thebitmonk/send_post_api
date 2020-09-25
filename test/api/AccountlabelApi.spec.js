@@ -64,7 +64,11 @@
           // TODO: uncomment, update parameter values for labelRouterCreate call and complete the assertions
           /*
           var xAccountApiKey = "xAccountApiKey_example";
-          var body = new SendPostApi.ELabel();
+          var body = new SendPostApi.ModelsLabel();
+          body.color = "";
+          body.created = "0";
+          body.id = "0";
+          body.name = "";
 
           instance.labelRouterCreate(xAccountApiKey, body, function(error, data, response) {
             if (error) {
@@ -186,7 +190,11 @@
           /*
           var xAccountApiKey = "xAccountApiKey_example";
           var labelId = 789;
-          var body = new SendPostApi.ELabel();
+          var body = new SendPostApi.ModelsLabel();
+          body.color = "";
+          body.created = "0";
+          body.id = "0";
+          body.name = "";
 
           instance.labelRouterUpdate(xAccountApiKey, labelId, body, function(error, data, response) {
             if (error) {
