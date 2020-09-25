@@ -55,11 +55,18 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('labels'))
+        obj.labels = ApiClient.convertToType(data['labels'], Object);
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
     }
     return obj;
   }
+
+  /**
+   * @member {Object} labels
+   */
+  exports.prototype.labels = undefined;
 
   /**
    * @member {String} name

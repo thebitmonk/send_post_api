@@ -65,6 +65,12 @@
         // expect(instance.name).to.be(expectedValueLiteral);
       });
 
+      it('should have the property subAccounts (base name: "subAccounts")', function() {
+        // TODO: update the code to test the property subAccounts
+        expect(instance).to.have.property('subAccounts');
+        // expect(instance.subAccounts).to.be(expectedValueLiteral);
+      });
+
     });
   });
 

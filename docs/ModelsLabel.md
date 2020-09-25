@@ -7,5 +7,6 @@ Name | Type | Description | Notes
 **created** | **Number** |  | [optional] 
 **id** | **Number** |  | [optional] 
 **name** | **String** |  | [optional] 
+**subAccounts** | [**[ModelsSubAccount]**](ModelsSubAccount.md) |  | [optional] 
 
 
