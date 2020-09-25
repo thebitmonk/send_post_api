@@ -41,16 +41,16 @@
         expect(instance).to.be.a(SendPostApi.ModelsESubAccount);
       });
 
-      it('should have the property labels (base name: "labels")', function() {
-        // TODO: update the code to test the property labels
-        expect(instance).to.have.property('labels');
-        // expect(instance.labels).to.be(expectedValueLiteral);
-      });
-
       it('should have the property name (base name: "name")', function() {
         // TODO: update the code to test the property name
         expect(instance).to.have.property('name');
         // expect(instance.name).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property labels (base name: "labels")', function() {
+        // TODO: update the code to test the property labels
+        expect(instance).to.have.property('labels');
+        // expect(instance.labels).to.be(expectedValueLiteral);
       });
 
     });
