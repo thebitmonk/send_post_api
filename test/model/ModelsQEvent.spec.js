@@ -59,6 +59,12 @@
         // expect(instance.eventMetadata).to.be(expectedValueLiteral);
       });
 
+      it('should have the property from (base name: "from")', function() {
+        // TODO: update the code to test the property from
+        expect(instance).to.have.property('from');
+        // expect(instance.from).to.be(expectedValueLiteral);
+      });
+
       it('should have the property groups (base name: "groups")', function() {
         // TODO: update the code to test the property groups
         expect(instance).to.have.property('groups');

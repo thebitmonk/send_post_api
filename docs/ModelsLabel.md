@@ -1,13 +1,11 @@
-# SendPostApi.ModelsSubAccount
+# SendPostApi.ModelsLabel
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**apiKey** | **String** |  | [optional] 
+**color** | **String** |  | [optional] 
 **created** | **Number** |  | [optional] 
 **id** | **Number** |  | [optional] 
-**labels** | [**[ModelsLabel]**](ModelsLabel.md) |  | [optional] 
 **name** | **String** |  | [optional] 
-**type** | [**ModelsSubAccountType**](ModelsSubAccountType.md) |  | [optional] 
 
 

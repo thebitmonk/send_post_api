@@ -31,20 +31,20 @@
   var instance;
 
   describe('(package)', function() {
-    describe('ModelsSubAccount', function() {
+    describe('ModelsLabel', function() {
       beforeEach(function() {
-        instance = new SendPostApi.ModelsSubAccount();
+        instance = new SendPostApi.ModelsLabel();
       });
 
-      it('should create an instance of ModelsSubAccount', function() {
-        // TODO: update the code to test ModelsSubAccount
-        expect(instance).to.be.a(SendPostApi.ModelsSubAccount);
+      it('should create an instance of ModelsLabel', function() {
+        // TODO: update the code to test ModelsLabel
+        expect(instance).to.be.a(SendPostApi.ModelsLabel);
       });
 
-      it('should have the property apiKey (base name: "apiKey")', function() {
-        // TODO: update the code to test the property apiKey
-        expect(instance).to.have.property('apiKey');
-        // expect(instance.apiKey).to.be(expectedValueLiteral);
+      it('should have the property color (base name: "color")', function() {
+        // TODO: update the code to test the property color
+        expect(instance).to.have.property('color');
+        // expect(instance.color).to.be(expectedValueLiteral);
       });
 
       it('should have the property created (base name: "created")', function() {
@@ -59,22 +59,10 @@
         // expect(instance.id).to.be(expectedValueLiteral);
       });
 
-      it('should have the property labels (base name: "labels")', function() {
-        // TODO: update the code to test the property labels
-        expect(instance).to.have.property('labels');
-        // expect(instance.labels).to.be(expectedValueLiteral);
-      });
-
       it('should have the property name (base name: "name")', function() {
         // TODO: update the code to test the property name
         expect(instance).to.have.property('name');
         // expect(instance.name).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property type (base name: "type")', function() {
-        // TODO: update the code to test the property type
-        expect(instance).to.have.property('type');
-        // expect(instance.type).to.be(expectedValueLiteral);
       });
 
     });

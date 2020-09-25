@@ -4,14 +4,14 @@ All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**trackRouterTrackEmailOpen**](TrackApi.md#trackRouterTrackEmailOpen) | **GET** /track/open/{subAccountId}/{ipId}/{emailType}/{messageId}/1.png | 
-[**trackRouterTrackLinkClick**](TrackApi.md#trackRouterTrackLinkClick) | **GET** /track/click/{subAccountId}/{ipId}/{emailType}/{messageId} | 
-[**trackRouterTrackUnsubscribe**](TrackApi.md#trackRouterTrackUnsubscribe) | **GET** /track/unsubscribe/{subAccountId}/{messageId} | 
+[**trackRouterTrackEmailOpen**](TrackApi.md#trackRouterTrackEmailOpen) | **GET** /track/open/{accountId}/{subAccountId}/{ipId}/{emailType}/{messageId}/1.png | 
+[**trackRouterTrackLinkClick**](TrackApi.md#trackRouterTrackLinkClick) | **GET** /track/click/{accountId}/{subAccountId}/{ipId}/{emailType}/{messageId} | 
+[**trackRouterTrackUnsubscribe**](TrackApi.md#trackRouterTrackUnsubscribe) | **GET** /track/unsubscribe/{accountId}/{subAccountId}/{messageId} | 
 
 
 <a name="trackRouterTrackEmailOpen"></a>
 # **trackRouterTrackEmailOpen**
-> trackRouterTrackEmailOpen(ipId, subAccountId, messageId, emailType)
+> trackRouterTrackEmailOpen(ipId, accountId, subAccountId, messageId, emailType)
 
 
 
@@ -24,6 +24,8 @@ var SendPostApi = require('send_post_api');
 var apiInstance = new SendPostApi.TrackApi();
 
 var ipId = 789; // Number | The id of ip from which this email message was sent
+
+var accountId = 789; // Number | The id of account from which email is being sent
 
 var subAccountId = 789; // Number | The id of sub-account from which email is being sent
 
@@ -39,7 +41,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.trackRouterTrackEmailOpen(ipId, subAccountId, messageId, emailType, callback);
+apiInstance.trackRouterTrackEmailOpen(ipId, accountId, subAccountId, messageId, emailType, callback);
 ```
 
 ### Parameters
@@ -47,6 +49,7 @@ apiInstance.trackRouterTrackEmailOpen(ipId, subAccountId, messageId, emailType, 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ipId** | **Number**| The id of ip from which this email message was sent | 
+ **accountId** | **Number**| The id of account from which email is being sent | 
  **subAccountId** | **Number**| The id of sub-account from which email is being sent | 
  **messageId** | **String**| The UUID of message which was sent | 
  **emailType** | **String**| The type of email such as gmail, yahoo etc. which was sent. This is inferred from to email address | 
@@ -66,7 +69,7 @@ No authorization required
 
 <a name="trackRouterTrackLinkClick"></a>
 # **trackRouterTrackLinkClick**
-> trackRouterTrackLinkClick(ipId, subAccountId, messageId, emailType, redirecturl)
+> trackRouterTrackLinkClick(ipId, accountId, subAccountId, messageId, emailType, redirecturl)
 
 
 
@@ -79,6 +82,8 @@ var SendPostApi = require('send_post_api');
 var apiInstance = new SendPostApi.TrackApi();
 
 var ipId = 789; // Number | The id of ip from which this email message was sent
+
+var accountId = 789; // Number | The id of account from which email is being sent
 
 var subAccountId = 789; // Number | The id of sub-account from which email is being sent
 
@@ -96,7 +101,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.trackRouterTrackLinkClick(ipId, subAccountId, messageId, emailType, redirecturl, callback);
+apiInstance.trackRouterTrackLinkClick(ipId, accountId, subAccountId, messageId, emailType, redirecturl, callback);
 ```
 
 ### Parameters
@@ -104,6 +109,7 @@ apiInstance.trackRouterTrackLinkClick(ipId, subAccountId, messageId, emailType, 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ipId** | **Number**| The id of ip from which this email message was sent | 
+ **accountId** | **Number**| The id of account from which email is being sent | 
  **subAccountId** | **Number**| The id of sub-account from which email is being sent | 
  **messageId** | **String**| The UUID of message which was sent | 
  **emailType** | **String**| The type of email such as gmail, yahoo etc. which was sent. This is inferred from to email address | 
@@ -124,7 +130,7 @@ No authorization required
 
 <a name="trackRouterTrackUnsubscribe"></a>
 # **trackRouterTrackUnsubscribe**
-> trackRouterTrackUnsubscribe(subAccountId, messageId)
+> trackRouterTrackUnsubscribe(ipId, accountId, subAccountId, messageId, emailType)
 
 
 
@@ -136,9 +142,15 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.TrackApi();
 
+var ipId = 789; // Number | The id of ip from which this email message was sent
+
+var accountId = 789; // Number | The id of account from which email is being sent
+
 var subAccountId = 789; // Number | The id of sub-account from which email is being sent
 
-var messageId = 789; // Number | The UUID of message which was sent
+var messageId = "messageId_example"; // String | The UUID of message which was sent
+
+var emailType = "emailType_example"; // String | The type of email such as gmail, yahoo etc. which was sent. This is inferred from to email address
 
 
 var callback = function(error, data, response) {
@@ -148,15 +160,18 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.trackRouterTrackUnsubscribe(subAccountId, messageId, callback);
+apiInstance.trackRouterTrackUnsubscribe(ipId, accountId, subAccountId, messageId, emailType, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **ipId** | **Number**| The id of ip from which this email message was sent | 
+ **accountId** | **Number**| The id of account from which email is being sent | 
  **subAccountId** | **Number**| The id of sub-account from which email is being sent | 
- **messageId** | **Number**| The UUID of message which was sent | 
+ **messageId** | **String**| The UUID of message which was sent | 
+ **emailType** | **String**| The type of email such as gmail, yahoo etc. which was sent. This is inferred from to email address | 
 
 ### Return type
 

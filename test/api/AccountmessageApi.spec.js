@@ -177,6 +177,8 @@
                   expect(data.eventMetadata.userAgent.minor).to.be("");
                   expect(data.eventMetadata.userAgent.patch).to.be.a('string');
                   expect(data.eventMetadata.userAgent.patch).to.be("");
+              expect(data.from).to.be.a('string');
+              expect(data.from).to.be("");
               expect(data.groups).to.be.a(Object);
               expect(data.groups).to.be();
               expect(data.ipID).to.be.a('number');
@@ -266,6 +268,8 @@
                   expect(data.eventMetadata.userAgent.minor).to.be("");
                   expect(data.eventMetadata.userAgent.patch).to.be.a('string');
                   expect(data.eventMetadata.userAgent.patch).to.be("");
+              expect(data.from).to.be.a('string');
+              expect(data.from).to.be("");
               expect(data.groups).to.be.a(Object);
               expect(data.groups).to.be();
               expect(data.ipID).to.be.a('number');
