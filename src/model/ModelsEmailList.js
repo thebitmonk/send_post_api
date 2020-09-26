@@ -55,8 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('email_ids'))
-        obj.emailIds = ApiClient.convertToType(data['email_ids'], Object);
+      if (data.hasOwnProperty('emailIds'))
+        obj.emailIds = ApiClient.convertToType(data['emailIds'], Object);
     }
     return obj;
   }

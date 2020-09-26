@@ -41,7 +41,7 @@
         expect(instance).to.be.a(SendPostApi.ModelsEmailList);
       });
 
-      it('should have the property emailIds (base name: "email_ids")', function() {
+      it('should have the property emailIds (base name: "emailIds")', function() {
         // TODO: update the code to test the property emailIds
         expect(instance).to.have.property('emailIds');
         // expect(instance.emailIds).to.be(expectedValueLiteral);

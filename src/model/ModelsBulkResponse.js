@@ -55,8 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('job_id'))
-        obj.jobId = ApiClient.convertToType(data['job_id'], 'Number');
+      if (data.hasOwnProperty('jobId'))
+        obj.jobId = ApiClient.convertToType(data['jobId'], 'Number');
       if (data.hasOwnProperty('message'))
         obj.message = ApiClient.convertToType(data['message'], 'String');
     }
