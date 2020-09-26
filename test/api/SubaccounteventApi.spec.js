@@ -36,18 +36,20 @@
 
   describe('(package)', function() {
     describe('SubaccounteventApi', function() {
-      describe('eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange', function() {
-        it('should call eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange successfully', function(done) {
-          // TODO: uncomment, update parameter values for eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange call and complete the assertions
+      describe('eventRouterCountAllEventsFromAAccountForAGivenTimeRange', function() {
+        it('should call eventRouterCountAllEventsFromAAccountForAGivenTimeRange successfully', function(done) {
+          // TODO: uncomment, update parameter values for eventRouterCountAllEventsFromAAccountForAGivenTimeRange call and complete the assertions
           /*
-          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var xAccountApiKey = "xAccountApiKey_example";
           var opts = {};
           opts.search = "search_example";
           opts.type = "type_example";
           opts.from = "from_example";
           opts.to = "to_example";
+          opts.source = "source_example";
+          opts.sourceId = "sourceId_example";
 
-          instance.eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange(xSubAccountApiKey, opts, function(error, data, response) {
+          instance.eventRouterCountAllEventsFromAAccountForAGivenTimeRange(xAccountApiKey, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -64,18 +66,20 @@
           done();
         });
       });
-      describe('eventRouterCountAllEventsFromASubAccountForAGivenTimeRange', function() {
-        it('should call eventRouterCountAllEventsFromASubAccountForAGivenTimeRange successfully', function(done) {
-          // TODO: uncomment, update parameter values for eventRouterCountAllEventsFromASubAccountForAGivenTimeRange call and complete the assertions
+      describe('eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange', function() {
+        it('should call eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange successfully', function(done) {
+          // TODO: uncomment, update parameter values for eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange call and complete the assertions
           /*
-          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var xAccountApiKey = "xAccountApiKey_example";
           var opts = {};
           opts.search = "search_example";
           opts.type = "type_example";
           opts.from = "from_example";
           opts.to = "to_example";
+          opts.source = "source_example";
+          opts.sourceId = "sourceId_example";
 
-          instance.eventRouterCountAllEventsFromASubAccountForAGivenTimeRange(xSubAccountApiKey, opts, function(error, data, response) {
+          instance.eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange(xAccountApiKey, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -96,16 +100,18 @@
         it('should call eventRouterGet successfully', function(done) {
           // TODO: uncomment, update parameter values for eventRouterGet call and complete the assertions
           /*
-          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var xAccountApiKey = "xAccountApiKey_example";
           var eventId = "eventId_example";
 
-          instance.eventRouterGet(xSubAccountApiKey, eventId, function(error, data, response) {
+          instance.eventRouterGet(xAccountApiKey, eventId, function(error, data, response) {
             if (error) {
               done(error);
               return;
             }
             // TODO: update response assertions
             expect(data).to.be.a(SendPostApi.ModelsQEvent);
+            expect(data.accountID).to.be.a('number');
+            expect(data.accountID).to.be("0");
             expect(data.eventID).to.be.a('string');
             expect(data.eventID).to.be("");
             expect(data.eventMetadata).to.be.a(SendPostApi.ModelsEventMetadata);
@@ -177,14 +183,16 @@
         it('should call eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange successfully', function(done) {
           // TODO: uncomment, update parameter values for eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange call and complete the assertions
           /*
-          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var xAccountApiKey = "xAccountApiKey_example";
           var opts = {};
           opts.search = "search_example";
           opts.type = "type_example";
           opts.from = "from_example";
           opts.to = "to_example";
+          opts.source = "source_example";
+          opts.sourceId = "sourceId_example";
 
-          instance.eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange(xSubAccountApiKey, opts, function(error, data, response) {
+          instance.eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange(xAccountApiKey, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -196,6 +204,8 @@
             for (let p in dataCtr) {
               let data = dataCtr[p];
               expect(data).to.be.a(SendPostApi.ModelsQEvent);
+              expect(data.accountID).to.be.a('number');
+              expect(data.accountID).to.be("0");
               expect(data.eventID).to.be.a('string');
               expect(data.eventID).to.be("");
               expect(data.eventMetadata).to.be.a(SendPostApi.ModelsEventMetadata);
@@ -264,11 +274,11 @@
           done();
         });
       });
-      describe('eventRouterGetAllEventsFromASubAccountForAGivenTimeRange', function() {
-        it('should call eventRouterGetAllEventsFromASubAccountForAGivenTimeRange successfully', function(done) {
-          // TODO: uncomment, update parameter values for eventRouterGetAllEventsFromASubAccountForAGivenTimeRange call and complete the assertions
+      describe('eventRouterGetAllEventsFromAAccountForAGivenTimeRange', function() {
+        it('should call eventRouterGetAllEventsFromAAccountForAGivenTimeRange successfully', function(done) {
+          // TODO: uncomment, update parameter values for eventRouterGetAllEventsFromAAccountForAGivenTimeRange call and complete the assertions
           /*
-          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var xAccountApiKey = "xAccountApiKey_example";
           var opts = {};
           opts.offset = 789;
           opts.limit = 789;
@@ -276,8 +286,10 @@
           opts.type = "type_example";
           opts.from = "from_example";
           opts.to = "to_example";
+          opts.source = "source_example";
+          opts.sourceId = "sourceId_example";
 
-          instance.eventRouterGetAllEventsFromASubAccountForAGivenTimeRange(xSubAccountApiKey, opts, function(error, data, response) {
+          instance.eventRouterGetAllEventsFromAAccountForAGivenTimeRange(xAccountApiKey, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -289,6 +301,8 @@
             for (let p in dataCtr) {
               let data = dataCtr[p];
               expect(data).to.be.a(SendPostApi.ModelsQEvent);
+              expect(data.accountID).to.be.a('number');
+              expect(data.accountID).to.be("0");
               expect(data.eventID).to.be.a('string');
               expect(data.eventID).to.be("");
               expect(data.eventMetadata).to.be.a(SendPostApi.ModelsEventMetadata);
@@ -357,13 +371,13 @@
           done();
         });
       });
-      describe('eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange', function() {
-        it('should call eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange successfully', function(done) {
-          // TODO: uncomment, update parameter values for eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange call and complete the assertions
+      describe('eventRouterGetAllEventsOfAAccountFromASpecificNode', function() {
+        it('should call eventRouterGetAllEventsOfAAccountFromASpecificNode successfully', function(done) {
+          // TODO: uncomment, update parameter values for eventRouterGetAllEventsOfAAccountFromASpecificNode call and complete the assertions
           /*
-          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var xAccountApiKey = "xAccountApiKey_example";
 
-          instance.eventRouterGetAllEventsOfASubAccountFromASpecificNodeForAGivenTimeRange(xSubAccountApiKey, function(error, data, response) {
+          instance.eventRouterGetAllEventsOfAAccountFromASpecificNode(xAccountApiKey, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -375,6 +389,8 @@
             for (let p in dataCtr) {
               let data = dataCtr[p];
               expect(data).to.be.a(SendPostApi.ModelsQEvent);
+              expect(data.accountID).to.be.a('number');
+              expect(data.accountID).to.be("0");
               expect(data.eventID).to.be.a('string');
               expect(data.eventID).to.be("");
               expect(data.eventMetadata).to.be.a(SendPostApi.ModelsEventMetadata);
@@ -447,16 +463,18 @@
         it('should call eventRouterGetEventInNode successfully', function(done) {
           // TODO: uncomment, update parameter values for eventRouterGetEventInNode call and complete the assertions
           /*
-          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var xAccountApiKey = "xAccountApiKey_example";
           var eventId = "eventId_example";
 
-          instance.eventRouterGetEventInNode(xSubAccountApiKey, eventId, function(error, data, response) {
+          instance.eventRouterGetEventInNode(xAccountApiKey, eventId, function(error, data, response) {
             if (error) {
               done(error);
               return;
             }
             // TODO: update response assertions
             expect(data).to.be.a(SendPostApi.ModelsQEvent);
+            expect(data.accountID).to.be.a('number');
+            expect(data.accountID).to.be("0");
             expect(data.eventID).to.be.a('string');
             expect(data.eventID).to.be("");
             expect(data.eventMetadata).to.be.a(SendPostApi.ModelsEventMetadata);

@@ -26,20 +26,20 @@
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.SubaccountmessageApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsQEmailMessage, root.SendPostApi.ModelsQEvent);
+    root.SendPostApi.AccountmessageApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsQEmailMessage, root.SendPostApi.ModelsQEvent);
   }
 }(this, function(ApiClient, ModelsQEmailMessage, ModelsQEvent) {
   'use strict';
 
   /**
-   * Subaccountmessage service.
-   * @module api/SubaccountmessageApi
+   * Accountmessage service.
+   * @module api/AccountmessageApi
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new SubaccountmessageApi. 
-   * @alias module:api/SubaccountmessageApi
+   * Constructs a new AccountmessageApi. 
+   * @alias module:api/AccountmessageApi
    * @class
    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
@@ -50,7 +50,7 @@
 
     /**
      * Callback function to receive the result of the messageRouterGet operation.
-     * @callback module:api/SubaccountmessageApi~messageRouterGetCallback
+     * @callback module:api/AccountmessageApi~messageRouterGetCallback
      * @param {String} error Error message, if any.
      * @param {module:model/ModelsQEmailMessage} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -60,7 +60,7 @@
      * Find Message By Id
      * @param {String} xAccountApiKey Sub-Account API Key
      * @param {String} messageId the messageId that you want to retrieve
-     * @param {module:api/SubaccountmessageApi~messageRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/AccountmessageApi~messageRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsQEmailMessage}
      */
     this.messageRouterGet = function(xAccountApiKey, messageId, callback) {
@@ -96,7 +96,7 @@
       var returnType = ModelsQEmailMessage;
 
       return this.apiClient.callApi(
-        '/subaccount/message/{messageId}', 'GET',
+        '/account/message/{messageId}', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -104,7 +104,7 @@
 
     /**
      * Callback function to receive the result of the messageRouterGetAllEventsForAMessageId operation.
-     * @callback module:api/SubaccountmessageApi~messageRouterGetAllEventsForAMessageIdCallback
+     * @callback module:api/AccountmessageApi~messageRouterGetAllEventsForAMessageIdCallback
      * @param {String} error Error message, if any.
      * @param {Array.<module:model/ModelsQEvent>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -114,7 +114,7 @@
      * Find all events associated with a message id
      * @param {String} xAccountApiKey Account API Key
      * @param {String} messageId the messageId that you want to retrieve
-     * @param {module:api/SubaccountmessageApi~messageRouterGetAllEventsForAMessageIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/AccountmessageApi~messageRouterGetAllEventsForAMessageIdCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsQEvent>}
      */
     this.messageRouterGetAllEventsForAMessageId = function(xAccountApiKey, messageId, callback) {
@@ -150,7 +150,7 @@
       var returnType = [ModelsQEvent];
 
       return this.apiClient.callApi(
-        '/subaccount/message/{messageId}/events', 'GET',
+        '/account/message/{messageId}/events', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -158,7 +158,7 @@
 
     /**
      * Callback function to receive the result of the messageRouterGetAllEventsForAMessageIdFromANode operation.
-     * @callback module:api/SubaccountmessageApi~messageRouterGetAllEventsForAMessageIdFromANodeCallback
+     * @callback module:api/AccountmessageApi~messageRouterGetAllEventsForAMessageIdFromANodeCallback
      * @param {String} error Error message, if any.
      * @param {Array.<module:model/ModelsQEvent>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -168,7 +168,7 @@
      * Find all message events associated with a message id from a specific node
      * @param {String} xAccountApiKey Account API Key
      * @param {String} messageId the messageId that you want to retrieve
-     * @param {module:api/SubaccountmessageApi~messageRouterGetAllEventsForAMessageIdFromANodeCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/AccountmessageApi~messageRouterGetAllEventsForAMessageIdFromANodeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsQEvent>}
      */
     this.messageRouterGetAllEventsForAMessageIdFromANode = function(xAccountApiKey, messageId, callback) {
@@ -204,7 +204,7 @@
       var returnType = [ModelsQEvent];
 
       return this.apiClient.callApi(
-        '/subaccount/message/node/{messageId}/events', 'GET',
+        '/account/message/node/{messageId}/events', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -212,7 +212,7 @@
 
     /**
      * Callback function to receive the result of the messageRouterGetMessageFromNode operation.
-     * @callback module:api/SubaccountmessageApi~messageRouterGetMessageFromNodeCallback
+     * @callback module:api/AccountmessageApi~messageRouterGetMessageFromNodeCallback
      * @param {String} error Error message, if any.
      * @param {module:model/ModelsQEmailMessage} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -222,7 +222,7 @@
      * Find Message from node by specific Id
      * @param {String} xAccountApiKey Account API Key
      * @param {String} messageId the messageId that you want to retrieve
-     * @param {module:api/SubaccountmessageApi~messageRouterGetMessageFromNodeCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/AccountmessageApi~messageRouterGetMessageFromNodeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsQEmailMessage}
      */
     this.messageRouterGetMessageFromNode = function(xAccountApiKey, messageId, callback) {
@@ -258,7 +258,7 @@
       var returnType = ModelsQEmailMessage;
 
       return this.apiClient.callApi(
-        '/subaccount/message/node/{messageId}', 'GET',
+        '/account/message/node/{messageId}', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

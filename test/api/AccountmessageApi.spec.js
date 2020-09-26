@@ -31,11 +31,11 @@
   var instance;
 
   beforeEach(function() {
-    instance = new SendPostApi.SubaccountmessageApi();
+    instance = new SendPostApi.AccountmessageApi();
   });
 
   describe('(package)', function() {
-    describe('SubaccountmessageApi', function() {
+    describe('AccountmessageApi', function() {
       describe('messageRouterGet', function() {
         it('should call messageRouterGet successfully', function(done) {
           // TODO: uncomment, update parameter values for messageRouterGet call and complete the assertions
@@ -177,6 +177,8 @@
                   expect(data.eventMetadata.userAgent.minor).to.be("");
                   expect(data.eventMetadata.userAgent.patch).to.be.a('string');
                   expect(data.eventMetadata.userAgent.patch).to.be("");
+              expect(data.from).to.be.a('string');
+              expect(data.from).to.be("");
               expect(data.groups).to.be.a(Object);
               expect(data.groups).to.be();
               expect(data.ipID).to.be.a('number');
@@ -266,6 +268,8 @@
                   expect(data.eventMetadata.userAgent.minor).to.be("");
                   expect(data.eventMetadata.userAgent.patch).to.be.a('string');
                   expect(data.eventMetadata.userAgent.patch).to.be("");
+              expect(data.from).to.be.a('string');
+              expect(data.from).to.be("");
               expect(data.groups).to.be.a(Object);
               expect(data.groups).to.be();
               expect(data.ipID).to.be.a('number');

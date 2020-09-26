@@ -41,11 +41,12 @@
           // TODO: uncomment, update parameter values for trackRouterTrackEmailOpen call
           /*
           var ipId = 789;
+          var accountId = 789;
           var subAccountId = 789;
           var messageId = "messageId_example";
           var emailType = "emailType_example";
 
-          instance.trackRouterTrackEmailOpen(ipId, subAccountId, messageId, emailType, function(error, data, response) {
+          instance.trackRouterTrackEmailOpen(ipId, accountId, subAccountId, messageId, emailType, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -63,12 +64,13 @@
           // TODO: uncomment, update parameter values for trackRouterTrackLinkClick call
           /*
           var ipId = 789;
+          var accountId = 789;
           var subAccountId = 789;
           var messageId = "messageId_example";
           var emailType = "emailType_example";
           var redirecturl = "redirecturl_example";
 
-          instance.trackRouterTrackLinkClick(ipId, subAccountId, messageId, emailType, redirecturl, function(error, data, response) {
+          instance.trackRouterTrackLinkClick(ipId, accountId, subAccountId, messageId, emailType, redirecturl, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -85,10 +87,13 @@
         it('should call trackRouterTrackUnsubscribe successfully', function(done) {
           // TODO: uncomment, update parameter values for trackRouterTrackUnsubscribe call
           /*
+          var ipId = 789;
+          var accountId = 789;
           var subAccountId = 789;
-          var messageId = 789;
+          var messageId = "messageId_example";
+          var emailType = "emailType_example";
 
-          instance.trackRouterTrackUnsubscribe(subAccountId, messageId, function(error, data, response) {
+          instance.trackRouterTrackUnsubscribe(ipId, accountId, subAccountId, messageId, emailType, function(error, data, response) {
             if (error) {
               done(error);
               return;

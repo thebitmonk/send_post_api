@@ -1,16 +1,16 @@
-# SendPostApi.SubaccountrecipientApi
+# SendPostApi.AccountrecipientApi
 
 All URIs are relative to *https://api.sendpost.io/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**recipientRouterGetAllMessagesForARecipient**](SubaccountrecipientApi.md#recipientRouterGetAllMessagesForARecipient) | **GET** /subaccount/recipient/{recipient}/messages | 
-[**recipientRouterGetAllMessagesForARecipientFromANode**](SubaccountrecipientApi.md#recipientRouterGetAllMessagesForARecipientFromANode) | **GET** /subaccount/recipient/node/{recipient}/messages | 
+[**recipientRouterGetAllMessagesForARecipient**](AccountrecipientApi.md#recipientRouterGetAllMessagesForARecipient) | **GET** /account/recipient/{recipient}/messages | 
+[**recipientRouterGetAllMessagesForARecipientFromANode**](AccountrecipientApi.md#recipientRouterGetAllMessagesForARecipientFromANode) | **GET** /account/recipient/node/{recipient}/messages | 
 
 
 <a name="recipientRouterGetAllMessagesForARecipient"></a>
 # **recipientRouterGetAllMessagesForARecipient**
-> [ModelsQEmailMessage] recipientRouterGetAllMessagesForARecipient(xSubAccountApiKey, recipient)
+> [ModelsQEmailMessage] recipientRouterGetAllMessagesForARecipient(xAccountApiKey, recipient)
 
 
 
@@ -20,9 +20,9 @@ Find all messages sent to a specific recipient
 ```javascript
 var SendPostApi = require('send_post_api');
 
-var apiInstance = new SendPostApi.SubaccountrecipientApi();
+var apiInstance = new SendPostApi.AccountrecipientApi();
 
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var recipient = "recipient_example"; // String | email of the recipient
 
@@ -34,14 +34,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.recipientRouterGetAllMessagesForARecipient(xSubAccountApiKey, recipient, callback);
+apiInstance.recipientRouterGetAllMessagesForARecipient(xAccountApiKey, recipient, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **xAccountApiKey** | **String**| Account API Key | 
  **recipient** | **String**| email of the recipient | 
 
 ### Return type
@@ -69,7 +69,7 @@ Find all message sent to a recipient from a specific node
 ```javascript
 var SendPostApi = require('send_post_api');
 
-var apiInstance = new SendPostApi.SubaccountrecipientApi();
+var apiInstance = new SendPostApi.AccountrecipientApi();
 
 var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 

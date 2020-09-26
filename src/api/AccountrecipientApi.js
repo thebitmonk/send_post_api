@@ -26,20 +26,20 @@
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.SubaccountrecipientApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsQEmailMessage);
+    root.SendPostApi.AccountrecipientApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsQEmailMessage);
   }
 }(this, function(ApiClient, ModelsQEmailMessage) {
   'use strict';
 
   /**
-   * Subaccountrecipient service.
-   * @module api/SubaccountrecipientApi
+   * Accountrecipient service.
+   * @module api/AccountrecipientApi
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new SubaccountrecipientApi. 
-   * @alias module:api/SubaccountrecipientApi
+   * Constructs a new AccountrecipientApi. 
+   * @alias module:api/AccountrecipientApi
    * @class
    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
@@ -50,7 +50,7 @@
 
     /**
      * Callback function to receive the result of the recipientRouterGetAllMessagesForARecipient operation.
-     * @callback module:api/SubaccountrecipientApi~recipientRouterGetAllMessagesForARecipientCallback
+     * @callback module:api/AccountrecipientApi~recipientRouterGetAllMessagesForARecipientCallback
      * @param {String} error Error message, if any.
      * @param {Array.<module:model/ModelsQEmailMessage>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -58,17 +58,17 @@
 
     /**
      * Find all messages sent to a specific recipient
-     * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {String} xAccountApiKey Account API Key
      * @param {String} recipient email of the recipient
-     * @param {module:api/SubaccountrecipientApi~recipientRouterGetAllMessagesForARecipientCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/AccountrecipientApi~recipientRouterGetAllMessagesForARecipientCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsQEmailMessage>}
      */
-    this.recipientRouterGetAllMessagesForARecipient = function(xSubAccountApiKey, recipient, callback) {
+    this.recipientRouterGetAllMessagesForARecipient = function(xAccountApiKey, recipient, callback) {
       var postBody = null;
 
-      // verify the required parameter 'xSubAccountApiKey' is set
-      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling recipientRouterGetAllMessagesForARecipient");
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling recipientRouterGetAllMessagesForARecipient");
       }
 
       // verify the required parameter 'recipient' is set
@@ -85,7 +85,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
-        'X-SubAccount-ApiKey': xSubAccountApiKey
+        'X-Account-ApiKey': xAccountApiKey
       };
       var formParams = {
       };
@@ -96,7 +96,7 @@
       var returnType = [ModelsQEmailMessage];
 
       return this.apiClient.callApi(
-        '/subaccount/recipient/{recipient}/messages', 'GET',
+        '/account/recipient/{recipient}/messages', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -104,7 +104,7 @@
 
     /**
      * Callback function to receive the result of the recipientRouterGetAllMessagesForARecipientFromANode operation.
-     * @callback module:api/SubaccountrecipientApi~recipientRouterGetAllMessagesForARecipientFromANodeCallback
+     * @callback module:api/AccountrecipientApi~recipientRouterGetAllMessagesForARecipientFromANodeCallback
      * @param {String} error Error message, if any.
      * @param {Array.<module:model/ModelsQEmailMessage>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -114,7 +114,7 @@
      * Find all message sent to a recipient from a specific node
      * @param {String} xAccountApiKey Account API Key
      * @param {String} recipient email of the recipient
-     * @param {module:api/SubaccountrecipientApi~recipientRouterGetAllMessagesForARecipientFromANodeCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/AccountrecipientApi~recipientRouterGetAllMessagesForARecipientFromANodeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsQEmailMessage>}
      */
     this.recipientRouterGetAllMessagesForARecipientFromANode = function(xAccountApiKey, recipient, callback) {
@@ -150,7 +150,7 @@
       var returnType = [ModelsQEmailMessage];
 
       return this.apiClient.callApi(
-        '/subaccount/recipient/node/{recipient}/messages', 'GET',
+        '/account/recipient/node/{recipient}/messages', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
