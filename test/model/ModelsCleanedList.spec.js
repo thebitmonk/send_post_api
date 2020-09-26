@@ -41,7 +41,7 @@
         expect(instance).to.be.a(SendPostApi.ModelsCleanedList);
       });
 
-      it('should have the property detailedResponse (base name: "detailed_response")', function() {
+      it('should have the property detailedResponse (base name: "detailedResponse")', function() {
         // TODO: update the code to test the property detailedResponse
         expect(instance).to.have.property('detailedResponse');
         // expect(instance.detailedResponse).to.be(expectedValueLiteral);

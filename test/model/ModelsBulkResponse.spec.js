@@ -41,7 +41,7 @@
         expect(instance).to.be.a(SendPostApi.ModelsBulkResponse);
       });
 
-      it('should have the property jobId (base name: "job_id")', function() {
+      it('should have the property jobId (base name: "jobId")', function() {
         // TODO: update the code to test the property jobId
         expect(instance).to.have.property('jobId');
         // expect(instance.jobId).to.be(expectedValueLiteral);

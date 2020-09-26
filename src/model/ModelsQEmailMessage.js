@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('accountID'))
+        obj.accountID = ApiClient.convertToType(data['accountID'], 'Number');
       if (data.hasOwnProperty('ampBody'))
         obj.ampBody = ApiClient.convertToType(data['ampBody'], 'String');
       if (data.hasOwnProperty('customFields'))
@@ -100,6 +102,11 @@
     }
     return obj;
   }
+
+  /**
+   * @member {Number} accountID
+   */
+  exports.prototype.accountID = undefined;
 
   /**
    * @member {String} ampBody

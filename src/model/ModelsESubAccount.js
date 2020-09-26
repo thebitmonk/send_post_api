@@ -57,6 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
+      if (data.hasOwnProperty('labels'))
+        obj.labels = ApiClient.convertToType(data['labels'], ['String']);
     }
     return obj;
   }
@@ -65,6 +67,11 @@
    * @member {String} name
    */
   exports.prototype.name = undefined;
+
+  /**
+   * @member {Array.<String>} labels
+   */
+  exports.prototype.labels = undefined;
 
   return exports;
 

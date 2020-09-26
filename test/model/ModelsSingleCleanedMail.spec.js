@@ -47,7 +47,7 @@
         // expect(instance.err).to.be(expectedValueLiteral);
       });
 
-      it('should have the property mailId (base name: "mail_id")', function() {
+      it('should have the property mailId (base name: "mailId")', function() {
         // TODO: update the code to test the property mailId
         expect(instance).to.have.property('mailId');
         // expect(instance.mailId).to.be(expectedValueLiteral);

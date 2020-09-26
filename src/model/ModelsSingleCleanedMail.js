@@ -57,8 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('err'))
         obj.err = ApiClient.convertToType(data['err'], 'String');
-      if (data.hasOwnProperty('mail_id'))
-        obj.mailId = ApiClient.convertToType(data['mail_id'], 'String');
+      if (data.hasOwnProperty('mailId'))
+        obj.mailId = ApiClient.convertToType(data['mailId'], 'String');
       if (data.hasOwnProperty('reason'))
         obj.reason = ApiClient.convertToType(data['reason'], 'String');
       if (data.hasOwnProperty('valid'))

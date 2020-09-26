@@ -55,8 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('detailed_response'))
-        obj.detailedResponse = ApiClient.convertToType(data['detailed_response'], [ModelsSingleCleanedMail]);
+      if (data.hasOwnProperty('detailedResponse'))
+        obj.detailedResponse = ApiClient.convertToType(data['detailedResponse'], [ModelsSingleCleanedMail]);
       if (data.hasOwnProperty('invalid'))
         obj.invalid = ApiClient.convertToType(data['invalid'], Object);
       if (data.hasOwnProperty('valid'))

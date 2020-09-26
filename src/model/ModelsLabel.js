@@ -17,64 +17,62 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsLabel', 'model/ModelsSubAccountType'], factory);
+    define(['ApiClient', 'model/ModelsSubAccount'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ModelsLabel'), require('./ModelsSubAccountType'));
+    module.exports = factory(require('../ApiClient'), require('./ModelsSubAccount'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsSubAccount = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsLabel, root.SendPostApi.ModelsSubAccountType);
+    root.SendPostApi.ModelsLabel = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsSubAccount);
   }
-}(this, function(ApiClient, ModelsLabel, ModelsSubAccountType) {
+}(this, function(ApiClient, ModelsSubAccount) {
   'use strict';
 
   /**
-   * The ModelsSubAccount model module.
-   * @module model/ModelsSubAccount
+   * The ModelsLabel model module.
+   * @module model/ModelsLabel
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>ModelsSubAccount</code>.
-   * @alias module:model/ModelsSubAccount
+   * Constructs a new <code>ModelsLabel</code>.
+   * @alias module:model/ModelsLabel
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>ModelsSubAccount</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ModelsLabel</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ModelsSubAccount} obj Optional instance to populate.
-   * @return {module:model/ModelsSubAccount} The populated <code>ModelsSubAccount</code> instance.
+   * @param {module:model/ModelsLabel} obj Optional instance to populate.
+   * @return {module:model/ModelsLabel} The populated <code>ModelsLabel</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('apiKey'))
-        obj.apiKey = ApiClient.convertToType(data['apiKey'], 'String');
+      if (data.hasOwnProperty('color'))
+        obj.color = ApiClient.convertToType(data['color'], 'String');
       if (data.hasOwnProperty('created'))
         obj.created = ApiClient.convertToType(data['created'], 'Number');
       if (data.hasOwnProperty('id'))
         obj.id = ApiClient.convertToType(data['id'], 'Number');
-      if (data.hasOwnProperty('labels'))
-        obj.labels = ApiClient.convertToType(data['labels'], [ModelsLabel]);
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
-      if (data.hasOwnProperty('type'))
-        obj.type = ModelsSubAccountType.constructFromObject(data['type']);
+      if (data.hasOwnProperty('subAccounts'))
+        obj.subAccounts = ApiClient.convertToType(data['subAccounts'], [ModelsSubAccount]);
     }
     return obj;
   }
 
   /**
-   * @member {String} apiKey
+   * @member {String} color
    */
-  exports.prototype.apiKey = undefined;
+  exports.prototype.color = undefined;
 
   /**
    * @member {Number} created
@@ -87,19 +85,14 @@
   exports.prototype.id = undefined;
 
   /**
-   * @member {Array.<module:model/ModelsLabel>} labels
-   */
-  exports.prototype.labels = undefined;
-
-  /**
    * @member {String} name
    */
   exports.prototype.name = undefined;
 
   /**
-   * @member {module:model/ModelsSubAccountType} type
+   * @member {Array.<module:model/ModelsSubAccount>} subAccounts
    */
-  exports.prototype.type = undefined;
+  exports.prototype.subAccounts = undefined;
 
   return exports;
 

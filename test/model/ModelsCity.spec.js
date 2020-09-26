@@ -65,7 +65,7 @@
         // expect(instance.postalCode).to.be(expectedValueLiteral);
       });
 
-      it('should have the property timeZone (base name: "time_zone")', function() {
+      it('should have the property timeZone (base name: "timeZone")', function() {
         // TODO: update the code to test the property timeZone
         expect(instance).to.have.property('timeZone');
         // expect(instance.timeZone).to.be(expectedValueLiteral);

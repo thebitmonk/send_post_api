@@ -41,6 +41,12 @@
         expect(instance).to.be.a(SendPostApi.ModelsWMessage);
       });
 
+      it('should have the property accountID (base name: "AccountID")', function() {
+        // TODO: update the code to test the property accountID
+        expect(instance).to.have.property('accountID');
+        // expect(instance.accountID).to.be(expectedValueLiteral);
+      });
+
       it('should have the property groups (base name: "Groups")', function() {
         // TODO: update the code to test the property groups
         expect(instance).to.have.property('groups');

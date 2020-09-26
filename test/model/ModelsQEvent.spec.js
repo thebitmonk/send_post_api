@@ -41,6 +41,12 @@
         expect(instance).to.be.a(SendPostApi.ModelsQEvent);
       });
 
+      it('should have the property accountID (base name: "accountID")', function() {
+        // TODO: update the code to test the property accountID
+        expect(instance).to.have.property('accountID');
+        // expect(instance.accountID).to.be(expectedValueLiteral);
+      });
+
       it('should have the property eventID (base name: "eventID")', function() {
         // TODO: update the code to test the property eventID
         expect(instance).to.have.property('eventID');
@@ -51,6 +57,12 @@
         // TODO: update the code to test the property eventMetadata
         expect(instance).to.have.property('eventMetadata');
         // expect(instance.eventMetadata).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property from (base name: "from")', function() {
+        // TODO: update the code to test the property from
+        expect(instance).to.have.property('from');
+        // expect(instance.from).to.be(expectedValueLiteral);
       });
 
       it('should have the property groups (base name: "groups")', function() {

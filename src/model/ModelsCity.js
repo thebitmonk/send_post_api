@@ -63,8 +63,8 @@
         obj.countryCode = ApiClient.convertToType(data['countryCode'], 'String');
       if (data.hasOwnProperty('postalCode'))
         obj.postalCode = ApiClient.convertToType(data['postalCode'], 'String');
-      if (data.hasOwnProperty('time_zone'))
-        obj.timeZone = ApiClient.convertToType(data['time_zone'], 'String');
+      if (data.hasOwnProperty('timeZone'))
+        obj.timeZone = ApiClient.convertToType(data['timeZone'], 'String');
     }
     return obj;
   }

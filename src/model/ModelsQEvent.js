@@ -55,10 +55,14 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('accountID'))
+        obj.accountID = ApiClient.convertToType(data['accountID'], 'Number');
       if (data.hasOwnProperty('eventID'))
         obj.eventID = ApiClient.convertToType(data['eventID'], 'String');
       if (data.hasOwnProperty('eventMetadata'))
         obj.eventMetadata = ModelsEventMetadata.constructFromObject(data['eventMetadata']);
+      if (data.hasOwnProperty('from'))
+        obj.from = ApiClient.convertToType(data['from'], 'String');
       if (data.hasOwnProperty('groups'))
         obj.groups = ApiClient.convertToType(data['groups'], Object);
       if (data.hasOwnProperty('ipID'))
@@ -80,6 +84,11 @@
   }
 
   /**
+   * @member {Number} accountID
+   */
+  exports.prototype.accountID = undefined;
+
+  /**
    * @member {String} eventID
    */
   exports.prototype.eventID = undefined;
@@ -88,6 +97,11 @@
    * @member {module:model/ModelsEventMetadata} eventMetadata
    */
   exports.prototype.eventMetadata = undefined;
+
+  /**
+   * @member {String} from
+   */
+  exports.prototype.from = undefined;
 
   /**
    * @member {Object} groups

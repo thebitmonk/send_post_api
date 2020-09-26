@@ -41,6 +41,12 @@
         expect(instance).to.be.a(SendPostApi.ModelsQEmailMessage);
       });
 
+      it('should have the property accountID (base name: "accountID")', function() {
+        // TODO: update the code to test the property accountID
+        expect(instance).to.have.property('accountID');
+        // expect(instance.accountID).to.be(expectedValueLiteral);
+      });
+
       it('should have the property ampBody (base name: "ampBody")', function() {
         // TODO: update the code to test the property ampBody
         expect(instance).to.have.property('ampBody');
