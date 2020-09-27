@@ -224,6 +224,8 @@ var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 var opts = { 
   'offset': 789, // Number | offset
   'limit': 789, // Number | limit
+  'filterBy': "filterBy_example", // String | filterBy
+  'filterValue': 789, // Number | filterValue
   'search': "search_example" // String | search term
 };
 
@@ -244,6 +246,8 @@ Name | Type | Description  | Notes
  **xAccountApiKey** | **String**| Account API Key | 
  **offset** | **Number**| offset | [optional] 
  **limit** | **Number**| limit | [optional] 
+ **filterBy** | **String**| filterBy | [optional] 
+ **filterValue** | **Number**| filterValue | [optional] 
  **search** | **String**| search term | [optional] 
 
 ### Return type

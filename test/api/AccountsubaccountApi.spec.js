@@ -66,6 +66,7 @@
           var xAccountApiKey = "xAccountApiKey_example";
           var body = new SendPostApi.ModelsESubAccount();
           body.name = "";
+          body.labels = [""];
 
           instance.subAccountRouterCreate(xAccountApiKey, body, function(error, data, response) {
             if (error) {
@@ -192,6 +193,8 @@
           var opts = {};
           opts.offset = 789;
           opts.limit = 789;
+          opts.filterBy = "filterBy_example";
+          opts.filterValue = 789;
           opts.search = "search_example";
 
           instance.subAccountRouterGetAll(xAccountApiKey, opts, function(error, data, response) {
@@ -251,6 +254,7 @@
           var subAccountId = 789;
           var body = new SendPostApi.ModelsESubAccount();
           body.name = "";
+          body.labels = [""];
 
           instance.subAccountRouterUpdate(xAccountApiKey, subAccountId, body, function(error, data, response) {
             if (error) {

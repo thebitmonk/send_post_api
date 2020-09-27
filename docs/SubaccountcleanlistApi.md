@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="listCleaningRouterCleanBulkEmailList"></a>
 # **listCleaningRouterCleanBulkEmailList**
-> ApiBulkResponse listCleaningRouterCleanBulkEmailList(fileinput, xSubAccountApiKey)
+> ModelsBulkResponse listCleaningRouterCleanBulkEmailList(fileinput, xSubAccountApiKey)
 
 
 
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ApiBulkResponse**](ApiBulkResponse.md)
+[**ModelsBulkResponse**](ModelsBulkResponse.md)
 
 ### Authorization
 

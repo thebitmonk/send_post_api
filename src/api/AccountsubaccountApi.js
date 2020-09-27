@@ -270,6 +270,8 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
      * @param {Number} opts.limit limit
+     * @param {String} opts.filterBy filterBy
+     * @param {Number} opts.filterValue filterValue
      * @param {String} opts.search search term
      * @param {module:api/AccountsubaccountApi~subAccountRouterGetAllCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsSubAccount>}
@@ -289,6 +291,8 @@
       var queryParams = {
         'offset': opts['offset'],
         'limit': opts['limit'],
+        'filterBy': opts['filterBy'],
+        'filterValue': opts['filterValue'],
         'search': opts['search'],
       };
       var collectionQueryParams = {
