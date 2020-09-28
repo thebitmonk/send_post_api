@@ -59,10 +59,15 @@
     /**
      * Count Total Subaccounts
      * @param {String} xAccountApiKey Account API Key
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.filterBy filterBy
+     * @param {Number} opts.filterValue filterValue
+     * @param {String} opts.search search term
      * @param {module:api/AccountsubaccountApi~subAccountRouterCountCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsCountStat}
      */
-    this.subAccountRouterCount = function(xAccountApiKey, callback) {
+    this.subAccountRouterCount = function(xAccountApiKey, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'xAccountApiKey' is set
@@ -74,6 +79,9 @@
       var pathParams = {
       };
       var queryParams = {
+        'filterBy': opts['filterBy'],
+        'filterValue': opts['filterValue'],
+        'search': opts['search'],
       };
       var collectionQueryParams = {
       };
