@@ -106,10 +106,13 @@
     /**
      * Count Total AccountIPs
      * @param {String} xAccountApiKey Account API Key
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.search search term
      * @param {module:api/AccountipApi~iPRouterCountCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsCountStat}
      */
-    this.iPRouterCount = function(xAccountApiKey, callback) {
+    this.iPRouterCount = function(xAccountApiKey, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'xAccountApiKey' is set
@@ -121,6 +124,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'search': opts['search'],
       };
       var collectionQueryParams = {
       };

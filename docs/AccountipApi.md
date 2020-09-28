@@ -60,7 +60,7 @@ No authorization required
 
 <a name="iPRouterCount"></a>
 # **iPRouterCount**
-> ModelsCountStat iPRouterCount(xAccountApiKey)
+> ModelsCountStat iPRouterCount(xAccountApiKey, opts)
 
 
 
@@ -74,6 +74,9 @@ var apiInstance = new SendPostApi.AccountipApi();
 
 var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
+var opts = { 
+  'search': "search_example" // String | search term
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -82,7 +85,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.iPRouterCount(xAccountApiKey, callback);
+apiInstance.iPRouterCount(xAccountApiKey, opts, callback);
 ```
 
 ### Parameters
@@ -90,6 +93,7 @@ apiInstance.iPRouterCount(xAccountApiKey, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
+ **search** | **String**| search term | [optional] 
 
 ### Return type
 

@@ -271,7 +271,7 @@
       var returnType = null;
 
       return this.apiClient.callApi(
-        '/track/unsubscribe/{accountId}/{subAccountId}/{messageId}', 'GET',
+        '/track/unsubscribe/{accountId}/{subAccountId}/{ipId}/{emailType}/{messageId}', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

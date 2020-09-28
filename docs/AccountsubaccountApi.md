@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="subAccountRouterCount"></a>
 # **subAccountRouterCount**
-> ModelsCountStat subAccountRouterCount(xAccountApiKey)
+> ModelsCountStat subAccountRouterCount(xAccountApiKey, opts)
 
 
 
@@ -28,6 +28,11 @@ var apiInstance = new SendPostApi.AccountsubaccountApi();
 
 var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
+var opts = { 
+  'filterBy': "filterBy_example", // String | filterBy
+  'filterValue': 789, // Number | filterValue
+  'search': "search_example" // String | search term
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -36,7 +41,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.subAccountRouterCount(xAccountApiKey, callback);
+apiInstance.subAccountRouterCount(xAccountApiKey, opts, callback);
 ```
 
 ### Parameters
@@ -44,6 +49,9 @@ apiInstance.subAccountRouterCount(xAccountApiKey, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
+ **filterBy** | **String**| filterBy | [optional] 
+ **filterValue** | **Number**| filterValue | [optional] 
+ **search** | **String**| search term | [optional] 
 
 ### Return type
 
@@ -224,6 +232,8 @@ var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 var opts = { 
   'offset': 789, // Number | offset
   'limit': 789, // Number | limit
+  'filterBy': "filterBy_example", // String | filterBy
+  'filterValue': 789, // Number | filterValue
   'search': "search_example" // String | search term
 };
 
@@ -244,6 +254,8 @@ Name | Type | Description  | Notes
  **xAccountApiKey** | **String**| Account API Key | 
  **offset** | **Number**| offset | [optional] 
  **limit** | **Number**| limit | [optional] 
+ **filterBy** | **String**| filterBy | [optional] 
+ **filterValue** | **Number**| filterValue | [optional] 
  **search** | **String**| search term | [optional] 
 
 ### Return type

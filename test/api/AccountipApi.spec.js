@@ -143,8 +143,10 @@
           // TODO: uncomment, update parameter values for iPRouterCount call and complete the assertions
           /*
           var xAccountApiKey = "xAccountApiKey_example";
+          var opts = {};
+          opts.search = "search_example";
 
-          instance.iPRouterCount(xAccountApiKey, function(error, data, response) {
+          instance.iPRouterCount(xAccountApiKey, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
