@@ -165,6 +165,9 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountlabelApi* | [**labelRouterGet**](docs/AccountlabelApi.md#labelRouterGet) | **GET** /account/label/{labelId} | 
 *SendPostApi.AccountlabelApi* | [**labelRouterGetAll**](docs/AccountlabelApi.md#labelRouterGetAll) | **GET** /account/label/ | 
 *SendPostApi.AccountlabelApi* | [**labelRouterUpdate**](docs/AccountlabelApi.md#labelRouterUpdate) | **PUT** /account/label/{labelId} | 
+*SendPostApi.AccountmemberApi* | [**memberRouterDelete**](docs/AccountmemberApi.md#memberRouterDelete) | **DELETE** /account/member/{memberId} | 
+*SendPostApi.AccountmemberApi* | [**memberRouterGet**](docs/AccountmemberApi.md#memberRouterGet) | **GET** /account/member/{memberId} | 
+*SendPostApi.AccountmemberApi* | [**memberRouterGetAll**](docs/AccountmemberApi.md#memberRouterGetAll) | **GET** /account/member/ | 
 *SendPostApi.AccountmessageApi* | [**messageRouterGet**](docs/AccountmessageApi.md#messageRouterGet) | **GET** /account/message/{messageId} | 
 *SendPostApi.AccountmessageApi* | [**messageRouterGetAllEventsForAMessageId**](docs/AccountmessageApi.md#messageRouterGetAllEventsForAMessageId) | **GET** /account/message/{messageId}/events | 
 *SendPostApi.AccountmessageApi* | [**messageRouterGetAllEventsForAMessageIdFromANode**](docs/AccountmessageApi.md#messageRouterGetAllEventsForAMessageIdFromANode) | **GET** /account/message/node/{messageId}/events | 
