@@ -195,6 +195,9 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterUpdate**](docs/AccountsubaccountApi.md#subAccountRouterUpdate) | **PUT** /account/subaccount/{subAccountId} | 
 *SendPostApi.AccountvalidateApi* | [**validateRouterValidateEmailBulk**](docs/AccountvalidateApi.md#validateRouterValidateEmailBulk) | **POST** /account/validate/bulk | 
 *SendPostApi.AccountvalidateApi* | [**validateRouterValidateEmailList**](docs/AccountvalidateApi.md#validateRouterValidateEmailList) | **POST** /account/validate/ | 
+*SendPostApi.AccountvalidationApi* | [**validationRouterCount**](docs/AccountvalidationApi.md#validationRouterCount) | **GET** /account/validation/count | 
+*SendPostApi.AccountvalidationApi* | [**validationRouterDeleteValidation**](docs/AccountvalidationApi.md#validationRouterDeleteValidation) | **DELETE** /account/validation/ | 
+*SendPostApi.AccountvalidationApi* | [**validationRouterGetAllValidations**](docs/AccountvalidationApi.md#validationRouterGetAllValidations) | **GET** /account/validation/ | 
 *SendPostApi.AccountwebhookApi* | [**accountWebhookRouterCount**](docs/AccountwebhookApi.md#accountWebhookRouterCount) | **GET** /account/webhook/count | 
 *SendPostApi.AccountwebhookApi* | [**accountWebhookRouterCreate**](docs/AccountwebhookApi.md#accountWebhookRouterCreate) | **POST** /account/webhook/ | 
 *SendPostApi.AccountwebhookApi* | [**accountWebhookRouterCreateAccountWebhookInAccountWebhookCache**](docs/AccountwebhookApi.md#accountWebhookRouterCreateAccountWebhookInAccountWebhookCache) | **POST** /account/webhook/cache | 
@@ -276,6 +279,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsEInvitation](docs/ModelsEInvitation.md)
  - [SendPostApi.ModelsESender](docs/ModelsESender.md)
  - [SendPostApi.ModelsESubAccount](docs/ModelsESubAccount.md)
+ - [SendPostApi.ModelsEValidation](docs/ModelsEValidation.md)
  - [SendPostApi.ModelsEWebhook](docs/ModelsEWebhook.md)
  - [SendPostApi.ModelsEmailErrorCode](docs/ModelsEmailErrorCode.md)
  - [SendPostApi.ModelsEmailList](docs/ModelsEmailList.md)
@@ -325,6 +329,8 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsSystemDNSRecord](docs/ModelsSystemDNSRecord.md)
  - [SendPostApi.ModelsSystemDomain](docs/ModelsSystemDomain.md)
  - [SendPostApi.ModelsTo](docs/ModelsTo.md)
+ - [SendPostApi.ModelsValidation](docs/ModelsValidation.md)
+ - [SendPostApi.ModelsValidationReason](docs/ModelsValidationReason.md)
  - [SendPostApi.ModelsWMessage](docs/ModelsWMessage.md)
  - [SendPostApi.UaparserDevice](docs/UaparserDevice.md)
  - [SendPostApi.UaparserOs](docs/UaparserOs.md)

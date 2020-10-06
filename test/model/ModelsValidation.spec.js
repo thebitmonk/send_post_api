@@ -31,20 +31,14 @@
   var instance;
 
   describe('(package)', function() {
-    describe('ModelsSubAccount', function() {
+    describe('ModelsValidation', function() {
       beforeEach(function() {
-        instance = new SendPostApi.ModelsSubAccount();
+        instance = new SendPostApi.ModelsValidation();
       });
 
-      it('should create an instance of ModelsSubAccount', function() {
-        // TODO: update the code to test ModelsSubAccount
-        expect(instance).to.be.a(SendPostApi.ModelsSubAccount);
-      });
-
-      it('should have the property apiKey (base name: "apiKey")', function() {
-        // TODO: update the code to test the property apiKey
-        expect(instance).to.have.property('apiKey');
-        // expect(instance.apiKey).to.be(expectedValueLiteral);
+      it('should create an instance of ModelsValidation', function() {
+        // TODO: update the code to test ModelsValidation
+        expect(instance).to.be.a(SendPostApi.ModelsValidation);
       });
 
       it('should have the property created (base name: "created")', function() {
@@ -53,28 +47,28 @@
         // expect(instance.created).to.be(expectedValueLiteral);
       });
 
+      it('should have the property email (base name: "email")', function() {
+        // TODO: update the code to test the property email
+        expect(instance).to.have.property('email');
+        // expect(instance.email).to.be(expectedValueLiteral);
+      });
+
       it('should have the property id (base name: "id")', function() {
         // TODO: update the code to test the property id
         expect(instance).to.have.property('id');
         // expect(instance.id).to.be(expectedValueLiteral);
       });
 
-      it('should have the property labels (base name: "labels")', function() {
-        // TODO: update the code to test the property labels
-        expect(instance).to.have.property('labels');
-        // expect(instance.labels).to.be(expectedValueLiteral);
+      it('should have the property reason (base name: "reason")', function() {
+        // TODO: update the code to test the property reason
+        expect(instance).to.have.property('reason');
+        // expect(instance.reason).to.be(expectedValueLiteral);
       });
 
-      it('should have the property name (base name: "name")', function() {
-        // TODO: update the code to test the property name
-        expect(instance).to.have.property('name');
-        // expect(instance.name).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property type (base name: "type")', function() {
-        // TODO: update the code to test the property type
-        expect(instance).to.have.property('type');
-        // expect(instance.type).to.be(expectedValueLiteral);
+      it('should have the property smtpError (base name: "smtp_error")', function() {
+        // TODO: update the code to test the property smtpError
+        expect(instance).to.have.property('smtpError');
+        // expect(instance.smtpError).to.be(expectedValueLiteral);
       });
 
     });

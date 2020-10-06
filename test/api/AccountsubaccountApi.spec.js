@@ -81,6 +81,8 @@
             expect(data).to.be.a(SendPostApi.ModelsSubAccount);
             expect(data.apiKey).to.be.a('string');
             expect(data.apiKey).to.be("");
+            expect(data.created).to.be.a('number');
+            expect(data.created).to.be("0");
             expect(data.id).to.be.a('number');
             expect(data.id).to.be("0");
             {
@@ -154,6 +156,8 @@
             expect(data).to.be.a(SendPostApi.ModelsSubAccount);
             expect(data.apiKey).to.be.a('string');
             expect(data.apiKey).to.be("");
+            expect(data.created).to.be.a('number');
+            expect(data.created).to.be("0");
             expect(data.id).to.be.a('number');
             expect(data.id).to.be("0");
             {
@@ -211,6 +215,8 @@
               expect(data).to.be.a(SendPostApi.ModelsSubAccount);
               expect(data.apiKey).to.be.a('string');
               expect(data.apiKey).to.be("");
+              expect(data.created).to.be.a('number');
+              expect(data.created).to.be("0");
               expect(data.id).to.be.a('number');
               expect(data.id).to.be("0");
               {
@@ -263,6 +269,8 @@
             expect(data).to.be.a(SendPostApi.ModelsSubAccount);
             expect(data.apiKey).to.be.a('string');
             expect(data.apiKey).to.be("");
+            expect(data.created).to.be.a('number');
+            expect(data.created).to.be("0");
             expect(data.id).to.be.a('number');
             expect(data.id).to.be("0");
             {
