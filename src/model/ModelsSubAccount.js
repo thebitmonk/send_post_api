@@ -57,8 +57,6 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('apiKey'))
         obj.apiKey = ApiClient.convertToType(data['apiKey'], 'String');
-      if (data.hasOwnProperty('created'))
-        obj.created = ApiClient.convertToType(data['created'], 'Number');
       if (data.hasOwnProperty('id'))
         obj.id = ApiClient.convertToType(data['id'], 'Number');
       if (data.hasOwnProperty('labels'))
@@ -75,11 +73,6 @@
    * @member {String} apiKey
    */
   exports.prototype.apiKey = undefined;
-
-  /**
-   * @member {Number} created
-   */
-  exports.prototype.created = undefined;
 
   /**
    * @member {Number} id
