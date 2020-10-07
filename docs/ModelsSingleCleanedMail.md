@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**err** | **String** |  | [optional] 
-**mailId** | **String** |  | [optional] 
-**reason** | **String** |  | [optional] 
+**email** | **String** |  | [optional] 
+**error** | **String** |  | [optional] 
+**reason** | [**ModelsValidationReason**](ModelsValidationReason.md) |  | [optional] 
 **valid** | **Boolean** |  | [optional] 
 
 
