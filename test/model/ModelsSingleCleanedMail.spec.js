@@ -41,16 +41,16 @@
         expect(instance).to.be.a(SendPostApi.ModelsSingleCleanedMail);
       });
 
-      it('should have the property err (base name: "err")', function() {
-        // TODO: update the code to test the property err
-        expect(instance).to.have.property('err');
-        // expect(instance.err).to.be(expectedValueLiteral);
+      it('should have the property email (base name: "email")', function() {
+        // TODO: update the code to test the property email
+        expect(instance).to.have.property('email');
+        // expect(instance.email).to.be(expectedValueLiteral);
       });
 
-      it('should have the property mailId (base name: "mailId")', function() {
-        // TODO: update the code to test the property mailId
-        expect(instance).to.have.property('mailId');
-        // expect(instance.mailId).to.be(expectedValueLiteral);
+      it('should have the property error (base name: "error")', function() {
+        // TODO: update the code to test the property error
+        expect(instance).to.have.property('error');
+        // expect(instance.error).to.be(expectedValueLiteral);
       });
 
       it('should have the property reason (base name: "reason")', function() {

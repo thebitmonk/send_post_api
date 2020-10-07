@@ -41,6 +41,7 @@
    * Constructs a new <code>ModelsEValidation</code>.
    * @alias module:model/ModelsEValidation
    * @class
+   * @extends Array
    */
   var exports = function() {
   };
@@ -55,17 +56,12 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('emails'))
-        obj.emails = ApiClient.convertToType(data['emails'], ['String']);
+      ApiClient.constructFromObject(data, obj, 'String');
     }
     return obj;
   }
 
-  /**
-   * @member {Array.<String>} emails
-   */
-  exports.prototype.emails = undefined;
-
+  Object.setPrototypeOf(exports.prototype, new Array());
   return exports;
 
 }));

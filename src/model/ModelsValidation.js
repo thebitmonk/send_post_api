@@ -59,12 +59,12 @@
         obj.created = ApiClient.convertToType(data['created'], 'Number');
       if (data.hasOwnProperty('email'))
         obj.email = ApiClient.convertToType(data['email'], 'String');
+      if (data.hasOwnProperty('error'))
+        obj.error = ApiClient.convertToType(data['error'], 'String');
       if (data.hasOwnProperty('id'))
         obj.id = ApiClient.convertToType(data['id'], 'Number');
       if (data.hasOwnProperty('reason'))
         obj.reason = ModelsValidationReason.constructFromObject(data['reason']);
-      if (data.hasOwnProperty('smtp_error'))
-        obj.smtpError = ApiClient.convertToType(data['smtp_error'], 'String');
     }
     return obj;
   }
@@ -80,6 +80,11 @@
   exports.prototype.email = undefined;
 
   /**
+   * @member {String} error
+   */
+  exports.prototype.error = undefined;
+
+  /**
    * @member {Number} id
    */
   exports.prototype.id = undefined;
@@ -88,11 +93,6 @@
    * @member {module:model/ModelsValidationReason} reason
    */
   exports.prototype.reason = undefined;
-
-  /**
-   * @member {String} smtpError
-   */
-  exports.prototype.smtpError = undefined;
 
   return exports;
 

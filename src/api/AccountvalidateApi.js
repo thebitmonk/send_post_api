@@ -57,7 +57,7 @@
      */
 
     /**
-     * Validate Email In File Asynchronously
+     * Validate Emails In File Asynchronously
      * @param {File} fileinput CSV whose emails need to be validated
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountvalidateApi~validateRouterValidateEmailBulkCallback} callback The callback function, accepting three arguments: error, data, response

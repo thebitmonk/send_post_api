@@ -41,12 +41,6 @@
         expect(instance).to.be.a(SendPostApi.ModelsEValidation);
       });
 
-      it('should have the property emails (base name: "emails")', function() {
-        // TODO: update the code to test the property emails
-        expect(instance).to.have.property('emails');
-        // expect(instance.emails).to.be(expectedValueLiteral);
-      });
-
     });
   });
 

@@ -53,10 +53,7 @@
    * @return {module:model/ModelsValidationReason} The populated <code>ModelsValidationReason</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
-    if (data) {
-      obj = obj || new exports();
-    }
-    return obj;
+    return data;
   }
 
   return exports;

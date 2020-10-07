@@ -65,7 +65,6 @@
           /*
           var xAccountApiKey = "xAccountApiKey_example";
           var body = new SendPostApi.ModelsEValidation();
-          body.emails = [""];
 
           instance.validationRouterDeleteValidation(xAccountApiKey, body, function(error, data, response) {
             if (error) {
@@ -78,12 +77,12 @@
             expect(data.created).to.be("0");
             expect(data.email).to.be.a('string');
             expect(data.email).to.be("");
+            expect(data.error).to.be.a('string');
+            expect(data.error).to.be("");
             expect(data.id).to.be.a('number');
             expect(data.id).to.be("0");
             expect(data.reason).to.be.a(SendPostApi.ModelsValidationReason);
-                expect(data.smtpError).to.be.a('string');
-            expect(data.smtpError).to.be("");
-
+    
             done();
           });
           */
@@ -91,9 +90,9 @@
           done();
         });
       });
-      describe('validationRouterGetAllValidations', function() {
-        it('should call validationRouterGetAllValidations successfully', function(done) {
-          // TODO: uncomment, update parameter values for validationRouterGetAllValidations call and complete the assertions
+      describe('validationRouterGetAll', function() {
+        it('should call validationRouterGetAll successfully', function(done) {
+          // TODO: uncomment, update parameter values for validationRouterGetAll call and complete the assertions
           /*
           var xAccountApiKey = "xAccountApiKey_example";
           var opts = {};
@@ -101,7 +100,7 @@
           opts.limit = 789;
           opts.search = "search_example";
 
-          instance.validationRouterGetAllValidations(xAccountApiKey, opts, function(error, data, response) {
+          instance.validationRouterGetAll(xAccountApiKey, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -117,11 +116,12 @@
               expect(data.created).to.be("0");
               expect(data.email).to.be.a('string');
               expect(data.email).to.be("");
+              expect(data.error).to.be.a('string');
+              expect(data.error).to.be("");
               expect(data.id).to.be.a('number');
               expect(data.id).to.be("0");
               expect(data.reason).to.be.a(SendPostApi.ModelsValidationReason);
-                  expect(data.smtpError).to.be.a('string');
-              expect(data.smtpError).to.be("");
+      
             }
 
             done();

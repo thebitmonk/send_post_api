@@ -53,6 +53,12 @@
         // expect(instance.email).to.be(expectedValueLiteral);
       });
 
+      it('should have the property error (base name: "error")', function() {
+        // TODO: update the code to test the property error
+        expect(instance).to.have.property('error');
+        // expect(instance.error).to.be(expectedValueLiteral);
+      });
+
       it('should have the property id (base name: "id")', function() {
         // TODO: update the code to test the property id
         expect(instance).to.have.property('id');
@@ -63,12 +69,6 @@
         // TODO: update the code to test the property reason
         expect(instance).to.have.property('reason');
         // expect(instance.reason).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property smtpError (base name: "smtp_error")', function() {
-        // TODO: update the code to test the property smtpError
-        expect(instance).to.have.property('smtpError');
-        // expect(instance.smtpError).to.be(expectedValueLiteral);
       });
 
     });

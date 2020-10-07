@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 
-Validate Email In File Asynchronously
+Validate Emails In File Asynchronously
 
 ### Example
 ```javascript

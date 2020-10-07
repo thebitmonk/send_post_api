@@ -149,30 +149,30 @@
     }
 
     /**
-     * Callback function to receive the result of the validationRouterGetAllValidations operation.
-     * @callback module:api/AccountvalidationApi~validationRouterGetAllValidationsCallback
+     * Callback function to receive the result of the validationRouterGetAll operation.
+     * @callback module:api/AccountvalidationApi~validationRouterGetAllCallback
      * @param {String} error Error message, if any.
      * @param {Array.<module:model/ModelsValidation>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Get all suppressions
+     * Get all validation
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
      * @param {Number} opts.limit limit
      * @param {String} opts.search search
-     * @param {module:api/AccountvalidationApi~validationRouterGetAllValidationsCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/AccountvalidationApi~validationRouterGetAllCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsValidation>}
      */
-    this.validationRouterGetAllValidations = function(xAccountApiKey, opts, callback) {
+    this.validationRouterGetAll = function(xAccountApiKey, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'xAccountApiKey' is set
       if (xAccountApiKey === undefined || xAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xAccountApiKey' when calling validationRouterGetAllValidations");
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling validationRouterGetAll");
       }
 
 

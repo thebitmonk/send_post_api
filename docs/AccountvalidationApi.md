@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**validationRouterCount**](AccountvalidationApi.md#validationRouterCount) | **GET** /account/validation/count | 
 [**validationRouterDeleteValidation**](AccountvalidationApi.md#validationRouterDeleteValidation) | **DELETE** /account/validation/ | 
-[**validationRouterGetAllValidations**](AccountvalidationApi.md#validationRouterGetAllValidations) | **GET** /account/validation/ | 
+[**validationRouterGetAll**](AccountvalidationApi.md#validationRouterGetAll) | **GET** /account/validation/ | 
 
 
 <a name="validationRouterCount"></a>
@@ -104,13 +104,13 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="validationRouterGetAllValidations"></a>
-# **validationRouterGetAllValidations**
-> [ModelsValidation] validationRouterGetAllValidations(xAccountApiKey, opts)
+<a name="validationRouterGetAll"></a>
+# **validationRouterGetAll**
+> [ModelsValidation] validationRouterGetAll(xAccountApiKey, opts)
 
 
 
-Get all suppressions
+Get all validation
 
 ### Example
 ```javascript
@@ -133,7 +133,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.validationRouterGetAllValidations(xAccountApiKey, opts, callback);
+apiInstance.validationRouterGetAll(xAccountApiKey, opts, callback);
 ```
 
 ### Parameters

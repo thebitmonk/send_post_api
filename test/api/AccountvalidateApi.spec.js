@@ -84,13 +84,12 @@
               for (let p in dataCtr) {
                 let data = dataCtr[p];
                 expect(data).to.be.a(SendPostApi.ModelsSingleCleanedMail);
-                expect(data.err).to.be.a('string');
-                expect(data.err).to.be("");
-                expect(data.mailId).to.be.a('string');
-                expect(data.mailId).to.be("");
-                expect(data.reason).to.be.a('string');
-                expect(data.reason).to.be("");
-                expect(data.valid).to.be.a('boolean');
+                expect(data.email).to.be.a('string');
+                expect(data.email).to.be("");
+                expect(data.error).to.be.a('string');
+                expect(data.error).to.be("");
+                expect(data.reason).to.be.a(SendPostApi.ModelsValidationReason);
+                    expect(data.valid).to.be.a('boolean');
                 expect(data.valid).to.be(false);
 
                       }
