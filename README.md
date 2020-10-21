@@ -95,17 +95,12 @@ Please follow the [installation](#installation) instruction and execute the foll
 ```javascript
 var SendPostApi = require('send_post_api');
 
-var api = new SendPostApi.AccounteventApi()
+var api = new SendPostApi.AccountalertApi()
 
 var xAccountApiKey = "xAccountApiKey_example"; // {String} Account API Key
 
 var opts = { 
-  'search': "search_example", // {String} search term
-  'type': "type_example", // {String} search type
-  'from': "from_example", // {String} from date
-  'to': "to_example", // {String} to date
-  'source': "source_example", // {String} data source from which to get timestamp keys subaccount or ip
-  'sourceId': "sourceId_example" // {String} source id from which to get timestamp keys subaccount or ip
+  'search': "search_example" // {String} search term
 };
 
 var callback = function(error, data, response) {
@@ -115,7 +110,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.eventRouterCountAllEventsFromAAccountForAGivenTimeRange(xAccountApiKey, opts, callback);
+api.alertRouterCount(xAccountApiKey, opts, callback);
 
 ```
 
@@ -125,6 +120,9 @@ All URIs are relative to *https://api.sendpost.io/api/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*SendPostApi.AccountalertApi* | [**alertRouterCount**](docs/AccountalertApi.md#alertRouterCount) | **GET** /account/alert/count | 
+*SendPostApi.AccountalertApi* | [**alertRouterCreateAlert**](docs/AccountalertApi.md#alertRouterCreateAlert) | **POST** /account/alert/ | 
+*SendPostApi.AccountalertApi* | [**alertRouterGetAll**](docs/AccountalertApi.md#alertRouterGetAll) | **GET** /account/alert/ | 
 *SendPostApi.AccounteventApi* | [**eventRouterCountAllEventsFromAAccountForAGivenTimeRange**](docs/AccounteventApi.md#eventRouterCountAllEventsFromAAccountForAGivenTimeRange) | **GET** /account/event/count | 
 *SendPostApi.AccounteventApi* | [**eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange**](docs/AccounteventApi.md#eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange) | **GET** /account/event/node/count | 
 *SendPostApi.AccounteventApi* | [**eventRouterGet**](docs/AccounteventApi.md#eventRouterGet) | **GET** /account/event/{eventId} | 
@@ -208,6 +206,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountwebhookApi* | [**accountWebhookRouterUpdate**](docs/AccountwebhookApi.md#accountWebhookRouterUpdate) | **PUT** /account/webhook/{webhookId} | 
 *SendPostApi.AuthApi* | [**authRouterCreate**](docs/AuthApi.md#authRouterCreate) | **POST** /auth/create | 
 *SendPostApi.AuthApi* | [**authRouterGetAuthInfo**](docs/AuthApi.md#authRouterGetAuthInfo) | **POST** /auth/info | 
+*SendPostApi.AuthApi* | [**authRouterUpdateMember**](docs/AuthApi.md#authRouterUpdateMember) | **PUT** /auth/info | 
 *SendPostApi.ClusterApi* | [**clusterRouterAddItemsToAccountWebhookCacheOfEveryNodeInCluster**](docs/ClusterApi.md#clusterRouterAddItemsToAccountWebhookCacheOfEveryNodeInCluster) | **POST** /cluster/webhook/cache | 
 *SendPostApi.ClusterApi* | [**clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster**](docs/ClusterApi.md#clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster) | **POST** /cluster/suppression/filter | 
 *SendPostApi.ClusterApi* | [**clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster**](docs/ClusterApi.md#clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster) | **DELETE** /cluster/suppression/filter | 
@@ -259,6 +258,9 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsAccount](docs/ModelsAccount.md)
  - [SendPostApi.ModelsAccountIPPool](docs/ModelsAccountIPPool.md)
  - [SendPostApi.ModelsAccountWebhook](docs/ModelsAccountWebhook.md)
+ - [SendPostApi.ModelsAlert](docs/ModelsAlert.md)
+ - [SendPostApi.ModelsAlertLabel](docs/ModelsAlertLabel.md)
+ - [SendPostApi.ModelsAlertRequest](docs/ModelsAlertRequest.md)
  - [SendPostApi.ModelsAuthInfo](docs/ModelsAuthInfo.md)
  - [SendPostApi.ModelsBackOffConfiguration](docs/ModelsBackOffConfiguration.md)
  - [SendPostApi.ModelsBackOffDecreaseType](docs/ModelsBackOffDecreaseType.md)
@@ -270,6 +272,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsCountStat](docs/ModelsCountStat.md)
  - [SendPostApi.ModelsDNSRecord](docs/ModelsDNSRecord.md)
  - [SendPostApi.ModelsDeleteResponse](docs/ModelsDeleteResponse.md)
+ - [SendPostApi.ModelsDetailedAlert](docs/ModelsDetailedAlert.md)
  - [SendPostApi.ModelsDomain](docs/ModelsDomain.md)
  - [SendPostApi.ModelsEAccount](docs/ModelsEAccount.md)
  - [SendPostApi.ModelsEDomain](docs/ModelsEDomain.md)
@@ -306,7 +309,9 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsLabel](docs/ModelsLabel.md)
  - [SendPostApi.ModelsMember](docs/ModelsMember.md)
  - [SendPostApi.ModelsMemberRole](docs/ModelsMemberRole.md)
+ - [SendPostApi.ModelsNotificationType](docs/ModelsNotificationType.md)
  - [SendPostApi.ModelsPIPStat](docs/ModelsPIPStat.md)
+ - [SendPostApi.ModelsPriority](docs/ModelsPriority.md)
  - [SendPostApi.ModelsQEmailMessage](docs/ModelsQEmailMessage.md)
  - [SendPostApi.ModelsQEvent](docs/ModelsQEvent.md)
  - [SendPostApi.ModelsRDSuppression](docs/ModelsRDSuppression.md)
@@ -317,6 +322,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsReplyTo](docs/ModelsReplyTo.md)
  - [SendPostApi.ModelsResponse](docs/ModelsResponse.md)
  - [SendPostApi.ModelsSIPStat](docs/ModelsSIPStat.md)
+ - [SendPostApi.ModelsSMTPAuth](docs/ModelsSMTPAuth.md)
  - [SendPostApi.ModelsSMTPStat](docs/ModelsSMTPStat.md)
  - [SendPostApi.ModelsSender](docs/ModelsSender.md)
  - [SendPostApi.ModelsSingleCleanedMail](docs/ModelsSingleCleanedMail.md)

@@ -26,57 +26,48 @@
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsAccount = factory(root.SendPostApi.ApiClient);
+    root.SendPostApi.ModelsSMTPAuth = factory(root.SendPostApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The ModelsAccount model module.
-   * @module model/ModelsAccount
+   * The ModelsSMTPAuth model module.
+   * @module model/ModelsSMTPAuth
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>ModelsAccount</code>.
-   * @alias module:model/ModelsAccount
+   * Constructs a new <code>ModelsSMTPAuth</code>.
+   * @alias module:model/ModelsSMTPAuth
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>ModelsAccount</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ModelsSMTPAuth</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ModelsAccount} obj Optional instance to populate.
-   * @return {module:model/ModelsAccount} The populated <code>ModelsAccount</code> instance.
+   * @param {module:model/ModelsSMTPAuth} obj Optional instance to populate.
+   * @return {module:model/ModelsSMTPAuth} The populated <code>ModelsSMTPAuth</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('apiKey'))
-        obj.apiKey = ApiClient.convertToType(data['apiKey'], 'String');
       if (data.hasOwnProperty('created'))
         obj.created = ApiClient.convertToType(data['created'], 'Number');
       if (data.hasOwnProperty('id'))
         obj.id = ApiClient.convertToType(data['id'], 'Number');
-      if (data.hasOwnProperty('lock_threshold'))
-        obj.lockThreshold = ApiClient.convertToType(data['lock_threshold'], 'Number');
-      if (data.hasOwnProperty('locked'))
-        obj.locked = ApiClient.convertToType(data['locked'], 'Boolean');
-      if (data.hasOwnProperty('name'))
-        obj.name = ApiClient.convertToType(data['name'], 'String');
-      if (data.hasOwnProperty('url'))
-        obj.url = ApiClient.convertToType(data['url'], 'String');
+      if (data.hasOwnProperty('password'))
+        obj.password = ApiClient.convertToType(data['password'], 'String');
+      if (data.hasOwnProperty('updated'))
+        obj.updated = ApiClient.convertToType(data['updated'], 'Number');
+      if (data.hasOwnProperty('username'))
+        obj.username = ApiClient.convertToType(data['username'], 'String');
     }
     return obj;
   }
-
-  /**
-   * @member {String} apiKey
-   */
-  exports.prototype.apiKey = undefined;
 
   /**
    * @member {Number} created
@@ -89,24 +80,19 @@
   exports.prototype.id = undefined;
 
   /**
-   * @member {Number} lockThreshold
+   * @member {String} password
    */
-  exports.prototype.lockThreshold = undefined;
+  exports.prototype.password = undefined;
 
   /**
-   * @member {Boolean} locked
+   * @member {Number} updated
    */
-  exports.prototype.locked = undefined;
+  exports.prototype.updated = undefined;
 
   /**
-   * @member {String} name
+   * @member {String} username
    */
-  exports.prototype.name = undefined;
-
-  /**
-   * @member {String} url
-   */
-  exports.prototype.url = undefined;
+  exports.prototype.username = undefined;
 
   return exports;
 

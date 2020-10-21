@@ -153,6 +153,59 @@
         authNames, contentTypes, accepts, returnType, callback
       );
     }
+
+    /**
+     * Callback function to receive the result of the authRouterUpdateMember operation.
+     * @callback module:api/AuthApi~authRouterUpdateMemberCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ModelsAuthInfo} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update IsVerified true on email verification success
+     * @param {module:model/ModelsEAccount} body The Account content
+     * @param {String} xToken Firebase dynamic token
+     * @param {module:api/AuthApi~authRouterUpdateMemberCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ModelsAuthInfo}
+     */
+    this.authRouterUpdateMember = function(body, xToken, callback) {
+      var postBody = body;
+
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling authRouterUpdateMember");
+      }
+
+      // verify the required parameter 'xToken' is set
+      if (xToken === undefined || xToken === null) {
+        throw new Error("Missing the required parameter 'xToken' when calling authRouterUpdateMember");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-Token': xToken
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ModelsAuthInfo;
+
+      return this.apiClient.callApi(
+        '/auth/info', 'PUT',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
   };
 
   return exports;

@@ -60,6 +60,10 @@
             expect(data.created).to.be("0");
             expect(data.id).to.be.a('number');
             expect(data.id).to.be("0");
+            expect(data.lockThreshold).to.be.a('number');
+            expect(data.lockThreshold).to.be("0");
+            expect(data.locked).to.be.a('boolean');
+            expect(data.locked).to.be(false);
             expect(data.name).to.be.a('string');
             expect(data.name).to.be("");
             expect(data.url).to.be.a('string');
@@ -103,6 +107,71 @@
                 expect(data.created).to.be("0");
                 expect(data.id).to.be.a('number');
                 expect(data.id).to.be("0");
+                expect(data.lockThreshold).to.be.a('number');
+                expect(data.lockThreshold).to.be("0");
+                expect(data.locked).to.be.a('boolean');
+                expect(data.locked).to.be(false);
+                expect(data.name).to.be.a('string');
+                expect(data.name).to.be("");
+                expect(data.url).to.be.a('string');
+                expect(data.url).to.be("");
+
+                      }
+            }
+            expect(data.member).to.be.a(SendPostApi.ModelsMember);
+                  expect(data.member.email).to.be.a('string');
+              expect(data.member.email).to.be("");
+              expect(data.member.id).to.be.a('number');
+              expect(data.member.id).to.be("0");
+              expect(data.member.isForbidden).to.be.a('boolean');
+              expect(data.member.isForbidden).to.be(false);
+              expect(data.member.isVerified).to.be.a('boolean');
+              expect(data.member.isVerified).to.be(false);
+              expect(data.member.created).to.be.a('number');
+              expect(data.member.created).to.be("0");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('authRouterUpdateMember', function() {
+        it('should call authRouterUpdateMember successfully', function(done) {
+          // TODO: uncomment, update parameter values for authRouterUpdateMember call and complete the assertions
+          /*
+          var body = new SendPostApi.ModelsEAccount();
+          body.email = "";
+          body.signupMode = "";
+          body.token = "";
+          body.uid = "";
+          var xToken = "xToken_example";
+
+          instance.authRouterUpdateMember(body, xToken, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelsAuthInfo);
+            {
+              let dataCtr = data.accounts;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(SendPostApi.ModelsAccount);
+                expect(data.apiKey).to.be.a('string');
+                expect(data.apiKey).to.be("");
+                expect(data.created).to.be.a('number');
+                expect(data.created).to.be("0");
+                expect(data.id).to.be.a('number');
+                expect(data.id).to.be("0");
+                expect(data.lockThreshold).to.be.a('number');
+                expect(data.lockThreshold).to.be("0");
+                expect(data.locked).to.be.a('boolean');
+                expect(data.locked).to.be(false);
                 expect(data.name).to.be.a('string');
                 expect(data.name).to.be("");
                 expect(data.url).to.be.a('string');
