@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsLabel', 'model/ModelsSubAccountType'], factory);
+    define(['ApiClient', 'model/ModelsLabel', 'model/ModelsSMTPAuth', 'model/ModelsSubAccountType'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ModelsLabel'), require('./ModelsSubAccountType'));
+    module.exports = factory(require('../ApiClient'), require('./ModelsLabel'), require('./ModelsSMTPAuth'), require('./ModelsSubAccountType'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsSubAccount = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsLabel, root.SendPostApi.ModelsSubAccountType);
+    root.SendPostApi.ModelsSubAccount = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsLabel, root.SendPostApi.ModelsSMTPAuth, root.SendPostApi.ModelsSubAccountType);
   }
-}(this, function(ApiClient, ModelsLabel, ModelsSubAccountType) {
+}(this, function(ApiClient, ModelsLabel, ModelsSMTPAuth, ModelsSubAccountType) {
   'use strict';
 
   /**
@@ -65,6 +65,8 @@
         obj.labels = ApiClient.convertToType(data['labels'], [ModelsLabel]);
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
+      if (data.hasOwnProperty('smtpAuths'))
+        obj.smtpAuths = ApiClient.convertToType(data['smtpAuths'], [ModelsSMTPAuth]);
       if (data.hasOwnProperty('type'))
         obj.type = ModelsSubAccountType.constructFromObject(data['type']);
     }
@@ -95,6 +97,11 @@
    * @member {String} name
    */
   exports.prototype.name = undefined;
+
+  /**
+   * @member {Array.<module:model/ModelsSMTPAuth>} smtpAuths
+   */
+  exports.prototype.smtpAuths = undefined;
 
   /**
    * @member {module:model/ModelsSubAccountType} type

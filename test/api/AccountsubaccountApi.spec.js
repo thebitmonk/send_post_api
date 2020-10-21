@@ -105,6 +105,26 @@
             }
             expect(data.name).to.be.a('string');
             expect(data.name).to.be("");
+            {
+              let dataCtr = data.smtpAuths;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(SendPostApi.ModelsSMTPAuth);
+                expect(data.created).to.be.a('number');
+                expect(data.created).to.be("0");
+                expect(data.id).to.be.a('number');
+                expect(data.id).to.be("0");
+                expect(data.password).to.be.a('string');
+                expect(data.password).to.be("");
+                expect(data.updated).to.be.a('number');
+                expect(data.updated).to.be("0");
+                expect(data.username).to.be.a('string');
+                expect(data.username).to.be("");
+
+                      }
+            }
             expect(data.type).to.be.a(SendPostApi.ModelsSubAccountType);
     
             done();
@@ -180,6 +200,26 @@
             }
             expect(data.name).to.be.a('string');
             expect(data.name).to.be("");
+            {
+              let dataCtr = data.smtpAuths;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(SendPostApi.ModelsSMTPAuth);
+                expect(data.created).to.be.a('number');
+                expect(data.created).to.be("0");
+                expect(data.id).to.be.a('number');
+                expect(data.id).to.be("0");
+                expect(data.password).to.be.a('string');
+                expect(data.password).to.be("");
+                expect(data.updated).to.be.a('number');
+                expect(data.updated).to.be("0");
+                expect(data.username).to.be.a('string');
+                expect(data.username).to.be("");
+
+                      }
+            }
             expect(data.type).to.be.a(SendPostApi.ModelsSubAccountType);
     
             done();
@@ -239,6 +279,26 @@
               }
               expect(data.name).to.be.a('string');
               expect(data.name).to.be("");
+              {
+                let dataCtr = data.smtpAuths;
+                expect(dataCtr).to.be.an(Array);
+                expect(dataCtr).to.not.be.empty();
+                for (let p in dataCtr) {
+                  let data = dataCtr[p];
+                  expect(data).to.be.a(SendPostApi.ModelsSMTPAuth);
+                  expect(data.created).to.be.a('number');
+                  expect(data.created).to.be("0");
+                  expect(data.id).to.be.a('number');
+                  expect(data.id).to.be("0");
+                  expect(data.password).to.be.a('string');
+                  expect(data.password).to.be("");
+                  expect(data.updated).to.be.a('number');
+                  expect(data.updated).to.be("0");
+                  expect(data.username).to.be.a('string');
+                  expect(data.username).to.be("");
+  
+                        }
+              }
               expect(data.type).to.be.a(SendPostApi.ModelsSubAccountType);
       
             }
@@ -293,6 +353,26 @@
             }
             expect(data.name).to.be.a('string');
             expect(data.name).to.be("");
+            {
+              let dataCtr = data.smtpAuths;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(SendPostApi.ModelsSMTPAuth);
+                expect(data.created).to.be.a('number');
+                expect(data.created).to.be("0");
+                expect(data.id).to.be.a('number');
+                expect(data.id).to.be("0");
+                expect(data.password).to.be.a('string');
+                expect(data.password).to.be("");
+                expect(data.updated).to.be.a('number');
+                expect(data.updated).to.be("0");
+                expect(data.username).to.be.a('string');
+                expect(data.username).to.be("");
+
+                      }
+            }
             expect(data.type).to.be.a(SendPostApi.ModelsSubAccountType);
     
             done();

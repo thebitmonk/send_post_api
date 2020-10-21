@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **id** | **Number** |  | [optional] 
 **labels** | [**[ModelsLabel]**](ModelsLabel.md) |  | [optional] 
 **name** | **String** |  | [optional] 
+**smtpAuths** | [**[ModelsSMTPAuth]**](ModelsSMTPAuth.md) |  | [optional] 
 **type** | [**ModelsSubAccountType**](ModelsSubAccountType.md) |  | [optional] 
 
 

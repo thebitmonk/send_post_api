@@ -59,6 +59,18 @@
         // expect(instance.id).to.be(expectedValueLiteral);
       });
 
+      it('should have the property lockThreshold (base name: "lock_threshold")', function() {
+        // TODO: update the code to test the property lockThreshold
+        expect(instance).to.have.property('lockThreshold');
+        // expect(instance.lockThreshold).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property locked (base name: "locked")', function() {
+        // TODO: update the code to test the property locked
+        expect(instance).to.have.property('locked');
+        // expect(instance.locked).to.be(expectedValueLiteral);
+      });
+
       it('should have the property name (base name: "name")', function() {
         // TODO: update the code to test the property name
         expect(instance).to.have.property('name');
