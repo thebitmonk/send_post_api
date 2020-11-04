@@ -59,12 +59,6 @@
         // expect(instance.currentEmailServiceProvider).to.be(expectedValueLiteral);
       });
 
-      it('should have the property currentIssue (base name: "currentIssue")', function() {
-        // TODO: update the code to test the property currentIssue
-        expect(instance).to.have.property('currentIssue');
-        // expect(instance.currentIssue).to.be(expectedValueLiteral);
-      });
-
       it('should have the property id (base name: "id")', function() {
         // TODO: update the code to test the property id
         expect(instance).to.have.property('id');

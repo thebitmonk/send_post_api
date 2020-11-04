@@ -113,7 +113,7 @@ No authorization required
 
 
 
-Updates member and accounts related
+Updates member and accounts related for email verification and on boarding answers
 
 ### Example
 ```javascript

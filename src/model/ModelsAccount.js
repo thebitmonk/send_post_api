@@ -61,8 +61,6 @@
         obj.created = ApiClient.convertToType(data['created'], 'Number');
       if (data.hasOwnProperty('currentEmailServiceProvider'))
         obj.currentEmailServiceProvider = ApiClient.convertToType(data['currentEmailServiceProvider'], 'String');
-      if (data.hasOwnProperty('currentIssue'))
-        obj.currentIssue = ApiClient.convertToType(data['currentIssue'], 'String');
       if (data.hasOwnProperty('id'))
         obj.id = ApiClient.convertToType(data['id'], 'Number');
       if (data.hasOwnProperty('industry'))
@@ -97,11 +95,6 @@
    * @member {String} currentEmailServiceProvider
    */
   exports.prototype.currentEmailServiceProvider = undefined;
-
-  /**
-   * @member {String} currentIssue
-   */
-  exports.prototype.currentIssue = undefined;
 
   /**
    * @member {Number} id

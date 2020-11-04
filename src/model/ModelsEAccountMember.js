@@ -55,14 +55,18 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('companyName'))
+        obj.companyName = ApiClient.convertToType(data['companyName'], 'String');
       if (data.hasOwnProperty('currentEmailServiceProvider'))
         obj.currentEmailServiceProvider = ApiClient.convertToType(data['currentEmailServiceProvider'], 'String');
-      if (data.hasOwnProperty('currentIssues'))
-        obj.currentIssues = ApiClient.convertToType(data['currentIssues'], 'String');
       if (data.hasOwnProperty('industry'))
         obj.industry = ApiClient.convertToType(data['industry'], 'String');
+      if (data.hasOwnProperty('name'))
+        obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('onboardQAnswered'))
         obj.onboardQAnswered = ApiClient.convertToType(data['onboardQAnswered'], 'Boolean');
+      if (data.hasOwnProperty('phoneNumber'))
+        obj.phoneNumber = ApiClient.convertToType(data['phoneNumber'], 'String');
       if (data.hasOwnProperty('sendingVolumePerMonth'))
         obj.sendingVolumePerMonth = ApiClient.convertToType(data['sendingVolumePerMonth'], 'String');
       if (data.hasOwnProperty('uid'))
@@ -74,14 +78,14 @@
   }
 
   /**
+   * @member {String} companyName
+   */
+  exports.prototype.companyName = undefined;
+
+  /**
    * @member {String} currentEmailServiceProvider
    */
   exports.prototype.currentEmailServiceProvider = undefined;
-
-  /**
-   * @member {String} currentIssues
-   */
-  exports.prototype.currentIssues = undefined;
 
   /**
    * @member {String} industry
@@ -89,9 +93,19 @@
   exports.prototype.industry = undefined;
 
   /**
+   * @member {String} name
+   */
+  exports.prototype.name = undefined;
+
+  /**
    * @member {Boolean} onboardQAnswered
    */
   exports.prototype.onboardQAnswered = undefined;
+
+  /**
+   * @member {String} phoneNumber
+   */
+  exports.prototype.phoneNumber = undefined;
 
   /**
    * @member {String} sendingVolumePerMonth

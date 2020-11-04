@@ -109,8 +109,14 @@
               expect(data.member.isForbidden).to.be(false);
               expect(data.member.isVerified).to.be.a('boolean');
               expect(data.member.isVerified).to.be(false);
+              expect(data.member.companyName).to.be.a('string');
+              expect(data.member.companyName).to.be("");
               expect(data.member.created).to.be.a('number');
               expect(data.member.created).to.be("0");
+              expect(data.member.name).to.be.a('string');
+              expect(data.member.name).to.be("");
+              expect(data.member.phoneNumber).to.be.a('string');
+              expect(data.member.phoneNumber).to.be("");
             expect(data.priority).to.be.a(SendPostApi.ModelsPriority);
                 expect(data.updated).to.be.a('number');
             expect(data.updated).to.be("0");

@@ -163,7 +163,7 @@
      */
 
     /**
-     * Updates member and accounts related
+     * Updates member and accounts related for email verification and on boarding answers
      * @param {module:model/ModelsEAccountMember} body The Account Member content
      * @param {String} xToken Firebase dynamic token
      * @param {module:api/AuthApi~authRouterUpdateAuthInfoCallback} callback The callback function, accepting three arguments: error, data, response

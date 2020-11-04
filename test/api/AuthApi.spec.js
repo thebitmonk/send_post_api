@@ -60,8 +60,6 @@
             expect(data.created).to.be("0");
             expect(data.currentEmailServiceProvider).to.be.a('string');
             expect(data.currentEmailServiceProvider).to.be("");
-            expect(data.currentIssue).to.be.a('string');
-            expect(data.currentIssue).to.be("");
             expect(data.id).to.be.a('number');
             expect(data.id).to.be("0");
             expect(data.industry).to.be.a('string');
@@ -117,8 +115,6 @@
                 expect(data.created).to.be("0");
                 expect(data.currentEmailServiceProvider).to.be.a('string');
                 expect(data.currentEmailServiceProvider).to.be("");
-                expect(data.currentIssue).to.be.a('string');
-                expect(data.currentIssue).to.be("");
                 expect(data.id).to.be.a('number');
                 expect(data.id).to.be("0");
                 expect(data.industry).to.be.a('string');
@@ -147,8 +143,14 @@
               expect(data.member.isForbidden).to.be(false);
               expect(data.member.isVerified).to.be.a('boolean');
               expect(data.member.isVerified).to.be(false);
+              expect(data.member.companyName).to.be.a('string');
+              expect(data.member.companyName).to.be("");
               expect(data.member.created).to.be.a('number');
               expect(data.member.created).to.be("0");
+              expect(data.member.name).to.be.a('string');
+              expect(data.member.name).to.be("");
+              expect(data.member.phoneNumber).to.be.a('string');
+              expect(data.member.phoneNumber).to.be("");
 
             done();
           });
@@ -162,10 +164,12 @@
           // TODO: uncomment, update parameter values for authRouterUpdateAuthInfo call and complete the assertions
           /*
           var body = new SendPostApi.ModelsEAccountMember();
+          body.companyName = "";
           body.currentEmailServiceProvider = "";
-          body.currentIssues = "";
           body.industry = "";
+          body.name = "";
           body.onboardQAnswered = false;
+          body.phoneNumber = "";
           body.sendingVolumePerMonth = "";
           body.uid = "";
           body.verifyEmail = false;
@@ -191,8 +195,6 @@
                 expect(data.created).to.be("0");
                 expect(data.currentEmailServiceProvider).to.be.a('string');
                 expect(data.currentEmailServiceProvider).to.be("");
-                expect(data.currentIssue).to.be.a('string');
-                expect(data.currentIssue).to.be("");
                 expect(data.id).to.be.a('number');
                 expect(data.id).to.be("0");
                 expect(data.industry).to.be.a('string');
@@ -221,8 +223,14 @@
               expect(data.member.isForbidden).to.be(false);
               expect(data.member.isVerified).to.be.a('boolean');
               expect(data.member.isVerified).to.be(false);
+              expect(data.member.companyName).to.be.a('string');
+              expect(data.member.companyName).to.be("");
               expect(data.member.created).to.be.a('number');
               expect(data.member.created).to.be("0");
+              expect(data.member.name).to.be.a('string');
+              expect(data.member.name).to.be("");
+              expect(data.member.phoneNumber).to.be.a('string');
+              expect(data.member.phoneNumber).to.be("");
 
             done();
           });
