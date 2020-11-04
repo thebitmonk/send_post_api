@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**authRouterCreate**](AuthApi.md#authRouterCreate) | **POST** /auth/create | 
 [**authRouterGetAuthInfo**](AuthApi.md#authRouterGetAuthInfo) | **POST** /auth/info | 
-[**authRouterUpdateMember**](AuthApi.md#authRouterUpdateMember) | **PUT** /auth/info | 
+[**authRouterUpdateAuthInfo**](AuthApi.md#authRouterUpdateAuthInfo) | **PUT** /auth/info | 
 
 
 <a name="authRouterCreate"></a>
@@ -107,13 +107,13 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="authRouterUpdateMember"></a>
-# **authRouterUpdateMember**
-> ModelsAuthInfo authRouterUpdateMember(body, xToken)
+<a name="authRouterUpdateAuthInfo"></a>
+# **authRouterUpdateAuthInfo**
+> ModelsAuthInfo authRouterUpdateAuthInfo(body, xToken)
 
 
 
-Update IsVerified true on email verification success
+Updates member and accounts related
 
 ### Example
 ```javascript
@@ -121,7 +121,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.AuthApi();
 
-var body = new SendPostApi.ModelsEAccount(); // ModelsEAccount | The Account content
+var body = new SendPostApi.ModelsEAccountMember(); // ModelsEAccountMember | The Account Member content
 
 var xToken = "xToken_example"; // String | Firebase dynamic token
 
@@ -133,14 +133,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.authRouterUpdateMember(body, xToken, callback);
+apiInstance.authRouterUpdateAuthInfo(body, xToken, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ModelsEAccount**](ModelsEAccount.md)| The Account content | 
+ **body** | [**ModelsEAccountMember**](ModelsEAccountMember.md)| The Account Member content | 
  **xToken** | **String**| Firebase dynamic token | 
 
 ### Return type

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **created** | **Number** |  | [optional] 
 **id** | **Number** |  | [optional] 
 **label** | [**ModelsAlertLabel**](ModelsAlertLabel.md) |  | [optional] 
+**member** | [**ModelsMember**](ModelsMember.md) |  | [optional] 
 **priority** | [**ModelsPriority**](ModelsPriority.md) |  | [optional] 
 **updated** | **Number** |  | [optional] 
 
