@@ -86,40 +86,13 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SendPostApi.ModelsAlert);
-            expect(data.condition).to.be.a('string');
-            expect(data.condition).to.be("");
-            expect(data.notification).to.be.a('string');
-            expect(data.notification).to.be("");
-            expect(data.active).to.be.a('boolean');
-            expect(data.active).to.be(false);
-            expect(data.alertName).to.be.a('string');
-            expect(data.alertName).to.be("");
-            expect(data.created).to.be.a('number');
-            expect(data.created).to.be("0");
+            expect(data).to.be.a(SendPostApi.ModelsAlertResponse);
             expect(data.id).to.be.a('number');
             expect(data.id).to.be("0");
-            expect(data.label).to.be.a(SendPostApi.ModelsAlertLabel);
-                expect(data.member).to.be.a(SendPostApi.ModelsMember);
-                  expect(data.member.email).to.be.a('string');
-              expect(data.member.email).to.be("");
-              expect(data.member.id).to.be.a('number');
-              expect(data.member.id).to.be("0");
-              expect(data.member.isForbidden).to.be.a('boolean');
-              expect(data.member.isForbidden).to.be(false);
-              expect(data.member.isVerified).to.be.a('boolean');
-              expect(data.member.isVerified).to.be(false);
-              expect(data.member.companyName).to.be.a('string');
-              expect(data.member.companyName).to.be("");
-              expect(data.member.created).to.be.a('number');
-              expect(data.member.created).to.be("0");
-              expect(data.member.name).to.be.a('string');
-              expect(data.member.name).to.be("");
-              expect(data.member.phoneNumber).to.be.a('string');
-              expect(data.member.phoneNumber).to.be("");
-            expect(data.priority).to.be.a(SendPostApi.ModelsPriority);
-                expect(data.updated).to.be.a('number');
-            expect(data.updated).to.be("0");
+            expect(data.name).to.be.a('string');
+            expect(data.name).to.be("");
+            expect(data.success).to.be.a('boolean');
+            expect(data.success).to.be(false);
 
             done();
           });

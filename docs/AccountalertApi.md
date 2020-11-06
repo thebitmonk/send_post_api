@@ -62,7 +62,7 @@ No authorization required
 
 <a name="alertRouterCreateAlert"></a>
 # **alertRouterCreateAlert**
-> ModelsAlert alertRouterCreateAlert(xAccountApiKey, body)
+> ModelsAlertResponse alertRouterCreateAlert(xAccountApiKey, body)
 
 
 
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ModelsAlert**](ModelsAlert.md)
+[**ModelsAlertResponse**](ModelsAlertResponse.md)
 
 ### Authorization
 

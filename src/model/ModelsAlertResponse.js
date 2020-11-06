@@ -26,38 +26,59 @@
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsPriority = factory(root.SendPostApi.ApiClient);
+    root.SendPostApi.ModelsAlertResponse = factory(root.SendPostApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The ModelsPriority model module.
-   * @module model/ModelsPriority
+   * The ModelsAlertResponse model module.
+   * @module model/ModelsAlertResponse
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>ModelsPriority</code>.
-   * @alias module:model/ModelsPriority
+   * Constructs a new <code>ModelsAlertResponse</code>.
+   * @alias module:model/ModelsAlertResponse
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>ModelsPriority</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ModelsAlertResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ModelsPriority} obj Optional instance to populate.
-   * @return {module:model/ModelsPriority} The populated <code>ModelsPriority</code> instance.
+   * @param {module:model/ModelsAlertResponse} obj Optional instance to populate.
+   * @return {module:model/ModelsAlertResponse} The populated <code>ModelsAlertResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('id'))
+        obj.id = ApiClient.convertToType(data['id'], 'Number');
+      if (data.hasOwnProperty('name'))
+        obj.name = ApiClient.convertToType(data['name'], 'String');
+      if (data.hasOwnProperty('success'))
+        obj.success = ApiClient.convertToType(data['success'], 'Boolean');
     }
     return obj;
   }
+
+  /**
+   * @member {Number} id
+   */
+  exports.prototype.id = undefined;
+
+  /**
+   * @member {String} name
+   */
+  exports.prototype.name = undefined;
+
+  /**
+   * @member {Boolean} success
+   */
+  exports.prototype.success = undefined;
 
   return exports;
 
