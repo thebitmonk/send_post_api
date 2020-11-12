@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **lockThreshold** | **Number** |  | [optional] 
 **locked** | **Boolean** |  | [optional] 
 **name** | **String** |  | [optional] 
+**onboardCFinished** | **Boolean** |  | [optional] 
 **onboardQAnswered** | **Boolean** |  | [optional] 
 **sendingVolumePerMonth** | **String** |  | [optional] 
 **url** | **String** |  | [optional] 

@@ -89,6 +89,12 @@
         // expect(instance.name).to.be(expectedValueLiteral);
       });
 
+      it('should have the property onboardCFinished (base name: "onboardCFinished")', function() {
+        // TODO: update the code to test the property onboardCFinished
+        expect(instance).to.have.property('onboardCFinished');
+        // expect(instance.onboardCFinished).to.be(expectedValueLiteral);
+      });
+
       it('should have the property onboardQAnswered (base name: "onboardQAnswered")', function() {
         // TODO: update the code to test the property onboardQAnswered
         expect(instance).to.have.property('onboardQAnswered');

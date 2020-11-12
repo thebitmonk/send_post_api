@@ -70,6 +70,8 @@
             expect(data.locked).to.be(false);
             expect(data.name).to.be.a('string');
             expect(data.name).to.be("");
+            expect(data.onboardCFinished).to.be.a('boolean');
+            expect(data.onboardCFinished).to.be(false);
             expect(data.onboardQAnswered).to.be.a('boolean');
             expect(data.onboardQAnswered).to.be(false);
             expect(data.sendingVolumePerMonth).to.be.a('string');
@@ -125,6 +127,8 @@
                 expect(data.locked).to.be(false);
                 expect(data.name).to.be.a('string');
                 expect(data.name).to.be("");
+                expect(data.onboardCFinished).to.be.a('boolean');
+                expect(data.onboardCFinished).to.be(false);
                 expect(data.onboardQAnswered).to.be.a('boolean');
                 expect(data.onboardQAnswered).to.be(false);
                 expect(data.sendingVolumePerMonth).to.be.a('string');
@@ -168,6 +172,7 @@
           body.currentEmailServiceProvider = "";
           body.industry = "";
           body.name = "";
+          body.onboardCFinished = false;
           body.onboardQAnswered = false;
           body.phoneNumber = "";
           body.sendingVolumePerMonth = "";
@@ -205,6 +210,8 @@
                 expect(data.locked).to.be(false);
                 expect(data.name).to.be.a('string');
                 expect(data.name).to.be("");
+                expect(data.onboardCFinished).to.be.a('boolean');
+                expect(data.onboardCFinished).to.be(false);
                 expect(data.onboardQAnswered).to.be.a('boolean');
                 expect(data.onboardQAnswered).to.be(false);
                 expect(data.sendingVolumePerMonth).to.be.a('string');

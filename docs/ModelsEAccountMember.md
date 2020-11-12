@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **currentEmailServiceProvider** | **String** |  | [optional] 
 **industry** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
+**onboardCFinished** | **Boolean** |  | [optional] 
 **onboardQAnswered** | **Boolean** |  | [optional] 
 **phoneNumber** | **String** |  | [optional] 
 **sendingVolumePerMonth** | **String** |  | [optional] 

@@ -71,6 +71,8 @@
         obj.locked = ApiClient.convertToType(data['locked'], 'Boolean');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
+      if (data.hasOwnProperty('onboardCFinished'))
+        obj.onboardCFinished = ApiClient.convertToType(data['onboardCFinished'], 'Boolean');
       if (data.hasOwnProperty('onboardQAnswered'))
         obj.onboardQAnswered = ApiClient.convertToType(data['onboardQAnswered'], 'Boolean');
       if (data.hasOwnProperty('sendingVolumePerMonth'))
@@ -120,6 +122,11 @@
    * @member {String} name
    */
   exports.prototype.name = undefined;
+
+  /**
+   * @member {Boolean} onboardCFinished
+   */
+  exports.prototype.onboardCFinished = undefined;
 
   /**
    * @member {Boolean} onboardQAnswered

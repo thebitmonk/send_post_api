@@ -174,6 +174,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountmessageApi* | [**messageRouterGetAllEventsForAMessageId**](docs/AccountmessageApi.md#messageRouterGetAllEventsForAMessageId) | **GET** /account/message/{messageId}/events | 
 *SendPostApi.AccountmessageApi* | [**messageRouterGetAllEventsForAMessageIdFromANode**](docs/AccountmessageApi.md#messageRouterGetAllEventsForAMessageIdFromANode) | **GET** /account/message/node/{messageId}/events | 
 *SendPostApi.AccountmessageApi* | [**messageRouterGetMessageFromNode**](docs/AccountmessageApi.md#messageRouterGetMessageFromNode) | **GET** /account/message/node/{messageId} | 
+*SendPostApi.AccountonboardingApi* | [**onboardingRouterGetOnboardingChecklist**](docs/AccountonboardingApi.md#onboardingRouterGetOnboardingChecklist) | **GET** /account/onboarding/checklist | 
 *SendPostApi.AccountrecipientApi* | [**recipientRouterGetAllMessagesForARecipient**](docs/AccountrecipientApi.md#recipientRouterGetAllMessagesForARecipient) | **GET** /account/recipient/{recipient}/messages | 
 *SendPostApi.AccountrecipientApi* | [**recipientRouterGetAllMessagesForARecipientFromANode**](docs/AccountrecipientApi.md#recipientRouterGetAllMessagesForARecipientFromANode) | **GET** /account/recipient/node/{recipient}/messages | 
 *SendPostApi.AccountsmtpstatApi* | [**sMTPStatRouterGetAllAggregateIPProviderSMTPStats**](docs/AccountsmtpstatApi.md#sMTPStatRouterGetAllAggregateIPProviderSMTPStats) | **GET** /account/smtp/stat/ip/{ipid}/provider/{pname}/aggregate | 
@@ -192,6 +193,11 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterGet**](docs/AccountsubaccountApi.md#subAccountRouterGet) | **GET** /account/subaccount/{subAccountId} | 
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterGetAll**](docs/AccountsubaccountApi.md#subAccountRouterGetAll) | **GET** /account/subaccount/ | 
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterUpdate**](docs/AccountsubaccountApi.md#subAccountRouterUpdate) | **PUT** /account/subaccount/{subAccountId} | 
+*SendPostApi.AccounttemplateApi* | [**accountTemplateRouterCreate**](docs/AccounttemplateApi.md#accountTemplateRouterCreate) | **POST** /account/template/ | 
+*SendPostApi.AccounttemplateApi* | [**accountTemplateRouterDelete**](docs/AccounttemplateApi.md#accountTemplateRouterDelete) | **DELETE** /account/template/{templateid} | 
+*SendPostApi.AccounttemplateApi* | [**accountTemplateRouterGet**](docs/AccounttemplateApi.md#accountTemplateRouterGet) | **GET** /account/template/{templateid} | 
+*SendPostApi.AccounttemplateApi* | [**accountTemplateRouterGetAll**](docs/AccounttemplateApi.md#accountTemplateRouterGetAll) | **GET** /account/template/ | 
+*SendPostApi.AccounttemplateApi* | [**accountTemplateRouterUpdate**](docs/AccounttemplateApi.md#accountTemplateRouterUpdate) | **PUT** /account/template/{templateid} | 
 *SendPostApi.AccountvalidationApi* | [**validateRouterValidateEmailBulk**](docs/AccountvalidationApi.md#validateRouterValidateEmailBulk) | **POST** /account/validation/bulk | 
 *SendPostApi.AccountvalidationApi* | [**validationRouterCount**](docs/AccountvalidationApi.md#validationRouterCount) | **GET** /account/validation/count | 
 *SendPostApi.AccountvalidationApi* | [**validationRouterDeleteValidation**](docs/AccountvalidationApi.md#validationRouterDeleteValidation) | **DELETE** /account/validation/ | 
@@ -212,6 +218,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.ClusterApi* | [**clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster**](docs/ClusterApi.md#clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster) | **POST** /cluster/suppression/filter | 
 *SendPostApi.ClusterApi* | [**clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster**](docs/ClusterApi.md#clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster) | **DELETE** /cluster/suppression/filter | 
 *SendPostApi.ClusterApi* | [**clusterRouterDeleteItemsFromWebhookFilterOfEveryNodeInCluster**](docs/ClusterApi.md#clusterRouterDeleteItemsFromWebhookFilterOfEveryNodeInCluster) | **DELETE** /cluster/webhook/cache | 
+*SendPostApi.EditorApi* | [**editorApiRouterGetToken**](docs/EditorApi.md#editorApiRouterGetToken) | **GET** /editor/ | 
 *SendPostApi.SmtpApi* | [**sMTPRouterReceiveWebhooksRaisedFromSMTPServers**](docs/SmtpApi.md#sMTPRouterReceiveWebhooksRaisedFromSMTPServers) | **POST** /smtp/webhook | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterCount**](docs/SubaccountdomainApi.md#domainRouterCount) | **GET** /subaccount/domain/count | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterCreate**](docs/SubaccountdomainApi.md#domainRouterCreate) | **POST** /subaccount/domain/ | 
@@ -220,6 +227,8 @@ Class | Method | HTTP request | Description
 *SendPostApi.SubaccountdomainApi* | [**domainRouterGetAll**](docs/SubaccountdomainApi.md#domainRouterGetAll) | **GET** /subaccount/domain/ | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterUpdate**](docs/SubaccountdomainApi.md#domainRouterUpdate) | **PUT** /subaccount/domain/{domainId} | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterVerify**](docs/SubaccountdomainApi.md#domainRouterVerify) | **POST** /subaccount/domain/{domainId}/verify | 
+*SendPostApi.SubaccountdomainApi* | [**domainRouterVerifyByToken**](docs/SubaccountdomainApi.md#domainRouterVerifyByToken) | **POST** /subaccount/domain/{domainId}/verify/email/{token} | 
+*SendPostApi.SubaccountdomainApi* | [**domainRouterVerifyRequest**](docs/SubaccountdomainApi.md#domainRouterVerifyRequest) | **POST** /subaccount/domain/{domainId}/verify/email | 
 *SendPostApi.SubaccountemailApi* | [**emailRouterSendEmail**](docs/SubaccountemailApi.md#emailRouterSendEmail) | **POST** /subaccount/email/ | 
 *SendPostApi.SubaccountippoolApi* | [**iPPoolRouterCount**](docs/SubaccountippoolApi.md#iPPoolRouterCount) | **GET** /subaccount/ippool/count | 
 *SendPostApi.SubaccountippoolApi* | [**iPPoolRouterCreate**](docs/SubaccountippoolApi.md#iPPoolRouterCreate) | **POST** /subaccount/ippool/ | 
@@ -287,6 +296,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsESubAccount](docs/ModelsESubAccount.md)
  - [SendPostApi.ModelsEValidation](docs/ModelsEValidation.md)
  - [SendPostApi.ModelsEWebhook](docs/ModelsEWebhook.md)
+ - [SendPostApi.ModelsEditorTokenResponse](docs/ModelsEditorTokenResponse.md)
  - [SendPostApi.ModelsEmailErrorCode](docs/ModelsEmailErrorCode.md)
  - [SendPostApi.ModelsEmailList](docs/ModelsEmailList.md)
  - [SendPostApi.ModelsEmailMessage](docs/ModelsEmailMessage.md)
@@ -313,6 +323,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsMember](docs/ModelsMember.md)
  - [SendPostApi.ModelsMemberRole](docs/ModelsMemberRole.md)
  - [SendPostApi.ModelsNotificationType](docs/ModelsNotificationType.md)
+ - [SendPostApi.ModelsOnboardingChecklist](docs/ModelsOnboardingChecklist.md)
  - [SendPostApi.ModelsPIPStat](docs/ModelsPIPStat.md)
  - [SendPostApi.ModelsQEmailMessage](docs/ModelsQEmailMessage.md)
  - [SendPostApi.ModelsQEvent](docs/ModelsQEvent.md)
@@ -336,9 +347,11 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsSuppressionReason](docs/ModelsSuppressionReason.md)
  - [SendPostApi.ModelsSystemDNSRecord](docs/ModelsSystemDNSRecord.md)
  - [SendPostApi.ModelsSystemDomain](docs/ModelsSystemDomain.md)
+ - [SendPostApi.ModelsTemplate](docs/ModelsTemplate.md)
  - [SendPostApi.ModelsTo](docs/ModelsTo.md)
  - [SendPostApi.ModelsValidation](docs/ModelsValidation.md)
  - [SendPostApi.ModelsValidationReason](docs/ModelsValidationReason.md)
+ - [SendPostApi.ModelsVerifyByTokenRequest](docs/ModelsVerifyByTokenRequest.md)
  - [SendPostApi.ModelsWMessage](docs/ModelsWMessage.md)
  - [SendPostApi.UaparserDevice](docs/UaparserDevice.md)
  - [SendPostApi.UaparserOs](docs/UaparserOs.md)
