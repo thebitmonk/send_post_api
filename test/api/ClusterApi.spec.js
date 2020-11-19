@@ -36,38 +36,6 @@
 
   describe('(package)', function() {
     describe('ClusterApi', function() {
-      describe('clusterRouterAddItemsToAccountWebhookCacheOfEveryNodeInCluster', function() {
-        it('should call clusterRouterAddItemsToAccountWebhookCacheOfEveryNodeInCluster successfully', function(done) {
-          // TODO: uncomment, update parameter values for clusterRouterAddItemsToAccountWebhookCacheOfEveryNodeInCluster call
-          /*
-          var body = new SendPostApi.ModelsAccountWebhook();
-          body.clicked = false;
-          body.created = "0";
-          body.delivered = false;
-          body.dropped = false;
-          body.enabled = false;
-          body.hardBounced = false;
-          body.id = "0";
-          body.opened = false;
-          body.processed = false;
-          body.softBounced = false;
-          body.spam = false;
-          body.unsubscribed = false;
-          body.url = "";
-
-          instance.clusterRouterAddItemsToAccountWebhookCacheOfEveryNodeInCluster(body, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
       describe('clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster', function() {
         it('should call clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster successfully', function(done) {
           // TODO: uncomment, update parameter values for clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster call
@@ -92,18 +60,16 @@
           done();
         });
       });
-      describe('clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster', function() {
-        it('should call clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster successfully', function(done) {
-          // TODO: uncomment, update parameter values for clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster call
+      describe('clusterRouterDeleteItemFromCacheOfEveryNodeInCluster', function() {
+        it('should call clusterRouterDeleteItemFromCacheOfEveryNodeInCluster successfully', function(done) {
+          // TODO: uncomment, update parameter values for clusterRouterDeleteItemFromCacheOfEveryNodeInCluster call
           /*
-          var body = new SendPostApi.ModelsSuppression();
-          body.created = "0";
-          body.email = "";
-          body.id = "0";
-          body.reason = new SendPostApi.ModelsSuppressionReason();
-          body.smtpError = "";
+          var xSystemApiKey = "xSystemApiKey_example";
+          var opts = {};
+          opts.name = "name_example";
+          opts.key = "key_example";
 
-          instance.clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster(body, function(error, data, response) {
+          instance.clusterRouterDeleteItemFromCacheOfEveryNodeInCluster(xSystemApiKey, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -116,26 +82,40 @@
           done();
         });
       });
-      describe('clusterRouterDeleteItemsFromWebhookFilterOfEveryNodeInCluster', function() {
-        it('should call clusterRouterDeleteItemsFromWebhookFilterOfEveryNodeInCluster successfully', function(done) {
-          // TODO: uncomment, update parameter values for clusterRouterDeleteItemsFromWebhookFilterOfEveryNodeInCluster call
+      describe('clusterRouterDeleteItemFromCacheOfSpecificNodeInCluster', function() {
+        it('should call clusterRouterDeleteItemFromCacheOfSpecificNodeInCluster successfully', function(done) {
+          // TODO: uncomment, update parameter values for clusterRouterDeleteItemFromCacheOfSpecificNodeInCluster call
           /*
-          var body = new SendPostApi.ModelsAccountWebhook();
-          body.clicked = false;
-          body.created = "0";
-          body.delivered = false;
-          body.dropped = false;
-          body.enabled = false;
-          body.hardBounced = false;
-          body.id = "0";
-          body.opened = false;
-          body.processed = false;
-          body.softBounced = false;
-          body.spam = false;
-          body.unsubscribed = false;
-          body.url = "";
+          var xSystemApiKey = "xSystemApiKey_example";
+          var opts = {};
+          opts.name = "name_example";
+          opts.key = "key_example";
 
-          instance.clusterRouterDeleteItemsFromWebhookFilterOfEveryNodeInCluster(body, function(error, data, response) {
+          instance.clusterRouterDeleteItemFromCacheOfSpecificNodeInCluster(xSystemApiKey, opts, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster', function() {
+        it('should call clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster successfully', function(done) {
+          // TODO: uncomment, update parameter values for clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster call
+          /*
+          var body = new SendPostApi.ModelsSuppression();
+          body.created = "0";
+          body.email = "";
+          body.id = "0";
+          body.reason = new SendPostApi.ModelsSuppressionReason();
+          body.smtpError = "";
+
+          instance.clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster(body, function(error, data, response) {
             if (error) {
               done(error);
               return;

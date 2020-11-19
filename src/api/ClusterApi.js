@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsAccountWebhook', 'model/ModelsSuppression'], factory);
+    define(['ApiClient', 'model/ModelsSuppression'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsAccountWebhook'), require('../model/ModelsSuppression'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsSuppression'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ClusterApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsAccountWebhook, root.SendPostApi.ModelsSuppression);
+    root.SendPostApi.ClusterApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsSuppression);
   }
-}(this, function(ApiClient, ModelsAccountWebhook, ModelsSuppression) {
+}(this, function(ApiClient, ModelsSuppression) {
   'use strict';
 
   /**
@@ -47,51 +47,6 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
-
-    /**
-     * Callback function to receive the result of the clusterRouterAddItemsToAccountWebhookCacheOfEveryNodeInCluster operation.
-     * @callback module:api/ClusterApi~clusterRouterAddItemsToAccountWebhookCacheOfEveryNodeInClusterCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Add items to account webhook cache of every node in cluster
-     * @param {module:model/ModelsAccountWebhook} body Add account webhooks to account webhook cache
-     * @param {module:api/ClusterApi~clusterRouterAddItemsToAccountWebhookCacheOfEveryNodeInClusterCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    this.clusterRouterAddItemsToAccountWebhookCacheOfEveryNodeInCluster = function(body, callback) {
-      var postBody = body;
-
-      // verify the required parameter 'body' is set
-      if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling clusterRouterAddItemsToAccountWebhookCacheOfEveryNodeInCluster");
-      }
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = null;
-
-      return this.apiClient.callApi(
-        '/cluster/webhook/cache', 'POST',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
 
     /**
      * Callback function to receive the result of the clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster operation.
@@ -139,6 +94,110 @@
     }
 
     /**
+     * Callback function to receive the result of the clusterRouterDeleteItemFromCacheOfEveryNodeInCluster operation.
+     * @callback module:api/ClusterApi~clusterRouterDeleteItemFromCacheOfEveryNodeInClusterCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete item from cache of every node in cluster
+     * @param {String} xSystemApiKey System API Key
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.name cache name
+     * @param {String} opts.key cache item key to delete
+     * @param {module:api/ClusterApi~clusterRouterDeleteItemFromCacheOfEveryNodeInClusterCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.clusterRouterDeleteItemFromCacheOfEveryNodeInCluster = function(xSystemApiKey, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'xSystemApiKey' is set
+      if (xSystemApiKey === undefined || xSystemApiKey === null) {
+        throw new Error("Missing the required parameter 'xSystemApiKey' when calling clusterRouterDeleteItemFromCacheOfEveryNodeInCluster");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'name': opts['name'],
+        'key': opts['key'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-System-ApiKey': xSystemApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/cluster/cache', 'DELETE',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the clusterRouterDeleteItemFromCacheOfSpecificNodeInCluster operation.
+     * @callback module:api/ClusterApi~clusterRouterDeleteItemFromCacheOfSpecificNodeInClusterCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete item from cache of specific node in cluster
+     * @param {String} xSystemApiKey System API Key
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.name cache name
+     * @param {String} opts.key cache item key to delete
+     * @param {module:api/ClusterApi~clusterRouterDeleteItemFromCacheOfSpecificNodeInClusterCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.clusterRouterDeleteItemFromCacheOfSpecificNodeInCluster = function(xSystemApiKey, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'xSystemApiKey' is set
+      if (xSystemApiKey === undefined || xSystemApiKey === null) {
+        throw new Error("Missing the required parameter 'xSystemApiKey' when calling clusterRouterDeleteItemFromCacheOfSpecificNodeInCluster");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'name': opts['name'],
+        'key': opts['key'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-System-ApiKey': xSystemApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/cluster/cache/node', 'DELETE',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster operation.
      * @callback module:api/ClusterApi~clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInClusterCallback
      * @param {String} error Error message, if any.
@@ -178,51 +237,6 @@
 
       return this.apiClient.callApi(
         '/cluster/suppression/filter', 'DELETE',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the clusterRouterDeleteItemsFromWebhookFilterOfEveryNodeInCluster operation.
-     * @callback module:api/ClusterApi~clusterRouterDeleteItemsFromWebhookFilterOfEveryNodeInClusterCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Delete items from webhook filter of every node in cluster
-     * @param {module:model/ModelsAccountWebhook} body Delete webhooks from webhook filter
-     * @param {module:api/ClusterApi~clusterRouterDeleteItemsFromWebhookFilterOfEveryNodeInClusterCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    this.clusterRouterDeleteItemsFromWebhookFilterOfEveryNodeInCluster = function(body, callback) {
-      var postBody = body;
-
-      // verify the required parameter 'body' is set
-      if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling clusterRouterDeleteItemsFromWebhookFilterOfEveryNodeInCluster");
-      }
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = null;
-
-      return this.apiClient.callApi(
-        '/cluster/webhook/cache', 'DELETE',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
