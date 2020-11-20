@@ -175,7 +175,6 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountmessageApi* | [**messageRouterGetAllEventsForAMessageIdFromANode**](docs/AccountmessageApi.md#messageRouterGetAllEventsForAMessageIdFromANode) | **GET** /account/message/node/{messageId}/events | 
 *SendPostApi.AccountmessageApi* | [**messageRouterGetMessageFromNode**](docs/AccountmessageApi.md#messageRouterGetMessageFromNode) | **GET** /account/message/node/{messageId} | 
 *SendPostApi.AccountonboardingApi* | [**onboardingRouterGetOnboardingChecklist**](docs/AccountonboardingApi.md#onboardingRouterGetOnboardingChecklist) | **GET** /account/onboarding/checklist | 
-*SendPostApi.AccountpaymentApi* | [**paymentRouterCreateCustomerPortal**](docs/AccountpaymentApi.md#paymentRouterCreateCustomerPortal) | **POST** /account/payment/portal | 
 *SendPostApi.AccountrecipientApi* | [**recipientRouterGetAllMessagesForARecipient**](docs/AccountrecipientApi.md#recipientRouterGetAllMessagesForARecipient) | **GET** /account/recipient/{recipient}/messages | 
 *SendPostApi.AccountrecipientApi* | [**recipientRouterGetAllMessagesForARecipientFromANode**](docs/AccountrecipientApi.md#recipientRouterGetAllMessagesForARecipientFromANode) | **GET** /account/recipient/node/{recipient}/messages | 
 *SendPostApi.AccountsmtpstatApi* | [**sMTPStatRouterGetAllAggregateIPProviderSMTPStats**](docs/AccountsmtpstatApi.md#sMTPStatRouterGetAllAggregateIPProviderSMTPStats) | **GET** /account/smtp/stat/ip/{ipid}/provider/{pname}/aggregate | 
@@ -263,7 +262,6 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [SendPostApi.Alert](docs/Alert.md)
- - [SendPostApi.ApiBillingPortalSession](docs/ApiBillingPortalSession.md)
  - [SendPostApi.ModelsAGStat](docs/ModelsAGStat.md)
  - [SendPostApi.ModelsAIPStat](docs/ModelsAIPStat.md)
  - [SendPostApi.ModelsAccount](docs/ModelsAccount.md)
@@ -349,6 +347,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsSystemDNSRecord](docs/ModelsSystemDNSRecord.md)
  - [SendPostApi.ModelsSystemDomain](docs/ModelsSystemDomain.md)
  - [SendPostApi.ModelsSystemIPPool](docs/ModelsSystemIPPool.md)
+ - [SendPostApi.ModelsTag](docs/ModelsTag.md)
  - [SendPostApi.ModelsTemplate](docs/ModelsTemplate.md)
  - [SendPostApi.ModelsTo](docs/ModelsTo.md)
  - [SendPostApi.ModelsValidation](docs/ModelsValidation.md)
