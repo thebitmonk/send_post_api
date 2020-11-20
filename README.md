@@ -193,6 +193,9 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterGet**](docs/AccountsubaccountApi.md#subAccountRouterGet) | **GET** /account/subaccount/{subAccountId} | 
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterGetAll**](docs/AccountsubaccountApi.md#subAccountRouterGetAll) | **GET** /account/subaccount/ | 
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterUpdate**](docs/AccountsubaccountApi.md#subAccountRouterUpdate) | **PUT** /account/subaccount/{subAccountId} | 
+*SendPostApi.AccounttagApi* | [**tagRouterCreate**](docs/AccounttagApi.md#tagRouterCreate) | **POST** /account/tag/ | 
+*SendPostApi.AccounttagApi* | [**tagRouterDelete**](docs/AccounttagApi.md#tagRouterDelete) | **DELETE** /account/tag/{tagid} | 
+*SendPostApi.AccounttagApi* | [**tagRouterGetAll**](docs/AccounttagApi.md#tagRouterGetAll) | **GET** /account/tag/ | 
 *SendPostApi.AccounttemplateApi* | [**accountTemplateRouterCreate**](docs/AccounttemplateApi.md#accountTemplateRouterCreate) | **POST** /account/template/ | 
 *SendPostApi.AccounttemplateApi* | [**accountTemplateRouterDelete**](docs/AccounttemplateApi.md#accountTemplateRouterDelete) | **DELETE** /account/template/{templateid} | 
 *SendPostApi.AccounttemplateApi* | [**accountTemplateRouterGet**](docs/AccounttemplateApi.md#accountTemplateRouterGet) | **GET** /account/template/{templateid} | 

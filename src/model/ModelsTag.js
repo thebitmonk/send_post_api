@@ -59,6 +59,8 @@
         obj.color = ApiClient.convertToType(data['color'], 'String');
       if (data.hasOwnProperty('created'))
         obj.created = ApiClient.convertToType(data['created'], 'Number');
+      if (data.hasOwnProperty('description'))
+        obj.description = ApiClient.convertToType(data['description'], 'String');
       if (data.hasOwnProperty('id'))
         obj.id = ApiClient.convertToType(data['id'], 'Number');
       if (data.hasOwnProperty('name'))
@@ -78,6 +80,11 @@
    * @member {Number} created
    */
   exports.prototype.created = undefined;
+
+  /**
+   * @member {String} description
+   */
+  exports.prototype.description = undefined;
 
   /**
    * @member {Number} id
