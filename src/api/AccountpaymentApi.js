@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ApiBillingPortalSession'], factory);
+    define(['ApiClient', 'model/ModelsBillingPortalSession', 'model/ModelsPaymentOptions'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ApiBillingPortalSession'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsBillingPortalSession'), require('../model/ModelsPaymentOptions'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.AccountpaymentApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ApiBillingPortalSession);
+    root.SendPostApi.AccountpaymentApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsBillingPortalSession, root.SendPostApi.ModelsPaymentOptions);
   }
-}(this, function(ApiClient, ApiBillingPortalSession) {
+}(this, function(ApiClient, ModelsBillingPortalSession, ModelsPaymentOptions) {
   'use strict';
 
   /**
@@ -52,7 +52,7 @@
      * Callback function to receive the result of the paymentRouterCreateCustomerPortal operation.
      * @callback module:api/AccountpaymentApi~paymentRouterCreateCustomerPortalCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ApiBillingPortalSession} data The data returned by the service call.
+     * @param {module:model/ModelsBillingPortalSession} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -60,7 +60,7 @@
      * Create Customer Portal for account
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountpaymentApi~paymentRouterCreateCustomerPortalCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ApiBillingPortalSession}
+     * data is of type: {@link module:model/ModelsBillingPortalSession}
      */
     this.paymentRouterCreateCustomerPortal = function(xAccountApiKey, callback) {
       var postBody = null;
@@ -86,10 +86,101 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = ApiBillingPortalSession;
+      var returnType = ModelsBillingPortalSession;
 
       return this.apiClient.callApi(
         '/account/payment/portal', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the paymentRouterCreatePaymentSubscription operation.
+     * @callback module:api/AccountpaymentApi~paymentRouterCreatePaymentSubscriptionCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Create Payment Subscription for Stripe
+     * @param {String} xAccountApiKey Account API Key
+     * @param {module:model/ModelsPaymentOptions} body PaymentOptions content
+     * @param {module:api/AccountpaymentApi~paymentRouterCreatePaymentSubscriptionCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.paymentRouterCreatePaymentSubscription = function(xAccountApiKey, body, callback) {
+      var postBody = body;
+
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling paymentRouterCreatePaymentSubscription");
+      }
+
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling paymentRouterCreatePaymentSubscription");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-Account-ApiKey': xAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/account/payment/subscription', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the paymentRouterHandlePaymentWebhook operation.
+     * @callback module:api/AccountpaymentApi~paymentRouterHandlePaymentWebhookCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Handle Payment Related Webhooks
+     * @param {module:api/AccountpaymentApi~paymentRouterHandlePaymentWebhookCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.paymentRouterHandlePaymentWebhook = function(callback) {
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/account/payment/webhook', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

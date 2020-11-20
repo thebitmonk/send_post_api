@@ -48,7 +48,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SendPostApi.ApiBillingPortalSession);
+            expect(data).to.be.a(SendPostApi.ModelsBillingPortalSession);
             expect(data.created).to.be.a('number');
             expect(data.created).to.be("0");
             expect(data.customer).to.be.a('string');
@@ -63,6 +63,47 @@
             expect(data.returnUrl).to.be("");
             expect(data.url).to.be.a('string');
             expect(data.url).to.be("");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('paymentRouterCreatePaymentSubscription', function() {
+        it('should call paymentRouterCreatePaymentSubscription successfully', function(done) {
+          // TODO: uncomment, update parameter values for paymentRouterCreatePaymentSubscription call
+          /*
+          var xAccountApiKey = "xAccountApiKey_example";
+          var body = new SendPostApi.ModelsPaymentOptions();
+          body.customerId = "";
+          body.paymentMethodId = "";
+          body.priceId = "";
+
+          instance.paymentRouterCreatePaymentSubscription(xAccountApiKey, body, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('paymentRouterHandlePaymentWebhook', function() {
+        it('should call paymentRouterHandlePaymentWebhook successfully', function(done) {
+          // TODO: uncomment paymentRouterHandlePaymentWebhook call
+          /*
+
+          instance.paymentRouterHandlePaymentWebhook(function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
 
             done();
           });
