@@ -73,7 +73,7 @@
       });
       describe('paymentRouterCreatePaymentSubscription', function() {
         it('should call paymentRouterCreatePaymentSubscription successfully', function(done) {
-          // TODO: uncomment, update parameter values for paymentRouterCreatePaymentSubscription call
+          // TODO: uncomment, update parameter values for paymentRouterCreatePaymentSubscription call and complete the assertions
           /*
           var xAccountApiKey = "xAccountApiKey_example";
           var body = new SendPostApi.ModelsPaymentOptions();
@@ -86,6 +86,10 @@
               done(error);
               return;
             }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelsPaymentStatus);
+            expect(data.status).to.be.a('string');
+            expect(data.status).to.be("");
 
             done();
           });

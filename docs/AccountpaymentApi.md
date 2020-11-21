@@ -57,7 +57,7 @@ No authorization required
 
 <a name="paymentRouterCreatePaymentSubscription"></a>
 # **paymentRouterCreatePaymentSubscription**
-> paymentRouterCreatePaymentSubscription(xAccountApiKey, body)
+> ModelsPaymentStatus paymentRouterCreatePaymentSubscription(xAccountApiKey, body)
 
 
 
@@ -78,7 +78,7 @@ var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 };
 apiInstance.paymentRouterCreatePaymentSubscription(xAccountApiKey, body, callback);
@@ -93,7 +93,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**ModelsPaymentStatus**](ModelsPaymentStatus.md)
 
 ### Authorization
 
