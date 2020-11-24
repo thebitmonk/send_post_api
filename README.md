@@ -329,6 +329,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsOnboardingChecklist](docs/ModelsOnboardingChecklist.md)
  - [SendPostApi.ModelsPIPStat](docs/ModelsPIPStat.md)
  - [SendPostApi.ModelsPaymentOptions](docs/ModelsPaymentOptions.md)
+ - [SendPostApi.ModelsPaymentStatus](docs/ModelsPaymentStatus.md)
  - [SendPostApi.ModelsQEmailMessage](docs/ModelsQEmailMessage.md)
  - [SendPostApi.ModelsQEvent](docs/ModelsQEvent.md)
  - [SendPostApi.ModelsRDSuppression](docs/ModelsRDSuppression.md)

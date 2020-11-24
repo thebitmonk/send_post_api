@@ -64,6 +64,10 @@
             expect(data.id).to.be("0");
             expect(data.industry).to.be.a('string');
             expect(data.industry).to.be("");
+            expect(data.isCanceled).to.be.a('boolean');
+            expect(data.isCanceled).to.be(false);
+            expect(data.isUpgraded).to.be.a('boolean');
+            expect(data.isUpgraded).to.be(false);
             expect(data.lockThreshold).to.be.a('number');
             expect(data.lockThreshold).to.be("0");
             expect(data.locked).to.be.a('boolean');
@@ -76,6 +80,8 @@
             expect(data.onboardQAnswered).to.be(false);
             expect(data.sendingVolumePerMonth).to.be.a('string');
             expect(data.sendingVolumePerMonth).to.be("");
+            expect(data.stripePriceId).to.be.a('string');
+            expect(data.stripePriceId).to.be("");
             expect(data.url).to.be.a('string');
             expect(data.url).to.be("");
 
@@ -121,6 +127,10 @@
                 expect(data.id).to.be("0");
                 expect(data.industry).to.be.a('string');
                 expect(data.industry).to.be("");
+                expect(data.isCanceled).to.be.a('boolean');
+                expect(data.isCanceled).to.be(false);
+                expect(data.isUpgraded).to.be.a('boolean');
+                expect(data.isUpgraded).to.be(false);
                 expect(data.lockThreshold).to.be.a('number');
                 expect(data.lockThreshold).to.be("0");
                 expect(data.locked).to.be.a('boolean');
@@ -133,6 +143,8 @@
                 expect(data.onboardQAnswered).to.be(false);
                 expect(data.sendingVolumePerMonth).to.be.a('string');
                 expect(data.sendingVolumePerMonth).to.be("");
+                expect(data.stripePriceId).to.be.a('string');
+                expect(data.stripePriceId).to.be("");
                 expect(data.url).to.be.a('string');
                 expect(data.url).to.be("");
 
@@ -204,6 +216,10 @@
                 expect(data.id).to.be("0");
                 expect(data.industry).to.be.a('string');
                 expect(data.industry).to.be("");
+                expect(data.isCanceled).to.be.a('boolean');
+                expect(data.isCanceled).to.be(false);
+                expect(data.isUpgraded).to.be.a('boolean');
+                expect(data.isUpgraded).to.be(false);
                 expect(data.lockThreshold).to.be.a('number');
                 expect(data.lockThreshold).to.be("0");
                 expect(data.locked).to.be.a('boolean');
@@ -216,6 +232,8 @@
                 expect(data.onboardQAnswered).to.be(false);
                 expect(data.sendingVolumePerMonth).to.be.a('string');
                 expect(data.sendingVolumePerMonth).to.be("");
+                expect(data.stripePriceId).to.be.a('string');
+                expect(data.stripePriceId).to.be("");
                 expect(data.url).to.be.a('string');
                 expect(data.url).to.be("");
 

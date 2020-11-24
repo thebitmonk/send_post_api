@@ -8,12 +8,15 @@ Name | Type | Description | Notes
 **currentEmailServiceProvider** | **String** |  | [optional] 
 **id** | **Number** |  | [optional] 
 **industry** | **String** |  | [optional] 
+**isCanceled** | **Boolean** |  | [optional] 
+**isUpgraded** | **Boolean** |  | [optional] 
 **lockThreshold** | **Number** |  | [optional] 
 **locked** | **Boolean** |  | [optional] 
 **name** | **String** |  | [optional] 
 **onboardCFinished** | **Boolean** |  | [optional] 
 **onboardQAnswered** | **Boolean** |  | [optional] 
 **sendingVolumePerMonth** | **String** |  | [optional] 
+**stripePriceId** | **String** |  | [optional] 
 **url** | **String** |  | [optional] 
 
 

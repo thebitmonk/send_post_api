@@ -71,7 +71,19 @@
         // expect(instance.industry).to.be(expectedValueLiteral);
       });
 
-      it('should have the property lockThreshold (base name: "lock_threshold")', function() {
+      it('should have the property isCanceled (base name: "isCanceled")', function() {
+        // TODO: update the code to test the property isCanceled
+        expect(instance).to.have.property('isCanceled');
+        // expect(instance.isCanceled).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property isUpgraded (base name: "isUpgraded")', function() {
+        // TODO: update the code to test the property isUpgraded
+        expect(instance).to.have.property('isUpgraded');
+        // expect(instance.isUpgraded).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property lockThreshold (base name: "lockThreshold")', function() {
         // TODO: update the code to test the property lockThreshold
         expect(instance).to.have.property('lockThreshold');
         // expect(instance.lockThreshold).to.be(expectedValueLiteral);
@@ -105,6 +117,12 @@
         // TODO: update the code to test the property sendingVolumePerMonth
         expect(instance).to.have.property('sendingVolumePerMonth');
         // expect(instance.sendingVolumePerMonth).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property stripePriceId (base name: "stripePriceId")', function() {
+        // TODO: update the code to test the property stripePriceId
+        expect(instance).to.have.property('stripePriceId');
+        // expect(instance.stripePriceId).to.be(expectedValueLiteral);
       });
 
       it('should have the property url (base name: "url")', function() {
