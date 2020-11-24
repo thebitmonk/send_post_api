@@ -131,6 +131,13 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccounteventApi* | [**eventRouterGetAllEventsFromAAccountForAGivenTimeRange**](docs/AccounteventApi.md#eventRouterGetAllEventsFromAAccountForAGivenTimeRange) | **GET** /account/event/ | 
 *SendPostApi.AccounteventApi* | [**eventRouterGetAllEventsOfAAccountFromASpecificNode**](docs/AccounteventApi.md#eventRouterGetAllEventsOfAAccountFromASpecificNode) | **POST** /account/event/node | 
 *SendPostApi.AccounteventApi* | [**eventRouterGetEventInNode**](docs/AccounteventApi.md#eventRouterGetEventInNode) | **GET** /account/event/node/{eventId} | 
+*SendPostApi.AccountincidentApi* | [**incidentRouterAdd**](docs/AccountincidentApi.md#incidentRouterAdd) | **POST** /account/incident/{incidentId}/comment | 
+*SendPostApi.AccountincidentApi* | [**incidentRouterCount**](docs/AccountincidentApi.md#incidentRouterCount) | **GET** /account/incident/count | 
+*SendPostApi.AccountincidentApi* | [**incidentRouterCreate**](docs/AccountincidentApi.md#incidentRouterCreate) | **POST** /account/incident/ | 
+*SendPostApi.AccountincidentApi* | [**incidentRouterGetAll**](docs/AccountincidentApi.md#incidentRouterGetAll) | **GET** /account/incident/ | 
+*SendPostApi.AccountincidentApi* | [**incidentRouterGetAllComments**](docs/AccountincidentApi.md#incidentRouterGetAllComments) | **GET** /account/incident/{incidentId}/comment | 
+*SendPostApi.AccountincidentApi* | [**incidentRouterGetIncident**](docs/AccountincidentApi.md#incidentRouterGetIncident) | **GET** /account/incident/{incidentId} | 
+*SendPostApi.AccountincidentApi* | [**incidentRouterUpdate**](docs/AccountincidentApi.md#incidentRouterUpdate) | **PUT** /account/incident/{incidentId} | 
 *SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterCount**](docs/AccountintegrationApi.md#accountIntegrationRouterCount) | **GET** /account/integration/count | 
 *SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterCreate**](docs/AccountintegrationApi.md#accountIntegrationRouterCreate) | **POST** /account/integration/{itype} | 
 *SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterDelete**](docs/AccountintegrationApi.md#accountIntegrationRouterDelete) | **DELETE** /account/integration/{itype} | 
@@ -196,6 +203,9 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterGet**](docs/AccountsubaccountApi.md#subAccountRouterGet) | **GET** /account/subaccount/{subAccountId} | 
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterGetAll**](docs/AccountsubaccountApi.md#subAccountRouterGetAll) | **GET** /account/subaccount/ | 
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterUpdate**](docs/AccountsubaccountApi.md#subAccountRouterUpdate) | **PUT** /account/subaccount/{subAccountId} | 
+*SendPostApi.AccounttagApi* | [**tagRouterCreate**](docs/AccounttagApi.md#tagRouterCreate) | **POST** /account/tag/ | 
+*SendPostApi.AccounttagApi* | [**tagRouterDelete**](docs/AccounttagApi.md#tagRouterDelete) | **DELETE** /account/tag/{tagid} | 
+*SendPostApi.AccounttagApi* | [**tagRouterGetAll**](docs/AccounttagApi.md#tagRouterGetAll) | **GET** /account/tag/ | 
 *SendPostApi.AccounttemplateApi* | [**accountTemplateRouterCreate**](docs/AccounttemplateApi.md#accountTemplateRouterCreate) | **POST** /account/template/ | 
 *SendPostApi.AccounttemplateApi* | [**accountTemplateRouterDelete**](docs/AccounttemplateApi.md#accountTemplateRouterDelete) | **DELETE** /account/template/{templateid} | 
 *SendPostApi.AccounttemplateApi* | [**accountTemplateRouterGet**](docs/AccounttemplateApi.md#accountTemplateRouterGet) | **GET** /account/template/{templateid} | 
@@ -282,6 +292,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsBulkResponse](docs/ModelsBulkResponse.md)
  - [SendPostApi.ModelsCity](docs/ModelsCity.md)
  - [SendPostApi.ModelsCleanedList](docs/ModelsCleanedList.md)
+ - [SendPostApi.ModelsComment](docs/ModelsComment.md)
  - [SendPostApi.ModelsCountStat](docs/ModelsCountStat.md)
  - [SendPostApi.ModelsCustomerQuality](docs/ModelsCustomerQuality.md)
  - [SendPostApi.ModelsDNSRecord](docs/ModelsDNSRecord.md)
@@ -290,9 +301,11 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsDomain](docs/ModelsDomain.md)
  - [SendPostApi.ModelsEAccount](docs/ModelsEAccount.md)
  - [SendPostApi.ModelsEAccountMember](docs/ModelsEAccountMember.md)
+ - [SendPostApi.ModelsEComment](docs/ModelsEComment.md)
  - [SendPostApi.ModelsEDomain](docs/ModelsEDomain.md)
  - [SendPostApi.ModelsEIP](docs/ModelsEIP.md)
  - [SendPostApi.ModelsEIPPool](docs/ModelsEIPPool.md)
+ - [SendPostApi.ModelsEIncident](docs/ModelsEIncident.md)
  - [SendPostApi.ModelsEIntegration](docs/ModelsEIntegration.md)
  - [SendPostApi.ModelsEInvitation](docs/ModelsEInvitation.md)
  - [SendPostApi.ModelsESender](docs/ModelsESender.md)
@@ -310,12 +323,18 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsFrom](docs/ModelsFrom.md)
  - [SendPostApi.ModelsGlockappsBlacklist](docs/ModelsGlockappsBlacklist.md)
  - [SendPostApi.ModelsGlockappsMonitorStat](docs/ModelsGlockappsMonitorStat.md)
+ - [SendPostApi.ModelsIEIP](docs/ModelsIEIP.md)
+ - [SendPostApi.ModelsIEMember](docs/ModelsIEMember.md)
+ - [SendPostApi.ModelsIESubAccount](docs/ModelsIESubAccount.md)
+ - [SendPostApi.ModelsIETag](docs/ModelsIETag.md)
  - [SendPostApi.ModelsIIP](docs/ModelsIIP.md)
  - [SendPostApi.ModelsIP](docs/ModelsIP.md)
  - [SendPostApi.ModelsIPPool](docs/ModelsIPPool.md)
  - [SendPostApi.ModelsIPPoolType](docs/ModelsIPPoolType.md)
  - [SendPostApi.ModelsIPStat](docs/ModelsIPStat.md)
  - [SendPostApi.ModelsIPType](docs/ModelsIPType.md)
+ - [SendPostApi.ModelsIncident](docs/ModelsIncident.md)
+ - [SendPostApi.ModelsIncidentStatus](docs/ModelsIncidentStatus.md)
  - [SendPostApi.ModelsInstance](docs/ModelsInstance.md)
  - [SendPostApi.ModelsIntegration](docs/ModelsIntegration.md)
  - [SendPostApi.ModelsIntegrationSettings](docs/ModelsIntegrationSettings.md)
@@ -353,6 +372,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsSystemDNSRecord](docs/ModelsSystemDNSRecord.md)
  - [SendPostApi.ModelsSystemDomain](docs/ModelsSystemDomain.md)
  - [SendPostApi.ModelsSystemIPPool](docs/ModelsSystemIPPool.md)
+ - [SendPostApi.ModelsTag](docs/ModelsTag.md)
  - [SendPostApi.ModelsTemplate](docs/ModelsTemplate.md)
  - [SendPostApi.ModelsTo](docs/ModelsTo.md)
  - [SendPostApi.ModelsValidation](docs/ModelsValidation.md)
