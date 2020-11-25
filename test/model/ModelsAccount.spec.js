@@ -77,6 +77,12 @@
         // expect(instance.isCanceled).to.be(expectedValueLiteral);
       });
 
+      it('should have the property isLastPaymentFailed (base name: "isLastPaymentFailed")', function() {
+        // TODO: update the code to test the property isLastPaymentFailed
+        expect(instance).to.have.property('isLastPaymentFailed');
+        // expect(instance.isLastPaymentFailed).to.be(expectedValueLiteral);
+      });
+
       it('should have the property isUpgraded (base name: "isUpgraded")', function() {
         // TODO: update the code to test the property isUpgraded
         expect(instance).to.have.property('isUpgraded');

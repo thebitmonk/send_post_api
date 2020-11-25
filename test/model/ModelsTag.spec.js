@@ -31,14 +31,20 @@
   var instance;
 
   describe('(package)', function() {
-    describe('ModelsTemplate', function() {
+    describe('ModelsTag', function() {
       beforeEach(function() {
-        instance = new SendPostApi.ModelsTemplate();
+        instance = new SendPostApi.ModelsTag();
       });
 
-      it('should create an instance of ModelsTemplate', function() {
-        // TODO: update the code to test ModelsTemplate
-        expect(instance).to.be.a(SendPostApi.ModelsTemplate);
+      it('should create an instance of ModelsTag', function() {
+        // TODO: update the code to test ModelsTag
+        expect(instance).to.be.a(SendPostApi.ModelsTag);
+      });
+
+      it('should have the property color (base name: "color")', function() {
+        // TODO: update the code to test the property color
+        expect(instance).to.have.property('color');
+        // expect(instance.color).to.be(expectedValueLiteral);
       });
 
       it('should have the property created (base name: "created")', function() {
@@ -47,10 +53,10 @@
         // expect(instance.created).to.be(expectedValueLiteral);
       });
 
-      it('should have the property html (base name: "html")', function() {
-        // TODO: update the code to test the property html
-        expect(instance).to.have.property('html');
-        // expect(instance.html).to.be(expectedValueLiteral);
+      it('should have the property description (base name: "description")', function() {
+        // TODO: update the code to test the property description
+        expect(instance).to.have.property('description');
+        // expect(instance.description).to.be(expectedValueLiteral);
       });
 
       it('should have the property id (base name: "id")', function() {
@@ -63,18 +69,6 @@
         // TODO: update the code to test the property name
         expect(instance).to.have.property('name');
         // expect(instance.name).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property template (base name: "template")', function() {
-        // TODO: update the code to test the property template
-        expect(instance).to.have.property('template');
-        // expect(instance.template).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property text (base name: "text")', function() {
-        // TODO: update the code to test the property text
-        expect(instance).to.have.property('text');
-        // expect(instance.text).to.be(expectedValueLiteral);
       });
 
       it('should have the property updated (base name: "updated")', function() {

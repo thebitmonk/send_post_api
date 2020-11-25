@@ -26,47 +26,45 @@
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsTemplate = factory(root.SendPostApi.ApiClient);
+    root.SendPostApi.ModelsTag = factory(root.SendPostApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The ModelsTemplate model module.
-   * @module model/ModelsTemplate
+   * The ModelsTag model module.
+   * @module model/ModelsTag
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>ModelsTemplate</code>.
-   * @alias module:model/ModelsTemplate
+   * Constructs a new <code>ModelsTag</code>.
+   * @alias module:model/ModelsTag
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>ModelsTemplate</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ModelsTag</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ModelsTemplate} obj Optional instance to populate.
-   * @return {module:model/ModelsTemplate} The populated <code>ModelsTemplate</code> instance.
+   * @param {module:model/ModelsTag} obj Optional instance to populate.
+   * @return {module:model/ModelsTag} The populated <code>ModelsTag</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('color'))
+        obj.color = ApiClient.convertToType(data['color'], 'String');
       if (data.hasOwnProperty('created'))
         obj.created = ApiClient.convertToType(data['created'], 'Number');
-      if (data.hasOwnProperty('html'))
-        obj.html = ApiClient.convertToType(data['html'], 'String');
+      if (data.hasOwnProperty('description'))
+        obj.description = ApiClient.convertToType(data['description'], 'String');
       if (data.hasOwnProperty('id'))
         obj.id = ApiClient.convertToType(data['id'], 'Number');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
-      if (data.hasOwnProperty('template'))
-        obj.template = ApiClient.convertToType(data['template'], 'String');
-      if (data.hasOwnProperty('text'))
-        obj.text = ApiClient.convertToType(data['text'], 'String');
       if (data.hasOwnProperty('updated'))
         obj.updated = ApiClient.convertToType(data['updated'], 'Number');
     }
@@ -74,14 +72,19 @@
   }
 
   /**
+   * @member {String} color
+   */
+  exports.prototype.color = undefined;
+
+  /**
    * @member {Number} created
    */
   exports.prototype.created = undefined;
 
   /**
-   * @member {String} html
+   * @member {String} description
    */
-  exports.prototype.html = undefined;
+  exports.prototype.description = undefined;
 
   /**
    * @member {Number} id
@@ -92,16 +95,6 @@
    * @member {String} name
    */
   exports.prototype.name = undefined;
-
-  /**
-   * @member {String} template
-   */
-  exports.prototype.template = undefined;
-
-  /**
-   * @member {String} text
-   */
-  exports.prototype.text = undefined;
 
   /**
    * @member {Number} updated

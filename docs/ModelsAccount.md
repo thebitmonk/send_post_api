@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **id** | **Number** |  | [optional] 
 **industry** | **String** |  | [optional] 
 **isCanceled** | **Boolean** |  | [optional] 
+**isLastPaymentFailed** | **Boolean** |  | [optional] 
 **isUpgraded** | **Boolean** |  | [optional] 
 **lockThreshold** | **Number** |  | [optional] 
 **locked** | **Boolean** |  | [optional] 

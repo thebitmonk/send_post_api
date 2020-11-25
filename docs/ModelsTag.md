@@ -1,14 +1,13 @@
-# SendPostApi.ModelsTemplate
+# SendPostApi.ModelsTag
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**color** | **String** |  | [optional] 
 **created** | **Number** |  | [optional] 
-**html** | **String** |  | [optional] 
+**description** | **String** |  | [optional] 
 **id** | **Number** |  | [optional] 
 **name** | **String** |  | [optional] 
-**template** | **String** |  | [optional] 
-**text** | **String** |  | [optional] 
 **updated** | **Number** |  | [optional] 
 
 

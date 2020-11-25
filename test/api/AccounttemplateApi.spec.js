@@ -42,11 +42,13 @@
           /*
           var xAccountApiKey = "xAccountApiKey_example";
           var body = new SendPostApi.ModelsTemplate();
+          body.created = "0";
           body.html = "";
           body.id = "0";
           body.name = "";
           body.template = "";
           body.text = "";
+          body.updated = "0";
 
           instance.accountTemplateRouterCreate(xAccountApiKey, body, function(error, data, response) {
             if (error) {
@@ -55,6 +57,8 @@
             }
             // TODO: update response assertions
             expect(data).to.be.a(SendPostApi.ModelsTemplate);
+            expect(data.created).to.be.a('number');
+            expect(data.created).to.be("0");
             expect(data.html).to.be.a('string');
             expect(data.html).to.be("");
             expect(data.id).to.be.a('number');
@@ -65,6 +69,8 @@
             expect(data.template).to.be("");
             expect(data.text).to.be.a('string');
             expect(data.text).to.be("");
+            expect(data.updated).to.be.a('number');
+            expect(data.updated).to.be("0");
 
             done();
           });
@@ -113,6 +119,8 @@
             }
             // TODO: update response assertions
             expect(data).to.be.a(SendPostApi.ModelsTemplate);
+            expect(data.created).to.be.a('number');
+            expect(data.created).to.be("0");
             expect(data.html).to.be.a('string');
             expect(data.html).to.be("");
             expect(data.id).to.be.a('number');
@@ -123,6 +131,8 @@
             expect(data.template).to.be("");
             expect(data.text).to.be.a('string');
             expect(data.text).to.be("");
+            expect(data.updated).to.be.a('number');
+            expect(data.updated).to.be("0");
 
             done();
           });
@@ -149,6 +159,8 @@
             for (let p in dataCtr) {
               let data = dataCtr[p];
               expect(data).to.be.a(SendPostApi.ModelsTemplate);
+              expect(data.created).to.be.a('number');
+              expect(data.created).to.be("0");
               expect(data.html).to.be.a('string');
               expect(data.html).to.be("");
               expect(data.id).to.be.a('number');
@@ -159,6 +171,8 @@
               expect(data.template).to.be("");
               expect(data.text).to.be.a('string');
               expect(data.text).to.be("");
+              expect(data.updated).to.be.a('number');
+              expect(data.updated).to.be("0");
             }
 
             done();
@@ -175,11 +189,13 @@
           var xAccountApiKey = "xAccountApiKey_example";
           var templateid = 789;
           var body = new SendPostApi.ModelsTemplate();
+          body.created = "0";
           body.html = "";
           body.id = "0";
           body.name = "";
           body.template = "";
           body.text = "";
+          body.updated = "0";
 
           instance.accountTemplateRouterUpdate(xAccountApiKey, templateid, body, function(error, data, response) {
             if (error) {
@@ -188,6 +204,8 @@
             }
             // TODO: update response assertions
             expect(data).to.be.a(SendPostApi.ModelsTemplate);
+            expect(data.created).to.be.a('number');
+            expect(data.created).to.be("0");
             expect(data.html).to.be.a('string');
             expect(data.html).to.be("");
             expect(data.id).to.be.a('number');
@@ -198,6 +216,8 @@
             expect(data.template).to.be("");
             expect(data.text).to.be.a('string');
             expect(data.text).to.be("");
+            expect(data.updated).to.be.a('number');
+            expect(data.updated).to.be("0");
 
             done();
           });

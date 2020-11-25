@@ -66,6 +66,8 @@
             expect(data.industry).to.be("");
             expect(data.isCanceled).to.be.a('boolean');
             expect(data.isCanceled).to.be(false);
+            expect(data.isLastPaymentFailed).to.be.a('boolean');
+            expect(data.isLastPaymentFailed).to.be(false);
             expect(data.isUpgraded).to.be.a('boolean');
             expect(data.isUpgraded).to.be(false);
             expect(data.lockThreshold).to.be.a('number');
@@ -129,6 +131,8 @@
                 expect(data.industry).to.be("");
                 expect(data.isCanceled).to.be.a('boolean');
                 expect(data.isCanceled).to.be(false);
+                expect(data.isLastPaymentFailed).to.be.a('boolean');
+                expect(data.isLastPaymentFailed).to.be(false);
                 expect(data.isUpgraded).to.be.a('boolean');
                 expect(data.isUpgraded).to.be(false);
                 expect(data.lockThreshold).to.be.a('number');
@@ -218,6 +222,8 @@
                 expect(data.industry).to.be("");
                 expect(data.isCanceled).to.be.a('boolean');
                 expect(data.isCanceled).to.be(false);
+                expect(data.isLastPaymentFailed).to.be.a('boolean');
+                expect(data.isLastPaymentFailed).to.be(false);
                 expect(data.isUpgraded).to.be.a('boolean');
                 expect(data.isUpgraded).to.be(false);
                 expect(data.lockThreshold).to.be.a('number');

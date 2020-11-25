@@ -67,6 +67,8 @@
         obj.industry = ApiClient.convertToType(data['industry'], 'String');
       if (data.hasOwnProperty('isCanceled'))
         obj.isCanceled = ApiClient.convertToType(data['isCanceled'], 'Boolean');
+      if (data.hasOwnProperty('isLastPaymentFailed'))
+        obj.isLastPaymentFailed = ApiClient.convertToType(data['isLastPaymentFailed'], 'Boolean');
       if (data.hasOwnProperty('isUpgraded'))
         obj.isUpgraded = ApiClient.convertToType(data['isUpgraded'], 'Boolean');
       if (data.hasOwnProperty('lockThreshold'))
@@ -118,6 +120,11 @@
    * @member {Boolean} isCanceled
    */
   exports.prototype.isCanceled = undefined;
+
+  /**
+   * @member {Boolean} isLastPaymentFailed
+   */
+  exports.prototype.isLastPaymentFailed = undefined;
 
   /**
    * @member {Boolean} isUpgraded
