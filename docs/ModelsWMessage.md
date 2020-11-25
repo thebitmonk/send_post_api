@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **IPID** | **Number** |  | [optional] 
 **messageType** | **String** |  | [optional] 
 **messageUUID** | **String** |  | [optional] 
+**mockMessage** | **Boolean** |  | [optional] 
+**mockTimeShift** | **Number** |  | [optional] 
 **sMTPCode** | **Number** |  | [optional] 
 **sMTPDescription** | **String** |  | [optional] 
 **subAccountID** | **Number** |  | [optional] 

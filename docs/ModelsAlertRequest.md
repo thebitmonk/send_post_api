@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **entityType** | **String** |  | [optional] 
 **entityValue** | **Number** |  | [optional] 
 **label** | [**ModelsAlertLabel**](ModelsAlertLabel.md) |  | [optional] 
+**member** | **Number** |  | [optional] 
 **name** | **String** |  | [optional] 
 **notificationType** | [**ModelsNotificationType**](ModelsNotificationType.md) |  | [optional] 
 **parameter** | **Number** |  | [optional] 

@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **active** | **Boolean** |  | [optional] 
-**alertId** | **Number** |  | [optional] 
 **entityType** | **String** |  | [optional] 
 **entityValue** | **String** |  | [optional] 
+**id** | **Number** |  | [optional] 
 **label** | [**ModelsAlertLabel**](ModelsAlertLabel.md) |  | [optional] 
 **name** | **String** |  | [optional] 
 **parameter** | **Number** |  | [optional] 
