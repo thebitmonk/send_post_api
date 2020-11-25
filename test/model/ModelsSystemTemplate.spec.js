@@ -31,20 +31,14 @@
   var instance;
 
   describe('(package)', function() {
-    describe('ModelsTemplate', function() {
+    describe('ModelsSystemTemplate', function() {
       beforeEach(function() {
-        instance = new SendPostApi.ModelsTemplate();
+        instance = new SendPostApi.ModelsSystemTemplate();
       });
 
-      it('should create an instance of ModelsTemplate', function() {
-        // TODO: update the code to test ModelsTemplate
-        expect(instance).to.be.a(SendPostApi.ModelsTemplate);
-      });
-
-      it('should have the property created (base name: "created")', function() {
-        // TODO: update the code to test the property created
-        expect(instance).to.have.property('created');
-        // expect(instance.created).to.be(expectedValueLiteral);
+      it('should create an instance of ModelsSystemTemplate', function() {
+        // TODO: update the code to test ModelsSystemTemplate
+        expect(instance).to.be.a(SendPostApi.ModelsSystemTemplate);
       });
 
       it('should have the property html (base name: "html")', function() {
@@ -75,12 +69,6 @@
         // TODO: update the code to test the property text
         expect(instance).to.have.property('text');
         // expect(instance.text).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property updated (base name: "updated")', function() {
-        // TODO: update the code to test the property updated
-        expect(instance).to.have.property('updated');
-        // expect(instance.updated).to.be(expectedValueLiteral);
       });
 
     });

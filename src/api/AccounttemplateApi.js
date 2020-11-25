@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsDeleteResponse', 'model/ModelsTemplate'], factory);
+    define(['ApiClient', 'model/ModelsAccountTemplate', 'model/ModelsDeleteResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsDeleteResponse'), require('../model/ModelsTemplate'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsAccountTemplate'), require('../model/ModelsDeleteResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.AccounttemplateApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsTemplate);
+    root.SendPostApi.AccounttemplateApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsAccountTemplate, root.SendPostApi.ModelsDeleteResponse);
   }
-}(this, function(ApiClient, ModelsDeleteResponse, ModelsTemplate) {
+}(this, function(ApiClient, ModelsAccountTemplate, ModelsDeleteResponse) {
   'use strict';
 
   /**
@@ -52,16 +52,16 @@
      * Callback function to receive the result of the accountTemplateRouterCreate operation.
      * @callback module:api/AccounttemplateApi~accountTemplateRouterCreateCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ModelsTemplate} data The data returned by the service call.
+     * @param {module:model/ModelsAccountTemplate} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Create a new template
      * @param {String} xAccountApiKey Account API Key
-     * @param {module:model/ModelsTemplate} body The Template content
+     * @param {module:model/ModelsAccountTemplate} body The AccountTemplate content
      * @param {module:api/AccounttemplateApi~accountTemplateRouterCreateCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ModelsTemplate}
+     * data is of type: {@link module:model/ModelsAccountTemplate}
      */
     this.accountTemplateRouterCreate = function(xAccountApiKey, body, callback) {
       var postBody = body;
@@ -92,7 +92,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = ModelsTemplate;
+      var returnType = ModelsAccountTemplate;
 
       return this.apiClient.callApi(
         '/account/template/', 'POST',
@@ -110,7 +110,7 @@
      */
 
     /**
-     * Delete Template
+     * Delete AccountTemplate
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} templateid The id of the template you want to delete
      * @param {module:api/AccounttemplateApi~accountTemplateRouterDeleteCallback} callback The callback function, accepting three arguments: error, data, response
@@ -159,7 +159,7 @@
      * Callback function to receive the result of the accountTemplateRouterGet operation.
      * @callback module:api/AccounttemplateApi~accountTemplateRouterGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ModelsTemplate} data The data returned by the service call.
+     * @param {module:model/ModelsAccountTemplate} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -168,7 +168,7 @@
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} templateid ID of the template required
      * @param {module:api/AccounttemplateApi~accountTemplateRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ModelsTemplate}
+     * data is of type: {@link module:model/ModelsAccountTemplate}
      */
     this.accountTemplateRouterGet = function(xAccountApiKey, templateid, callback) {
       var postBody = null;
@@ -200,7 +200,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = ModelsTemplate;
+      var returnType = ModelsAccountTemplate;
 
       return this.apiClient.callApi(
         '/account/template/{templateid}', 'GET',
@@ -213,7 +213,7 @@
      * Callback function to receive the result of the accountTemplateRouterGetAll operation.
      * @callback module:api/AccounttemplateApi~accountTemplateRouterGetAllCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ModelsTemplate>} data The data returned by the service call.
+     * @param {Array.<module:model/ModelsAccountTemplate>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -221,7 +221,7 @@
      * Get all templates
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccounttemplateApi~accountTemplateRouterGetAllCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ModelsTemplate>}
+     * data is of type: {@link Array.<module:model/ModelsAccountTemplate>}
      */
     this.accountTemplateRouterGetAll = function(xAccountApiKey, callback) {
       var postBody = null;
@@ -247,7 +247,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = [ModelsTemplate];
+      var returnType = [ModelsAccountTemplate];
 
       return this.apiClient.callApi(
         '/account/template/', 'GET',
@@ -260,7 +260,7 @@
      * Callback function to receive the result of the accountTemplateRouterUpdate operation.
      * @callback module:api/AccounttemplateApi~accountTemplateRouterUpdateCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ModelsTemplate} data The data returned by the service call.
+     * @param {module:model/ModelsAccountTemplate} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -268,9 +268,9 @@
      * update template
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} templateid The id of the template you want to update
-     * @param {module:model/ModelsTemplate} body The template content
+     * @param {module:model/ModelsAccountTemplate} body The template content
      * @param {module:api/AccounttemplateApi~accountTemplateRouterUpdateCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ModelsTemplate}
+     * data is of type: {@link module:model/ModelsAccountTemplate}
      */
     this.accountTemplateRouterUpdate = function(xAccountApiKey, templateid, body, callback) {
       var postBody = body;
@@ -307,7 +307,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = ModelsTemplate;
+      var returnType = ModelsAccountTemplate;
 
       return this.apiClient.callApi(
         '/account/template/{templateid}', 'PUT',

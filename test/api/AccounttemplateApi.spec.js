@@ -41,7 +41,7 @@
           // TODO: uncomment, update parameter values for accountTemplateRouterCreate call and complete the assertions
           /*
           var xAccountApiKey = "xAccountApiKey_example";
-          var body = new SendPostApi.ModelsTemplate();
+          var body = new SendPostApi.ModelsAccountTemplate();
           body.created = "0";
           body.html = "";
           body.id = "0";
@@ -56,7 +56,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SendPostApi.ModelsTemplate);
+            expect(data).to.be.a(SendPostApi.ModelsAccountTemplate);
             expect(data.created).to.be.a('number');
             expect(data.created).to.be("0");
             expect(data.html).to.be.a('string');
@@ -118,7 +118,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SendPostApi.ModelsTemplate);
+            expect(data).to.be.a(SendPostApi.ModelsAccountTemplate);
             expect(data.created).to.be.a('number');
             expect(data.created).to.be("0");
             expect(data.html).to.be.a('string');
@@ -158,7 +158,7 @@
             expect(dataCtr).to.not.be.empty();
             for (let p in dataCtr) {
               let data = dataCtr[p];
-              expect(data).to.be.a(SendPostApi.ModelsTemplate);
+              expect(data).to.be.a(SendPostApi.ModelsAccountTemplate);
               expect(data.created).to.be.a('number');
               expect(data.created).to.be("0");
               expect(data.html).to.be.a('string');
@@ -188,7 +188,7 @@
           /*
           var xAccountApiKey = "xAccountApiKey_example";
           var templateid = 789;
-          var body = new SendPostApi.ModelsTemplate();
+          var body = new SendPostApi.ModelsAccountTemplate();
           body.created = "0";
           body.html = "";
           body.id = "0";
@@ -203,7 +203,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SendPostApi.ModelsTemplate);
+            expect(data).to.be.a(SendPostApi.ModelsAccountTemplate);
             expect(data.created).to.be.a('number');
             expect(data.created).to.be("0");
             expect(data.html).to.be.a('string');

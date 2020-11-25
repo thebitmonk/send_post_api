@@ -26,37 +26,35 @@
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsTemplate = factory(root.SendPostApi.ApiClient);
+    root.SendPostApi.ModelsSystemTemplate = factory(root.SendPostApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The ModelsTemplate model module.
-   * @module model/ModelsTemplate
+   * The ModelsSystemTemplate model module.
+   * @module model/ModelsSystemTemplate
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>ModelsTemplate</code>.
-   * @alias module:model/ModelsTemplate
+   * Constructs a new <code>ModelsSystemTemplate</code>.
+   * @alias module:model/ModelsSystemTemplate
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>ModelsTemplate</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ModelsSystemTemplate</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ModelsTemplate} obj Optional instance to populate.
-   * @return {module:model/ModelsTemplate} The populated <code>ModelsTemplate</code> instance.
+   * @param {module:model/ModelsSystemTemplate} obj Optional instance to populate.
+   * @return {module:model/ModelsSystemTemplate} The populated <code>ModelsSystemTemplate</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('created'))
-        obj.created = ApiClient.convertToType(data['created'], 'Number');
       if (data.hasOwnProperty('html'))
         obj.html = ApiClient.convertToType(data['html'], 'String');
       if (data.hasOwnProperty('id'))
@@ -67,16 +65,9 @@
         obj.template = ApiClient.convertToType(data['template'], 'String');
       if (data.hasOwnProperty('text'))
         obj.text = ApiClient.convertToType(data['text'], 'String');
-      if (data.hasOwnProperty('updated'))
-        obj.updated = ApiClient.convertToType(data['updated'], 'Number');
     }
     return obj;
   }
-
-  /**
-   * @member {Number} created
-   */
-  exports.prototype.created = undefined;
 
   /**
    * @member {String} html
@@ -102,11 +93,6 @@
    * @member {String} text
    */
   exports.prototype.text = undefined;
-
-  /**
-   * @member {Number} updated
-   */
-  exports.prototype.updated = undefined;
 
   return exports;
 

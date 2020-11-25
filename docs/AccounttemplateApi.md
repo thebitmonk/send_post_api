@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="accountTemplateRouterCreate"></a>
 # **accountTemplateRouterCreate**
-> ModelsTemplate accountTemplateRouterCreate(xAccountApiKey, body)
+> ModelsAccountTemplate accountTemplateRouterCreate(xAccountApiKey, body)
 
 
 
@@ -27,7 +27,7 @@ var apiInstance = new SendPostApi.AccounttemplateApi();
 
 var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
-var body = new SendPostApi.ModelsTemplate(); // ModelsTemplate | The Template content
+var body = new SendPostApi.ModelsAccountTemplate(); // ModelsAccountTemplate | The AccountTemplate content
 
 
 var callback = function(error, data, response) {
@@ -45,11 +45,11 @@ apiInstance.accountTemplateRouterCreate(xAccountApiKey, body, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
- **body** | [**ModelsTemplate**](ModelsTemplate.md)| The Template content | 
+ **body** | [**ModelsAccountTemplate**](ModelsAccountTemplate.md)| The AccountTemplate content | 
 
 ### Return type
 
-[**ModelsTemplate**](ModelsTemplate.md)
+[**ModelsAccountTemplate**](ModelsAccountTemplate.md)
 
 ### Authorization
 
@@ -66,7 +66,7 @@ No authorization required
 
 
 
-Delete Template
+Delete AccountTemplate
 
 ### Example
 ```javascript
@@ -111,7 +111,7 @@ No authorization required
 
 <a name="accountTemplateRouterGet"></a>
 # **accountTemplateRouterGet**
-> ModelsTemplate accountTemplateRouterGet(xAccountApiKey, templateid)
+> ModelsAccountTemplate accountTemplateRouterGet(xAccountApiKey, templateid)
 
 
 
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ModelsTemplate**](ModelsTemplate.md)
+[**ModelsAccountTemplate**](ModelsAccountTemplate.md)
 
 ### Authorization
 
@@ -160,7 +160,7 @@ No authorization required
 
 <a name="accountTemplateRouterGetAll"></a>
 # **accountTemplateRouterGetAll**
-> [ModelsTemplate] accountTemplateRouterGetAll(xAccountApiKey)
+> [ModelsAccountTemplate] accountTemplateRouterGetAll(xAccountApiKey)
 
 
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[ModelsTemplate]**](ModelsTemplate.md)
+[**[ModelsAccountTemplate]**](ModelsAccountTemplate.md)
 
 ### Authorization
 
@@ -206,7 +206,7 @@ No authorization required
 
 <a name="accountTemplateRouterUpdate"></a>
 # **accountTemplateRouterUpdate**
-> ModelsTemplate accountTemplateRouterUpdate(xAccountApiKey, templateid, body)
+> ModelsAccountTemplate accountTemplateRouterUpdate(xAccountApiKey, templateid, body)
 
 
 
@@ -222,7 +222,7 @@ var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var templateid = 789; // Number | The id of the template you want to update
 
-var body = new SendPostApi.ModelsTemplate(); // ModelsTemplate | The template content
+var body = new SendPostApi.ModelsAccountTemplate(); // ModelsAccountTemplate | The template content
 
 
 var callback = function(error, data, response) {
@@ -241,11 +241,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
  **templateid** | **Number**| The id of the template you want to update | 
- **body** | [**ModelsTemplate**](ModelsTemplate.md)| The template content | 
+ **body** | [**ModelsAccountTemplate**](ModelsAccountTemplate.md)| The template content | 
 
 ### Return type
 
-[**ModelsTemplate**](ModelsTemplate.md)
+[**ModelsAccountTemplate**](ModelsAccountTemplate.md)
 
 ### Authorization
 

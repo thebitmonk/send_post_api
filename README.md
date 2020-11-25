@@ -267,6 +267,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.SubaccountsuppressionApi* | [**suppressionRouterDeleteSuppression**](docs/SubaccountsuppressionApi.md#suppressionRouterDeleteSuppression) | **DELETE** /subaccount/suppression/ | 
 *SendPostApi.SubaccountsuppressionApi* | [**suppressionRouterDeleteSuppressionsInSuppressionFilter**](docs/SubaccountsuppressionApi.md#suppressionRouterDeleteSuppressionsInSuppressionFilter) | **DELETE** /subaccount/suppression/filter | 
 *SendPostApi.SubaccountsuppressionApi* | [**suppressionRouterGetAllSuppressions**](docs/SubaccountsuppressionApi.md#suppressionRouterGetAllSuppressions) | **GET** /subaccount/suppression/ | 
+*SendPostApi.TemplateApi* | [**systemTemplateRouterGetAllSystemTemplates**](docs/TemplateApi.md#systemTemplateRouterGetAllSystemTemplates) | **GET** /template/system | 
 *SendPostApi.TrackApi* | [**trackRouterTrackEmailOpen**](docs/TrackApi.md#trackRouterTrackEmailOpen) | **GET** /track/open/{accountId}/{subAccountId}/{ipId}/{emailType}/{messageId}/1.png | 
 *SendPostApi.TrackApi* | [**trackRouterTrackLinkClick**](docs/TrackApi.md#trackRouterTrackLinkClick) | **GET** /track/click/{accountId}/{subAccountId}/{ipId}/{emailType}/{messageId} | 
 *SendPostApi.TrackApi* | [**trackRouterTrackUnsubscribe**](docs/TrackApi.md#trackRouterTrackUnsubscribe) | **GET** /track/unsubscribe/{accountId}/{subAccountId}/{ipId}/{emailType}/{messageId} | 
@@ -279,6 +280,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsAIPStat](docs/ModelsAIPStat.md)
  - [SendPostApi.ModelsAccount](docs/ModelsAccount.md)
  - [SendPostApi.ModelsAccountIPPool](docs/ModelsAccountIPPool.md)
+ - [SendPostApi.ModelsAccountTemplate](docs/ModelsAccountTemplate.md)
  - [SendPostApi.ModelsAccountWebhook](docs/ModelsAccountWebhook.md)
  - [SendPostApi.ModelsAlertLabel](docs/ModelsAlertLabel.md)
  - [SendPostApi.ModelsAlertRequest](docs/ModelsAlertRequest.md)
@@ -372,8 +374,8 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsSystemDNSRecord](docs/ModelsSystemDNSRecord.md)
  - [SendPostApi.ModelsSystemDomain](docs/ModelsSystemDomain.md)
  - [SendPostApi.ModelsSystemIPPool](docs/ModelsSystemIPPool.md)
+ - [SendPostApi.ModelsSystemTemplate](docs/ModelsSystemTemplate.md)
  - [SendPostApi.ModelsTag](docs/ModelsTag.md)
- - [SendPostApi.ModelsTemplate](docs/ModelsTemplate.md)
  - [SendPostApi.ModelsTo](docs/ModelsTo.md)
  - [SendPostApi.ModelsValidation](docs/ModelsValidation.md)
  - [SendPostApi.ModelsValidationReason](docs/ModelsValidationReason.md)
