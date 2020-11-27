@@ -36,6 +36,27 @@
 
   describe('(package)', function() {
     describe('AccountpaymentApi', function() {
+      describe('paymentRouterApplyCouponToStripeCustomer', function() {
+        it('should call paymentRouterApplyCouponToStripeCustomer successfully', function(done) {
+          // TODO: uncomment, update parameter values for paymentRouterApplyCouponToStripeCustomer call
+          /*
+          var xAccountApiKey = "xAccountApiKey_example";
+          var body = new SendPostApi.ModelsCouponOptions();
+          body.couponCode = "";
+
+          instance.paymentRouterApplyCouponToStripeCustomer(xAccountApiKey, body, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('paymentRouterCreateCustomerPortal', function() {
         it('should call paymentRouterCreateCustomerPortal successfully', function(done) {
           // TODO: uncomment, update parameter values for paymentRouterCreateCustomerPortal call and complete the assertions

@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsBillingPortalSession', 'model/ModelsPaymentOptions', 'model/ModelsPaymentStatus'], factory);
+    define(['ApiClient', 'model/ModelsBillingPortalSession', 'model/ModelsCouponOptions', 'model/ModelsPaymentOptions', 'model/ModelsPaymentStatus'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsBillingPortalSession'), require('../model/ModelsPaymentOptions'), require('../model/ModelsPaymentStatus'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsBillingPortalSession'), require('../model/ModelsCouponOptions'), require('../model/ModelsPaymentOptions'), require('../model/ModelsPaymentStatus'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.AccountpaymentApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsBillingPortalSession, root.SendPostApi.ModelsPaymentOptions, root.SendPostApi.ModelsPaymentStatus);
+    root.SendPostApi.AccountpaymentApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsBillingPortalSession, root.SendPostApi.ModelsCouponOptions, root.SendPostApi.ModelsPaymentOptions, root.SendPostApi.ModelsPaymentStatus);
   }
-}(this, function(ApiClient, ModelsBillingPortalSession, ModelsPaymentOptions, ModelsPaymentStatus) {
+}(this, function(ApiClient, ModelsBillingPortalSession, ModelsCouponOptions, ModelsPaymentOptions, ModelsPaymentStatus) {
   'use strict';
 
   /**
@@ -47,6 +47,58 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the paymentRouterApplyCouponToStripeCustomer operation.
+     * @callback module:api/AccountpaymentApi~paymentRouterApplyCouponToStripeCustomerCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Apply Coupon to Stripe Customer
+     * @param {String} xAccountApiKey Account API Key
+     * @param {module:model/ModelsCouponOptions} body Coupon Code Options
+     * @param {module:api/AccountpaymentApi~paymentRouterApplyCouponToStripeCustomerCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.paymentRouterApplyCouponToStripeCustomer = function(xAccountApiKey, body, callback) {
+      var postBody = body;
+
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling paymentRouterApplyCouponToStripeCustomer");
+      }
+
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling paymentRouterApplyCouponToStripeCustomer");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-Account-ApiKey': xAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/account/payment/customer/coupon', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the paymentRouterCreateCustomerPortal operation.
