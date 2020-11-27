@@ -61,6 +61,8 @@
         obj.currentEmailServiceProvider = ApiClient.convertToType(data['currentEmailServiceProvider'], 'String');
       if (data.hasOwnProperty('industry'))
         obj.industry = ApiClient.convertToType(data['industry'], 'String');
+      if (data.hasOwnProperty('logoURL'))
+        obj.logoURL = ApiClient.convertToType(data['logoURL'], 'String');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('onboardCFinished'))
@@ -93,6 +95,11 @@
    * @member {String} industry
    */
   exports.prototype.industry = undefined;
+
+  /**
+   * @member {String} logoURL
+   */
+  exports.prototype.logoURL = undefined;
 
   /**
    * @member {String} name

@@ -59,6 +59,12 @@
         // expect(instance.industry).to.be(expectedValueLiteral);
       });
 
+      it('should have the property logoURL (base name: "logoURL")', function() {
+        // TODO: update the code to test the property logoURL
+        expect(instance).to.have.property('logoURL');
+        // expect(instance.logoURL).to.be(expectedValueLiteral);
+      });
+
       it('should have the property name (base name: "name")', function() {
         // TODO: update the code to test the property name
         expect(instance).to.have.property('name');

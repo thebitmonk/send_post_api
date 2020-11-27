@@ -187,6 +187,7 @@
           body.companyName = "";
           body.currentEmailServiceProvider = "";
           body.industry = "";
+          body.logoURL = "";
           body.name = "";
           body.onboardCFinished = false;
           body.onboardQAnswered = false;
