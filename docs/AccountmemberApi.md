@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**memberRouterDelete**](AccountmemberApi.md#memberRouterDelete) | **DELETE** /account/member/{memberId} | 
 [**memberRouterGet**](AccountmemberApi.md#memberRouterGet) | **GET** /account/member/{memberId} | 
 [**memberRouterGetAll**](AccountmemberApi.md#memberRouterGetAll) | **GET** /account/member/ | 
+[**memberRouterVerifyByEmailRequest**](AccountmemberApi.md#memberRouterVerifyByEmailRequest) | **POST** /account/member/{memberId}/verify/email | 
 
 
 <a name="memberRouterDelete"></a>
@@ -143,6 +144,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[ModelsMember]**](ModelsMember.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="memberRouterVerifyByEmailRequest"></a>
+# **memberRouterVerifyByEmailRequest**
+> memberRouterVerifyByEmailRequest(xAccountApiKey, memberId, body)
+
+
+
+Verify Member By Email Request
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccountmemberApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var memberId = 789; // Number | the MemberId who is inviting new member to join the account
+
+var body = new SendPostApi.ModelsVerifyByMemberTokenRequest(); // ModelsVerifyByMemberTokenRequest | The Email to be used to verify
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+apiInstance.memberRouterVerifyByEmailRequest(xAccountApiKey, memberId, body, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xAccountApiKey** | **String**| Account API Key | 
+ **memberId** | **Number**| the MemberId who is inviting new member to join the account | 
+ **body** | [**ModelsVerifyByMemberTokenRequest**](ModelsVerifyByMemberTokenRequest.md)| The Email to be used to verify | 
+
+### Return type
+
+null (empty response body)
 
 ### Authorization
 

@@ -26,45 +26,37 @@
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsEAccount = factory(root.SendPostApi.ApiClient);
+    root.SendPostApi.ModelsVerifyByMemberTokenRequest = factory(root.SendPostApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The ModelsEAccount model module.
-   * @module model/ModelsEAccount
+   * The ModelsVerifyByMemberTokenRequest model module.
+   * @module model/ModelsVerifyByMemberTokenRequest
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>ModelsEAccount</code>.
-   * @alias module:model/ModelsEAccount
+   * Constructs a new <code>ModelsVerifyByMemberTokenRequest</code>.
+   * @alias module:model/ModelsVerifyByMemberTokenRequest
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>ModelsEAccount</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ModelsVerifyByMemberTokenRequest</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ModelsEAccount} obj Optional instance to populate.
-   * @return {module:model/ModelsEAccount} The populated <code>ModelsEAccount</code> instance.
+   * @param {module:model/ModelsVerifyByMemberTokenRequest} obj Optional instance to populate.
+   * @return {module:model/ModelsVerifyByMemberTokenRequest} The populated <code>ModelsVerifyByMemberTokenRequest</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('email'))
         obj.email = ApiClient.convertToType(data['email'], 'String');
-      if (data.hasOwnProperty('jwtToken'))
-        obj.jwtToken = ApiClient.convertToType(data['jwtToken'], 'String');
-      if (data.hasOwnProperty('signupMode'))
-        obj.signupMode = ApiClient.convertToType(data['signupMode'], 'String');
-      if (data.hasOwnProperty('token'))
-        obj.token = ApiClient.convertToType(data['token'], 'String');
-      if (data.hasOwnProperty('uid'))
-        obj.uid = ApiClient.convertToType(data['uid'], 'String');
     }
     return obj;
   }
@@ -73,26 +65,6 @@
    * @member {String} email
    */
   exports.prototype.email = undefined;
-
-  /**
-   * @member {String} jwtToken
-   */
-  exports.prototype.jwtToken = undefined;
-
-  /**
-   * @member {String} signupMode
-   */
-  exports.prototype.signupMode = undefined;
-
-  /**
-   * @member {String} token
-   */
-  exports.prototype.token = undefined;
-
-  /**
-   * @member {String} uid
-   */
-  exports.prototype.uid = undefined;
 
   return exports;
 

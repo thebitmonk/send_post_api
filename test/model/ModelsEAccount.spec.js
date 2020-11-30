@@ -47,6 +47,12 @@
         // expect(instance.email).to.be(expectedValueLiteral);
       });
 
+      it('should have the property jwtToken (base name: "jwtToken")', function() {
+        // TODO: update the code to test the property jwtToken
+        expect(instance).to.have.property('jwtToken');
+        // expect(instance.jwtToken).to.be(expectedValueLiteral);
+      });
+
       it('should have the property signupMode (base name: "signupMode")', function() {
         // TODO: update the code to test the property signupMode
         expect(instance).to.have.property('signupMode');

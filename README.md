@@ -177,6 +177,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountmemberApi* | [**memberRouterDelete**](docs/AccountmemberApi.md#memberRouterDelete) | **DELETE** /account/member/{memberId} | 
 *SendPostApi.AccountmemberApi* | [**memberRouterGet**](docs/AccountmemberApi.md#memberRouterGet) | **GET** /account/member/{memberId} | 
 *SendPostApi.AccountmemberApi* | [**memberRouterGetAll**](docs/AccountmemberApi.md#memberRouterGetAll) | **GET** /account/member/ | 
+*SendPostApi.AccountmemberApi* | [**memberRouterVerifyByEmailRequest**](docs/AccountmemberApi.md#memberRouterVerifyByEmailRequest) | **POST** /account/member/{memberId}/verify/email | 
 *SendPostApi.AccountmessageApi* | [**messageRouterGet**](docs/AccountmessageApi.md#messageRouterGet) | **GET** /account/message/{messageId} | 
 *SendPostApi.AccountmessageApi* | [**messageRouterGetAllEventsForAMessageId**](docs/AccountmessageApi.md#messageRouterGetAllEventsForAMessageId) | **GET** /account/message/{messageId}/events | 
 *SendPostApi.AccountmessageApi* | [**messageRouterGetAllEventsForAMessageIdFromANode**](docs/AccountmessageApi.md#messageRouterGetAllEventsForAMessageIdFromANode) | **GET** /account/message/node/{messageId}/events | 
@@ -382,6 +383,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsTo](docs/ModelsTo.md)
  - [SendPostApi.ModelsValidation](docs/ModelsValidation.md)
  - [SendPostApi.ModelsValidationReason](docs/ModelsValidationReason.md)
+ - [SendPostApi.ModelsVerifyByMemberTokenRequest](docs/ModelsVerifyByMemberTokenRequest.md)
  - [SendPostApi.ModelsVerifyByTokenRequest](docs/ModelsVerifyByTokenRequest.md)
  - [SendPostApi.ModelsWMessage](docs/ModelsWMessage.md)
  - [SendPostApi.UaparserDevice](docs/UaparserDevice.md)
