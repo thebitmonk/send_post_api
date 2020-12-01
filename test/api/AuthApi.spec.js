@@ -42,6 +42,7 @@
           /*
           var body = new SendPostApi.ModelsEAccount();
           body.email = "";
+          body.jwtToken = "";
           body.signupMode = "";
           body.token = "";
           body.uid = "";
@@ -100,6 +101,7 @@
           /*
           var body = new SendPostApi.ModelsEAccount();
           body.email = "";
+          body.jwtToken = "";
           body.signupMode = "";
           body.token = "";
           body.uid = "";

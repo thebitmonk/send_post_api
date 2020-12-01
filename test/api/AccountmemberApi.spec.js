@@ -143,6 +143,28 @@
           done();
         });
       });
+      describe('memberRouterVerifyByEmailRequest', function() {
+        it('should call memberRouterVerifyByEmailRequest successfully', function(done) {
+          // TODO: uncomment, update parameter values for memberRouterVerifyByEmailRequest call
+          /*
+          var xAccountApiKey = "xAccountApiKey_example";
+          var memberId = 789;
+          var body = new SendPostApi.ModelsVerifyByMemberTokenRequest();
+          body.email = "";
+
+          instance.memberRouterVerifyByEmailRequest(xAccountApiKey, memberId, body, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
     });
   });
 
