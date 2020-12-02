@@ -69,6 +69,8 @@
         obj.created = ApiClient.convertToType(data['created'], 'Number');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
+      if (data.hasOwnProperty('onboardQAnswered'))
+        obj.onboardQAnswered = ApiClient.convertToType(data['onboardQAnswered'], 'Boolean');
       if (data.hasOwnProperty('phoneNumber'))
         obj.phoneNumber = ApiClient.convertToType(data['phoneNumber'], 'String');
       if (data.hasOwnProperty('url'))
@@ -111,6 +113,11 @@
    * @member {String} name
    */
   exports.prototype.name = undefined;
+
+  /**
+   * @member {Boolean} onboardQAnswered
+   */
+  exports.prototype.onboardQAnswered = undefined;
 
   /**
    * @member {String} phoneNumber

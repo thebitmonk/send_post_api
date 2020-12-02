@@ -69,6 +69,8 @@
               expect(data.author.created).to.be("0");
               expect(data.author.name).to.be.a('string');
               expect(data.author.name).to.be("");
+              expect(data.author.onboardQAnswered).to.be.a('boolean');
+              expect(data.author.onboardQAnswered).to.be(false);
               expect(data.author.phoneNumber).to.be.a('string');
               expect(data.author.phoneNumber).to.be("");
               expect(data.author.url).to.be.a('string');
@@ -95,6 +97,8 @@
                 expect(data.incident.author.created).to.be("0");
                 expect(data.incident.author.name).to.be.a('string');
                 expect(data.incident.author.name).to.be("");
+                expect(data.incident.author.onboardQAnswered).to.be.a('boolean');
+                expect(data.incident.author.onboardQAnswered).to.be(false);
                 expect(data.incident.author.phoneNumber).to.be.a('string');
                 expect(data.incident.author.phoneNumber).to.be("");
                 expect(data.incident.author.url).to.be.a('string');
@@ -332,6 +336,8 @@
               expect(data.author.created).to.be("0");
               expect(data.author.name).to.be.a('string');
               expect(data.author.name).to.be("");
+              expect(data.author.onboardQAnswered).to.be.a('boolean');
+              expect(data.author.onboardQAnswered).to.be(false);
               expect(data.author.phoneNumber).to.be.a('string');
               expect(data.author.phoneNumber).to.be("");
               expect(data.author.url).to.be.a('string');
@@ -541,6 +547,8 @@
                 expect(data.author.created).to.be("0");
                 expect(data.author.name).to.be.a('string');
                 expect(data.author.name).to.be("");
+                expect(data.author.onboardQAnswered).to.be.a('boolean');
+                expect(data.author.onboardQAnswered).to.be(false);
                 expect(data.author.phoneNumber).to.be.a('string');
                 expect(data.author.phoneNumber).to.be("");
                 expect(data.author.url).to.be.a('string');
@@ -746,6 +754,8 @@
                 expect(data.author.created).to.be("0");
                 expect(data.author.name).to.be.a('string');
                 expect(data.author.name).to.be("");
+                expect(data.author.onboardQAnswered).to.be.a('boolean');
+                expect(data.author.onboardQAnswered).to.be(false);
                 expect(data.author.phoneNumber).to.be.a('string');
                 expect(data.author.phoneNumber).to.be("");
                 expect(data.author.url).to.be.a('string');
@@ -772,6 +782,8 @@
                   expect(data.incident.author.created).to.be("0");
                   expect(data.incident.author.name).to.be.a('string');
                   expect(data.incident.author.name).to.be("");
+                  expect(data.incident.author.onboardQAnswered).to.be.a('boolean');
+                  expect(data.incident.author.onboardQAnswered).to.be(false);
                   expect(data.incident.author.phoneNumber).to.be.a('string');
                   expect(data.incident.author.phoneNumber).to.be("");
                   expect(data.incident.author.url).to.be.a('string');
@@ -972,6 +984,8 @@
               expect(data.author.created).to.be("0");
               expect(data.author.name).to.be.a('string');
               expect(data.author.name).to.be("");
+              expect(data.author.onboardQAnswered).to.be.a('boolean');
+              expect(data.author.onboardQAnswered).to.be(false);
               expect(data.author.phoneNumber).to.be.a('string');
               expect(data.author.phoneNumber).to.be("");
               expect(data.author.url).to.be.a('string');
@@ -1183,6 +1197,8 @@
               expect(data.author.created).to.be("0");
               expect(data.author.name).to.be.a('string');
               expect(data.author.name).to.be("");
+              expect(data.author.onboardQAnswered).to.be.a('boolean');
+              expect(data.author.onboardQAnswered).to.be(false);
               expect(data.author.phoneNumber).to.be.a('string');
               expect(data.author.phoneNumber).to.be("");
               expect(data.author.url).to.be.a('string');

@@ -167,6 +167,8 @@
               expect(data.member.created).to.be("0");
               expect(data.member.name).to.be.a('string');
               expect(data.member.name).to.be("");
+              expect(data.member.onboardQAnswered).to.be.a('boolean');
+              expect(data.member.onboardQAnswered).to.be(false);
               expect(data.member.phoneNumber).to.be.a('string');
               expect(data.member.phoneNumber).to.be("");
               expect(data.member.url).to.be.a('string');
@@ -259,6 +261,8 @@
               expect(data.member.created).to.be("0");
               expect(data.member.name).to.be.a('string');
               expect(data.member.name).to.be("");
+              expect(data.member.onboardQAnswered).to.be.a('boolean');
+              expect(data.member.onboardQAnswered).to.be(false);
               expect(data.member.phoneNumber).to.be.a('string');
               expect(data.member.phoneNumber).to.be("");
               expect(data.member.url).to.be.a('string');

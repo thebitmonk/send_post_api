@@ -83,6 +83,12 @@
         // expect(instance.name).to.be(expectedValueLiteral);
       });
 
+      it('should have the property onboardQAnswered (base name: "onboardQAnswered")', function() {
+        // TODO: update the code to test the property onboardQAnswered
+        expect(instance).to.have.property('onboardQAnswered');
+        // expect(instance.onboardQAnswered).to.be(expectedValueLiteral);
+      });
+
       it('should have the property phoneNumber (base name: "phoneNumber")', function() {
         // TODO: update the code to test the property phoneNumber
         expect(instance).to.have.property('phoneNumber');

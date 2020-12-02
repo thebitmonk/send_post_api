@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **companyName** | **String** |  | [optional] 
 **created** | **Number** |  | [optional] 
 **name** | **String** |  | [optional] 
+**onboardQAnswered** | **Boolean** |  | [optional] 
 **phoneNumber** | **String** |  | [optional] 
 **url** | **String** |  | [optional] 
 

@@ -90,6 +90,8 @@
             expect(data.created).to.be("0");
             expect(data.name).to.be.a('string');
             expect(data.name).to.be("");
+            expect(data.onboardQAnswered).to.be.a('boolean');
+            expect(data.onboardQAnswered).to.be(false);
             expect(data.phoneNumber).to.be.a('string');
             expect(data.phoneNumber).to.be("");
             expect(data.url).to.be.a('string');
@@ -134,6 +136,8 @@
               expect(data.created).to.be("0");
               expect(data.name).to.be.a('string');
               expect(data.name).to.be("");
+              expect(data.onboardQAnswered).to.be.a('boolean');
+              expect(data.onboardQAnswered).to.be(false);
               expect(data.phoneNumber).to.be.a('string');
               expect(data.phoneNumber).to.be("");
               expect(data.url).to.be.a('string');
@@ -178,6 +182,8 @@
             expect(data.created).to.be("0");
             expect(data.name).to.be.a('string');
             expect(data.name).to.be("");
+            expect(data.onboardQAnswered).to.be.a('boolean');
+            expect(data.onboardQAnswered).to.be(false);
             expect(data.phoneNumber).to.be.a('string');
             expect(data.phoneNumber).to.be("");
             expect(data.url).to.be.a('string');
