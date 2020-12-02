@@ -76,6 +76,10 @@
             }
             // TODO: update response assertions
             expect(data).to.be.a(SendPostApi.ModelsMember);
+            expect(data.companyName).to.be.a('string');
+            expect(data.companyName).to.be("");
+            expect(data.created).to.be.a('number');
+            expect(data.created).to.be("0");
             expect(data.email).to.be.a('string');
             expect(data.email).to.be("");
             expect(data.id).to.be.a('number');
@@ -84,10 +88,6 @@
             expect(data.isForbidden).to.be(false);
             expect(data.isVerified).to.be.a('boolean');
             expect(data.isVerified).to.be(false);
-            expect(data.companyName).to.be.a('string');
-            expect(data.companyName).to.be("");
-            expect(data.created).to.be.a('number');
-            expect(data.created).to.be("0");
             expect(data.name).to.be.a('string');
             expect(data.name).to.be("");
             expect(data.onboardQAnswered).to.be.a('boolean');
@@ -122,6 +122,10 @@
             for (let p in dataCtr) {
               let data = dataCtr[p];
               expect(data).to.be.a(SendPostApi.ModelsMember);
+              expect(data.companyName).to.be.a('string');
+              expect(data.companyName).to.be("");
+              expect(data.created).to.be.a('number');
+              expect(data.created).to.be("0");
               expect(data.email).to.be.a('string');
               expect(data.email).to.be("");
               expect(data.id).to.be.a('number');
@@ -130,10 +134,6 @@
               expect(data.isForbidden).to.be(false);
               expect(data.isVerified).to.be.a('boolean');
               expect(data.isVerified).to.be(false);
-              expect(data.companyName).to.be.a('string');
-              expect(data.companyName).to.be("");
-              expect(data.created).to.be.a('number');
-              expect(data.created).to.be("0");
               expect(data.name).to.be.a('string');
               expect(data.name).to.be("");
               expect(data.onboardQAnswered).to.be.a('boolean');
@@ -168,6 +168,10 @@
             }
             // TODO: update response assertions
             expect(data).to.be.a(SendPostApi.ModelsMember);
+            expect(data.companyName).to.be.a('string');
+            expect(data.companyName).to.be("");
+            expect(data.created).to.be.a('number');
+            expect(data.created).to.be("0");
             expect(data.email).to.be.a('string');
             expect(data.email).to.be("");
             expect(data.id).to.be.a('number');
@@ -176,10 +180,6 @@
             expect(data.isForbidden).to.be(false);
             expect(data.isVerified).to.be.a('boolean');
             expect(data.isVerified).to.be(false);
-            expect(data.companyName).to.be.a('string');
-            expect(data.companyName).to.be("");
-            expect(data.created).to.be.a('number');
-            expect(data.created).to.be("0");
             expect(data.name).to.be.a('string');
             expect(data.name).to.be("");
             expect(data.onboardQAnswered).to.be.a('boolean');

@@ -55,7 +55,11 @@
             // TODO: update response assertions
             expect(data).to.be.a(SendPostApi.ModelsComment);
             expect(data.author).to.be.a(SendPostApi.ModelsMember);
-                  expect(data.author.email).to.be.a('string');
+                  expect(data.author.companyName).to.be.a('string');
+              expect(data.author.companyName).to.be("");
+              expect(data.author.created).to.be.a('number');
+              expect(data.author.created).to.be("0");
+              expect(data.author.email).to.be.a('string');
               expect(data.author.email).to.be("");
               expect(data.author.id).to.be.a('number');
               expect(data.author.id).to.be("0");
@@ -63,10 +67,6 @@
               expect(data.author.isForbidden).to.be(false);
               expect(data.author.isVerified).to.be.a('boolean');
               expect(data.author.isVerified).to.be(false);
-              expect(data.author.companyName).to.be.a('string');
-              expect(data.author.companyName).to.be("");
-              expect(data.author.created).to.be.a('number');
-              expect(data.author.created).to.be("0");
               expect(data.author.name).to.be.a('string');
               expect(data.author.name).to.be("");
               expect(data.author.onboardQAnswered).to.be.a('boolean');
@@ -83,7 +83,11 @@
             expect(data.id).to.be("0");
             expect(data.incident).to.be.a(SendPostApi.ModelsIncident);
                   expect(data.incident.author).to.be.a(SendPostApi.ModelsMember);
-                    expect(data.incident.author.email).to.be.a('string');
+                    expect(data.incident.author.companyName).to.be.a('string');
+                expect(data.incident.author.companyName).to.be("");
+                expect(data.incident.author.created).to.be.a('number');
+                expect(data.incident.author.created).to.be("0");
+                expect(data.incident.author.email).to.be.a('string');
                 expect(data.incident.author.email).to.be("");
                 expect(data.incident.author.id).to.be.a('number');
                 expect(data.incident.author.id).to.be("0");
@@ -91,10 +95,6 @@
                 expect(data.incident.author.isForbidden).to.be(false);
                 expect(data.incident.author.isVerified).to.be.a('boolean');
                 expect(data.incident.author.isVerified).to.be(false);
-                expect(data.incident.author.companyName).to.be.a('string');
-                expect(data.incident.author.companyName).to.be("");
-                expect(data.incident.author.created).to.be.a('number');
-                expect(data.incident.author.created).to.be("0");
                 expect(data.incident.author.name).to.be.a('string');
                 expect(data.incident.author.name).to.be("");
                 expect(data.incident.author.onboardQAnswered).to.be.a('boolean');
@@ -322,7 +322,11 @@
             // TODO: update response assertions
             expect(data).to.be.a(SendPostApi.ModelsIncident);
             expect(data.author).to.be.a(SendPostApi.ModelsMember);
-                  expect(data.author.email).to.be.a('string');
+                  expect(data.author.companyName).to.be.a('string');
+              expect(data.author.companyName).to.be("");
+              expect(data.author.created).to.be.a('number');
+              expect(data.author.created).to.be("0");
+              expect(data.author.email).to.be.a('string');
               expect(data.author.email).to.be("");
               expect(data.author.id).to.be.a('number');
               expect(data.author.id).to.be("0");
@@ -330,10 +334,6 @@
               expect(data.author.isForbidden).to.be(false);
               expect(data.author.isVerified).to.be.a('boolean');
               expect(data.author.isVerified).to.be(false);
-              expect(data.author.companyName).to.be.a('string');
-              expect(data.author.companyName).to.be("");
-              expect(data.author.created).to.be.a('number');
-              expect(data.author.created).to.be("0");
               expect(data.author.name).to.be.a('string');
               expect(data.author.name).to.be("");
               expect(data.author.onboardQAnswered).to.be.a('boolean');
@@ -533,7 +533,11 @@
               let data = dataCtr[p];
               expect(data).to.be.a(SendPostApi.ModelsIncident);
               expect(data.author).to.be.a(SendPostApi.ModelsMember);
-                    expect(data.author.email).to.be.a('string');
+                    expect(data.author.companyName).to.be.a('string');
+                expect(data.author.companyName).to.be("");
+                expect(data.author.created).to.be.a('number');
+                expect(data.author.created).to.be("0");
+                expect(data.author.email).to.be.a('string');
                 expect(data.author.email).to.be("");
                 expect(data.author.id).to.be.a('number');
                 expect(data.author.id).to.be("0");
@@ -541,10 +545,6 @@
                 expect(data.author.isForbidden).to.be(false);
                 expect(data.author.isVerified).to.be.a('boolean');
                 expect(data.author.isVerified).to.be(false);
-                expect(data.author.companyName).to.be.a('string');
-                expect(data.author.companyName).to.be("");
-                expect(data.author.created).to.be.a('number');
-                expect(data.author.created).to.be("0");
                 expect(data.author.name).to.be.a('string');
                 expect(data.author.name).to.be("");
                 expect(data.author.onboardQAnswered).to.be.a('boolean');
@@ -740,7 +740,11 @@
               let data = dataCtr[p];
               expect(data).to.be.a(SendPostApi.ModelsComment);
               expect(data.author).to.be.a(SendPostApi.ModelsMember);
-                    expect(data.author.email).to.be.a('string');
+                    expect(data.author.companyName).to.be.a('string');
+                expect(data.author.companyName).to.be("");
+                expect(data.author.created).to.be.a('number');
+                expect(data.author.created).to.be("0");
+                expect(data.author.email).to.be.a('string');
                 expect(data.author.email).to.be("");
                 expect(data.author.id).to.be.a('number');
                 expect(data.author.id).to.be("0");
@@ -748,10 +752,6 @@
                 expect(data.author.isForbidden).to.be(false);
                 expect(data.author.isVerified).to.be.a('boolean');
                 expect(data.author.isVerified).to.be(false);
-                expect(data.author.companyName).to.be.a('string');
-                expect(data.author.companyName).to.be("");
-                expect(data.author.created).to.be.a('number');
-                expect(data.author.created).to.be("0");
                 expect(data.author.name).to.be.a('string');
                 expect(data.author.name).to.be("");
                 expect(data.author.onboardQAnswered).to.be.a('boolean');
@@ -768,7 +768,11 @@
               expect(data.id).to.be("0");
               expect(data.incident).to.be.a(SendPostApi.ModelsIncident);
                     expect(data.incident.author).to.be.a(SendPostApi.ModelsMember);
-                      expect(data.incident.author.email).to.be.a('string');
+                      expect(data.incident.author.companyName).to.be.a('string');
+                  expect(data.incident.author.companyName).to.be("");
+                  expect(data.incident.author.created).to.be.a('number');
+                  expect(data.incident.author.created).to.be("0");
+                  expect(data.incident.author.email).to.be.a('string');
                   expect(data.incident.author.email).to.be("");
                   expect(data.incident.author.id).to.be.a('number');
                   expect(data.incident.author.id).to.be("0");
@@ -776,10 +780,6 @@
                   expect(data.incident.author.isForbidden).to.be(false);
                   expect(data.incident.author.isVerified).to.be.a('boolean');
                   expect(data.incident.author.isVerified).to.be(false);
-                  expect(data.incident.author.companyName).to.be.a('string');
-                  expect(data.incident.author.companyName).to.be("");
-                  expect(data.incident.author.created).to.be.a('number');
-                  expect(data.incident.author.created).to.be("0");
                   expect(data.incident.author.name).to.be.a('string');
                   expect(data.incident.author.name).to.be("");
                   expect(data.incident.author.onboardQAnswered).to.be.a('boolean');
@@ -970,7 +970,11 @@
             // TODO: update response assertions
             expect(data).to.be.a(SendPostApi.ModelsIncident);
             expect(data.author).to.be.a(SendPostApi.ModelsMember);
-                  expect(data.author.email).to.be.a('string');
+                  expect(data.author.companyName).to.be.a('string');
+              expect(data.author.companyName).to.be("");
+              expect(data.author.created).to.be.a('number');
+              expect(data.author.created).to.be("0");
+              expect(data.author.email).to.be.a('string');
               expect(data.author.email).to.be("");
               expect(data.author.id).to.be.a('number');
               expect(data.author.id).to.be("0");
@@ -978,10 +982,6 @@
               expect(data.author.isForbidden).to.be(false);
               expect(data.author.isVerified).to.be.a('boolean');
               expect(data.author.isVerified).to.be(false);
-              expect(data.author.companyName).to.be.a('string');
-              expect(data.author.companyName).to.be("");
-              expect(data.author.created).to.be.a('number');
-              expect(data.author.created).to.be("0");
               expect(data.author.name).to.be.a('string');
               expect(data.author.name).to.be("");
               expect(data.author.onboardQAnswered).to.be.a('boolean');
@@ -1183,7 +1183,11 @@
             // TODO: update response assertions
             expect(data).to.be.a(SendPostApi.ModelsIncident);
             expect(data.author).to.be.a(SendPostApi.ModelsMember);
-                  expect(data.author.email).to.be.a('string');
+                  expect(data.author.companyName).to.be.a('string');
+              expect(data.author.companyName).to.be("");
+              expect(data.author.created).to.be.a('number');
+              expect(data.author.created).to.be("0");
+              expect(data.author.email).to.be.a('string');
               expect(data.author.email).to.be("");
               expect(data.author.id).to.be.a('number');
               expect(data.author.id).to.be("0");
@@ -1191,10 +1195,6 @@
               expect(data.author.isForbidden).to.be(false);
               expect(data.author.isVerified).to.be.a('boolean');
               expect(data.author.isVerified).to.be(false);
-              expect(data.author.companyName).to.be.a('string');
-              expect(data.author.companyName).to.be("");
-              expect(data.author.created).to.be.a('number');
-              expect(data.author.created).to.be("0");
               expect(data.author.name).to.be.a('string');
               expect(data.author.name).to.be("");
               expect(data.author.onboardQAnswered).to.be.a('boolean');

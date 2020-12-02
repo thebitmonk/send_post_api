@@ -55,18 +55,18 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('Email'))
-        obj.email = ApiClient.convertToType(data['Email'], 'String');
-      if (data.hasOwnProperty('Id'))
-        obj.id = ApiClient.convertToType(data['Id'], 'Number');
-      if (data.hasOwnProperty('IsForbidden'))
-        obj.isForbidden = ApiClient.convertToType(data['IsForbidden'], 'Boolean');
-      if (data.hasOwnProperty('IsVerified'))
-        obj.isVerified = ApiClient.convertToType(data['IsVerified'], 'Boolean');
       if (data.hasOwnProperty('companyName'))
         obj.companyName = ApiClient.convertToType(data['companyName'], 'String');
       if (data.hasOwnProperty('created'))
         obj.created = ApiClient.convertToType(data['created'], 'Number');
+      if (data.hasOwnProperty('email'))
+        obj.email = ApiClient.convertToType(data['email'], 'String');
+      if (data.hasOwnProperty('id'))
+        obj.id = ApiClient.convertToType(data['id'], 'Number');
+      if (data.hasOwnProperty('isForbidden'))
+        obj.isForbidden = ApiClient.convertToType(data['isForbidden'], 'Boolean');
+      if (data.hasOwnProperty('isVerified'))
+        obj.isVerified = ApiClient.convertToType(data['isVerified'], 'Boolean');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('onboardQAnswered'))
@@ -78,6 +78,16 @@
     }
     return obj;
   }
+
+  /**
+   * @member {String} companyName
+   */
+  exports.prototype.companyName = undefined;
+
+  /**
+   * @member {Number} created
+   */
+  exports.prototype.created = undefined;
 
   /**
    * @member {String} email
@@ -98,16 +108,6 @@
    * @member {Boolean} isVerified
    */
   exports.prototype.isVerified = undefined;
-
-  /**
-   * @member {String} companyName
-   */
-  exports.prototype.companyName = undefined;
-
-  /**
-   * @member {Number} created
-   */
-  exports.prototype.created = undefined;
 
   /**
    * @member {String} name

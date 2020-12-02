@@ -41,30 +41,6 @@
         expect(instance).to.be.a(SendPostApi.ModelsMember);
       });
 
-      it('should have the property email (base name: "Email")', function() {
-        // TODO: update the code to test the property email
-        expect(instance).to.have.property('email');
-        // expect(instance.email).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property id (base name: "Id")', function() {
-        // TODO: update the code to test the property id
-        expect(instance).to.have.property('id');
-        // expect(instance.id).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property isForbidden (base name: "IsForbidden")', function() {
-        // TODO: update the code to test the property isForbidden
-        expect(instance).to.have.property('isForbidden');
-        // expect(instance.isForbidden).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property isVerified (base name: "IsVerified")', function() {
-        // TODO: update the code to test the property isVerified
-        expect(instance).to.have.property('isVerified');
-        // expect(instance.isVerified).to.be(expectedValueLiteral);
-      });
-
       it('should have the property companyName (base name: "companyName")', function() {
         // TODO: update the code to test the property companyName
         expect(instance).to.have.property('companyName');
@@ -75,6 +51,30 @@
         // TODO: update the code to test the property created
         expect(instance).to.have.property('created');
         // expect(instance.created).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property email (base name: "email")', function() {
+        // TODO: update the code to test the property email
+        expect(instance).to.have.property('email');
+        // expect(instance.email).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property id (base name: "id")', function() {
+        // TODO: update the code to test the property id
+        expect(instance).to.have.property('id');
+        // expect(instance.id).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property isForbidden (base name: "isForbidden")', function() {
+        // TODO: update the code to test the property isForbidden
+        expect(instance).to.have.property('isForbidden');
+        // expect(instance.isForbidden).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property isVerified (base name: "isVerified")', function() {
+        // TODO: update the code to test the property isVerified
+        expect(instance).to.have.property('isVerified');
+        // expect(instance.isVerified).to.be(expectedValueLiteral);
       });
 
       it('should have the property name (base name: "name")', function() {
