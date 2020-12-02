@@ -89,6 +89,12 @@
         // expect(instance.phoneNumber).to.be(expectedValueLiteral);
       });
 
+      it('should have the property url (base name: "url")', function() {
+        // TODO: update the code to test the property url
+        expect(instance).to.have.property('url');
+        // expect(instance.url).to.be(expectedValueLiteral);
+      });
+
     });
   });
 

@@ -18,6 +18,5 @@ Name | Type | Description | Notes
 **onboardQAnswered** | **Boolean** |  | [optional] 
 **sendingVolumePerMonth** | **String** |  | [optional] 
 **stripePriceId** | **String** |  | [optional] 
-**url** | **String** |  | [optional] 
 
 

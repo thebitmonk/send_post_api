@@ -71,6 +71,8 @@
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('phoneNumber'))
         obj.phoneNumber = ApiClient.convertToType(data['phoneNumber'], 'String');
+      if (data.hasOwnProperty('url'))
+        obj.url = ApiClient.convertToType(data['url'], 'String');
     }
     return obj;
   }
@@ -114,6 +116,11 @@
    * @member {String} phoneNumber
    */
   exports.prototype.phoneNumber = undefined;
+
+  /**
+   * @member {String} url
+   */
+  exports.prototype.url = undefined;
 
   return exports;
 

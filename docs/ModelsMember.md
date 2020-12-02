@@ -11,5 +11,6 @@ Name | Type | Description | Notes
 **created** | **Number** |  | [optional] 
 **name** | **String** |  | [optional] 
 **phoneNumber** | **String** |  | [optional] 
+**url** | **String** |  | [optional] 
 
 

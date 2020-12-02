@@ -85,8 +85,6 @@
             expect(data.sendingVolumePerMonth).to.be("");
             expect(data.stripePriceId).to.be.a('string');
             expect(data.stripePriceId).to.be("");
-            expect(data.url).to.be.a('string');
-            expect(data.url).to.be("");
 
             done();
           });
@@ -151,8 +149,6 @@
                 expect(data.sendingVolumePerMonth).to.be("");
                 expect(data.stripePriceId).to.be.a('string');
                 expect(data.stripePriceId).to.be("");
-                expect(data.url).to.be.a('string');
-                expect(data.url).to.be("");
 
                       }
             }
@@ -173,6 +169,8 @@
               expect(data.member.name).to.be("");
               expect(data.member.phoneNumber).to.be.a('string');
               expect(data.member.phoneNumber).to.be("");
+              expect(data.member.url).to.be.a('string');
+              expect(data.member.url).to.be("");
 
             done();
           });
@@ -243,8 +241,6 @@
                 expect(data.sendingVolumePerMonth).to.be("");
                 expect(data.stripePriceId).to.be.a('string');
                 expect(data.stripePriceId).to.be("");
-                expect(data.url).to.be.a('string');
-                expect(data.url).to.be("");
 
                       }
             }
@@ -265,6 +261,8 @@
               expect(data.member.name).to.be("");
               expect(data.member.phoneNumber).to.be.a('string');
               expect(data.member.phoneNumber).to.be("");
+              expect(data.member.url).to.be.a('string');
+              expect(data.member.url).to.be("");
 
             done();
           });

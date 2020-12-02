@@ -92,6 +92,8 @@
             expect(data.name).to.be("");
             expect(data.phoneNumber).to.be.a('string');
             expect(data.phoneNumber).to.be("");
+            expect(data.url).to.be.a('string');
+            expect(data.url).to.be("");
 
             done();
           });
@@ -134,6 +136,8 @@
               expect(data.name).to.be("");
               expect(data.phoneNumber).to.be.a('string');
               expect(data.phoneNumber).to.be("");
+              expect(data.url).to.be.a('string');
+              expect(data.url).to.be("");
             }
 
             done();
