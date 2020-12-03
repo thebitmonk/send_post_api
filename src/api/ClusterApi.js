@@ -104,13 +104,11 @@
     /**
      * Delete item from cache of every node in cluster
      * @param {String} xSystemApiKey System API Key
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.name cache name
-     * @param {String} opts.key cache item key to delete
+     * @param {String} name cache name
+     * @param {String} key cache item key to delete
      * @param {module:api/ClusterApi~clusterRouterDeleteItemFromCacheOfEveryNodeInClusterCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.clusterRouterDeleteItemFromCacheOfEveryNodeInCluster = function(xSystemApiKey, opts, callback) {
-      opts = opts || {};
+    this.clusterRouterDeleteItemFromCacheOfEveryNodeInCluster = function(xSystemApiKey, name, key, callback) {
       var postBody = null;
 
       // verify the required parameter 'xSystemApiKey' is set
@@ -118,12 +116,22 @@
         throw new Error("Missing the required parameter 'xSystemApiKey' when calling clusterRouterDeleteItemFromCacheOfEveryNodeInCluster");
       }
 
+      // verify the required parameter 'name' is set
+      if (name === undefined || name === null) {
+        throw new Error("Missing the required parameter 'name' when calling clusterRouterDeleteItemFromCacheOfEveryNodeInCluster");
+      }
+
+      // verify the required parameter 'key' is set
+      if (key === undefined || key === null) {
+        throw new Error("Missing the required parameter 'key' when calling clusterRouterDeleteItemFromCacheOfEveryNodeInCluster");
+      }
+
 
       var pathParams = {
       };
       var queryParams = {
-        'name': opts['name'],
-        'key': opts['key'],
+        'name': name,
+        'key': key,
       };
       var collectionQueryParams = {
       };

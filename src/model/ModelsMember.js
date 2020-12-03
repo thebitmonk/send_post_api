@@ -55,25 +55,39 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('Email'))
-        obj.email = ApiClient.convertToType(data['Email'], 'String');
-      if (data.hasOwnProperty('Id'))
-        obj.id = ApiClient.convertToType(data['Id'], 'Number');
-      if (data.hasOwnProperty('IsForbidden'))
-        obj.isForbidden = ApiClient.convertToType(data['IsForbidden'], 'Boolean');
-      if (data.hasOwnProperty('IsVerified'))
-        obj.isVerified = ApiClient.convertToType(data['IsVerified'], 'Boolean');
       if (data.hasOwnProperty('companyName'))
         obj.companyName = ApiClient.convertToType(data['companyName'], 'String');
       if (data.hasOwnProperty('created'))
         obj.created = ApiClient.convertToType(data['created'], 'Number');
+      if (data.hasOwnProperty('email'))
+        obj.email = ApiClient.convertToType(data['email'], 'String');
+      if (data.hasOwnProperty('id'))
+        obj.id = ApiClient.convertToType(data['id'], 'Number');
+      if (data.hasOwnProperty('isForbidden'))
+        obj.isForbidden = ApiClient.convertToType(data['isForbidden'], 'Boolean');
+      if (data.hasOwnProperty('isVerified'))
+        obj.isVerified = ApiClient.convertToType(data['isVerified'], 'Boolean');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
+      if (data.hasOwnProperty('onboardQAnswered'))
+        obj.onboardQAnswered = ApiClient.convertToType(data['onboardQAnswered'], 'Boolean');
       if (data.hasOwnProperty('phoneNumber'))
         obj.phoneNumber = ApiClient.convertToType(data['phoneNumber'], 'String');
+      if (data.hasOwnProperty('url'))
+        obj.url = ApiClient.convertToType(data['url'], 'String');
     }
     return obj;
   }
+
+  /**
+   * @member {String} companyName
+   */
+  exports.prototype.companyName = undefined;
+
+  /**
+   * @member {Number} created
+   */
+  exports.prototype.created = undefined;
 
   /**
    * @member {String} email
@@ -96,24 +110,24 @@
   exports.prototype.isVerified = undefined;
 
   /**
-   * @member {String} companyName
-   */
-  exports.prototype.companyName = undefined;
-
-  /**
-   * @member {Number} created
-   */
-  exports.prototype.created = undefined;
-
-  /**
    * @member {String} name
    */
   exports.prototype.name = undefined;
 
   /**
+   * @member {Boolean} onboardQAnswered
+   */
+  exports.prototype.onboardQAnswered = undefined;
+
+  /**
    * @member {String} phoneNumber
    */
   exports.prototype.phoneNumber = undefined;
+
+  /**
+   * @member {String} url
+   */
+  exports.prototype.url = undefined;
 
   return exports;
 

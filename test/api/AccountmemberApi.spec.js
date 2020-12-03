@@ -76,6 +76,10 @@
             }
             // TODO: update response assertions
             expect(data).to.be.a(SendPostApi.ModelsMember);
+            expect(data.companyName).to.be.a('string');
+            expect(data.companyName).to.be("");
+            expect(data.created).to.be.a('number');
+            expect(data.created).to.be("0");
             expect(data.email).to.be.a('string');
             expect(data.email).to.be("");
             expect(data.id).to.be.a('number');
@@ -84,14 +88,14 @@
             expect(data.isForbidden).to.be(false);
             expect(data.isVerified).to.be.a('boolean');
             expect(data.isVerified).to.be(false);
-            expect(data.companyName).to.be.a('string');
-            expect(data.companyName).to.be("");
-            expect(data.created).to.be.a('number');
-            expect(data.created).to.be("0");
             expect(data.name).to.be.a('string');
             expect(data.name).to.be("");
+            expect(data.onboardQAnswered).to.be.a('boolean');
+            expect(data.onboardQAnswered).to.be(false);
             expect(data.phoneNumber).to.be.a('string');
             expect(data.phoneNumber).to.be("");
+            expect(data.url).to.be.a('string');
+            expect(data.url).to.be("");
 
             done();
           });
@@ -118,6 +122,10 @@
             for (let p in dataCtr) {
               let data = dataCtr[p];
               expect(data).to.be.a(SendPostApi.ModelsMember);
+              expect(data.companyName).to.be.a('string');
+              expect(data.companyName).to.be("");
+              expect(data.created).to.be.a('number');
+              expect(data.created).to.be("0");
               expect(data.email).to.be.a('string');
               expect(data.email).to.be("");
               expect(data.id).to.be.a('number');
@@ -126,15 +134,60 @@
               expect(data.isForbidden).to.be(false);
               expect(data.isVerified).to.be.a('boolean');
               expect(data.isVerified).to.be(false);
-              expect(data.companyName).to.be.a('string');
-              expect(data.companyName).to.be("");
-              expect(data.created).to.be.a('number');
-              expect(data.created).to.be("0");
               expect(data.name).to.be.a('string');
               expect(data.name).to.be("");
+              expect(data.onboardQAnswered).to.be.a('boolean');
+              expect(data.onboardQAnswered).to.be(false);
               expect(data.phoneNumber).to.be.a('string');
               expect(data.phoneNumber).to.be("");
+              expect(data.url).to.be.a('string');
+              expect(data.url).to.be("");
             }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('memberRouterUpdate', function() {
+        it('should call memberRouterUpdate successfully', function(done) {
+          // TODO: uncomment, update parameter values for memberRouterUpdate call and complete the assertions
+          /*
+          var xAccountApiKey = "xAccountApiKey_example";
+          var memberId = 789;
+          var body = new SendPostApi.ModelsEMember();
+          body.name = "";
+          body.url = "";
+
+          instance.memberRouterUpdate(xAccountApiKey, memberId, body, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelsMember);
+            expect(data.companyName).to.be.a('string');
+            expect(data.companyName).to.be("");
+            expect(data.created).to.be.a('number');
+            expect(data.created).to.be("0");
+            expect(data.email).to.be.a('string');
+            expect(data.email).to.be("");
+            expect(data.id).to.be.a('number');
+            expect(data.id).to.be("0");
+            expect(data.isForbidden).to.be.a('boolean');
+            expect(data.isForbidden).to.be(false);
+            expect(data.isVerified).to.be.a('boolean');
+            expect(data.isVerified).to.be(false);
+            expect(data.name).to.be.a('string');
+            expect(data.name).to.be("");
+            expect(data.onboardQAnswered).to.be.a('boolean');
+            expect(data.onboardQAnswered).to.be(false);
+            expect(data.phoneNumber).to.be.a('string');
+            expect(data.phoneNumber).to.be("");
+            expect(data.url).to.be.a('string');
+            expect(data.url).to.be("");
 
             done();
           });

@@ -85,8 +85,6 @@
         obj.sendingVolumePerMonth = ApiClient.convertToType(data['sendingVolumePerMonth'], 'String');
       if (data.hasOwnProperty('stripePriceId'))
         obj.stripePriceId = ApiClient.convertToType(data['stripePriceId'], 'String');
-      if (data.hasOwnProperty('url'))
-        obj.url = ApiClient.convertToType(data['url'], 'String');
     }
     return obj;
   }
@@ -165,11 +163,6 @@
    * @member {String} stripePriceId
    */
   exports.prototype.stripePriceId = undefined;
-
-  /**
-   * @member {String} url
-   */
-  exports.prototype.url = undefined;
 
   return exports;
 

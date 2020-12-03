@@ -177,6 +177,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountmemberApi* | [**memberRouterDelete**](docs/AccountmemberApi.md#memberRouterDelete) | **DELETE** /account/member/{memberId} | 
 *SendPostApi.AccountmemberApi* | [**memberRouterGet**](docs/AccountmemberApi.md#memberRouterGet) | **GET** /account/member/{memberId} | 
 *SendPostApi.AccountmemberApi* | [**memberRouterGetAll**](docs/AccountmemberApi.md#memberRouterGetAll) | **GET** /account/member/ | 
+*SendPostApi.AccountmemberApi* | [**memberRouterUpdate**](docs/AccountmemberApi.md#memberRouterUpdate) | **PUT** /account/member/{memberId} | 
 *SendPostApi.AccountmemberApi* | [**memberRouterVerifyByEmailRequest**](docs/AccountmemberApi.md#memberRouterVerifyByEmailRequest) | **POST** /account/member/{memberId}/verify/email | 
 *SendPostApi.AccountmessageApi* | [**messageRouterGet**](docs/AccountmessageApi.md#messageRouterGet) | **GET** /account/message/{messageId} | 
 *SendPostApi.AccountmessageApi* | [**messageRouterGetAllEventsForAMessageId**](docs/AccountmessageApi.md#messageRouterGetAllEventsForAMessageId) | **GET** /account/message/{messageId}/events | 
@@ -314,6 +315,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsEIncident](docs/ModelsEIncident.md)
  - [SendPostApi.ModelsEIntegration](docs/ModelsEIntegration.md)
  - [SendPostApi.ModelsEInvitation](docs/ModelsEInvitation.md)
+ - [SendPostApi.ModelsEMember](docs/ModelsEMember.md)
  - [SendPostApi.ModelsESender](docs/ModelsESender.md)
  - [SendPostApi.ModelsESubAccount](docs/ModelsESubAccount.md)
  - [SendPostApi.ModelsEValidation](docs/ModelsEValidation.md)

@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**memberRouterDelete**](AccountmemberApi.md#memberRouterDelete) | **DELETE** /account/member/{memberId} | 
 [**memberRouterGet**](AccountmemberApi.md#memberRouterGet) | **GET** /account/member/{memberId} | 
 [**memberRouterGetAll**](AccountmemberApi.md#memberRouterGetAll) | **GET** /account/member/ | 
+[**memberRouterUpdate**](AccountmemberApi.md#memberRouterUpdate) | **PUT** /account/member/{memberId} | 
 [**memberRouterVerifyByEmailRequest**](AccountmemberApi.md#memberRouterVerifyByEmailRequest) | **POST** /account/member/{memberId}/verify/email | 
 
 
@@ -144,6 +145,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[ModelsMember]**](ModelsMember.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="memberRouterUpdate"></a>
+# **memberRouterUpdate**
+> ModelsMember memberRouterUpdate(xAccountApiKey, memberId, body)
+
+
+
+Update Member
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccountmemberApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var memberId = 789; // Number | The MemberId you want to update
+
+var body = new SendPostApi.ModelsEMember(); // ModelsEMember | The body
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.memberRouterUpdate(xAccountApiKey, memberId, body, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xAccountApiKey** | **String**| Account API Key | 
+ **memberId** | **Number**| The MemberId you want to update | 
+ **body** | [**ModelsEMember**](ModelsEMember.md)| The body | 
+
+### Return type
+
+[**ModelsMember**](ModelsMember.md)
 
 ### Authorization
 
