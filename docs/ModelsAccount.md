@@ -17,7 +17,6 @@ Name | Type | Description | Notes
 **onboardCFinished** | **Boolean** |  | [optional] 
 **onboardQAnswered** | **Boolean** |  | [optional] 
 **sendingVolumePerMonth** | **String** |  | [optional] 
-**stripeBasePriceId** | **String** |  | [optional] 
-**stripeUsagePriceId** | **String** |  | [optional] 
+**stripePriceId** | **String** |  | [optional] 
 
 

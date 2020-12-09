@@ -1,6 +1,6 @@
 # SendPostApi.ClusterApi
 
-All URIs are relative to *https://api.sendpost.io/api/v1*
+All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -58,7 +58,7 @@ No authorization required
 
 <a name="clusterRouterDeleteItemFromCacheOfEveryNodeInCluster"></a>
 # **clusterRouterDeleteItemFromCacheOfEveryNodeInCluster**
-> clusterRouterDeleteItemFromCacheOfEveryNodeInCluster(xSystemApiKey, opts)
+> clusterRouterDeleteItemFromCacheOfEveryNodeInCluster(xSystemApiKey, name, key)
 
 
 
@@ -72,10 +72,10 @@ var apiInstance = new SendPostApi.ClusterApi();
 
 var xSystemApiKey = "xSystemApiKey_example"; // String | System API Key
 
-var opts = { 
-  'name': "name_example", // String | cache name
-  'key': "key_example" // String | cache item key to delete
-};
+var name = "name_example"; // String | cache name
+
+var key = "key_example"; // String | cache item key to delete
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -84,7 +84,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.clusterRouterDeleteItemFromCacheOfEveryNodeInCluster(xSystemApiKey, opts, callback);
+apiInstance.clusterRouterDeleteItemFromCacheOfEveryNodeInCluster(xSystemApiKey, name, key, callback);
 ```
 
 ### Parameters
@@ -92,8 +92,8 @@ apiInstance.clusterRouterDeleteItemFromCacheOfEveryNodeInCluster(xSystemApiKey, 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSystemApiKey** | **String**| System API Key | 
- **name** | **String**| cache name | [optional] 
- **key** | **String**| cache item key to delete | [optional] 
+ **name** | **String**| cache name | 
+ **key** | **String**| cache item key to delete | 
 
 ### Return type
 

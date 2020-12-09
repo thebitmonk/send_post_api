@@ -1,25 +1,25 @@
-# SendPostApi.AccountonboardingApi
+# SendPostApi.TemplateApi
 
 All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**onboardingRouterGetOnboardingChecklist**](AccountonboardingApi.md#onboardingRouterGetOnboardingChecklist) | **GET** /account/onboarding/checklist | 
+[**systemTemplateRouterGetAllSystemTemplates**](TemplateApi.md#systemTemplateRouterGetAllSystemTemplates) | **GET** /template/system | 
 
 
-<a name="onboardingRouterGetOnboardingChecklist"></a>
-# **onboardingRouterGetOnboardingChecklist**
-> ModelsOnboardingChecklist onboardingRouterGetOnboardingChecklist(xAccountApiKey)
+<a name="systemTemplateRouterGetAllSystemTemplates"></a>
+# **systemTemplateRouterGetAllSystemTemplates**
+> [ModelsSystemTemplate] systemTemplateRouterGetAllSystemTemplates(xAccountApiKey)
 
 
 
-Gets Onboarding Checklist data for account if not present creates a default entry
+Get all System Templates
 
 ### Example
 ```javascript
 var SendPostApi = require('send_post_api');
 
-var apiInstance = new SendPostApi.AccountonboardingApi();
+var apiInstance = new SendPostApi.TemplateApi();
 
 var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
@@ -31,7 +31,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.onboardingRouterGetOnboardingChecklist(xAccountApiKey, callback);
+apiInstance.systemTemplateRouterGetAllSystemTemplates(xAccountApiKey, callback);
 ```
 
 ### Parameters
@@ -42,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ModelsOnboardingChecklist**](ModelsOnboardingChecklist.md)
+[**[ModelsSystemTemplate]**](ModelsSystemTemplate.md)
 
 ### Authorization
 

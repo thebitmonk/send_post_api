@@ -83,10 +83,8 @@
             expect(data.onboardQAnswered).to.be(false);
             expect(data.sendingVolumePerMonth).to.be.a('string');
             expect(data.sendingVolumePerMonth).to.be("");
-            expect(data.stripeBasePriceId).to.be.a('string');
-            expect(data.stripeBasePriceId).to.be("");
-            expect(data.stripeUsagePriceId).to.be.a('string');
-            expect(data.stripeUsagePriceId).to.be("");
+            expect(data.stripePriceId).to.be.a('string');
+            expect(data.stripePriceId).to.be("");
 
             done();
           });
@@ -149,10 +147,8 @@
                 expect(data.onboardQAnswered).to.be(false);
                 expect(data.sendingVolumePerMonth).to.be.a('string');
                 expect(data.sendingVolumePerMonth).to.be("");
-                expect(data.stripeBasePriceId).to.be.a('string');
-                expect(data.stripeBasePriceId).to.be("");
-                expect(data.stripeUsagePriceId).to.be.a('string');
-                expect(data.stripeUsagePriceId).to.be("");
+                expect(data.stripePriceId).to.be.a('string');
+                expect(data.stripePriceId).to.be("");
 
                       }
             }
@@ -245,10 +241,8 @@
                 expect(data.onboardQAnswered).to.be(false);
                 expect(data.sendingVolumePerMonth).to.be.a('string');
                 expect(data.sendingVolumePerMonth).to.be("");
-                expect(data.stripeBasePriceId).to.be.a('string');
-                expect(data.stripeBasePriceId).to.be("");
-                expect(data.stripeUsagePriceId).to.be.a('string');
-                expect(data.stripeUsagePriceId).to.be("");
+                expect(data.stripePriceId).to.be.a('string');
+                expect(data.stripePriceId).to.be("");
 
                       }
             }
