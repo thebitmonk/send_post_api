@@ -499,9 +499,12 @@
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Number} domainId the DomainId you want to get
      * @param {module:model/ModelsVerifyByTokenRequest} body The Email to be used to verify
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.redirectPath redirectPath
      * @param {module:api/SubaccountdomainApi~domainRouterVerifyRequestCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.domainRouterVerifyRequest = function(xSubAccountApiKey, domainId, body, callback) {
+    this.domainRouterVerifyRequest = function(xSubAccountApiKey, domainId, body, opts, callback) {
+      opts = opts || {};
       var postBody = body;
 
       // verify the required parameter 'xSubAccountApiKey' is set
@@ -524,6 +527,7 @@
         'domainId': domainId
       };
       var queryParams = {
+        'redirectPath': opts['redirectPath'],
       };
       var collectionQueryParams = {
       };

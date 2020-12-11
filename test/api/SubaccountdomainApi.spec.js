@@ -460,8 +460,10 @@
           var domainId = 789;
           var body = new SendPostApi.ModelsVerifyByTokenRequest();
           body.email = "";
+          var opts = {};
+          opts.redirectPath = "redirectPath_example";
 
-          instance.domainRouterVerifyRequest(xSubAccountApiKey, domainId, body, function(error, data, response) {
+          instance.domainRouterVerifyRequest(xSubAccountApiKey, domainId, body, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
