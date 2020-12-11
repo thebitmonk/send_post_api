@@ -125,10 +125,16 @@
         // expect(instance.sendingVolumePerMonth).to.be(expectedValueLiteral);
       });
 
-      it('should have the property stripePriceId (base name: "stripePriceId")', function() {
-        // TODO: update the code to test the property stripePriceId
-        expect(instance).to.have.property('stripePriceId');
-        // expect(instance.stripePriceId).to.be(expectedValueLiteral);
+      it('should have the property stripeBasePriceId (base name: "stripeBasePriceId")', function() {
+        // TODO: update the code to test the property stripeBasePriceId
+        expect(instance).to.have.property('stripeBasePriceId');
+        // expect(instance.stripeBasePriceId).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property stripeUsagePriceId (base name: "stripeUsagePriceId")', function() {
+        // TODO: update the code to test the property stripeUsagePriceId
+        expect(instance).to.have.property('stripeUsagePriceId');
+        // expect(instance.stripeUsagePriceId).to.be(expectedValueLiteral);
       });
 
     });

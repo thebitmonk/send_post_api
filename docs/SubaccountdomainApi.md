@@ -417,7 +417,7 @@ No authorization required
 
 <a name="domainRouterVerifyRequest"></a>
 # **domainRouterVerifyRequest**
-> domainRouterVerifyRequest(xSubAccountApiKey, domainId, body)
+> domainRouterVerifyRequest(xSubAccountApiKey, domainId, body, opts)
 
 
 
@@ -435,6 +435,9 @@ var domainId = 789; // Number | the DomainId you want to get
 
 var body = new SendPostApi.ModelsVerifyByTokenRequest(); // ModelsVerifyByTokenRequest | The Email to be used to verify
 
+var opts = { 
+  'redirectPath': "redirectPath_example" // String | redirectPath
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -443,7 +446,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.domainRouterVerifyRequest(xSubAccountApiKey, domainId, body, callback);
+apiInstance.domainRouterVerifyRequest(xSubAccountApiKey, domainId, body, opts, callback);
 ```
 
 ### Parameters
@@ -453,6 +456,7 @@ Name | Type | Description  | Notes
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
  **domainId** | **Number**| the DomainId you want to get | 
  **body** | [**ModelsVerifyByTokenRequest**](ModelsVerifyByTokenRequest.md)| The Email to be used to verify | 
+ **redirectPath** | **String**| redirectPath | [optional] 
 
 ### Return type
 

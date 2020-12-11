@@ -65,10 +65,11 @@
           // TODO: uncomment, update parameter values for clusterRouterDeleteItemFromCacheOfEveryNodeInCluster call
           /*
           var xSystemApiKey = "xSystemApiKey_example";
-          var name = "name_example";
-          var key = "key_example";
+          var opts = {};
+          opts.name = "name_example";
+          opts.key = "key_example";
 
-          instance.clusterRouterDeleteItemFromCacheOfEveryNodeInCluster(xSystemApiKey, name, key, function(error, data, response) {
+          instance.clusterRouterDeleteItemFromCacheOfEveryNodeInCluster(xSystemApiKey, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;

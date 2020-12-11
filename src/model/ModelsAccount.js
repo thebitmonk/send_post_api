@@ -83,8 +83,10 @@
         obj.onboardQAnswered = ApiClient.convertToType(data['onboardQAnswered'], 'Boolean');
       if (data.hasOwnProperty('sendingVolumePerMonth'))
         obj.sendingVolumePerMonth = ApiClient.convertToType(data['sendingVolumePerMonth'], 'String');
-      if (data.hasOwnProperty('stripePriceId'))
-        obj.stripePriceId = ApiClient.convertToType(data['stripePriceId'], 'String');
+      if (data.hasOwnProperty('stripeBasePriceId'))
+        obj.stripeBasePriceId = ApiClient.convertToType(data['stripeBasePriceId'], 'String');
+      if (data.hasOwnProperty('stripeUsagePriceId'))
+        obj.stripeUsagePriceId = ApiClient.convertToType(data['stripeUsagePriceId'], 'String');
     }
     return obj;
   }
@@ -160,9 +162,14 @@
   exports.prototype.sendingVolumePerMonth = undefined;
 
   /**
-   * @member {String} stripePriceId
+   * @member {String} stripeBasePriceId
    */
-  exports.prototype.stripePriceId = undefined;
+  exports.prototype.stripeBasePriceId = undefined;
+
+  /**
+   * @member {String} stripeUsagePriceId
+   */
+  exports.prototype.stripeUsagePriceId = undefined;
 
   return exports;
 
