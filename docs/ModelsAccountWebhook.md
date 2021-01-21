@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **id** | **Number** |  | [optional] 
 **opened** | **Boolean** |  | [optional] 
 **processed** | **Boolean** |  | [optional] 
+**sent** | **Boolean** |  | [optional] 
 **softBounced** | **Boolean** |  | [optional] 
 **spam** | **Boolean** |  | [optional] 
 **unsubscribed** | **Boolean** |  | [optional] 

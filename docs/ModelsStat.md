@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **hardBounced** | **Number** |  | [optional] 
 **opened** | **Number** |  | [optional] 
 **processed** | **Number** |  | [optional] 
+**sent** | **Number** |  | [optional] 
 **softBounced** | **Number** |  | [optional] 
 **spam** | **Number** |  | [optional] 
 **unsubscribed** | **Number** |  | [optional] 
