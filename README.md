@@ -124,6 +124,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountalertApi* | [**alertRouterCreateAlert**](docs/AccountalertApi.md#alertRouterCreateAlert) | **POST** /account/alert/ | 
 *SendPostApi.AccountalertApi* | [**alertRouterGetAll**](docs/AccountalertApi.md#alertRouterGetAll) | **GET** /account/alert/ | 
 *SendPostApi.AccountalertApi* | [**alertRouterUpdate**](docs/AccountalertApi.md#alertRouterUpdate) | **PUT** /account/alert/{alertid} | 
+*SendPostApi.AccountdomainReportApi* | [**domainReportRouterReputation**](docs/AccountdomainReportApi.md#domainReportRouterReputation) | **GET** /account/domainReport/reputation | 
 *SendPostApi.AccounteventApi* | [**eventRouterCountAllEventsFromAAccountForAGivenTimeRange**](docs/AccounteventApi.md#eventRouterCountAllEventsFromAAccountForAGivenTimeRange) | **GET** /account/event/count | 
 *SendPostApi.AccounteventApi* | [**eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange**](docs/AccounteventApi.md#eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange) | **GET** /account/event/node/count | 
 *SendPostApi.AccounteventApi* | [**eventRouterGet**](docs/AccounteventApi.md#eventRouterGet) | **GET** /account/event/{eventId} | 
@@ -174,6 +175,9 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountlabelApi* | [**labelRouterGet**](docs/AccountlabelApi.md#labelRouterGet) | **GET** /account/label/{labelId} | 
 *SendPostApi.AccountlabelApi* | [**labelRouterGetAll**](docs/AccountlabelApi.md#labelRouterGetAll) | **GET** /account/label/ | 
 *SendPostApi.AccountlabelApi* | [**labelRouterUpdate**](docs/AccountlabelApi.md#labelRouterUpdate) | **PUT** /account/label/{labelId} | 
+*SendPostApi.AccountmailReportApi* | [**mailReportRouterMailReport**](docs/AccountmailReportApi.md#mailReportRouterMailReport) | **POST** /account/mailReport/ | 
+*SendPostApi.AccountmailReportApi* | [**mailReportRouterMailReportGetSingleReport**](docs/AccountmailReportApi.md#mailReportRouterMailReportGetSingleReport) | **GET** /account/mailReport/{reportId} | 
+*SendPostApi.AccountmailReportApi* | [**mailReportRouterMailReportProviders**](docs/AccountmailReportApi.md#mailReportRouterMailReportProviders) | **GET** /account/mailReport/provider | 
 *SendPostApi.AccountmemberApi* | [**memberRouterDelete**](docs/AccountmemberApi.md#memberRouterDelete) | **DELETE** /account/member/{memberId} | 
 *SendPostApi.AccountmemberApi* | [**memberRouterGet**](docs/AccountmemberApi.md#memberRouterGet) | **GET** /account/member/{memberId} | 
 *SendPostApi.AccountmemberApi* | [**memberRouterGetAll**](docs/AccountmemberApi.md#memberRouterGetAll) | **GET** /account/member/ | 
@@ -280,6 +284,7 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [SendPostApi.Alert](docs/Alert.md)
+ - [SendPostApi.ApiGlockappsMailReport](docs/ApiGlockappsMailReport.md)
  - [SendPostApi.ModelsAGStat](docs/ModelsAGStat.md)
  - [SendPostApi.ModelsAIPStat](docs/ModelsAIPStat.md)
  - [SendPostApi.ModelsAccount](docs/ModelsAccount.md)
@@ -294,18 +299,29 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsBackOffDecreaseType](docs/ModelsBackOffDecreaseType.md)
  - [SendPostApi.ModelsBackOffTrigger](docs/ModelsBackOffTrigger.md)
  - [SendPostApi.ModelsBillingPortalSession](docs/ModelsBillingPortalSession.md)
+ - [SendPostApi.ModelsBlackListEngine](docs/ModelsBlackListEngine.md)
+ - [SendPostApi.ModelsBlackListResult](docs/ModelsBlackListResult.md)
  - [SendPostApi.ModelsBlacklistStatus](docs/ModelsBlacklistStatus.md)
  - [SendPostApi.ModelsBulkResponse](docs/ModelsBulkResponse.md)
+ - [SendPostApi.ModelsCertificateDetails](docs/ModelsCertificateDetails.md)
+ - [SendPostApi.ModelsCertificateExtensions](docs/ModelsCertificateExtensions.md)
+ - [SendPostApi.ModelsCertificateIssuer](docs/ModelsCertificateIssuer.md)
+ - [SendPostApi.ModelsCertificateSignature](docs/ModelsCertificateSignature.md)
+ - [SendPostApi.ModelsCertificateSubject](docs/ModelsCertificateSubject.md)
+ - [SendPostApi.ModelsCertificateValidity](docs/ModelsCertificateValidity.md)
  - [SendPostApi.ModelsCity](docs/ModelsCity.md)
  - [SendPostApi.ModelsCleanedList](docs/ModelsCleanedList.md)
  - [SendPostApi.ModelsComment](docs/ModelsComment.md)
  - [SendPostApi.ModelsCountStat](docs/ModelsCountStat.md)
  - [SendPostApi.ModelsCouponOptions](docs/ModelsCouponOptions.md)
+ - [SendPostApi.ModelsCreateMailReport](docs/ModelsCreateMailReport.md)
  - [SendPostApi.ModelsCustomerQuality](docs/ModelsCustomerQuality.md)
  - [SendPostApi.ModelsDNSRecord](docs/ModelsDNSRecord.md)
  - [SendPostApi.ModelsDeleteResponse](docs/ModelsDeleteResponse.md)
  - [SendPostApi.ModelsDetailedAlert](docs/ModelsDetailedAlert.md)
  - [SendPostApi.ModelsDomain](docs/ModelsDomain.md)
+ - [SendPostApi.ModelsDomainAge](docs/ModelsDomainAge.md)
+ - [SendPostApi.ModelsDomainCheckResult](docs/ModelsDomainCheckResult.md)
  - [SendPostApi.ModelsEAccount](docs/ModelsEAccount.md)
  - [SendPostApi.ModelsEAccountMember](docs/ModelsEAccountMember.md)
  - [SendPostApi.ModelsEComment](docs/ModelsEComment.md)
@@ -350,6 +366,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsInvitation](docs/ModelsInvitation.md)
  - [SendPostApi.ModelsInvitationStatus](docs/ModelsInvitationStatus.md)
  - [SendPostApi.ModelsLabel](docs/ModelsLabel.md)
+ - [SendPostApi.ModelsMailReportResult](docs/ModelsMailReportResult.md)
  - [SendPostApi.ModelsMember](docs/ModelsMember.md)
  - [SendPostApi.ModelsMemberRole](docs/ModelsMemberRole.md)
  - [SendPostApi.ModelsNotificationType](docs/ModelsNotificationType.md)
@@ -357,6 +374,8 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsPIPStat](docs/ModelsPIPStat.md)
  - [SendPostApi.ModelsPaymentOptions](docs/ModelsPaymentOptions.md)
  - [SendPostApi.ModelsPaymentStatus](docs/ModelsPaymentStatus.md)
+ - [SendPostApi.ModelsProvider](docs/ModelsProvider.md)
+ - [SendPostApi.ModelsProviderResult](docs/ModelsProviderResult.md)
  - [SendPostApi.ModelsQEmailMessage](docs/ModelsQEmailMessage.md)
  - [SendPostApi.ModelsQEvent](docs/ModelsQEvent.md)
  - [SendPostApi.ModelsRDSuppression](docs/ModelsRDSuppression.md)
@@ -369,6 +388,8 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsSIPStat](docs/ModelsSIPStat.md)
  - [SendPostApi.ModelsSMTPAuth](docs/ModelsSMTPAuth.md)
  - [SendPostApi.ModelsSMTPStat](docs/ModelsSMTPStat.md)
+ - [SendPostApi.ModelsSSLCertificate](docs/ModelsSSLCertificate.md)
+ - [SendPostApi.ModelsSSLInfo](docs/ModelsSSLInfo.md)
  - [SendPostApi.ModelsSender](docs/ModelsSender.md)
  - [SendPostApi.ModelsSingleCleanedMail](docs/ModelsSingleCleanedMail.md)
  - [SendPostApi.ModelsStat](docs/ModelsStat.md)

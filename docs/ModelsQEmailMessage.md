@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **accountID** | **Number** |  | [optional] 
 **ampBody** | **String** |  | [optional] 
+**attempt** | **Number** |  | [optional] 
 **customFields** | **Object** |  | [optional] 
 **emailType** | **String** |  | [optional] 
 **from** | [**ModelsFrom**](ModelsFrom.md) |  | [optional] 

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **hardBounced** | **Boolean** |  | [optional] 
 **opened** | **Boolean** |  | [optional] 
 **processed** | **Boolean** |  | [optional] 
+**sent** | **Boolean** |  | [optional] 
 **softBounced** | **Boolean** |  | [optional] 
 **spam** | **Boolean** |  | [optional] 
 **unsubscribed** | **Boolean** |  | [optional] 
