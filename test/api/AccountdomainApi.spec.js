@@ -36,6 +36,29 @@
 
   describe('(package)', function() {
     describe('AccountdomainApi', function() {
+      describe('accountDomainRouterCount', function() {
+        it('should call accountDomainRouterCount successfully', function(done) {
+          // TODO: uncomment, update parameter values for accountDomainRouterCount call and complete the assertions
+          /*
+          var xAccountApiKey = "xAccountApiKey_example";
+
+          instance.accountDomainRouterCount(xAccountApiKey, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelsCountStat);
+            expect(data.count).to.be.a('number');
+            expect(data.count).to.be("0");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('accountDomainRouterGetAll', function() {
         it('should call accountDomainRouterGetAll successfully', function(done) {
           // TODO: uncomment, update parameter values for accountDomainRouterGetAll call and complete the assertions
