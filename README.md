@@ -124,6 +124,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountalertApi* | [**alertRouterCreateAlert**](docs/AccountalertApi.md#alertRouterCreateAlert) | **POST** /account/alert/ | 
 *SendPostApi.AccountalertApi* | [**alertRouterGetAll**](docs/AccountalertApi.md#alertRouterGetAll) | **GET** /account/alert/ | 
 *SendPostApi.AccountalertApi* | [**alertRouterUpdate**](docs/AccountalertApi.md#alertRouterUpdate) | **PUT** /account/alert/{alertid} | 
+*SendPostApi.AccountdomainApi* | [**accountDomainRouterGetAll**](docs/AccountdomainApi.md#accountDomainRouterGetAll) | **GET** /account/domain/ | 
 *SendPostApi.AccountdomainReportApi* | [**domainReportRouterReputation**](docs/AccountdomainReportApi.md#domainReportRouterReputation) | **GET** /account/domainReport/reputation | 
 *SendPostApi.AccounteventApi* | [**eventRouterCountAllEventsFromAAccountForAGivenTimeRange**](docs/AccounteventApi.md#eventRouterCountAllEventsFromAAccountForAGivenTimeRange) | **GET** /account/event/count | 
 *SendPostApi.AccounteventApi* | [**eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange**](docs/AccounteventApi.md#eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange) | **GET** /account/event/node/count | 
@@ -288,6 +289,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsAGStat](docs/ModelsAGStat.md)
  - [SendPostApi.ModelsAIPStat](docs/ModelsAIPStat.md)
  - [SendPostApi.ModelsAccount](docs/ModelsAccount.md)
+ - [SendPostApi.ModelsAccountDomain](docs/ModelsAccountDomain.md)
  - [SendPostApi.ModelsAccountIPPool](docs/ModelsAccountIPPool.md)
  - [SendPostApi.ModelsAccountTemplate](docs/ModelsAccountTemplate.md)
  - [SendPostApi.ModelsAccountWebhook](docs/ModelsAccountWebhook.md)
