@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="accountDomainRouterCount"></a>
 # **accountDomainRouterCount**
-> ModelsCountStat accountDomainRouterCount(xAccountApiKey)
+> ModelsCountStat accountDomainRouterCount(xAccountApiKey, opts)
 
 
 
@@ -24,6 +24,9 @@ var apiInstance = new SendPostApi.AccountdomainApi();
 
 var xAccountApiKey = "xAccountApiKey_example"; // String | Sub-Account API Key
 
+var opts = { 
+  'search': "search_example" // String | search term
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -32,7 +35,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.accountDomainRouterCount(xAccountApiKey, callback);
+apiInstance.accountDomainRouterCount(xAccountApiKey, opts, callback);
 ```
 
 ### Parameters
@@ -40,6 +43,7 @@ apiInstance.accountDomainRouterCount(xAccountApiKey, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Sub-Account API Key | 
+ **search** | **String**| search term | [optional] 
 
 ### Return type
 

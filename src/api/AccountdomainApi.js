@@ -59,10 +59,13 @@
     /**
      * Count Total Account Domains
      * @param {String} xAccountApiKey Sub-Account API Key
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.search search term
      * @param {module:api/AccountdomainApi~accountDomainRouterCountCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsCountStat}
      */
-    this.accountDomainRouterCount = function(xAccountApiKey, callback) {
+    this.accountDomainRouterCount = function(xAccountApiKey, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'xAccountApiKey' is set
@@ -74,6 +77,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'search': opts['search'],
       };
       var collectionQueryParams = {
       };
