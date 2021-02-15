@@ -51,6 +51,7 @@
           body.sMTPCode = "0";
           body.sMTPDescription = "";
           body.subAccountID = "0";
+          body.submittedAt = "0";
           body.to = "";
           body.type = new SendPostApi.ModelsEventType();
 

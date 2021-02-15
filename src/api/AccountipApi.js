@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsIIP', 'model/ModelsIP'], factory);
+    define(['ApiClient', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsIIP', 'model/ModelsIP', 'model/ModelsIncident'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsIIP'), require('../model/ModelsIP'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsIIP'), require('../model/ModelsIP'), require('../model/ModelsIncident'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.AccountipApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsIIP, root.SendPostApi.ModelsIP);
+    root.SendPostApi.AccountipApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsIIP, root.SendPostApi.ModelsIP, root.SendPostApi.ModelsIncident);
   }
-}(this, function(ApiClient, ModelsCountStat, ModelsDeleteResponse, ModelsIIP, ModelsIP) {
+}(this, function(ApiClient, ModelsCountStat, ModelsDeleteResponse, ModelsIIP, ModelsIP, ModelsIncident) {
   'use strict';
 
   /**
@@ -304,6 +304,60 @@
 
       return this.apiClient.callApi(
         '/account/ip/', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the iPRouterGetAllIPIncidents operation.
+     * @callback module:api/AccountipApi~iPRouterGetAllIPIncidentsCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/ModelsIncident>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get All Incidents associated with a IP
+     * @param {String} xAccountApiKey Account API Key
+     * @param {Number} ipid The ipid whose incidents you want to retrieve
+     * @param {module:api/AccountipApi~iPRouterGetAllIPIncidentsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/ModelsIncident>}
+     */
+    this.iPRouterGetAllIPIncidents = function(xAccountApiKey, ipid, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling iPRouterGetAllIPIncidents");
+      }
+
+      // verify the required parameter 'ipid' is set
+      if (ipid === undefined || ipid === null) {
+        throw new Error("Missing the required parameter 'ipid' when calling iPRouterGetAllIPIncidents");
+      }
+
+
+      var pathParams = {
+        'ipid': ipid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-Account-ApiKey': xAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = [ModelsIncident];
+
+      return this.apiClient.callApi(
+        '/account/ip/{ipid}/incident', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

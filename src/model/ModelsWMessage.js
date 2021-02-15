@@ -75,6 +75,8 @@
         obj.sMTPDescription = ApiClient.convertToType(data['SMTPDescription'], 'String');
       if (data.hasOwnProperty('SubAccountID'))
         obj.subAccountID = ApiClient.convertToType(data['SubAccountID'], 'Number');
+      if (data.hasOwnProperty('SubmittedAt'))
+        obj.submittedAt = ApiClient.convertToType(data['SubmittedAt'], 'Number');
       if (data.hasOwnProperty('To'))
         obj.to = ApiClient.convertToType(data['To'], 'String');
       if (data.hasOwnProperty('Type'))
@@ -132,6 +134,11 @@
    * @member {Number} subAccountID
    */
   exports.prototype.subAccountID = undefined;
+
+  /**
+   * @member {Number} submittedAt
+   */
+  exports.prototype.submittedAt = undefined;
 
   /**
    * @member {String} to

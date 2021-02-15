@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**subAccountRouterDelete**](AccountsubaccountApi.md#subAccountRouterDelete) | **DELETE** /account/subaccount/{subAccountId} | 
 [**subAccountRouterGet**](AccountsubaccountApi.md#subAccountRouterGet) | **GET** /account/subaccount/{subAccountId} | 
 [**subAccountRouterGetAll**](AccountsubaccountApi.md#subAccountRouterGetAll) | **GET** /account/subaccount/ | 
+[**subAccountRouterGetAllSubAccountIncidents**](AccountsubaccountApi.md#subAccountRouterGetAllSubAccountIncidents) | **GET** /account/subaccount/{subAccountId}/incident | 
 [**subAccountRouterUpdate**](AccountsubaccountApi.md#subAccountRouterUpdate) | **PUT** /account/subaccount/{subAccountId} | 
 
 
@@ -261,6 +262,55 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[ModelsSubAccount]**](ModelsSubAccount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="subAccountRouterGetAllSubAccountIncidents"></a>
+# **subAccountRouterGetAllSubAccountIncidents**
+> [ModelsIncident] subAccountRouterGetAllSubAccountIncidents(xAccountApiKey, subAccountId)
+
+
+
+Get All Incidents associated with a sub-account
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccountsubaccountApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var subAccountId = 789; // Number | The SubAccountId you want to delete
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.subAccountRouterGetAllSubAccountIncidents(xAccountApiKey, subAccountId, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xAccountApiKey** | **String**| Account API Key | 
+ **subAccountId** | **Number**| The SubAccountId you want to delete | 
+
+### Return type
+
+[**[ModelsIncident]**](ModelsIncident.md)
 
 ### Authorization
 

@@ -124,6 +124,8 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountalertApi* | [**alertRouterCreateAlert**](docs/AccountalertApi.md#alertRouterCreateAlert) | **POST** /account/alert/ | 
 *SendPostApi.AccountalertApi* | [**alertRouterGetAll**](docs/AccountalertApi.md#alertRouterGetAll) | **GET** /account/alert/ | 
 *SendPostApi.AccountalertApi* | [**alertRouterUpdate**](docs/AccountalertApi.md#alertRouterUpdate) | **PUT** /account/alert/{alertid} | 
+*SendPostApi.AccountdomainApi* | [**accountDomainRouterCount**](docs/AccountdomainApi.md#accountDomainRouterCount) | **GET** /account/domain/count | 
+*SendPostApi.AccountdomainApi* | [**accountDomainRouterGetAll**](docs/AccountdomainApi.md#accountDomainRouterGetAll) | **GET** /account/domain/ | 
 *SendPostApi.AccountdomainReportApi* | [**domainReportRouterReputation**](docs/AccountdomainReportApi.md#domainReportRouterReputation) | **GET** /account/domainReport/reputation | 
 *SendPostApi.AccounteventApi* | [**eventRouterCountAllEventsFromAAccountForAGivenTimeRange**](docs/AccounteventApi.md#eventRouterCountAllEventsFromAAccountForAGivenTimeRange) | **GET** /account/event/count | 
 *SendPostApi.AccounteventApi* | [**eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange**](docs/AccounteventApi.md#eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange) | **GET** /account/event/node/count | 
@@ -155,6 +157,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountipApi* | [**iPRouterDelete**](docs/AccountipApi.md#iPRouterDelete) | **DELETE** /account/ip/{ipid} | 
 *SendPostApi.AccountipApi* | [**iPRouterGet**](docs/AccountipApi.md#iPRouterGet) | **GET** /account/ip/{ipid} | 
 *SendPostApi.AccountipApi* | [**iPRouterGetAll**](docs/AccountipApi.md#iPRouterGetAll) | **GET** /account/ip/ | 
+*SendPostApi.AccountipApi* | [**iPRouterGetAllIPIncidents**](docs/AccountipApi.md#iPRouterGetAllIPIncidents) | **GET** /account/ip/{ipid}/incident | 
 *SendPostApi.AccountipApi* | [**iPRouterUpdate**](docs/AccountipApi.md#iPRouterUpdate) | **PUT** /account/ip/{ipid} | 
 *SendPostApi.AccountippoolApi* | [**accountIPPoolRouterCount**](docs/AccountippoolApi.md#accountIPPoolRouterCount) | **GET** /account/ippool/count | 
 *SendPostApi.AccountippoolApi* | [**accountIPPoolRouterCreate**](docs/AccountippoolApi.md#accountIPPoolRouterCreate) | **POST** /account/ippool/ | 
@@ -209,6 +212,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterDelete**](docs/AccountsubaccountApi.md#subAccountRouterDelete) | **DELETE** /account/subaccount/{subAccountId} | 
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterGet**](docs/AccountsubaccountApi.md#subAccountRouterGet) | **GET** /account/subaccount/{subAccountId} | 
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterGetAll**](docs/AccountsubaccountApi.md#subAccountRouterGetAll) | **GET** /account/subaccount/ | 
+*SendPostApi.AccountsubaccountApi* | [**subAccountRouterGetAllSubAccountIncidents**](docs/AccountsubaccountApi.md#subAccountRouterGetAllSubAccountIncidents) | **GET** /account/subaccount/{subAccountId}/incident | 
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterUpdate**](docs/AccountsubaccountApi.md#subAccountRouterUpdate) | **PUT** /account/subaccount/{subAccountId} | 
 *SendPostApi.AccounttagApi* | [**tagRouterCreate**](docs/AccounttagApi.md#tagRouterCreate) | **POST** /account/tag/ | 
 *SendPostApi.AccounttagApi* | [**tagRouterDelete**](docs/AccounttagApi.md#tagRouterDelete) | **DELETE** /account/tag/{tagid} | 
@@ -288,6 +292,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsAGStat](docs/ModelsAGStat.md)
  - [SendPostApi.ModelsAIPStat](docs/ModelsAIPStat.md)
  - [SendPostApi.ModelsAccount](docs/ModelsAccount.md)
+ - [SendPostApi.ModelsAccountDomain](docs/ModelsAccountDomain.md)
  - [SendPostApi.ModelsAccountIPPool](docs/ModelsAccountIPPool.md)
  - [SendPostApi.ModelsAccountTemplate](docs/ModelsAccountTemplate.md)
  - [SendPostApi.ModelsAccountWebhook](docs/ModelsAccountWebhook.md)

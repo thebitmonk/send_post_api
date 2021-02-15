@@ -101,6 +101,12 @@
         // expect(instance.subAccountID).to.be(expectedValueLiteral);
       });
 
+      it('should have the property submittedAt (base name: "SubmittedAt")', function() {
+        // TODO: update the code to test the property submittedAt
+        expect(instance).to.have.property('submittedAt');
+        // expect(instance.submittedAt).to.be(expectedValueLiteral);
+      });
+
       it('should have the property to (base name: "To")', function() {
         // TODO: update the code to test the property to
         expect(instance).to.have.property('to');
