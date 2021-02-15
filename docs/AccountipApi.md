@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**iPRouterDelete**](AccountipApi.md#iPRouterDelete) | **DELETE** /account/ip/{ipid} | 
 [**iPRouterGet**](AccountipApi.md#iPRouterGet) | **GET** /account/ip/{ipid} | 
 [**iPRouterGetAll**](AccountipApi.md#iPRouterGetAll) | **GET** /account/ip/ | 
+[**iPRouterGetAllIPIncidents**](AccountipApi.md#iPRouterGetAllIPIncidents) | **GET** /account/ip/{ipid}/incident | 
 [**iPRouterUpdate**](AccountipApi.md#iPRouterUpdate) | **PUT** /account/ip/{ipid} | 
 
 
@@ -250,6 +251,55 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[ModelsIP]**](ModelsIP.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="iPRouterGetAllIPIncidents"></a>
+# **iPRouterGetAllIPIncidents**
+> [ModelsIncident] iPRouterGetAllIPIncidents(xAccountApiKey, ipid)
+
+
+
+Get All Incidents associated with a IP
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccountipApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var ipid = 789; // Number | The ipid whose incidents you want to retrieve
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.iPRouterGetAllIPIncidents(xAccountApiKey, ipid, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xAccountApiKey** | **String**| Account API Key | 
+ **ipid** | **Number**| The ipid whose incidents you want to retrieve | 
+
+### Return type
+
+[**[ModelsIncident]**](ModelsIncident.md)
 
 ### Authorization
 

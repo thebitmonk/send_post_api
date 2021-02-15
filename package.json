@@ -1,7 +1,7 @@
 {
   "name": "send_post_api",
   "version": "1.0.0",
-  "description": "SendPost_API_to_send_transactional_emails_reliably",
+  "description": "SendPost_API_to_send_emails_reliably",
   "license": "Unlicense",
   "main": "src/index.js",
   "scripts": {
