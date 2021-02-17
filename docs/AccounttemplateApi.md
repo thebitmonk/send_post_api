@@ -4,12 +4,62 @@ All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**accountTemplateRouterCopy**](AccounttemplateApi.md#accountTemplateRouterCopy) | **POST** /account/template/{templateid}/copy | 
 [**accountTemplateRouterCreate**](AccounttemplateApi.md#accountTemplateRouterCreate) | **POST** /account/template/ | 
 [**accountTemplateRouterDelete**](AccounttemplateApi.md#accountTemplateRouterDelete) | **DELETE** /account/template/{templateid} | 
 [**accountTemplateRouterGet**](AccounttemplateApi.md#accountTemplateRouterGet) | **GET** /account/template/{templateid} | 
 [**accountTemplateRouterGetAll**](AccounttemplateApi.md#accountTemplateRouterGetAll) | **GET** /account/template/ | 
 [**accountTemplateRouterUpdate**](AccounttemplateApi.md#accountTemplateRouterUpdate) | **PUT** /account/template/{templateid} | 
 
+
+<a name="accountTemplateRouterCopy"></a>
+# **accountTemplateRouterCopy**
+> ModelsAccountTemplate accountTemplateRouterCopy(xAccountApiKey, templateid)
+
+
+
+Copy AccountTemplate
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccounttemplateApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var templateid = 789; // Number | The id of the template you want to copy
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.accountTemplateRouterCopy(xAccountApiKey, templateid, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xAccountApiKey** | **String**| Account API Key | 
+ **templateid** | **Number**| The id of the template you want to copy | 
+
+### Return type
+
+[**ModelsAccountTemplate**](ModelsAccountTemplate.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="accountTemplateRouterCreate"></a>
 # **accountTemplateRouterCreate**

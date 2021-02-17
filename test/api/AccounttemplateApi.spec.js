@@ -36,6 +36,42 @@
 
   describe('(package)', function() {
     describe('AccounttemplateApi', function() {
+      describe('accountTemplateRouterCopy', function() {
+        it('should call accountTemplateRouterCopy successfully', function(done) {
+          // TODO: uncomment, update parameter values for accountTemplateRouterCopy call and complete the assertions
+          /*
+          var xAccountApiKey = "xAccountApiKey_example";
+          var templateid = 789;
+
+          instance.accountTemplateRouterCopy(xAccountApiKey, templateid, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelsAccountTemplate);
+            expect(data.created).to.be.a('number');
+            expect(data.created).to.be("0");
+            expect(data.html).to.be.a('string');
+            expect(data.html).to.be("");
+            expect(data.id).to.be.a('number');
+            expect(data.id).to.be("0");
+            expect(data.name).to.be.a('string');
+            expect(data.name).to.be("");
+            expect(data.template).to.be.a('string');
+            expect(data.template).to.be("");
+            expect(data.text).to.be.a('string');
+            expect(data.text).to.be("");
+            expect(data.updated).to.be.a('number');
+            expect(data.updated).to.be("0");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('accountTemplateRouterCreate', function() {
         it('should call accountTemplateRouterCreate successfully', function(done) {
           // TODO: uncomment, update parameter values for accountTemplateRouterCreate call and complete the assertions

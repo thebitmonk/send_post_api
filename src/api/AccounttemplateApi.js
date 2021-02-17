@@ -49,6 +49,60 @@
 
 
     /**
+     * Callback function to receive the result of the accountTemplateRouterCopy operation.
+     * @callback module:api/AccounttemplateApi~accountTemplateRouterCopyCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ModelsAccountTemplate} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Copy AccountTemplate
+     * @param {String} xAccountApiKey Account API Key
+     * @param {Number} templateid The id of the template you want to copy
+     * @param {module:api/AccounttemplateApi~accountTemplateRouterCopyCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ModelsAccountTemplate}
+     */
+    this.accountTemplateRouterCopy = function(xAccountApiKey, templateid, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling accountTemplateRouterCopy");
+      }
+
+      // verify the required parameter 'templateid' is set
+      if (templateid === undefined || templateid === null) {
+        throw new Error("Missing the required parameter 'templateid' when calling accountTemplateRouterCopy");
+      }
+
+
+      var pathParams = {
+        'templateid': templateid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-Account-ApiKey': xAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ModelsAccountTemplate;
+
+      return this.apiClient.callApi(
+        '/account/template/{templateid}/copy', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the accountTemplateRouterCreate operation.
      * @callback module:api/AccounttemplateApi~accountTemplateRouterCreateCallback
      * @param {String} error Error message, if any.
