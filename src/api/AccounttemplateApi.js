@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * SendPost API to send emails reliably
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsAccountTemplate', 'model/ModelsDeleteResponse'], factory);
+    define(['ApiClient', 'model/ModelsAccountTemplate', 'model/ModelsCountStat', 'model/ModelsDeleteResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsAccountTemplate'), require('../model/ModelsDeleteResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsAccountTemplate'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.AccounttemplateApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsAccountTemplate, root.SendPostApi.ModelsDeleteResponse);
+    root.SendPostApi.AccounttemplateApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsAccountTemplate, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse);
   }
-}(this, function(ApiClient, ModelsAccountTemplate, ModelsDeleteResponse) {
+}(this, function(ApiClient, ModelsAccountTemplate, ModelsCountStat, ModelsDeleteResponse) {
   'use strict';
 
   /**
@@ -47,6 +47,111 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the accountTemplateRouterCopy operation.
+     * @callback module:api/AccounttemplateApi~accountTemplateRouterCopyCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ModelsAccountTemplate} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Copy AccountTemplate
+     * @param {String} xAccountApiKey Account API Key
+     * @param {Number} templateid The id of the template you want to copy
+     * @param {module:api/AccounttemplateApi~accountTemplateRouterCopyCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ModelsAccountTemplate}
+     */
+    this.accountTemplateRouterCopy = function(xAccountApiKey, templateid, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling accountTemplateRouterCopy");
+      }
+
+      // verify the required parameter 'templateid' is set
+      if (templateid === undefined || templateid === null) {
+        throw new Error("Missing the required parameter 'templateid' when calling accountTemplateRouterCopy");
+      }
+
+
+      var pathParams = {
+        'templateid': templateid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-Account-ApiKey': xAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ModelsAccountTemplate;
+
+      return this.apiClient.callApi(
+        '/account/template/{templateid}/copy', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the accountTemplateRouterCount operation.
+     * @callback module:api/AccounttemplateApi~accountTemplateRouterCountCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ModelsCountStat} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Count total templates
+     * @param {String} xAccountApiKey Account API Key
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.search search term
+     * @param {module:api/AccounttemplateApi~accountTemplateRouterCountCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ModelsCountStat}
+     */
+    this.accountTemplateRouterCount = function(xAccountApiKey, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling accountTemplateRouterCount");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'search': opts['search'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-Account-ApiKey': xAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ModelsCountStat;
+
+      return this.apiClient.callApi(
+        '/account/template/count', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the accountTemplateRouterCreate operation.
@@ -220,10 +325,15 @@
     /**
      * Get all templates
      * @param {String} xAccountApiKey Account API Key
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.offset offset
+     * @param {Number} opts.limit limit
+     * @param {String} opts.search search term
      * @param {module:api/AccounttemplateApi~accountTemplateRouterGetAllCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsAccountTemplate>}
      */
-    this.accountTemplateRouterGetAll = function(xAccountApiKey, callback) {
+    this.accountTemplateRouterGetAll = function(xAccountApiKey, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'xAccountApiKey' is set
@@ -235,6 +345,9 @@
       var pathParams = {
       };
       var queryParams = {
+        'offset': opts['offset'],
+        'limit': opts['limit'],
+        'search': opts['search'],
       };
       var collectionQueryParams = {
       };

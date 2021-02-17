@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * SendPost API to send emails reliably
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -36,6 +36,67 @@
 
   describe('(package)', function() {
     describe('AccounttemplateApi', function() {
+      describe('accountTemplateRouterCopy', function() {
+        it('should call accountTemplateRouterCopy successfully', function(done) {
+          // TODO: uncomment, update parameter values for accountTemplateRouterCopy call and complete the assertions
+          /*
+          var xAccountApiKey = "xAccountApiKey_example";
+          var templateid = 789;
+
+          instance.accountTemplateRouterCopy(xAccountApiKey, templateid, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelsAccountTemplate);
+            expect(data.created).to.be.a('number');
+            expect(data.created).to.be("0");
+            expect(data.html).to.be.a('string');
+            expect(data.html).to.be("");
+            expect(data.id).to.be.a('number');
+            expect(data.id).to.be("0");
+            expect(data.name).to.be.a('string');
+            expect(data.name).to.be("");
+            expect(data.template).to.be.a('string');
+            expect(data.template).to.be("");
+            expect(data.text).to.be.a('string');
+            expect(data.text).to.be("");
+            expect(data.updated).to.be.a('number');
+            expect(data.updated).to.be("0");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('accountTemplateRouterCount', function() {
+        it('should call accountTemplateRouterCount successfully', function(done) {
+          // TODO: uncomment, update parameter values for accountTemplateRouterCount call and complete the assertions
+          /*
+          var xAccountApiKey = "xAccountApiKey_example";
+          var opts = {};
+          opts.search = "search_example";
+
+          instance.accountTemplateRouterCount(xAccountApiKey, opts, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelsCountStat);
+            expect(data.count).to.be.a('number');
+            expect(data.count).to.be("0");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('accountTemplateRouterCreate', function() {
         it('should call accountTemplateRouterCreate successfully', function(done) {
           // TODO: uncomment, update parameter values for accountTemplateRouterCreate call and complete the assertions
@@ -146,8 +207,12 @@
           // TODO: uncomment, update parameter values for accountTemplateRouterGetAll call and complete the assertions
           /*
           var xAccountApiKey = "xAccountApiKey_example";
+          var opts = {};
+          opts.offset = 789;
+          opts.limit = 789;
+          opts.search = "search_example";
 
-          instance.accountTemplateRouterGetAll(xAccountApiKey, function(error, data, response) {
+          instance.accountTemplateRouterGetAll(xAccountApiKey, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;

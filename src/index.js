@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * SendPost API to send emails reliably
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -26,7 +26,7 @@
   'use strict';
 
   /**
-   * SendPost_API_to_send_emails_reliably.<br>
+   * Email_API_and_SMTP_relay_to_not_just_send_and_measure_email_sending_but_also_alert_and_optimise__We_provide_you_with_tools_expertise_and_support_needed_to_reliably_deliver_emails_to_your_customers_inboxes_on_time_every_time_.<br>
    * The <code>index</code> module provides access to constructors for all the classes which comprise the public API.
    * <p>
    * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
