@@ -5,6 +5,7 @@ All URIs are relative to *http://127.0.0.1:8081/api/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**accountTemplateRouterCopy**](AccounttemplateApi.md#accountTemplateRouterCopy) | **POST** /account/template/{templateid}/copy | 
+[**accountTemplateRouterCount**](AccounttemplateApi.md#accountTemplateRouterCount) | **GET** /account/template/count | 
 [**accountTemplateRouterCreate**](AccounttemplateApi.md#accountTemplateRouterCreate) | **POST** /account/template/ | 
 [**accountTemplateRouterDelete**](AccounttemplateApi.md#accountTemplateRouterDelete) | **DELETE** /account/template/{templateid} | 
 [**accountTemplateRouterGet**](AccounttemplateApi.md#accountTemplateRouterGet) | **GET** /account/template/{templateid} | 
@@ -51,6 +52,52 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ModelsAccountTemplate**](ModelsAccountTemplate.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="accountTemplateRouterCount"></a>
+# **accountTemplateRouterCount**
+> ModelsCountStat accountTemplateRouterCount(xAccountApiKey)
+
+
+
+Count total templates
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccounttemplateApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.accountTemplateRouterCount(xAccountApiKey, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xAccountApiKey** | **String**| Account API Key | 
+
+### Return type
+
+[**ModelsCountStat**](ModelsCountStat.md)
 
 ### Authorization
 
@@ -210,7 +257,7 @@ No authorization required
 
 <a name="accountTemplateRouterGetAll"></a>
 # **accountTemplateRouterGetAll**
-> [ModelsAccountTemplate] accountTemplateRouterGetAll(xAccountApiKey)
+> [ModelsAccountTemplate] accountTemplateRouterGetAll(xAccountApiKey, opts)
 
 
 
@@ -224,6 +271,11 @@ var apiInstance = new SendPostApi.AccounttemplateApi();
 
 var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
+var opts = { 
+  'offset': 789, // Number | offset
+  'limit': 789, // Number | limit
+  'search': "search_example" // String | search term
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -232,7 +284,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.accountTemplateRouterGetAll(xAccountApiKey, callback);
+apiInstance.accountTemplateRouterGetAll(xAccountApiKey, opts, callback);
 ```
 
 ### Parameters
@@ -240,6 +292,9 @@ apiInstance.accountTemplateRouterGetAll(xAccountApiKey, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
+ **offset** | **Number**| offset | [optional] 
+ **limit** | **Number**| limit | [optional] 
+ **search** | **String**| search term | [optional] 
 
 ### Return type
 

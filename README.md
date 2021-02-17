@@ -218,6 +218,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccounttagApi* | [**tagRouterDelete**](docs/AccounttagApi.md#tagRouterDelete) | **DELETE** /account/tag/{tagid} | 
 *SendPostApi.AccounttagApi* | [**tagRouterGetAll**](docs/AccounttagApi.md#tagRouterGetAll) | **GET** /account/tag/ | 
 *SendPostApi.AccounttemplateApi* | [**accountTemplateRouterCopy**](docs/AccounttemplateApi.md#accountTemplateRouterCopy) | **POST** /account/template/{templateid}/copy | 
+*SendPostApi.AccounttemplateApi* | [**accountTemplateRouterCount**](docs/AccounttemplateApi.md#accountTemplateRouterCount) | **GET** /account/template/count | 
 *SendPostApi.AccounttemplateApi* | [**accountTemplateRouterCreate**](docs/AccounttemplateApi.md#accountTemplateRouterCreate) | **POST** /account/template/ | 
 *SendPostApi.AccounttemplateApi* | [**accountTemplateRouterDelete**](docs/AccounttemplateApi.md#accountTemplateRouterDelete) | **DELETE** /account/template/{templateid} | 
 *SendPostApi.AccounttemplateApi* | [**accountTemplateRouterGet**](docs/AccounttemplateApi.md#accountTemplateRouterGet) | **GET** /account/template/{templateid} | 
