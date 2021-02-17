@@ -64,7 +64,7 @@ No authorization required
 
 <a name="accountTemplateRouterCount"></a>
 # **accountTemplateRouterCount**
-> ModelsCountStat accountTemplateRouterCount(xAccountApiKey)
+> ModelsCountStat accountTemplateRouterCount(xAccountApiKey, opts)
 
 
 
@@ -78,6 +78,9 @@ var apiInstance = new SendPostApi.AccounttemplateApi();
 
 var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
+var opts = { 
+  'search': "search_example" // String | search term
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -86,7 +89,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.accountTemplateRouterCount(xAccountApiKey, callback);
+apiInstance.accountTemplateRouterCount(xAccountApiKey, opts, callback);
 ```
 
 ### Parameters
@@ -94,6 +97,7 @@ apiInstance.accountTemplateRouterCount(xAccountApiKey, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
+ **search** | **String**| search term | [optional] 
 
 ### Return type
 

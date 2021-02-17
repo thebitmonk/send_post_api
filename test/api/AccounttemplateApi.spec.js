@@ -77,8 +77,10 @@
           // TODO: uncomment, update parameter values for accountTemplateRouterCount call and complete the assertions
           /*
           var xAccountApiKey = "xAccountApiKey_example";
+          var opts = {};
+          opts.search = "search_example";
 
-          instance.accountTemplateRouterCount(xAccountApiKey, function(error, data, response) {
+          instance.accountTemplateRouterCount(xAccountApiKey, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;

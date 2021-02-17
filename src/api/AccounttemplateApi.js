@@ -113,10 +113,13 @@
     /**
      * Count total templates
      * @param {String} xAccountApiKey Account API Key
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.search search term
      * @param {module:api/AccounttemplateApi~accountTemplateRouterCountCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsCountStat}
      */
-    this.accountTemplateRouterCount = function(xAccountApiKey, callback) {
+    this.accountTemplateRouterCount = function(xAccountApiKey, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'xAccountApiKey' is set
@@ -128,6 +131,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'search': opts['search'],
       };
       var collectionQueryParams = {
       };
