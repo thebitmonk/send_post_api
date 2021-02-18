@@ -6,8 +6,9 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alertRouterCount**](AccountalertApi.md#alertRouterCount) | **GET** /account/alert/count | 
 [**alertRouterCreateAlert**](AccountalertApi.md#alertRouterCreateAlert) | **POST** /account/alert/ | 
+[**alertRouterDelete**](AccountalertApi.md#alertRouterDelete) | **DELETE** /account/alert/{alertId} | 
 [**alertRouterGetAll**](AccountalertApi.md#alertRouterGetAll) | **GET** /account/alert/ | 
-[**alertRouterUpdate**](AccountalertApi.md#alertRouterUpdate) | **PUT** /account/alert/{alertid} | 
+[**alertRouterUpdate**](AccountalertApi.md#alertRouterUpdate) | **PUT** /account/alert/{alertId} | 
 
 
 <a name="alertRouterCount"></a>
@@ -109,6 +110,55 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="alertRouterDelete"></a>
+# **alertRouterDelete**
+> ModelsDeleteResponse alertRouterDelete(xAccountApiKey, alertId)
+
+
+
+Delete Alert
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccountalertApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var alertId = 789; // Number | The AlertId you want to delete
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.alertRouterDelete(xAccountApiKey, alertId, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xAccountApiKey** | **String**| Account API Key | 
+ **alertId** | **Number**| The AlertId you want to delete | 
+
+### Return type
+
+[**ModelsDeleteResponse**](ModelsDeleteResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="alertRouterGetAll"></a>
 # **alertRouterGetAll**
 > [ModelsDetailedAlert] alertRouterGetAll(xAccountApiKey, opts)
@@ -165,11 +215,11 @@ No authorization required
 
 <a name="alertRouterUpdate"></a>
 # **alertRouterUpdate**
-> Alert alertRouterUpdate(xAccountApiKey, alertid, body)
+> ModelsEAlert alertRouterUpdate(xAccountApiKey, alertId, body)
 
 
 
-Update an Alert
+Update Alert
 
 ### Example
 ```javascript
@@ -179,9 +229,9 @@ var apiInstance = new SendPostApi.AccountalertApi();
 
 var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
-var alertid = 789; // Number | The alert you want to update
+var alertId = 789; // Number | The Alert you want to update
 
-var body = new SendPostApi.Alert(); // Alert | The alert  Settings
+var body = new SendPostApi.ModelsEWebhook(); // ModelsEWebhook | The body
 
 
 var callback = function(error, data, response) {
@@ -191,7 +241,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.alertRouterUpdate(xAccountApiKey, alertid, body, callback);
+apiInstance.alertRouterUpdate(xAccountApiKey, alertId, body, callback);
 ```
 
 ### Parameters
@@ -199,12 +249,12 @@ apiInstance.alertRouterUpdate(xAccountApiKey, alertid, body, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
- **alertid** | **Number**| The alert you want to update | 
- **body** | [**Alert**](Alert.md)| The alert  Settings | 
+ **alertId** | **Number**| The Alert you want to update | 
+ **body** | [**ModelsEWebhook**](ModelsEWebhook.md)| The body | 
 
 ### Return type
 
-[**Alert**](Alert.md)
+[**ModelsEAlert**](ModelsEAlert.md)
 
 ### Authorization
 
