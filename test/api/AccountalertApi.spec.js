@@ -101,6 +101,32 @@
           done();
         });
       });
+      describe('alertRouterDelete', function() {
+        it('should call alertRouterDelete successfully', function(done) {
+          // TODO: uncomment, update parameter values for alertRouterDelete call and complete the assertions
+          /*
+          var xAccountApiKey = "xAccountApiKey_example";
+          var alertId = 789;
+
+          instance.alertRouterDelete(xAccountApiKey, alertId, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelsDeleteResponse);
+            expect(data.id).to.be.a('number');
+            expect(data.id).to.be("0");
+            expect(data.message).to.be.a('string');
+            expect(data.message).to.be("");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('alertRouterGetAll', function() {
         it('should call alertRouterGetAll successfully', function(done) {
           // TODO: uncomment, update parameter values for alertRouterGetAll call and complete the assertions
@@ -154,10 +180,11 @@
           // TODO: uncomment, update parameter values for alertRouterUpdate call and complete the assertions
           /*
           var xAccountApiKey = "xAccountApiKey_example";
-          var alertid = 789;
-          var body = new SendPostApi.Alert();
+          var alertId = 789;
+          var body = new SendPostApi.ModelsEAlert();
+          body.active = "";
 
-          instance.alertRouterUpdate(xAccountApiKey, alertid, body, function(error, data, response) {
+          instance.alertRouterUpdate(xAccountApiKey, alertId, body, function(error, data, response) {
             if (error) {
               done(error);
               return;
