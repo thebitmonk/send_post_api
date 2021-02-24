@@ -181,19 +181,8 @@
           /*
           var xAccountApiKey = "xAccountApiKey_example";
           var alertId = 789;
-          var body = new SendPostApi.ModelsEWebhook();
-          body.clicked = false;
-          body.delivered = false;
-          body.dropped = false;
-          body.enabled = false;
-          body.hardBounced = false;
-          body.opened = false;
-          body.processed = false;
-          body.sent = false;
-          body.softBounced = false;
-          body.spam = false;
-          body.unsubscribed = false;
-          body.url = "";
+          var body = new SendPostApi.ModelsEAlert();
+          body.active = "";
 
           instance.alertRouterUpdate(xAccountApiKey, alertId, body, function(error, data, response) {
             if (error) {
@@ -201,9 +190,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SendPostApi.ModelsEAlert);
-            expect(data.active).to.be.a('string');
-            expect(data.active).to.be("");
+            expect(data).to.be.a(SendPostApi.Alert);
 
             done();
           });

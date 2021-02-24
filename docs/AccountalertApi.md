@@ -215,11 +215,11 @@ No authorization required
 
 <a name="alertRouterUpdate"></a>
 # **alertRouterUpdate**
-> ModelsEAlert alertRouterUpdate(xAccountApiKey, alertId, body)
+> Alert alertRouterUpdate(xAccountApiKey, alertId, body)
 
 
 
-Update Alert
+Update an Alert
 
 ### Example
 ```javascript
@@ -229,9 +229,9 @@ var apiInstance = new SendPostApi.AccountalertApi();
 
 var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
-var alertId = 789; // Number | The Alert you want to update
+var alertId = 789; // Number | The alert you want to update
 
-var body = new SendPostApi.ModelsEWebhook(); // ModelsEWebhook | The body
+var body = new SendPostApi.ModelsEAlert(); // ModelsEAlert | The alert  Settings
 
 
 var callback = function(error, data, response) {
@@ -249,12 +249,12 @@ apiInstance.alertRouterUpdate(xAccountApiKey, alertId, body, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
- **alertId** | **Number**| The Alert you want to update | 
- **body** | [**ModelsEWebhook**](ModelsEWebhook.md)| The body | 
+ **alertId** | **Number**| The alert you want to update | 
+ **body** | [**ModelsEAlert**](ModelsEAlert.md)| The alert  Settings | 
 
 ### Return type
 
-[**ModelsEAlert**](ModelsEAlert.md)
+[**Alert**](Alert.md)
 
 ### Authorization
 
