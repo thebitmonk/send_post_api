@@ -4,8 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **aolSettings** | **String** |  | [optional] 
-**autoWarmupEnabled** | **Boolean** |  | [optional] 
-**autoWarmupStage** | **Number** |  | [optional] 
 **comcastSettings** | **String** |  | [optional] 
 **created** | **Number** |  | [optional] 
 **defaultSettings** | **String** |  | [optional] 
@@ -20,6 +18,7 @@ Name | Type | Description | Notes
 **reverseDNSHostname** | **String** |  | [optional] 
 **systemDomain** | [**ModelsSystemDomain**](ModelsSystemDomain.md) |  | [optional] 
 **type** | [**ModelsIPType**](ModelsIPType.md) |  | [optional] 
+**warmUpNotComplete** | **Boolean** |  | [optional] 
 **yahooSettings** | **String** |  | [optional] 
 **yandexSettings** | **String** |  | [optional] 
 **zohoSettings** | **String** |  | [optional] 

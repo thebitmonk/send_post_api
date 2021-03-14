@@ -198,6 +198,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountpaymentApi* | [**paymentRouterHandlePaymentWebhook**](docs/AccountpaymentApi.md#paymentRouterHandlePaymentWebhook) | **POST** /account/payment/webhook | 
 *SendPostApi.AccountrecipientApi* | [**recipientRouterGetAllMessagesForARecipient**](docs/AccountrecipientApi.md#recipientRouterGetAllMessagesForARecipient) | **GET** /account/recipient/{recipient}/messages | 
 *SendPostApi.AccountrecipientApi* | [**recipientRouterGetAllMessagesForARecipientFromANode**](docs/AccountrecipientApi.md#recipientRouterGetAllMessagesForARecipientFromANode) | **GET** /account/recipient/node/{recipient}/messages | 
+*SendPostApi.AccountsettingApi* | [**accountSettingRouterUpdate**](docs/AccountsettingApi.md#accountSettingRouterUpdate) | **PUT** /account/setting/ | 
 *SendPostApi.AccountsmtpstatApi* | [**sMTPStatRouterGetAllAggregateIPProviderSMTPStats**](docs/AccountsmtpstatApi.md#sMTPStatRouterGetAllAggregateIPProviderSMTPStats) | **GET** /account/smtp/stat/ip/{ipid}/provider/{pname}/aggregate | 
 *SendPostApi.AccountsmtpstatApi* | [**sMTPStatRouterGetAllAggregateIPSMTPStats**](docs/AccountsmtpstatApi.md#sMTPStatRouterGetAllAggregateIPSMTPStats) | **GET** /account/smtp/stat/ip/{ipid}/aggregate | 
 *SendPostApi.AccountsmtpstatApi* | [**sMTPStatRouterGetAllAggregateIPSMTPStatsForSubAccount**](docs/AccountsmtpstatApi.md#sMTPStatRouterGetAllAggregateIPSMTPStatsForSubAccount) | **GET** /account/smtp/stat/ip/{ipid}/subaccount/{sid}/aggregate | 
@@ -332,6 +333,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsDomainCheckResult](docs/ModelsDomainCheckResult.md)
  - [SendPostApi.ModelsEAccount](docs/ModelsEAccount.md)
  - [SendPostApi.ModelsEAccountMember](docs/ModelsEAccountMember.md)
+ - [SendPostApi.ModelsEAccountSetting](docs/ModelsEAccountSetting.md)
  - [SendPostApi.ModelsEAlert](docs/ModelsEAlert.md)
  - [SendPostApi.ModelsEComment](docs/ModelsEComment.md)
  - [SendPostApi.ModelsEDomain](docs/ModelsEDomain.md)
@@ -385,6 +387,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsPaymentStatus](docs/ModelsPaymentStatus.md)
  - [SendPostApi.ModelsProvider](docs/ModelsProvider.md)
  - [SendPostApi.ModelsProviderResult](docs/ModelsProviderResult.md)
+ - [SendPostApi.ModelsProviderType](docs/ModelsProviderType.md)
  - [SendPostApi.ModelsQEmailMessage](docs/ModelsQEmailMessage.md)
  - [SendPostApi.ModelsQEvent](docs/ModelsQEvent.md)
  - [SendPostApi.ModelsRDSuppression](docs/ModelsRDSuppression.md)
@@ -393,6 +396,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsRStat](docs/ModelsRStat.md)
  - [SendPostApi.ModelsRSuppression](docs/ModelsRSuppression.md)
  - [SendPostApi.ModelsReplyTo](docs/ModelsReplyTo.md)
+ - [SendPostApi.ModelsReportProvider](docs/ModelsReportProvider.md)
  - [SendPostApi.ModelsResponse](docs/ModelsResponse.md)
  - [SendPostApi.ModelsSIPStat](docs/ModelsSIPStat.md)
  - [SendPostApi.ModelsSMTPAuth](docs/ModelsSMTPAuth.md)
@@ -418,6 +422,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsVerifyByMemberTokenRequest](docs/ModelsVerifyByMemberTokenRequest.md)
  - [SendPostApi.ModelsVerifyByTokenRequest](docs/ModelsVerifyByTokenRequest.md)
  - [SendPostApi.ModelsWMessage](docs/ModelsWMessage.md)
+ - [SendPostApi.Provider](docs/Provider.md)
  - [SendPostApi.UaparserDevice](docs/UaparserDevice.md)
  - [SendPostApi.UaparserOs](docs/UaparserOs.md)
  - [SendPostApi.UaparserUserAgent](docs/UaparserUserAgent.md)
