@@ -105,6 +105,10 @@
                 expect(data.icloudSettings).to.be("");
                 expect(data.id).to.be.a('number');
                 expect(data.id).to.be("0");
+                expect(data.infraClassification).to.be.a('string');
+                expect(data.infraClassification).to.be("");
+                expect(data.infraMonitor).to.be.a('boolean');
+                expect(data.infraMonitor).to.be(false);
                 expect(data.mailruSettings).to.be.a('string');
                 expect(data.mailruSettings).to.be("");
                 expect(data.microsoftSettings).to.be.a('string');
@@ -247,6 +251,10 @@
                 expect(data.icloudSettings).to.be("");
                 expect(data.id).to.be.a('number');
                 expect(data.id).to.be("0");
+                expect(data.infraClassification).to.be.a('string');
+                expect(data.infraClassification).to.be("");
+                expect(data.infraMonitor).to.be.a('boolean');
+                expect(data.infraMonitor).to.be(false);
                 expect(data.mailruSettings).to.be.a('string');
                 expect(data.mailruSettings).to.be("");
                 expect(data.microsoftSettings).to.be.a('string');
@@ -371,6 +379,10 @@
                   expect(data.icloudSettings).to.be("");
                   expect(data.id).to.be.a('number');
                   expect(data.id).to.be("0");
+                  expect(data.infraClassification).to.be.a('string');
+                  expect(data.infraClassification).to.be("");
+                  expect(data.infraMonitor).to.be.a('boolean');
+                  expect(data.infraMonitor).to.be(false);
                   expect(data.mailruSettings).to.be.a('string');
                   expect(data.mailruSettings).to.be("");
                   expect(data.microsoftSettings).to.be.a('string');
@@ -495,6 +507,10 @@
                 expect(data.icloudSettings).to.be("");
                 expect(data.id).to.be.a('number');
                 expect(data.id).to.be("0");
+                expect(data.infraClassification).to.be.a('string');
+                expect(data.infraClassification).to.be("");
+                expect(data.infraMonitor).to.be.a('boolean');
+                expect(data.infraMonitor).to.be(false);
                 expect(data.mailruSettings).to.be.a('string');
                 expect(data.mailruSettings).to.be("");
                 expect(data.microsoftSettings).to.be.a('string');

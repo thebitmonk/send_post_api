@@ -373,6 +373,10 @@
                 expect(data.relatedIP.icloudSettings).to.be("");
                 expect(data.relatedIP.id).to.be.a('number');
                 expect(data.relatedIP.id).to.be("0");
+                expect(data.relatedIP.infraClassification).to.be.a('string');
+                expect(data.relatedIP.infraClassification).to.be("");
+                expect(data.relatedIP.infraMonitor).to.be.a('boolean');
+                expect(data.relatedIP.infraMonitor).to.be(false);
                 expect(data.relatedIP.mailruSettings).to.be.a('string');
                 expect(data.relatedIP.mailruSettings).to.be("");
                 expect(data.relatedIP.microsoftSettings).to.be.a('string');

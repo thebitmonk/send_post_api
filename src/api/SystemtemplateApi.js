@@ -26,20 +26,20 @@
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.SystemApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsSystemTemplate);
+    root.SendPostApi.SystemtemplateApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsSystemTemplate);
   }
 }(this, function(ApiClient, ModelsSystemTemplate) {
   'use strict';
 
   /**
-   * System service.
-   * @module api/SystemApi
+   * Systemtemplate service.
+   * @module api/SystemtemplateApi
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new SystemApi. 
-   * @alias module:api/SystemApi
+   * Constructs a new SystemtemplateApi. 
+   * @alias module:api/SystemtemplateApi
    * @class
    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
@@ -50,7 +50,7 @@
 
     /**
      * Callback function to receive the result of the systemTemplateRouterGetAllSystemTemplates operation.
-     * @callback module:api/SystemApi~systemTemplateRouterGetAllSystemTemplatesCallback
+     * @callback module:api/SystemtemplateApi~systemTemplateRouterGetAllSystemTemplatesCallback
      * @param {String} error Error message, if any.
      * @param {Array.<module:model/ModelsSystemTemplate>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -59,7 +59,7 @@
     /**
      * Get all System Templates
      * @param {String} xAccountApiKey Account API Key
-     * @param {module:api/SystemApi~systemTemplateRouterGetAllSystemTemplatesCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/SystemtemplateApi~systemTemplateRouterGetAllSystemTemplatesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsSystemTemplate>}
      */
     this.systemTemplateRouterGetAllSystemTemplates = function(xAccountApiKey, callback) {
@@ -89,7 +89,7 @@
       var returnType = [ModelsSystemTemplate];
 
       return this.apiClient.callApi(
-        '/system/template', 'GET',
+        '/system/template/', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

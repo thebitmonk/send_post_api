@@ -31,11 +31,11 @@
   var instance;
 
   beforeEach(function() {
-    instance = new SendPostApi.SystemApi();
+    instance = new SendPostApi.SystemtemplateApi();
   });
 
   describe('(package)', function() {
-    describe('SystemApi', function() {
+    describe('SystemtemplateApi', function() {
       describe('systemTemplateRouterGetAllSystemTemplates', function() {
         it('should call systemTemplateRouterGetAllSystemTemplates successfully', function(done) {
           // TODO: uncomment, update parameter values for systemTemplateRouterGetAllSystemTemplates call and complete the assertions

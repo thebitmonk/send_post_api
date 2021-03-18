@@ -71,6 +71,10 @@
         obj.icloudSettings = ApiClient.convertToType(data['icloudSettings'], 'String');
       if (data.hasOwnProperty('id'))
         obj.id = ApiClient.convertToType(data['id'], 'Number');
+      if (data.hasOwnProperty('infraClassification'))
+        obj.infraClassification = ApiClient.convertToType(data['infraClassification'], 'String');
+      if (data.hasOwnProperty('infraMonitor'))
+        obj.infraMonitor = ApiClient.convertToType(data['infraMonitor'], 'Boolean');
       if (data.hasOwnProperty('mailruSettings'))
         obj.mailruSettings = ApiClient.convertToType(data['mailruSettings'], 'String');
       if (data.hasOwnProperty('microsoftSettings'))
@@ -136,6 +140,16 @@
    * @member {Number} id
    */
   exports.prototype.id = undefined;
+
+  /**
+   * @member {String} infraClassification
+   */
+  exports.prototype.infraClassification = undefined;
+
+  /**
+   * @member {Boolean} infraMonitor
+   */
+  exports.prototype.infraMonitor = undefined;
 
   /**
    * @member {String} mailruSettings

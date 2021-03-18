@@ -283,7 +283,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.SubaccountsuppressionApi* | [**suppressionRouterDeleteSuppression**](docs/SubaccountsuppressionApi.md#suppressionRouterDeleteSuppression) | **DELETE** /subaccount/suppression/ | 
 *SendPostApi.SubaccountsuppressionApi* | [**suppressionRouterDeleteSuppressionsInSuppressionFilter**](docs/SubaccountsuppressionApi.md#suppressionRouterDeleteSuppressionsInSuppressionFilter) | **DELETE** /subaccount/suppression/filter | 
 *SendPostApi.SubaccountsuppressionApi* | [**suppressionRouterGetAllSuppressions**](docs/SubaccountsuppressionApi.md#suppressionRouterGetAllSuppressions) | **GET** /subaccount/suppression/ | 
-*SendPostApi.SystemApi* | [**systemTemplateRouterGetAllSystemTemplates**](docs/SystemApi.md#systemTemplateRouterGetAllSystemTemplates) | **GET** /system/template | 
+*SendPostApi.SystemtemplateApi* | [**systemTemplateRouterGetAllSystemTemplates**](docs/SystemtemplateApi.md#systemTemplateRouterGetAllSystemTemplates) | **GET** /system/template/ | 
 *SendPostApi.TrackApi* | [**trackRouterTrackEmailOpen**](docs/TrackApi.md#trackRouterTrackEmailOpen) | **GET** /track/open/{accountId}/{subAccountId}/{ipId}/{emailType}/{messageId}/1.png | 
 *SendPostApi.TrackApi* | [**trackRouterTrackLinkClick**](docs/TrackApi.md#trackRouterTrackLinkClick) | **GET** /track/click/{accountId}/{subAccountId}/{ipId}/{emailType}/{messageId} | 
 *SendPostApi.TrackApi* | [**trackRouterTrackUnsubscribe**](docs/TrackApi.md#trackRouterTrackUnsubscribe) | **GET** /track/unsubscribe/{accountId}/{subAccountId}/{ipId}/{emailType}/{messageId} | 
@@ -345,6 +345,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsEMember](docs/ModelsEMember.md)
  - [SendPostApi.ModelsESender](docs/ModelsESender.md)
  - [SendPostApi.ModelsESubAccount](docs/ModelsESubAccount.md)
+ - [SendPostApi.ModelsESystemDomain](docs/ModelsESystemDomain.md)
  - [SendPostApi.ModelsEValidation](docs/ModelsEValidation.md)
  - [SendPostApi.ModelsEWebhook](docs/ModelsEWebhook.md)
  - [SendPostApi.ModelsEditorTokenResponse](docs/ModelsEditorTokenResponse.md)
