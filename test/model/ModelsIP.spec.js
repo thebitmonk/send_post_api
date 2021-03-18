@@ -89,6 +89,18 @@
         // expect(instance.id).to.be(expectedValueLiteral);
       });
 
+      it('should have the property infraClassification (base name: "infraClassification")', function() {
+        // TODO: update the code to test the property infraClassification
+        expect(instance).to.have.property('infraClassification');
+        // expect(instance.infraClassification).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property infraMonitor (base name: "infraMonitor")', function() {
+        // TODO: update the code to test the property infraMonitor
+        expect(instance).to.have.property('infraMonitor');
+        // expect(instance.infraMonitor).to.be(expectedValueLiteral);
+      });
+
       it('should have the property mailruSettings (base name: "mailruSettings")', function() {
         // TODO: update the code to test the property mailruSettings
         expect(instance).to.have.property('mailruSettings');

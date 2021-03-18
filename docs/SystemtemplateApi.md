@@ -1,10 +1,10 @@
-# SendPostApi.SystemApi
+# SendPostApi.SystemtemplateApi
 
 All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**systemTemplateRouterGetAllSystemTemplates**](SystemApi.md#systemTemplateRouterGetAllSystemTemplates) | **GET** /system/template | 
+[**systemTemplateRouterGetAllSystemTemplates**](SystemtemplateApi.md#systemTemplateRouterGetAllSystemTemplates) | **GET** /system/template/ | 
 
 
 <a name="systemTemplateRouterGetAllSystemTemplates"></a>
@@ -19,7 +19,7 @@ Get all System Templates
 ```javascript
 var SendPostApi = require('send_post_api');
 
-var apiInstance = new SendPostApi.SystemApi();
+var apiInstance = new SendPostApi.SystemtemplateApi();
 
 var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 

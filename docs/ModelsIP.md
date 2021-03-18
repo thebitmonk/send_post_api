@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **gmxSettings** | **String** |  | [optional] 
 **icloudSettings** | **String** |  | [optional] 
 **id** | **Number** |  | [optional] 
+**infraClassification** | **String** |  | [optional] 
+**infraMonitor** | **Boolean** |  | [optional] 
 **mailruSettings** | **String** |  | [optional] 
 **microsoftSettings** | **String** |  | [optional] 
 **publicIP** | **String** |  | [optional] 
