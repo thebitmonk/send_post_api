@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **id** | **Number** |  | [optional] 
 **infraClassification** | **String** |  | [optional] 
 **infraMonitor** | **Boolean** |  | [optional] 
+**labels** | [**[ModelsLabel]**](ModelsLabel.md) |  | [optional] 
 **mailruSettings** | **String** |  | [optional] 
 **microsoftSettings** | **String** |  | [optional] 
 **publicIP** | **String** |  | [optional] 

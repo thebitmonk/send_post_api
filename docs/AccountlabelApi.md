@@ -207,7 +207,7 @@ No authorization required
 
 <a name="labelRouterGetAll"></a>
 # **labelRouterGetAll**
-> [ModelsLabel] labelRouterGetAll(xAccountApiKey)
+> [ModelsLabel] labelRouterGetAll(xAccountApiKey, type)
 
 
 
@@ -221,6 +221,8 @@ var apiInstance = new SendPostApi.AccountlabelApi();
 
 var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
+var type = "type_example"; // String | get all labels type
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -229,7 +231,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.labelRouterGetAll(xAccountApiKey, callback);
+apiInstance.labelRouterGetAll(xAccountApiKey, type, callback);
 ```
 
 ### Parameters
@@ -237,6 +239,7 @@ apiInstance.labelRouterGetAll(xAccountApiKey, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
+ **type** | **String**| get all labels type | 
 
 ### Return type
 

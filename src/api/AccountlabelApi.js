@@ -267,10 +267,11 @@
     /**
      * Get All Labels
      * @param {String} xAccountApiKey Account API Key
+     * @param {String} type get all labels type
      * @param {module:api/AccountlabelApi~labelRouterGetAllCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsLabel>}
      */
-    this.labelRouterGetAll = function(xAccountApiKey, callback) {
+    this.labelRouterGetAll = function(xAccountApiKey, type, callback) {
       var postBody = null;
 
       // verify the required parameter 'xAccountApiKey' is set
@@ -278,10 +279,16 @@
         throw new Error("Missing the required parameter 'xAccountApiKey' when calling labelRouterGetAll");
       }
 
+      // verify the required parameter 'type' is set
+      if (type === undefined || type === null) {
+        throw new Error("Missing the required parameter 'type' when calling labelRouterGetAll");
+      }
+
 
       var pathParams = {
       };
       var queryParams = {
+        'type': type,
       };
       var collectionQueryParams = {
       };

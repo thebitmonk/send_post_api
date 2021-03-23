@@ -69,6 +69,7 @@
           body.created = "0";
           body.id = "0";
           body.name = "";
+          body.type = new SendPostApi.ModelsLabelType();
 
           instance.labelRouterCreate(xAccountApiKey, body, function(error, data, response) {
             if (error) {
@@ -85,7 +86,8 @@
             expect(data.id).to.be("0");
             expect(data.name).to.be.a('string');
             expect(data.name).to.be("");
-
+            expect(data.type).to.be.a(SendPostApi.ModelsLabelType);
+    
             done();
           });
           */
@@ -141,7 +143,8 @@
             expect(data.id).to.be("0");
             expect(data.name).to.be.a('string');
             expect(data.name).to.be("");
-
+            expect(data.type).to.be.a(SendPostApi.ModelsLabelType);
+    
             done();
           });
           */
@@ -154,8 +157,9 @@
           // TODO: uncomment, update parameter values for labelRouterGetAll call and complete the assertions
           /*
           var xAccountApiKey = "xAccountApiKey_example";
+          var type = "type_example";
 
-          instance.labelRouterGetAll(xAccountApiKey, function(error, data, response) {
+          instance.labelRouterGetAll(xAccountApiKey, type, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -175,6 +179,8 @@
               expect(data.id).to.be("0");
               expect(data.name).to.be.a('string');
               expect(data.name).to.be("");
+              expect(data.type).to.be.a(SendPostApi.ModelsLabelType);
+      
             }
 
             done();
@@ -195,6 +201,7 @@
           body.created = "0";
           body.id = "0";
           body.name = "";
+          body.type = new SendPostApi.ModelsLabelType();
 
           instance.labelRouterUpdate(xAccountApiKey, labelId, body, function(error, data, response) {
             if (error) {
@@ -211,7 +218,8 @@
             expect(data.id).to.be("0");
             expect(data.name).to.be.a('string');
             expect(data.name).to.be("");
-
+            expect(data.type).to.be.a(SendPostApi.ModelsLabelType);
+    
             done();
           });
           */

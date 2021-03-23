@@ -101,6 +101,12 @@
         // expect(instance.infraMonitor).to.be(expectedValueLiteral);
       });
 
+      it('should have the property labels (base name: "labels")', function() {
+        // TODO: update the code to test the property labels
+        expect(instance).to.have.property('labels');
+        // expect(instance.labels).to.be(expectedValueLiteral);
+      });
+
       it('should have the property mailruSettings (base name: "mailruSettings")', function() {
         // TODO: update the code to test the property mailruSettings
         expect(instance).to.have.property('mailruSettings');

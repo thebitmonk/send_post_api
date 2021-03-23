@@ -242,8 +242,10 @@ Class | Method | HTTP request | Description
 *SendPostApi.AuthApi* | [**authRouterUpdateAuthInfo**](docs/AuthApi.md#authRouterUpdateAuthInfo) | **PUT** /auth/info | 
 *SendPostApi.ClusterApi* | [**clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster**](docs/ClusterApi.md#clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster) | **POST** /cluster/suppression/filter | 
 *SendPostApi.ClusterApi* | [**clusterRouterDeleteItemFromCacheOfEveryNodeInCluster**](docs/ClusterApi.md#clusterRouterDeleteItemFromCacheOfEveryNodeInCluster) | **DELETE** /cluster/cache | 
-*SendPostApi.ClusterApi* | [**clusterRouterDeleteItemFromCacheOfSpecificNodeInCluster**](docs/ClusterApi.md#clusterRouterDeleteItemFromCacheOfSpecificNodeInCluster) | **DELETE** /cluster/cache/node | 
 *SendPostApi.ClusterApi* | [**clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster**](docs/ClusterApi.md#clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster) | **DELETE** /cluster/suppression/filter | 
+*SendPostApi.ClusterApi* | [**clusterRouterGetItemFromCacheOfEveryNodeInCluster**](docs/ClusterApi.md#clusterRouterGetItemFromCacheOfEveryNodeInCluster) | **GET** /cluster/cache | 
+*SendPostApi.ClusterApi* | [**clusterRouterGetItemFromCacheOfSpecificNodeInCluster**](docs/ClusterApi.md#clusterRouterGetItemFromCacheOfSpecificNodeInCluster) | **GET** /cluster/cache/node | 
+*SendPostApi.ClusterApi* | [**clusterRouterGetItemFromCacheOfSpecificNodeInCluster_0**](docs/ClusterApi.md#clusterRouterGetItemFromCacheOfSpecificNodeInCluster_0) | **DELETE** /cluster/cache/node | 
 *SendPostApi.EditorApi* | [**editorApiRouterGetToken**](docs/EditorApi.md#editorApiRouterGetToken) | **GET** /editor/ | 
 *SendPostApi.SmtpApi* | [**sMTPRouterReceiveWebhooksRaisedFromSMTPServers**](docs/SmtpApi.md#sMTPRouterReceiveWebhooksRaisedFromSMTPServers) | **POST** /smtp/webhook | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterCount**](docs/SubaccountdomainApi.md#domainRouterCount) | **GET** /subaccount/domain/count | 
@@ -293,6 +295,7 @@ Class | Method | HTTP request | Description
 
  - [SendPostApi.Alert](docs/Alert.md)
  - [SendPostApi.ApiGlockappsMailReport](docs/ApiGlockappsMailReport.md)
+ - [SendPostApi.ModelFalse](docs/ModelFalse.md)
  - [SendPostApi.ModelsAGStat](docs/ModelsAGStat.md)
  - [SendPostApi.ModelsAIPStat](docs/ModelsAIPStat.md)
  - [SendPostApi.ModelsAccount](docs/ModelsAccount.md)
@@ -303,6 +306,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsAlertLabel](docs/ModelsAlertLabel.md)
  - [SendPostApi.ModelsAlertRequest](docs/ModelsAlertRequest.md)
  - [SendPostApi.ModelsAlertResponse](docs/ModelsAlertResponse.md)
+ - [SendPostApi.ModelsAllClusterCache](docs/ModelsAllClusterCache.md)
  - [SendPostApi.ModelsAuthInfo](docs/ModelsAuthInfo.md)
  - [SendPostApi.ModelsBackOffConfiguration](docs/ModelsBackOffConfiguration.md)
  - [SendPostApi.ModelsBackOffDecreaseType](docs/ModelsBackOffDecreaseType.md)
@@ -320,6 +324,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsCertificateValidity](docs/ModelsCertificateValidity.md)
  - [SendPostApi.ModelsCity](docs/ModelsCity.md)
  - [SendPostApi.ModelsCleanedList](docs/ModelsCleanedList.md)
+ - [SendPostApi.ModelsClusterCache](docs/ModelsClusterCache.md)
  - [SendPostApi.ModelsComment](docs/ModelsComment.md)
  - [SendPostApi.ModelsCountStat](docs/ModelsCountStat.md)
  - [SendPostApi.ModelsCouponOptions](docs/ModelsCouponOptions.md)
@@ -378,6 +383,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsInvitation](docs/ModelsInvitation.md)
  - [SendPostApi.ModelsInvitationStatus](docs/ModelsInvitationStatus.md)
  - [SendPostApi.ModelsLabel](docs/ModelsLabel.md)
+ - [SendPostApi.ModelsLabelType](docs/ModelsLabelType.md)
  - [SendPostApi.ModelsMailReportResult](docs/ModelsMailReportResult.md)
  - [SendPostApi.ModelsMember](docs/ModelsMember.md)
  - [SendPostApi.ModelsMemberRole](docs/ModelsMemberRole.md)
