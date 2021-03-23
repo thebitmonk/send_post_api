@@ -166,6 +166,8 @@
           /*
           var xAccountApiKey = "xAccountApiKey_example";
           var opts = {};
+          opts.filterBy = "filterBy_example";
+          opts.filterValue = 789;
           opts.search = "search_example";
 
           instance.iPRouterCount(xAccountApiKey, opts, function(error, data, response) {
@@ -338,6 +340,8 @@
           var opts = {};
           opts.offset = 789;
           opts.limit = 789;
+          opts.filterBy = "filterBy_example";
+          opts.filterValue = 789;
           opts.search = "search_example";
 
           instance.iPRouterGetAll(xAccountApiKey, opts, function(error, data, response) {
