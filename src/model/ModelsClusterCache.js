@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Model1487930xc420434660False'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Model1487930xc420434660False'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsClusterCache = factory(root.SendPostApi.ApiClient, root.SendPostApi.Model1487930xc420434660False);
+    root.SendPostApi.ModelsClusterCache = factory(root.SendPostApi.ApiClient);
   }
-}(this, function(ApiClient, Model1487930xc420434660False) {
+}(this, function(ApiClient) {
   'use strict';
 
   /**
@@ -56,7 +56,7 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('data'))
-        obj.data = Model1487930xc420434660False.constructFromObject(data['data']);
+        obj.data = ApiClient.convertToType(data['data'], 'String');
       if (data.hasOwnProperty('found'))
         obj.found = ApiClient.convertToType(data['found'], 'Boolean');
       if (data.hasOwnProperty('key'))
@@ -68,7 +68,7 @@
   }
 
   /**
-   * @member {module:model/Model1487930xc420434660False} data
+   * @member {String} data
    */
   exports.prototype.data = undefined;
 

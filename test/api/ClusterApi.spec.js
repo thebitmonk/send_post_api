@@ -129,8 +129,9 @@
               for (let p in dataCtr) {
                 let data = dataCtr[p];
                 expect(data).to.be.a(SendPostApi.ModelsClusterCache);
-                expect(data.data).to.be.a(SendPostApi.Model1487930xc420434660False);
-                    expect(data.found).to.be.a('boolean');
+                expect(data.data).to.be.a('string');
+                expect(data.data).to.be("");
+                expect(data.found).to.be.a('boolean');
                 expect(data.found).to.be(false);
                 expect(data.key).to.be.a('string');
                 expect(data.key).to.be("");
@@ -163,8 +164,9 @@
             }
             // TODO: update response assertions
             expect(data).to.be.a(SendPostApi.ModelsClusterCache);
-            expect(data.data).to.be.a(SendPostApi.Model1487930xc420434660False);
-                expect(data.found).to.be.a('boolean');
+            expect(data.data).to.be.a('string');
+            expect(data.data).to.be("");
+            expect(data.found).to.be.a('boolean');
             expect(data.found).to.be(false);
             expect(data.key).to.be.a('string');
             expect(data.key).to.be("");
