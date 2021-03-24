@@ -700,25 +700,27 @@
           var xAccountApiKey = "xAccountApiKey_example";
           var ipid = 789;
           var body = new SendPostApi.ModelsIIP();
-          body.backOffConfiguration = new SendPostApi.ModelsBackOffConfiguration();
-          body.backOffConfiguration.concurrentConnections = "0";
-          body.backOffConfiguration.concurrentConnectionsType = new SendPostApi.ModelsBackOffDecreaseType();
-          body.backOffConfiguration.sendPerDay = "0";
-          body.backOffConfiguration.sendPerDayType = new SendPostApi.ModelsBackOffDecreaseType();
-          body.backOffConfiguration.sendPerHour = "0";
-          body.backOffConfiguration.sendPerHourType = new SendPostApi.ModelsBackOffDecreaseType();
-          body.backOffConfiguration.sendPerMinute = "0";
-          body.backOffConfiguration.sendPerMinuteType = new SendPostApi.ModelsBackOffDecreaseType();
-          body.backOffTrigger = new SendPostApi.ModelsBackOffTrigger();
-          body.backOffTrigger.deferralPercentage = "0";
-          body.backOffTrigger.durationInMinutes = "0";
-          body.backOffTrigger.hardBouncePercentage = "0";
-          body.backOffTrigger.minimumAttempts = "0";
-          body.maxConcurrentConnections = "0";
-          body.maxSendPerDay = "0";
-          body.maxSendPerHour = "0";
-          body.maxSendPerMinute = "0";
-          body.name = "";
+          body.labels = ;
+          body.providerSettings = new SendPostApi.ModelsProviderSettings();
+          body.providerSettings.backOffConfiguration = new SendPostApi.ModelsBackOffConfiguration();
+          body.providerSettings.backOffConfiguration.concurrentConnections = "0";
+          body.providerSettings.backOffConfiguration.concurrentConnectionsType = new SendPostApi.ModelsBackOffDecreaseType();
+          body.providerSettings.backOffConfiguration.sendPerDay = "0";
+          body.providerSettings.backOffConfiguration.sendPerDayType = new SendPostApi.ModelsBackOffDecreaseType();
+          body.providerSettings.backOffConfiguration.sendPerHour = "0";
+          body.providerSettings.backOffConfiguration.sendPerHourType = new SendPostApi.ModelsBackOffDecreaseType();
+          body.providerSettings.backOffConfiguration.sendPerMinute = "0";
+          body.providerSettings.backOffConfiguration.sendPerMinuteType = new SendPostApi.ModelsBackOffDecreaseType();
+          body.providerSettings.backOffTrigger = new SendPostApi.ModelsBackOffTrigger();
+          body.providerSettings.backOffTrigger.deferralPercentage = "0";
+          body.providerSettings.backOffTrigger.durationInMinutes = "0";
+          body.providerSettings.backOffTrigger.hardBouncePercentage = "0";
+          body.providerSettings.backOffTrigger.minimumAttempts = "0";
+          body.providerSettings.maxConcurrentConnections = "0";
+          body.providerSettings.maxSendPerDay = "0";
+          body.providerSettings.maxSendPerHour = "0";
+          body.providerSettings.maxSendPerMinute = "0";
+          body.providerSettings.name = "";
 
           instance.iPRouterUpdate(xAccountApiKey, ipid, body, function(error, data, response) {
             if (error) {

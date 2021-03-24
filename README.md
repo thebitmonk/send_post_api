@@ -393,6 +393,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsPaymentStatus](docs/ModelsPaymentStatus.md)
  - [SendPostApi.ModelsProvider](docs/ModelsProvider.md)
  - [SendPostApi.ModelsProviderResult](docs/ModelsProviderResult.md)
+ - [SendPostApi.ModelsProviderSettings](docs/ModelsProviderSettings.md)
  - [SendPostApi.ModelsProviderType](docs/ModelsProviderType.md)
  - [SendPostApi.ModelsQEmailMessage](docs/ModelsQEmailMessage.md)
  - [SendPostApi.ModelsQEvent](docs/ModelsQEvent.md)

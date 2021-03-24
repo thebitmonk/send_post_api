@@ -41,8 +41,9 @@
           // TODO: uncomment, update parameter values for labelRouterCount call and complete the assertions
           /*
           var xAccountApiKey = "xAccountApiKey_example";
+          var type = "type_example";
 
-          instance.labelRouterCount(xAccountApiKey, function(error, data, response) {
+          instance.labelRouterCount(xAccountApiKey, type, function(error, data, response) {
             if (error) {
               done(error);
               return;

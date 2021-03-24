@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsBackOffConfiguration', 'model/ModelsBackOffTrigger'], factory);
+    define(['ApiClient', 'model/ModelsProviderSettings'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ModelsBackOffConfiguration'), require('./ModelsBackOffTrigger'));
+    module.exports = factory(require('../ApiClient'), require('./ModelsProviderSettings'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsIIP = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsBackOffConfiguration, root.SendPostApi.ModelsBackOffTrigger);
+    root.SendPostApi.ModelsIIP = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsProviderSettings);
   }
-}(this, function(ApiClient, ModelsBackOffConfiguration, ModelsBackOffTrigger) {
+}(this, function(ApiClient, ModelsProviderSettings) {
   'use strict';
 
   /**
@@ -55,58 +55,23 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('backOffConfiguration'))
-        obj.backOffConfiguration = ModelsBackOffConfiguration.constructFromObject(data['backOffConfiguration']);
-      if (data.hasOwnProperty('backOffTrigger'))
-        obj.backOffTrigger = ModelsBackOffTrigger.constructFromObject(data['backOffTrigger']);
-      if (data.hasOwnProperty('maxConcurrentConnections'))
-        obj.maxConcurrentConnections = ApiClient.convertToType(data['maxConcurrentConnections'], 'Number');
-      if (data.hasOwnProperty('maxSendPerDay'))
-        obj.maxSendPerDay = ApiClient.convertToType(data['maxSendPerDay'], 'Number');
-      if (data.hasOwnProperty('maxSendPerHour'))
-        obj.maxSendPerHour = ApiClient.convertToType(data['maxSendPerHour'], 'Number');
-      if (data.hasOwnProperty('maxSendPerMinute'))
-        obj.maxSendPerMinute = ApiClient.convertToType(data['maxSendPerMinute'], 'Number');
-      if (data.hasOwnProperty('name'))
-        obj.name = ApiClient.convertToType(data['name'], 'String');
+      if (data.hasOwnProperty('labels'))
+        obj.labels = ApiClient.convertToType(data['labels'], Object);
+      if (data.hasOwnProperty('providerSettings'))
+        obj.providerSettings = ModelsProviderSettings.constructFromObject(data['providerSettings']);
     }
     return obj;
   }
 
   /**
-   * @member {module:model/ModelsBackOffConfiguration} backOffConfiguration
+   * @member {Object} labels
    */
-  exports.prototype.backOffConfiguration = undefined;
+  exports.prototype.labels = undefined;
 
   /**
-   * @member {module:model/ModelsBackOffTrigger} backOffTrigger
+   * @member {module:model/ModelsProviderSettings} providerSettings
    */
-  exports.prototype.backOffTrigger = undefined;
-
-  /**
-   * @member {Number} maxConcurrentConnections
-   */
-  exports.prototype.maxConcurrentConnections = undefined;
-
-  /**
-   * @member {Number} maxSendPerDay
-   */
-  exports.prototype.maxSendPerDay = undefined;
-
-  /**
-   * @member {Number} maxSendPerHour
-   */
-  exports.prototype.maxSendPerHour = undefined;
-
-  /**
-   * @member {Number} maxSendPerMinute
-   */
-  exports.prototype.maxSendPerMinute = undefined;
-
-  /**
-   * @member {String} name
-   */
-  exports.prototype.name = undefined;
+  exports.prototype.providerSettings = undefined;
 
 
   return exports;

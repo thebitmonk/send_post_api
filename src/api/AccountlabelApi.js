@@ -59,10 +59,11 @@
     /**
      * Count Total Labels
      * @param {String} xAccountApiKey Account API Key
+     * @param {String} type get all labels type
      * @param {module:api/AccountlabelApi~labelRouterCountCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsCountStat}
      */
-    this.labelRouterCount = function(xAccountApiKey, callback) {
+    this.labelRouterCount = function(xAccountApiKey, type, callback) {
       var postBody = null;
 
       // verify the required parameter 'xAccountApiKey' is set
@@ -70,10 +71,16 @@
         throw new Error("Missing the required parameter 'xAccountApiKey' when calling labelRouterCount");
       }
 
+      // verify the required parameter 'type' is set
+      if (type === undefined || type === null) {
+        throw new Error("Missing the required parameter 'type' when calling labelRouterCount");
+      }
+
 
       var pathParams = {
       };
       var queryParams = {
+        'type': type,
       };
       var collectionQueryParams = {
       };
