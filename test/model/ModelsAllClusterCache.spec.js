@@ -31,32 +31,20 @@
   var instance;
 
   describe('(package)', function() {
-    describe('ModelsIIP', function() {
+    describe('ModelsAllClusterCache', function() {
       beforeEach(function() {
-        instance = new SendPostApi.ModelsIIP();
+        instance = new SendPostApi.ModelsAllClusterCache();
       });
 
-      it('should create an instance of ModelsIIP', function() {
-        // TODO: update the code to test ModelsIIP
-        expect(instance).to.be.a(SendPostApi.ModelsIIP);
+      it('should create an instance of ModelsAllClusterCache', function() {
+        // TODO: update the code to test ModelsAllClusterCache
+        expect(instance).to.be.a(SendPostApi.ModelsAllClusterCache);
       });
 
-      it('should have the property labels (base name: "labels")', function() {
-        // TODO: update the code to test the property labels
-        expect(instance).to.have.property('labels');
-        // expect(instance.labels).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property providerSettings (base name: "providerSettings")', function() {
-        // TODO: update the code to test the property providerSettings
-        expect(instance).to.have.property('providerSettings');
-        // expect(instance.providerSettings).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property type (base name: "type")', function() {
-        // TODO: update the code to test the property type
-        expect(instance).to.have.property('type');
-        // expect(instance.type).to.be(expectedValueLiteral);
+      it('should have the property result (base name: "result")', function() {
+        // TODO: update the code to test the property result
+        expect(instance).to.have.property('result');
+        // expect(instance.result).to.be(expectedValueLiteral);
       });
 
     });

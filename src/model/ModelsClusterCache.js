@@ -17,66 +17,73 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsIIPUpdateType', 'model/ModelsProviderSettings'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ModelsIIPUpdateType'), require('./ModelsProviderSettings'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsIIP = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsIIPUpdateType, root.SendPostApi.ModelsProviderSettings);
+    root.SendPostApi.ModelsClusterCache = factory(root.SendPostApi.ApiClient);
   }
-}(this, function(ApiClient, ModelsIIPUpdateType, ModelsProviderSettings) {
+}(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The ModelsIIP model module.
-   * @module model/ModelsIIP
+   * The ModelsClusterCache model module.
+   * @module model/ModelsClusterCache
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>ModelsIIP</code>.
-   * @alias module:model/ModelsIIP
+   * Constructs a new <code>ModelsClusterCache</code>.
+   * @alias module:model/ModelsClusterCache
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>ModelsIIP</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ModelsClusterCache</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ModelsIIP} obj Optional instance to populate.
-   * @return {module:model/ModelsIIP} The populated <code>ModelsIIP</code> instance.
+   * @param {module:model/ModelsClusterCache} obj Optional instance to populate.
+   * @return {module:model/ModelsClusterCache} The populated <code>ModelsClusterCache</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('labels'))
-        obj.labels = ApiClient.convertToType(data['labels'], Object);
-      if (data.hasOwnProperty('providerSettings'))
-        obj.providerSettings = ModelsProviderSettings.constructFromObject(data['providerSettings']);
+      if (data.hasOwnProperty('data'))
+        obj.data = ApiClient.convertToType(data['data'], 'String');
+      if (data.hasOwnProperty('found'))
+        obj.found = ApiClient.convertToType(data['found'], 'Boolean');
+      if (data.hasOwnProperty('key'))
+        obj.key = ApiClient.convertToType(data['key'], 'String');
       if (data.hasOwnProperty('type'))
-        obj.type = ModelsIIPUpdateType.constructFromObject(data['type']);
+        obj.type = ApiClient.convertToType(data['type'], 'String');
     }
     return obj;
   }
 
   /**
-   * @member {Object} labels
+   * @member {String} data
    */
-  exports.prototype.labels = undefined;
+  exports.prototype.data = undefined;
 
   /**
-   * @member {module:model/ModelsProviderSettings} providerSettings
+   * @member {Boolean} found
    */
-  exports.prototype.providerSettings = undefined;
+  exports.prototype.found = undefined;
 
   /**
-   * @member {module:model/ModelsIIPUpdateType} type
+   * @member {String} key
+   */
+  exports.prototype.key = undefined;
+
+  /**
+   * @member {String} type
    */
   exports.prototype.type = undefined;
 

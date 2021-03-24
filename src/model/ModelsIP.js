@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsIPType', 'model/ModelsSystemDomain'], factory);
+    define(['ApiClient', 'model/ModelsIPType', 'model/ModelsLabel', 'model/ModelsSystemDomain'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ModelsIPType'), require('./ModelsSystemDomain'));
+    module.exports = factory(require('../ApiClient'), require('./ModelsIPType'), require('./ModelsLabel'), require('./ModelsSystemDomain'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsIP = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsIPType, root.SendPostApi.ModelsSystemDomain);
+    root.SendPostApi.ModelsIP = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsIPType, root.SendPostApi.ModelsLabel, root.SendPostApi.ModelsSystemDomain);
   }
-}(this, function(ApiClient, ModelsIPType, ModelsSystemDomain) {
+}(this, function(ApiClient, ModelsIPType, ModelsLabel, ModelsSystemDomain) {
   'use strict';
 
   /**
@@ -75,6 +75,8 @@
         obj.infraClassification = ApiClient.convertToType(data['infraClassification'], 'String');
       if (data.hasOwnProperty('infraMonitor'))
         obj.infraMonitor = ApiClient.convertToType(data['infraMonitor'], 'Boolean');
+      if (data.hasOwnProperty('labels'))
+        obj.labels = ApiClient.convertToType(data['labels'], [ModelsLabel]);
       if (data.hasOwnProperty('mailruSettings'))
         obj.mailruSettings = ApiClient.convertToType(data['mailruSettings'], 'String');
       if (data.hasOwnProperty('microsoftSettings'))
@@ -150,6 +152,11 @@
    * @member {Boolean} infraMonitor
    */
   exports.prototype.infraMonitor = undefined;
+
+  /**
+   * @member {Array.<module:model/ModelsLabel>} labels
+   */
+  exports.prototype.labels = undefined;
 
   /**
    * @member {String} mailruSettings

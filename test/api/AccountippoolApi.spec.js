@@ -109,6 +109,26 @@
                 expect(data.infraClassification).to.be("");
                 expect(data.infraMonitor).to.be.a('boolean');
                 expect(data.infraMonitor).to.be(false);
+                {
+                  let dataCtr = data.labels;
+                  expect(dataCtr).to.be.an(Array);
+                  expect(dataCtr).to.not.be.empty();
+                  for (let p in dataCtr) {
+                    let data = dataCtr[p];
+                    expect(data).to.be.a(SendPostApi.ModelsLabel);
+                    expect(data.color).to.be.a('string');
+                    expect(data.color).to.be("");
+                    expect(data.created).to.be.a('number');
+                    expect(data.created).to.be("0");
+                    expect(data.id).to.be.a('number');
+                    expect(data.id).to.be("0");
+                    expect(data.name).to.be.a('string');
+                    expect(data.name).to.be("");
+                    expect(data.type).to.be.a(SendPostApi.ModelsLabelType);
+            
+    
+                          }
+                }
                 expect(data.mailruSettings).to.be.a('string');
                 expect(data.mailruSettings).to.be("");
                 expect(data.microsoftSettings).to.be.a('string');
@@ -255,6 +275,26 @@
                 expect(data.infraClassification).to.be("");
                 expect(data.infraMonitor).to.be.a('boolean');
                 expect(data.infraMonitor).to.be(false);
+                {
+                  let dataCtr = data.labels;
+                  expect(dataCtr).to.be.an(Array);
+                  expect(dataCtr).to.not.be.empty();
+                  for (let p in dataCtr) {
+                    let data = dataCtr[p];
+                    expect(data).to.be.a(SendPostApi.ModelsLabel);
+                    expect(data.color).to.be.a('string');
+                    expect(data.color).to.be("");
+                    expect(data.created).to.be.a('number');
+                    expect(data.created).to.be("0");
+                    expect(data.id).to.be.a('number');
+                    expect(data.id).to.be("0");
+                    expect(data.name).to.be.a('string');
+                    expect(data.name).to.be("");
+                    expect(data.type).to.be.a(SendPostApi.ModelsLabelType);
+            
+    
+                          }
+                }
                 expect(data.mailruSettings).to.be.a('string');
                 expect(data.mailruSettings).to.be("");
                 expect(data.microsoftSettings).to.be.a('string');
@@ -383,6 +423,26 @@
                   expect(data.infraClassification).to.be("");
                   expect(data.infraMonitor).to.be.a('boolean');
                   expect(data.infraMonitor).to.be(false);
+                  {
+                    let dataCtr = data.labels;
+                    expect(dataCtr).to.be.an(Array);
+                    expect(dataCtr).to.not.be.empty();
+                    for (let p in dataCtr) {
+                      let data = dataCtr[p];
+                      expect(data).to.be.a(SendPostApi.ModelsLabel);
+                      expect(data.color).to.be.a('string');
+                      expect(data.color).to.be("");
+                      expect(data.created).to.be.a('number');
+                      expect(data.created).to.be("0");
+                      expect(data.id).to.be.a('number');
+                      expect(data.id).to.be("0");
+                      expect(data.name).to.be.a('string');
+                      expect(data.name).to.be("");
+                      expect(data.type).to.be.a(SendPostApi.ModelsLabelType);
+              
+      
+                            }
+                  }
                   expect(data.mailruSettings).to.be.a('string');
                   expect(data.mailruSettings).to.be("");
                   expect(data.microsoftSettings).to.be.a('string');
@@ -511,6 +571,26 @@
                 expect(data.infraClassification).to.be("");
                 expect(data.infraMonitor).to.be.a('boolean');
                 expect(data.infraMonitor).to.be(false);
+                {
+                  let dataCtr = data.labels;
+                  expect(dataCtr).to.be.an(Array);
+                  expect(dataCtr).to.not.be.empty();
+                  for (let p in dataCtr) {
+                    let data = dataCtr[p];
+                    expect(data).to.be.a(SendPostApi.ModelsLabel);
+                    expect(data.color).to.be.a('string');
+                    expect(data.color).to.be("");
+                    expect(data.created).to.be.a('number');
+                    expect(data.created).to.be("0");
+                    expect(data.id).to.be.a('number');
+                    expect(data.id).to.be("0");
+                    expect(data.name).to.be.a('string');
+                    expect(data.name).to.be("");
+                    expect(data.type).to.be.a(SendPostApi.ModelsLabelType);
+            
+    
+                          }
+                }
                 expect(data.mailruSettings).to.be.a('string');
                 expect(data.mailruSettings).to.be("");
                 expect(data.microsoftSettings).to.be.a('string');

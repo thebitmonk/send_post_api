@@ -31,32 +31,14 @@
   var instance;
 
   describe('(package)', function() {
-    describe('ModelsIIP', function() {
+    describe('ModelsLabelType', function() {
       beforeEach(function() {
-        instance = new SendPostApi.ModelsIIP();
+        instance = new SendPostApi.ModelsLabelType();
       });
 
-      it('should create an instance of ModelsIIP', function() {
-        // TODO: update the code to test ModelsIIP
-        expect(instance).to.be.a(SendPostApi.ModelsIIP);
-      });
-
-      it('should have the property labels (base name: "labels")', function() {
-        // TODO: update the code to test the property labels
-        expect(instance).to.have.property('labels');
-        // expect(instance.labels).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property providerSettings (base name: "providerSettings")', function() {
-        // TODO: update the code to test the property providerSettings
-        expect(instance).to.have.property('providerSettings');
-        // expect(instance.providerSettings).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property type (base name: "type")', function() {
-        // TODO: update the code to test the property type
-        expect(instance).to.have.property('type');
-        // expect(instance.type).to.be(expectedValueLiteral);
+      it('should create an instance of ModelsLabelType', function() {
+        // TODO: update the code to test ModelsLabelType
+        expect(instance).to.be.a(SendPostApi.ModelsLabelType);
       });
 
     });

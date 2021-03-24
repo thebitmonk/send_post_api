@@ -131,6 +131,8 @@
                     expect(data.id).to.be("0");
                     expect(data.name).to.be.a('string');
                     expect(data.name).to.be("");
+                    expect(data.type).to.be.a(SendPostApi.ModelsLabelType);
+            
     
                           }
                 }

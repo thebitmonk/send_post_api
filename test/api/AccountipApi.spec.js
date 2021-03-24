@@ -74,6 +74,26 @@
               expect(data.infraClassification).to.be("");
               expect(data.infraMonitor).to.be.a('boolean');
               expect(data.infraMonitor).to.be(false);
+              {
+                let dataCtr = data.labels;
+                expect(dataCtr).to.be.an(Array);
+                expect(dataCtr).to.not.be.empty();
+                for (let p in dataCtr) {
+                  let data = dataCtr[p];
+                  expect(data).to.be.a(SendPostApi.ModelsLabel);
+                  expect(data.color).to.be.a('string');
+                  expect(data.color).to.be("");
+                  expect(data.created).to.be.a('number');
+                  expect(data.created).to.be("0");
+                  expect(data.id).to.be.a('number');
+                  expect(data.id).to.be("0");
+                  expect(data.name).to.be.a('string');
+                  expect(data.name).to.be("");
+                  expect(data.type).to.be.a(SendPostApi.ModelsLabelType);
+          
+  
+                        }
+              }
               expect(data.mailruSettings).to.be.a('string');
               expect(data.mailruSettings).to.be("");
               expect(data.microsoftSettings).to.be.a('string');
@@ -146,6 +166,8 @@
           /*
           var xAccountApiKey = "xAccountApiKey_example";
           var opts = {};
+          opts.filterBy = "filterBy_example";
+          opts.filterValue = 789;
           opts.search = "search_example";
 
           instance.iPRouterCount(xAccountApiKey, opts, function(error, data, response) {
@@ -225,6 +247,26 @@
             expect(data.infraClassification).to.be("");
             expect(data.infraMonitor).to.be.a('boolean');
             expect(data.infraMonitor).to.be(false);
+            {
+              let dataCtr = data.labels;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(SendPostApi.ModelsLabel);
+                expect(data.color).to.be.a('string');
+                expect(data.color).to.be("");
+                expect(data.created).to.be.a('number');
+                expect(data.created).to.be("0");
+                expect(data.id).to.be.a('number');
+                expect(data.id).to.be("0");
+                expect(data.name).to.be.a('string');
+                expect(data.name).to.be("");
+                expect(data.type).to.be.a(SendPostApi.ModelsLabelType);
+        
+
+                      }
+            }
             expect(data.mailruSettings).to.be.a('string');
             expect(data.mailruSettings).to.be("");
             expect(data.microsoftSettings).to.be.a('string');
@@ -298,6 +340,8 @@
           var opts = {};
           opts.offset = 789;
           opts.limit = 789;
+          opts.filterBy = "filterBy_example";
+          opts.filterValue = 789;
           opts.search = "search_example";
 
           instance.iPRouterGetAll(xAccountApiKey, opts, function(error, data, response) {
@@ -332,6 +376,26 @@
               expect(data.infraClassification).to.be("");
               expect(data.infraMonitor).to.be.a('boolean');
               expect(data.infraMonitor).to.be(false);
+              {
+                let dataCtr = data.labels;
+                expect(dataCtr).to.be.an(Array);
+                expect(dataCtr).to.not.be.empty();
+                for (let p in dataCtr) {
+                  let data = dataCtr[p];
+                  expect(data).to.be.a(SendPostApi.ModelsLabel);
+                  expect(data.color).to.be.a('string');
+                  expect(data.color).to.be("");
+                  expect(data.created).to.be.a('number');
+                  expect(data.created).to.be("0");
+                  expect(data.id).to.be.a('number');
+                  expect(data.id).to.be("0");
+                  expect(data.name).to.be.a('string');
+                  expect(data.name).to.be("");
+                  expect(data.type).to.be.a(SendPostApi.ModelsLabelType);
+          
+  
+                        }
+              }
               expect(data.mailruSettings).to.be.a('string');
               expect(data.mailruSettings).to.be("");
               expect(data.microsoftSettings).to.be.a('string');
@@ -465,6 +529,26 @@
                 expect(data.relatedIP.infraClassification).to.be("");
                 expect(data.relatedIP.infraMonitor).to.be.a('boolean');
                 expect(data.relatedIP.infraMonitor).to.be(false);
+                {
+                  let dataCtr = data.relatedIP.labels;
+                  expect(dataCtr).to.be.an(Array);
+                  expect(dataCtr).to.not.be.empty();
+                  for (let p in dataCtr) {
+                    let data = dataCtr[p];
+                    expect(data).to.be.a(SendPostApi.ModelsLabel);
+                    expect(data.color).to.be.a('string');
+                    expect(data.color).to.be("");
+                    expect(data.created).to.be.a('number');
+                    expect(data.created).to.be("0");
+                    expect(data.id).to.be.a('number');
+                    expect(data.id).to.be("0");
+                    expect(data.name).to.be.a('string');
+                    expect(data.name).to.be("");
+                    expect(data.type).to.be.a(SendPostApi.ModelsLabelType);
+            
+    
+                          }
+                }
                 expect(data.relatedIP.mailruSettings).to.be.a('string');
                 expect(data.relatedIP.mailruSettings).to.be("");
                 expect(data.relatedIP.microsoftSettings).to.be.a('string');
@@ -544,6 +628,8 @@
                     expect(data.id).to.be("0");
                     expect(data.name).to.be.a('string');
                     expect(data.name).to.be("");
+                    expect(data.type).to.be.a(SendPostApi.ModelsLabelType);
+            
     
                           }
                 }
@@ -614,25 +700,28 @@
           var xAccountApiKey = "xAccountApiKey_example";
           var ipid = 789;
           var body = new SendPostApi.ModelsIIP();
-          body.backOffConfiguration = new SendPostApi.ModelsBackOffConfiguration();
-          body.backOffConfiguration.concurrentConnections = "0";
-          body.backOffConfiguration.concurrentConnectionsType = new SendPostApi.ModelsBackOffDecreaseType();
-          body.backOffConfiguration.sendPerDay = "0";
-          body.backOffConfiguration.sendPerDayType = new SendPostApi.ModelsBackOffDecreaseType();
-          body.backOffConfiguration.sendPerHour = "0";
-          body.backOffConfiguration.sendPerHourType = new SendPostApi.ModelsBackOffDecreaseType();
-          body.backOffConfiguration.sendPerMinute = "0";
-          body.backOffConfiguration.sendPerMinuteType = new SendPostApi.ModelsBackOffDecreaseType();
-          body.backOffTrigger = new SendPostApi.ModelsBackOffTrigger();
-          body.backOffTrigger.deferralPercentage = "0";
-          body.backOffTrigger.durationInMinutes = "0";
-          body.backOffTrigger.hardBouncePercentage = "0";
-          body.backOffTrigger.minimumAttempts = "0";
-          body.maxConcurrentConnections = "0";
-          body.maxSendPerDay = "0";
-          body.maxSendPerHour = "0";
-          body.maxSendPerMinute = "0";
-          body.name = "";
+          body.labels = ;
+          body.providerSettings = new SendPostApi.ModelsProviderSettings();
+          body.providerSettings.backOffConfiguration = new SendPostApi.ModelsBackOffConfiguration();
+          body.providerSettings.backOffConfiguration.concurrentConnections = "0";
+          body.providerSettings.backOffConfiguration.concurrentConnectionsType = new SendPostApi.ModelsBackOffDecreaseType();
+          body.providerSettings.backOffConfiguration.sendPerDay = "0";
+          body.providerSettings.backOffConfiguration.sendPerDayType = new SendPostApi.ModelsBackOffDecreaseType();
+          body.providerSettings.backOffConfiguration.sendPerHour = "0";
+          body.providerSettings.backOffConfiguration.sendPerHourType = new SendPostApi.ModelsBackOffDecreaseType();
+          body.providerSettings.backOffConfiguration.sendPerMinute = "0";
+          body.providerSettings.backOffConfiguration.sendPerMinuteType = new SendPostApi.ModelsBackOffDecreaseType();
+          body.providerSettings.backOffTrigger = new SendPostApi.ModelsBackOffTrigger();
+          body.providerSettings.backOffTrigger.deferralPercentage = "0";
+          body.providerSettings.backOffTrigger.durationInMinutes = "0";
+          body.providerSettings.backOffTrigger.hardBouncePercentage = "0";
+          body.providerSettings.backOffTrigger.minimumAttempts = "0";
+          body.providerSettings.maxConcurrentConnections = "0";
+          body.providerSettings.maxSendPerDay = "0";
+          body.providerSettings.maxSendPerHour = "0";
+          body.providerSettings.maxSendPerMinute = "0";
+          body.providerSettings.name = "";
+          body.type = new SendPostApi.ModelsIIPUpdateType();
 
           instance.iPRouterUpdate(xAccountApiKey, ipid, body, function(error, data, response) {
             if (error) {
@@ -661,6 +750,26 @@
             expect(data.infraClassification).to.be("");
             expect(data.infraMonitor).to.be.a('boolean');
             expect(data.infraMonitor).to.be(false);
+            {
+              let dataCtr = data.labels;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(SendPostApi.ModelsLabel);
+                expect(data.color).to.be.a('string');
+                expect(data.color).to.be("");
+                expect(data.created).to.be.a('number');
+                expect(data.created).to.be("0");
+                expect(data.id).to.be.a('number');
+                expect(data.id).to.be("0");
+                expect(data.name).to.be.a('string');
+                expect(data.name).to.be("");
+                expect(data.type).to.be.a(SendPostApi.ModelsLabelType);
+        
+
+                      }
+            }
             expect(data.mailruSettings).to.be.a('string');
             expect(data.mailruSettings).to.be("");
             expect(data.microsoftSettings).to.be.a('string');

@@ -31,38 +31,32 @@
   var instance;
 
   describe('(package)', function() {
-    describe('ModelsLabel', function() {
+    describe('ModelsClusterCache', function() {
       beforeEach(function() {
-        instance = new SendPostApi.ModelsLabel();
+        instance = new SendPostApi.ModelsClusterCache();
       });
 
-      it('should create an instance of ModelsLabel', function() {
-        // TODO: update the code to test ModelsLabel
-        expect(instance).to.be.a(SendPostApi.ModelsLabel);
+      it('should create an instance of ModelsClusterCache', function() {
+        // TODO: update the code to test ModelsClusterCache
+        expect(instance).to.be.a(SendPostApi.ModelsClusterCache);
       });
 
-      it('should have the property color (base name: "color")', function() {
-        // TODO: update the code to test the property color
-        expect(instance).to.have.property('color');
-        // expect(instance.color).to.be(expectedValueLiteral);
+      it('should have the property data (base name: "data")', function() {
+        // TODO: update the code to test the property data
+        expect(instance).to.have.property('data');
+        // expect(instance.data).to.be(expectedValueLiteral);
       });
 
-      it('should have the property created (base name: "created")', function() {
-        // TODO: update the code to test the property created
-        expect(instance).to.have.property('created');
-        // expect(instance.created).to.be(expectedValueLiteral);
+      it('should have the property found (base name: "found")', function() {
+        // TODO: update the code to test the property found
+        expect(instance).to.have.property('found');
+        // expect(instance.found).to.be(expectedValueLiteral);
       });
 
-      it('should have the property id (base name: "id")', function() {
-        // TODO: update the code to test the property id
-        expect(instance).to.have.property('id');
-        // expect(instance.id).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property name (base name: "name")', function() {
-        // TODO: update the code to test the property name
-        expect(instance).to.have.property('name');
-        // expect(instance.name).to.be(expectedValueLiteral);
+      it('should have the property key (base name: "key")', function() {
+        // TODO: update the code to test the property key
+        expect(instance).to.have.property('key');
+        // expect(instance.key).to.be(expectedValueLiteral);
       });
 
       it('should have the property type (base name: "type")', function() {
