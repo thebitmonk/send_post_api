@@ -368,6 +368,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsIESubAccount](docs/ModelsIESubAccount.md)
  - [SendPostApi.ModelsIETag](docs/ModelsIETag.md)
  - [SendPostApi.ModelsIIP](docs/ModelsIIP.md)
+ - [SendPostApi.ModelsIIPUpdateType](docs/ModelsIIPUpdateType.md)
  - [SendPostApi.ModelsIP](docs/ModelsIP.md)
  - [SendPostApi.ModelsIPPool](docs/ModelsIPPool.md)
  - [SendPostApi.ModelsIPPoolType](docs/ModelsIPPoolType.md)

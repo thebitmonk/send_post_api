@@ -721,6 +721,7 @@
           body.providerSettings.maxSendPerHour = "0";
           body.providerSettings.maxSendPerMinute = "0";
           body.providerSettings.name = "";
+          body.type = new SendPostApi.ModelsIIPUpdateType();
 
           instance.iPRouterUpdate(xAccountApiKey, ipid, body, function(error, data, response) {
             if (error) {
