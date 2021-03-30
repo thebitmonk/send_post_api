@@ -47,6 +47,24 @@
         // expect(instance.aolSettings).to.be(expectedValueLiteral);
       });
 
+      it('should have the property autoWarmupEnabled (base name: "autoWarmupEnabled")', function() {
+        // TODO: update the code to test the property autoWarmupEnabled
+        expect(instance).to.have.property('autoWarmupEnabled');
+        // expect(instance.autoWarmupEnabled).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property autoWarmupLastRunAt (base name: "autoWarmupLastRunAt")', function() {
+        // TODO: update the code to test the property autoWarmupLastRunAt
+        expect(instance).to.have.property('autoWarmupLastRunAt');
+        // expect(instance.autoWarmupLastRunAt).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property autoWarmupStage (base name: "autoWarmupStage")', function() {
+        // TODO: update the code to test the property autoWarmupStage
+        expect(instance).to.have.property('autoWarmupStage');
+        // expect(instance.autoWarmupStage).to.be(expectedValueLiteral);
+      });
+
       it('should have the property comcastSettings (base name: "comcastSettings")', function() {
         // TODO: update the code to test the property comcastSettings
         expect(instance).to.have.property('comcastSettings');
@@ -149,7 +167,7 @@
         // expect(instance.type).to.be(expectedValueLiteral);
       });
 
-      it('should have the property warmUpNotComplete (base name: "warm_up_not_complete")', function() {
+      it('should have the property warmUpNotComplete (base name: "warmUpNotComplete")', function() {
         // TODO: update the code to test the property warmUpNotComplete
         expect(instance).to.have.property('warmUpNotComplete');
         // expect(instance.warmUpNotComplete).to.be(expectedValueLiteral);

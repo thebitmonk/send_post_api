@@ -41,8 +41,11 @@
           // TODO: uncomment, update parameter values for suppressionRouterCount call and complete the assertions
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var opts = {};
+          opts.from = "from_example";
+          opts.to = "to_example";
 
-          instance.suppressionRouterCount(xSubAccountApiKey, function(error, data, response) {
+          instance.suppressionRouterCount(xSubAccountApiKey, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -188,6 +191,8 @@
           opts.offset = 789;
           opts.limit = 789;
           opts.search = "search_example";
+          opts.from = "from_example";
+          opts.to = "to_example";
 
           instance.suppressionRouterGetAllSuppressions(xSubAccountApiKey, opts, function(error, data, response) {
             if (error) {

@@ -307,6 +307,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsAlertResponse](docs/ModelsAlertResponse.md)
  - [SendPostApi.ModelsAllClusterCache](docs/ModelsAllClusterCache.md)
  - [SendPostApi.ModelsAuthInfo](docs/ModelsAuthInfo.md)
+ - [SendPostApi.ModelsAutoWarmupPlan](docs/ModelsAutoWarmupPlan.md)
  - [SendPostApi.ModelsBackOffConfiguration](docs/ModelsBackOffConfiguration.md)
  - [SendPostApi.ModelsBackOffDecreaseType](docs/ModelsBackOffDecreaseType.md)
  - [SendPostApi.ModelsBackOffTrigger](docs/ModelsBackOffTrigger.md)

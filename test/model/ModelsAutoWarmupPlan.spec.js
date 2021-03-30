@@ -31,14 +31,32 @@
   var instance;
 
   describe('(package)', function() {
-    describe('ModelFalse', function() {
+    describe('ModelsAutoWarmupPlan', function() {
       beforeEach(function() {
-        instance = new SendPostApi.ModelFalse();
+        instance = new SendPostApi.ModelsAutoWarmupPlan();
       });
 
-      it('should create an instance of ModelFalse', function() {
-        // TODO: update the code to test ModelFalse
-        expect(instance).to.be.a(SendPostApi.ModelFalse);
+      it('should create an instance of ModelsAutoWarmupPlan', function() {
+        // TODO: update the code to test ModelsAutoWarmupPlan
+        expect(instance).to.be.a(SendPostApi.ModelsAutoWarmupPlan);
+      });
+
+      it('should have the property planSettings (base name: "PlanSettings")', function() {
+        // TODO: update the code to test the property planSettings
+        expect(instance).to.have.property('planSettings');
+        // expect(instance.planSettings).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property id (base name: "id")', function() {
+        // TODO: update the code to test the property id
+        expect(instance).to.have.property('id');
+        // expect(instance.id).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property name (base name: "name")', function() {
+        // TODO: update the code to test the property name
+        expect(instance).to.have.property('name');
+        // expect(instance.name).to.be(expectedValueLiteral);
       });
 
     });

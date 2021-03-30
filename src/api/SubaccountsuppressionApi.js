@@ -59,10 +59,14 @@
     /**
      * Count Total Suppressions
      * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.from from date
+     * @param {String} opts.to to date
      * @param {module:api/SubaccountsuppressionApi~suppressionRouterCountCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsCountStat}
      */
-    this.suppressionRouterCount = function(xSubAccountApiKey, callback) {
+    this.suppressionRouterCount = function(xSubAccountApiKey, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'xSubAccountApiKey' is set
@@ -74,6 +78,8 @@
       var pathParams = {
       };
       var queryParams = {
+        'from': opts['from'],
+        'to': opts['to'],
       };
       var collectionQueryParams = {
       };
@@ -306,6 +312,8 @@
      * @param {Number} opts.offset offset
      * @param {Number} opts.limit limit
      * @param {String} opts.search search
+     * @param {String} opts.from from date
+     * @param {String} opts.to to date
      * @param {module:api/SubaccountsuppressionApi~suppressionRouterGetAllSuppressionsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsSuppression>}
      */
@@ -325,6 +333,8 @@
         'offset': opts['offset'],
         'limit': opts['limit'],
         'search': opts['search'],
+        'from': opts['from'],
+        'to': opts['to'],
       };
       var collectionQueryParams = {
       };
