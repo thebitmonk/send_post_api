@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="suppressionRouterCount"></a>
 # **suppressionRouterCount**
-> ModelsCountStat suppressionRouterCount(xSubAccountApiKey)
+> ModelsCountStat suppressionRouterCount(xSubAccountApiKey, opts)
 
 
 
@@ -28,6 +28,10 @@ var apiInstance = new SendPostApi.SubaccountsuppressionApi();
 
 var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
 
+var opts = { 
+  'from': "from_example", // String | from date
+  'to': "to_example" // String | to date
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -36,7 +40,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.suppressionRouterCount(xSubAccountApiKey, callback);
+apiInstance.suppressionRouterCount(xSubAccountApiKey, opts, callback);
 ```
 
 ### Parameters
@@ -44,6 +48,8 @@ apiInstance.suppressionRouterCount(xSubAccountApiKey, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **from** | **String**| from date | [optional] 
+ **to** | **String**| to date | [optional] 
 
 ### Return type
 
@@ -267,7 +273,9 @@ var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API
 var opts = { 
   'offset': 789, // Number | offset
   'limit': 789, // Number | limit
-  'search': "search_example" // String | search
+  'search': "search_example", // String | search
+  'from': "from_example", // String | from date
+  'to': "to_example" // String | to date
 };
 
 var callback = function(error, data, response) {
@@ -288,6 +296,8 @@ Name | Type | Description  | Notes
  **offset** | **Number**| offset | [optional] 
  **limit** | **Number**| limit | [optional] 
  **search** | **String**| search | [optional] 
+ **from** | **String**| from date | [optional] 
+ **to** | **String**| to date | [optional] 
 
 ### Return type
 

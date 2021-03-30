@@ -26,35 +26,59 @@
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsSuppressionReason = factory(root.SendPostApi.ApiClient);
+    root.SendPostApi.ModelsAutoWarmupPlan = factory(root.SendPostApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The ModelsSuppressionReason model module.
-   * @module model/ModelsSuppressionReason
+   * The ModelsAutoWarmupPlan model module.
+   * @module model/ModelsAutoWarmupPlan
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>ModelsSuppressionReason</code>.
-   * @alias module:model/ModelsSuppressionReason
+   * Constructs a new <code>ModelsAutoWarmupPlan</code>.
+   * @alias module:model/ModelsAutoWarmupPlan
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>ModelsSuppressionReason</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ModelsAutoWarmupPlan</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ModelsSuppressionReason} obj Optional instance to populate.
-   * @return {module:model/ModelsSuppressionReason} The populated <code>ModelsSuppressionReason</code> instance.
+   * @param {module:model/ModelsAutoWarmupPlan} obj Optional instance to populate.
+   * @return {module:model/ModelsAutoWarmupPlan} The populated <code>ModelsAutoWarmupPlan</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
-    return data;
+    if (data) {
+      obj = obj || new exports();
+      if (data.hasOwnProperty('PlanSettings'))
+        obj.planSettings = ApiClient.convertToType(data['PlanSettings'], 'String');
+      if (data.hasOwnProperty('id'))
+        obj.id = ApiClient.convertToType(data['id'], 'Number');
+      if (data.hasOwnProperty('name'))
+        obj.name = ApiClient.convertToType(data['name'], 'String');
+    }
+    return obj;
   }
+
+  /**
+   * @member {String} planSettings
+   */
+  exports.prototype.planSettings = undefined;
+
+  /**
+   * @member {Number} id
+   */
+  exports.prototype.id = undefined;
+
+  /**
+   * @member {String} name
+   */
+  exports.prototype.name = undefined;
 
 
   return exports;

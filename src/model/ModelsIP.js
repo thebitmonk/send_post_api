@@ -57,6 +57,12 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('aolSettings'))
         obj.aolSettings = ApiClient.convertToType(data['aolSettings'], 'String');
+      if (data.hasOwnProperty('autoWarmupEnabled'))
+        obj.autoWarmupEnabled = ApiClient.convertToType(data['autoWarmupEnabled'], 'Boolean');
+      if (data.hasOwnProperty('autoWarmupLastRunAt'))
+        obj.autoWarmupLastRunAt = ApiClient.convertToType(data['autoWarmupLastRunAt'], 'Number');
+      if (data.hasOwnProperty('autoWarmupStage'))
+        obj.autoWarmupStage = ApiClient.convertToType(data['autoWarmupStage'], 'Number');
       if (data.hasOwnProperty('comcastSettings'))
         obj.comcastSettings = ApiClient.convertToType(data['comcastSettings'], 'String');
       if (data.hasOwnProperty('created'))
@@ -91,8 +97,8 @@
         obj.systemDomain = ModelsSystemDomain.constructFromObject(data['systemDomain']);
       if (data.hasOwnProperty('type'))
         obj.type = ModelsIPType.constructFromObject(data['type']);
-      if (data.hasOwnProperty('warm_up_not_complete'))
-        obj.warmUpNotComplete = ApiClient.convertToType(data['warm_up_not_complete'], 'Boolean');
+      if (data.hasOwnProperty('warmUpNotComplete'))
+        obj.warmUpNotComplete = ApiClient.convertToType(data['warmUpNotComplete'], 'Boolean');
       if (data.hasOwnProperty('yahooSettings'))
         obj.yahooSettings = ApiClient.convertToType(data['yahooSettings'], 'String');
       if (data.hasOwnProperty('yandexSettings'))
@@ -107,6 +113,21 @@
    * @member {String} aolSettings
    */
   exports.prototype.aolSettings = undefined;
+
+  /**
+   * @member {Boolean} autoWarmupEnabled
+   */
+  exports.prototype.autoWarmupEnabled = undefined;
+
+  /**
+   * @member {Number} autoWarmupLastRunAt
+   */
+  exports.prototype.autoWarmupLastRunAt = undefined;
+
+  /**
+   * @member {Number} autoWarmupStage
+   */
+  exports.prototype.autoWarmupStage = undefined;
 
   /**
    * @member {String} comcastSettings
