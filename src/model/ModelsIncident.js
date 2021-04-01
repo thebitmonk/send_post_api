@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('assignedTo'))
+        obj.assignedTo = ModelsMember.constructFromObject(data['assignedTo']);
       if (data.hasOwnProperty('author'))
         obj.author = ModelsMember.constructFromObject(data['author']);
       if (data.hasOwnProperty('created'))
@@ -63,8 +65,6 @@
         obj.description = ApiClient.convertToType(data['description'], 'String');
       if (data.hasOwnProperty('id'))
         obj.id = ApiClient.convertToType(data['id'], 'Number');
-      if (data.hasOwnProperty('member'))
-        obj.member = ModelsMember.constructFromObject(data['member']);
       if (data.hasOwnProperty('relatedIP'))
         obj.relatedIP = ModelsIP.constructFromObject(data['relatedIP']);
       if (data.hasOwnProperty('relatedSubAccount'))
@@ -80,6 +80,11 @@
     }
     return obj;
   }
+
+  /**
+   * @member {module:model/ModelsMember} assignedTo
+   */
+  exports.prototype.assignedTo = undefined;
 
   /**
    * @member {module:model/ModelsMember} author
@@ -100,11 +105,6 @@
    * @member {Number} id
    */
   exports.prototype.id = undefined;
-
-  /**
-   * @member {module:model/ModelsMember} member
-   */
-  exports.prototype.member = undefined;
 
   /**
    * @member {module:model/ModelsIP} relatedIP
