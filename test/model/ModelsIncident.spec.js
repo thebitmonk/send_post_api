@@ -65,6 +65,12 @@
         // expect(instance.id).to.be(expectedValueLiteral);
       });
 
+      it('should have the property member (base name: "member")', function() {
+        // TODO: update the code to test the property member
+        expect(instance).to.have.property('member');
+        // expect(instance.member).to.be(expectedValueLiteral);
+      });
+
       it('should have the property relatedIP (base name: "relatedIP")', function() {
         // TODO: update the code to test the property relatedIP
         expect(instance).to.have.property('relatedIP');
