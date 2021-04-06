@@ -41,6 +41,12 @@
         expect(instance).to.be.a(SendPostApi.ModelsIncident);
       });
 
+      it('should have the property assignedTo (base name: "assignedTo")', function() {
+        // TODO: update the code to test the property assignedTo
+        expect(instance).to.have.property('assignedTo');
+        // expect(instance.assignedTo).to.be(expectedValueLiteral);
+      });
+
       it('should have the property author (base name: "author")', function() {
         // TODO: update the code to test the property author
         expect(instance).to.have.property('author');

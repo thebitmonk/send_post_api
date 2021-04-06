@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('assignedTo'))
+        obj.assignedTo = ModelsIEMember.constructFromObject(data['assignedTo']);
       if (data.hasOwnProperty('author'))
         obj.author = ModelsIEMember.constructFromObject(data['author']);
       if (data.hasOwnProperty('description'))
@@ -72,6 +74,11 @@
     }
     return obj;
   }
+
+  /**
+   * @member {module:model/ModelsIEMember} assignedTo
+   */
+  exports.prototype.assignedTo = undefined;
 
   /**
    * @member {module:model/ModelsIEMember} author

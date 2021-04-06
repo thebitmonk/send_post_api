@@ -335,6 +335,27 @@
             for (let p in dataCtr) {
               let data = dataCtr[p];
               expect(data).to.be.a(SendPostApi.ModelsIncident);
+              expect(data.assignedTo).to.be.a(SendPostApi.ModelsMember);
+                    expect(data.assignedTo.companyName).to.be.a('string');
+                expect(data.assignedTo.companyName).to.be("");
+                expect(data.assignedTo.created).to.be.a('number');
+                expect(data.assignedTo.created).to.be("0");
+                expect(data.assignedTo.email).to.be.a('string');
+                expect(data.assignedTo.email).to.be("");
+                expect(data.assignedTo.id).to.be.a('number');
+                expect(data.assignedTo.id).to.be("0");
+                expect(data.assignedTo.isForbidden).to.be.a('boolean');
+                expect(data.assignedTo.isForbidden).to.be(false);
+                expect(data.assignedTo.isVerified).to.be.a('boolean');
+                expect(data.assignedTo.isVerified).to.be(false);
+                expect(data.assignedTo.name).to.be.a('string');
+                expect(data.assignedTo.name).to.be("");
+                expect(data.assignedTo.onboardQAnswered).to.be.a('boolean');
+                expect(data.assignedTo.onboardQAnswered).to.be(false);
+                expect(data.assignedTo.phoneNumber).to.be.a('string');
+                expect(data.assignedTo.phoneNumber).to.be("");
+                expect(data.assignedTo.url).to.be.a('string');
+                expect(data.assignedTo.url).to.be("");
               expect(data.author).to.be.a(SendPostApi.ModelsMember);
                     expect(data.author.companyName).to.be.a('string');
                 expect(data.author.companyName).to.be("");
