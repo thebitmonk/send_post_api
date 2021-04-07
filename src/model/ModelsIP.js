@@ -57,6 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('aolSettings'))
         obj.aolSettings = ApiClient.convertToType(data['aolSettings'], 'String');
+      if (data.hasOwnProperty('autoWarmupDelay'))
+        obj.autoWarmupDelay = ApiClient.convertToType(data['autoWarmupDelay'], 'Number');
       if (data.hasOwnProperty('autoWarmupEnabled'))
         obj.autoWarmupEnabled = ApiClient.convertToType(data['autoWarmupEnabled'], 'Boolean');
       if (data.hasOwnProperty('autoWarmupLastRunAt'))
@@ -113,6 +115,11 @@
    * @member {String} aolSettings
    */
   exports.prototype.aolSettings = undefined;
+
+  /**
+   * @member {Number} autoWarmupDelay
+   */
+  exports.prototype.autoWarmupDelay = undefined;
 
   /**
    * @member {Boolean} autoWarmupEnabled

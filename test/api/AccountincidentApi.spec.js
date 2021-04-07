@@ -133,6 +133,8 @@
               expect(data.incident.relatedIP).to.be.a(SendPostApi.ModelsIP);
                     expect(data.incident.relatedIP.aolSettings).to.be.a('string');
                 expect(data.incident.relatedIP.aolSettings).to.be("");
+                expect(data.incident.relatedIP.autoWarmupDelay).to.be.a('number');
+                expect(data.incident.relatedIP.autoWarmupDelay).to.be("0");
                 expect(data.incident.relatedIP.autoWarmupEnabled).to.be.a('boolean');
                 expect(data.incident.relatedIP.autoWarmupEnabled).to.be(false);
                 expect(data.incident.relatedIP.autoWarmupLastRunAt).to.be.a('number');
@@ -425,6 +427,8 @@
             expect(data.relatedIP).to.be.a(SendPostApi.ModelsIP);
                   expect(data.relatedIP.aolSettings).to.be.a('string');
               expect(data.relatedIP.aolSettings).to.be("");
+              expect(data.relatedIP.autoWarmupDelay).to.be.a('number');
+              expect(data.relatedIP.autoWarmupDelay).to.be("0");
               expect(data.relatedIP.autoWarmupEnabled).to.be.a('boolean');
               expect(data.relatedIP.autoWarmupEnabled).to.be(false);
               expect(data.relatedIP.autoWarmupLastRunAt).to.be.a('number');
@@ -687,6 +691,8 @@
               expect(data.relatedIP).to.be.a(SendPostApi.ModelsIP);
                     expect(data.relatedIP.aolSettings).to.be.a('string');
                 expect(data.relatedIP.aolSettings).to.be("");
+                expect(data.relatedIP.autoWarmupDelay).to.be.a('number');
+                expect(data.relatedIP.autoWarmupDelay).to.be("0");
                 expect(data.relatedIP.autoWarmupEnabled).to.be.a('boolean');
                 expect(data.relatedIP.autoWarmupEnabled).to.be(false);
                 expect(data.relatedIP.autoWarmupLastRunAt).to.be.a('number');
@@ -973,6 +979,8 @@
                 expect(data.incident.relatedIP).to.be.a(SendPostApi.ModelsIP);
                       expect(data.incident.relatedIP.aolSettings).to.be.a('string');
                   expect(data.incident.relatedIP.aolSettings).to.be("");
+                  expect(data.incident.relatedIP.autoWarmupDelay).to.be.a('number');
+                  expect(data.incident.relatedIP.autoWarmupDelay).to.be("0");
                   expect(data.incident.relatedIP.autoWarmupEnabled).to.be.a('boolean');
                   expect(data.incident.relatedIP.autoWarmupEnabled).to.be(false);
                   expect(data.incident.relatedIP.autoWarmupLastRunAt).to.be.a('number');
@@ -1226,6 +1234,8 @@
             expect(data.relatedIP).to.be.a(SendPostApi.ModelsIP);
                   expect(data.relatedIP.aolSettings).to.be.a('string');
               expect(data.relatedIP.aolSettings).to.be("");
+              expect(data.relatedIP.autoWarmupDelay).to.be.a('number');
+              expect(data.relatedIP.autoWarmupDelay).to.be("0");
               expect(data.relatedIP.autoWarmupEnabled).to.be.a('boolean');
               expect(data.relatedIP.autoWarmupEnabled).to.be(false);
               expect(data.relatedIP.autoWarmupLastRunAt).to.be.a('number');
@@ -1492,6 +1502,8 @@
             expect(data.relatedIP).to.be.a(SendPostApi.ModelsIP);
                   expect(data.relatedIP.aolSettings).to.be.a('string');
               expect(data.relatedIP.aolSettings).to.be("");
+              expect(data.relatedIP.autoWarmupDelay).to.be.a('number');
+              expect(data.relatedIP.autoWarmupDelay).to.be("0");
               expect(data.relatedIP.autoWarmupEnabled).to.be.a('boolean');
               expect(data.relatedIP.autoWarmupEnabled).to.be(false);
               expect(data.relatedIP.autoWarmupLastRunAt).to.be.a('number');

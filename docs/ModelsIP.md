@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **aolSettings** | **String** |  | [optional] 
+**autoWarmupDelay** | **Number** |  | [optional] 
 **autoWarmupEnabled** | **Boolean** |  | [optional] 
 **autoWarmupLastRunAt** | **Number** |  | [optional] 
 **autoWarmupStage** | **Number** |  | [optional] 
