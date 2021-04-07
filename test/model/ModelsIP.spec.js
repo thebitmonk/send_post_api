@@ -47,6 +47,12 @@
         // expect(instance.aolSettings).to.be(expectedValueLiteral);
       });
 
+      it('should have the property autoWarmupDelay (base name: "autoWarmupDelay")', function() {
+        // TODO: update the code to test the property autoWarmupDelay
+        expect(instance).to.have.property('autoWarmupDelay');
+        // expect(instance.autoWarmupDelay).to.be(expectedValueLiteral);
+      });
+
       it('should have the property autoWarmupEnabled (base name: "autoWarmupEnabled")', function() {
         // TODO: update the code to test the property autoWarmupEnabled
         expect(instance).to.have.property('autoWarmupEnabled');
