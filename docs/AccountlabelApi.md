@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="labelRouterCount"></a>
 # **labelRouterCount**
-> ModelsCountStat labelRouterCount(xAccountApiKey, type)
+> ModelsCountStat labelRouterCount(xAccountApiKey)
 
 
 
@@ -28,8 +28,6 @@ var apiInstance = new SendPostApi.AccountlabelApi();
 
 var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
-var type = "type_example"; // String | get all labels type
-
 
 var callback = function(error, data, response) {
   if (error) {
@@ -38,7 +36,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.labelRouterCount(xAccountApiKey, type, callback);
+apiInstance.labelRouterCount(xAccountApiKey, callback);
 ```
 
 ### Parameters
@@ -46,7 +44,6 @@ apiInstance.labelRouterCount(xAccountApiKey, type, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
- **type** | **String**| get all labels type | 
 
 ### Return type
 
@@ -210,7 +207,7 @@ No authorization required
 
 <a name="labelRouterGetAll"></a>
 # **labelRouterGetAll**
-> [ModelsLabel] labelRouterGetAll(xAccountApiKey, type)
+> [ModelsLabel] labelRouterGetAll(xAccountApiKey)
 
 
 
@@ -224,8 +221,6 @@ var apiInstance = new SendPostApi.AccountlabelApi();
 
 var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
-var type = "type_example"; // String | get all labels type
-
 
 var callback = function(error, data, response) {
   if (error) {
@@ -234,7 +229,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.labelRouterGetAll(xAccountApiKey, type, callback);
+apiInstance.labelRouterGetAll(xAccountApiKey, callback);
 ```
 
 ### Parameters
@@ -242,7 +237,6 @@ apiInstance.labelRouterGetAll(xAccountApiKey, type, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
- **type** | **String**| get all labels type | 
 
 ### Return type
 

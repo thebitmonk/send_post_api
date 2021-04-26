@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**providers** | [**[ModelsReportProvider]**](ModelsReportProvider.md) |  | [optional] 
+**providers** | [**[ModelsProvider]**](ModelsProvider.md) |  | [optional] 
 
 
