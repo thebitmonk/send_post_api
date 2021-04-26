@@ -128,6 +128,8 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountdomainApi* | [**accountDomainRouterCount**](docs/AccountdomainApi.md#accountDomainRouterCount) | **GET** /account/domain/count | 
 *SendPostApi.AccountdomainApi* | [**accountDomainRouterGetAll**](docs/AccountdomainApi.md#accountDomainRouterGetAll) | **GET** /account/domain/ | 
 *SendPostApi.AccountdomainReportApi* | [**domainReportRouterReputation**](docs/AccountdomainReportApi.md#domainReportRouterReputation) | **GET** /account/domainReport/reputation | 
+*SendPostApi.AccountdomainStatApi* | [**domainStatRouterGetAllAggregateDomainStatsByGroup**](docs/AccountdomainStatApi.md#domainStatRouterGetAllAggregateDomainStatsByGroup) | **GET** /account/domainStat/{domainName}/aggregate/provider | 
+*SendPostApi.AccountdomainStatApi* | [**domainStatRouterGetStatsForASingleDomainStats**](docs/AccountdomainStatApi.md#domainStatRouterGetStatsForASingleDomainStats) | **GET** /account/domainStat/{domainName}/aggregate | 
 *SendPostApi.AccounteventApi* | [**eventRouterCountAllEventsFromAAccountForAGivenTimeRange**](docs/AccounteventApi.md#eventRouterCountAllEventsFromAAccountForAGivenTimeRange) | **GET** /account/event/count | 
 *SendPostApi.AccounteventApi* | [**eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange**](docs/AccounteventApi.md#eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange) | **GET** /account/event/node/count | 
 *SendPostApi.AccounteventApi* | [**eventRouterGet**](docs/AccounteventApi.md#eventRouterGet) | **GET** /account/event/{eventId} | 
@@ -307,7 +309,9 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsAlertResponse](docs/ModelsAlertResponse.md)
  - [SendPostApi.ModelsAllClusterCache](docs/ModelsAllClusterCache.md)
  - [SendPostApi.ModelsAuthInfo](docs/ModelsAuthInfo.md)
+ - [SendPostApi.ModelsAutoWarmupContentRequest](docs/ModelsAutoWarmupContentRequest.md)
  - [SendPostApi.ModelsAutoWarmupPlan](docs/ModelsAutoWarmupPlan.md)
+ - [SendPostApi.ModelsAutoWarmupPlanRequest](docs/ModelsAutoWarmupPlanRequest.md)
  - [SendPostApi.ModelsAutoWarmupRecepientRequest](docs/ModelsAutoWarmupRecepientRequest.md)
  - [SendPostApi.ModelsBackOffConfiguration](docs/ModelsBackOffConfiguration.md)
  - [SendPostApi.ModelsBackOffDecreaseType](docs/ModelsBackOffDecreaseType.md)
@@ -327,6 +331,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsCleanedList](docs/ModelsCleanedList.md)
  - [SendPostApi.ModelsClusterCache](docs/ModelsClusterCache.md)
  - [SendPostApi.ModelsComment](docs/ModelsComment.md)
+ - [SendPostApi.ModelsContent](docs/ModelsContent.md)
  - [SendPostApi.ModelsCountStat](docs/ModelsCountStat.md)
  - [SendPostApi.ModelsCouponOptions](docs/ModelsCouponOptions.md)
  - [SendPostApi.ModelsCreateMailReport](docs/ModelsCreateMailReport.md)
@@ -394,6 +399,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsPIPStat](docs/ModelsPIPStat.md)
  - [SendPostApi.ModelsPaymentOptions](docs/ModelsPaymentOptions.md)
  - [SendPostApi.ModelsPaymentStatus](docs/ModelsPaymentStatus.md)
+ - [SendPostApi.ModelsPlanSettings](docs/ModelsPlanSettings.md)
  - [SendPostApi.ModelsProvider](docs/ModelsProvider.md)
  - [SendPostApi.ModelsProviderResult](docs/ModelsProviderResult.md)
  - [SendPostApi.ModelsProviderSettings](docs/ModelsProviderSettings.md)
@@ -433,6 +439,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsVerifyByTokenRequest](docs/ModelsVerifyByTokenRequest.md)
  - [SendPostApi.ModelsWMessage](docs/ModelsWMessage.md)
  - [SendPostApi.ModelsWarmupRecipient](docs/ModelsWarmupRecipient.md)
+ - [SendPostApi.ModelsWarmupSchedules](docs/ModelsWarmupSchedules.md)
  - [SendPostApi.Provider](docs/Provider.md)
  - [SendPostApi.UaparserDevice](docs/UaparserDevice.md)
  - [SendPostApi.UaparserOs](docs/UaparserOs.md)
