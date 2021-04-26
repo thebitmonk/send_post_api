@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **apiKey** | **String** |  | [optional] 
+**companyName** | **String** |  | [optional] 
 **created** | **Number** |  | [optional] 
 **currentEmailServiceProvider** | **String** |  | [optional] 
 **id** | **Number** |  | [optional] 
@@ -13,6 +14,7 @@ Name | Type | Description | Notes
 **isUpgraded** | **Boolean** |  | [optional] 
 **lockThreshold** | **Number** |  | [optional] 
 **locked** | **Boolean** |  | [optional] 
+**logoURL** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
 **onboardCFinished** | **Boolean** |  | [optional] 
 **onboardQAnswered** | **Boolean** |  | [optional] 

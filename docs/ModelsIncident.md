@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**assignedTo** | [**ModelsMember**](ModelsMember.md) |  | [optional] 
 **author** | [**ModelsMember**](ModelsMember.md) |  | [optional] 
 **created** | **Number** |  | [optional] 
 **description** | **String** |  | [optional] 
