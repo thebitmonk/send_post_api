@@ -109,41 +109,41 @@
     }
 
     /**
-     * Callback function to receive the result of the iPStatRouterGetAllAggregateIPStatsByGroup operation.
-     * @callback module:api/AccountipstatApi~iPStatRouterGetAllAggregateIPStatsByGroupCallback
+     * Callback function to receive the result of the iPStatRouterGetAllAggregateIPStatsByProvider operation.
+     * @callback module:api/AccountipstatApi~iPStatRouterGetAllAggregateIPStatsByProviderCallback
      * @param {String} error Error message, if any.
      * @param {module:model/ModelsStat} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Get All Aggregate Stats by Group
+     * Get All Aggregate Stats by Provider
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid the IPId you want to get
-     * @param {String} provider the group whose stats you want
+     * @param {String} provider the provider whose stats you want
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
      * @param {String} opts.to to date
-     * @param {module:api/AccountipstatApi~iPStatRouterGetAllAggregateIPStatsByGroupCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/AccountipstatApi~iPStatRouterGetAllAggregateIPStatsByProviderCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsStat}
      */
-    this.iPStatRouterGetAllAggregateIPStatsByGroup = function(xAccountApiKey, ipid, provider, opts, callback) {
+    this.iPStatRouterGetAllAggregateIPStatsByProvider = function(xAccountApiKey, ipid, provider, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'xAccountApiKey' is set
       if (xAccountApiKey === undefined || xAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xAccountApiKey' when calling iPStatRouterGetAllAggregateIPStatsByGroup");
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling iPStatRouterGetAllAggregateIPStatsByProvider");
       }
 
       // verify the required parameter 'ipid' is set
       if (ipid === undefined || ipid === null) {
-        throw new Error("Missing the required parameter 'ipid' when calling iPStatRouterGetAllAggregateIPStatsByGroup");
+        throw new Error("Missing the required parameter 'ipid' when calling iPStatRouterGetAllAggregateIPStatsByProvider");
       }
 
       // verify the required parameter 'provider' is set
       if (provider === undefined || provider === null) {
-        throw new Error("Missing the required parameter 'provider' when calling iPStatRouterGetAllAggregateIPStatsByGroup");
+        throw new Error("Missing the required parameter 'provider' when calling iPStatRouterGetAllAggregateIPStatsByProvider");
       }
 
 
@@ -417,73 +417,6 @@
 
       return this.apiClient.callApi(
         '/account/ip/stat/{ipid}', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the iPStatRouterGetAllIPStatsByGroup operation.
-     * @callback module:api/AccountipstatApi~iPStatRouterGetAllIPStatsByGroupCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ModelsRIPStat>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get All IP Stats by Group
-     * @param {Number} ipid the IPId you want to get
-     * @param {String} xAccountApiKey Account API Key
-     * @param {String} provider the provider whose stats you want
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.from from date
-     * @param {String} opts.to to date
-     * @param {module:api/AccountipstatApi~iPStatRouterGetAllIPStatsByGroupCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ModelsRIPStat>}
-     */
-    this.iPStatRouterGetAllIPStatsByGroup = function(ipid, xAccountApiKey, provider, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'ipid' is set
-      if (ipid === undefined || ipid === null) {
-        throw new Error("Missing the required parameter 'ipid' when calling iPStatRouterGetAllIPStatsByGroup");
-      }
-
-      // verify the required parameter 'xAccountApiKey' is set
-      if (xAccountApiKey === undefined || xAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xAccountApiKey' when calling iPStatRouterGetAllIPStatsByGroup");
-      }
-
-      // verify the required parameter 'provider' is set
-      if (provider === undefined || provider === null) {
-        throw new Error("Missing the required parameter 'provider' when calling iPStatRouterGetAllIPStatsByGroup");
-      }
-
-
-      var pathParams = {
-        'ipid': ipid
-      };
-      var queryParams = {
-        'from': opts['from'],
-        'to': opts['to'],
-        'provider': provider,
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-        'X-Account-ApiKey': xAccountApiKey
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = [ModelsRIPStat];
-
-      return this.apiClient.callApi(
-        '/account/ip/stat/{ipid}/provider', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

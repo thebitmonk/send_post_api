@@ -47,6 +47,12 @@
         // expect(instance.accountID).to.be(expectedValueLiteral);
       });
 
+      it('should have the property from (base name: "From")', function() {
+        // TODO: update the code to test the property from
+        expect(instance).to.have.property('from');
+        // expect(instance.from).to.be(expectedValueLiteral);
+      });
+
       it('should have the property groups (base name: "Groups")', function() {
         // TODO: update the code to test the property groups
         expect(instance).to.have.property('groups');

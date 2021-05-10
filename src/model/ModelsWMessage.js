@@ -57,6 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('AccountID'))
         obj.accountID = ApiClient.convertToType(data['AccountID'], 'Number');
+      if (data.hasOwnProperty('From'))
+        obj.from = ApiClient.convertToType(data['From'], 'String');
       if (data.hasOwnProperty('Groups'))
         obj.groups = ApiClient.convertToType(data['Groups'], Object);
       if (data.hasOwnProperty('IPID'))
@@ -89,6 +91,11 @@
    * @member {Number} accountID
    */
   exports.prototype.accountID = undefined;
+
+  /**
+   * @member {String} from
+   */
+  exports.prototype.from = undefined;
 
   /**
    * @member {Object} groups
