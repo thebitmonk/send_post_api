@@ -412,6 +412,8 @@
                 expect(data.relatedIP.infraClassification).to.be("");
                 expect(data.relatedIP.infraMonitor).to.be.a('boolean');
                 expect(data.relatedIP.infraMonitor).to.be(false);
+                expect(data.relatedIP.isAutoIPWarmupProcessing).to.be.a('boolean');
+                expect(data.relatedIP.isAutoIPWarmupProcessing).to.be(false);
                 {
                   let dataCtr = data.relatedIP.labels;
                   expect(dataCtr).to.be.an(Array);

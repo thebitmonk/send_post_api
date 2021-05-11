@@ -42,6 +42,7 @@
           /*
           var body = new SendPostApi.ModelsWMessage();
           body.accountID = "0";
+          body.from = "";
           body.groups = ;
           body.IPID = "0";
           body.messageType = "";

@@ -81,9 +81,9 @@
           done();
         });
       });
-      describe('iPStatRouterGetAllAggregateIPStatsByGroup', function() {
-        it('should call iPStatRouterGetAllAggregateIPStatsByGroup successfully', function(done) {
-          // TODO: uncomment, update parameter values for iPStatRouterGetAllAggregateIPStatsByGroup call and complete the assertions
+      describe('iPStatRouterGetAllAggregateIPStatsByProvider', function() {
+        it('should call iPStatRouterGetAllAggregateIPStatsByProvider successfully', function(done) {
+          // TODO: uncomment, update parameter values for iPStatRouterGetAllAggregateIPStatsByProvider call and complete the assertions
           /*
           var xAccountApiKey = "xAccountApiKey_example";
           var ipid = 789;
@@ -92,7 +92,7 @@
           opts.from = "from_example";
           opts.to = "to_example";
 
-          instance.iPStatRouterGetAllAggregateIPStatsByGroup(xAccountApiKey, ipid, provider, opts, function(error, data, response) {
+          instance.iPStatRouterGetAllAggregateIPStatsByProvider(xAccountApiKey, ipid, provider, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -321,67 +321,6 @@
           opts.to = "to_example";
 
           instance.iPStatRouterGetAllIPStats(xAccountApiKey, ipid, opts, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            let dataCtr = data;
-            expect(dataCtr).to.be.an(Array);
-            expect(dataCtr).to.not.be.empty();
-            for (let p in dataCtr) {
-              let data = dataCtr[p];
-              expect(data).to.be.a(SendPostApi.ModelsRIPStat);
-              expect(data._date).to.be.a('string');
-              expect(data._date).to.be("");
-              expect(data.stat).to.be.a(SendPostApi.ModelsIPStat);
-                    expect(data.stat.clicked).to.be.a('number');
-                expect(data.stat.clicked).to.be("0");
-                expect(data.stat.day).to.be.a('number');
-                expect(data.stat.day).to.be("0");
-                expect(data.stat.delivered).to.be.a('number');
-                expect(data.stat.delivered).to.be("0");
-                expect(data.stat.dropped).to.be.a('number');
-                expect(data.stat.dropped).to.be("0");
-                expect(data.stat.hardBounced).to.be.a('number');
-                expect(data.stat.hardBounced).to.be("0");
-                expect(data.stat.month).to.be.a('number');
-                expect(data.stat.month).to.be("0");
-                expect(data.stat.opened).to.be.a('number');
-                expect(data.stat.opened).to.be("0");
-                expect(data.stat.processed).to.be.a('number');
-                expect(data.stat.processed).to.be("0");
-                expect(data.stat.sent).to.be.a('number');
-                expect(data.stat.sent).to.be("0");
-                expect(data.stat.softBounced).to.be.a('number');
-                expect(data.stat.softBounced).to.be("0");
-                expect(data.stat.spam).to.be.a('number');
-                expect(data.stat.spam).to.be("0");
-                expect(data.stat.unsubscribed).to.be.a('number');
-                expect(data.stat.unsubscribed).to.be("0");
-                expect(data.stat.year).to.be.a('number');
-                expect(data.stat.year).to.be("0");
-            }
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('iPStatRouterGetAllIPStatsByGroup', function() {
-        it('should call iPStatRouterGetAllIPStatsByGroup successfully', function(done) {
-          // TODO: uncomment, update parameter values for iPStatRouterGetAllIPStatsByGroup call and complete the assertions
-          /*
-          var ipid = 789;
-          var xAccountApiKey = "xAccountApiKey_example";
-          var provider = "provider_example";
-          var opts = {};
-          opts.from = "from_example";
-          opts.to = "to_example";
-
-          instance.iPStatRouterGetAllIPStatsByGroup(ipid, xAccountApiKey, provider, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;

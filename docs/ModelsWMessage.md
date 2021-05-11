@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **accountID** | **Number** |  | [optional] 
+**from** | **String** |  | [optional] 
 **groups** | **Object** |  | [optional] 
 **IPID** | **Number** |  | [optional] 
 **messageType** | **String** |  | [optional] 

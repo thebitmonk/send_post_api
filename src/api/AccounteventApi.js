@@ -351,6 +351,69 @@
     }
 
     /**
+     * Callback function to receive the result of the eventRouterGetAllEventsFromAnAccountWhichHasOnlyProccessed operation.
+     * @callback module:api/AccounteventApi~eventRouterGetAllEventsFromAnAccountWhichHasOnlyProccessedCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/ModelsQEvent>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Find all events from a account for a given time-range
+     * @param {String} xAccountApiKey Account API Key
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.offset offset
+     * @param {Number} opts.limit limit
+     * @param {String} opts.type search type
+     * @param {String} opts.from from date
+     * @param {String} opts.to to date
+     * @param {String} opts.source data source from which to get timestamp keys subaccount or ip
+     * @param {String} opts.sourceId source id from which to get timestamp keys subaccount or ip
+     * @param {module:api/AccounteventApi~eventRouterGetAllEventsFromAnAccountWhichHasOnlyProccessedCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/ModelsQEvent>}
+     */
+    this.eventRouterGetAllEventsFromAnAccountWhichHasOnlyProccessed = function(xAccountApiKey, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling eventRouterGetAllEventsFromAnAccountWhichHasOnlyProccessed");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'offset': opts['offset'],
+        'limit': opts['limit'],
+        'type': opts['type'],
+        'from': opts['from'],
+        'to': opts['to'],
+        'source': opts['source'],
+        'sourceId': opts['sourceId'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-Account-ApiKey': xAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = [ModelsQEvent];
+
+      return this.apiClient.callApi(
+        '/account/event/node/eventType', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the eventRouterGetAllEventsOfAAccountFromASpecificNode operation.
      * @callback module:api/AccounteventApi~eventRouterGetAllEventsOfAAccountFromASpecificNodeCallback
      * @param {String} error Error message, if any.

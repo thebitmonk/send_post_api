@@ -159,6 +159,8 @@
                 expect(data.incident.relatedIP.infraClassification).to.be("");
                 expect(data.incident.relatedIP.infraMonitor).to.be.a('boolean');
                 expect(data.incident.relatedIP.infraMonitor).to.be(false);
+                expect(data.incident.relatedIP.isAutoIPWarmupProcessing).to.be.a('boolean');
+                expect(data.incident.relatedIP.isAutoIPWarmupProcessing).to.be(false);
                 {
                   let dataCtr = data.incident.relatedIP.labels;
                   expect(dataCtr).to.be.an(Array);
@@ -453,6 +455,8 @@
               expect(data.relatedIP.infraClassification).to.be("");
               expect(data.relatedIP.infraMonitor).to.be.a('boolean');
               expect(data.relatedIP.infraMonitor).to.be(false);
+              expect(data.relatedIP.isAutoIPWarmupProcessing).to.be.a('boolean');
+              expect(data.relatedIP.isAutoIPWarmupProcessing).to.be(false);
               {
                 let dataCtr = data.relatedIP.labels;
                 expect(dataCtr).to.be.an(Array);
@@ -717,6 +721,8 @@
                 expect(data.relatedIP.infraClassification).to.be("");
                 expect(data.relatedIP.infraMonitor).to.be.a('boolean');
                 expect(data.relatedIP.infraMonitor).to.be(false);
+                expect(data.relatedIP.isAutoIPWarmupProcessing).to.be.a('boolean');
+                expect(data.relatedIP.isAutoIPWarmupProcessing).to.be(false);
                 {
                   let dataCtr = data.relatedIP.labels;
                   expect(dataCtr).to.be.an(Array);
@@ -1005,6 +1011,8 @@
                   expect(data.incident.relatedIP.infraClassification).to.be("");
                   expect(data.incident.relatedIP.infraMonitor).to.be.a('boolean');
                   expect(data.incident.relatedIP.infraMonitor).to.be(false);
+                  expect(data.incident.relatedIP.isAutoIPWarmupProcessing).to.be.a('boolean');
+                  expect(data.incident.relatedIP.isAutoIPWarmupProcessing).to.be(false);
                   {
                     let dataCtr = data.incident.relatedIP.labels;
                     expect(dataCtr).to.be.an(Array);
@@ -1260,6 +1268,8 @@
               expect(data.relatedIP.infraClassification).to.be("");
               expect(data.relatedIP.infraMonitor).to.be.a('boolean');
               expect(data.relatedIP.infraMonitor).to.be(false);
+              expect(data.relatedIP.isAutoIPWarmupProcessing).to.be.a('boolean');
+              expect(data.relatedIP.isAutoIPWarmupProcessing).to.be(false);
               {
                 let dataCtr = data.relatedIP.labels;
                 expect(dataCtr).to.be.an(Array);
@@ -1528,6 +1538,8 @@
               expect(data.relatedIP.infraClassification).to.be("");
               expect(data.relatedIP.infraMonitor).to.be.a('boolean');
               expect(data.relatedIP.infraMonitor).to.be(false);
+              expect(data.relatedIP.isAutoIPWarmupProcessing).to.be.a('boolean');
+              expect(data.relatedIP.isAutoIPWarmupProcessing).to.be(false);
               {
                 let dataCtr = data.relatedIP.labels;
                 expect(dataCtr).to.be.an(Array);

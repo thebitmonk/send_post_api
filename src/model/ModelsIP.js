@@ -83,6 +83,8 @@
         obj.infraClassification = ApiClient.convertToType(data['infraClassification'], 'String');
       if (data.hasOwnProperty('infraMonitor'))
         obj.infraMonitor = ApiClient.convertToType(data['infraMonitor'], 'Boolean');
+      if (data.hasOwnProperty('isAutoIPWarmupProcessing'))
+        obj.isAutoIPWarmupProcessing = ApiClient.convertToType(data['isAutoIPWarmupProcessing'], 'Boolean');
       if (data.hasOwnProperty('labels'))
         obj.labels = ApiClient.convertToType(data['labels'], [ModelsLabel]);
       if (data.hasOwnProperty('mailruSettings'))
@@ -180,6 +182,11 @@
    * @member {Boolean} infraMonitor
    */
   exports.prototype.infraMonitor = undefined;
+
+  /**
+   * @member {Boolean} isAutoIPWarmupProcessing
+   */
+  exports.prototype.isAutoIPWarmupProcessing = undefined;
 
   /**
    * @member {Array.<module:model/ModelsLabel>} labels
