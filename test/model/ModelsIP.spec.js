@@ -125,6 +125,12 @@
         // expect(instance.infraMonitor).to.be(expectedValueLiteral);
       });
 
+      it('should have the property isAutoIPWarmupProcessing (base name: "isAutoIPWarmupProcessing")', function() {
+        // TODO: update the code to test the property isAutoIPWarmupProcessing
+        expect(instance).to.have.property('isAutoIPWarmupProcessing');
+        // expect(instance.isAutoIPWarmupProcessing).to.be(expectedValueLiteral);
+      });
+
       it('should have the property labels (base name: "labels")', function() {
         // TODO: update the code to test the property labels
         expect(instance).to.have.property('labels');

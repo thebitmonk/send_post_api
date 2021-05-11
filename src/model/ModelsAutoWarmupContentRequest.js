@@ -55,8 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('content'))
-        obj.content = ModelsContent.constructFromObject(data['content']);
+      if (data.hasOwnProperty('contentList'))
+        obj.contentList = ApiClient.convertToType(data['contentList'], [ModelsContent]);
       if (data.hasOwnProperty('domain'))
         obj.domain = ApiClient.convertToType(data['domain'], 'String');
     }
@@ -64,9 +64,9 @@
   }
 
   /**
-   * @member {module:model/ModelsContent} content
+   * @member {Array.<module:model/ModelsContent>} contentList
    */
-  exports.prototype.content = undefined;
+  exports.prototype.contentList = undefined;
 
   /**
    * @member {String} domain

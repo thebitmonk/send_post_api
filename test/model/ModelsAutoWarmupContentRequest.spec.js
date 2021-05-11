@@ -41,10 +41,10 @@
         expect(instance).to.be.a(SendPostApi.ModelsAutoWarmupContentRequest);
       });
 
-      it('should have the property content (base name: "content")', function() {
-        // TODO: update the code to test the property content
-        expect(instance).to.have.property('content');
-        // expect(instance.content).to.be(expectedValueLiteral);
+      it('should have the property contentList (base name: "contentList")', function() {
+        // TODO: update the code to test the property contentList
+        expect(instance).to.have.property('contentList');
+        // expect(instance.contentList).to.be(expectedValueLiteral);
       });
 
       it('should have the property domain (base name: "domain")', function() {

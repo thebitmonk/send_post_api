@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **assignedTo** | [**ModelsMember**](ModelsMember.md) |  | [optional] 
 **author** | [**ModelsMember**](ModelsMember.md) |  | [optional] 
+**closed** | **Number** |  | [optional] 
 **created** | **Number** |  | [optional] 
 **description** | **String** |  | [optional] 
 **id** | **Number** |  | [optional] 

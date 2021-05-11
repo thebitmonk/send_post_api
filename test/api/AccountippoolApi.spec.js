@@ -117,6 +117,8 @@
                 expect(data.infraClassification).to.be("");
                 expect(data.infraMonitor).to.be.a('boolean');
                 expect(data.infraMonitor).to.be(false);
+                expect(data.isAutoIPWarmupProcessing).to.be.a('boolean');
+                expect(data.isAutoIPWarmupProcessing).to.be(false);
                 {
                   let dataCtr = data.labels;
                   expect(dataCtr).to.be.an(Array);
@@ -291,6 +293,8 @@
                 expect(data.infraClassification).to.be("");
                 expect(data.infraMonitor).to.be.a('boolean');
                 expect(data.infraMonitor).to.be(false);
+                expect(data.isAutoIPWarmupProcessing).to.be.a('boolean');
+                expect(data.isAutoIPWarmupProcessing).to.be(false);
                 {
                   let dataCtr = data.labels;
                   expect(dataCtr).to.be.an(Array);
@@ -447,6 +451,8 @@
                   expect(data.infraClassification).to.be("");
                   expect(data.infraMonitor).to.be.a('boolean');
                   expect(data.infraMonitor).to.be(false);
+                  expect(data.isAutoIPWarmupProcessing).to.be.a('boolean');
+                  expect(data.isAutoIPWarmupProcessing).to.be(false);
                   {
                     let dataCtr = data.labels;
                     expect(dataCtr).to.be.an(Array);
@@ -603,6 +609,8 @@
                 expect(data.infraClassification).to.be("");
                 expect(data.infraMonitor).to.be.a('boolean');
                 expect(data.infraMonitor).to.be(false);
+                expect(data.isAutoIPWarmupProcessing).to.be.a('boolean');
+                expect(data.isAutoIPWarmupProcessing).to.be(false);
                 {
                   let dataCtr = data.labels;
                   expect(dataCtr).to.be.an(Array);

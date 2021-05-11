@@ -53,6 +53,12 @@
         // expect(instance.author).to.be(expectedValueLiteral);
       });
 
+      it('should have the property closed (base name: "closed")', function() {
+        // TODO: update the code to test the property closed
+        expect(instance).to.have.property('closed');
+        // expect(instance.closed).to.be(expectedValueLiteral);
+      });
+
       it('should have the property created (base name: "created")', function() {
         // TODO: update the code to test the property created
         expect(instance).to.have.property('created');

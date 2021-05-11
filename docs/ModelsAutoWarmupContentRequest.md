@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | [**ModelsContent**](ModelsContent.md) |  | [optional] 
+**contentList** | [**[ModelsContent]**](ModelsContent.md) |  | [optional] 
 **domain** | **String** |  | [optional] 
 
 
