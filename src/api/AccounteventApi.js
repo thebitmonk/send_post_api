@@ -367,6 +367,7 @@
      * @param {String} opts.type search type
      * @param {String} opts.from from date
      * @param {String} opts.to to date
+     * @param {String} opts.filterEvent filter event types
      * @param {String} opts.source data source from which to get timestamp keys subaccount or ip
      * @param {String} opts.sourceId source id from which to get timestamp keys subaccount or ip
      * @param {module:api/AccounteventApi~eventRouterGetAllEventsFromAnAccountWhichHasOnlyProccessedCallback} callback The callback function, accepting three arguments: error, data, response
@@ -390,6 +391,7 @@
         'type': opts['type'],
         'from': opts['from'],
         'to': opts['to'],
+        'filterEvent': opts['filterEvent'],
         'source': opts['source'],
         'sourceId': opts['sourceId'],
       };

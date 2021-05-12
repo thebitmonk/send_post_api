@@ -124,6 +124,8 @@
                 expect(data.incident.author.phoneNumber).to.be("");
                 expect(data.incident.author.url).to.be.a('string');
                 expect(data.incident.author.url).to.be("");
+              expect(data.incident.closed).to.be.a('number');
+              expect(data.incident.closed).to.be("0");
               expect(data.incident.created).to.be.a('number');
               expect(data.incident.created).to.be("0");
               expect(data.incident.description).to.be.a('string');
@@ -420,6 +422,8 @@
               expect(data.author.phoneNumber).to.be("");
               expect(data.author.url).to.be.a('string');
               expect(data.author.url).to.be("");
+            expect(data.closed).to.be.a('number');
+            expect(data.closed).to.be("0");
             expect(data.created).to.be.a('number');
             expect(data.created).to.be("0");
             expect(data.description).to.be.a('string');
@@ -686,6 +690,8 @@
                 expect(data.author.phoneNumber).to.be("");
                 expect(data.author.url).to.be.a('string');
                 expect(data.author.url).to.be("");
+              expect(data.closed).to.be.a('number');
+              expect(data.closed).to.be("0");
               expect(data.created).to.be.a('number');
               expect(data.created).to.be("0");
               expect(data.description).to.be.a('string');
@@ -976,6 +982,8 @@
                   expect(data.incident.author.phoneNumber).to.be("");
                   expect(data.incident.author.url).to.be.a('string');
                   expect(data.incident.author.url).to.be("");
+                expect(data.incident.closed).to.be.a('number');
+                expect(data.incident.closed).to.be("0");
                 expect(data.incident.created).to.be.a('number');
                 expect(data.incident.created).to.be("0");
                 expect(data.incident.description).to.be.a('string');
@@ -1233,6 +1241,8 @@
               expect(data.author.phoneNumber).to.be("");
               expect(data.author.url).to.be.a('string');
               expect(data.author.url).to.be("");
+            expect(data.closed).to.be.a('number');
+            expect(data.closed).to.be("0");
             expect(data.created).to.be.a('number');
             expect(data.created).to.be("0");
             expect(data.description).to.be.a('string');
@@ -1503,6 +1513,8 @@
               expect(data.author.phoneNumber).to.be("");
               expect(data.author.url).to.be.a('string');
               expect(data.author.url).to.be("");
+            expect(data.closed).to.be.a('number');
+            expect(data.closed).to.be("0");
             expect(data.created).to.be.a('number');
             expect(data.created).to.be("0");
             expect(data.description).to.be.a('string');

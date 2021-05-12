@@ -388,6 +388,7 @@
           opts.type = "type_example";
           opts.from = "from_example";
           opts.to = "to_example";
+          opts.filterEvent = "filterEvent_example";
           opts.source = "source_example";
           opts.sourceId = "sourceId_example";
 

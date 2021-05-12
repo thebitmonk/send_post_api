@@ -59,6 +59,8 @@
         obj.assignedTo = ModelsMember.constructFromObject(data['assignedTo']);
       if (data.hasOwnProperty('author'))
         obj.author = ModelsMember.constructFromObject(data['author']);
+      if (data.hasOwnProperty('closed'))
+        obj.closed = ApiClient.convertToType(data['closed'], 'Number');
       if (data.hasOwnProperty('created'))
         obj.created = ApiClient.convertToType(data['created'], 'Number');
       if (data.hasOwnProperty('description'))
@@ -90,6 +92,11 @@
    * @member {module:model/ModelsMember} author
    */
   exports.prototype.author = undefined;
+
+  /**
+   * @member {Number} closed
+   */
+  exports.prototype.closed = undefined;
 
   /**
    * @member {Number} created
