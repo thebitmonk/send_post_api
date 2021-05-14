@@ -3,11 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**alertSlackEndpoint** | **String** |  | [optional] 
 **apiKey** | **String** |  | [optional] 
 **companyName** | **String** |  | [optional] 
 **created** | **Number** |  | [optional] 
 **currentEmailServiceProvider** | **String** |  | [optional] 
 **id** | **Number** |  | [optional] 
+**incidentSlackEndpoint** | **String** |  | [optional] 
 **industry** | **String** |  | [optional] 
 **isCanceled** | **Boolean** |  | [optional] 
 **isLastPaymentFailed** | **Boolean** |  | [optional] 

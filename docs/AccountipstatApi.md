@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="iPStatRouterGetAllAggregateIPStats"></a>
 # **iPStatRouterGetAllAggregateIPStats**
-> ModelsStat iPStatRouterGetAllAggregateIPStats(xAccountApiKey, ipid, opts)
+> ModelsStat iPStatRouterGetAllAggregateIPStats(xAccountApiKey, ipid, provider, opts)
 
 
 
@@ -30,6 +30,8 @@ var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var ipid = 789; // Number | the IPId you want to get
 
+var provider = "provider_example"; // String | the provider whose stats you want
+
 var opts = { 
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
@@ -42,7 +44,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.iPStatRouterGetAllAggregateIPStats(xAccountApiKey, ipid, opts, callback);
+apiInstance.iPStatRouterGetAllAggregateIPStats(xAccountApiKey, ipid, provider, opts, callback);
 ```
 
 ### Parameters
@@ -51,6 +53,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
  **ipid** | **Number**| the IPId you want to get | 
+ **provider** | **String**| the provider whose stats you want | 
  **from** | **String**| from date | [optional] 
  **to** | **String**| to date | [optional] 
 
@@ -240,7 +243,7 @@ No authorization required
 
 <a name="iPStatRouterGetAllAggregatedSubAccountStatsForAnIP"></a>
 # **iPStatRouterGetAllAggregatedSubAccountStatsForAnIP**
-> [ModelsSIPStat] iPStatRouterGetAllAggregatedSubAccountStatsForAnIP(xAccountApiKey, ipid, opts)
+> [ModelsSIPStat] iPStatRouterGetAllAggregatedSubAccountStatsForAnIP(xAccountApiKey, ipid, provider, opts)
 
 
 
@@ -256,6 +259,8 @@ var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var ipid = 789; // Number | the IPId you want to get
 
+var provider = "provider_example"; // String | the provider whose stats you want
+
 var opts = { 
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
@@ -268,7 +273,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.iPStatRouterGetAllAggregatedSubAccountStatsForAnIP(xAccountApiKey, ipid, opts, callback);
+apiInstance.iPStatRouterGetAllAggregatedSubAccountStatsForAnIP(xAccountApiKey, ipid, provider, opts, callback);
 ```
 
 ### Parameters
@@ -277,6 +282,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
  **ipid** | **Number**| the IPId you want to get | 
+ **provider** | **String**| the provider whose stats you want | 
  **from** | **String**| from date | [optional] 
  **to** | **String**| to date | [optional] 
 
@@ -295,7 +301,7 @@ No authorization required
 
 <a name="iPStatRouterGetAllIPStats"></a>
 # **iPStatRouterGetAllIPStats**
-> [ModelsRIPStat] iPStatRouterGetAllIPStats(xAccountApiKey, ipid, opts)
+> [ModelsRIPStat] iPStatRouterGetAllIPStats(xAccountApiKey, ipid, provider, opts)
 
 
 
@@ -311,6 +317,8 @@ var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var ipid = 789; // Number | the IPId you want to get
 
+var provider = "provider_example"; // String | the provider whose stats you want
+
 var opts = { 
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
@@ -323,7 +331,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.iPStatRouterGetAllIPStats(xAccountApiKey, ipid, opts, callback);
+apiInstance.iPStatRouterGetAllIPStats(xAccountApiKey, ipid, provider, opts, callback);
 ```
 
 ### Parameters
@@ -332,6 +340,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
  **ipid** | **Number**| the IPId you want to get | 
+ **provider** | **String**| the provider whose stats you want | 
  **from** | **String**| from date | [optional] 
  **to** | **String**| to date | [optional] 
 

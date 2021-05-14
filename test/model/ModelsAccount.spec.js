@@ -41,6 +41,12 @@
         expect(instance).to.be.a(SendPostApi.ModelsAccount);
       });
 
+      it('should have the property alertSlackEndpoint (base name: "alertSlackEndpoint")', function() {
+        // TODO: update the code to test the property alertSlackEndpoint
+        expect(instance).to.have.property('alertSlackEndpoint');
+        // expect(instance.alertSlackEndpoint).to.be(expectedValueLiteral);
+      });
+
       it('should have the property apiKey (base name: "apiKey")', function() {
         // TODO: update the code to test the property apiKey
         expect(instance).to.have.property('apiKey');
@@ -69,6 +75,12 @@
         // TODO: update the code to test the property id
         expect(instance).to.have.property('id');
         // expect(instance.id).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property incidentSlackEndpoint (base name: "incidentSlackEndpoint")', function() {
+        // TODO: update the code to test the property incidentSlackEndpoint
+        expect(instance).to.have.property('incidentSlackEndpoint');
+        // expect(instance.incidentSlackEndpoint).to.be(expectedValueLiteral);
       });
 
       it('should have the property industry (base name: "industry")', function() {

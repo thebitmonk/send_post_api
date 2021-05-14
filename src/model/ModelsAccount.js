@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('alertSlackEndpoint'))
+        obj.alertSlackEndpoint = ApiClient.convertToType(data['alertSlackEndpoint'], 'String');
       if (data.hasOwnProperty('apiKey'))
         obj.apiKey = ApiClient.convertToType(data['apiKey'], 'String');
       if (data.hasOwnProperty('companyName'))
@@ -65,6 +67,8 @@
         obj.currentEmailServiceProvider = ApiClient.convertToType(data['currentEmailServiceProvider'], 'String');
       if (data.hasOwnProperty('id'))
         obj.id = ApiClient.convertToType(data['id'], 'Number');
+      if (data.hasOwnProperty('incidentSlackEndpoint'))
+        obj.incidentSlackEndpoint = ApiClient.convertToType(data['incidentSlackEndpoint'], 'String');
       if (data.hasOwnProperty('industry'))
         obj.industry = ApiClient.convertToType(data['industry'], 'String');
       if (data.hasOwnProperty('isCanceled'))
@@ -96,6 +100,11 @@
   }
 
   /**
+   * @member {String} alertSlackEndpoint
+   */
+  exports.prototype.alertSlackEndpoint = undefined;
+
+  /**
    * @member {String} apiKey
    */
   exports.prototype.apiKey = undefined;
@@ -119,6 +128,11 @@
    * @member {Number} id
    */
   exports.prototype.id = undefined;
+
+  /**
+   * @member {String} incidentSlackEndpoint
+   */
+  exports.prototype.incidentSlackEndpoint = undefined;
 
   /**
    * @member {String} industry

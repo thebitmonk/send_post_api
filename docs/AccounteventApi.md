@@ -329,6 +329,7 @@ var opts = {
   'type': "type_example", // String | search type
   'from': "from_example", // String | from date
   'to': "to_example", // String | to date
+  'filterEvent': "filterEvent_example", // String | filter event types
   'source': "source_example", // String | data source from which to get timestamp keys subaccount or ip
   'sourceId': "sourceId_example" // String | source id from which to get timestamp keys subaccount or ip
 };
@@ -353,6 +354,7 @@ Name | Type | Description  | Notes
  **type** | **String**| search type | [optional] 
  **from** | **String**| from date | [optional] 
  **to** | **String**| to date | [optional] 
+ **filterEvent** | **String**| filter event types | [optional] 
  **source** | **String**| data source from which to get timestamp keys subaccount or ip | [optional] 
  **sourceId** | **String**| source id from which to get timestamp keys subaccount or ip | [optional] 
 
