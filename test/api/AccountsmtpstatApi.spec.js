@@ -42,12 +42,12 @@
           /*
           var xAccountApiKey = "xAccountApiKey_example";
           var ipid = 789;
-          var pname = "pname_example";
+          var provider = "provider_example";
           var opts = {};
           opts.from = "from_example";
           opts.to = "to_example";
 
-          instance.sMTPStatRouterGetAllAggregateIPProviderSMTPStats(xAccountApiKey, ipid, pname, opts, function(error, data, response) {
+          instance.sMTPStatRouterGetAllAggregateIPProviderSMTPStats(xAccountApiKey, ipid, provider, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -83,6 +83,7 @@
           var opts = {};
           opts.from = "from_example";
           opts.to = "to_example";
+          opts.provider = "provider_example";
 
           instance.sMTPStatRouterGetAllAggregateIPSMTPStats(xAccountApiKey, ipid, opts, function(error, data, response) {
             if (error) {
@@ -121,6 +122,7 @@
           var opts = {};
           opts.from = "from_example";
           opts.to = "to_example";
+          opts.provider = "provider_example";
 
           instance.sMTPStatRouterGetAllAggregateIPSMTPStatsForSubAccount(xAccountApiKey, ipid, sid, opts, function(error, data, response) {
             if (error) {
@@ -155,12 +157,12 @@
           /*
           var xAccountApiKey = "xAccountApiKey_example";
           var sid = 789;
-          var pname = "pname_example";
+          var provider = "provider_example";
           var opts = {};
           opts.from = "from_example";
           opts.to = "to_example";
 
-          instance.sMTPStatRouterGetAllAggregateSubAccountProviderSMTPStats(xAccountApiKey, sid, pname, opts, function(error, data, response) {
+          instance.sMTPStatRouterGetAllAggregateSubAccountProviderSMTPStats(xAccountApiKey, sid, provider, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -196,6 +198,7 @@
           var opts = {};
           opts.from = "from_example";
           opts.to = "to_example";
+          opts.provider = "provider_example";
 
           instance.sMTPStatRouterGetAllAggregateSubAccountSMTPStats(xAccountApiKey, sid, opts, function(error, data, response) {
             if (error) {
@@ -234,6 +237,7 @@
           var opts = {};
           opts.from = "from_example";
           opts.to = "to_example";
+          opts.provider = "provider_example";
 
           instance.sMTPStatRouterGetAllAggregateSubAccountSMTPStatsForIP(xAccountApiKey, sid, ipid, opts, function(error, data, response) {
             if (error) {

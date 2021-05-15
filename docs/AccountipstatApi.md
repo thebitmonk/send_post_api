@@ -32,7 +32,8 @@ var ipid = 789; // Number | the IPId you want to get
 
 var opts = { 
   'from': "from_example", // String | from date
-  'to': "to_example" // String | to date
+  'to': "to_example", // String | to date
+  'provider': "provider_example" // String | the provider whose stats you want
 };
 
 var callback = function(error, data, response) {
@@ -53,6 +54,7 @@ Name | Type | Description  | Notes
  **ipid** | **Number**| the IPId you want to get | 
  **from** | **String**| from date | [optional] 
  **to** | **String**| to date | [optional] 
+ **provider** | **String**| the provider whose stats you want | [optional] 
 
 ### Return type
 
@@ -69,7 +71,7 @@ No authorization required
 
 <a name="iPStatRouterGetAllAggregateIPStatsByProvider"></a>
 # **iPStatRouterGetAllAggregateIPStatsByProvider**
-> ModelsStat iPStatRouterGetAllAggregateIPStatsByProvider(xAccountApiKey, ipid, provider, opts)
+> ModelsStat iPStatRouterGetAllAggregateIPStatsByProvider(xAccountApiKey, ipid, opts)
 
 
 
@@ -85,11 +87,10 @@ var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var ipid = 789; // Number | the IPId you want to get
 
-var provider = "provider_example"; // String | the provider whose stats you want
-
 var opts = { 
   'from': "from_example", // String | from date
-  'to': "to_example" // String | to date
+  'to': "to_example", // String | to date
+  'provider': "provider_example" // String | the provider whose stats you want
 };
 
 var callback = function(error, data, response) {
@@ -99,7 +100,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.iPStatRouterGetAllAggregateIPStatsByProvider(xAccountApiKey, ipid, provider, opts, callback);
+apiInstance.iPStatRouterGetAllAggregateIPStatsByProvider(xAccountApiKey, ipid, opts, callback);
 ```
 
 ### Parameters
@@ -108,9 +109,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
  **ipid** | **Number**| the IPId you want to get | 
- **provider** | **String**| the provider whose stats you want | 
  **from** | **String**| from date | [optional] 
  **to** | **String**| to date | [optional] 
+ **provider** | **String**| the provider whose stats you want | [optional] 
 
 ### Return type
 
@@ -258,7 +259,9 @@ var ipid = 789; // Number | the IPId you want to get
 
 var opts = { 
   'from': "from_example", // String | from date
-  'to': "to_example" // String | to date
+  'to': "to_example", // String | to date
+  'provider': "provider_example", // String | the provider whose stats you want
+  'sortBy': "sortBy_example" // String | the sorting order
 };
 
 var callback = function(error, data, response) {
@@ -279,6 +282,8 @@ Name | Type | Description  | Notes
  **ipid** | **Number**| the IPId you want to get | 
  **from** | **String**| from date | [optional] 
  **to** | **String**| to date | [optional] 
+ **provider** | **String**| the provider whose stats you want | [optional] 
+ **sortBy** | **String**| the sorting order | [optional] 
 
 ### Return type
 
@@ -313,7 +318,8 @@ var ipid = 789; // Number | the IPId you want to get
 
 var opts = { 
   'from': "from_example", // String | from date
-  'to': "to_example" // String | to date
+  'to': "to_example", // String | to date
+  'provider': "provider_example" // String | the provider whose stats you want
 };
 
 var callback = function(error, data, response) {
@@ -334,6 +340,7 @@ Name | Type | Description  | Notes
  **ipid** | **Number**| the IPId you want to get | 
  **from** | **String**| from date | [optional] 
  **to** | **String**| to date | [optional] 
+ **provider** | **String**| the provider whose stats you want | [optional] 
 
 ### Return type
 

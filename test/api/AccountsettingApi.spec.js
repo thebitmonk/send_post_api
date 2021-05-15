@@ -52,6 +52,8 @@
             }
             // TODO: update response assertions
             expect(data).to.be.a(SendPostApi.ModelsAccount);
+            expect(data.alertSlackEndpoint).to.be.a('string');
+            expect(data.alertSlackEndpoint).to.be("");
             expect(data.apiKey).to.be.a('string');
             expect(data.apiKey).to.be("");
             expect(data.companyName).to.be.a('string');
@@ -62,6 +64,8 @@
             expect(data.currentEmailServiceProvider).to.be("");
             expect(data.id).to.be.a('number');
             expect(data.id).to.be("0");
+            expect(data.incidentSlackEndpoint).to.be.a('string');
+            expect(data.incidentSlackEndpoint).to.be("");
             expect(data.industry).to.be.a('string');
             expect(data.industry).to.be("");
             expect(data.isCanceled).to.be.a('boolean');
