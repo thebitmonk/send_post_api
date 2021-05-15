@@ -127,14 +127,14 @@
      * Get All Aggregate IP SMTP Stats
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid the IPId you want to get
-     * @param {String} provider the provider whose stats you want
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
      * @param {String} opts.to to date
+     * @param {String} opts.provider the provider whose stats you want
      * @param {module:api/AccountsmtpstatApi~sMTPStatRouterGetAllAggregateIPSMTPStatsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsSMTPStat>}
      */
-    this.sMTPStatRouterGetAllAggregateIPSMTPStats = function(xAccountApiKey, ipid, provider, opts, callback) {
+    this.sMTPStatRouterGetAllAggregateIPSMTPStats = function(xAccountApiKey, ipid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -148,11 +148,6 @@
         throw new Error("Missing the required parameter 'ipid' when calling sMTPStatRouterGetAllAggregateIPSMTPStats");
       }
 
-      // verify the required parameter 'provider' is set
-      if (provider === undefined || provider === null) {
-        throw new Error("Missing the required parameter 'provider' when calling sMTPStatRouterGetAllAggregateIPSMTPStats");
-      }
-
 
       var pathParams = {
         'ipid': ipid
@@ -160,7 +155,7 @@
       var queryParams = {
         'from': opts['from'],
         'to': opts['to'],
-        'provider': provider,
+        'provider': opts['provider'],
       };
       var collectionQueryParams = {
       };
@@ -195,14 +190,14 @@
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid the IP ID you want to get
      * @param {Number} sid the SubAccount ID you want to get
-     * @param {String} provider the provider whose stats you want
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
      * @param {String} opts.to to date
+     * @param {String} opts.provider the provider whose stats you want
      * @param {module:api/AccountsmtpstatApi~sMTPStatRouterGetAllAggregateIPSMTPStatsForSubAccountCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsSMTPStat>}
      */
-    this.sMTPStatRouterGetAllAggregateIPSMTPStatsForSubAccount = function(xAccountApiKey, ipid, sid, provider, opts, callback) {
+    this.sMTPStatRouterGetAllAggregateIPSMTPStatsForSubAccount = function(xAccountApiKey, ipid, sid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -221,11 +216,6 @@
         throw new Error("Missing the required parameter 'sid' when calling sMTPStatRouterGetAllAggregateIPSMTPStatsForSubAccount");
       }
 
-      // verify the required parameter 'provider' is set
-      if (provider === undefined || provider === null) {
-        throw new Error("Missing the required parameter 'provider' when calling sMTPStatRouterGetAllAggregateIPSMTPStatsForSubAccount");
-      }
-
 
       var pathParams = {
         'ipid': ipid,
@@ -234,7 +224,7 @@
       var queryParams = {
         'from': opts['from'],
         'to': opts['to'],
-        'provider': provider,
+        'provider': opts['provider'],
       };
       var collectionQueryParams = {
       };
@@ -335,14 +325,14 @@
      * Get All Aggregate SubAccount SMTP Stats
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} sid the Sub-Account ID you want to get
-     * @param {String} provider the provider whose stats you want
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
      * @param {String} opts.to to date
+     * @param {String} opts.provider the provider whose stats you want
      * @param {module:api/AccountsmtpstatApi~sMTPStatRouterGetAllAggregateSubAccountSMTPStatsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsSMTPStat>}
      */
-    this.sMTPStatRouterGetAllAggregateSubAccountSMTPStats = function(xAccountApiKey, sid, provider, opts, callback) {
+    this.sMTPStatRouterGetAllAggregateSubAccountSMTPStats = function(xAccountApiKey, sid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -356,11 +346,6 @@
         throw new Error("Missing the required parameter 'sid' when calling sMTPStatRouterGetAllAggregateSubAccountSMTPStats");
       }
 
-      // verify the required parameter 'provider' is set
-      if (provider === undefined || provider === null) {
-        throw new Error("Missing the required parameter 'provider' when calling sMTPStatRouterGetAllAggregateSubAccountSMTPStats");
-      }
-
 
       var pathParams = {
         'sid': sid
@@ -368,7 +353,7 @@
       var queryParams = {
         'from': opts['from'],
         'to': opts['to'],
-        'provider': provider,
+        'provider': opts['provider'],
       };
       var collectionQueryParams = {
       };
@@ -403,14 +388,14 @@
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} sid the Sub-Account ID you want to get
      * @param {Number} ipid the IP  ID you want to get
-     * @param {String} provider the provider whose stats you want
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
      * @param {String} opts.to to date
+     * @param {String} opts.provider the provider whose stats you want
      * @param {module:api/AccountsmtpstatApi~sMTPStatRouterGetAllAggregateSubAccountSMTPStatsForIPCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsSMTPStat>}
      */
-    this.sMTPStatRouterGetAllAggregateSubAccountSMTPStatsForIP = function(xAccountApiKey, sid, ipid, provider, opts, callback) {
+    this.sMTPStatRouterGetAllAggregateSubAccountSMTPStatsForIP = function(xAccountApiKey, sid, ipid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -429,11 +414,6 @@
         throw new Error("Missing the required parameter 'ipid' when calling sMTPStatRouterGetAllAggregateSubAccountSMTPStatsForIP");
       }
 
-      // verify the required parameter 'provider' is set
-      if (provider === undefined || provider === null) {
-        throw new Error("Missing the required parameter 'provider' when calling sMTPStatRouterGetAllAggregateSubAccountSMTPStatsForIP");
-      }
-
 
       var pathParams = {
         'sid': sid,
@@ -442,7 +422,7 @@
       var queryParams = {
         'from': opts['from'],
         'to': opts['to'],
-        'provider': provider,
+        'provider': opts['provider'],
       };
       var collectionQueryParams = {
       };

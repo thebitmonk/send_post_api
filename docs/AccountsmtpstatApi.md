@@ -72,7 +72,7 @@ No authorization required
 
 <a name="sMTPStatRouterGetAllAggregateIPSMTPStats"></a>
 # **sMTPStatRouterGetAllAggregateIPSMTPStats**
-> [ModelsSMTPStat] sMTPStatRouterGetAllAggregateIPSMTPStats(xAccountApiKey, ipid, provider, opts)
+> [ModelsSMTPStat] sMTPStatRouterGetAllAggregateIPSMTPStats(xAccountApiKey, ipid, opts)
 
 
 
@@ -88,11 +88,10 @@ var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var ipid = 789; // Number | the IPId you want to get
 
-var provider = "provider_example"; // String | the provider whose stats you want
-
 var opts = { 
   'from': "from_example", // String | from date
-  'to': "to_example" // String | to date
+  'to': "to_example", // String | to date
+  'provider': "provider_example" // String | the provider whose stats you want
 };
 
 var callback = function(error, data, response) {
@@ -102,7 +101,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.sMTPStatRouterGetAllAggregateIPSMTPStats(xAccountApiKey, ipid, provider, opts, callback);
+apiInstance.sMTPStatRouterGetAllAggregateIPSMTPStats(xAccountApiKey, ipid, opts, callback);
 ```
 
 ### Parameters
@@ -111,9 +110,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
  **ipid** | **Number**| the IPId you want to get | 
- **provider** | **String**| the provider whose stats you want | 
  **from** | **String**| from date | [optional] 
  **to** | **String**| to date | [optional] 
+ **provider** | **String**| the provider whose stats you want | [optional] 
 
 ### Return type
 
@@ -130,7 +129,7 @@ No authorization required
 
 <a name="sMTPStatRouterGetAllAggregateIPSMTPStatsForSubAccount"></a>
 # **sMTPStatRouterGetAllAggregateIPSMTPStatsForSubAccount**
-> [ModelsSMTPStat] sMTPStatRouterGetAllAggregateIPSMTPStatsForSubAccount(xAccountApiKey, ipid, sid, provider, opts)
+> [ModelsSMTPStat] sMTPStatRouterGetAllAggregateIPSMTPStatsForSubAccount(xAccountApiKey, ipid, sid, opts)
 
 
 
@@ -148,11 +147,10 @@ var ipid = 789; // Number | the IP ID you want to get
 
 var sid = 789; // Number | the SubAccount ID you want to get
 
-var provider = "provider_example"; // String | the provider whose stats you want
-
 var opts = { 
   'from': "from_example", // String | from date
-  'to': "to_example" // String | to date
+  'to': "to_example", // String | to date
+  'provider': "provider_example" // String | the provider whose stats you want
 };
 
 var callback = function(error, data, response) {
@@ -162,7 +160,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.sMTPStatRouterGetAllAggregateIPSMTPStatsForSubAccount(xAccountApiKey, ipid, sid, provider, opts, callback);
+apiInstance.sMTPStatRouterGetAllAggregateIPSMTPStatsForSubAccount(xAccountApiKey, ipid, sid, opts, callback);
 ```
 
 ### Parameters
@@ -172,9 +170,9 @@ Name | Type | Description  | Notes
  **xAccountApiKey** | **String**| Account API Key | 
  **ipid** | **Number**| the IP ID you want to get | 
  **sid** | **Number**| the SubAccount ID you want to get | 
- **provider** | **String**| the provider whose stats you want | 
  **from** | **String**| from date | [optional] 
  **to** | **String**| to date | [optional] 
+ **provider** | **String**| the provider whose stats you want | [optional] 
 
 ### Return type
 
@@ -249,7 +247,7 @@ No authorization required
 
 <a name="sMTPStatRouterGetAllAggregateSubAccountSMTPStats"></a>
 # **sMTPStatRouterGetAllAggregateSubAccountSMTPStats**
-> [ModelsSMTPStat] sMTPStatRouterGetAllAggregateSubAccountSMTPStats(xAccountApiKey, sid, provider, opts)
+> [ModelsSMTPStat] sMTPStatRouterGetAllAggregateSubAccountSMTPStats(xAccountApiKey, sid, opts)
 
 
 
@@ -265,11 +263,10 @@ var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var sid = 789; // Number | the Sub-Account ID you want to get
 
-var provider = "provider_example"; // String | the provider whose stats you want
-
 var opts = { 
   'from': "from_example", // String | from date
-  'to': "to_example" // String | to date
+  'to': "to_example", // String | to date
+  'provider': "provider_example" // String | the provider whose stats you want
 };
 
 var callback = function(error, data, response) {
@@ -279,7 +276,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.sMTPStatRouterGetAllAggregateSubAccountSMTPStats(xAccountApiKey, sid, provider, opts, callback);
+apiInstance.sMTPStatRouterGetAllAggregateSubAccountSMTPStats(xAccountApiKey, sid, opts, callback);
 ```
 
 ### Parameters
@@ -288,9 +285,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
  **sid** | **Number**| the Sub-Account ID you want to get | 
- **provider** | **String**| the provider whose stats you want | 
  **from** | **String**| from date | [optional] 
  **to** | **String**| to date | [optional] 
+ **provider** | **String**| the provider whose stats you want | [optional] 
 
 ### Return type
 
@@ -307,7 +304,7 @@ No authorization required
 
 <a name="sMTPStatRouterGetAllAggregateSubAccountSMTPStatsForIP"></a>
 # **sMTPStatRouterGetAllAggregateSubAccountSMTPStatsForIP**
-> [ModelsSMTPStat] sMTPStatRouterGetAllAggregateSubAccountSMTPStatsForIP(xAccountApiKey, sid, ipid, provider, opts)
+> [ModelsSMTPStat] sMTPStatRouterGetAllAggregateSubAccountSMTPStatsForIP(xAccountApiKey, sid, ipid, opts)
 
 
 
@@ -325,11 +322,10 @@ var sid = 789; // Number | the Sub-Account ID you want to get
 
 var ipid = 789; // Number | the IP  ID you want to get
 
-var provider = "provider_example"; // String | the provider whose stats you want
-
 var opts = { 
   'from': "from_example", // String | from date
-  'to': "to_example" // String | to date
+  'to': "to_example", // String | to date
+  'provider': "provider_example" // String | the provider whose stats you want
 };
 
 var callback = function(error, data, response) {
@@ -339,7 +335,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.sMTPStatRouterGetAllAggregateSubAccountSMTPStatsForIP(xAccountApiKey, sid, ipid, provider, opts, callback);
+apiInstance.sMTPStatRouterGetAllAggregateSubAccountSMTPStatsForIP(xAccountApiKey, sid, ipid, opts, callback);
 ```
 
 ### Parameters
@@ -349,9 +345,9 @@ Name | Type | Description  | Notes
  **xAccountApiKey** | **String**| Account API Key | 
  **sid** | **Number**| the Sub-Account ID you want to get | 
  **ipid** | **Number**| the IP  ID you want to get | 
- **provider** | **String**| the provider whose stats you want | 
  **from** | **String**| from date | [optional] 
  **to** | **String**| to date | [optional] 
+ **provider** | **String**| the provider whose stats you want | [optional] 
 
 ### Return type
 

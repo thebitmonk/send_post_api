@@ -42,12 +42,12 @@
           /*
           var xAccountApiKey = "xAccountApiKey_example";
           var ipid = 789;
-          var provider = "provider_example";
           var opts = {};
           opts.from = "from_example";
           opts.to = "to_example";
+          opts.provider = "provider_example";
 
-          instance.iPStatRouterGetAllAggregateIPStats(xAccountApiKey, ipid, provider, opts, function(error, data, response) {
+          instance.iPStatRouterGetAllAggregateIPStats(xAccountApiKey, ipid, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -88,12 +88,12 @@
           /*
           var xAccountApiKey = "xAccountApiKey_example";
           var ipid = 789;
-          var provider = "provider_example";
           var opts = {};
           opts.from = "from_example";
           opts.to = "to_example";
+          opts.provider = "provider_example";
 
-          instance.iPStatRouterGetAllAggregateIPStatsByProvider(xAccountApiKey, ipid, provider, opts, function(error, data, response) {
+          instance.iPStatRouterGetAllAggregateIPStatsByProvider(xAccountApiKey, ipid, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -255,12 +255,13 @@
           /*
           var xAccountApiKey = "xAccountApiKey_example";
           var ipid = 789;
-          var provider = "provider_example";
           var opts = {};
           opts.from = "from_example";
           opts.to = "to_example";
+          opts.provider = "provider_example";
+          opts.sortBy = "sortBy_example";
 
-          instance.iPStatRouterGetAllAggregatedSubAccountStatsForAnIP(xAccountApiKey, ipid, provider, opts, function(error, data, response) {
+          instance.iPStatRouterGetAllAggregatedSubAccountStatsForAnIP(xAccountApiKey, ipid, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -318,12 +319,12 @@
           /*
           var xAccountApiKey = "xAccountApiKey_example";
           var ipid = 789;
-          var provider = "provider_example";
           var opts = {};
           opts.from = "from_example";
           opts.to = "to_example";
+          opts.provider = "provider_example";
 
-          instance.iPStatRouterGetAllIPStats(xAccountApiKey, ipid, provider, opts, function(error, data, response) {
+          instance.iPStatRouterGetAllIPStats(xAccountApiKey, ipid, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;

@@ -60,14 +60,14 @@
      * Get All Aggregate Stats
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid the IPId you want to get
-     * @param {String} provider the provider whose stats you want
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
      * @param {String} opts.to to date
+     * @param {String} opts.provider the provider whose stats you want
      * @param {module:api/AccountipstatApi~iPStatRouterGetAllAggregateIPStatsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsStat}
      */
-    this.iPStatRouterGetAllAggregateIPStats = function(xAccountApiKey, ipid, provider, opts, callback) {
+    this.iPStatRouterGetAllAggregateIPStats = function(xAccountApiKey, ipid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -81,11 +81,6 @@
         throw new Error("Missing the required parameter 'ipid' when calling iPStatRouterGetAllAggregateIPStats");
       }
 
-      // verify the required parameter 'provider' is set
-      if (provider === undefined || provider === null) {
-        throw new Error("Missing the required parameter 'provider' when calling iPStatRouterGetAllAggregateIPStats");
-      }
-
 
       var pathParams = {
         'ipid': ipid
@@ -93,7 +88,7 @@
       var queryParams = {
         'from': opts['from'],
         'to': opts['to'],
-        'provider': provider,
+        'provider': opts['provider'],
       };
       var collectionQueryParams = {
       };
@@ -127,14 +122,14 @@
      * Get All Aggregate Stats by Provider
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid the IPId you want to get
-     * @param {String} provider the provider whose stats you want
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
      * @param {String} opts.to to date
+     * @param {String} opts.provider the provider whose stats you want
      * @param {module:api/AccountipstatApi~iPStatRouterGetAllAggregateIPStatsByProviderCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsStat}
      */
-    this.iPStatRouterGetAllAggregateIPStatsByProvider = function(xAccountApiKey, ipid, provider, opts, callback) {
+    this.iPStatRouterGetAllAggregateIPStatsByProvider = function(xAccountApiKey, ipid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -148,11 +143,6 @@
         throw new Error("Missing the required parameter 'ipid' when calling iPStatRouterGetAllAggregateIPStatsByProvider");
       }
 
-      // verify the required parameter 'provider' is set
-      if (provider === undefined || provider === null) {
-        throw new Error("Missing the required parameter 'provider' when calling iPStatRouterGetAllAggregateIPStatsByProvider");
-      }
-
 
       var pathParams = {
         'ipid': ipid
@@ -160,7 +150,7 @@
       var queryParams = {
         'from': opts['from'],
         'to': opts['to'],
-        'provider': provider,
+        'provider': opts['provider'],
       };
       var collectionQueryParams = {
       };
@@ -321,14 +311,15 @@
      * Get All Aggregated Sub-Account Stats for an IP
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid the IPId you want to get
-     * @param {String} provider the provider whose stats you want
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
      * @param {String} opts.to to date
+     * @param {String} opts.provider the provider whose stats you want
+     * @param {String} opts.sortBy the sorting order
      * @param {module:api/AccountipstatApi~iPStatRouterGetAllAggregatedSubAccountStatsForAnIPCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsSIPStat>}
      */
-    this.iPStatRouterGetAllAggregatedSubAccountStatsForAnIP = function(xAccountApiKey, ipid, provider, opts, callback) {
+    this.iPStatRouterGetAllAggregatedSubAccountStatsForAnIP = function(xAccountApiKey, ipid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -342,11 +333,6 @@
         throw new Error("Missing the required parameter 'ipid' when calling iPStatRouterGetAllAggregatedSubAccountStatsForAnIP");
       }
 
-      // verify the required parameter 'provider' is set
-      if (provider === undefined || provider === null) {
-        throw new Error("Missing the required parameter 'provider' when calling iPStatRouterGetAllAggregatedSubAccountStatsForAnIP");
-      }
-
 
       var pathParams = {
         'ipid': ipid
@@ -354,7 +340,8 @@
       var queryParams = {
         'from': opts['from'],
         'to': opts['to'],
-        'provider': provider,
+        'provider': opts['provider'],
+        'sortBy': opts['sortBy'],
       };
       var collectionQueryParams = {
       };
@@ -388,14 +375,14 @@
      * Get All IP Stats
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid the IPId you want to get
-     * @param {String} provider the provider whose stats you want
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
      * @param {String} opts.to to date
+     * @param {String} opts.provider the provider whose stats you want
      * @param {module:api/AccountipstatApi~iPStatRouterGetAllIPStatsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsRIPStat>}
      */
-    this.iPStatRouterGetAllIPStats = function(xAccountApiKey, ipid, provider, opts, callback) {
+    this.iPStatRouterGetAllIPStats = function(xAccountApiKey, ipid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -409,11 +396,6 @@
         throw new Error("Missing the required parameter 'ipid' when calling iPStatRouterGetAllIPStats");
       }
 
-      // verify the required parameter 'provider' is set
-      if (provider === undefined || provider === null) {
-        throw new Error("Missing the required parameter 'provider' when calling iPStatRouterGetAllIPStats");
-      }
-
 
       var pathParams = {
         'ipid': ipid
@@ -421,7 +403,7 @@
       var queryParams = {
         'from': opts['from'],
         'to': opts['to'],
-        'provider': provider,
+        'provider': opts['provider'],
       };
       var collectionQueryParams = {
       };
