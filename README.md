@@ -128,8 +128,8 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountdomainApi* | [**accountDomainRouterCount**](docs/AccountdomainApi.md#accountDomainRouterCount) | **GET** /account/domain/count | 
 *SendPostApi.AccountdomainApi* | [**accountDomainRouterGetAll**](docs/AccountdomainApi.md#accountDomainRouterGetAll) | **GET** /account/domain/ | 
 *SendPostApi.AccountdomainReportApi* | [**domainReportRouterReputation**](docs/AccountdomainReportApi.md#domainReportRouterReputation) | **GET** /account/domainReport/reputation | 
-*SendPostApi.AccountdomainStatApi* | [**domainStatRouterGetAllAggregateDomainStatsByGroup**](docs/AccountdomainStatApi.md#domainStatRouterGetAllAggregateDomainStatsByGroup) | **GET** /account/domainStat/{domainName}/aggregate/provider | 
-*SendPostApi.AccountdomainStatApi* | [**domainStatRouterGetStatsForASingleDomainStats**](docs/AccountdomainStatApi.md#domainStatRouterGetStatsForASingleDomainStats) | **GET** /account/domainStat/{domainName}/aggregate | 
+*SendPostApi.AccountdomainStatApi* | [**domainStatRouterGetAllAggregateDomainStatsByGroup**](docs/AccountdomainStatApi.md#domainStatRouterGetAllAggregateDomainStatsByGroup) | **GET** /account/domainStat/{domainId}/aggregate/provider | 
+*SendPostApi.AccountdomainStatApi* | [**domainStatRouterGetStatsForASingleDomainStats**](docs/AccountdomainStatApi.md#domainStatRouterGetStatsForASingleDomainStats) | **GET** /account/domainStat/{domainId}/aggregate | 
 *SendPostApi.AccounteventApi* | [**eventRouterCountAllEventsFromAAccountForAGivenTimeRange**](docs/AccounteventApi.md#eventRouterCountAllEventsFromAAccountForAGivenTimeRange) | **GET** /account/event/count | 
 *SendPostApi.AccounteventApi* | [**eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange**](docs/AccounteventApi.md#eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange) | **GET** /account/event/node/count | 
 *SendPostApi.AccounteventApi* | [**eventRouterGet**](docs/AccounteventApi.md#eventRouterGet) | **GET** /account/event/{eventId} | 
@@ -309,10 +309,14 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsAlertResponse](docs/ModelsAlertResponse.md)
  - [SendPostApi.ModelsAllClusterCache](docs/ModelsAllClusterCache.md)
  - [SendPostApi.ModelsAuthInfo](docs/ModelsAuthInfo.md)
+ - [SendPostApi.ModelsAutoWarmupContent](docs/ModelsAutoWarmupContent.md)
  - [SendPostApi.ModelsAutoWarmupContentRequest](docs/ModelsAutoWarmupContentRequest.md)
+ - [SendPostApi.ModelsAutoWarmupDailySchedule](docs/ModelsAutoWarmupDailySchedule.md)
+ - [SendPostApi.ModelsAutoWarmupDomainSchedule](docs/ModelsAutoWarmupDomainSchedule.md)
  - [SendPostApi.ModelsAutoWarmupPlan](docs/ModelsAutoWarmupPlan.md)
  - [SendPostApi.ModelsAutoWarmupPlanRequest](docs/ModelsAutoWarmupPlanRequest.md)
- - [SendPostApi.ModelsAutoWarmupRecepientRequest](docs/ModelsAutoWarmupRecepientRequest.md)
+ - [SendPostApi.ModelsAutoWarmupRecipient](docs/ModelsAutoWarmupRecipient.md)
+ - [SendPostApi.ModelsAutoWarmupRecipientResponse](docs/ModelsAutoWarmupRecipientResponse.md)
  - [SendPostApi.ModelsBackOffConfiguration](docs/ModelsBackOffConfiguration.md)
  - [SendPostApi.ModelsBackOffDecreaseType](docs/ModelsBackOffDecreaseType.md)
  - [SendPostApi.ModelsBackOffTrigger](docs/ModelsBackOffTrigger.md)
@@ -377,6 +381,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsIIP](docs/ModelsIIP.md)
  - [SendPostApi.ModelsIIPUpdateType](docs/ModelsIIPUpdateType.md)
  - [SendPostApi.ModelsIP](docs/ModelsIP.md)
+ - [SendPostApi.ModelsIPDomainWarmupStatus](docs/ModelsIPDomainWarmupStatus.md)
  - [SendPostApi.ModelsIPPool](docs/ModelsIPPool.md)
  - [SendPostApi.ModelsIPPoolType](docs/ModelsIPPoolType.md)
  - [SendPostApi.ModelsIPStat](docs/ModelsIPStat.md)
@@ -399,7 +404,6 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsPIPStat](docs/ModelsPIPStat.md)
  - [SendPostApi.ModelsPaymentOptions](docs/ModelsPaymentOptions.md)
  - [SendPostApi.ModelsPaymentStatus](docs/ModelsPaymentStatus.md)
- - [SendPostApi.ModelsPlanSettings](docs/ModelsPlanSettings.md)
  - [SendPostApi.ModelsProvider](docs/ModelsProvider.md)
  - [SendPostApi.ModelsProviderResult](docs/ModelsProviderResult.md)
  - [SendPostApi.ModelsProviderSettings](docs/ModelsProviderSettings.md)
@@ -438,8 +442,6 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsVerifyByMemberTokenRequest](docs/ModelsVerifyByMemberTokenRequest.md)
  - [SendPostApi.ModelsVerifyByTokenRequest](docs/ModelsVerifyByTokenRequest.md)
  - [SendPostApi.ModelsWMessage](docs/ModelsWMessage.md)
- - [SendPostApi.ModelsWarmupRecipient](docs/ModelsWarmupRecipient.md)
- - [SendPostApi.ModelsWarmupSchedules](docs/ModelsWarmupSchedules.md)
  - [SendPostApi.Provider](docs/Provider.md)
  - [SendPostApi.UaparserDevice](docs/UaparserDevice.md)
  - [SendPostApi.UaparserOs](docs/UaparserOs.md)

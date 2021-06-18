@@ -95,6 +95,12 @@
         // expect(instance.parameter).to.be(expectedValueLiteral);
       });
 
+      it('should have the property processedCountThreshold (base name: "processedCountThreshold")', function() {
+        // TODO: update the code to test the property processedCountThreshold
+        expect(instance).to.have.property('processedCountThreshold');
+        // expect(instance.processedCountThreshold).to.be(expectedValueLiteral);
+      });
+
       it('should have the property provider (base name: "provider")', function() {
         // TODO: update the code to test the property provider
         expect(instance).to.have.property('provider');

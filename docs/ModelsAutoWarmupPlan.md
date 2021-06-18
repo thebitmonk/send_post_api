@@ -3,8 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**planSettings** | **String** |  | [optional] 
+**created** | **Number** |  | [optional] 
 **id** | **Number** |  | [optional] 
 **name** | **String** |  | [optional] 
+**schedule** | **String** |  | [optional] 
+**updated** | **Number** |  | [optional] 
 
 

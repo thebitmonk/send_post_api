@@ -31,20 +31,32 @@
   var instance;
 
   describe('(package)', function() {
-    describe('ModelsAutoWarmupRecepientRequest', function() {
+    describe('ModelsAutoWarmupContent', function() {
       beforeEach(function() {
-        instance = new SendPostApi.ModelsAutoWarmupRecepientRequest();
+        instance = new SendPostApi.ModelsAutoWarmupContent();
       });
 
-      it('should create an instance of ModelsAutoWarmupRecepientRequest', function() {
-        // TODO: update the code to test ModelsAutoWarmupRecepientRequest
-        expect(instance).to.be.a(SendPostApi.ModelsAutoWarmupRecepientRequest);
+      it('should create an instance of ModelsAutoWarmupContent', function() {
+        // TODO: update the code to test ModelsAutoWarmupContent
+        expect(instance).to.be.a(SendPostApi.ModelsAutoWarmupContent);
       });
 
-      it('should have the property recepients (base name: "recepients")', function() {
-        // TODO: update the code to test the property recepients
-        expect(instance).to.have.property('recepients');
-        // expect(instance.recepients).to.be(expectedValueLiteral);
+      it('should have the property contentList (base name: "contentList")', function() {
+        // TODO: update the code to test the property contentList
+        expect(instance).to.have.property('contentList');
+        // expect(instance.contentList).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property domain (base name: "domain")', function() {
+        // TODO: update the code to test the property domain
+        expect(instance).to.have.property('domain');
+        // expect(instance.domain).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property id (base name: "id")', function() {
+        // TODO: update the code to test the property id
+        expect(instance).to.have.property('id');
+        // expect(instance.id).to.be(expectedValueLiteral);
       });
 
     });

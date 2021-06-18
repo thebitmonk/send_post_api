@@ -31,26 +31,32 @@
   var instance;
 
   describe('(package)', function() {
-    describe('ModelsPlanSettings', function() {
+    describe('ModelsAutoWarmupDailySchedule', function() {
       beforeEach(function() {
-        instance = new SendPostApi.ModelsPlanSettings();
+        instance = new SendPostApi.ModelsAutoWarmupDailySchedule();
       });
 
-      it('should create an instance of ModelsPlanSettings', function() {
-        // TODO: update the code to test ModelsPlanSettings
-        expect(instance).to.be.a(SendPostApi.ModelsPlanSettings);
+      it('should create an instance of ModelsAutoWarmupDailySchedule', function() {
+        // TODO: update the code to test ModelsAutoWarmupDailySchedule
+        expect(instance).to.be.a(SendPostApi.ModelsAutoWarmupDailySchedule);
       });
 
-      it('should have the property warmupDomains (base name: "warmupDomains")', function() {
-        // TODO: update the code to test the property warmupDomains
-        expect(instance).to.have.property('warmupDomains');
-        // expect(instance.warmupDomains).to.be(expectedValueLiteral);
+      it('should have the property count (base name: "count")', function() {
+        // TODO: update the code to test the property count
+        expect(instance).to.have.property('count');
+        // expect(instance.count).to.be(expectedValueLiteral);
       });
 
-      it('should have the property warmupSchedules (base name: "warmupSchedules")', function() {
-        // TODO: update the code to test the property warmupSchedules
-        expect(instance).to.have.property('warmupSchedules');
-        // expect(instance.warmupSchedules).to.be(expectedValueLiteral);
+      it('should have the property source (base name: "source")', function() {
+        // TODO: update the code to test the property source
+        expect(instance).to.have.property('source');
+        // expect(instance.source).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property type (base name: "type")', function() {
+        // TODO: update the code to test the property type
+        expect(instance).to.have.property('type');
+        // expect(instance.type).to.be(expectedValueLiteral);
       });
 
     });

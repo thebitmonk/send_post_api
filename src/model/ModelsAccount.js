@@ -91,6 +91,8 @@
         obj.onboardQAnswered = ApiClient.convertToType(data['onboardQAnswered'], 'Boolean');
       if (data.hasOwnProperty('sendingVolumePerMonth'))
         obj.sendingVolumePerMonth = ApiClient.convertToType(data['sendingVolumePerMonth'], 'String');
+      if (data.hasOwnProperty('slackToken'))
+        obj.slackToken = ApiClient.convertToType(data['slackToken'], 'String');
       if (data.hasOwnProperty('stripeBasePriceId'))
         obj.stripeBasePriceId = ApiClient.convertToType(data['stripeBasePriceId'], 'String');
       if (data.hasOwnProperty('stripeUsagePriceId'))
@@ -188,6 +190,11 @@
    * @member {String} sendingVolumePerMonth
    */
   exports.prototype.sendingVolumePerMonth = undefined;
+
+  /**
+   * @member {String} slackToken
+   */
+  exports.prototype.slackToken = undefined;
 
   /**
    * @member {String} stripeBasePriceId

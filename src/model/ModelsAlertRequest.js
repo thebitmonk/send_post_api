@@ -73,6 +73,8 @@
         obj.notificationType = ModelsNotificationType.constructFromObject(data['notificationType']);
       if (data.hasOwnProperty('parameter'))
         obj.parameter = ApiClient.convertToType(data['parameter'], 'Number');
+      if (data.hasOwnProperty('processedCountThreshold'))
+        obj.processedCountThreshold = ApiClient.convertToType(data['processedCountThreshold'], 'Number');
       if (data.hasOwnProperty('provider'))
         obj.provider = ApiClient.convertToType(data['provider'], 'String');
       if (data.hasOwnProperty('slackUrl'))
@@ -127,6 +129,11 @@
    * @member {Number} parameter
    */
   exports.prototype.parameter = undefined;
+
+  /**
+   * @member {Number} processedCountThreshold
+   */
+  exports.prototype.processedCountThreshold = undefined;
 
   /**
    * @member {String} provider

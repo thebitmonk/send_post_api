@@ -76,6 +76,7 @@
           body.name = "";
           body.notificationType = new SendPostApi.ModelsNotificationType();
           body.parameter = "0";
+          body.processedCountThreshold = "0";
           body.provider = "";
           body.slackUrl = "";
           body.threshold = "";

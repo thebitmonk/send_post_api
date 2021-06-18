@@ -26,53 +26,51 @@
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsAutoWarmupPlan = factory(root.SendPostApi.ApiClient);
+    root.SendPostApi.ModelsAutoWarmupRecipient = factory(root.SendPostApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The ModelsAutoWarmupPlan model module.
-   * @module model/ModelsAutoWarmupPlan
+   * The ModelsAutoWarmupRecipient model module.
+   * @module model/ModelsAutoWarmupRecipient
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>ModelsAutoWarmupPlan</code>.
-   * @alias module:model/ModelsAutoWarmupPlan
+   * Constructs a new <code>ModelsAutoWarmupRecipient</code>.
+   * @alias module:model/ModelsAutoWarmupRecipient
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>ModelsAutoWarmupPlan</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ModelsAutoWarmupRecipient</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ModelsAutoWarmupPlan} obj Optional instance to populate.
-   * @return {module:model/ModelsAutoWarmupPlan} The populated <code>ModelsAutoWarmupPlan</code> instance.
+   * @param {module:model/ModelsAutoWarmupRecipient} obj Optional instance to populate.
+   * @return {module:model/ModelsAutoWarmupRecipient} The populated <code>ModelsAutoWarmupRecipient</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('created'))
-        obj.created = ApiClient.convertToType(data['created'], 'Number');
+      if (data.hasOwnProperty('email'))
+        obj.email = ApiClient.convertToType(data['email'], 'String');
       if (data.hasOwnProperty('id'))
         obj.id = ApiClient.convertToType(data['id'], 'Number');
-      if (data.hasOwnProperty('name'))
-        obj.name = ApiClient.convertToType(data['name'], 'String');
-      if (data.hasOwnProperty('schedule'))
-        obj.schedule = ApiClient.convertToType(data['schedule'], 'String');
-      if (data.hasOwnProperty('updated'))
-        obj.updated = ApiClient.convertToType(data['updated'], 'Number');
+      if (data.hasOwnProperty('source'))
+        obj.source = ApiClient.convertToType(data['source'], 'String');
+      if (data.hasOwnProperty('type'))
+        obj.type = ApiClient.convertToType(data['type'], 'String');
     }
     return obj;
   }
 
   /**
-   * @member {Number} created
+   * @member {String} email
    */
-  exports.prototype.created = undefined;
+  exports.prototype.email = undefined;
 
   /**
    * @member {Number} id
@@ -80,19 +78,14 @@
   exports.prototype.id = undefined;
 
   /**
-   * @member {String} name
+   * @member {String} source
    */
-  exports.prototype.name = undefined;
+  exports.prototype.source = undefined;
 
   /**
-   * @member {String} schedule
+   * @member {String} type
    */
-  exports.prototype.schedule = undefined;
-
-  /**
-   * @member {Number} updated
-   */
-  exports.prototype.updated = undefined;
+  exports.prototype.type = undefined;
 
 
   return exports;

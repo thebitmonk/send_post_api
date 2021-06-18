@@ -31,14 +31,14 @@
   var instance;
 
   describe('(package)', function() {
-    describe('ModelsWarmupRecipient', function() {
+    describe('ModelsAutoWarmupRecipient', function() {
       beforeEach(function() {
-        instance = new SendPostApi.ModelsWarmupRecipient();
+        instance = new SendPostApi.ModelsAutoWarmupRecipient();
       });
 
-      it('should create an instance of ModelsWarmupRecipient', function() {
-        // TODO: update the code to test ModelsWarmupRecipient
-        expect(instance).to.be.a(SendPostApi.ModelsWarmupRecipient);
+      it('should create an instance of ModelsAutoWarmupRecipient', function() {
+        // TODO: update the code to test ModelsAutoWarmupRecipient
+        expect(instance).to.be.a(SendPostApi.ModelsAutoWarmupRecipient);
       });
 
       it('should have the property email (base name: "email")', function() {

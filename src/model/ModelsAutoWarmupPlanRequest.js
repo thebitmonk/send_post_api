@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsPlanSettings'], factory);
+    define(['ApiClient', 'model/ModelsAutoWarmupDomainSchedule'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ModelsPlanSettings'));
+    module.exports = factory(require('../ApiClient'), require('./ModelsAutoWarmupDomainSchedule'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsAutoWarmupPlanRequest = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsPlanSettings);
+    root.SendPostApi.ModelsAutoWarmupPlanRequest = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsAutoWarmupDomainSchedule);
   }
-}(this, function(ApiClient, ModelsPlanSettings) {
+}(this, function(ApiClient, ModelsAutoWarmupDomainSchedule) {
   'use strict';
 
   /**
@@ -57,8 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
-      if (data.hasOwnProperty('planSettings'))
-        obj.planSettings = ModelsPlanSettings.constructFromObject(data['planSettings']);
+      if (data.hasOwnProperty('schedule'))
+        obj.schedule = ApiClient.convertToType(data['schedule'], [ModelsAutoWarmupDomainSchedule]);
     }
     return obj;
   }
@@ -69,9 +69,9 @@
   exports.prototype.name = undefined;
 
   /**
-   * @member {module:model/ModelsPlanSettings} planSettings
+   * @member {Array.<module:model/ModelsAutoWarmupDomainSchedule>} schedule
    */
-  exports.prototype.planSettings = undefined;
+  exports.prototype.schedule = undefined;
 
 
   return exports;

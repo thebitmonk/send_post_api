@@ -17,61 +17,68 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsWarmupSchedules'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ModelsWarmupSchedules'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsPlanSettings = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsWarmupSchedules);
+    root.SendPostApi.ModelsAutoWarmupContent = factory(root.SendPostApi.ApiClient);
   }
-}(this, function(ApiClient, ModelsWarmupSchedules) {
+}(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The ModelsPlanSettings model module.
-   * @module model/ModelsPlanSettings
+   * The ModelsAutoWarmupContent model module.
+   * @module model/ModelsAutoWarmupContent
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>ModelsPlanSettings</code>.
-   * @alias module:model/ModelsPlanSettings
+   * Constructs a new <code>ModelsAutoWarmupContent</code>.
+   * @alias module:model/ModelsAutoWarmupContent
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>ModelsPlanSettings</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ModelsAutoWarmupContent</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ModelsPlanSettings} obj Optional instance to populate.
-   * @return {module:model/ModelsPlanSettings} The populated <code>ModelsPlanSettings</code> instance.
+   * @param {module:model/ModelsAutoWarmupContent} obj Optional instance to populate.
+   * @return {module:model/ModelsAutoWarmupContent} The populated <code>ModelsAutoWarmupContent</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('warmupDomains'))
-        obj.warmupDomains = ApiClient.convertToType(data['warmupDomains'], Object);
-      if (data.hasOwnProperty('warmupSchedules'))
-        obj.warmupSchedules = ApiClient.convertToType(data['warmupSchedules'], [ModelsWarmupSchedules]);
+      if (data.hasOwnProperty('contentList'))
+        obj.contentList = ApiClient.convertToType(data['contentList'], 'String');
+      if (data.hasOwnProperty('domain'))
+        obj.domain = ApiClient.convertToType(data['domain'], 'String');
+      if (data.hasOwnProperty('id'))
+        obj.id = ApiClient.convertToType(data['id'], 'Number');
     }
     return obj;
   }
 
   /**
-   * @member {Object} warmupDomains
+   * @member {String} contentList
    */
-  exports.prototype.warmupDomains = undefined;
+  exports.prototype.contentList = undefined;
 
   /**
-   * @member {Array.<module:model/ModelsWarmupSchedules>} warmupSchedules
+   * @member {String} domain
    */
-  exports.prototype.warmupSchedules = undefined;
+  exports.prototype.domain = undefined;
+
+  /**
+   * @member {Number} id
+   */
+  exports.prototype.id = undefined;
 
 
   return exports;

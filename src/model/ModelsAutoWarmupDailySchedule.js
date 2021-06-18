@@ -26,31 +26,31 @@
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsWarmupSchedules = factory(root.SendPostApi.ApiClient);
+    root.SendPostApi.ModelsAutoWarmupDailySchedule = factory(root.SendPostApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The ModelsWarmupSchedules model module.
-   * @module model/ModelsWarmupSchedules
+   * The ModelsAutoWarmupDailySchedule model module.
+   * @module model/ModelsAutoWarmupDailySchedule
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>ModelsWarmupSchedules</code>.
-   * @alias module:model/ModelsWarmupSchedules
+   * Constructs a new <code>ModelsAutoWarmupDailySchedule</code>.
+   * @alias module:model/ModelsAutoWarmupDailySchedule
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>ModelsWarmupSchedules</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ModelsAutoWarmupDailySchedule</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ModelsWarmupSchedules} obj Optional instance to populate.
-   * @return {module:model/ModelsWarmupSchedules} The populated <code>ModelsWarmupSchedules</code> instance.
+   * @param {module:model/ModelsAutoWarmupDailySchedule} obj Optional instance to populate.
+   * @return {module:model/ModelsAutoWarmupDailySchedule} The populated <code>ModelsAutoWarmupDailySchedule</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {

@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsIPType', 'model/ModelsLabel', 'model/ModelsSystemDomain'], factory);
+    define(['ApiClient', 'model/ModelsIPDomainWarmupStatus', 'model/ModelsIPType', 'model/ModelsLabel', 'model/ModelsSystemDomain'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ModelsIPType'), require('./ModelsLabel'), require('./ModelsSystemDomain'));
+    module.exports = factory(require('../ApiClient'), require('./ModelsIPDomainWarmupStatus'), require('./ModelsIPType'), require('./ModelsLabel'), require('./ModelsSystemDomain'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsIP = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsIPType, root.SendPostApi.ModelsLabel, root.SendPostApi.ModelsSystemDomain);
+    root.SendPostApi.ModelsIP = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsIPDomainWarmupStatus, root.SendPostApi.ModelsIPType, root.SendPostApi.ModelsLabel, root.SendPostApi.ModelsSystemDomain);
   }
-}(this, function(ApiClient, ModelsIPType, ModelsLabel, ModelsSystemDomain) {
+}(this, function(ApiClient, ModelsIPDomainWarmupStatus, ModelsIPType, ModelsLabel, ModelsSystemDomain) {
   'use strict';
 
   /**
@@ -57,14 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('aolSettings'))
         obj.aolSettings = ApiClient.convertToType(data['aolSettings'], 'String');
-      if (data.hasOwnProperty('autoWarmupDelay'))
-        obj.autoWarmupDelay = ApiClient.convertToType(data['autoWarmupDelay'], 'Number');
       if (data.hasOwnProperty('autoWarmupEnabled'))
         obj.autoWarmupEnabled = ApiClient.convertToType(data['autoWarmupEnabled'], 'Boolean');
-      if (data.hasOwnProperty('autoWarmupLastRunAt'))
-        obj.autoWarmupLastRunAt = ApiClient.convertToType(data['autoWarmupLastRunAt'], 'Number');
-      if (data.hasOwnProperty('autoWarmupStage'))
-        obj.autoWarmupStage = ApiClient.convertToType(data['autoWarmupStage'], 'Number');
       if (data.hasOwnProperty('comcastSettings'))
         obj.comcastSettings = ApiClient.convertToType(data['comcastSettings'], 'String');
       if (data.hasOwnProperty('created'))
@@ -83,8 +77,8 @@
         obj.infraClassification = ApiClient.convertToType(data['infraClassification'], 'String');
       if (data.hasOwnProperty('infraMonitor'))
         obj.infraMonitor = ApiClient.convertToType(data['infraMonitor'], 'Boolean');
-      if (data.hasOwnProperty('isAutoIPWarmupProcessing'))
-        obj.isAutoIPWarmupProcessing = ApiClient.convertToType(data['isAutoIPWarmupProcessing'], 'Boolean');
+      if (data.hasOwnProperty('ipDomainWarmupStatus'))
+        obj.ipDomainWarmupStatus = ApiClient.convertToType(data['ipDomainWarmupStatus'], [ModelsIPDomainWarmupStatus]);
       if (data.hasOwnProperty('labels'))
         obj.labels = ApiClient.convertToType(data['labels'], [ModelsLabel]);
       if (data.hasOwnProperty('mailruSettings'))
@@ -101,8 +95,6 @@
         obj.systemDomain = ModelsSystemDomain.constructFromObject(data['systemDomain']);
       if (data.hasOwnProperty('type'))
         obj.type = ModelsIPType.constructFromObject(data['type']);
-      if (data.hasOwnProperty('warmUpNotComplete'))
-        obj.warmUpNotComplete = ApiClient.convertToType(data['warmUpNotComplete'], 'Boolean');
       if (data.hasOwnProperty('yahooSettings'))
         obj.yahooSettings = ApiClient.convertToType(data['yahooSettings'], 'String');
       if (data.hasOwnProperty('yandexSettings'))
@@ -119,24 +111,9 @@
   exports.prototype.aolSettings = undefined;
 
   /**
-   * @member {Number} autoWarmupDelay
-   */
-  exports.prototype.autoWarmupDelay = undefined;
-
-  /**
    * @member {Boolean} autoWarmupEnabled
    */
   exports.prototype.autoWarmupEnabled = undefined;
-
-  /**
-   * @member {Number} autoWarmupLastRunAt
-   */
-  exports.prototype.autoWarmupLastRunAt = undefined;
-
-  /**
-   * @member {Number} autoWarmupStage
-   */
-  exports.prototype.autoWarmupStage = undefined;
 
   /**
    * @member {String} comcastSettings
@@ -184,9 +161,9 @@
   exports.prototype.infraMonitor = undefined;
 
   /**
-   * @member {Boolean} isAutoIPWarmupProcessing
+   * @member {Array.<module:model/ModelsIPDomainWarmupStatus>} ipDomainWarmupStatus
    */
-  exports.prototype.isAutoIPWarmupProcessing = undefined;
+  exports.prototype.ipDomainWarmupStatus = undefined;
 
   /**
    * @member {Array.<module:model/ModelsLabel>} labels
@@ -227,11 +204,6 @@
    * @member {module:model/ModelsIPType} type
    */
   exports.prototype.type = undefined;
-
-  /**
-   * @member {Boolean} warmUpNotComplete
-   */
-  exports.prototype.warmUpNotComplete = undefined;
 
   /**
    * @member {String} yahooSettings

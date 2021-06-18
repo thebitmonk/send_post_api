@@ -91,6 +91,8 @@
             expect(data.onboardQAnswered).to.be(false);
             expect(data.sendingVolumePerMonth).to.be.a('string');
             expect(data.sendingVolumePerMonth).to.be("");
+            expect(data.slackToken).to.be.a('string');
+            expect(data.slackToken).to.be("");
             expect(data.stripeBasePriceId).to.be.a('string');
             expect(data.stripeBasePriceId).to.be("");
             expect(data.stripeUsagePriceId).to.be.a('string');
@@ -165,6 +167,8 @@
                 expect(data.onboardQAnswered).to.be(false);
                 expect(data.sendingVolumePerMonth).to.be.a('string');
                 expect(data.sendingVolumePerMonth).to.be("");
+                expect(data.slackToken).to.be.a('string');
+                expect(data.slackToken).to.be("");
                 expect(data.stripeBasePriceId).to.be.a('string');
                 expect(data.stripeBasePriceId).to.be("");
                 expect(data.stripeUsagePriceId).to.be.a('string');
@@ -269,6 +273,8 @@
                 expect(data.onboardQAnswered).to.be(false);
                 expect(data.sendingVolumePerMonth).to.be.a('string');
                 expect(data.sendingVolumePerMonth).to.be("");
+                expect(data.slackToken).to.be.a('string');
+                expect(data.slackToken).to.be("");
                 expect(data.stripeBasePriceId).to.be.a('string');
                 expect(data.stripeBasePriceId).to.be("");
                 expect(data.stripeUsagePriceId).to.be.a('string');

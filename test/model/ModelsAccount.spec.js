@@ -149,6 +149,12 @@
         // expect(instance.sendingVolumePerMonth).to.be(expectedValueLiteral);
       });
 
+      it('should have the property slackToken (base name: "slackToken")', function() {
+        // TODO: update the code to test the property slackToken
+        expect(instance).to.have.property('slackToken');
+        // expect(instance.slackToken).to.be(expectedValueLiteral);
+      });
+
       it('should have the property stripeBasePriceId (base name: "stripeBasePriceId")', function() {
         // TODO: update the code to test the property stripeBasePriceId
         expect(instance).to.have.property('stripeBasePriceId');

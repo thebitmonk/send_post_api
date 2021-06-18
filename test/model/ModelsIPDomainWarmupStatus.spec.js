@@ -31,14 +31,26 @@
   var instance;
 
   describe('(package)', function() {
-    describe('ModelsAutoWarmupPlan', function() {
+    describe('ModelsIPDomainWarmupStatus', function() {
       beforeEach(function() {
-        instance = new SendPostApi.ModelsAutoWarmupPlan();
+        instance = new SendPostApi.ModelsIPDomainWarmupStatus();
       });
 
-      it('should create an instance of ModelsAutoWarmupPlan', function() {
-        // TODO: update the code to test ModelsAutoWarmupPlan
-        expect(instance).to.be.a(SendPostApi.ModelsAutoWarmupPlan);
+      it('should create an instance of ModelsIPDomainWarmupStatus', function() {
+        // TODO: update the code to test ModelsIPDomainWarmupStatus
+        expect(instance).to.be.a(SendPostApi.ModelsIPDomainWarmupStatus);
+      });
+
+      it('should have the property autoWarmupDelay (base name: "autoWarmupDelay")', function() {
+        // TODO: update the code to test the property autoWarmupDelay
+        expect(instance).to.have.property('autoWarmupDelay');
+        // expect(instance.autoWarmupDelay).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property autoWarmupLastRunAt (base name: "autoWarmupLastRunAt")', function() {
+        // TODO: update the code to test the property autoWarmupLastRunAt
+        expect(instance).to.have.property('autoWarmupLastRunAt');
+        // expect(instance.autoWarmupLastRunAt).to.be(expectedValueLiteral);
       });
 
       it('should have the property created (base name: "created")', function() {
@@ -47,28 +59,28 @@
         // expect(instance.created).to.be(expectedValueLiteral);
       });
 
+      it('should have the property currentWarmupStage (base name: "currentWarmupStage")', function() {
+        // TODO: update the code to test the property currentWarmupStage
+        expect(instance).to.have.property('currentWarmupStage');
+        // expect(instance.currentWarmupStage).to.be(expectedValueLiteral);
+      });
+
       it('should have the property id (base name: "id")', function() {
         // TODO: update the code to test the property id
         expect(instance).to.have.property('id');
         // expect(instance.id).to.be(expectedValueLiteral);
       });
 
-      it('should have the property name (base name: "name")', function() {
-        // TODO: update the code to test the property name
-        expect(instance).to.have.property('name');
-        // expect(instance.name).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property schedule (base name: "schedule")', function() {
-        // TODO: update the code to test the property schedule
-        expect(instance).to.have.property('schedule');
-        // expect(instance.schedule).to.be(expectedValueLiteral);
-      });
-
       it('should have the property updated (base name: "updated")', function() {
         // TODO: update the code to test the property updated
         expect(instance).to.have.property('updated');
         // expect(instance.updated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property warmupCompleted (base name: "warmupCompleted")', function() {
+        // TODO: update the code to test the property warmupCompleted
+        expect(instance).to.have.property('warmupCompleted');
+        // expect(instance.warmupCompleted).to.be(expectedValueLiteral);
       });
 
     });

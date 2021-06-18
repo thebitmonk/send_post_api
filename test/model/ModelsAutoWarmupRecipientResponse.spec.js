@@ -31,26 +31,32 @@
   var instance;
 
   describe('(package)', function() {
-    describe('ModelsAutoWarmupPlanRequest', function() {
+    describe('ModelsAutoWarmupRecipientResponse', function() {
       beforeEach(function() {
-        instance = new SendPostApi.ModelsAutoWarmupPlanRequest();
+        instance = new SendPostApi.ModelsAutoWarmupRecipientResponse();
       });
 
-      it('should create an instance of ModelsAutoWarmupPlanRequest', function() {
-        // TODO: update the code to test ModelsAutoWarmupPlanRequest
-        expect(instance).to.be.a(SendPostApi.ModelsAutoWarmupPlanRequest);
+      it('should create an instance of ModelsAutoWarmupRecipientResponse', function() {
+        // TODO: update the code to test ModelsAutoWarmupRecipientResponse
+        expect(instance).to.be.a(SendPostApi.ModelsAutoWarmupRecipientResponse);
       });
 
-      it('should have the property name (base name: "name")', function() {
-        // TODO: update the code to test the property name
-        expect(instance).to.have.property('name');
-        // expect(instance.name).to.be(expectedValueLiteral);
+      it('should have the property email (base name: "email")', function() {
+        // TODO: update the code to test the property email
+        expect(instance).to.have.property('email');
+        // expect(instance.email).to.be(expectedValueLiteral);
       });
 
-      it('should have the property schedule (base name: "schedule")', function() {
-        // TODO: update the code to test the property schedule
-        expect(instance).to.have.property('schedule');
-        // expect(instance.schedule).to.be(expectedValueLiteral);
+      it('should have the property errorCode (base name: "errorCode")', function() {
+        // TODO: update the code to test the property errorCode
+        expect(instance).to.have.property('errorCode');
+        // expect(instance.errorCode).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property message (base name: "message")', function() {
+        // TODO: update the code to test the property message
+        expect(instance).to.have.property('message');
+        // expect(instance.message).to.be(expectedValueLiteral);
       });
 
     });

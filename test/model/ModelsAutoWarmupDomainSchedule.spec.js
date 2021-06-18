@@ -31,32 +31,26 @@
   var instance;
 
   describe('(package)', function() {
-    describe('ModelsWarmupSchedules', function() {
+    describe('ModelsAutoWarmupDomainSchedule', function() {
       beforeEach(function() {
-        instance = new SendPostApi.ModelsWarmupSchedules();
+        instance = new SendPostApi.ModelsAutoWarmupDomainSchedule();
       });
 
-      it('should create an instance of ModelsWarmupSchedules', function() {
-        // TODO: update the code to test ModelsWarmupSchedules
-        expect(instance).to.be.a(SendPostApi.ModelsWarmupSchedules);
+      it('should create an instance of ModelsAutoWarmupDomainSchedule', function() {
+        // TODO: update the code to test ModelsAutoWarmupDomainSchedule
+        expect(instance).to.be.a(SendPostApi.ModelsAutoWarmupDomainSchedule);
       });
 
-      it('should have the property count (base name: "count")', function() {
-        // TODO: update the code to test the property count
-        expect(instance).to.have.property('count');
-        // expect(instance.count).to.be(expectedValueLiteral);
+      it('should have the property dailySchedule (base name: "dailySchedule")', function() {
+        // TODO: update the code to test the property dailySchedule
+        expect(instance).to.have.property('dailySchedule');
+        // expect(instance.dailySchedule).to.be(expectedValueLiteral);
       });
 
-      it('should have the property source (base name: "source")', function() {
-        // TODO: update the code to test the property source
-        expect(instance).to.have.property('source');
-        // expect(instance.source).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property type (base name: "type")', function() {
-        // TODO: update the code to test the property type
-        expect(instance).to.have.property('type');
-        // expect(instance.type).to.be(expectedValueLiteral);
+      it('should have the property domain (base name: "domain")', function() {
+        // TODO: update the code to test the property domain
+        expect(instance).to.have.property('domain');
+        // expect(instance.domain).to.be(expectedValueLiteral);
       });
 
     });

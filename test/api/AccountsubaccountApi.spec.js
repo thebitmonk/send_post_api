@@ -388,14 +388,8 @@
               expect(data.relatedIP).to.be.a(SendPostApi.ModelsIP);
                     expect(data.relatedIP.aolSettings).to.be.a('string');
                 expect(data.relatedIP.aolSettings).to.be("");
-                expect(data.relatedIP.autoWarmupDelay).to.be.a('number');
-                expect(data.relatedIP.autoWarmupDelay).to.be("0");
                 expect(data.relatedIP.autoWarmupEnabled).to.be.a('boolean');
                 expect(data.relatedIP.autoWarmupEnabled).to.be(false);
-                expect(data.relatedIP.autoWarmupLastRunAt).to.be.a('number');
-                expect(data.relatedIP.autoWarmupLastRunAt).to.be("0");
-                expect(data.relatedIP.autoWarmupStage).to.be.a('number');
-                expect(data.relatedIP.autoWarmupStage).to.be("0");
                 expect(data.relatedIP.comcastSettings).to.be.a('string');
                 expect(data.relatedIP.comcastSettings).to.be("");
                 expect(data.relatedIP.created).to.be.a('number');
@@ -414,8 +408,30 @@
                 expect(data.relatedIP.infraClassification).to.be("");
                 expect(data.relatedIP.infraMonitor).to.be.a('boolean');
                 expect(data.relatedIP.infraMonitor).to.be(false);
-                expect(data.relatedIP.isAutoIPWarmupProcessing).to.be.a('boolean');
-                expect(data.relatedIP.isAutoIPWarmupProcessing).to.be(false);
+                {
+                  let dataCtr = data.relatedIP.ipDomainWarmupStatus;
+                  expect(dataCtr).to.be.an(Array);
+                  expect(dataCtr).to.not.be.empty();
+                  for (let p in dataCtr) {
+                    let data = dataCtr[p];
+                    expect(data).to.be.a(SendPostApi.ModelsIPDomainWarmupStatus);
+                    expect(data.autoWarmupDelay).to.be.a('number');
+                    expect(data.autoWarmupDelay).to.be("0");
+                    expect(data.autoWarmupLastRunAt).to.be.a('number');
+                    expect(data.autoWarmupLastRunAt).to.be("0");
+                    expect(data.created).to.be.a('number');
+                    expect(data.created).to.be("0");
+                    expect(data.currentWarmupStage).to.be.a('number');
+                    expect(data.currentWarmupStage).to.be("0");
+                    expect(data.id).to.be.a('number');
+                    expect(data.id).to.be("0");
+                    expect(data.updated).to.be.a('number');
+                    expect(data.updated).to.be("0");
+                    expect(data.warmupCompleted).to.be.a('boolean');
+                    expect(data.warmupCompleted).to.be(false);
+    
+                          }
+                }
                 {
                   let dataCtr = data.relatedIP.labels;
                   expect(dataCtr).to.be.an(Array);
@@ -485,9 +501,7 @@
                   expect(data.relatedIP.systemDomain.trackVerified).to.be.a('boolean');
                   expect(data.relatedIP.systemDomain.trackVerified).to.be(false);
                 expect(data.relatedIP.type).to.be.a(SendPostApi.ModelsIPType);
-                    expect(data.relatedIP.warmUpNotComplete).to.be.a('boolean');
-                expect(data.relatedIP.warmUpNotComplete).to.be(false);
-                expect(data.relatedIP.yahooSettings).to.be.a('string');
+                    expect(data.relatedIP.yahooSettings).to.be.a('string');
                 expect(data.relatedIP.yahooSettings).to.be("");
                 expect(data.relatedIP.yandexSettings).to.be.a('string');
                 expect(data.relatedIP.yandexSettings).to.be("");

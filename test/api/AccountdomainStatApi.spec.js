@@ -41,13 +41,13 @@
           // TODO: uncomment, update parameter values for domainStatRouterGetAllAggregateDomainStatsByGroup call and complete the assertions
           /*
           var xAccountApiKey = "xAccountApiKey_example";
-          var domainName = 789;
+          var domainId = 789;
           var provider = "provider_example";
           var opts = {};
           opts.from = "from_example";
           opts.to = "to_example";
 
-          instance.domainStatRouterGetAllAggregateDomainStatsByGroup(xAccountApiKey, domainName, provider, opts, function(error, data, response) {
+          instance.domainStatRouterGetAllAggregateDomainStatsByGroup(xAccountApiKey, domainId, provider, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -87,12 +87,12 @@
           // TODO: uncomment, update parameter values for domainStatRouterGetStatsForASingleDomainStats call and complete the assertions
           /*
           var xAccountApiKey = "xAccountApiKey_example";
-          var domainName = "domainName_example";
+          var domainId = "domainId_example";
           var opts = {};
           opts.from = "from_example";
           opts.to = "to_example";
 
-          instance.domainStatRouterGetStatsForASingleDomainStats(xAccountApiKey, domainName, opts, function(error, data, response) {
+          instance.domainStatRouterGetStatsForASingleDomainStats(xAccountApiKey, domainId, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;

@@ -26,48 +26,62 @@
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsAutoWarmupPlan = factory(root.SendPostApi.ApiClient);
+    root.SendPostApi.ModelsIPDomainWarmupStatus = factory(root.SendPostApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The ModelsAutoWarmupPlan model module.
-   * @module model/ModelsAutoWarmupPlan
+   * The ModelsIPDomainWarmupStatus model module.
+   * @module model/ModelsIPDomainWarmupStatus
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>ModelsAutoWarmupPlan</code>.
-   * @alias module:model/ModelsAutoWarmupPlan
+   * Constructs a new <code>ModelsIPDomainWarmupStatus</code>.
+   * @alias module:model/ModelsIPDomainWarmupStatus
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>ModelsAutoWarmupPlan</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ModelsIPDomainWarmupStatus</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ModelsAutoWarmupPlan} obj Optional instance to populate.
-   * @return {module:model/ModelsAutoWarmupPlan} The populated <code>ModelsAutoWarmupPlan</code> instance.
+   * @param {module:model/ModelsIPDomainWarmupStatus} obj Optional instance to populate.
+   * @return {module:model/ModelsIPDomainWarmupStatus} The populated <code>ModelsIPDomainWarmupStatus</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('autoWarmupDelay'))
+        obj.autoWarmupDelay = ApiClient.convertToType(data['autoWarmupDelay'], 'Number');
+      if (data.hasOwnProperty('autoWarmupLastRunAt'))
+        obj.autoWarmupLastRunAt = ApiClient.convertToType(data['autoWarmupLastRunAt'], 'Number');
       if (data.hasOwnProperty('created'))
         obj.created = ApiClient.convertToType(data['created'], 'Number');
+      if (data.hasOwnProperty('currentWarmupStage'))
+        obj.currentWarmupStage = ApiClient.convertToType(data['currentWarmupStage'], 'Number');
       if (data.hasOwnProperty('id'))
         obj.id = ApiClient.convertToType(data['id'], 'Number');
-      if (data.hasOwnProperty('name'))
-        obj.name = ApiClient.convertToType(data['name'], 'String');
-      if (data.hasOwnProperty('schedule'))
-        obj.schedule = ApiClient.convertToType(data['schedule'], 'String');
       if (data.hasOwnProperty('updated'))
         obj.updated = ApiClient.convertToType(data['updated'], 'Number');
+      if (data.hasOwnProperty('warmupCompleted'))
+        obj.warmupCompleted = ApiClient.convertToType(data['warmupCompleted'], 'Boolean');
     }
     return obj;
   }
+
+  /**
+   * @member {Number} autoWarmupDelay
+   */
+  exports.prototype.autoWarmupDelay = undefined;
+
+  /**
+   * @member {Number} autoWarmupLastRunAt
+   */
+  exports.prototype.autoWarmupLastRunAt = undefined;
 
   /**
    * @member {Number} created
@@ -75,24 +89,24 @@
   exports.prototype.created = undefined;
 
   /**
+   * @member {Number} currentWarmupStage
+   */
+  exports.prototype.currentWarmupStage = undefined;
+
+  /**
    * @member {Number} id
    */
   exports.prototype.id = undefined;
 
   /**
-   * @member {String} name
-   */
-  exports.prototype.name = undefined;
-
-  /**
-   * @member {String} schedule
-   */
-  exports.prototype.schedule = undefined;
-
-  /**
    * @member {Number} updated
    */
   exports.prototype.updated = undefined;
+
+  /**
+   * @member {Boolean} warmupCompleted
+   */
+  exports.prototype.warmupCompleted = undefined;
 
 
   return exports;
