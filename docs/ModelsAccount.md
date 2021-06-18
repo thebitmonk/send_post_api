@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **onboardCFinished** | **Boolean** |  | [optional] 
 **onboardQAnswered** | **Boolean** |  | [optional] 
 **sendingVolumePerMonth** | **String** |  | [optional] 
+**slackToken** | **String** |  | [optional] 
 **stripeBasePriceId** | **String** |  | [optional] 
 **stripeUsagePriceId** | **String** |  | [optional] 
 

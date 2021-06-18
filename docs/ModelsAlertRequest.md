@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **name** | **String** |  | [optional] 
 **notificationType** | [**ModelsNotificationType**](ModelsNotificationType.md) |  | [optional] 
 **parameter** | **Number** |  | [optional] 
+**processedCountThreshold** | **Number** |  | [optional] 
 **provider** | **String** |  | [optional] 
 **slackUrl** | **String** |  | [optional] 
 **threshold** | **String** |  | [optional] 

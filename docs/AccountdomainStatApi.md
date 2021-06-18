@@ -4,13 +4,13 @@ All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**domainStatRouterGetAllAggregateDomainStatsByGroup**](AccountdomainStatApi.md#domainStatRouterGetAllAggregateDomainStatsByGroup) | **GET** /account/domainStat/{domainName}/aggregate/provider | 
-[**domainStatRouterGetStatsForASingleDomainStats**](AccountdomainStatApi.md#domainStatRouterGetStatsForASingleDomainStats) | **GET** /account/domainStat/{domainName}/aggregate | 
+[**domainStatRouterGetAllAggregateDomainStatsByGroup**](AccountdomainStatApi.md#domainStatRouterGetAllAggregateDomainStatsByGroup) | **GET** /account/domainStat/{domainId}/aggregate/provider | 
+[**domainStatRouterGetStatsForASingleDomainStats**](AccountdomainStatApi.md#domainStatRouterGetStatsForASingleDomainStats) | **GET** /account/domainStat/{domainId}/aggregate | 
 
 
 <a name="domainStatRouterGetAllAggregateDomainStatsByGroup"></a>
 # **domainStatRouterGetAllAggregateDomainStatsByGroup**
-> ModelsStat domainStatRouterGetAllAggregateDomainStatsByGroup(xAccountApiKey, domainName, provider, opts)
+> ModelsStat domainStatRouterGetAllAggregateDomainStatsByGroup(xAccountApiKey, domainId, provider, opts)
 
 
 
@@ -24,7 +24,7 @@ var apiInstance = new SendPostApi.AccountdomainStatApi();
 
 var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
-var domainName = 789; // Number | the domainName you want to get
+var domainId = 789; // Number | the domainName you want to get
 
 var provider = "provider_example"; // String | the group whose stats you want
 
@@ -40,7 +40,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.domainStatRouterGetAllAggregateDomainStatsByGroup(xAccountApiKey, domainName, provider, opts, callback);
+apiInstance.domainStatRouterGetAllAggregateDomainStatsByGroup(xAccountApiKey, domainId, provider, opts, callback);
 ```
 
 ### Parameters
@@ -48,7 +48,7 @@ apiInstance.domainStatRouterGetAllAggregateDomainStatsByGroup(xAccountApiKey, do
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
- **domainName** | **Number**| the domainName you want to get | 
+ **domainId** | **Number**| the domainName you want to get | 
  **provider** | **String**| the group whose stats you want | 
  **from** | **String**| from date | [optional] 
  **to** | **String**| to date | [optional] 
@@ -68,7 +68,7 @@ No authorization required
 
 <a name="domainStatRouterGetStatsForASingleDomainStats"></a>
 # **domainStatRouterGetStatsForASingleDomainStats**
-> ModelsStat domainStatRouterGetStatsForASingleDomainStats(xAccountApiKey, domainName, opts)
+> ModelsStat domainStatRouterGetStatsForASingleDomainStats(xAccountApiKey, domainId, opts)
 
 
 
@@ -82,7 +82,7 @@ var apiInstance = new SendPostApi.AccountdomainStatApi();
 
 var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
-var domainName = "domainName_example"; // String | the IPId you want to get
+var domainId = "domainId_example"; // String | the domainID you want to get
 
 var opts = { 
   'from': "from_example", // String | from date
@@ -96,7 +96,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.domainStatRouterGetStatsForASingleDomainStats(xAccountApiKey, domainName, opts, callback);
+apiInstance.domainStatRouterGetStatsForASingleDomainStats(xAccountApiKey, domainId, opts, callback);
 ```
 
 ### Parameters
@@ -104,7 +104,7 @@ apiInstance.domainStatRouterGetStatsForASingleDomainStats(xAccountApiKey, domain
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
- **domainName** | **String**| the IPId you want to get | 
+ **domainId** | **String**| the domainID you want to get | 
  **from** | **String**| from date | [optional] 
  **to** | **String**| to date | [optional] 
 

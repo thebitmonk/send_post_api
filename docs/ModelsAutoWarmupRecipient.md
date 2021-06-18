@@ -1,9 +1,10 @@
-# SendPostApi.ModelsWarmupSchedules
+# SendPostApi.ModelsAutoWarmupRecipient
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**count** | **Number** |  | [optional] 
+**email** | **String** |  | [optional] 
+**id** | **Number** |  | [optional] 
 **source** | **String** |  | [optional] 
 **type** | **String** |  | [optional] 
 

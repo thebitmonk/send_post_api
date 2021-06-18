@@ -4,6 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** |  | [optional] 
-**planSettings** | [**ModelsPlanSettings**](ModelsPlanSettings.md) |  | [optional] 
+**schedule** | [**[ModelsAutoWarmupDomainSchedule]**](ModelsAutoWarmupDomainSchedule.md) |  | [optional] 
 
 
