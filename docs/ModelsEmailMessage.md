@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ampBody** | **String** |  | [optional] 
+**attachments** | [**[ModelsAttachment]**](ModelsAttachment.md) |  | [optional] 
 **from** | [**ModelsFrom**](ModelsFrom.md) |  | [optional] 
 **groups** | **Object** |  | [optional] 
 **headers** | **Object** |  | [optional] 

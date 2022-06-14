@@ -165,6 +165,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountipApi* | [**iPRouterGet**](docs/AccountipApi.md#iPRouterGet) | **GET** /account/ip/{ipid} | 
 *SendPostApi.AccountipApi* | [**iPRouterGetAll**](docs/AccountipApi.md#iPRouterGetAll) | **GET** /account/ip/ | 
 *SendPostApi.AccountipApi* | [**iPRouterGetAllIPIncidents**](docs/AccountipApi.md#iPRouterGetAllIPIncidents) | **GET** /account/ip/{ipid}/incident | 
+*SendPostApi.AccountipApi* | [**iPRouterGetIpHealth**](docs/AccountipApi.md#iPRouterGetIpHealth) | **GET** /account/ip/{ipid}/health | 
 *SendPostApi.AccountipApi* | [**iPRouterUpdate**](docs/AccountipApi.md#iPRouterUpdate) | **PUT** /account/ip/{ipid} | 
 *SendPostApi.AccountippoolApi* | [**accountIPPoolRouterCount**](docs/AccountippoolApi.md#accountIPPoolRouterCount) | **GET** /account/ippool/count | 
 *SendPostApi.AccountippoolApi* | [**accountIPPoolRouterCreate**](docs/AccountippoolApi.md#accountIPPoolRouterCreate) | **POST** /account/ippool/ | 
@@ -300,6 +301,7 @@ Class | Method | HTTP request | Description
 
  - [SendPostApi.Alert](docs/Alert.md)
  - [SendPostApi.ApiGlockappsMailReport](docs/ApiGlockappsMailReport.md)
+ - [SendPostApi.ModelFalse](docs/ModelFalse.md)
  - [SendPostApi.ModelsAGStat](docs/ModelsAGStat.md)
  - [SendPostApi.ModelsAIPStat](docs/ModelsAIPStat.md)
  - [SendPostApi.ModelsAccount](docs/ModelsAccount.md)
@@ -311,6 +313,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsAlertRequest](docs/ModelsAlertRequest.md)
  - [SendPostApi.ModelsAlertResponse](docs/ModelsAlertResponse.md)
  - [SendPostApi.ModelsAllClusterCache](docs/ModelsAllClusterCache.md)
+ - [SendPostApi.ModelsAttachment](docs/ModelsAttachment.md)
  - [SendPostApi.ModelsAuthInfo](docs/ModelsAuthInfo.md)
  - [SendPostApi.ModelsAutoWarmupContent](docs/ModelsAutoWarmupContent.md)
  - [SendPostApi.ModelsAutoWarmupContentRequest](docs/ModelsAutoWarmupContentRequest.md)
@@ -339,6 +342,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsClusterCache](docs/ModelsClusterCache.md)
  - [SendPostApi.ModelsComment](docs/ModelsComment.md)
  - [SendPostApi.ModelsContent](docs/ModelsContent.md)
+ - [SendPostApi.ModelsCopyTo](docs/ModelsCopyTo.md)
  - [SendPostApi.ModelsCountStat](docs/ModelsCountStat.md)
  - [SendPostApi.ModelsCouponOptions](docs/ModelsCouponOptions.md)
  - [SendPostApi.ModelsCreateMailReport](docs/ModelsCreateMailReport.md)
