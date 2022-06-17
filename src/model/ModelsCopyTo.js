@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Model1216320xc0005bf0e0False'], factory);
+    define(['ApiClient', 'model/Model1216320xc00061e8d0False'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Model1216320xc0005bf0e0False'));
+    module.exports = factory(require('../ApiClient'), require('./Model1216320xc00061e8d0False'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsCopyTo = factory(root.SendPostApi.ApiClient, root.SendPostApi.Model1216320xc0005bf0e0False);
+    root.SendPostApi.ModelsCopyTo = factory(root.SendPostApi.ApiClient, root.SendPostApi.Model1216320xc00061e8d0False);
   }
-}(this, function(ApiClient, Model1216320xc0005bf0e0False) {
+}(this, function(ApiClient, Model1216320xc00061e8d0False) {
   'use strict';
 
   /**
@@ -56,7 +56,7 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('customFields'))
-        obj.customFields = Model1216320xc0005bf0e0False.constructFromObject(data['customFields']);
+        obj.customFields = Model1216320xc00061e8d0False.constructFromObject(data['customFields']);
       if (data.hasOwnProperty('email'))
         obj.email = ApiClient.convertToType(data['email'], 'String');
       if (data.hasOwnProperty('name'))
@@ -66,7 +66,7 @@
   }
 
   /**
-   * @member {module:model/Model1216320xc0005bf0e0False} customFields
+   * @member {module:model/Model1216320xc00061e8d0False} customFields
    */
   exports.prototype.customFields = undefined;
 

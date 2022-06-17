@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **ampBody** | **String** |  | [optional] 
 **attachments** | [**[ModelsAttachment]**](ModelsAttachment.md) |  | [optional] 
 **attempt** | **Number** |  | [optional] 
-**customFields** | [**Model3179900xc00086b140False**](Model3179900xc00086b140False.md) |  | [optional] 
+**customFields** | [**Model3179900xc0008ce930False**](Model3179900xc0008ce930False.md) |  | [optional] 
 **emailType** | **String** |  | [optional] 
 **from** | [**ModelsFrom**](ModelsFrom.md) |  | [optional] 
 **groups** | **Object** |  | [optional] 

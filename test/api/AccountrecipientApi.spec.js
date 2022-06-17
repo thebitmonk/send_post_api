@@ -75,7 +75,7 @@
               }
               expect(data.attempt).to.be.a('number');
               expect(data.attempt).to.be("0");
-              expect(data.customFields).to.be.a(SendPostApi.Model3179900xc00086b140False);
+              expect(data.customFields).to.be.a(SendPostApi.Model3179900xc0008ce930False);
                   expect(data.emailType).to.be.a('string');
               expect(data.emailType).to.be("");
               expect(data.from).to.be.a(SendPostApi.ModelsFrom);
@@ -92,7 +92,7 @@
                 for (let p in dataCtr) {
                   let data = dataCtr[p];
                   expect(data).to.be.a(SendPostApi.ModelsCopyTo);
-                  expect(data.customFields).to.be.a(SendPostApi.Model1216320xc0005bf0e0False);
+                  expect(data.customFields).to.be.a(SendPostApi.Model1216320xc00061e8d0False);
                       expect(data.email).to.be.a('string');
                   expect(data.email).to.be("");
                   expect(data.name).to.be.a('string');
@@ -107,7 +107,7 @@
                 for (let p in dataCtr) {
                   let data = dataCtr[p];
                   expect(data).to.be.a(SendPostApi.ModelsCopyTo);
-                  expect(data.customFields).to.be.a(SendPostApi.Model1216320xc0005bf0e0False);
+                  expect(data.customFields).to.be.a(SendPostApi.Model1216320xc00061e8d0False);
                       expect(data.email).to.be.a('string');
                   expect(data.email).to.be("");
                   expect(data.name).to.be.a('string');
@@ -123,7 +123,7 @@
                   for (let p in dataCtr) {
                     let data = dataCtr[p];
                     expect(data).to.be.a(SendPostApi.ModelsCopyTo);
-                    expect(data.customFields).to.be.a(SendPostApi.Model1216320xc0005bf0e0False);
+                    expect(data.customFields).to.be.a(SendPostApi.Model1216320xc00061e8d0False);
                         expect(data.email).to.be.a('string');
                     expect(data.email).to.be("");
                     expect(data.name).to.be.a('string');
@@ -138,7 +138,7 @@
                   for (let p in dataCtr) {
                     let data = dataCtr[p];
                     expect(data).to.be.a(SendPostApi.ModelsCopyTo);
-                    expect(data.customFields).to.be.a(SendPostApi.Model1216320xc0005bf0e0False);
+                    expect(data.customFields).to.be.a(SendPostApi.Model1216320xc00061e8d0False);
                         expect(data.email).to.be.a('string');
                     expect(data.email).to.be("");
                     expect(data.name).to.be.a('string');
@@ -146,7 +146,7 @@
     
                           }
                 }
-                expect(data.headerTo.customFields).to.be.a(SendPostApi.Model1219130xc0005bf200False);
+                expect(data.headerTo.customFields).to.be.a(SendPostApi.Model1219130xc00061e9f0False);
                     expect(data.headerTo.email).to.be.a('string');
                 expect(data.headerTo.email).to.be("");
                 expect(data.headerTo.name).to.be.a('string');
@@ -188,7 +188,7 @@
                   for (let p in dataCtr) {
                     let data = dataCtr[p];
                     expect(data).to.be.a(SendPostApi.ModelsCopyTo);
-                    expect(data.customFields).to.be.a(SendPostApi.Model1216320xc0005bf0e0False);
+                    expect(data.customFields).to.be.a(SendPostApi.Model1216320xc00061e8d0False);
                         expect(data.email).to.be.a('string');
                     expect(data.email).to.be("");
                     expect(data.name).to.be.a('string');
@@ -203,7 +203,7 @@
                   for (let p in dataCtr) {
                     let data = dataCtr[p];
                     expect(data).to.be.a(SendPostApi.ModelsCopyTo);
-                    expect(data.customFields).to.be.a(SendPostApi.Model1216320xc0005bf0e0False);
+                    expect(data.customFields).to.be.a(SendPostApi.Model1216320xc00061e8d0False);
                         expect(data.email).to.be.a('string');
                     expect(data.email).to.be("");
                     expect(data.name).to.be.a('string');
@@ -211,7 +211,7 @@
     
                           }
                 }
-                expect(data.to.customFields).to.be.a(SendPostApi.Model1219130xc0005bf200False);
+                expect(data.to.customFields).to.be.a(SendPostApi.Model1219130xc00061e9f0False);
                     expect(data.to.email).to.be.a('string');
                 expect(data.to.email).to.be("");
                 expect(data.to.name).to.be.a('string');
@@ -268,7 +268,7 @@
               }
               expect(data.attempt).to.be.a('number');
               expect(data.attempt).to.be("0");
-              expect(data.customFields).to.be.a(SendPostApi.Model3179900xc00086b140False);
+              expect(data.customFields).to.be.a(SendPostApi.Model3179900xc0008ce930False);
                   expect(data.emailType).to.be.a('string');
               expect(data.emailType).to.be("");
               expect(data.from).to.be.a(SendPostApi.ModelsFrom);
@@ -285,7 +285,7 @@
                 for (let p in dataCtr) {
                   let data = dataCtr[p];
                   expect(data).to.be.a(SendPostApi.ModelsCopyTo);
-                  expect(data.customFields).to.be.a(SendPostApi.Model1216320xc0005bf0e0False);
+                  expect(data.customFields).to.be.a(SendPostApi.Model1216320xc00061e8d0False);
                       expect(data.email).to.be.a('string');
                   expect(data.email).to.be("");
                   expect(data.name).to.be.a('string');
@@ -300,7 +300,7 @@
                 for (let p in dataCtr) {
                   let data = dataCtr[p];
                   expect(data).to.be.a(SendPostApi.ModelsCopyTo);
-                  expect(data.customFields).to.be.a(SendPostApi.Model1216320xc0005bf0e0False);
+                  expect(data.customFields).to.be.a(SendPostApi.Model1216320xc00061e8d0False);
                       expect(data.email).to.be.a('string');
                   expect(data.email).to.be("");
                   expect(data.name).to.be.a('string');
@@ -316,7 +316,7 @@
                   for (let p in dataCtr) {
                     let data = dataCtr[p];
                     expect(data).to.be.a(SendPostApi.ModelsCopyTo);
-                    expect(data.customFields).to.be.a(SendPostApi.Model1216320xc0005bf0e0False);
+                    expect(data.customFields).to.be.a(SendPostApi.Model1216320xc00061e8d0False);
                         expect(data.email).to.be.a('string');
                     expect(data.email).to.be("");
                     expect(data.name).to.be.a('string');
@@ -331,7 +331,7 @@
                   for (let p in dataCtr) {
                     let data = dataCtr[p];
                     expect(data).to.be.a(SendPostApi.ModelsCopyTo);
-                    expect(data.customFields).to.be.a(SendPostApi.Model1216320xc0005bf0e0False);
+                    expect(data.customFields).to.be.a(SendPostApi.Model1216320xc00061e8d0False);
                         expect(data.email).to.be.a('string');
                     expect(data.email).to.be("");
                     expect(data.name).to.be.a('string');
@@ -339,7 +339,7 @@
     
                           }
                 }
-                expect(data.headerTo.customFields).to.be.a(SendPostApi.Model1219130xc0005bf200False);
+                expect(data.headerTo.customFields).to.be.a(SendPostApi.Model1219130xc00061e9f0False);
                     expect(data.headerTo.email).to.be.a('string');
                 expect(data.headerTo.email).to.be("");
                 expect(data.headerTo.name).to.be.a('string');
@@ -381,7 +381,7 @@
                   for (let p in dataCtr) {
                     let data = dataCtr[p];
                     expect(data).to.be.a(SendPostApi.ModelsCopyTo);
-                    expect(data.customFields).to.be.a(SendPostApi.Model1216320xc0005bf0e0False);
+                    expect(data.customFields).to.be.a(SendPostApi.Model1216320xc00061e8d0False);
                         expect(data.email).to.be.a('string');
                     expect(data.email).to.be("");
                     expect(data.name).to.be.a('string');
@@ -396,7 +396,7 @@
                   for (let p in dataCtr) {
                     let data = dataCtr[p];
                     expect(data).to.be.a(SendPostApi.ModelsCopyTo);
-                    expect(data.customFields).to.be.a(SendPostApi.Model1216320xc0005bf0e0False);
+                    expect(data.customFields).to.be.a(SendPostApi.Model1216320xc00061e8d0False);
                         expect(data.email).to.be.a('string');
                     expect(data.email).to.be("");
                     expect(data.name).to.be.a('string');
@@ -404,7 +404,7 @@
     
                           }
                 }
-                expect(data.to.customFields).to.be.a(SendPostApi.Model1219130xc0005bf200False);
+                expect(data.to.customFields).to.be.a(SendPostApi.Model1219130xc00061e9f0False);
                     expect(data.to.email).to.be.a('string');
                 expect(data.to.email).to.be("");
                 expect(data.to.name).to.be.a('string');

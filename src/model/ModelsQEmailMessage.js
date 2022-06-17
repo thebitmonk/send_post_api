@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Model3179900xc00086b140False', 'model/ModelsAttachment', 'model/ModelsCopyTo', 'model/ModelsFrom', 'model/ModelsReplyTo', 'model/ModelsTo'], factory);
+    define(['ApiClient', 'model/Model3179900xc0008ce930False', 'model/ModelsAttachment', 'model/ModelsCopyTo', 'model/ModelsFrom', 'model/ModelsReplyTo', 'model/ModelsTo'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Model3179900xc00086b140False'), require('./ModelsAttachment'), require('./ModelsCopyTo'), require('./ModelsFrom'), require('./ModelsReplyTo'), require('./ModelsTo'));
+    module.exports = factory(require('../ApiClient'), require('./Model3179900xc0008ce930False'), require('./ModelsAttachment'), require('./ModelsCopyTo'), require('./ModelsFrom'), require('./ModelsReplyTo'), require('./ModelsTo'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsQEmailMessage = factory(root.SendPostApi.ApiClient, root.SendPostApi.Model3179900xc00086b140False, root.SendPostApi.ModelsAttachment, root.SendPostApi.ModelsCopyTo, root.SendPostApi.ModelsFrom, root.SendPostApi.ModelsReplyTo, root.SendPostApi.ModelsTo);
+    root.SendPostApi.ModelsQEmailMessage = factory(root.SendPostApi.ApiClient, root.SendPostApi.Model3179900xc0008ce930False, root.SendPostApi.ModelsAttachment, root.SendPostApi.ModelsCopyTo, root.SendPostApi.ModelsFrom, root.SendPostApi.ModelsReplyTo, root.SendPostApi.ModelsTo);
   }
-}(this, function(ApiClient, Model3179900xc00086b140False, ModelsAttachment, ModelsCopyTo, ModelsFrom, ModelsReplyTo, ModelsTo) {
+}(this, function(ApiClient, Model3179900xc0008ce930False, ModelsAttachment, ModelsCopyTo, ModelsFrom, ModelsReplyTo, ModelsTo) {
   'use strict';
 
   /**
@@ -64,7 +64,7 @@
       if (data.hasOwnProperty('attempt'))
         obj.attempt = ApiClient.convertToType(data['attempt'], 'Number');
       if (data.hasOwnProperty('customFields'))
-        obj.customFields = Model3179900xc00086b140False.constructFromObject(data['customFields']);
+        obj.customFields = Model3179900xc0008ce930False.constructFromObject(data['customFields']);
       if (data.hasOwnProperty('emailType'))
         obj.emailType = ApiClient.convertToType(data['emailType'], 'String');
       if (data.hasOwnProperty('from'))
@@ -134,7 +134,7 @@
   exports.prototype.attempt = undefined;
 
   /**
-   * @member {module:model/Model3179900xc00086b140False} customFields
+   * @member {module:model/Model3179900xc0008ce930False} customFields
    */
   exports.prototype.customFields = undefined;
 

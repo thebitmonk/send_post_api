@@ -817,8 +817,9 @@
           // TODO: uncomment, update parameter values for iPRouterGetIpHealth call and complete the assertions
           /*
           var ipid = 789;
+          var xAccountApiKey = "xAccountApiKey_example";
 
-          instance.iPRouterGetIpHealth(ipid, function(error, data, response) {
+          instance.iPRouterGetIpHealth(ipid, xAccountApiKey, function(error, data, response) {
             if (error) {
               done(error);
               return;

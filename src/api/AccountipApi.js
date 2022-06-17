@@ -382,15 +382,21 @@
     /**
      * Get IP health
      * @param {Number} ipid The IP you want to update
+     * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountipApi~iPRouterGetIpHealthCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsIP>}
      */
-    this.iPRouterGetIpHealth = function(ipid, callback) {
+    this.iPRouterGetIpHealth = function(ipid, xAccountApiKey, callback) {
       var postBody = null;
 
       // verify the required parameter 'ipid' is set
       if (ipid === undefined || ipid === null) {
         throw new Error("Missing the required parameter 'ipid' when calling iPRouterGetIpHealth");
+      }
+
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling iPRouterGetIpHealth");
       }
 
 
@@ -402,6 +408,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
+        'X-Account-ApiKey': xAccountApiKey
       };
       var formParams = {
       };
