@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Model1219130xc00061e9f0False', 'model/ModelsCopyTo'], factory);
+    define(['ApiClient', 'model/ModelsCopyTo'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Model1219130xc00061e9f0False'), require('./ModelsCopyTo'));
+    module.exports = factory(require('../ApiClient'), require('./ModelsCopyTo'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsTo = factory(root.SendPostApi.ApiClient, root.SendPostApi.Model1219130xc00061e9f0False, root.SendPostApi.ModelsCopyTo);
+    root.SendPostApi.ModelsTo = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsCopyTo);
   }
-}(this, function(ApiClient, Model1219130xc00061e9f0False, ModelsCopyTo) {
+}(this, function(ApiClient, ModelsCopyTo) {
   'use strict';
 
   /**
@@ -60,7 +60,7 @@
       if (data.hasOwnProperty('cc'))
         obj.cc = ApiClient.convertToType(data['cc'], [ModelsCopyTo]);
       if (data.hasOwnProperty('customFields'))
-        obj.customFields = Model1219130xc00061e9f0False.constructFromObject(data['customFields']);
+        obj.customFields = ApiClient.convertToType(data['customFields'], Object);
       if (data.hasOwnProperty('email'))
         obj.email = ApiClient.convertToType(data['email'], 'String');
       if (data.hasOwnProperty('name'))
@@ -80,7 +80,7 @@
   exports.prototype.cc = undefined;
 
   /**
-   * @member {module:model/Model1219130xc00061e9f0False} customFields
+   * @member {Object} customFields
    */
   exports.prototype.customFields = undefined;
 
