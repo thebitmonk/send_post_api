@@ -321,7 +321,7 @@ No authorization required
 
 <a name="iPRouterGetIpHealth"></a>
 # **iPRouterGetIpHealth**
-> [ModelsIP] iPRouterGetIpHealth(ipid)
+> [ModelsIPHealthResponse] iPRouterGetIpHealth(xAccountApiKey, ipid)
 
 
 
@@ -333,6 +333,8 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.AccountipApi();
 
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
 var ipid = 789; // Number | The IP you want to update
 
 
@@ -343,18 +345,19 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.iPRouterGetIpHealth(ipid, callback);
+apiInstance.iPRouterGetIpHealth(xAccountApiKey, ipid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **xAccountApiKey** | **String**| Account API Key | 
  **ipid** | **Number**| The IP you want to update | 
 
 ### Return type
 
-[**[ModelsIP]**](ModelsIP.md)
+[**[ModelsIPHealthResponse]**](ModelsIPHealthResponse.md)
 
 ### Authorization
 

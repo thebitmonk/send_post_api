@@ -816,9 +816,10 @@
         it('should call iPRouterGetIpHealth successfully', function(done) {
           // TODO: uncomment, update parameter values for iPRouterGetIpHealth call and complete the assertions
           /*
+          var xAccountApiKey = "xAccountApiKey_example";
           var ipid = 789;
 
-          instance.iPRouterGetIpHealth(ipid, function(error, data, response) {
+          instance.iPRouterGetIpHealth(xAccountApiKey, ipid, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -829,128 +830,50 @@
             expect(dataCtr).to.not.be.empty();
             for (let p in dataCtr) {
               let data = dataCtr[p];
-              expect(data).to.be.a(SendPostApi.ModelsIP);
-              expect(data.aolSettings).to.be.a('string');
-              expect(data.aolSettings).to.be("");
-              expect(data.autoWarmupEnabled).to.be.a('boolean');
-              expect(data.autoWarmupEnabled).to.be(false);
-              expect(data.comcastSettings).to.be.a('string');
-              expect(data.comcastSettings).to.be("");
-              expect(data.created).to.be.a('number');
-              expect(data.created).to.be("0");
-              expect(data.defaultSettings).to.be.a('string');
-              expect(data.defaultSettings).to.be("");
-              expect(data.gmailSettings).to.be.a('string');
-              expect(data.gmailSettings).to.be("");
-              expect(data.gmxSettings).to.be.a('string');
-              expect(data.gmxSettings).to.be("");
-              expect(data.icloudSettings).to.be.a('string');
-              expect(data.icloudSettings).to.be("");
-              expect(data.id).to.be.a('number');
-              expect(data.id).to.be("0");
-              expect(data.infraClassification).to.be.a('string');
-              expect(data.infraClassification).to.be("");
-              expect(data.infraMonitor).to.be.a('boolean');
-              expect(data.infraMonitor).to.be(false);
+              expect(data).to.be.a(SendPostApi.ModelsIPHealthResponse);
               {
-                let dataCtr = data.ipDomainWarmupStatus;
+                let dataCtr = data.providerStats;
                 expect(dataCtr).to.be.an(Array);
                 expect(dataCtr).to.not.be.empty();
                 for (let p in dataCtr) {
                   let data = dataCtr[p];
-                  expect(data).to.be.a(SendPostApi.ModelsIPDomainWarmupStatus);
-                  expect(data.autoWarmupDelay).to.be.a('number');
-                  expect(data.autoWarmupDelay).to.be("0");
-                  expect(data.autoWarmupLastRunAt).to.be.a('number');
-                  expect(data.autoWarmupLastRunAt).to.be("0");
-                  expect(data.created).to.be.a('number');
-                  expect(data.created).to.be("0");
-                  expect(data.currentWarmupStage).to.be.a('number');
-                  expect(data.currentWarmupStage).to.be("0");
-                  expect(data.id).to.be.a('number');
-                  expect(data.id).to.be("0");
-                  expect(data.updated).to.be.a('number');
-                  expect(data.updated).to.be("0");
-                  expect(data.warmupCompleted).to.be.a('boolean');
-                  expect(data.warmupCompleted).to.be(false);
+                  expect(data).to.be.a(SendPostApi.ModelsProviderDetails);
+                  expect(data.consumerStats).to.be.a(SendPostApi.ModelsConsumerStats);
+                        expect(data.consumerStats.connectedTimestamp).to.be.a('number');
+                    expect(data.consumerStats.connectedTimestamp).to.be("0");
+                    expect(data.consumerStats.messageCount).to.be.a('number');
+                    expect(data.consumerStats.messageCount).to.be("0");
+                    expect(data.consumerStats.messagesFinished).to.be.a('number');
+                    expect(data.consumerStats.messagesFinished).to.be("0");
+                    expect(data.consumerStats.messagesRecieved).to.be.a('number');
+                    expect(data.consumerStats.messagesRecieved).to.be("0");
+                    expect(data.consumerStats.messagesRequeued).to.be.a('number');
+                    expect(data.consumerStats.messagesRequeued).to.be("0");
+                  expect(data.deferredConsumerStats).to.be.a(SendPostApi.ModelsConsumerStats);
+                        expect(data.deferredConsumerStats.connectedTimestamp).to.be.a('number');
+                    expect(data.deferredConsumerStats.connectedTimestamp).to.be("0");
+                    expect(data.deferredConsumerStats.messageCount).to.be.a('number');
+                    expect(data.deferredConsumerStats.messageCount).to.be("0");
+                    expect(data.deferredConsumerStats.messagesFinished).to.be.a('number');
+                    expect(data.deferredConsumerStats.messagesFinished).to.be("0");
+                    expect(data.deferredConsumerStats.messagesRecieved).to.be.a('number');
+                    expect(data.deferredConsumerStats.messagesRecieved).to.be("0");
+                    expect(data.deferredConsumerStats.messagesRequeued).to.be.a('number');
+                    expect(data.deferredConsumerStats.messagesRequeued).to.be("0");
+                  expect(data.providerSettings).to.be.a(SendPostApi.ModelsIPProviderSettings);
+                        expect(data.providerSettings.maxConcurrentConnections).to.be.a('number');
+                    expect(data.providerSettings.maxConcurrentConnections).to.be("0");
+                    expect(data.providerSettings.maxSendPerDay).to.be.a('number');
+                    expect(data.providerSettings.maxSendPerDay).to.be("0");
+                    expect(data.providerSettings.maxSendPerHour).to.be.a('number');
+                    expect(data.providerSettings.maxSendPerHour).to.be("0");
+                    expect(data.providerSettings.maxSendPerMinute).to.be.a('number');
+                    expect(data.providerSettings.maxSendPerMinute).to.be("0");
+                  expect(data.type).to.be.a('string');
+                  expect(data.type).to.be("");
   
                         }
               }
-              {
-                let dataCtr = data.labels;
-                expect(dataCtr).to.be.an(Array);
-                expect(dataCtr).to.not.be.empty();
-                for (let p in dataCtr) {
-                  let data = dataCtr[p];
-                  expect(data).to.be.a(SendPostApi.ModelsLabel);
-                  expect(data.color).to.be.a('string');
-                  expect(data.color).to.be("");
-                  expect(data.created).to.be.a('number');
-                  expect(data.created).to.be("0");
-                  expect(data.id).to.be.a('number');
-                  expect(data.id).to.be("0");
-                  expect(data.name).to.be.a('string');
-                  expect(data.name).to.be("");
-                  expect(data.type).to.be.a(SendPostApi.ModelsLabelType);
-          
-  
-                        }
-              }
-              expect(data.mailruSettings).to.be.a('string');
-              expect(data.mailruSettings).to.be("");
-              expect(data.microsoftSettings).to.be.a('string');
-              expect(data.microsoftSettings).to.be("");
-              expect(data.publicIP).to.be.a('string');
-              expect(data.publicIP).to.be("");
-              expect(data.qqSettings).to.be.a('string');
-              expect(data.qqSettings).to.be("");
-              expect(data.reverseDNSHostname).to.be.a('string');
-              expect(data.reverseDNSHostname).to.be("");
-              expect(data.systemDomain).to.be.a(SendPostApi.ModelsSystemDomain);
-                    expect(data.systemDomain.created).to.be.a('number');
-                expect(data.systemDomain.created).to.be("0");
-                expect(data.systemDomain.dkim).to.be.a(SendPostApi.ModelsSystemDNSRecord);
-                      expect(data.systemDomain.dkim.host).to.be.a('string');
-                  expect(data.systemDomain.dkim.host).to.be("");
-                  expect(data.systemDomain.dkim.textValue).to.be.a('string');
-                  expect(data.systemDomain.dkim.textValue).to.be("");
-                  expect(data.systemDomain.dkim.type).to.be.a('string');
-                  expect(data.systemDomain.dkim.type).to.be("");
-                expect(data.systemDomain.dkimConfig).to.be.a('string');
-                expect(data.systemDomain.dkimConfig).to.be("");
-                expect(data.systemDomain.dkimVerified).to.be.a('boolean');
-                expect(data.systemDomain.dkimVerified).to.be(false);
-                expect(data.systemDomain.id).to.be.a('number');
-                expect(data.systemDomain.id).to.be("0");
-                expect(data.systemDomain.mailboxVerified).to.be.a('boolean');
-                expect(data.systemDomain.mailboxVerified).to.be(false);
-                expect(data.systemDomain.name).to.be.a('string');
-                expect(data.systemDomain.name).to.be("");
-                expect(data.systemDomain.spf).to.be.a(SendPostApi.ModelsSystemDNSRecord);
-                      expect(data.systemDomain.spf.host).to.be.a('string');
-                  expect(data.systemDomain.spf.host).to.be("");
-                  expect(data.systemDomain.spf.textValue).to.be.a('string');
-                  expect(data.systemDomain.spf.textValue).to.be("");
-                  expect(data.systemDomain.spf.type).to.be.a('string');
-                  expect(data.systemDomain.spf.type).to.be("");
-                expect(data.systemDomain.spfVerified).to.be.a('boolean');
-                expect(data.systemDomain.spfVerified).to.be(false);
-                expect(data.systemDomain.track).to.be.a(SendPostApi.ModelsSystemDNSRecord);
-                      expect(data.systemDomain.track.host).to.be.a('string');
-                  expect(data.systemDomain.track.host).to.be("");
-                  expect(data.systemDomain.track.textValue).to.be.a('string');
-                  expect(data.systemDomain.track.textValue).to.be("");
-                  expect(data.systemDomain.track.type).to.be.a('string');
-                  expect(data.systemDomain.track.type).to.be("");
-                expect(data.systemDomain.trackVerified).to.be.a('boolean');
-                expect(data.systemDomain.trackVerified).to.be(false);
-              expect(data.type).to.be.a(SendPostApi.ModelsIPType);
-                  expect(data.yahooSettings).to.be.a('string');
-              expect(data.yahooSettings).to.be("");
-              expect(data.yandexSettings).to.be.a('string');
-              expect(data.yandexSettings).to.be("");
-              expect(data.zohoSettings).to.be.a('string');
-              expect(data.zohoSettings).to.be("");
             }
 
             done();
