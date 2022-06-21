@@ -321,7 +321,7 @@ No authorization required
 
 <a name="iPRouterGetIpHealth"></a>
 # **iPRouterGetIpHealth**
-> [ModelsIPHealthResponse] iPRouterGetIpHealth(xAccountApiKey, ipid)
+> ModelsIPHealthResponse iPRouterGetIpHealth(xAccountApiKey, ipid)
 
 
 
@@ -357,7 +357,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[ModelsIPHealthResponse]**](ModelsIPHealthResponse.md)
+[**ModelsIPHealthResponse**](ModelsIPHealthResponse.md)
 
 ### Authorization
 

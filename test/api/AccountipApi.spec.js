@@ -825,55 +825,49 @@
               return;
             }
             // TODO: update response assertions
-            let dataCtr = data;
-            expect(dataCtr).to.be.an(Array);
-            expect(dataCtr).to.not.be.empty();
-            for (let p in dataCtr) {
-              let data = dataCtr[p];
-              expect(data).to.be.a(SendPostApi.ModelsIPHealthResponse);
-              {
-                let dataCtr = data.providerStats;
-                expect(dataCtr).to.be.an(Array);
-                expect(dataCtr).to.not.be.empty();
-                for (let p in dataCtr) {
-                  let data = dataCtr[p];
-                  expect(data).to.be.a(SendPostApi.ModelsProviderDetails);
-                  expect(data.consumerStats).to.be.a(SendPostApi.ModelsConsumerStats);
-                        expect(data.consumerStats.connectedTimestamp).to.be.a('number');
-                    expect(data.consumerStats.connectedTimestamp).to.be("0");
-                    expect(data.consumerStats.messageCount).to.be.a('number');
-                    expect(data.consumerStats.messageCount).to.be("0");
-                    expect(data.consumerStats.messagesFinished).to.be.a('number');
-                    expect(data.consumerStats.messagesFinished).to.be("0");
-                    expect(data.consumerStats.messagesRecieved).to.be.a('number');
-                    expect(data.consumerStats.messagesRecieved).to.be("0");
-                    expect(data.consumerStats.messagesRequeued).to.be.a('number');
-                    expect(data.consumerStats.messagesRequeued).to.be("0");
-                  expect(data.deferredConsumerStats).to.be.a(SendPostApi.ModelsConsumerStats);
-                        expect(data.deferredConsumerStats.connectedTimestamp).to.be.a('number');
-                    expect(data.deferredConsumerStats.connectedTimestamp).to.be("0");
-                    expect(data.deferredConsumerStats.messageCount).to.be.a('number');
-                    expect(data.deferredConsumerStats.messageCount).to.be("0");
-                    expect(data.deferredConsumerStats.messagesFinished).to.be.a('number');
-                    expect(data.deferredConsumerStats.messagesFinished).to.be("0");
-                    expect(data.deferredConsumerStats.messagesRecieved).to.be.a('number');
-                    expect(data.deferredConsumerStats.messagesRecieved).to.be("0");
-                    expect(data.deferredConsumerStats.messagesRequeued).to.be.a('number');
-                    expect(data.deferredConsumerStats.messagesRequeued).to.be("0");
-                  expect(data.providerSettings).to.be.a(SendPostApi.ModelsIPProviderSettings);
-                        expect(data.providerSettings.maxConcurrentConnections).to.be.a('number');
-                    expect(data.providerSettings.maxConcurrentConnections).to.be("0");
-                    expect(data.providerSettings.maxSendPerDay).to.be.a('number');
-                    expect(data.providerSettings.maxSendPerDay).to.be("0");
-                    expect(data.providerSettings.maxSendPerHour).to.be.a('number');
-                    expect(data.providerSettings.maxSendPerHour).to.be("0");
-                    expect(data.providerSettings.maxSendPerMinute).to.be.a('number');
-                    expect(data.providerSettings.maxSendPerMinute).to.be("0");
-                  expect(data.type).to.be.a('string');
-                  expect(data.type).to.be("");
-  
-                        }
-              }
+            expect(data).to.be.a(SendPostApi.ModelsIPHealthResponse);
+            {
+              let dataCtr = data.providerStats;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(SendPostApi.ModelsProviderDetails);
+                expect(data.consumerStats).to.be.a(SendPostApi.ModelsConsumerStats);
+                      expect(data.consumerStats.connectedTimestamp).to.be.a('number');
+                  expect(data.consumerStats.connectedTimestamp).to.be("0");
+                  expect(data.consumerStats.messageCount).to.be.a('number');
+                  expect(data.consumerStats.messageCount).to.be("0");
+                  expect(data.consumerStats.messagesFinished).to.be.a('number');
+                  expect(data.consumerStats.messagesFinished).to.be("0");
+                  expect(data.consumerStats.messagesRecieved).to.be.a('number');
+                  expect(data.consumerStats.messagesRecieved).to.be("0");
+                  expect(data.consumerStats.messagesRequeued).to.be.a('number');
+                  expect(data.consumerStats.messagesRequeued).to.be("0");
+                expect(data.deferredConsumerStats).to.be.a(SendPostApi.ModelsConsumerStats);
+                      expect(data.deferredConsumerStats.connectedTimestamp).to.be.a('number');
+                  expect(data.deferredConsumerStats.connectedTimestamp).to.be("0");
+                  expect(data.deferredConsumerStats.messageCount).to.be.a('number');
+                  expect(data.deferredConsumerStats.messageCount).to.be("0");
+                  expect(data.deferredConsumerStats.messagesFinished).to.be.a('number');
+                  expect(data.deferredConsumerStats.messagesFinished).to.be("0");
+                  expect(data.deferredConsumerStats.messagesRecieved).to.be.a('number');
+                  expect(data.deferredConsumerStats.messagesRecieved).to.be("0");
+                  expect(data.deferredConsumerStats.messagesRequeued).to.be.a('number');
+                  expect(data.deferredConsumerStats.messagesRequeued).to.be("0");
+                expect(data.providerSettings).to.be.a(SendPostApi.ModelsIPProviderSettings);
+                      expect(data.providerSettings.maxConcurrentConnections).to.be.a('number');
+                  expect(data.providerSettings.maxConcurrentConnections).to.be("0");
+                  expect(data.providerSettings.maxSendPerDay).to.be.a('number');
+                  expect(data.providerSettings.maxSendPerDay).to.be("0");
+                  expect(data.providerSettings.maxSendPerHour).to.be.a('number');
+                  expect(data.providerSettings.maxSendPerHour).to.be("0");
+                  expect(data.providerSettings.maxSendPerMinute).to.be.a('number');
+                  expect(data.providerSettings.maxSendPerMinute).to.be("0");
+                expect(data.type).to.be.a('string');
+                expect(data.type).to.be("");
+
+                      }
             }
 
             done();

@@ -375,7 +375,7 @@
      * Callback function to receive the result of the iPRouterGetIpHealth operation.
      * @callback module:api/AccountipApi~iPRouterGetIpHealthCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ModelsIPHealthResponse>} data The data returned by the service call.
+     * @param {module:model/ModelsIPHealthResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -384,7 +384,7 @@
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid The IP you want to update
      * @param {module:api/AccountipApi~iPRouterGetIpHealthCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ModelsIPHealthResponse>}
+     * data is of type: {@link module:model/ModelsIPHealthResponse}
      */
     this.iPRouterGetIpHealth = function(xAccountApiKey, ipid, callback) {
       var postBody = null;
@@ -416,7 +416,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = [ModelsIPHealthResponse];
+      var returnType = ModelsIPHealthResponse;
 
       return this.apiClient.callApi(
         '/account/ip/{ipid}/health', 'GET',
