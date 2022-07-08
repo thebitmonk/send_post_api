@@ -159,8 +159,12 @@
           /*
           var xAccountApiKey = "xAccountApiKey_example";
           var type = "type_example";
+          var opts = {};
+          opts.offset = 789;
+          opts.limit = 789;
+          opts.search = "search_example";
 
-          instance.labelRouterGetAll(xAccountApiKey, type, function(error, data, response) {
+          instance.labelRouterGetAll(xAccountApiKey, type, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;

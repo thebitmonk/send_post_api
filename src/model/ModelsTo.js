@@ -55,34 +55,24 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('bcc'))
-        obj.bcc = ApiClient.convertToType(data['bcc'], [ModelsCopyTo]);
-      if (data.hasOwnProperty('cc'))
-        obj.cc = ApiClient.convertToType(data['cc'], [ModelsCopyTo]);
-      if (data.hasOwnProperty('customFields'))
-        obj.customFields = ApiClient.convertToType(data['customFields'], Object);
-      if (data.hasOwnProperty('email'))
-        obj.email = ApiClient.convertToType(data['email'], 'String');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
+      if (data.hasOwnProperty('email'))
+        obj.email = ApiClient.convertToType(data['email'], 'String');
+      if (data.hasOwnProperty('cc'))
+        obj.cc = ApiClient.convertToType(data['cc'], [ModelsCopyTo]);
+      if (data.hasOwnProperty('bcc'))
+        obj.bcc = ApiClient.convertToType(data['bcc'], [ModelsCopyTo]);
+      if (data.hasOwnProperty('customFields'))
+        obj.customFields = ApiClient.convertToType(data['customFields'], Object);
     }
     return obj;
   }
 
   /**
-   * @member {Array.<module:model/ModelsCopyTo>} bcc
+   * @member {String} name
    */
-  exports.prototype.bcc = undefined;
-
-  /**
-   * @member {Array.<module:model/ModelsCopyTo>} cc
-   */
-  exports.prototype.cc = undefined;
-
-  /**
-   * @member {Object} customFields
-   */
-  exports.prototype.customFields = undefined;
+  exports.prototype.name = undefined;
 
   /**
    * @member {String} email
@@ -90,9 +80,19 @@
   exports.prototype.email = undefined;
 
   /**
-   * @member {String} name
+   * @member {Array.<module:model/ModelsCopyTo>} cc
    */
-  exports.prototype.name = undefined;
+  exports.prototype.cc = undefined;
+
+  /**
+   * @member {Array.<module:model/ModelsCopyTo>} bcc
+   */
+  exports.prototype.bcc = undefined;
+
+  /**
+   * @member {Object} customFields
+   */
+  exports.prototype.customFields = undefined;
 
 
   return exports;

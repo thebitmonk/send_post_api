@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**bcc** | [**[ModelsCopyTo]**](ModelsCopyTo.md) |  | [optional] 
-**cc** | [**[ModelsCopyTo]**](ModelsCopyTo.md) |  | [optional] 
-**customFields** | **Object** |  | [optional] 
-**email** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
+**email** | **String** |  | [optional] 
+**cc** | [**[ModelsCopyTo]**](ModelsCopyTo.md) |  | [optional] 
+**bcc** | [**[ModelsCopyTo]**](ModelsCopyTo.md) |  | [optional] 
+**customFields** | **Object** |  | [optional] 
 
 

@@ -41,10 +41,10 @@
         expect(instance).to.be.a(SendPostApi.ModelsCopyTo);
       });
 
-      it('should have the property customFields (base name: "customFields")', function() {
-        // TODO: update the code to test the property customFields
-        expect(instance).to.have.property('customFields');
-        // expect(instance.customFields).to.be(expectedValueLiteral);
+      it('should have the property name (base name: "name")', function() {
+        // TODO: update the code to test the property name
+        expect(instance).to.have.property('name');
+        // expect(instance.name).to.be(expectedValueLiteral);
       });
 
       it('should have the property email (base name: "email")', function() {
@@ -53,10 +53,10 @@
         // expect(instance.email).to.be(expectedValueLiteral);
       });
 
-      it('should have the property name (base name: "name")', function() {
-        // TODO: update the code to test the property name
-        expect(instance).to.have.property('name');
-        // expect(instance.name).to.be(expectedValueLiteral);
+      it('should have the property customFields (base name: "customFields")', function() {
+        // TODO: update the code to test the property customFields
+        expect(instance).to.have.property('customFields');
+        // expect(instance.customFields).to.be(expectedValueLiteral);
       });
 
     });

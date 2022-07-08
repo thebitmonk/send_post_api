@@ -55,20 +55,20 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('customFields'))
-        obj.customFields = ApiClient.convertToType(data['customFields'], Object);
-      if (data.hasOwnProperty('email'))
-        obj.email = ApiClient.convertToType(data['email'], 'String');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
+      if (data.hasOwnProperty('email'))
+        obj.email = ApiClient.convertToType(data['email'], 'String');
+      if (data.hasOwnProperty('customFields'))
+        obj.customFields = ApiClient.convertToType(data['customFields'], Object);
     }
     return obj;
   }
 
   /**
-   * @member {Object} customFields
+   * @member {String} name
    */
-  exports.prototype.customFields = undefined;
+  exports.prototype.name = undefined;
 
   /**
    * @member {String} email
@@ -76,9 +76,9 @@
   exports.prototype.email = undefined;
 
   /**
-   * @member {String} name
+   * @member {Object} customFields
    */
-  exports.prototype.name = undefined;
+  exports.prototype.customFields = undefined;
 
 
   return exports;
