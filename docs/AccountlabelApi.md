@@ -1,6 +1,6 @@
 # SendPostApi.AccountlabelApi
 
-All URIs are relative to *http://127.0.0.1:8081/api/v1*
+All URIs are relative to *http://127.0.0.1:8082/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -210,7 +210,7 @@ No authorization required
 
 <a name="labelRouterGetAll"></a>
 # **labelRouterGetAll**
-> [ModelsLabel] labelRouterGetAll(xAccountApiKey, type)
+> [ModelsLabel] labelRouterGetAll(xAccountApiKey, type, opts)
 
 
 
@@ -226,6 +226,11 @@ var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var type = "type_example"; // String | get all labels type
 
+var opts = { 
+  'offset': 789, // Number | offset
+  'limit': 789, // Number | limit
+  'search': "search_example" // String | search term
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -234,7 +239,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.labelRouterGetAll(xAccountApiKey, type, callback);
+apiInstance.labelRouterGetAll(xAccountApiKey, type, opts, callback);
 ```
 
 ### Parameters
@@ -243,6 +248,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
  **type** | **String**| get all labels type | 
+ **offset** | **Number**| offset | [optional] 
+ **limit** | **Number**| limit | [optional] 
+ **search** | **String**| search term | [optional] 
 
 ### Return type
 
