@@ -194,8 +194,8 @@
                     expect(data.id).to.be("0");
                     expect(data.name).to.be.a('string');
                     expect(data.name).to.be("");
-                    expect(data.type).to.be.a(SendPostApi.ModelsLabelType);
-            
+                    expect(data.type).to.be.a('number');
+                    expect(data.type).to.be("0");
     
                           }
                 }
@@ -276,8 +276,8 @@
                     expect(data.id).to.be("0");
                     expect(data.name).to.be.a('string');
                     expect(data.name).to.be("");
-                    expect(data.type).to.be.a(SendPostApi.ModelsLabelType);
-            
+                    expect(data.type).to.be.a('number');
+                    expect(data.type).to.be("0");
     
                           }
                 }
@@ -506,8 +506,8 @@
                   expect(data.id).to.be("0");
                   expect(data.name).to.be.a('string');
                   expect(data.name).to.be("");
-                  expect(data.type).to.be.a(SendPostApi.ModelsLabelType);
-          
+                  expect(data.type).to.be.a('number');
+                  expect(data.type).to.be("0");
   
                         }
               }
@@ -588,8 +588,8 @@
                   expect(data.id).to.be("0");
                   expect(data.name).to.be.a('string');
                   expect(data.name).to.be("");
-                  expect(data.type).to.be.a(SendPostApi.ModelsLabelType);
-          
+                  expect(data.type).to.be.a('number');
+                  expect(data.type).to.be("0");
   
                         }
               }
@@ -788,8 +788,8 @@
                     expect(data.id).to.be("0");
                     expect(data.name).to.be.a('string');
                     expect(data.name).to.be("");
-                    expect(data.type).to.be.a(SendPostApi.ModelsLabelType);
-            
+                    expect(data.type).to.be.a('number');
+                    expect(data.type).to.be("0");
     
                           }
                 }
@@ -870,8 +870,8 @@
                     expect(data.id).to.be("0");
                     expect(data.name).to.be.a('string');
                     expect(data.name).to.be("");
-                    expect(data.type).to.be.a(SendPostApi.ModelsLabelType);
-            
+                    expect(data.type).to.be.a('number');
+                    expect(data.type).to.be("0");
     
                           }
                 }
@@ -1094,8 +1094,8 @@
                       expect(data.id).to.be("0");
                       expect(data.name).to.be.a('string');
                       expect(data.name).to.be("");
-                      expect(data.type).to.be.a(SendPostApi.ModelsLabelType);
-              
+                      expect(data.type).to.be.a('number');
+                      expect(data.type).to.be("0");
       
                             }
                   }
@@ -1176,8 +1176,8 @@
                       expect(data.id).to.be("0");
                       expect(data.name).to.be.a('string');
                       expect(data.name).to.be("");
-                      expect(data.type).to.be.a(SendPostApi.ModelsLabelType);
-              
+                      expect(data.type).to.be.a('number');
+                      expect(data.type).to.be("0");
       
                             }
                   }
@@ -1367,8 +1367,8 @@
                   expect(data.id).to.be("0");
                   expect(data.name).to.be.a('string');
                   expect(data.name).to.be("");
-                  expect(data.type).to.be.a(SendPostApi.ModelsLabelType);
-          
+                  expect(data.type).to.be.a('number');
+                  expect(data.type).to.be("0");
   
                         }
               }
@@ -1449,8 +1449,8 @@
                   expect(data.id).to.be("0");
                   expect(data.name).to.be.a('string');
                   expect(data.name).to.be("");
-                  expect(data.type).to.be.a(SendPostApi.ModelsLabelType);
-          
+                  expect(data.type).to.be.a('number');
+                  expect(data.type).to.be("0");
   
                         }
               }
@@ -1653,8 +1653,8 @@
                   expect(data.id).to.be("0");
                   expect(data.name).to.be.a('string');
                   expect(data.name).to.be("");
-                  expect(data.type).to.be.a(SendPostApi.ModelsLabelType);
-          
+                  expect(data.type).to.be.a('number');
+                  expect(data.type).to.be("0");
   
                         }
               }
@@ -1735,8 +1735,8 @@
                   expect(data.id).to.be("0");
                   expect(data.name).to.be.a('string');
                   expect(data.name).to.be("");
-                  expect(data.type).to.be.a(SendPostApi.ModelsLabelType);
-          
+                  expect(data.type).to.be.a('number');
+                  expect(data.type).to.be("0");
   
                         }
               }

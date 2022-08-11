@@ -60,10 +60,14 @@
      * Send Email To Contacts
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {module:model/ModelsEmailMessage} body The Email Message
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.xSendPostMockEmail Mock email header
+     * @param {String} opts.xSendPostMockTimeShift Mock email time shift
      * @param {module:api/SubaccountemailApi~emailRouterSendEmailCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsEmailResponse>}
      */
-    this.emailRouterSendEmail = function(xSubAccountApiKey, body, callback) {
+    this.emailRouterSendEmail = function(xSubAccountApiKey, body, opts, callback) {
+      opts = opts || {};
       var postBody = body;
 
       // verify the required parameter 'xSubAccountApiKey' is set
@@ -84,7 +88,9 @@
       var collectionQueryParams = {
       };
       var headerParams = {
-        'X-SubAccount-ApiKey': xSubAccountApiKey
+        'X-SubAccount-ApiKey': xSubAccountApiKey,
+        'X-SendPost-Mock-Email': opts['xSendPostMockEmail'],
+        'X-SendPost-Mock-Time-Shift': opts['xSendPostMockTimeShift']
       };
       var formParams = {
       };

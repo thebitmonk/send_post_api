@@ -74,8 +74,11 @@
           body.to[0].customFields = ;
           body.trackClicks = false;
           body.trackOpens = false;
+          var opts = {};
+          opts.xSendPostMockEmail = true;
+          opts.xSendPostMockTimeShift = "xSendPostMockTimeShift_example";
 
-          instance.emailRouterSendEmail(xSubAccountApiKey, body, function(error, data, response) {
+          instance.emailRouterSendEmail(xSubAccountApiKey, body, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;

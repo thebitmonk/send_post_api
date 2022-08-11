@@ -70,7 +70,7 @@
           body.created = "0";
           body.id = "0";
           body.name = "";
-          body.type = new SendPostApi.ModelsLabelType();
+          body.type = "0";
 
           instance.labelRouterCreate(xAccountApiKey, body, function(error, data, response) {
             if (error) {
@@ -87,8 +87,9 @@
             expect(data.id).to.be("0");
             expect(data.name).to.be.a('string');
             expect(data.name).to.be("");
-            expect(data.type).to.be.a(SendPostApi.ModelsLabelType);
-    
+            expect(data.type).to.be.a('number');
+            expect(data.type).to.be("0");
+
             done();
           });
           */
@@ -144,8 +145,9 @@
             expect(data.id).to.be("0");
             expect(data.name).to.be.a('string');
             expect(data.name).to.be("");
-            expect(data.type).to.be.a(SendPostApi.ModelsLabelType);
-    
+            expect(data.type).to.be.a('number');
+            expect(data.type).to.be("0");
+
             done();
           });
           */
@@ -184,8 +186,8 @@
               expect(data.id).to.be("0");
               expect(data.name).to.be.a('string');
               expect(data.name).to.be("");
-              expect(data.type).to.be.a(SendPostApi.ModelsLabelType);
-      
+              expect(data.type).to.be.a('number');
+              expect(data.type).to.be("0");
             }
 
             done();
@@ -206,7 +208,7 @@
           body.created = "0";
           body.id = "0";
           body.name = "";
-          body.type = new SendPostApi.ModelsLabelType();
+          body.type = "0";
 
           instance.labelRouterUpdate(xAccountApiKey, labelId, body, function(error, data, response) {
             if (error) {
@@ -223,8 +225,9 @@
             expect(data.id).to.be("0");
             expect(data.name).to.be.a('string');
             expect(data.name).to.be("");
-            expect(data.type).to.be.a(SendPostApi.ModelsLabelType);
-    
+            expect(data.type).to.be.a('number');
+            expect(data.type).to.be("0");
+
             done();
           });
           */
