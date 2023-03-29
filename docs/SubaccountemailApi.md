@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="emailRouterSendEmail"></a>
 # **emailRouterSendEmail**
-> [ModelsEmailResponse] emailRouterSendEmail(xSubAccountApiKey, body)
+> [ModelsEmailResponse] emailRouterSendEmail(xSubAccountApiKey, body, opts)
 
 
 
@@ -26,6 +26,10 @@ var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API
 
 var body = new SendPostApi.ModelsEmailMessage(); // ModelsEmailMessage | The Email Message
 
+var opts = { 
+  'xSendPostMockEmail': true, // Boolean | Mock email header
+  'xSendPostMockTimeShift': "xSendPostMockTimeShift_example" // String | Mock email time shift
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -34,7 +38,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.emailRouterSendEmail(xSubAccountApiKey, body, callback);
+apiInstance.emailRouterSendEmail(xSubAccountApiKey, body, opts, callback);
 ```
 
 ### Parameters
@@ -43,6 +47,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
  **body** | [**ModelsEmailMessage**](ModelsEmailMessage.md)| The Email Message | 
+ **xSendPostMockEmail** | **Boolean**| Mock email header | [optional] 
+ **xSendPostMockTimeShift** | **String**| Mock email time shift | [optional] 
 
 ### Return type
 

@@ -215,6 +215,8 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountstatApi* | [**accountStatRouterGetAllAccountStatsByGroup**](docs/AccountstatApi.md#accountStatRouterGetAllAccountStatsByGroup) | **GET** /account/stat/group | 
 *SendPostApi.AccountstatApi* | [**accountStatRouterGetAllAggregateAccountStats**](docs/AccountstatApi.md#accountStatRouterGetAllAggregateAccountStats) | **GET** /account/stat/aggregate | 
 *SendPostApi.AccountstatApi* | [**accountStatRouterGetAllAggregateAccountStatsByGroup**](docs/AccountstatApi.md#accountStatRouterGetAllAggregateAccountStatsByGroup) | **GET** /account/stat/aggregate/group | 
+*SendPostApi.AccountstatApi* | [**accountStatRouterGetAllAggregateIPStats**](docs/AccountstatApi.md#accountStatRouterGetAllAggregateIPStats) | **GET** /account/stat/aggregate/ip | 
+*SendPostApi.AccountstatApi* | [**accountStatRouterGetAllAggregateSubAccountStats**](docs/AccountstatApi.md#accountStatRouterGetAllAggregateSubAccountStats) | **GET** /account/stat/aggregate/subaccount | 
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterCount**](docs/AccountsubaccountApi.md#subAccountRouterCount) | **GET** /account/subaccount/count | 
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterCreate**](docs/AccountsubaccountApi.md#subAccountRouterCreate) | **POST** /account/subaccount/ | 
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterDelete**](docs/AccountsubaccountApi.md#subAccountRouterDelete) | **DELETE** /account/subaccount/{subAccountId} | 
@@ -291,6 +293,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.SubaccountsuppressionApi* | [**suppressionRouterDeleteSuppression**](docs/SubaccountsuppressionApi.md#suppressionRouterDeleteSuppression) | **DELETE** /subaccount/suppression/ | 
 *SendPostApi.SubaccountsuppressionApi* | [**suppressionRouterDeleteSuppressionsInSuppressionFilter**](docs/SubaccountsuppressionApi.md#suppressionRouterDeleteSuppressionsInSuppressionFilter) | **DELETE** /subaccount/suppression/filter | 
 *SendPostApi.SubaccountsuppressionApi* | [**suppressionRouterGetAllSuppressions**](docs/SubaccountsuppressionApi.md#suppressionRouterGetAllSuppressions) | **GET** /subaccount/suppression/ | 
+*SendPostApi.SystemsuppressionApi* | [**systemSuppressionRouterCreateSuppressionsViaSendX**](docs/SystemsuppressionApi.md#systemSuppressionRouterCreateSuppressionsViaSendX) | **POST** /system/suppression/{subAccountId} | 
 *SendPostApi.SystemtemplateApi* | [**systemTemplateRouterGetAllSystemTemplates**](docs/SystemtemplateApi.md#systemTemplateRouterGetAllSystemTemplates) | **GET** /system/template/ | 
 *SendPostApi.TrackApi* | [**trackRouterTrackEmailOpen**](docs/TrackApi.md#trackRouterTrackEmailOpen) | **GET** /track/open/{accountId}/{subAccountId}/{ipId}/{emailType}/{messageId}/1.png | 
 *SendPostApi.TrackApi* | [**trackRouterTrackLinkClick**](docs/TrackApi.md#trackRouterTrackLinkClick) | **GET** /track/click/{accountId}/{subAccountId}/{ipId}/{emailType}/{messageId} | 
@@ -302,7 +305,9 @@ Class | Method | HTTP request | Description
  - [SendPostApi.Alert](docs/Alert.md)
  - [SendPostApi.ApiGlockappsMailReport](docs/ApiGlockappsMailReport.md)
  - [SendPostApi.ModelFalse](docs/ModelFalse.md)
+ - [SendPostApi.ModelsAGIPStat](docs/ModelsAGIPStat.md)
  - [SendPostApi.ModelsAGStat](docs/ModelsAGStat.md)
+ - [SendPostApi.ModelsAGSubAccountStat](docs/ModelsAGSubAccountStat.md)
  - [SendPostApi.ModelsAIPStat](docs/ModelsAIPStat.md)
  - [SendPostApi.ModelsAccount](docs/ModelsAccount.md)
  - [SendPostApi.ModelsAccountDomain](docs/ModelsAccountDomain.md)
