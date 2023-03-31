@@ -83,6 +83,12 @@
         // expect(instance.processed).to.be(expectedValueLiteral);
       });
 
+      it('should have the property publicIP (base name: "publicIP")', function() {
+        // TODO: update the code to test the property publicIP
+        expect(instance).to.have.property('publicIP');
+        // expect(instance.publicIP).to.be(expectedValueLiteral);
+      });
+
       it('should have the property sent (base name: "sent")', function() {
         // TODO: update the code to test the property sent
         expect(instance).to.have.property('sent');

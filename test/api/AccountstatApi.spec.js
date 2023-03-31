@@ -274,6 +274,8 @@
               expect(data.opened).to.be("0");
               expect(data.processed).to.be.a('number');
               expect(data.processed).to.be("0");
+              expect(data.publicIP).to.be.a('string');
+              expect(data.publicIP).to.be("");
               expect(data.sent).to.be.a('number');
               expect(data.sent).to.be("0");
               expect(data.softBounced).to.be.a('number');
