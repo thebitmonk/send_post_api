@@ -69,6 +69,8 @@
         obj.opened = ApiClient.convertToType(data['opened'], 'Number');
       if (data.hasOwnProperty('processed'))
         obj.processed = ApiClient.convertToType(data['processed'], 'Number');
+      if (data.hasOwnProperty('publicIP'))
+        obj.publicIP = ApiClient.convertToType(data['publicIP'], 'String');
       if (data.hasOwnProperty('sent'))
         obj.sent = ApiClient.convertToType(data['sent'], 'Number');
       if (data.hasOwnProperty('softBounced'))
@@ -115,6 +117,11 @@
    * @member {Number} processed
    */
   exports.prototype.processed = undefined;
+
+  /**
+   * @member {String} publicIP
+   */
+  exports.prototype.publicIP = undefined;
 
   /**
    * @member {Number} sent
