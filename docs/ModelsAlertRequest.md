@@ -16,5 +16,3 @@ Name | Type | Description | Notes
 **provider** | **String** |  | [optional] 
 **slackUrl** | **String** |  | [optional] 
 **threshold** | **String** |  | [optional] 
-
-

@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**systemTemplateRouterGetAllSystemTemplates**](SystemtemplateApi.md#systemTemplateRouterGetAllSystemTemplates) | **GET** /system/template/ | 
 
-
 <a name="systemTemplateRouterGetAllSystemTemplates"></a>
 # **systemTemplateRouterGetAllSystemTemplates**
 > [ModelsSystemTemplate] systemTemplateRouterGetAllSystemTemplates(xAccountApiKey)
@@ -17,21 +16,18 @@ Get all System Templates
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.SystemtemplateApi();
+let apiInstance = new SendPostApi.SystemtemplateApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-
-var callback = function(error, data, response) {
+apiInstance.systemTemplateRouterGetAllSystemTemplates(xAccountApiKey, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.systemTemplateRouterGetAllSystemTemplates(xAccountApiKey, callback);
+});
 ```
 
 ### Parameters
@@ -50,6 +46,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 

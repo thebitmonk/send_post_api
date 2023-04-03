@@ -8,7 +8,6 @@ Method | HTTP request | Description
 [**authRouterGetAuthInfo**](AuthApi.md#authRouterGetAuthInfo) | **POST** /auth/info | 
 [**authRouterUpdateAuthInfo**](AuthApi.md#authRouterUpdateAuthInfo) | **PUT** /auth/info | 
 
-
 <a name="authRouterCreate"></a>
 # **authRouterCreate**
 > ModelsAccount authRouterCreate(body, xToken)
@@ -19,23 +18,19 @@ Create Account, sub-account and member
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.AuthApi();
+let apiInstance = new SendPostApi.AuthApi();
+let body = new SendPostApi.ModelsEAccount(); // ModelsEAccount | The Account content
+let xToken = "xToken_example"; // String | Firebase dynamic token
 
-var body = new SendPostApi.ModelsEAccount(); // ModelsEAccount | The Account content
-
-var xToken = "xToken_example"; // String | Firebase dynamic token
-
-
-var callback = function(error, data, response) {
+apiInstance.authRouterCreate(body, xToken, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.authRouterCreate(body, xToken, callback);
+});
 ```
 
 ### Parameters
@@ -68,23 +63,19 @@ Get Auth Info Details
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.AuthApi();
+let apiInstance = new SendPostApi.AuthApi();
+let body = new SendPostApi.ModelsEAccount(); // ModelsEAccount | The Account content
+let xToken = "xToken_example"; // String | Firebase dynamic token
 
-var body = new SendPostApi.ModelsEAccount(); // ModelsEAccount | The Account content
-
-var xToken = "xToken_example"; // String | Firebase dynamic token
-
-
-var callback = function(error, data, response) {
+apiInstance.authRouterGetAuthInfo(body, xToken, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.authRouterGetAuthInfo(body, xToken, callback);
+});
 ```
 
 ### Parameters
@@ -117,23 +108,19 @@ Updates member and accounts related for email verification and on boarding answe
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.AuthApi();
+let apiInstance = new SendPostApi.AuthApi();
+let body = new SendPostApi.ModelsEAccountMember(); // ModelsEAccountMember | The Account Member content
+let xToken = "xToken_example"; // String | Firebase dynamic token
 
-var body = new SendPostApi.ModelsEAccountMember(); // ModelsEAccountMember | The Account Member content
-
-var xToken = "xToken_example"; // String | Firebase dynamic token
-
-
-var callback = function(error, data, response) {
+apiInstance.authRouterUpdateAuthInfo(body, xToken, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.authRouterUpdateAuthInfo(body, xToken, callback);
+});
 ```
 
 ### Parameters

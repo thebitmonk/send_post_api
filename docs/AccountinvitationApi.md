@@ -8,10 +8,9 @@ Method | HTTP request | Description
 [**invitationRouterDelete**](AccountinvitationApi.md#invitationRouterDelete) | **DELETE** /account/invitation/{invitationId} | 
 [**invitationRouterGetAll**](AccountinvitationApi.md#invitationRouterGetAll) | **GET** /account/invitation/ | 
 
-
 <a name="invitationRouterCreate"></a>
 # **invitationRouterCreate**
-> ModelsInvitation invitationRouterCreate(xAccountApiKey, body)
+> ModelsInvitation invitationRouterCreate(body, xAccountApiKey)
 
 
 
@@ -19,31 +18,27 @@ Create Invitation
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountinvitationApi();
+let apiInstance = new SendPostApi.AccountinvitationApi();
+let body = new SendPostApi.ModelsEInvitation(); // ModelsEInvitation | The Invitation content
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var body = new SendPostApi.ModelsEInvitation(); // ModelsEInvitation | The Invitation content
-
-
-var callback = function(error, data, response) {
+apiInstance.invitationRouterCreate(body, xAccountApiKey, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.invitationRouterCreate(xAccountApiKey, body, callback);
+});
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Account API Key | 
  **body** | [**ModelsEInvitation**](ModelsEInvitation.md)| The Invitation content | 
+ **xAccountApiKey** | **String**| Account API Key | 
 
 ### Return type
 
@@ -68,23 +63,19 @@ Delete Invitation
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountinvitationApi();
+let apiInstance = new SendPostApi.AccountinvitationApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let invitationId = 789; // Number | The InvitationId you want to delete
 
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var invitationId = 789; // Number | The InvitationId you want to delete
-
-
-var callback = function(error, data, response) {
+apiInstance.invitationRouterDelete(xAccountApiKey, invitationId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.invitationRouterDelete(xAccountApiKey, invitationId, callback);
+});
 ```
 
 ### Parameters
@@ -104,7 +95,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="invitationRouterGetAll"></a>
@@ -117,21 +108,18 @@ Get All Invitations
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountinvitationApi();
+let apiInstance = new SendPostApi.AccountinvitationApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-
-var callback = function(error, data, response) {
+apiInstance.invitationRouterGetAll(xAccountApiKey, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.invitationRouterGetAll(xAccountApiKey, callback);
+});
 ```
 
 ### Parameters
@@ -150,6 +138,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 

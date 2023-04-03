@@ -14,5 +14,3 @@ Name | Type | Description | Notes
 **sendingVolumePerMonth** | **String** |  | [optional] 
 **uid** | **String** |  | [optional] 
 **verifyEmail** | **Boolean** |  | [optional] 
-
-

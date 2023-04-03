@@ -6,10 +6,9 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**systemSuppressionRouterCreateSuppressionsViaSendX**](SystemsuppressionApi.md#systemSuppressionRouterCreateSuppressionsViaSendX) | **POST** /system/suppression/{subAccountId} | 
 
-
 <a name="systemSuppressionRouterCreateSuppressionsViaSendX"></a>
 # **systemSuppressionRouterCreateSuppressionsViaSendX**
-> ModelsSuppression systemSuppressionRouterCreateSuppressionsViaSendX(xSystemApiKey, subAccountId, body)
+> ModelsSuppression systemSuppressionRouterCreateSuppressionsViaSendX(body, xSystemApiKey, subAccountId)
 
 
 
@@ -17,34 +16,29 @@ Add Email Addresses To Suppression List
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.SystemsuppressionApi();
+let apiInstance = new SendPostApi.SystemsuppressionApi();
+let body = new SendPostApi.ModelsRSuppression(); // ModelsRSuppression | Suppression content
+let xSystemApiKey = "xSystemApiKey_example"; // String | System API Key
+let subAccountId = 789; // Number | The SubAccountId you want to delete
 
-var xSystemApiKey = "xSystemApiKey_example"; // String | System API Key
-
-var subAccountId = 789; // Number | The SubAccountId you want to delete
-
-var body = new SendPostApi.ModelsRSuppression(); // ModelsRSuppression | Suppression content
-
-
-var callback = function(error, data, response) {
+apiInstance.systemSuppressionRouterCreateSuppressionsViaSendX(body, xSystemApiKey, subAccountId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.systemSuppressionRouterCreateSuppressionsViaSendX(xSystemApiKey, subAccountId, body, callback);
+});
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**ModelsRSuppression**](ModelsRSuppression.md)| Suppression content | 
  **xSystemApiKey** | **String**| System API Key | 
  **subAccountId** | **Number**| The SubAccountId you want to delete | 
- **body** | [**ModelsRSuppression**](ModelsRSuppression.md)| Suppression content | 
 
 ### Return type
 

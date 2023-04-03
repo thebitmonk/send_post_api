@@ -12,5 +12,3 @@ Name | Type | Description | Notes
 **refreshToken** | **String** |  | [optional] 
 **tokenType** | **String** |  | [optional] 
 **userName** | **String** |  | [optional] 
-
-

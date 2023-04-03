@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**accountIPPools** | [**[ModelsAccountIPPool]**](ModelsAccountIPPool.md) |  | [optional] 
 **aolSettings** | **String** |  | [optional] 
 **autoWarmupEnabled** | **Boolean** |  | [optional] 
 **comcastSettings** | **String** |  | [optional] 
@@ -26,5 +27,3 @@ Name | Type | Description | Notes
 **yahooSettings** | **String** |  | [optional] 
 **yandexSettings** | **String** |  | [optional] 
 **zohoSettings** | **String** |  | [optional] 
-
-

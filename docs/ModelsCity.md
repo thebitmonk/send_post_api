@@ -8,5 +8,3 @@ Name | Type | Description | Notes
 **countryCode** | **String** |  | [optional] 
 **postalCode** | **String** |  | [optional] 
 **timeZone** | **String** |  | [optional] 
-
-

@@ -10,5 +10,3 @@ Name | Type | Description | Notes
 **name** | **String** |  | [optional] 
 **smtpAuths** | [**[ModelsSMTPAuth]**](ModelsSMTPAuth.md) |  | [optional] 
 **type** | [**ModelsSubAccountType**](ModelsSubAccountType.md) |  | [optional] 
-
-

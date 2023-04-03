@@ -7,5 +7,3 @@ Name | Type | Description | Notes
 **id** | **Number** |  | [optional] 
 **source** | **String** |  | [optional] 
 **type** | **String** |  | [optional] 
-
-

@@ -7,5 +7,3 @@ Name | Type | Description | Notes
 **manual** | [**[ModelsSuppressionEmail]**](ModelsSuppressionEmail.md) |  | [optional] 
 **spamComplaint** | [**[ModelsSuppressionEmail]**](ModelsSuppressionEmail.md) |  | [optional] 
 **unsubscribe** | [**[ModelsSuppressionEmail]**](ModelsSuppressionEmail.md) |  | [optional] 
-
-

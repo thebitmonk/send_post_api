@@ -10,5 +10,3 @@ Name | Type | Description | Notes
 **domainLength** | **Number** |  | [optional] 
 **host** | **String** |  | [optional] 
 **mostAbusedTld** | **Boolean** |  | [optional] 
-
-

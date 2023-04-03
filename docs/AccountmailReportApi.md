@@ -8,10 +8,9 @@ Method | HTTP request | Description
 [**mailReportRouterMailReportGetSingleReport**](AccountmailReportApi.md#mailReportRouterMailReportGetSingleReport) | **GET** /account/mailReport/{reportId} | 
 [**mailReportRouterMailReportProviders**](AccountmailReportApi.md#mailReportRouterMailReportProviders) | **GET** /account/mailReport/provider | 
 
-
 <a name="mailReportRouterMailReport"></a>
 # **mailReportRouterMailReport**
-> ModelsMailReportResult mailReportRouterMailReport(xAccountApiKey, body)
+> ModelsMailReportResult mailReportRouterMailReport(body, xAccountApiKey)
 
 
 
@@ -19,31 +18,27 @@ get reputation of domain
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountmailReportApi();
+let apiInstance = new SendPostApi.AccountmailReportApi();
+let body = new SendPostApi.ModelsCreateMailReport(); // ModelsCreateMailReport | The IP Email Provider Settings
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var body = new SendPostApi.ModelsCreateMailReport(); // ModelsCreateMailReport | The IP Email Provider Settings
-
-
-var callback = function(error, data, response) {
+apiInstance.mailReportRouterMailReport(body, xAccountApiKey, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.mailReportRouterMailReport(xAccountApiKey, body, callback);
+});
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Account API Key | 
  **body** | [**ModelsCreateMailReport**](ModelsCreateMailReport.md)| The IP Email Provider Settings | 
+ **xAccountApiKey** | **String**| Account API Key | 
 
 ### Return type
 
@@ -68,23 +63,19 @@ get Providers available
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountmailReportApi();
+let apiInstance = new SendPostApi.AccountmailReportApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let reportId = 789; // Number | the report id you want to get
 
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var reportId = 789; // Number | the report id you want to get
-
-
-var callback = function(error, data, response) {
+apiInstance.mailReportRouterMailReportGetSingleReport(xAccountApiKey, reportId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.mailReportRouterMailReportGetSingleReport(xAccountApiKey, reportId, callback);
+});
 ```
 
 ### Parameters
@@ -104,7 +95,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="mailReportRouterMailReportProviders"></a>
@@ -117,21 +108,18 @@ get Providers available
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountmailReportApi();
+let apiInstance = new SendPostApi.AccountmailReportApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-
-var callback = function(error, data, response) {
+apiInstance.mailReportRouterMailReportProviders(xAccountApiKey, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.mailReportRouterMailReportProviders(xAccountApiKey, callback);
+});
 ```
 
 ### Parameters
@@ -150,6 +138,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 

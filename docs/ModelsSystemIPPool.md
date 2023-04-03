@@ -7,5 +7,3 @@ Name | Type | Description | Notes
 **created** | **Number** |  | [optional] 
 **id** | **Number** |  | [optional] 
 **name** | **String** |  | [optional] 
-
-

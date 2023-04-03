@@ -8,5 +8,3 @@ Name | Type | Description | Notes
 **key** | **String** |  | [optional] 
 **settings** | **String** |  | [optional] 
 **type** | [**ModelsIntegrationType**](ModelsIntegrationType.md) |  | [optional] 
-
-

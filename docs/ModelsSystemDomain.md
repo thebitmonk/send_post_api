@@ -14,5 +14,3 @@ Name | Type | Description | Notes
 **spfVerified** | **Boolean** |  | [optional] 
 **track** | [**ModelsSystemDNSRecord**](ModelsSystemDNSRecord.md) |  | [optional] 
 **trackVerified** | **Boolean** |  | [optional] 
-
-

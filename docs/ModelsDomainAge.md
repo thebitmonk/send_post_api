@@ -10,5 +10,3 @@ Name | Type | Description | Notes
 **domainCreationDate** | **String** |  | [optional] 
 **domainRegistered** | **String** |  | [optional] 
 **host** | **String** |  | [optional] 
-
-

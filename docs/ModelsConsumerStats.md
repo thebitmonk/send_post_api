@@ -8,5 +8,3 @@ Name | Type | Description | Notes
 **messagesFinished** | **Number** |  | [optional] 
 **messagesRecieved** | **Number** |  | [optional] 
 **messagesRequeued** | **Number** |  | [optional] 
-
-

@@ -14,5 +14,3 @@ Name | Type | Description | Notes
 **secret** | **String** |  | [optional] 
 **token** | **String** |  | [optional] 
 **updated** | **Number** |  | [optional] 
-
-

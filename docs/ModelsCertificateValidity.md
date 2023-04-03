@@ -8,5 +8,3 @@ Name | Type | Description | Notes
 **validFromTimestamp** | **Number** |  | [optional] 
 **validTo** | **String** |  | [optional] 
 **validToTimestamp** | **Number** |  | [optional] 
-
-

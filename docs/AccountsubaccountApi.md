@@ -12,7 +12,6 @@ Method | HTTP request | Description
 [**subAccountRouterGetAllSubAccountIncidents**](AccountsubaccountApi.md#subAccountRouterGetAllSubAccountIncidents) | **GET** /account/subaccount/{subAccountId}/incident | 
 [**subAccountRouterUpdate**](AccountsubaccountApi.md#subAccountRouterUpdate) | **PUT** /account/subaccount/{subAccountId} | 
 
-
 <a name="subAccountRouterCount"></a>
 # **subAccountRouterCount**
 > ModelsCountStat subAccountRouterCount(xAccountApiKey, opts)
@@ -23,26 +22,22 @@ Count Total Subaccounts
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountsubaccountApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountsubaccountApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let opts = { 
   'filterBy': "filterBy_example", // String | filterBy
   'filterValue': 789, // Number | filterValue
   'search': "search_example" // String | search term
 };
-
-var callback = function(error, data, response) {
+apiInstance.subAccountRouterCount(xAccountApiKey, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.subAccountRouterCount(xAccountApiKey, opts, callback);
+});
 ```
 
 ### Parameters
@@ -64,12 +59,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="subAccountRouterCreate"></a>
 # **subAccountRouterCreate**
-> ModelsSubAccount subAccountRouterCreate(xAccountApiKey, body)
+> ModelsSubAccount subAccountRouterCreate(body, xAccountApiKey)
 
 
 
@@ -77,31 +72,27 @@ Create SubAccount
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountsubaccountApi();
+let apiInstance = new SendPostApi.AccountsubaccountApi();
+let body = new SendPostApi.ModelsESubAccount(); // ModelsESubAccount | The SubAccount content
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var body = new SendPostApi.ModelsESubAccount(); // ModelsESubAccount | The SubAccount content
-
-
-var callback = function(error, data, response) {
+apiInstance.subAccountRouterCreate(body, xAccountApiKey, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.subAccountRouterCreate(xAccountApiKey, body, callback);
+});
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Account API Key | 
  **body** | [**ModelsESubAccount**](ModelsESubAccount.md)| The SubAccount content | 
+ **xAccountApiKey** | **String**| Account API Key | 
 
 ### Return type
 
@@ -126,23 +117,19 @@ Delete SubAccount
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountsubaccountApi();
+let apiInstance = new SendPostApi.AccountsubaccountApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let subAccountId = 789; // Number | The SubAccountId you want to delete
 
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var subAccountId = 789; // Number | The SubAccountId you want to delete
-
-
-var callback = function(error, data, response) {
+apiInstance.subAccountRouterDelete(xAccountApiKey, subAccountId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.subAccountRouterDelete(xAccountApiKey, subAccountId, callback);
+});
 ```
 
 ### Parameters
@@ -162,7 +149,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="subAccountRouterGet"></a>
@@ -175,23 +162,19 @@ Find SubAccount by SubAccountId
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountsubaccountApi();
+let apiInstance = new SendPostApi.AccountsubaccountApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let subAccountId = 789; // Number | the SubAccountId you want to get
 
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var subAccountId = 789; // Number | the SubAccountId you want to get
-
-
-var callback = function(error, data, response) {
+apiInstance.subAccountRouterGet(xAccountApiKey, subAccountId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.subAccountRouterGet(xAccountApiKey, subAccountId, callback);
+});
 ```
 
 ### Parameters
@@ -211,7 +194,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="subAccountRouterGetAll"></a>
@@ -224,28 +207,24 @@ Get All SubAccounts
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountsubaccountApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountsubaccountApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let opts = { 
   'offset': 789, // Number | offset
   'limit': 789, // Number | limit
   'filterBy': "filterBy_example", // String | filterBy
   'filterValue': 789, // Number | filterValue
   'search': "search_example" // String | search term
 };
-
-var callback = function(error, data, response) {
+apiInstance.subAccountRouterGetAll(xAccountApiKey, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.subAccountRouterGetAll(xAccountApiKey, opts, callback);
+});
 ```
 
 ### Parameters
@@ -269,7 +248,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="subAccountRouterGetAllSubAccountIncidents"></a>
@@ -282,23 +261,19 @@ Get All Incidents associated with a sub-account
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountsubaccountApi();
+let apiInstance = new SendPostApi.AccountsubaccountApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let subAccountId = 789; // Number | The SubAccountId you want to delete
 
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var subAccountId = 789; // Number | The SubAccountId you want to delete
-
-
-var callback = function(error, data, response) {
+apiInstance.subAccountRouterGetAllSubAccountIncidents(xAccountApiKey, subAccountId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.subAccountRouterGetAllSubAccountIncidents(xAccountApiKey, subAccountId, callback);
+});
 ```
 
 ### Parameters
@@ -318,12 +293,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="subAccountRouterUpdate"></a>
 # **subAccountRouterUpdate**
-> ModelsSubAccount subAccountRouterUpdate(xAccountApiKey, subAccountId, body)
+> ModelsSubAccount subAccountRouterUpdate(body, xAccountApiKey, subAccountId)
 
 
 
@@ -331,34 +306,29 @@ Update SubAccount
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountsubaccountApi();
+let apiInstance = new SendPostApi.AccountsubaccountApi();
+let body = new SendPostApi.ModelsESubAccount(); // ModelsESubAccount | The body
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let subAccountId = 789; // Number | The SubAccountId you want to update
 
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var subAccountId = 789; // Number | The SubAccountId you want to update
-
-var body = new SendPostApi.ModelsESubAccount(); // ModelsESubAccount | The body
-
-
-var callback = function(error, data, response) {
+apiInstance.subAccountRouterUpdate(body, xAccountApiKey, subAccountId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.subAccountRouterUpdate(xAccountApiKey, subAccountId, body, callback);
+});
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**ModelsESubAccount**](ModelsESubAccount.md)| The body | 
  **xAccountApiKey** | **String**| Account API Key | 
  **subAccountId** | **Number**| The SubAccountId you want to update | 
- **body** | [**ModelsESubAccount**](ModelsESubAccount.md)| The body | 
 
 ### Return type
 

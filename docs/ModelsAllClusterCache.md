@@ -4,5 +4,3 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **result** | [**[ModelsClusterCache]**](ModelsClusterCache.md) |  | [optional] 
-
-

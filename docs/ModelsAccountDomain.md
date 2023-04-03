@@ -15,5 +15,3 @@ Name | Type | Description | Notes
 **track** | [**ModelsDNSRecord**](ModelsDNSRecord.md) |  | [optional] 
 **trackVerified** | **Boolean** |  | [optional] 
 **verified** | **Boolean** |  | [optional] 
-
-

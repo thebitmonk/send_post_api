@@ -15,5 +15,3 @@ Name | Type | Description | Notes
 **subAccountId** | **Number** |  | [optional] 
 **subAccountName** | **String** |  | [optional] 
 **unsubscribed** | **Number** |  | [optional] 
-
-

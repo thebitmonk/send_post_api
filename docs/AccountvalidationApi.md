@@ -10,7 +10,6 @@ Method | HTTP request | Description
 [**validationRouterGetAll**](AccountvalidationApi.md#validationRouterGetAll) | **GET** /account/validation/ | 
 [**validationRouterValidateEmailList**](AccountvalidationApi.md#validationRouterValidateEmailList) | **POST** /account/validation/ | 
 
-
 <a name="validateRouterValidateEmailBulk"></a>
 # **validateRouterValidateEmailBulk**
 > ModelsBulkResponse validateRouterValidateEmailBulk(fileinput, xAccountApiKey)
@@ -21,30 +20,26 @@ Validate Emails In File Asynchronously
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountvalidationApi();
+let apiInstance = new SendPostApi.AccountvalidationApi();
+let fileinput = "fileinput_example"; // Blob | 
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
-var fileinput = "/path/to/file.txt"; // File | CSV whose emails need to be validated
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-
-var callback = function(error, data, response) {
+apiInstance.validateRouterValidateEmailBulk(fileinput, xAccountApiKey, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.validateRouterValidateEmailBulk(fileinput, xAccountApiKey, callback);
+});
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **fileinput** | **File**| CSV whose emails need to be validated | 
+ **fileinput** | **Blob**|  | 
  **xAccountApiKey** | **String**| Account API Key | 
 
 ### Return type
@@ -70,21 +65,18 @@ Count Total Validations
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountvalidationApi();
+let apiInstance = new SendPostApi.AccountvalidationApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-
-var callback = function(error, data, response) {
+apiInstance.validationRouterCount(xAccountApiKey, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.validationRouterCount(xAccountApiKey, callback);
+});
 ```
 
 ### Parameters
@@ -103,12 +95,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="validationRouterDeleteValidation"></a>
 # **validationRouterDeleteValidation**
-> ModelsValidation validationRouterDeleteValidation(xAccountApiKey, body)
+> ModelsValidation validationRouterDeleteValidation(body, xAccountApiKey)
 
 
 
@@ -116,31 +108,27 @@ Delete a specific validation
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountvalidationApi();
+let apiInstance = new SendPostApi.AccountvalidationApi();
+let body = ["body_example"]; // [String] | List of emails to be deleted from validation
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var body = new SendPostApi.ModelsEValidation(); // ModelsEValidation | List of emails to be deleted from validation
-
-
-var callback = function(error, data, response) {
+apiInstance.validationRouterDeleteValidation(body, xAccountApiKey, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.validationRouterDeleteValidation(xAccountApiKey, body, callback);
+});
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**[String]**](String.md)| List of emails to be deleted from validation | 
  **xAccountApiKey** | **String**| Account API Key | 
- **body** | [**ModelsEValidation**](ModelsEValidation.md)| List of emails to be deleted from validation | 
 
 ### Return type
 
@@ -165,26 +153,22 @@ Get all validation
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountvalidationApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountvalidationApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let opts = { 
   'offset': 789, // Number | offset
   'limit': 789, // Number | limit
   'search': "search_example" // String | search
 };
-
-var callback = function(error, data, response) {
+apiInstance.validationRouterGetAll(xAccountApiKey, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.validationRouterGetAll(xAccountApiKey, opts, callback);
+});
 ```
 
 ### Parameters
@@ -206,12 +190,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="validationRouterValidateEmailList"></a>
 # **validationRouterValidateEmailList**
-> ModelsCleanedList validationRouterValidateEmailList(xAccountApiKey, body)
+> ModelsCleanedList validationRouterValidateEmailList(body, xAccountApiKey)
 
 
 
@@ -219,31 +203,27 @@ Validate Email List Synchronously
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountvalidationApi();
+let apiInstance = new SendPostApi.AccountvalidationApi();
+let body = new SendPostApi.ModelsEmailList(); // ModelsEmailList | The email list to be sent for being validated
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var body = new SendPostApi.ModelsEmailList(); // ModelsEmailList | The email list to be sent for being validated
-
-
-var callback = function(error, data, response) {
+apiInstance.validationRouterValidateEmailList(body, xAccountApiKey, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.validationRouterValidateEmailList(xAccountApiKey, body, callback);
+});
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Account API Key | 
  **body** | [**ModelsEmailList**](ModelsEmailList.md)| The email list to be sent for being validated | 
+ **xAccountApiKey** | **String**| Account API Key | 
 
 ### Return type
 

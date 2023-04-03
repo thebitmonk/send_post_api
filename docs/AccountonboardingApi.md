@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**onboardingRouterGetOnboardingChecklist**](AccountonboardingApi.md#onboardingRouterGetOnboardingChecklist) | **GET** /account/onboarding/checklist | 
 
-
 <a name="onboardingRouterGetOnboardingChecklist"></a>
 # **onboardingRouterGetOnboardingChecklist**
 > ModelsOnboardingChecklist onboardingRouterGetOnboardingChecklist(xAccountApiKey)
@@ -17,21 +16,18 @@ Gets Onboarding Checklist data for account if not present creates a default entr
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountonboardingApi();
+let apiInstance = new SendPostApi.AccountonboardingApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-
-var callback = function(error, data, response) {
+apiInstance.onboardingRouterGetOnboardingChecklist(xAccountApiKey, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.onboardingRouterGetOnboardingChecklist(xAccountApiKey, callback);
+});
 ```
 
 ### Parameters
@@ -50,6 +46,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 

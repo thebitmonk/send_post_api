@@ -8,5 +8,3 @@ Name | Type | Description | Notes
 **messageId** | **String** |  | [optional] 
 **submittedAt** | **Number** |  | [optional] 
 **to** | **String** |  | [optional] 
-
-

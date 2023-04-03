@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**domainReportRouterReputation**](AccountdomainReportApi.md#domainReportRouterReputation) | **GET** /account/domainReport/reputation | 
 
-
 <a name="domainReportRouterReputation"></a>
 # **domainReportRouterReputation**
 > ModelsDomainCheckResult domainReportRouterReputation(xAccountApiKey, opts)
@@ -17,25 +16,21 @@ get reputation of domain
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountdomainReportApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountdomainReportApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let opts = { 
   'ip': "ip_example", // String | ip
   'host': "host_example" // String | host
 };
-
-var callback = function(error, data, response) {
+apiInstance.domainReportRouterReputation(xAccountApiKey, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.domainReportRouterReputation(xAccountApiKey, opts, callback);
+});
 ```
 
 ### Parameters
@@ -56,6 +51,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 

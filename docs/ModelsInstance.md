@@ -8,5 +8,3 @@ Name | Type | Description | Notes
 **id** | **Number** |  | [optional] 
 **ips** | [**[ModelsIP]**](ModelsIP.md) |  | [optional] 
 **name** | **String** |  | [optional] 
-
-

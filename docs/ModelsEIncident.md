@@ -11,5 +11,3 @@ Name | Type | Description | Notes
 **status** | **Number** |  | [optional] 
 **summary** | **String** |  | [optional] 
 **tags** | [**[ModelsIETag]**](ModelsIETag.md) |  | [optional] 
-
-

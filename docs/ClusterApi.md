@@ -11,7 +11,6 @@ Method | HTTP request | Description
 [**clusterRouterGetItemFromCacheOfSpecificNodeInCluster**](ClusterApi.md#clusterRouterGetItemFromCacheOfSpecificNodeInCluster) | **GET** /cluster/cache/node | 
 [**clusterRouterGetItemFromCacheOfSpecificNodeInCluster_0**](ClusterApi.md#clusterRouterGetItemFromCacheOfSpecificNodeInCluster_0) | **DELETE** /cluster/cache/node | 
 
-
 <a name="clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster"></a>
 # **clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster**
 > clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster(body)
@@ -22,21 +21,18 @@ Add items to suppression filter of every node in cluster
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.ClusterApi();
+let apiInstance = new SendPostApi.ClusterApi();
+let body = new SendPostApi.ModelsSuppression(); // ModelsSuppression | Add suppressions to suppression filter
 
-var body = new SendPostApi.ModelsSuppression(); // ModelsSuppression | Add suppressions to suppression filter
-
-
-var callback = function(error, data, response) {
+apiInstance.clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster(body, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-};
-apiInstance.clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster(body, callback);
+});
 ```
 
 ### Parameters
@@ -56,7 +52,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 <a name="clusterRouterDeleteItemFromCacheOfEveryNodeInCluster"></a>
 # **clusterRouterDeleteItemFromCacheOfEveryNodeInCluster**
@@ -68,25 +64,21 @@ Delete item from cache of every node in cluster
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.ClusterApi();
-
-var xSystemApiKey = "xSystemApiKey_example"; // String | System API Key
-
-var opts = { 
+let apiInstance = new SendPostApi.ClusterApi();
+let xSystemApiKey = "xSystemApiKey_example"; // String | System API Key
+let opts = { 
   'name': "name_example", // String | cache name
   'key': "key_example" // String | cache item key to delete
 };
-
-var callback = function(error, data, response) {
+apiInstance.clusterRouterDeleteItemFromCacheOfEveryNodeInCluster(xSystemApiKey, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-};
-apiInstance.clusterRouterDeleteItemFromCacheOfEveryNodeInCluster(xSystemApiKey, opts, callback);
+});
 ```
 
 ### Parameters
@@ -107,8 +99,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 <a name="clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster"></a>
 # **clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster**
@@ -120,21 +112,18 @@ Delete items from suppression filter of every node in cluster
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.ClusterApi();
+let apiInstance = new SendPostApi.ClusterApi();
+let body = new SendPostApi.ModelsSuppression(); // ModelsSuppression | Delete suppressions from suppression filter
 
-var body = new SendPostApi.ModelsSuppression(); // ModelsSuppression | Delete suppressions from suppression filter
-
-
-var callback = function(error, data, response) {
+apiInstance.clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster(body, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-};
-apiInstance.clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster(body, callback);
+});
 ```
 
 ### Parameters
@@ -154,7 +143,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 <a name="clusterRouterGetItemFromCacheOfEveryNodeInCluster"></a>
 # **clusterRouterGetItemFromCacheOfEveryNodeInCluster**
@@ -166,25 +155,21 @@ Get item from cache of every node in cluster
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.ClusterApi();
-
-var xSystemApiKey = "xSystemApiKey_example"; // String | System API Key
-
-var opts = { 
+let apiInstance = new SendPostApi.ClusterApi();
+let xSystemApiKey = "xSystemApiKey_example"; // String | System API Key
+let opts = { 
   'name': "name_example", // String | cache name
   'key': "key_example" // String | cache item key to delete
 };
-
-var callback = function(error, data, response) {
+apiInstance.clusterRouterGetItemFromCacheOfEveryNodeInCluster(xSystemApiKey, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.clusterRouterGetItemFromCacheOfEveryNodeInCluster(xSystemApiKey, opts, callback);
+});
 ```
 
 ### Parameters
@@ -205,7 +190,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="clusterRouterGetItemFromCacheOfSpecificNodeInCluster"></a>
@@ -218,25 +203,21 @@ Delete item from cache of specific node in cluster
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.ClusterApi();
-
-var xSystemApiKey = "xSystemApiKey_example"; // String | System API Key
-
-var opts = { 
+let apiInstance = new SendPostApi.ClusterApi();
+let xSystemApiKey = "xSystemApiKey_example"; // String | System API Key
+let opts = { 
   'name': "name_example", // String | cache name
   'key': "key_example" // String | cache item key to delete
 };
-
-var callback = function(error, data, response) {
+apiInstance.clusterRouterGetItemFromCacheOfSpecificNodeInCluster(xSystemApiKey, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.clusterRouterGetItemFromCacheOfSpecificNodeInCluster(xSystemApiKey, opts, callback);
+});
 ```
 
 ### Parameters
@@ -257,7 +238,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="clusterRouterGetItemFromCacheOfSpecificNodeInCluster_0"></a>
@@ -270,25 +251,21 @@ Get item from cache of specific node in cluster
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.ClusterApi();
-
-var xSystemApiKey = "xSystemApiKey_example"; // String | System API Key
-
-var opts = { 
+let apiInstance = new SendPostApi.ClusterApi();
+let xSystemApiKey = "xSystemApiKey_example"; // String | System API Key
+let opts = { 
   'name': "name_example", // String | cache name
   'key': "key_example" // String | cache item key to delete
 };
-
-var callback = function(error, data, response) {
+apiInstance.clusterRouterGetItemFromCacheOfSpecificNodeInCluster_0(xSystemApiKey, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-};
-apiInstance.clusterRouterGetItemFromCacheOfSpecificNodeInCluster_0(xSystemApiKey, opts, callback);
+});
 ```
 
 ### Parameters
@@ -309,6 +286,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 

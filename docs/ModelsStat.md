@@ -13,5 +13,3 @@ Name | Type | Description | Notes
 **softBounced** | **Number** |  | [optional] 
 **spam** | **Number** |  | [optional] 
 **unsubscribed** | **Number** |  | [optional] 
-
-

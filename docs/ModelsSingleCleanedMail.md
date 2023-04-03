@@ -7,5 +7,3 @@ Name | Type | Description | Notes
 **error** | **String** |  | [optional] 
 **reason** | [**ModelsValidationReason**](ModelsValidationReason.md) |  | [optional] 
 **valid** | **Boolean** |  | [optional] 
-
-

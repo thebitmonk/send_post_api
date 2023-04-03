@@ -10,5 +10,3 @@ Name | Type | Description | Notes
 **id** | **Number** |  | [optional] 
 **updated** | **Number** |  | [optional] 
 **warmupCompleted** | **Boolean** |  | [optional] 
-
-

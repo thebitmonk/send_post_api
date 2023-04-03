@@ -8,10 +8,9 @@ Method | HTTP request | Description
 [**tagRouterDelete**](AccounttagApi.md#tagRouterDelete) | **DELETE** /account/tag/{tagid} | 
 [**tagRouterGetAll**](AccounttagApi.md#tagRouterGetAll) | **GET** /account/tag/ | 
 
-
 <a name="tagRouterCreate"></a>
 # **tagRouterCreate**
-> ModelsTag tagRouterCreate(xAccountApiKey, body)
+> ModelsTag tagRouterCreate(body, xAccountApiKey)
 
 
 
@@ -19,31 +18,27 @@ Create Tag
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccounttagApi();
+let apiInstance = new SendPostApi.AccounttagApi();
+let body = new SendPostApi.ModelsTag(); // ModelsTag | The Tag content
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var body = new SendPostApi.ModelsTag(); // ModelsTag | The Tag content
-
-
-var callback = function(error, data, response) {
+apiInstance.tagRouterCreate(body, xAccountApiKey, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.tagRouterCreate(xAccountApiKey, body, callback);
+});
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Account API Key | 
  **body** | [**ModelsTag**](ModelsTag.md)| The Tag content | 
+ **xAccountApiKey** | **String**| Account API Key | 
 
 ### Return type
 
@@ -68,23 +63,19 @@ Delete Tag
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccounttagApi();
+let apiInstance = new SendPostApi.AccounttagApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let tagid = 789; // Number | The AccountTagId you want to delete
 
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var tagid = 789; // Number | The AccountTagId you want to delete
-
-
-var callback = function(error, data, response) {
+apiInstance.tagRouterDelete(xAccountApiKey, tagid, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.tagRouterDelete(xAccountApiKey, tagid, callback);
+});
 ```
 
 ### Parameters
@@ -104,7 +95,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="tagRouterGetAll"></a>
@@ -117,21 +108,18 @@ Get All Tags
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccounttagApi();
+let apiInstance = new SendPostApi.AccounttagApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-
-var callback = function(error, data, response) {
+apiInstance.tagRouterGetAll(xAccountApiKey, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.tagRouterGetAll(xAccountApiKey, callback);
+});
 ```
 
 ### Parameters
@@ -150,6 +138,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 

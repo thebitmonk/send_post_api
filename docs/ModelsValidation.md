@@ -8,5 +8,3 @@ Name | Type | Description | Notes
 **error** | **String** |  | [optional] 
 **id** | **Number** |  | [optional] 
 **reason** | [**ModelsValidationReason**](ModelsValidationReason.md) |  | [optional] 
-
-

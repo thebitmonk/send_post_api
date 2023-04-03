@@ -11,5 +11,3 @@ Name | Type | Description | Notes
 **sendPerHourType** | [**ModelsBackOffDecreaseType**](ModelsBackOffDecreaseType.md) |  | [optional] 
 **sendPerMinute** | **Number** |  | [optional] 
 **sendPerMinuteType** | [**ModelsBackOffDecreaseType**](ModelsBackOffDecreaseType.md) |  | [optional] 
-
-

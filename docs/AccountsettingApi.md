@@ -6,10 +6,9 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**accountSettingRouterUpdate**](AccountsettingApi.md#accountSettingRouterUpdate) | **PUT** /account/setting/ | 
 
-
 <a name="accountSettingRouterUpdate"></a>
 # **accountSettingRouterUpdate**
-> ModelsAccount accountSettingRouterUpdate(xAccountApiKey, body)
+> ModelsAccount accountSettingRouterUpdate(body, xAccountApiKey)
 
 
 
@@ -17,31 +16,27 @@ update account settings
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountsettingApi();
+let apiInstance = new SendPostApi.AccountsettingApi();
+let body = new SendPostApi.ModelsEAccountSetting(); // ModelsEAccountSetting | The account settings to be updated
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var body = new SendPostApi.ModelsEAccountSetting(); // ModelsEAccountSetting | The account settings to be updated
-
-
-var callback = function(error, data, response) {
+apiInstance.accountSettingRouterUpdate(body, xAccountApiKey, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.accountSettingRouterUpdate(xAccountApiKey, body, callback);
+});
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Account API Key | 
  **body** | [**ModelsEAccountSetting**](ModelsEAccountSetting.md)| The account settings to be updated | 
+ **xAccountApiKey** | **String**| Account API Key | 
 
 ### Return type
 

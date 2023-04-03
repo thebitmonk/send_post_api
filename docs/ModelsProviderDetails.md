@@ -7,5 +7,3 @@ Name | Type | Description | Notes
 **deferredConsumerStats** | [**ModelsConsumerStats**](ModelsConsumerStats.md) |  | [optional] 
 **providerSettings** | [**ModelsIPProviderSettings**](ModelsIPProviderSettings.md) |  | [optional] 
 **type** | **String** |  | [optional] 
-
-

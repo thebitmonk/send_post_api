@@ -10,5 +10,3 @@ Name | Type | Description | Notes
 **maxSendPerHour** | **Number** |  | [optional] 
 **maxSendPerMinute** | **Number** |  | [optional] 
 **name** | **String** |  | [optional] 
-
-

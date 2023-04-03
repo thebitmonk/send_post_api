@@ -8,5 +8,3 @@ Name | Type | Description | Notes
 **minor** | **String** |  | [optional] 
 **patch** | **String** |  | [optional] 
 **patchMinor** | **String** |  | [optional] 
-
-

@@ -13,5 +13,3 @@ Name | Type | Description | Notes
 **onboardQAnswered** | **Boolean** |  | [optional] 
 **phoneNumber** | **String** |  | [optional] 
 **url** | **String** |  | [optional] 
-
-

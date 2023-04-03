@@ -9,5 +9,3 @@ Name | Type | Description | Notes
 **month** | **Number** |  | [optional] 
 **senderScore** | **Number** |  | [optional] 
 **year** | **Number** |  | [optional] 
-
-

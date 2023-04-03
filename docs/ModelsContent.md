@@ -8,5 +8,3 @@ Name | Type | Description | Notes
 **preText** | **String** |  | [optional] 
 **subject** | **String** |  | [optional] 
 **textBody** | **String** |  | [optional] 
-
-

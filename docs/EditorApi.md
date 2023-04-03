@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**editorApiRouterGetToken**](EditorApi.md#editorApiRouterGetToken) | **GET** /editor/ | 
 
-
 <a name="editorApiRouterGetToken"></a>
 # **editorApiRouterGetToken**
 > ModelsEditorTokenResponse editorApiRouterGetToken(xAccountApiKey)
@@ -17,21 +16,18 @@ fetch Bee editor token
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.EditorApi();
+let apiInstance = new SendPostApi.EditorApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-
-var callback = function(error, data, response) {
+apiInstance.editorApiRouterGetToken(xAccountApiKey, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.editorApiRouterGetToken(xAccountApiKey, callback);
+});
 ```
 
 ### Parameters
@@ -50,6 +46,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 

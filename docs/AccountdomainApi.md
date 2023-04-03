@@ -7,7 +7,6 @@ Method | HTTP request | Description
 [**accountDomainRouterCount**](AccountdomainApi.md#accountDomainRouterCount) | **GET** /account/domain/count | 
 [**accountDomainRouterGetAll**](AccountdomainApi.md#accountDomainRouterGetAll) | **GET** /account/domain/ | 
 
-
 <a name="accountDomainRouterCount"></a>
 # **accountDomainRouterCount**
 > ModelsCountStat accountDomainRouterCount(xAccountApiKey, opts)
@@ -18,24 +17,20 @@ Count Total Account Domains
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountdomainApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Sub-Account API Key
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountdomainApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Sub-Account API Key
+let opts = { 
   'search': "search_example" // String | search term
 };
-
-var callback = function(error, data, response) {
+apiInstance.accountDomainRouterCount(xAccountApiKey, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.accountDomainRouterCount(xAccountApiKey, opts, callback);
+});
 ```
 
 ### Parameters
@@ -55,7 +50,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="accountDomainRouterGetAll"></a>
@@ -68,26 +63,22 @@ Get All Domains
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountdomainApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountdomainApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let opts = { 
   'offset': 789, // Number | offset
   'limit': 789, // Number | limit
   'search': "search_example" // String | search term
 };
-
-var callback = function(error, data, response) {
+apiInstance.accountDomainRouterGetAll(xAccountApiKey, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.accountDomainRouterGetAll(xAccountApiKey, opts, callback);
+});
 ```
 
 ### Parameters
@@ -109,6 +100,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 

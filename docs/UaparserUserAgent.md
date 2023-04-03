@@ -7,5 +7,3 @@ Name | Type | Description | Notes
 **major** | **String** |  | [optional] 
 **minor** | **String** |  | [optional] 
 **patch** | **String** |  | [optional] 
-
-

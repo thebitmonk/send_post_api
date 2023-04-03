@@ -13,7 +13,6 @@ Method | HTTP request | Description
 [**subAccountStatRouterGetAllSubAccountStats**](SubaccountstatApi.md#subAccountStatRouterGetAllSubAccountStats) | **GET** /subaccount/stat/ | 
 [**subAccountStatRouterGetAllSubAccountStatsByGroup**](SubaccountstatApi.md#subAccountStatRouterGetAllSubAccountStatsByGroup) | **GET** /subaccount/stat/group | 
 
-
 <a name="subAccountStatRouterGetAllAggregateSubAccountStats"></a>
 # **subAccountStatRouterGetAllAggregateSubAccountStats**
 > ModelsStat subAccountStatRouterGetAllAggregateSubAccountStats(xSubAccountApiKey, opts)
@@ -24,25 +23,21 @@ Get All Aggregate Sub-Account Stats
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.SubaccountstatApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var opts = { 
+let apiInstance = new SendPostApi.SubaccountstatApi();
+let xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+let opts = { 
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
 };
-
-var callback = function(error, data, response) {
+apiInstance.subAccountStatRouterGetAllAggregateSubAccountStats(xSubAccountApiKey, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.subAccountStatRouterGetAllAggregateSubAccountStats(xSubAccountApiKey, opts, callback);
+});
 ```
 
 ### Parameters
@@ -63,7 +58,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="subAccountStatRouterGetAllAggregateSubAccountStatsByGroup"></a>
@@ -76,27 +71,22 @@ Get All Aggregate Sub-Account Stats by Group
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.SubaccountstatApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var group = "group_example"; // String | the group whose stats you want
-
-var opts = { 
+let apiInstance = new SendPostApi.SubaccountstatApi();
+let xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+let group = "group_example"; // String | the group whose stats you want
+let opts = { 
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
 };
-
-var callback = function(error, data, response) {
+apiInstance.subAccountStatRouterGetAllAggregateSubAccountStatsByGroup(xSubAccountApiKey, group, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.subAccountStatRouterGetAllAggregateSubAccountStatsByGroup(xSubAccountApiKey, group, opts, callback);
+});
 ```
 
 ### Parameters
@@ -118,7 +108,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount"></a>
@@ -131,25 +121,21 @@ Get All Aggregated Group Stats for a Sub-Account
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.SubaccountstatApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var opts = { 
+let apiInstance = new SendPostApi.SubaccountstatApi();
+let xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+let opts = { 
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
 };
-
-var callback = function(error, data, response) {
+apiInstance.subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount(xSubAccountApiKey, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount(xSubAccountApiKey, opts, callback);
+});
 ```
 
 ### Parameters
@@ -170,7 +156,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="subAccountStatRouterGetAllAggregatedIPStatsForASubAccount"></a>
@@ -183,25 +169,21 @@ Get All Aggregated IP Stats for a Sub-Account
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.SubaccountstatApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var opts = { 
+let apiInstance = new SendPostApi.SubaccountstatApi();
+let xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+let opts = { 
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
 };
-
-var callback = function(error, data, response) {
+apiInstance.subAccountStatRouterGetAllAggregatedIPStatsForASubAccount(xSubAccountApiKey, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.subAccountStatRouterGetAllAggregatedIPStatsForASubAccount(xSubAccountApiKey, opts, callback);
+});
 ```
 
 ### Parameters
@@ -222,7 +204,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="subAccountStatRouterGetAllAggregatedProviderStatsForASpecificIPOfASubAccount"></a>
@@ -235,27 +217,22 @@ Get All Aggregated Provider Stats for a Specific IP of a Sub-Account
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.SubaccountstatApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var ipid = 789; // Number | the IPId you want to get
-
-var opts = { 
+let apiInstance = new SendPostApi.SubaccountstatApi();
+let xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+let ipid = 789; // Number | the IPId you want to get
+let opts = { 
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
 };
-
-var callback = function(error, data, response) {
+apiInstance.subAccountStatRouterGetAllAggregatedProviderStatsForASpecificIPOfASubAccount(xSubAccountApiKey, ipid, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.subAccountStatRouterGetAllAggregatedProviderStatsForASpecificIPOfASubAccount(xSubAccountApiKey, ipid, opts, callback);
+});
 ```
 
 ### Parameters
@@ -277,7 +254,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount"></a>
@@ -290,25 +267,21 @@ Get All Aggregated Provider Stats for a Sub-Account
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.SubaccountstatApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var opts = { 
+let apiInstance = new SendPostApi.SubaccountstatApi();
+let xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+let opts = { 
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
 };
-
-var callback = function(error, data, response) {
+apiInstance.subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount(xSubAccountApiKey, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount(xSubAccountApiKey, opts, callback);
+});
 ```
 
 ### Parameters
@@ -329,7 +302,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="subAccountStatRouterGetAllSubAccountStats"></a>
@@ -342,25 +315,21 @@ Get All Sub-Account Stats
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.SubaccountstatApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var opts = { 
+let apiInstance = new SendPostApi.SubaccountstatApi();
+let xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+let opts = { 
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
 };
-
-var callback = function(error, data, response) {
+apiInstance.subAccountStatRouterGetAllSubAccountStats(xSubAccountApiKey, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.subAccountStatRouterGetAllSubAccountStats(xSubAccountApiKey, opts, callback);
+});
 ```
 
 ### Parameters
@@ -381,7 +350,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="subAccountStatRouterGetAllSubAccountStatsByGroup"></a>
@@ -394,27 +363,22 @@ Get All Sub-Account Stats by Group
 
 ### Example
 ```javascript
-var SendPostApi = require('send_post_api');
+import {SendPostApi} from 'send_post_api';
 
-var apiInstance = new SendPostApi.SubaccountstatApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var group = "group_example"; // String | the tag whose stats you want
-
-var opts = { 
+let apiInstance = new SendPostApi.SubaccountstatApi();
+let xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+let group = "group_example"; // String | the tag whose stats you want
+let opts = { 
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
 };
-
-var callback = function(error, data, response) {
+apiInstance.subAccountStatRouterGetAllSubAccountStatsByGroup(xSubAccountApiKey, group, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.subAccountStatRouterGetAllSubAccountStatsByGroup(xSubAccountApiKey, group, opts, callback);
+});
 ```
 
 ### Parameters
@@ -436,6 +400,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 

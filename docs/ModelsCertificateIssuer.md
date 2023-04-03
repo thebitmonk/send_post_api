@@ -7,5 +7,3 @@ Name | Type | Description | Notes
 **country** | **String** |  | [optional] 
 **organization** | **String** |  | [optional] 
 **organizationUnit** | **String** |  | [optional] 
-
-
