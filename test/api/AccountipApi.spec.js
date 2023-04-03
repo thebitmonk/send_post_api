@@ -812,6 +812,177 @@
           done();
         });
       });
+      describe('iPRouterGetIPAccountIPPools', function() {
+        it('should call iPRouterGetIPAccountIPPools successfully', function(done) {
+          // TODO: uncomment, update parameter values for iPRouterGetIPAccountIPPools call and complete the assertions
+          /*
+          var xAccountApiKey = "xAccountApiKey_example";
+          var ipid = 789;
+
+          instance.iPRouterGetIPAccountIPPools(xAccountApiKey, ipid, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            let dataCtr = data;
+            expect(dataCtr).to.be.an(Array);
+            expect(dataCtr).to.not.be.empty();
+            for (let p in dataCtr) {
+              let data = dataCtr[p];
+              expect(data).to.be.a(SendPostApi.ModelsAccountIPPool);
+              expect(data.created).to.be.a('number');
+              expect(data.created).to.be("0");
+              expect(data.id).to.be.a('number');
+              expect(data.id).to.be("0");
+              {
+                let dataCtr = data.ips;
+                expect(dataCtr).to.be.an(Array);
+                expect(dataCtr).to.not.be.empty();
+                for (let p in dataCtr) {
+                  let data = dataCtr[p];
+                  expect(data).to.be.a(SendPostApi.ModelsIP);
+                  expect(data.aolSettings).to.be.a('string');
+                  expect(data.aolSettings).to.be("");
+                  expect(data.autoWarmupEnabled).to.be.a('boolean');
+                  expect(data.autoWarmupEnabled).to.be(false);
+                  expect(data.comcastSettings).to.be.a('string');
+                  expect(data.comcastSettings).to.be("");
+                  expect(data.created).to.be.a('number');
+                  expect(data.created).to.be("0");
+                  expect(data.defaultSettings).to.be.a('string');
+                  expect(data.defaultSettings).to.be("");
+                  expect(data.gmailSettings).to.be.a('string');
+                  expect(data.gmailSettings).to.be("");
+                  expect(data.gmxSettings).to.be.a('string');
+                  expect(data.gmxSettings).to.be("");
+                  expect(data.icloudSettings).to.be.a('string');
+                  expect(data.icloudSettings).to.be("");
+                  expect(data.id).to.be.a('number');
+                  expect(data.id).to.be("0");
+                  expect(data.infraClassification).to.be.a('string');
+                  expect(data.infraClassification).to.be("");
+                  expect(data.infraMonitor).to.be.a('boolean');
+                  expect(data.infraMonitor).to.be(false);
+                  {
+                    let dataCtr = data.ipDomainWarmupStatus;
+                    expect(dataCtr).to.be.an(Array);
+                    expect(dataCtr).to.not.be.empty();
+                    for (let p in dataCtr) {
+                      let data = dataCtr[p];
+                      expect(data).to.be.a(SendPostApi.ModelsIPDomainWarmupStatus);
+                      expect(data.autoWarmupDelay).to.be.a('number');
+                      expect(data.autoWarmupDelay).to.be("0");
+                      expect(data.autoWarmupLastRunAt).to.be.a('number');
+                      expect(data.autoWarmupLastRunAt).to.be("0");
+                      expect(data.created).to.be.a('number');
+                      expect(data.created).to.be("0");
+                      expect(data.currentWarmupStage).to.be.a('number');
+                      expect(data.currentWarmupStage).to.be("0");
+                      expect(data.id).to.be.a('number');
+                      expect(data.id).to.be("0");
+                      expect(data.updated).to.be.a('number');
+                      expect(data.updated).to.be("0");
+                      expect(data.warmupCompleted).to.be.a('boolean');
+                      expect(data.warmupCompleted).to.be(false);
+      
+                            }
+                  }
+                  {
+                    let dataCtr = data.labels;
+                    expect(dataCtr).to.be.an(Array);
+                    expect(dataCtr).to.not.be.empty();
+                    for (let p in dataCtr) {
+                      let data = dataCtr[p];
+                      expect(data).to.be.a(SendPostApi.ModelsLabel);
+                      expect(data.color).to.be.a('string');
+                      expect(data.color).to.be("");
+                      expect(data.created).to.be.a('number');
+                      expect(data.created).to.be("0");
+                      expect(data.id).to.be.a('number');
+                      expect(data.id).to.be("0");
+                      expect(data.name).to.be.a('string');
+                      expect(data.name).to.be("");
+                      expect(data.type).to.be.a('number');
+                      expect(data.type).to.be("0");
+      
+                            }
+                  }
+                  expect(data.mailruSettings).to.be.a('string');
+                  expect(data.mailruSettings).to.be("");
+                  expect(data.microsoftSettings).to.be.a('string');
+                  expect(data.microsoftSettings).to.be("");
+                  expect(data.publicIP).to.be.a('string');
+                  expect(data.publicIP).to.be("");
+                  expect(data.qqSettings).to.be.a('string');
+                  expect(data.qqSettings).to.be("");
+                  expect(data.reverseDNSHostname).to.be.a('string');
+                  expect(data.reverseDNSHostname).to.be("");
+                  expect(data.systemDomain).to.be.a(SendPostApi.ModelsSystemDomain);
+                        expect(data.systemDomain.created).to.be.a('number');
+                    expect(data.systemDomain.created).to.be("0");
+                    expect(data.systemDomain.dkim).to.be.a(SendPostApi.ModelsSystemDNSRecord);
+                          expect(data.systemDomain.dkim.host).to.be.a('string');
+                      expect(data.systemDomain.dkim.host).to.be("");
+                      expect(data.systemDomain.dkim.textValue).to.be.a('string');
+                      expect(data.systemDomain.dkim.textValue).to.be("");
+                      expect(data.systemDomain.dkim.type).to.be.a('string');
+                      expect(data.systemDomain.dkim.type).to.be("");
+                    expect(data.systemDomain.dkimConfig).to.be.a('string');
+                    expect(data.systemDomain.dkimConfig).to.be("");
+                    expect(data.systemDomain.dkimVerified).to.be.a('boolean');
+                    expect(data.systemDomain.dkimVerified).to.be(false);
+                    expect(data.systemDomain.id).to.be.a('number');
+                    expect(data.systemDomain.id).to.be("0");
+                    expect(data.systemDomain.mailboxVerified).to.be.a('boolean');
+                    expect(data.systemDomain.mailboxVerified).to.be(false);
+                    expect(data.systemDomain.name).to.be.a('string');
+                    expect(data.systemDomain.name).to.be("");
+                    expect(data.systemDomain.spf).to.be.a(SendPostApi.ModelsSystemDNSRecord);
+                          expect(data.systemDomain.spf.host).to.be.a('string');
+                      expect(data.systemDomain.spf.host).to.be("");
+                      expect(data.systemDomain.spf.textValue).to.be.a('string');
+                      expect(data.systemDomain.spf.textValue).to.be("");
+                      expect(data.systemDomain.spf.type).to.be.a('string');
+                      expect(data.systemDomain.spf.type).to.be("");
+                    expect(data.systemDomain.spfVerified).to.be.a('boolean');
+                    expect(data.systemDomain.spfVerified).to.be(false);
+                    expect(data.systemDomain.track).to.be.a(SendPostApi.ModelsSystemDNSRecord);
+                          expect(data.systemDomain.track.host).to.be.a('string');
+                      expect(data.systemDomain.track.host).to.be("");
+                      expect(data.systemDomain.track.textValue).to.be.a('string');
+                      expect(data.systemDomain.track.textValue).to.be("");
+                      expect(data.systemDomain.track.type).to.be.a('string');
+                      expect(data.systemDomain.track.type).to.be("");
+                    expect(data.systemDomain.trackVerified).to.be.a('boolean');
+                    expect(data.systemDomain.trackVerified).to.be(false);
+                  expect(data.type).to.be.a(SendPostApi.ModelsIPType);
+                      expect(data.yahooSettings).to.be.a('string');
+                  expect(data.yahooSettings).to.be("");
+                  expect(data.yandexSettings).to.be.a('string');
+                  expect(data.yandexSettings).to.be("");
+                  expect(data.zohoSettings).to.be.a('string');
+                  expect(data.zohoSettings).to.be("");
+  
+                        }
+              }
+              expect(data.name).to.be.a('string');
+              expect(data.name).to.be("");
+              expect(data.routingMetaData).to.be.a('string');
+              expect(data.routingMetaData).to.be("");
+              expect(data.routingStrategy).to.be.a('number');
+              expect(data.routingStrategy).to.be("0");
+              expect(data.type).to.be.a(SendPostApi.ModelsIPPoolType);
+      
+            }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('iPRouterGetIpHealth', function() {
         it('should call iPRouterGetIpHealth successfully', function(done) {
           // TODO: uncomment, update parameter values for iPRouterGetIpHealth call and complete the assertions
