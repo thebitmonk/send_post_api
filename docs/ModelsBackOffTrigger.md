@@ -7,3 +7,5 @@ Name | Type | Description | Notes
 **durationInMinutes** | **Number** |  | [optional] 
 **hardBouncePercentage** | **Number** |  | [optional] 
 **minimumAttempts** | **Number** |  | [optional] 
+
+

@@ -10,3 +10,5 @@ Name | Type | Description | Notes
 **routingMetaData** | **String** |  | [optional] 
 **routingStrategy** | **Number** |  | [optional] 
 **type** | [**ModelsIPPoolType**](ModelsIPPoolType.md) |  | [optional] 
+
+

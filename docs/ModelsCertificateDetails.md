@@ -8,3 +8,5 @@ Name | Type | Description | Notes
 **signature** | [**ModelsCertificateSignature**](ModelsCertificateSignature.md) |  | [optional] 
 **subject** | [**ModelsCertificateSubject**](ModelsCertificateSubject.md) |  | [optional] 
 **validity** | [**ModelsCertificateValidity**](ModelsCertificateValidity.md) |  | [optional] 
+
+

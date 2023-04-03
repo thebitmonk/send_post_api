@@ -30,3 +30,5 @@ Name | Type | Description | Notes
 **to** | [**ModelsTo**](ModelsTo.md) |  | [optional] 
 **trackClicks** | **Boolean** |  | [optional] 
 **trackOpens** | **Boolean** |  | [optional] 
+
+

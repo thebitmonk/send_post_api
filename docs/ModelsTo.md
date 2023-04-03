@@ -8,3 +8,5 @@ Name | Type | Description | Notes
 **cc** | [**[ModelsCopyTo]**](ModelsCopyTo.md) |  | [optional] 
 **bcc** | [**[ModelsCopyTo]**](ModelsCopyTo.md) |  | [optional] 
 **customFields** | **Object** |  | [optional] 
+
+

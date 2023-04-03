@@ -17,3 +17,5 @@ Name | Type | Description | Notes
 **spam** | **Boolean** |  | [optional] 
 **unsubscribed** | **Boolean** |  | [optional] 
 **url** | **String** |  | [optional] 
+
+

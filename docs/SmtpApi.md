@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**sMTPRouterReceiveWebhooksRaisedFromSMTPServers**](SmtpApi.md#sMTPRouterReceiveWebhooksRaisedFromSMTPServers) | **POST** /smtp/webhook | 
 
+
 <a name="sMTPRouterReceiveWebhooksRaisedFromSMTPServers"></a>
 # **sMTPRouterReceiveWebhooksRaisedFromSMTPServers**
 > sMTPRouterReceiveWebhooksRaisedFromSMTPServers(body)
@@ -16,18 +17,21 @@ Receive webhooks raised from SMTP servers
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.SmtpApi();
-let body = new SendPostApi.ModelsWMessage(); // ModelsWMessage | The Webhook content
+var apiInstance = new SendPostApi.SmtpApi();
 
-apiInstance.sMTPRouterReceiveWebhooksRaisedFromSMTPServers(body, (error, data, response) => {
+var body = new SendPostApi.ModelsWMessage(); // ModelsWMessage | The Webhook content
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-});
+};
+apiInstance.sMTPRouterReceiveWebhooksRaisedFromSMTPServers(body, callback);
 ```
 
 ### Parameters
@@ -47,5 +51,5 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 

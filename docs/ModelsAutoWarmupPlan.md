@@ -8,3 +8,5 @@ Name | Type | Description | Notes
 **name** | **String** |  | [optional] 
 **schedule** | **String** |  | [optional] 
 **updated** | **Number** |  | [optional] 
+
+

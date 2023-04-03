@@ -12,9 +12,10 @@ Method | HTTP request | Description
 [**incidentRouterGetIncident**](AccountincidentApi.md#incidentRouterGetIncident) | **GET** /account/incident/{incidentId} | 
 [**incidentRouterUpdate**](AccountincidentApi.md#incidentRouterUpdate) | **PUT** /account/incident/{incidentId} | 
 
+
 <a name="incidentRouterAdd"></a>
 # **incidentRouterAdd**
-> ModelsComment incidentRouterAdd(body, xAccountApiKey, incidentId)
+> ModelsComment incidentRouterAdd(xAccountApiKey, incidentId, body)
 
 
 
@@ -22,29 +23,34 @@ Add comment to Incident
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountincidentApi();
-let body = new SendPostApi.ModelsEComment(); // ModelsEComment | The Comment content
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let incidentId = 789; // Number | the incident id
+var apiInstance = new SendPostApi.AccountincidentApi();
 
-apiInstance.incidentRouterAdd(body, xAccountApiKey, incidentId, (error, data, response) => {
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var incidentId = 789; // Number | the incident id
+
+var body = new SendPostApi.ModelsEComment(); // ModelsEComment | The Comment content
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.incidentRouterAdd(xAccountApiKey, incidentId, body, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ModelsEComment**](ModelsEComment.md)| The Comment content | 
  **xAccountApiKey** | **String**| Account API Key | 
  **incidentId** | **Number**| the incident id | 
+ **body** | [**ModelsEComment**](ModelsEComment.md)| The Comment content | 
 
 ### Return type
 
@@ -69,22 +75,26 @@ Count Total Incidents
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountincidentApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let opts = { 
+var apiInstance = new SendPostApi.AccountincidentApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var opts = { 
   'status': 789, // Number | status
   'tag': 789, // Number | status
   'search': "search_example" // String | search term
 };
-apiInstance.incidentRouterCount(xAccountApiKey, opts, (error, data, response) => {
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.incidentRouterCount(xAccountApiKey, opts, callback);
 ```
 
 ### Parameters
@@ -106,12 +116,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="incidentRouterCreate"></a>
 # **incidentRouterCreate**
-> ModelsIncident incidentRouterCreate(body, xAccountApiKey)
+> ModelsIncident incidentRouterCreate(xAccountApiKey, body)
 
 
 
@@ -119,27 +129,31 @@ Create Incident
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountincidentApi();
-let body = new SendPostApi.ModelsEIncident(); // ModelsEIncident | The Incident content
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+var apiInstance = new SendPostApi.AccountincidentApi();
 
-apiInstance.incidentRouterCreate(body, xAccountApiKey, (error, data, response) => {
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var body = new SendPostApi.ModelsEIncident(); // ModelsEIncident | The Incident content
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.incidentRouterCreate(xAccountApiKey, body, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ModelsEIncident**](ModelsEIncident.md)| The Incident content | 
  **xAccountApiKey** | **String**| Account API Key | 
+ **body** | [**ModelsEIncident**](ModelsEIncident.md)| The Incident content | 
 
 ### Return type
 
@@ -164,24 +178,28 @@ Get All Incidents
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountincidentApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let opts = { 
+var apiInstance = new SendPostApi.AccountincidentApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var opts = { 
   'offset': 789, // Number | offset
   'limit': 789, // Number | limit
   'search': "search_example", // String | search term
   'status': 789, // Number | status
   'tag': 789 // Number | status
 };
-apiInstance.incidentRouterGetAll(xAccountApiKey, opts, (error, data, response) => {
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.incidentRouterGetAll(xAccountApiKey, opts, callback);
 ```
 
 ### Parameters
@@ -205,7 +223,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="incidentRouterGetAllComments"></a>
@@ -218,19 +236,23 @@ Get All Comments Associated with Incident
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountincidentApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let incidentId = 789; // Number | the IncidentId you want to get comments for
+var apiInstance = new SendPostApi.AccountincidentApi();
 
-apiInstance.incidentRouterGetAllComments(xAccountApiKey, incidentId, (error, data, response) => {
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var incidentId = 789; // Number | the IncidentId you want to get comments for
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.incidentRouterGetAllComments(xAccountApiKey, incidentId, callback);
 ```
 
 ### Parameters
@@ -250,7 +272,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="incidentRouterGetIncident"></a>
@@ -263,19 +285,23 @@ Find Incident by incidentId
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountincidentApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let incidentId = 789; // Number | the IncidentId you want to get
+var apiInstance = new SendPostApi.AccountincidentApi();
 
-apiInstance.incidentRouterGetIncident(xAccountApiKey, incidentId, (error, data, response) => {
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var incidentId = 789; // Number | the IncidentId you want to get
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.incidentRouterGetIncident(xAccountApiKey, incidentId, callback);
 ```
 
 ### Parameters
@@ -295,12 +321,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="incidentRouterUpdate"></a>
 # **incidentRouterUpdate**
-> ModelsIncident incidentRouterUpdate(body, xAccountApiKey, incidentId)
+> ModelsIncident incidentRouterUpdate(xAccountApiKey, incidentId, body)
 
 
 
@@ -308,29 +334,34 @@ Update Incident
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountincidentApi();
-let body = new SendPostApi.ModelsEIncident(); // ModelsEIncident | The Incident content
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let incidentId = 789; // Number | the Incident Id you want to update
+var apiInstance = new SendPostApi.AccountincidentApi();
 
-apiInstance.incidentRouterUpdate(body, xAccountApiKey, incidentId, (error, data, response) => {
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var incidentId = 789; // Number | the Incident Id you want to update
+
+var body = new SendPostApi.ModelsEIncident(); // ModelsEIncident | The Incident content
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.incidentRouterUpdate(xAccountApiKey, incidentId, body, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ModelsEIncident**](ModelsEIncident.md)| The Incident content | 
  **xAccountApiKey** | **String**| Account API Key | 
  **incidentId** | **Number**| the Incident Id you want to update | 
+ **body** | [**ModelsEIncident**](ModelsEIncident.md)| The Incident content | 
 
 ### Return type
 

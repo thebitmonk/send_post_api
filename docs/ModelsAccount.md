@@ -25,3 +25,5 @@ Name | Type | Description | Notes
 **slackToken** | **String** |  | [optional] 
 **stripeBasePriceId** | **String** |  | [optional] 
 **stripeUsagePriceId** | **String** |  | [optional] 
+
+

@@ -8,3 +8,5 @@ Name | Type | Description | Notes
 **domainBlackList** | [**ModelsBlackListResult**](ModelsBlackListResult.md) |  | [optional] 
 **domainSSL** | [**ModelsSSLInfo**](ModelsSSLInfo.md) |  | [optional] 
 **spfPresent** | **Boolean** |  | [optional] 
+
+

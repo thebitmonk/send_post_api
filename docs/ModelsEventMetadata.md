@@ -10,3 +10,5 @@ Name | Type | Description | Notes
 **smtpCode** | **Number** |  | [optional] 
 **smtpDescription** | **String** |  | [optional] 
 **userAgent** | [**UaparserUserAgent**](UaparserUserAgent.md) |  | [optional] 
+
+

@@ -7,3 +7,5 @@ Name | Type | Description | Notes
 **fromEmail** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
 **replyToEmail** | **String** |  | [optional] 
+
+

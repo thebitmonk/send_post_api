@@ -41,12 +41,6 @@
         expect(instance).to.be.a(SendPostApi.ModelsIP);
       });
 
-      it('should have the property accountIPPools (base name: "accountIPPools")', function() {
-        // TODO: update the code to test the property accountIPPools
-        expect(instance).to.have.property('accountIPPools');
-        // expect(instance.accountIPPools).to.be(expectedValueLiteral);
-      });
-
       it('should have the property aolSettings (base name: "aolSettings")', function() {
         // TODO: update the code to test the property aolSettings
         expect(instance).to.have.property('aolSettings');

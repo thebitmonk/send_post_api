@@ -8,9 +8,10 @@ Method | HTTP request | Description
 [**mailReportRouterMailReportGetSingleReport**](AccountmailReportApi.md#mailReportRouterMailReportGetSingleReport) | **GET** /account/mailReport/{reportId} | 
 [**mailReportRouterMailReportProviders**](AccountmailReportApi.md#mailReportRouterMailReportProviders) | **GET** /account/mailReport/provider | 
 
+
 <a name="mailReportRouterMailReport"></a>
 # **mailReportRouterMailReport**
-> ModelsMailReportResult mailReportRouterMailReport(body, xAccountApiKey)
+> ModelsMailReportResult mailReportRouterMailReport(xAccountApiKey, body)
 
 
 
@@ -18,27 +19,31 @@ get reputation of domain
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountmailReportApi();
-let body = new SendPostApi.ModelsCreateMailReport(); // ModelsCreateMailReport | The IP Email Provider Settings
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+var apiInstance = new SendPostApi.AccountmailReportApi();
 
-apiInstance.mailReportRouterMailReport(body, xAccountApiKey, (error, data, response) => {
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var body = new SendPostApi.ModelsCreateMailReport(); // ModelsCreateMailReport | The IP Email Provider Settings
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.mailReportRouterMailReport(xAccountApiKey, body, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ModelsCreateMailReport**](ModelsCreateMailReport.md)| The IP Email Provider Settings | 
  **xAccountApiKey** | **String**| Account API Key | 
+ **body** | [**ModelsCreateMailReport**](ModelsCreateMailReport.md)| The IP Email Provider Settings | 
 
 ### Return type
 
@@ -63,19 +68,23 @@ get Providers available
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountmailReportApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let reportId = 789; // Number | the report id you want to get
+var apiInstance = new SendPostApi.AccountmailReportApi();
 
-apiInstance.mailReportRouterMailReportGetSingleReport(xAccountApiKey, reportId, (error, data, response) => {
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var reportId = 789; // Number | the report id you want to get
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.mailReportRouterMailReportGetSingleReport(xAccountApiKey, reportId, callback);
 ```
 
 ### Parameters
@@ -95,7 +104,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="mailReportRouterMailReportProviders"></a>
@@ -108,18 +117,21 @@ get Providers available
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountmailReportApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+var apiInstance = new SendPostApi.AccountmailReportApi();
 
-apiInstance.mailReportRouterMailReportProviders(xAccountApiKey, (error, data, response) => {
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.mailReportRouterMailReportProviders(xAccountApiKey, callback);
 ```
 
 ### Parameters
@@ -138,6 +150,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 

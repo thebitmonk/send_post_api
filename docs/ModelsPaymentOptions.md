@@ -7,3 +7,5 @@ Name | Type | Description | Notes
 **ipCount** | **Number** |  | [optional] 
 **paymentMethodId** | **String** |  | [optional] 
 **priceId** | **String** |  | [optional] 
+
+

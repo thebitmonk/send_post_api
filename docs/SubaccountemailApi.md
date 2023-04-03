@@ -7,9 +7,10 @@ Method | HTTP request | Description
 [**emailRouterSendEmail**](SubaccountemailApi.md#emailRouterSendEmail) | **POST** /subaccount/email/ | 
 [**emailRouterSendEmailWithTemplate**](SubaccountemailApi.md#emailRouterSendEmailWithTemplate) | **POST** /subaccount/email/template | 
 
+
 <a name="emailRouterSendEmail"></a>
 # **emailRouterSendEmail**
-> [ModelsEmailResponse] emailRouterSendEmail(body, xSubAccountApiKey, opts)
+> [ModelsEmailResponse] emailRouterSendEmail(xSubAccountApiKey, body, opts)
 
 
 
@@ -17,30 +18,35 @@ Send Email To Contacts
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.SubaccountemailApi();
-let body = new SendPostApi.ModelsEmailMessage(); // ModelsEmailMessage | The Email Message
-let xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-let opts = { 
+var apiInstance = new SendPostApi.SubaccountemailApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var body = new SendPostApi.ModelsEmailMessage(); // ModelsEmailMessage | The Email Message
+
+var opts = { 
   'xSendPostMockEmail': true, // Boolean | Mock email header
   'xSendPostMockTimeShift': "xSendPostMockTimeShift_example" // String | Mock email time shift
 };
-apiInstance.emailRouterSendEmail(body, xSubAccountApiKey, opts, (error, data, response) => {
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.emailRouterSendEmail(xSubAccountApiKey, body, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ModelsEmailMessage**](ModelsEmailMessage.md)| The Email Message | 
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **body** | [**ModelsEmailMessage**](ModelsEmailMessage.md)| The Email Message | 
  **xSendPostMockEmail** | **Boolean**| Mock email header | [optional] 
  **xSendPostMockTimeShift** | **String**| Mock email time shift | [optional] 
 
@@ -59,7 +65,7 @@ No authorization required
 
 <a name="emailRouterSendEmailWithTemplate"></a>
 # **emailRouterSendEmailWithTemplate**
-> [ModelsEmailResponse] emailRouterSendEmailWithTemplate(body, xSubAccountApiKey)
+> [ModelsEmailResponse] emailRouterSendEmailWithTemplate(xSubAccountApiKey, body)
 
 
 
@@ -67,27 +73,31 @@ Send Email To Contacts With Template
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.SubaccountemailApi();
-let body = new SendPostApi.ModelsEmailMessage(); // ModelsEmailMessage | The Email Message
-let xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+var apiInstance = new SendPostApi.SubaccountemailApi();
 
-apiInstance.emailRouterSendEmailWithTemplate(body, xSubAccountApiKey, (error, data, response) => {
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var body = new SendPostApi.ModelsEmailMessage(); // ModelsEmailMessage | The Email Message
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.emailRouterSendEmailWithTemplate(xSubAccountApiKey, body, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ModelsEmailMessage**](ModelsEmailMessage.md)| The Email Message | 
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **body** | [**ModelsEmailMessage**](ModelsEmailMessage.md)| The Email Message | 
 
 ### Return type
 

@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**suppressionRouterDeleteSuppressionsInSuppressionFilter**](SubaccountsuppressionApi.md#suppressionRouterDeleteSuppressionsInSuppressionFilter) | **DELETE** /subaccount/suppression/filter | 
 [**suppressionRouterGetAllSuppressions**](SubaccountsuppressionApi.md#suppressionRouterGetAllSuppressions) | **GET** /subaccount/suppression/ | 
 
+
 <a name="suppressionRouterCount"></a>
 # **suppressionRouterCount**
 > ModelsCountStat suppressionRouterCount(xSubAccountApiKey, opts)
@@ -21,21 +22,25 @@ Count Total Suppressions
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.SubaccountsuppressionApi();
-let xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-let opts = { 
+var apiInstance = new SendPostApi.SubaccountsuppressionApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var opts = { 
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
 };
-apiInstance.suppressionRouterCount(xSubAccountApiKey, opts, (error, data, response) => {
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.suppressionRouterCount(xSubAccountApiKey, opts, callback);
 ```
 
 ### Parameters
@@ -56,12 +61,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="suppressionRouterCreateSuppressions"></a>
 # **suppressionRouterCreateSuppressions**
-> ModelsSuppression suppressionRouterCreateSuppressions(body, xSubAccountApiKey)
+> ModelsSuppression suppressionRouterCreateSuppressions(xSubAccountApiKey, body)
 
 
 
@@ -69,27 +74,31 @@ Add Email Addresses To Suppression List
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.SubaccountsuppressionApi();
-let body = new SendPostApi.ModelsRSuppression(); // ModelsRSuppression | Suppression content
-let xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+var apiInstance = new SendPostApi.SubaccountsuppressionApi();
 
-apiInstance.suppressionRouterCreateSuppressions(body, xSubAccountApiKey, (error, data, response) => {
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var body = new SendPostApi.ModelsRSuppression(); // ModelsRSuppression | Suppression content
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.suppressionRouterCreateSuppressions(xSubAccountApiKey, body, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ModelsRSuppression**](ModelsRSuppression.md)| Suppression content | 
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **body** | [**ModelsRSuppression**](ModelsRSuppression.md)| Suppression content | 
 
 ### Return type
 
@@ -114,18 +123,21 @@ Add Email Addresses To Suppression Filter
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.SubaccountsuppressionApi();
-let body = new SendPostApi.ModelsSuppression(); // ModelsSuppression | Add suppressions to suppression filter
+var apiInstance = new SendPostApi.SubaccountsuppressionApi();
 
-apiInstance.suppressionRouterCreateSuppressionsInSuppressionFilter(body, (error, data, response) => {
+var body = new SendPostApi.ModelsSuppression(); // ModelsSuppression | Add suppressions to suppression filter
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-});
+};
+apiInstance.suppressionRouterCreateSuppressionsInSuppressionFilter(body, callback);
 ```
 
 ### Parameters
@@ -145,11 +157,11 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 <a name="suppressionRouterDeleteSuppression"></a>
 # **suppressionRouterDeleteSuppression**
-> ModelsSuppression suppressionRouterDeleteSuppression(body, xSubAccountApiKey)
+> ModelsSuppression suppressionRouterDeleteSuppression(xSubAccountApiKey, body)
 
 
 
@@ -157,27 +169,31 @@ Delete specific emails which are in suppression list
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.SubaccountsuppressionApi();
-let body = new SendPostApi.ModelsRDSuppression(); // ModelsRDSuppression | Suppression content
-let xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+var apiInstance = new SendPostApi.SubaccountsuppressionApi();
 
-apiInstance.suppressionRouterDeleteSuppression(body, xSubAccountApiKey, (error, data, response) => {
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var body = new SendPostApi.ModelsRDSuppression(); // ModelsRDSuppression | Suppression content
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.suppressionRouterDeleteSuppression(xSubAccountApiKey, body, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ModelsRDSuppression**](ModelsRDSuppression.md)| Suppression content | 
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **body** | [**ModelsRDSuppression**](ModelsRDSuppression.md)| Suppression content | 
 
 ### Return type
 
@@ -202,18 +218,21 @@ Delete specific emails which are in suppression list
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.SubaccountsuppressionApi();
-let body = new SendPostApi.ModelsSuppression(); // ModelsSuppression | Suppression content
+var apiInstance = new SendPostApi.SubaccountsuppressionApi();
 
-apiInstance.suppressionRouterDeleteSuppressionsInSuppressionFilter(body, (error, data, response) => {
+var body = new SendPostApi.ModelsSuppression(); // ModelsSuppression | Suppression content
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-});
+};
+apiInstance.suppressionRouterDeleteSuppressionsInSuppressionFilter(body, callback);
 ```
 
 ### Parameters
@@ -233,7 +252,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 <a name="suppressionRouterGetAllSuppressions"></a>
 # **suppressionRouterGetAllSuppressions**
@@ -245,24 +264,28 @@ Get all suppressions
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.SubaccountsuppressionApi();
-let xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-let opts = { 
+var apiInstance = new SendPostApi.SubaccountsuppressionApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var opts = { 
   'offset': 789, // Number | offset
   'limit': 789, // Number | limit
   'search': "search_example", // String | search
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
 };
-apiInstance.suppressionRouterGetAllSuppressions(xSubAccountApiKey, opts, (error, data, response) => {
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.suppressionRouterGetAllSuppressions(xSubAccountApiKey, opts, callback);
 ```
 
 ### Parameters
@@ -286,6 +309,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 

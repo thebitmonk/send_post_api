@@ -7,3 +7,5 @@ Name | Type | Description | Notes
 **isDomainAdded** | **Boolean** |  | [optional] 
 **isDomainVerified** | **Boolean** |  | [optional] 
 **isFirstEmailSent** | **Boolean** |  | [optional] 
+
+

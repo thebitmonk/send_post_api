@@ -8,3 +8,5 @@ Name | Type | Description | Notes
 **id** | **Number** |  | [optional] 
 **reason** | [**ModelsSuppressionReason**](ModelsSuppressionReason.md) |  | [optional] 
 **smtpError** | **String** |  | [optional] 
+
+

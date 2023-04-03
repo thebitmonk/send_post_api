@@ -17,3 +17,5 @@ Name | Type | Description | Notes
 **submittedAt** | **Number** |  | [optional] 
 **to** | **String** |  | [optional] 
 **type** | [**ModelsEventType**](ModelsEventType.md) |  | [optional] 
+
+

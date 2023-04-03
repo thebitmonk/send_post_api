@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**accountWebhookRouterGetAll**](AccountwebhookApi.md#accountWebhookRouterGetAll) | **GET** /account/webhook/ | 
 [**accountWebhookRouterUpdate**](AccountwebhookApi.md#accountWebhookRouterUpdate) | **PUT** /account/webhook/{webhookId} | 
 
+
 <a name="accountWebhookRouterCount"></a>
 # **accountWebhookRouterCount**
 > ModelsCountStat accountWebhookRouterCount(xAccountApiKey)
@@ -21,18 +22,21 @@ Count Total AccountWebhooks
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountwebhookApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+var apiInstance = new SendPostApi.AccountwebhookApi();
 
-apiInstance.accountWebhookRouterCount(xAccountApiKey, (error, data, response) => {
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.accountWebhookRouterCount(xAccountApiKey, callback);
 ```
 
 ### Parameters
@@ -51,12 +55,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="accountWebhookRouterCreate"></a>
 # **accountWebhookRouterCreate**
-> ModelsAccountWebhook accountWebhookRouterCreate(body, xAccountApiKey)
+> ModelsAccountWebhook accountWebhookRouterCreate(xAccountApiKey, body)
 
 
 
@@ -64,27 +68,31 @@ Create AccountWebhook
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountwebhookApi();
-let body = new SendPostApi.ModelsEWebhook(); // ModelsEWebhook | The AccountWebhook content
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+var apiInstance = new SendPostApi.AccountwebhookApi();
 
-apiInstance.accountWebhookRouterCreate(body, xAccountApiKey, (error, data, response) => {
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var body = new SendPostApi.ModelsEWebhook(); // ModelsEWebhook | The AccountWebhook content
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.accountWebhookRouterCreate(xAccountApiKey, body, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ModelsEWebhook**](ModelsEWebhook.md)| The AccountWebhook content | 
  **xAccountApiKey** | **String**| Account API Key | 
+ **body** | [**ModelsEWebhook**](ModelsEWebhook.md)| The AccountWebhook content | 
 
 ### Return type
 
@@ -109,19 +117,23 @@ Delete AccountWebhook
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountwebhookApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let webhookId = 789; // Number | The AccountWebhookId you want to delete
+var apiInstance = new SendPostApi.AccountwebhookApi();
 
-apiInstance.accountWebhookRouterDelete(xAccountApiKey, webhookId, (error, data, response) => {
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var webhookId = 789; // Number | The AccountWebhookId you want to delete
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.accountWebhookRouterDelete(xAccountApiKey, webhookId, callback);
 ```
 
 ### Parameters
@@ -141,7 +153,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="accountWebhookRouterGet"></a>
@@ -154,19 +166,23 @@ Find AccountWebhook by AccountWebhookId
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountwebhookApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let webhookId = 789; // Number | the AccountWebhookId you want to get
+var apiInstance = new SendPostApi.AccountwebhookApi();
 
-apiInstance.accountWebhookRouterGet(xAccountApiKey, webhookId, (error, data, response) => {
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var webhookId = 789; // Number | the AccountWebhookId you want to get
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.accountWebhookRouterGet(xAccountApiKey, webhookId, callback);
 ```
 
 ### Parameters
@@ -186,7 +202,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="accountWebhookRouterGetAll"></a>
@@ -199,22 +215,26 @@ Get All AccountWebhooks
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountwebhookApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let opts = { 
+var apiInstance = new SendPostApi.AccountwebhookApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var opts = { 
   'offset': 789, // Number | offset
   'limit': 789, // Number | limit
   'search': "search_example" // String | search
 };
-apiInstance.accountWebhookRouterGetAll(xAccountApiKey, opts, (error, data, response) => {
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.accountWebhookRouterGetAll(xAccountApiKey, opts, callback);
 ```
 
 ### Parameters
@@ -236,12 +256,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="accountWebhookRouterUpdate"></a>
 # **accountWebhookRouterUpdate**
-> ModelsAccountWebhook accountWebhookRouterUpdate(body, xAccountApiKey, webhookId)
+> ModelsAccountWebhook accountWebhookRouterUpdate(xAccountApiKey, webhookId, body)
 
 
 
@@ -249,29 +269,34 @@ Update AccountWebhook
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountwebhookApi();
-let body = new SendPostApi.ModelsEWebhook(); // ModelsEWebhook | The body
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let webhookId = 789; // Number | The AccountWebhookId you want to update
+var apiInstance = new SendPostApi.AccountwebhookApi();
 
-apiInstance.accountWebhookRouterUpdate(body, xAccountApiKey, webhookId, (error, data, response) => {
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var webhookId = 789; // Number | The AccountWebhookId you want to update
+
+var body = new SendPostApi.ModelsEWebhook(); // ModelsEWebhook | The body
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.accountWebhookRouterUpdate(xAccountApiKey, webhookId, body, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ModelsEWebhook**](ModelsEWebhook.md)| The body | 
  **xAccountApiKey** | **String**| Account API Key | 
  **webhookId** | **Number**| The AccountWebhookId you want to update | 
+ **body** | [**ModelsEWebhook**](ModelsEWebhook.md)| The body | 
 
 ### Return type
 

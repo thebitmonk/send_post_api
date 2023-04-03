@@ -11,3 +11,5 @@ Name | Type | Description | Notes
 **extendedKeyUsage** | **String** |  | [optional] 
 **keyUsage** | **String** |  | [optional] 
 **subjectKeyIdentifier** | **String** |  | [optional] 
+
+

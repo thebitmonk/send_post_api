@@ -5,3 +5,5 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **companyName** | **String** |  | [optional] 
 **logoURL** | **String** |  | [optional] 
+
+

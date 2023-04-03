@@ -7,3 +7,5 @@ Name | Type | Description | Notes
 **maxSendPerDay** | **Number** |  | [optional] 
 **maxSendPerHour** | **Number** |  | [optional] 
 **maxSendPerMinute** | **Number** |  | [optional] 
+
+

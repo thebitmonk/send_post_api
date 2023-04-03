@@ -7,3 +7,5 @@ Name | Type | Description | Notes
 **emailTo** | **[String]** |  | [optional] 
 **frequency** | [**ModelsFrequencyType**](ModelsFrequencyType.md) |  | [optional] 
 **receiveReports** | **Boolean** |  | [optional] 
+
+

@@ -8,3 +8,5 @@ Name | Type | Description | Notes
 **found** | **Boolean** |  | [optional] 
 **nameMatch** | **Boolean** |  | [optional] 
 **validPeer** | **Boolean** |  | [optional] 
+
+

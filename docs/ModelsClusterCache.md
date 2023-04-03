@@ -7,3 +7,5 @@ Name | Type | Description | Notes
 **found** | **Boolean** |  | [optional] 
 **key** | **String** |  | [optional] 
 **type** | **String** |  | [optional] 
+
+

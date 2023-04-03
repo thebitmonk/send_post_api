@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**sMTPStatRouterGetAllAggregateSubAccountSMTPStats**](AccountsmtpstatApi.md#sMTPStatRouterGetAllAggregateSubAccountSMTPStats) | **GET** /account/smtp/stat/subaccount/{sid}/aggregate | 
 [**sMTPStatRouterGetAllAggregateSubAccountSMTPStatsForIP**](AccountsmtpstatApi.md#sMTPStatRouterGetAllAggregateSubAccountSMTPStatsForIP) | **GET** /account/smtp/stat/subaccount/{sid}/ip/{ipid}/aggregate | 
 
+
 <a name="sMTPStatRouterGetAllAggregateIPProviderSMTPStats"></a>
 # **sMTPStatRouterGetAllAggregateIPProviderSMTPStats**
 > [ModelsSMTPStat] sMTPStatRouterGetAllAggregateIPProviderSMTPStats(xAccountApiKey, ipid, provider, opts)
@@ -21,23 +22,29 @@ Get All Aggregate IP Provider SMTP Stats
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountsmtpstatApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let ipid = 789; // Number | the IP ID you want to get
-let provider = "provider_example"; // String | the provider name
-let opts = { 
+var apiInstance = new SendPostApi.AccountsmtpstatApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var ipid = 789; // Number | the IP ID you want to get
+
+var provider = "provider_example"; // String | the provider name
+
+var opts = { 
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
 };
-apiInstance.sMTPStatRouterGetAllAggregateIPProviderSMTPStats(xAccountApiKey, ipid, provider, opts, (error, data, response) => {
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.sMTPStatRouterGetAllAggregateIPProviderSMTPStats(xAccountApiKey, ipid, provider, opts, callback);
 ```
 
 ### Parameters
@@ -60,7 +67,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="sMTPStatRouterGetAllAggregateIPSMTPStats"></a>
@@ -73,23 +80,28 @@ Get All Aggregate IP SMTP Stats
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountsmtpstatApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let ipid = 789; // Number | the IPId you want to get
-let opts = { 
+var apiInstance = new SendPostApi.AccountsmtpstatApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var ipid = 789; // Number | the IPId you want to get
+
+var opts = { 
   'from': "from_example", // String | from date
   'to': "to_example", // String | to date
   'provider': "provider_example" // String | the provider whose stats you want
 };
-apiInstance.sMTPStatRouterGetAllAggregateIPSMTPStats(xAccountApiKey, ipid, opts, (error, data, response) => {
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.sMTPStatRouterGetAllAggregateIPSMTPStats(xAccountApiKey, ipid, opts, callback);
 ```
 
 ### Parameters
@@ -112,7 +124,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="sMTPStatRouterGetAllAggregateIPSMTPStatsForSubAccount"></a>
@@ -125,24 +137,30 @@ Get All Aggregate IP SMTP Stats For SubAccount
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountsmtpstatApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let ipid = 789; // Number | the IP ID you want to get
-let sid = 789; // Number | the SubAccount ID you want to get
-let opts = { 
+var apiInstance = new SendPostApi.AccountsmtpstatApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var ipid = 789; // Number | the IP ID you want to get
+
+var sid = 789; // Number | the SubAccount ID you want to get
+
+var opts = { 
   'from': "from_example", // String | from date
   'to': "to_example", // String | to date
   'provider': "provider_example" // String | the provider whose stats you want
 };
-apiInstance.sMTPStatRouterGetAllAggregateIPSMTPStatsForSubAccount(xAccountApiKey, ipid, sid, opts, (error, data, response) => {
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.sMTPStatRouterGetAllAggregateIPSMTPStatsForSubAccount(xAccountApiKey, ipid, sid, opts, callback);
 ```
 
 ### Parameters
@@ -166,7 +184,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="sMTPStatRouterGetAllAggregateSubAccountProviderSMTPStats"></a>
@@ -179,23 +197,29 @@ Get All Aggregate SubAccount Provider SMTP Stats
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountsmtpstatApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let sid = 789; // Number | the SubAccount ID you want to get
-let provider = "provider_example"; // String | the provider name
-let opts = { 
+var apiInstance = new SendPostApi.AccountsmtpstatApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var sid = 789; // Number | the SubAccount ID you want to get
+
+var provider = "provider_example"; // String | the provider name
+
+var opts = { 
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
 };
-apiInstance.sMTPStatRouterGetAllAggregateSubAccountProviderSMTPStats(xAccountApiKey, sid, provider, opts, (error, data, response) => {
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.sMTPStatRouterGetAllAggregateSubAccountProviderSMTPStats(xAccountApiKey, sid, provider, opts, callback);
 ```
 
 ### Parameters
@@ -218,7 +242,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="sMTPStatRouterGetAllAggregateSubAccountSMTPStats"></a>
@@ -231,23 +255,28 @@ Get All Aggregate SubAccount SMTP Stats
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountsmtpstatApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let sid = 789; // Number | the Sub-Account ID you want to get
-let opts = { 
+var apiInstance = new SendPostApi.AccountsmtpstatApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var sid = 789; // Number | the Sub-Account ID you want to get
+
+var opts = { 
   'from': "from_example", // String | from date
   'to': "to_example", // String | to date
   'provider': "provider_example" // String | the provider whose stats you want
 };
-apiInstance.sMTPStatRouterGetAllAggregateSubAccountSMTPStats(xAccountApiKey, sid, opts, (error, data, response) => {
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.sMTPStatRouterGetAllAggregateSubAccountSMTPStats(xAccountApiKey, sid, opts, callback);
 ```
 
 ### Parameters
@@ -270,7 +299,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="sMTPStatRouterGetAllAggregateSubAccountSMTPStatsForIP"></a>
@@ -283,24 +312,30 @@ Get All Aggregate SubAccount SMTP Stats For IP
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountsmtpstatApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let sid = 789; // Number | the Sub-Account ID you want to get
-let ipid = 789; // Number | the IP  ID you want to get
-let opts = { 
+var apiInstance = new SendPostApi.AccountsmtpstatApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var sid = 789; // Number | the Sub-Account ID you want to get
+
+var ipid = 789; // Number | the IP  ID you want to get
+
+var opts = { 
   'from': "from_example", // String | from date
   'to': "to_example", // String | to date
   'provider': "provider_example" // String | the provider whose stats you want
 };
-apiInstance.sMTPStatRouterGetAllAggregateSubAccountSMTPStatsForIP(xAccountApiKey, sid, ipid, opts, (error, data, response) => {
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.sMTPStatRouterGetAllAggregateSubAccountSMTPStatsForIP(xAccountApiKey, sid, ipid, opts, callback);
 ```
 
 ### Parameters
@@ -324,6 +359,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 

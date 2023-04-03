@@ -8,3 +8,5 @@ Name | Type | Description | Notes
 **signupMode** | **String** |  | [optional] 
 **token** | **String** |  | [optional] 
 **uid** | **String** |  | [optional] 
+
+

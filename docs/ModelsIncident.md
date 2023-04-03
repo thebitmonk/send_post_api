@@ -15,3 +15,5 @@ Name | Type | Description | Notes
 **summary** | **String** |  | [optional] 
 **tags** | [**[ModelsTag]**](ModelsTag.md) |  | [optional] 
 **updated** | **Number** |  | [optional] 
+
+

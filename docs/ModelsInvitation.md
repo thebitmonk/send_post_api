@@ -8,3 +8,5 @@ Name | Type | Description | Notes
 **status** | [**ModelsInvitationStatus**](ModelsInvitationStatus.md) |  | [optional] 
 **toEmail** | **String** |  | [optional] 
 **created** | **Number** |  | [optional] 
+
+

@@ -8,3 +8,5 @@ Name | Type | Description | Notes
 **password** | **String** |  | [optional] 
 **updated** | **Number** |  | [optional] 
 **username** | **String** |  | [optional] 
+
+

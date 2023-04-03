@@ -10,3 +10,5 @@ Name | Type | Description | Notes
 **name** | **String** |  | [optional] 
 **replyToEmail** | **String** |  | [optional] 
 **verified** | **Boolean** |  | [optional] 
+
+

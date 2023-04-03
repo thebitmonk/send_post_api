@@ -15,3 +15,5 @@ Name | Type | Description | Notes
 **submittedAt** | **Number** |  | [optional] 
 **to** | **String** |  | [optional] 
 **type** | **Number** |  | [optional] 
+
+

@@ -10,3 +10,5 @@ Name | Type | Description | Notes
 **template** | **String** |  | [optional] 
 **text** | **String** |  | [optional] 
 **updated** | **Number** |  | [optional] 
+
+

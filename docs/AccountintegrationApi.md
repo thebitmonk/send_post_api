@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**accountIntegrationRouterGetMonitoredIPStats**](AccountintegrationApi.md#accountIntegrationRouterGetMonitoredIPStats) | **GET** /account/integration/glockapps/monitor/stat/{ipid} | 
 [**accountIntegrationRouterUpdate**](AccountintegrationApi.md#accountIntegrationRouterUpdate) | **PUT** /account/integration/{itype} | 
 
+
 <a name="accountIntegrationRouterCount"></a>
 # **accountIntegrationRouterCount**
 > ModelsCountStat accountIntegrationRouterCount(xAccountApiKey)
@@ -23,18 +24,21 @@ Count Total AccountIntegrations
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountintegrationApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+var apiInstance = new SendPostApi.AccountintegrationApi();
 
-apiInstance.accountIntegrationRouterCount(xAccountApiKey, (error, data, response) => {
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.accountIntegrationRouterCount(xAccountApiKey, callback);
 ```
 
 ### Parameters
@@ -53,12 +57,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="accountIntegrationRouterCreate"></a>
 # **accountIntegrationRouterCreate**
-> ModelsIntegration accountIntegrationRouterCreate(body, xAccountApiKey, itype)
+> ModelsIntegration accountIntegrationRouterCreate(xAccountApiKey, itype, body)
 
 
 
@@ -66,29 +70,34 @@ Create Integration
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountintegrationApi();
-let body = new SendPostApi.ModelsEIntegration(); // ModelsEIntegration | The Integration content
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let itype = "itype_example"; // String | The integration type you want to create
+var apiInstance = new SendPostApi.AccountintegrationApi();
 
-apiInstance.accountIntegrationRouterCreate(body, xAccountApiKey, itype, (error, data, response) => {
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var itype = "itype_example"; // String | The integration type you want to create
+
+var body = new SendPostApi.ModelsEIntegration(); // ModelsEIntegration | The Integration content
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.accountIntegrationRouterCreate(xAccountApiKey, itype, body, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ModelsEIntegration**](ModelsEIntegration.md)| The Integration content | 
  **xAccountApiKey** | **String**| Account API Key | 
  **itype** | **String**| The integration type you want to create | 
+ **body** | [**ModelsEIntegration**](ModelsEIntegration.md)| The Integration content | 
 
 ### Return type
 
@@ -113,19 +122,23 @@ Delete Integration
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountintegrationApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let itype = "itype_example"; // String | The integration type you want to update
+var apiInstance = new SendPostApi.AccountintegrationApi();
 
-apiInstance.accountIntegrationRouterDelete(xAccountApiKey, itype, (error, data, response) => {
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var itype = "itype_example"; // String | The integration type you want to update
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.accountIntegrationRouterDelete(xAccountApiKey, itype, callback);
 ```
 
 ### Parameters
@@ -145,7 +158,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="accountIntegrationRouterDisableGlockappsIPMonitoring"></a>
@@ -158,19 +171,23 @@ Disable IP Monitoring for a single IP
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountintegrationApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let ipid = 789; // Number | the IPId you want to disable monitoring for
+var apiInstance = new SendPostApi.AccountintegrationApi();
 
-apiInstance.accountIntegrationRouterDisableGlockappsIPMonitoring(xAccountApiKey, ipid, (error, data, response) => {
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var ipid = 789; // Number | the IPId you want to disable monitoring for
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.accountIntegrationRouterDisableGlockappsIPMonitoring(xAccountApiKey, ipid, callback);
 ```
 
 ### Parameters
@@ -190,7 +207,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="accountIntegrationRouterEnableGlockappsIPMonitoring"></a>
@@ -203,19 +220,23 @@ Enable IP Monitoring for a single IP
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountintegrationApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let ipid = 789; // Number | the IPId you want to enable monitoring for
+var apiInstance = new SendPostApi.AccountintegrationApi();
 
-apiInstance.accountIntegrationRouterEnableGlockappsIPMonitoring(xAccountApiKey, ipid, (error, data, response) => {
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var ipid = 789; // Number | the IPId you want to enable monitoring for
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.accountIntegrationRouterEnableGlockappsIPMonitoring(xAccountApiKey, ipid, callback);
 ```
 
 ### Parameters
@@ -235,7 +256,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="accountIntegrationRouterGetAll"></a>
@@ -248,18 +269,21 @@ Get All Integrations
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountintegrationApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+var apiInstance = new SendPostApi.AccountintegrationApi();
 
-apiInstance.accountIntegrationRouterGetAll(xAccountApiKey, (error, data, response) => {
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.accountIntegrationRouterGetAll(xAccountApiKey, callback);
 ```
 
 ### Parameters
@@ -278,7 +302,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="accountIntegrationRouterGetMonitoredIPStats"></a>
@@ -291,22 +315,27 @@ Get Monitored IP Stats
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountintegrationApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let ipid = 789; // Number | the IPId for which you want monitored stats
-let opts = { 
+var apiInstance = new SendPostApi.AccountintegrationApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var ipid = 789; // Number | the IPId for which you want monitored stats
+
+var opts = { 
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
 };
-apiInstance.accountIntegrationRouterGetMonitoredIPStats(xAccountApiKey, ipid, opts, (error, data, response) => {
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.accountIntegrationRouterGetMonitoredIPStats(xAccountApiKey, ipid, opts, callback);
 ```
 
 ### Parameters
@@ -328,12 +357,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="accountIntegrationRouterUpdate"></a>
 # **accountIntegrationRouterUpdate**
-> ModelsIntegration accountIntegrationRouterUpdate(body, xAccountApiKey, itype)
+> ModelsIntegration accountIntegrationRouterUpdate(xAccountApiKey, itype, body)
 
 
 
@@ -341,29 +370,34 @@ Update Integration
 
 ### Example
 ```javascript
-import {SendPostApi} from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountintegrationApi();
-let body = new SendPostApi.ModelsEIntegration(); // ModelsEIntegration | The Integration content
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let itype = "itype_example"; // String | The integration type you want to update
+var apiInstance = new SendPostApi.AccountintegrationApi();
 
-apiInstance.accountIntegrationRouterUpdate(body, xAccountApiKey, itype, (error, data, response) => {
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var itype = "itype_example"; // String | The integration type you want to update
+
+var body = new SendPostApi.ModelsEIntegration(); // ModelsEIntegration | The Integration content
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.accountIntegrationRouterUpdate(xAccountApiKey, itype, body, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ModelsEIntegration**](ModelsEIntegration.md)| The Integration content | 
  **xAccountApiKey** | **String**| Account API Key | 
  **itype** | **String**| The integration type you want to update | 
+ **body** | [**ModelsEIntegration**](ModelsEIntegration.md)| The Integration content | 
 
 ### Return type
 

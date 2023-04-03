@@ -16,3 +16,5 @@ Name | Type | Description | Notes
 **spam** | **Number** |  | [optional] 
 **unsubscribed** | **Number** |  | [optional] 
 **year** | **Number** |  | [optional] 
+
+
