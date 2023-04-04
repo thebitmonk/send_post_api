@@ -165,6 +165,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountipApi* | [**iPRouterGet**](docs/AccountipApi.md#iPRouterGet) | **GET** /account/ip/{ipid} | 
 *SendPostApi.AccountipApi* | [**iPRouterGetAll**](docs/AccountipApi.md#iPRouterGetAll) | **GET** /account/ip/ | 
 *SendPostApi.AccountipApi* | [**iPRouterGetAllIPIncidents**](docs/AccountipApi.md#iPRouterGetAllIPIncidents) | **GET** /account/ip/{ipid}/incident | 
+*SendPostApi.AccountipApi* | [**iPRouterGetIPAccountIPPools**](docs/AccountipApi.md#iPRouterGetIPAccountIPPools) | **GET** /account/ip/{ipid}/ippool | 
 *SendPostApi.AccountipApi* | [**iPRouterGetIpHealth**](docs/AccountipApi.md#iPRouterGetIpHealth) | **GET** /account/ip/{ipid}/health | 
 *SendPostApi.AccountipApi* | [**iPRouterUpdate**](docs/AccountipApi.md#iPRouterUpdate) | **PUT** /account/ip/{ipid} | 
 *SendPostApi.AccountippoolApi* | [**accountIPPoolRouterCount**](docs/AccountippoolApi.md#accountIPPoolRouterCount) | **GET** /account/ippool/count | 

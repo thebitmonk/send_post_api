@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**iPRouterGet**](AccountipApi.md#iPRouterGet) | **GET** /account/ip/{ipid} | 
 [**iPRouterGetAll**](AccountipApi.md#iPRouterGetAll) | **GET** /account/ip/ | 
 [**iPRouterGetAllIPIncidents**](AccountipApi.md#iPRouterGetAllIPIncidents) | **GET** /account/ip/{ipid}/incident | 
+[**iPRouterGetIPAccountIPPools**](AccountipApi.md#iPRouterGetIPAccountIPPools) | **GET** /account/ip/{ipid}/ippool | 
 [**iPRouterGetIpHealth**](AccountipApi.md#iPRouterGetIpHealth) | **GET** /account/ip/{ipid}/health | 
 [**iPRouterUpdate**](AccountipApi.md#iPRouterUpdate) | **PUT** /account/ip/{ipid} | 
 
@@ -309,6 +310,55 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[ModelsIncident]**](ModelsIncident.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="iPRouterGetIPAccountIPPools"></a>
+# **iPRouterGetIPAccountIPPools**
+> [ModelsAccountIPPool] iPRouterGetIPAccountIPPools(xAccountApiKey, ipid)
+
+
+
+Find AccountIPPools for IP
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccountipApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var ipid = 789; // Number | the IPId you want to get
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.iPRouterGetIPAccountIPPools(xAccountApiKey, ipid, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xAccountApiKey** | **String**| Account API Key | 
+ **ipid** | **Number**| the IPId you want to get | 
+
+### Return type
+
+[**[ModelsAccountIPPool]**](ModelsAccountIPPool.md)
 
 ### Authorization
 
