@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Count Total AccountWebhooks
+     * Count Total AccountWebhooks <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountwebhookApi~accountWebhookRouterCountCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsCountStat}
@@ -104,7 +104,7 @@
      */
 
     /**
-     * Create AccountWebhook
+     * Create AccountWebhook <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:model/ModelsEWebhook} body The AccountWebhook content
      * @param {module:api/AccountwebhookApi~accountWebhookRouterCreateCallback} callback The callback function, accepting three arguments: error, data, response
@@ -157,7 +157,7 @@
      */
 
     /**
-     * Delete AccountWebhook
+     * Delete AccountWebhook <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} webhookId The AccountWebhookId you want to delete
      * @param {module:api/AccountwebhookApi~accountWebhookRouterDeleteCallback} callback The callback function, accepting three arguments: error, data, response
@@ -211,7 +211,7 @@
      */
 
     /**
-     * Find AccountWebhook by AccountWebhookId
+     * Find AccountWebhook by AccountWebhookId <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} webhookId the AccountWebhookId you want to get
      * @param {module:api/AccountwebhookApi~accountWebhookRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -265,7 +265,7 @@
      */
 
     /**
-     * Get All AccountWebhooks
+     * Get All AccountWebhooks <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
@@ -320,7 +320,7 @@
      */
 
     /**
-     * Update AccountWebhook
+     * Update AccountWebhook <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} webhookId The AccountWebhookId you want to update
      * @param {module:model/ModelsEWebhook} body The body

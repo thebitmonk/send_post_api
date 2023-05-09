@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -59,6 +59,8 @@
         obj.connectedTimestamp = ApiClient.convertToType(data['connectedTimestamp'], 'Number');
       if (data.hasOwnProperty('messageCount'))
         obj.messageCount = ApiClient.convertToType(data['messageCount'], 'Number');
+      if (data.hasOwnProperty('messageDepth'))
+        obj.messageDepth = ApiClient.convertToType(data['messageDepth'], 'Number');
       if (data.hasOwnProperty('messagesFinished'))
         obj.messagesFinished = ApiClient.convertToType(data['messagesFinished'], 'Number');
       if (data.hasOwnProperty('messagesRecieved'))
@@ -78,6 +80,11 @@
    * @member {Number} messageCount
    */
   exports.prototype.messageCount = undefined;
+
+  /**
+   * @member {Number} messageDepth
+   */
+  exports.prototype.messageDepth = undefined;
 
   /**
    * @member {Number} messagesFinished

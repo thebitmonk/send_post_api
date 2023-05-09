@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -163,7 +163,7 @@
           /*
           var xAccountApiKey = "xAccountApiKey_example";
           var body = new SendPostApi.ModelsEmailList();
-          body.emailIds = ;
+          body.emailIds = [""];
 
           instance.validationRouterValidateEmailList(xAccountApiKey, body, function(error, data, response) {
             if (error) {
@@ -189,10 +189,26 @@
 
                       }
             }
-            expect(data.invalid).to.be.a(Object);
-            expect(data.invalid).to.be();
-            expect(data.valid).to.be.a(Object);
-            expect(data.valid).to.be();
+            {
+              let dataCtr = data.invalid;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a('string');
+                expect(data).to.be("");
+              }
+            }
+            {
+              let dataCtr = data.valid;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a('string');
+                expect(data).to.be("");
+              }
+            }
 
             done();
           });

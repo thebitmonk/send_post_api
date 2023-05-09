@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Get All Aggregate Sub-Account Stats
+     * Get All Aggregate Sub-Account Stats <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
@@ -110,7 +110,7 @@
      */
 
     /**
-     * Get All Aggregate Sub-Account Stats by Group
+     * Get All Aggregate Sub-Account Stats by Group <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {String} group the group whose stats you want
      * @param {Object} opts Optional parameters
@@ -170,7 +170,7 @@
      */
 
     /**
-     * Get All Aggregated Group Stats for a Sub-Account
+     * Get All Aggregated Group Stats for a Sub-Account <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
@@ -223,7 +223,7 @@
      */
 
     /**
-     * Get All Aggregated IP Stats for a Sub-Account
+     * Get All Aggregated IP Stats for a Sub-Account <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
@@ -276,7 +276,7 @@
      */
 
     /**
-     * Get All Aggregated Provider Stats for a Specific IP of a Sub-Account
+     * Get All Aggregated Provider Stats for a Specific IP of a Sub-Account <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Number} ipid the IPId you want to get
      * @param {Object} opts Optional parameters
@@ -336,7 +336,7 @@
      */
 
     /**
-     * Get All Aggregated Provider Stats for a Sub-Account
+     * Get All Aggregated Provider Stats for a Sub-Account <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
@@ -389,7 +389,7 @@
      */
 
     /**
-     * Get All Sub-Account Stats
+     * Get All Sub-Account Stats <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
@@ -442,7 +442,7 @@
      */
 
     /**
-     * Get All Sub-Account Stats by Group
+     * Get All Sub-Account Stats by Group <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {String} group the tag whose stats you want
      * @param {Object} opts Optional parameters

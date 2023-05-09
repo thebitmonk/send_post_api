@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Create Invitation
+     * Create Invitation <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:model/ModelsEInvitation} body The Invitation content
      * @param {module:api/AccountinvitationApi~invitationRouterCreateCallback} callback The callback function, accepting three arguments: error, data, response
@@ -110,7 +110,7 @@
      */
 
     /**
-     * Delete Invitation
+     * Delete Invitation <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} invitationId The InvitationId you want to delete
      * @param {module:api/AccountinvitationApi~invitationRouterDeleteCallback} callback The callback function, accepting three arguments: error, data, response
@@ -164,7 +164,7 @@
      */
 
     /**
-     * Get All Invitations
+     * Get All Invitations <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountinvitationApi~invitationRouterGetAllCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsInvitation>}

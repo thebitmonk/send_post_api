@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Get All Aggregate IP Provider SMTP Stats
+     * Get All Aggregate IP Provider SMTP Stats <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid the IP ID you want to get
      * @param {String} provider the provider name
@@ -124,7 +124,7 @@
      */
 
     /**
-     * Get All Aggregate IP SMTP Stats
+     * Get All Aggregate IP SMTP Stats <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid the IPId you want to get
      * @param {Object} opts Optional parameters
@@ -186,7 +186,7 @@
      */
 
     /**
-     * Get All Aggregate IP SMTP Stats For SubAccount
+     * Get All Aggregate IP SMTP Stats For SubAccount <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid the IP ID you want to get
      * @param {Number} sid the SubAccount ID you want to get
@@ -255,7 +255,7 @@
      */
 
     /**
-     * Get All Aggregate SubAccount Provider SMTP Stats
+     * Get All Aggregate SubAccount Provider SMTP Stats <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} sid the SubAccount ID you want to get
      * @param {String} provider the provider name
@@ -322,7 +322,7 @@
      */
 
     /**
-     * Get All Aggregate SubAccount SMTP Stats
+     * Get All Aggregate SubAccount SMTP Stats <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} sid the Sub-Account ID you want to get
      * @param {Object} opts Optional parameters
@@ -384,7 +384,7 @@
      */
 
     /**
-     * Get All Aggregate SubAccount SMTP Stats For IP
+     * Get All Aggregate SubAccount SMTP Stats For IP <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} sid the Sub-Account ID you want to get
      * @param {Number} ipid the IP  ID you want to get

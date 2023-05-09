@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 
-Gets Onboarding Checklist data for account if not present creates a default entry
+Gets Onboarding Checklist data for account if not present creates a default entry <br>
 
 ### Example
 ```javascript

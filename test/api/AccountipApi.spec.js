@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -1009,6 +1009,8 @@
                   expect(data.consumerStats.connectedTimestamp).to.be("0");
                   expect(data.consumerStats.messageCount).to.be.a('number');
                   expect(data.consumerStats.messageCount).to.be("0");
+                  expect(data.consumerStats.messageDepth).to.be.a('number');
+                  expect(data.consumerStats.messageDepth).to.be("0");
                   expect(data.consumerStats.messagesFinished).to.be.a('number');
                   expect(data.consumerStats.messagesFinished).to.be("0");
                   expect(data.consumerStats.messagesRecieved).to.be.a('number');
@@ -1020,6 +1022,8 @@
                   expect(data.deferredConsumerStats.connectedTimestamp).to.be("0");
                   expect(data.deferredConsumerStats.messageCount).to.be.a('number');
                   expect(data.deferredConsumerStats.messageCount).to.be("0");
+                  expect(data.deferredConsumerStats.messageDepth).to.be.a('number');
+                  expect(data.deferredConsumerStats.messageDepth).to.be("0");
                   expect(data.deferredConsumerStats.messagesFinished).to.be.a('number');
                   expect(data.deferredConsumerStats.messagesFinished).to.be("0");
                   expect(data.deferredConsumerStats.messagesRecieved).to.be.a('number');
@@ -1055,7 +1059,7 @@
           var xAccountApiKey = "xAccountApiKey_example";
           var ipid = 789;
           var body = new SendPostApi.ModelsIIP();
-          body.labels = ;
+          body.labels = [""];
           body.providerSettings = new SendPostApi.ModelsProviderSettings();
           body.providerSettings.backOffConfiguration = new SendPostApi.ModelsBackOffConfiguration();
           body.providerSettings.backOffConfiguration.concurrentConnections = "0";

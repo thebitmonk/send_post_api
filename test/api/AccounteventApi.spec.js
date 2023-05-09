@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -157,8 +157,16 @@
                 expect(data.eventMetadata.userAgent.patch).to.be("");
             expect(data.from).to.be.a('string');
             expect(data.from).to.be("");
-            expect(data.groups).to.be.a(Object);
-            expect(data.groups).to.be();
+            {
+              let dataCtr = data.groups;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a('string');
+                expect(data).to.be("");
+              }
+            }
             expect(data.ipID).to.be.a('number');
             expect(data.ipID).to.be("0");
             expect(data.messageID).to.be.a('string');
@@ -253,8 +261,16 @@
                   expect(data.eventMetadata.userAgent.patch).to.be("");
               expect(data.from).to.be.a('string');
               expect(data.from).to.be("");
-              expect(data.groups).to.be.a(Object);
-              expect(data.groups).to.be();
+              {
+                let dataCtr = data.groups;
+                expect(dataCtr).to.be.an(Array);
+                expect(dataCtr).to.not.be.empty();
+                for (let p in dataCtr) {
+                  let data = dataCtr[p];
+                  expect(data).to.be.a('string');
+                  expect(data).to.be("");
+                }
+              }
               expect(data.ipID).to.be.a('number');
               expect(data.ipID).to.be("0");
               expect(data.messageID).to.be.a('string');
@@ -352,8 +368,16 @@
                   expect(data.eventMetadata.userAgent.patch).to.be("");
               expect(data.from).to.be.a('string');
               expect(data.from).to.be("");
-              expect(data.groups).to.be.a(Object);
-              expect(data.groups).to.be();
+              {
+                let dataCtr = data.groups;
+                expect(dataCtr).to.be.an(Array);
+                expect(dataCtr).to.not.be.empty();
+                for (let p in dataCtr) {
+                  let data = dataCtr[p];
+                  expect(data).to.be.a('string');
+                  expect(data).to.be("");
+                }
+              }
               expect(data.ipID).to.be.a('number');
               expect(data.ipID).to.be("0");
               expect(data.messageID).to.be.a('string');
@@ -451,8 +475,16 @@
                   expect(data.eventMetadata.userAgent.patch).to.be("");
               expect(data.from).to.be.a('string');
               expect(data.from).to.be("");
-              expect(data.groups).to.be.a(Object);
-              expect(data.groups).to.be();
+              {
+                let dataCtr = data.groups;
+                expect(dataCtr).to.be.an(Array);
+                expect(dataCtr).to.not.be.empty();
+                for (let p in dataCtr) {
+                  let data = dataCtr[p];
+                  expect(data).to.be.a('string');
+                  expect(data).to.be("");
+                }
+              }
               expect(data.ipID).to.be.a('number');
               expect(data.ipID).to.be("0");
               expect(data.messageID).to.be.a('string');
@@ -541,8 +573,16 @@
                   expect(data.eventMetadata.userAgent.patch).to.be("");
               expect(data.from).to.be.a('string');
               expect(data.from).to.be("");
-              expect(data.groups).to.be.a(Object);
-              expect(data.groups).to.be();
+              {
+                let dataCtr = data.groups;
+                expect(dataCtr).to.be.an(Array);
+                expect(dataCtr).to.not.be.empty();
+                for (let p in dataCtr) {
+                  let data = dataCtr[p];
+                  expect(data).to.be.a('string');
+                  expect(data).to.be("");
+                }
+              }
               expect(data.ipID).to.be.a('number');
               expect(data.ipID).to.be("0");
               expect(data.messageID).to.be.a('string');
@@ -627,8 +667,16 @@
                 expect(data.eventMetadata.userAgent.patch).to.be("");
             expect(data.from).to.be.a('string');
             expect(data.from).to.be("");
-            expect(data.groups).to.be.a(Object);
-            expect(data.groups).to.be();
+            {
+              let dataCtr = data.groups;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a('string');
+                expect(data).to.be("");
+              }
+            }
             expect(data.ipID).to.be.a('number');
             expect(data.ipID).to.be("0");
             expect(data.messageID).to.be.a('string');
