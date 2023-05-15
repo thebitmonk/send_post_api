@@ -17,29 +17,29 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsDomainStat', 'model/ModelsPDStat', 'model/ModelsSDStat', 'model/ModelsStat'], factory);
+    define(['ApiClient', 'model/ModelsStat'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsDomainStat'), require('../model/ModelsPDStat'), require('../model/ModelsSDStat'), require('../model/ModelsStat'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsStat'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.AccountdomainstatApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsDomainStat, root.SendPostApi.ModelsPDStat, root.SendPostApi.ModelsSDStat, root.SendPostApi.ModelsStat);
+    root.SendPostApi.AccountdomainStatApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsStat);
   }
-}(this, function(ApiClient, ModelsDomainStat, ModelsPDStat, ModelsSDStat, ModelsStat) {
+}(this, function(ApiClient, ModelsStat) {
   'use strict';
 
   /**
-   * Accountdomainstat service.
-   * @module api/AccountdomainstatApi
+   * AccountdomainStat service.
+   * @module api/AccountdomainStatApi
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new AccountdomainstatApi. 
-   * @alias module:api/AccountdomainstatApi
+   * Constructs a new AccountdomainStatApi. 
+   * @alias module:api/AccountdomainStatApi
    * @class
    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
@@ -50,7 +50,7 @@
 
     /**
      * Callback function to receive the result of the domainStatRouterGetAllAggregateDomainStatsByGroup operation.
-     * @callback module:api/AccountdomainstatApi~domainStatRouterGetAllAggregateDomainStatsByGroupCallback
+     * @callback module:api/AccountdomainStatApi~domainStatRouterGetAllAggregateDomainStatsByGroupCallback
      * @param {String} error Error message, if any.
      * @param {module:model/ModelsStat} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -64,7 +64,7 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
      * @param {String} opts.to to date
-     * @param {module:api/AccountdomainstatApi~domainStatRouterGetAllAggregateDomainStatsByGroupCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/AccountdomainStatApi~domainStatRouterGetAllAggregateDomainStatsByGroupCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsStat}
      */
     this.domainStatRouterGetAllAggregateDomainStatsByGroup = function(xAccountApiKey, domainId, provider, opts, callback) {
@@ -109,268 +109,7 @@
       var returnType = ModelsStat;
 
       return this.apiClient.callApi(
-        '/account/domain/stat/{domainId}/aggregate/provider', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the domainStatRouterGetAllAggregatedProviderStatsForADomain operation.
-     * @callback module:api/AccountdomainstatApi~domainStatRouterGetAllAggregatedProviderStatsForADomainCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ModelsPDStat} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get All Aggregated Provider Stats for a Domain <br>
-     * @param {String} xAccountApiKey Account API Key
-     * @param {Number} domainId the domainName you want to get
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.from from date
-     * @param {String} opts.to to date
-     * @param {module:api/AccountdomainstatApi~domainStatRouterGetAllAggregatedProviderStatsForADomainCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ModelsPDStat}
-     */
-    this.domainStatRouterGetAllAggregatedProviderStatsForADomain = function(xAccountApiKey, domainId, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'xAccountApiKey' is set
-      if (xAccountApiKey === undefined || xAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xAccountApiKey' when calling domainStatRouterGetAllAggregatedProviderStatsForADomain");
-      }
-
-      // verify the required parameter 'domainId' is set
-      if (domainId === undefined || domainId === null) {
-        throw new Error("Missing the required parameter 'domainId' when calling domainStatRouterGetAllAggregatedProviderStatsForADomain");
-      }
-
-
-      var pathParams = {
-        'domainId': domainId
-      };
-      var queryParams = {
-        'from': opts['from'],
-        'to': opts['to'],
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-        'X-Account-ApiKey': xAccountApiKey
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = ModelsPDStat;
-
-      return this.apiClient.callApi(
-        '/account/domain/stat/{domainId}/aggregate/providers', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the domainStatRouterGetAllAggregatedProviderStatsForASpecificSubAccountOfADomain operation.
-     * @callback module:api/AccountdomainstatApi~domainStatRouterGetAllAggregatedProviderStatsForASpecificSubAccountOfADomainCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ModelsPDStat} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get All Aggregated Provider Stats for a Specific Sub-Account of a Domain <br>
-     * @param {String} xAccountApiKey Account API Key
-     * @param {Number} domainId the domainName you want to get
-     * @param {Number} sid the Sub Account Id you want to get
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.from from date
-     * @param {String} opts.to to date
-     * @param {module:api/AccountdomainstatApi~domainStatRouterGetAllAggregatedProviderStatsForASpecificSubAccountOfADomainCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ModelsPDStat}
-     */
-    this.domainStatRouterGetAllAggregatedProviderStatsForASpecificSubAccountOfADomain = function(xAccountApiKey, domainId, sid, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'xAccountApiKey' is set
-      if (xAccountApiKey === undefined || xAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xAccountApiKey' when calling domainStatRouterGetAllAggregatedProviderStatsForASpecificSubAccountOfADomain");
-      }
-
-      // verify the required parameter 'domainId' is set
-      if (domainId === undefined || domainId === null) {
-        throw new Error("Missing the required parameter 'domainId' when calling domainStatRouterGetAllAggregatedProviderStatsForASpecificSubAccountOfADomain");
-      }
-
-      // verify the required parameter 'sid' is set
-      if (sid === undefined || sid === null) {
-        throw new Error("Missing the required parameter 'sid' when calling domainStatRouterGetAllAggregatedProviderStatsForASpecificSubAccountOfADomain");
-      }
-
-
-      var pathParams = {
-        'domainId': domainId,
-        'sid': sid
-      };
-      var queryParams = {
-        'from': opts['from'],
-        'to': opts['to'],
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-        'X-Account-ApiKey': xAccountApiKey
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = ModelsPDStat;
-
-      return this.apiClient.callApi(
-        '/account/domain/stat/{domainId}/aggregate/sid/{sid}/providers', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the domainStatRouterGetAllAggregatedSubAccountStatsForAnDomain operation.
-     * @callback module:api/AccountdomainstatApi~domainStatRouterGetAllAggregatedSubAccountStatsForAnDomainCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ModelsSDStat} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get All Aggregated Sub-Account Stats for an Domain <br>
-     * @param {String} xAccountApiKey Account API Key
-     * @param {Number} domainId the domainName you want to get
-     * @param {String} provider the group whose stats you want
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.from from date
-     * @param {String} opts.to to date
-     * @param {module:api/AccountdomainstatApi~domainStatRouterGetAllAggregatedSubAccountStatsForAnDomainCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ModelsSDStat}
-     */
-    this.domainStatRouterGetAllAggregatedSubAccountStatsForAnDomain = function(xAccountApiKey, domainId, provider, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'xAccountApiKey' is set
-      if (xAccountApiKey === undefined || xAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xAccountApiKey' when calling domainStatRouterGetAllAggregatedSubAccountStatsForAnDomain");
-      }
-
-      // verify the required parameter 'domainId' is set
-      if (domainId === undefined || domainId === null) {
-        throw new Error("Missing the required parameter 'domainId' when calling domainStatRouterGetAllAggregatedSubAccountStatsForAnDomain");
-      }
-
-      // verify the required parameter 'provider' is set
-      if (provider === undefined || provider === null) {
-        throw new Error("Missing the required parameter 'provider' when calling domainStatRouterGetAllAggregatedSubAccountStatsForAnDomain");
-      }
-
-
-      var pathParams = {
-        'domainId': domainId
-      };
-      var queryParams = {
-        'from': opts['from'],
-        'to': opts['to'],
-        'provider': provider,
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-        'X-Account-ApiKey': xAccountApiKey
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = ModelsSDStat;
-
-      return this.apiClient.callApi(
-        '/account/domain/stat/{domainId}/aggregate/subaccounts', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the domainStatRouterGetAllDomainStats operation.
-     * @callback module:api/AccountdomainstatApi~domainStatRouterGetAllDomainStatsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ModelsDomainStat} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get All Domain Stats <br>
-     * @param {String} xAccountApiKey Account API Key
-     * @param {Number} domainId the domainName you want to get
-     * @param {String} provider the group whose stats you want
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.from from date
-     * @param {String} opts.to to date
-     * @param {module:api/AccountdomainstatApi~domainStatRouterGetAllDomainStatsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ModelsDomainStat}
-     */
-    this.domainStatRouterGetAllDomainStats = function(xAccountApiKey, domainId, provider, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'xAccountApiKey' is set
-      if (xAccountApiKey === undefined || xAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xAccountApiKey' when calling domainStatRouterGetAllDomainStats");
-      }
-
-      // verify the required parameter 'domainId' is set
-      if (domainId === undefined || domainId === null) {
-        throw new Error("Missing the required parameter 'domainId' when calling domainStatRouterGetAllDomainStats");
-      }
-
-      // verify the required parameter 'provider' is set
-      if (provider === undefined || provider === null) {
-        throw new Error("Missing the required parameter 'provider' when calling domainStatRouterGetAllDomainStats");
-      }
-
-
-      var pathParams = {
-        'domainId': domainId
-      };
-      var queryParams = {
-        'from': opts['from'],
-        'to': opts['to'],
-        'provider': provider,
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-        'X-Account-ApiKey': xAccountApiKey
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = ModelsDomainStat;
-
-      return this.apiClient.callApi(
-        '/account/domain/stat/{domainId}', 'GET',
+        '/account/domainStat/{domainId}/aggregate/provider', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -378,7 +117,7 @@
 
     /**
      * Callback function to receive the result of the domainStatRouterGetStatsForASingleDomainStats operation.
-     * @callback module:api/AccountdomainstatApi~domainStatRouterGetStatsForASingleDomainStatsCallback
+     * @callback module:api/AccountdomainStatApi~domainStatRouterGetStatsForASingleDomainStatsCallback
      * @param {String} error Error message, if any.
      * @param {module:model/ModelsStat} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -391,7 +130,7 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
      * @param {String} opts.to to date
-     * @param {module:api/AccountdomainstatApi~domainStatRouterGetStatsForASingleDomainStatsCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/AccountdomainStatApi~domainStatRouterGetStatsForASingleDomainStatsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsStat}
      */
     this.domainStatRouterGetStatsForASingleDomainStats = function(xAccountApiKey, domainId, opts, callback) {
@@ -430,7 +169,7 @@
       var returnType = ModelsStat;
 
       return this.apiClient.callApi(
-        '/account/domain/stat/{domainId}/aggregate', 'GET',
+        '/account/domainStat/{domainId}/aggregate', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

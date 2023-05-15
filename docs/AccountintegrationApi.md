@@ -7,8 +7,8 @@ Method | HTTP request | Description
 [**accountIntegrationRouterCount**](AccountintegrationApi.md#accountIntegrationRouterCount) | **GET** /account/integration/count | 
 [**accountIntegrationRouterCreate**](AccountintegrationApi.md#accountIntegrationRouterCreate) | **POST** /account/integration/{itype} | 
 [**accountIntegrationRouterDelete**](AccountintegrationApi.md#accountIntegrationRouterDelete) | **DELETE** /account/integration/{itype} | 
-[**accountIntegrationRouterDisableGlockappsIPMonitoring**](AccountintegrationApi.md#accountIntegrationRouterDisableGlockappsIPMonitoring) | **DELETE** /account/integration/glockapps/monitor/{ipid} | 
-[**accountIntegrationRouterEnableGlockappsIPMonitoring**](AccountintegrationApi.md#accountIntegrationRouterEnableGlockappsIPMonitoring) | **POST** /account/integration/glockapps/monitor/{ipid} | 
+[**accountIntegrationRouterDisableHetrixToolsIPMonitoring**](AccountintegrationApi.md#accountIntegrationRouterDisableHetrixToolsIPMonitoring) | **DELETE** /account/integration/glockapps/monitor/{ipid} | 
+[**accountIntegrationRouterEnableHetrixToolsIPMonitoring**](AccountintegrationApi.md#accountIntegrationRouterEnableHetrixToolsIPMonitoring) | **POST** /account/integration/glockapps/monitor/{ipid} | 
 [**accountIntegrationRouterGetAll**](AccountintegrationApi.md#accountIntegrationRouterGetAll) | **GET** /account/integration/ | 
 [**accountIntegrationRouterGetMonitoredIPStats**](AccountintegrationApi.md#accountIntegrationRouterGetMonitoredIPStats) | **GET** /account/integration/glockapps/monitor/stat/{ipid} | 
 [**accountIntegrationRouterUpdate**](AccountintegrationApi.md#accountIntegrationRouterUpdate) | **PUT** /account/integration/{itype} | 
@@ -161,9 +161,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="accountIntegrationRouterDisableGlockappsIPMonitoring"></a>
-# **accountIntegrationRouterDisableGlockappsIPMonitoring**
-> ModelsDeleteResponse accountIntegrationRouterDisableGlockappsIPMonitoring(xAccountApiKey, ipid)
+<a name="accountIntegrationRouterDisableHetrixToolsIPMonitoring"></a>
+# **accountIntegrationRouterDisableHetrixToolsIPMonitoring**
+> ModelsDeleteResponse accountIntegrationRouterDisableHetrixToolsIPMonitoring(xAccountApiKey, ipid)
 
 
 
@@ -187,7 +187,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.accountIntegrationRouterDisableGlockappsIPMonitoring(xAccountApiKey, ipid, callback);
+apiInstance.accountIntegrationRouterDisableHetrixToolsIPMonitoring(xAccountApiKey, ipid, callback);
 ```
 
 ### Parameters
@@ -210,9 +210,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="accountIntegrationRouterEnableGlockappsIPMonitoring"></a>
-# **accountIntegrationRouterEnableGlockappsIPMonitoring**
-> ModelsResponse accountIntegrationRouterEnableGlockappsIPMonitoring(xAccountApiKey, ipid)
+<a name="accountIntegrationRouterEnableHetrixToolsIPMonitoring"></a>
+# **accountIntegrationRouterEnableHetrixToolsIPMonitoring**
+> ModelsResponse accountIntegrationRouterEnableHetrixToolsIPMonitoring(xAccountApiKey, ipid)
 
 
 
@@ -236,7 +236,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.accountIntegrationRouterEnableGlockappsIPMonitoring(xAccountApiKey, ipid, callback);
+apiInstance.accountIntegrationRouterEnableHetrixToolsIPMonitoring(xAccountApiKey, ipid, callback);
 ```
 
 ### Parameters

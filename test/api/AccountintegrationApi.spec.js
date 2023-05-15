@@ -123,14 +123,14 @@
           done();
         });
       });
-      describe('accountIntegrationRouterDisableGlockappsIPMonitoring', function() {
-        it('should call accountIntegrationRouterDisableGlockappsIPMonitoring successfully', function(done) {
-          // TODO: uncomment, update parameter values for accountIntegrationRouterDisableGlockappsIPMonitoring call and complete the assertions
+      describe('accountIntegrationRouterDisableHetrixToolsIPMonitoring', function() {
+        it('should call accountIntegrationRouterDisableHetrixToolsIPMonitoring successfully', function(done) {
+          // TODO: uncomment, update parameter values for accountIntegrationRouterDisableHetrixToolsIPMonitoring call and complete the assertions
           /*
           var xAccountApiKey = "xAccountApiKey_example";
           var ipid = 789;
 
-          instance.accountIntegrationRouterDisableGlockappsIPMonitoring(xAccountApiKey, ipid, function(error, data, response) {
+          instance.accountIntegrationRouterDisableHetrixToolsIPMonitoring(xAccountApiKey, ipid, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -149,14 +149,14 @@
           done();
         });
       });
-      describe('accountIntegrationRouterEnableGlockappsIPMonitoring', function() {
-        it('should call accountIntegrationRouterEnableGlockappsIPMonitoring successfully', function(done) {
-          // TODO: uncomment, update parameter values for accountIntegrationRouterEnableGlockappsIPMonitoring call and complete the assertions
+      describe('accountIntegrationRouterEnableHetrixToolsIPMonitoring', function() {
+        it('should call accountIntegrationRouterEnableHetrixToolsIPMonitoring successfully', function(done) {
+          // TODO: uncomment, update parameter values for accountIntegrationRouterEnableHetrixToolsIPMonitoring call and complete the assertions
           /*
           var xAccountApiKey = "xAccountApiKey_example";
           var ipid = 789;
 
-          instance.accountIntegrationRouterEnableGlockappsIPMonitoring(xAccountApiKey, ipid, function(error, data, response) {
+          instance.accountIntegrationRouterEnableHetrixToolsIPMonitoring(xAccountApiKey, ipid, function(error, data, response) {
             if (error) {
               done(error);
               return;

@@ -210,8 +210,8 @@
     }
 
     /**
-     * Callback function to receive the result of the accountIntegrationRouterDisableGlockappsIPMonitoring operation.
-     * @callback module:api/AccountintegrationApi~accountIntegrationRouterDisableGlockappsIPMonitoringCallback
+     * Callback function to receive the result of the accountIntegrationRouterDisableHetrixToolsIPMonitoring operation.
+     * @callback module:api/AccountintegrationApi~accountIntegrationRouterDisableHetrixToolsIPMonitoringCallback
      * @param {String} error Error message, if any.
      * @param {module:model/ModelsDeleteResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -221,20 +221,20 @@
      * Disable IP Monitoring for a single IP <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid the IPId you want to disable monitoring for
-     * @param {module:api/AccountintegrationApi~accountIntegrationRouterDisableGlockappsIPMonitoringCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/AccountintegrationApi~accountIntegrationRouterDisableHetrixToolsIPMonitoringCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsDeleteResponse}
      */
-    this.accountIntegrationRouterDisableGlockappsIPMonitoring = function(xAccountApiKey, ipid, callback) {
+    this.accountIntegrationRouterDisableHetrixToolsIPMonitoring = function(xAccountApiKey, ipid, callback) {
       var postBody = null;
 
       // verify the required parameter 'xAccountApiKey' is set
       if (xAccountApiKey === undefined || xAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xAccountApiKey' when calling accountIntegrationRouterDisableGlockappsIPMonitoring");
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling accountIntegrationRouterDisableHetrixToolsIPMonitoring");
       }
 
       // verify the required parameter 'ipid' is set
       if (ipid === undefined || ipid === null) {
-        throw new Error("Missing the required parameter 'ipid' when calling accountIntegrationRouterDisableGlockappsIPMonitoring");
+        throw new Error("Missing the required parameter 'ipid' when calling accountIntegrationRouterDisableHetrixToolsIPMonitoring");
       }
 
 
@@ -264,8 +264,8 @@
     }
 
     /**
-     * Callback function to receive the result of the accountIntegrationRouterEnableGlockappsIPMonitoring operation.
-     * @callback module:api/AccountintegrationApi~accountIntegrationRouterEnableGlockappsIPMonitoringCallback
+     * Callback function to receive the result of the accountIntegrationRouterEnableHetrixToolsIPMonitoring operation.
+     * @callback module:api/AccountintegrationApi~accountIntegrationRouterEnableHetrixToolsIPMonitoringCallback
      * @param {String} error Error message, if any.
      * @param {module:model/ModelsResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -275,20 +275,20 @@
      * Enable IP Monitoring for a single IP <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid the IPId you want to enable monitoring for
-     * @param {module:api/AccountintegrationApi~accountIntegrationRouterEnableGlockappsIPMonitoringCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/AccountintegrationApi~accountIntegrationRouterEnableHetrixToolsIPMonitoringCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsResponse}
      */
-    this.accountIntegrationRouterEnableGlockappsIPMonitoring = function(xAccountApiKey, ipid, callback) {
+    this.accountIntegrationRouterEnableHetrixToolsIPMonitoring = function(xAccountApiKey, ipid, callback) {
       var postBody = null;
 
       // verify the required parameter 'xAccountApiKey' is set
       if (xAccountApiKey === undefined || xAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xAccountApiKey' when calling accountIntegrationRouterEnableGlockappsIPMonitoring");
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling accountIntegrationRouterEnableHetrixToolsIPMonitoring");
       }
 
       // verify the required parameter 'ipid' is set
       if (ipid === undefined || ipid === null) {
-        throw new Error("Missing the required parameter 'ipid' when calling accountIntegrationRouterEnableGlockappsIPMonitoring");
+        throw new Error("Missing the required parameter 'ipid' when calling accountIntegrationRouterEnableHetrixToolsIPMonitoring");
       }
 
 
