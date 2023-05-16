@@ -131,12 +131,8 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountdomainApi* | [**accountDomainRouterCount**](docs/AccountdomainApi.md#accountDomainRouterCount) | **GET** /account/domain/count | 
 *SendPostApi.AccountdomainApi* | [**accountDomainRouterGetAll**](docs/AccountdomainApi.md#accountDomainRouterGetAll) | **GET** /account/domain/ | 
 *SendPostApi.AccountdomainReportApi* | [**domainReportRouterReputation**](docs/AccountdomainReportApi.md#domainReportRouterReputation) | **GET** /account/domainReport/reputation | 
-*SendPostApi.AccountdomainstatApi* | [**domainStatRouterGetAllAggregateDomainStatsByGroup**](docs/AccountdomainstatApi.md#domainStatRouterGetAllAggregateDomainStatsByGroup) | **GET** /account/domain/stat/{domainId}/aggregate/provider | 
-*SendPostApi.AccountdomainstatApi* | [**domainStatRouterGetAllAggregatedProviderStatsForADomain**](docs/AccountdomainstatApi.md#domainStatRouterGetAllAggregatedProviderStatsForADomain) | **GET** /account/domain/stat/{domainId}/aggregate/providers | 
-*SendPostApi.AccountdomainstatApi* | [**domainStatRouterGetAllAggregatedProviderStatsForASpecificSubAccountOfADomain**](docs/AccountdomainstatApi.md#domainStatRouterGetAllAggregatedProviderStatsForASpecificSubAccountOfADomain) | **GET** /account/domain/stat/{domainId}/aggregate/sid/{sid}/providers | 
-*SendPostApi.AccountdomainstatApi* | [**domainStatRouterGetAllAggregatedSubAccountStatsForAnDomain**](docs/AccountdomainstatApi.md#domainStatRouterGetAllAggregatedSubAccountStatsForAnDomain) | **GET** /account/domain/stat/{domainId}/aggregate/subaccounts | 
-*SendPostApi.AccountdomainstatApi* | [**domainStatRouterGetAllDomainStats**](docs/AccountdomainstatApi.md#domainStatRouterGetAllDomainStats) | **GET** /account/domain/stat/{domainId} | 
-*SendPostApi.AccountdomainstatApi* | [**domainStatRouterGetStatsForASingleDomainStats**](docs/AccountdomainstatApi.md#domainStatRouterGetStatsForASingleDomainStats) | **GET** /account/domain/stat/{domainId}/aggregate | 
+*SendPostApi.AccountdomainStatApi* | [**domainStatRouterGetAllAggregateDomainStatsByGroup**](docs/AccountdomainStatApi.md#domainStatRouterGetAllAggregateDomainStatsByGroup) | **GET** /account/domainStat/{domainId}/aggregate/provider | 
+*SendPostApi.AccountdomainStatApi* | [**domainStatRouterGetStatsForASingleDomainStats**](docs/AccountdomainStatApi.md#domainStatRouterGetStatsForASingleDomainStats) | **GET** /account/domainStat/{domainId}/aggregate | 
 *SendPostApi.AccounteventApi* | [**eventRouterCountAllEventsFromAAccountForAGivenTimeRange**](docs/AccounteventApi.md#eventRouterCountAllEventsFromAAccountForAGivenTimeRange) | **GET** /account/event/count | 
 *SendPostApi.AccounteventApi* | [**eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange**](docs/AccounteventApi.md#eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange) | **GET** /account/event/node/count | 
 *SendPostApi.AccounteventApi* | [**eventRouterGet**](docs/AccounteventApi.md#eventRouterGet) | **GET** /account/event/{eventId} | 
@@ -155,10 +151,10 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterCount**](docs/AccountintegrationApi.md#accountIntegrationRouterCount) | **GET** /account/integration/count | 
 *SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterCreate**](docs/AccountintegrationApi.md#accountIntegrationRouterCreate) | **POST** /account/integration/{itype} | 
 *SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterDelete**](docs/AccountintegrationApi.md#accountIntegrationRouterDelete) | **DELETE** /account/integration/{itype} | 
-*SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterDisableGlockappsIPMonitoring**](docs/AccountintegrationApi.md#accountIntegrationRouterDisableGlockappsIPMonitoring) | **DELETE** /account/integration/glockapps/monitor/{ipid} | 
-*SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterEnableGlockappsIPMonitoring**](docs/AccountintegrationApi.md#accountIntegrationRouterEnableGlockappsIPMonitoring) | **POST** /account/integration/glockapps/monitor/{ipid} | 
+*SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterDisableHetrixToolsIPMonitoring**](docs/AccountintegrationApi.md#accountIntegrationRouterDisableHetrixToolsIPMonitoring) | **DELETE** /account/integration/hetrixtools/monitor/{ipid} | 
+*SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterEnableHetrixToolsIPMonitoring**](docs/AccountintegrationApi.md#accountIntegrationRouterEnableHetrixToolsIPMonitoring) | **POST** /account/integration/hetrixtools/monitor/{ipid} | 
 *SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterGetAll**](docs/AccountintegrationApi.md#accountIntegrationRouterGetAll) | **GET** /account/integration/ | 
-*SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterGetMonitoredIPStats**](docs/AccountintegrationApi.md#accountIntegrationRouterGetMonitoredIPStats) | **GET** /account/integration/glockapps/monitor/stat/{ipid} | 
+*SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterGetMonitoredIPStats**](docs/AccountintegrationApi.md#accountIntegrationRouterGetMonitoredIPStats) | **GET** /account/integration/hetrixtools/monitor/stat/{ipid} | 
 *SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterUpdate**](docs/AccountintegrationApi.md#accountIntegrationRouterUpdate) | **PUT** /account/integration/{itype} | 
 *SendPostApi.AccountinvitationApi* | [**invitationRouterCreate**](docs/AccountinvitationApi.md#invitationRouterCreate) | **POST** /account/invitation/ | 
 *SendPostApi.AccountinvitationApi* | [**invitationRouterDelete**](docs/AccountinvitationApi.md#invitationRouterDelete) | **DELETE** /account/invitation/{invitationId} | 
@@ -307,9 +303,9 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [SendPostApi.Model2632770x140006d1680False](docs/Model2632770x140006d1680False.md)
- - [SendPostApi.Model2635580x140006d1770False](docs/Model2635580x140006d1770False.md)
- - [SendPostApi.Model4716370x1400098b260False](docs/Model4716370x1400098b260False.md)
+ - [SendPostApi.Model2618750x140006c93e0False](docs/Model2618750x140006c93e0False.md)
+ - [SendPostApi.Model2621560x140006c94d0False](docs/Model2621560x140006c94d0False.md)
+ - [SendPostApi.Model4716190x1400097d710False](docs/Model4716190x1400097d710False.md)
  - [SendPostApi.ModelsAGIPStat](docs/ModelsAGIPStat.md)
  - [SendPostApi.ModelsAGStat](docs/ModelsAGStat.md)
  - [SendPostApi.ModelsAGSubAccountStat](docs/ModelsAGSubAccountStat.md)
@@ -365,7 +361,6 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsDomain](docs/ModelsDomain.md)
  - [SendPostApi.ModelsDomainAge](docs/ModelsDomainAge.md)
  - [SendPostApi.ModelsDomainCheckResult](docs/ModelsDomainCheckResult.md)
- - [SendPostApi.ModelsDomainStat](docs/ModelsDomainStat.md)
  - [SendPostApi.ModelsEAccount](docs/ModelsEAccount.md)
  - [SendPostApi.ModelsEAccountMember](docs/ModelsEAccountMember.md)
  - [SendPostApi.ModelsEAccountSetting](docs/ModelsEAccountSetting.md)
@@ -392,9 +387,9 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsEventType](docs/ModelsEventType.md)
  - [SendPostApi.ModelsFrequencyType](docs/ModelsFrequencyType.md)
  - [SendPostApi.ModelsFrom](docs/ModelsFrom.md)
- - [SendPostApi.ModelsGlockappsBlacklist](docs/ModelsGlockappsBlacklist.md)
  - [SendPostApi.ModelsGlockappsMailReport](docs/ModelsGlockappsMailReport.md)
- - [SendPostApi.ModelsGlockappsMonitorStat](docs/ModelsGlockappsMonitorStat.md)
+ - [SendPostApi.ModelsHetrixtoolsBlacklist](docs/ModelsHetrixtoolsBlacklist.md)
+ - [SendPostApi.ModelsHetrixtoolsMonitorStat](docs/ModelsHetrixtoolsMonitorStat.md)
  - [SendPostApi.ModelsIEIP](docs/ModelsIEIP.md)
  - [SendPostApi.ModelsIEMember](docs/ModelsIEMember.md)
  - [SendPostApi.ModelsIESubAccount](docs/ModelsIESubAccount.md)
@@ -424,7 +419,6 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsMemberRole](docs/ModelsMemberRole.md)
  - [SendPostApi.ModelsNotificationType](docs/ModelsNotificationType.md)
  - [SendPostApi.ModelsOnboardingChecklist](docs/ModelsOnboardingChecklist.md)
- - [SendPostApi.ModelsPDStat](docs/ModelsPDStat.md)
  - [SendPostApi.ModelsPIPStat](docs/ModelsPIPStat.md)
  - [SendPostApi.ModelsPaymentOptions](docs/ModelsPaymentOptions.md)
  - [SendPostApi.ModelsPaymentStatus](docs/ModelsPaymentStatus.md)
@@ -437,14 +431,13 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsQEvent](docs/ModelsQEvent.md)
  - [SendPostApi.ModelsRAssumeAccount](docs/ModelsRAssumeAccount.md)
  - [SendPostApi.ModelsRDSuppression](docs/ModelsRDSuppression.md)
- - [SendPostApi.ModelsRGlockappsMonitorStat](docs/ModelsRGlockappsMonitorStat.md)
+ - [SendPostApi.ModelsRHetrixtoolsMonitorStat](docs/ModelsRHetrixtoolsMonitorStat.md)
  - [SendPostApi.ModelsRIPStat](docs/ModelsRIPStat.md)
  - [SendPostApi.ModelsRStat](docs/ModelsRStat.md)
  - [SendPostApi.ModelsRSuppression](docs/ModelsRSuppression.md)
  - [SendPostApi.ModelsReplyTo](docs/ModelsReplyTo.md)
  - [SendPostApi.ModelsReportProvider](docs/ModelsReportProvider.md)
  - [SendPostApi.ModelsResponse](docs/ModelsResponse.md)
- - [SendPostApi.ModelsSDStat](docs/ModelsSDStat.md)
  - [SendPostApi.ModelsSIPStat](docs/ModelsSIPStat.md)
  - [SendPostApi.ModelsSMTPAuth](docs/ModelsSMTPAuth.md)
  - [SendPostApi.ModelsSMTPStat](docs/ModelsSMTPStat.md)
