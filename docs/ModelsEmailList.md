@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**emailIds** | **[String]** |  | [optional] 
+**emailIds** | **Object** |  | [optional] 
 
 

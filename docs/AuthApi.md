@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 
-Create Account, sub-account and member <br>
+Create Account, sub-account and member
 
 ### Example
 ```javascript
@@ -64,7 +64,7 @@ No authorization required
 
 
 
-Get Auth Info Details <br>
+Get Auth Info Details
 
 ### Example
 ```javascript
@@ -113,7 +113,7 @@ No authorization required
 
 
 
-Updates member and accounts related for email verification and on boarding answers <br>
+Updates member and accounts related for email verification and on boarding answers
 
 ### Example
 ```javascript

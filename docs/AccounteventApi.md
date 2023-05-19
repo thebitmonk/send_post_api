@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 
 
-Count all events from a account for a given time-range <br>
+Count all events from a account for a given time-range
 
 ### Example
 ```javascript
@@ -80,7 +80,7 @@ No authorization required
 
 
 
-Count all events from a node of a sub-account for a given time-range <br>
+Count all events from a node of a sub-account for a given time-range
 
 ### Example
 ```javascript
@@ -140,7 +140,7 @@ No authorization required
 
 
 
-Find Event By Id <br>
+Find Event By Id
 
 ### Example
 ```javascript
@@ -189,7 +189,7 @@ No authorization required
 
 
 
-Find all events of a sub-account from a specific node for a give time-range <br>
+Find all events of a sub-account from a specific node for a give time-range
 
 ### Example
 ```javascript
@@ -249,7 +249,7 @@ No authorization required
 
 
 
-Find all events from a account for a given time-range <br>
+Find all events from a account for a given time-range
 
 ### Example
 ```javascript
@@ -313,7 +313,7 @@ No authorization required
 
 
 
-Find all events from a account for a given time-range <br>
+Find all events from a account for a given time-range
 
 ### Example
 ```javascript
@@ -377,7 +377,7 @@ No authorization required
 
 
 
-Find all events of a account from a specific node <br>
+Find all events of a account from a specific node
 
 ### Example
 ```javascript
@@ -423,7 +423,7 @@ No authorization required
 
 
 
-Find Event From Node by id <br>
+Find Event From Node by id
 
 ### Example
 ```javascript

@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **body** | **String** |  | [optional] 
 **header** | **String** |  | [optional] 
-**seedList** | **[String]** |  | [optional] 
+**seedList** | **Object** |  | [optional] 
 **testId** | **Number** |  | [optional] 
 
 
