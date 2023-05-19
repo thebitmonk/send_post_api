@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -105,12 +105,12 @@
         it('should call suppressionRouterCreateSuppressionsInSuppressionFilter successfully', function(done) {
           // TODO: uncomment, update parameter values for suppressionRouterCreateSuppressionsInSuppressionFilter call
           /*
-          var body = new SendPostApi.ModelsSuppression();
-          body.created = "0";
-          body.email = "";
-          body.id = "0";
-          body.reason = new SendPostApi.ModelsSuppressionReason();
-          body.smtpError = "";
+          var body = [new SendPostApi.ModelsSuppression()];
+          body[0].created = "0";
+          body[0].email = "";
+          body[0].id = "0";
+          body[0].reason = new SendPostApi.ModelsSuppressionReason();
+          body[0].smtpError = "";
 
           instance.suppressionRouterCreateSuppressionsInSuppressionFilter(body, function(error, data, response) {
             if (error) {
@@ -162,12 +162,12 @@
         it('should call suppressionRouterDeleteSuppressionsInSuppressionFilter successfully', function(done) {
           // TODO: uncomment, update parameter values for suppressionRouterDeleteSuppressionsInSuppressionFilter call
           /*
-          var body = new SendPostApi.ModelsSuppression();
-          body.created = "0";
-          body.email = "";
-          body.id = "0";
-          body.reason = new SendPostApi.ModelsSuppressionReason();
-          body.smtpError = "";
+          var body = [new SendPostApi.ModelsSuppression()];
+          body[0].created = "0";
+          body[0].email = "";
+          body[0].id = "0";
+          body[0].reason = new SendPostApi.ModelsSuppressionReason();
+          body[0].smtpError = "";
 
           instance.suppressionRouterDeleteSuppressionsInSuppressionFilter(body, function(error, data, response) {
             if (error) {

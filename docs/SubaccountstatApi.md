@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 
 
-Get All Aggregate Sub-Account Stats
+Get All Aggregate Sub-Account Stats <br>
 
 ### Example
 ```javascript
@@ -72,7 +72,7 @@ No authorization required
 
 
 
-Get All Aggregate Sub-Account Stats by Group
+Get All Aggregate Sub-Account Stats by Group <br>
 
 ### Example
 ```javascript
@@ -127,7 +127,7 @@ No authorization required
 
 
 
-Get All Aggregated Group Stats for a Sub-Account
+Get All Aggregated Group Stats for a Sub-Account <br>
 
 ### Example
 ```javascript
@@ -179,7 +179,7 @@ No authorization required
 
 
 
-Get All Aggregated IP Stats for a Sub-Account
+Get All Aggregated IP Stats for a Sub-Account <br>
 
 ### Example
 ```javascript
@@ -231,7 +231,7 @@ No authorization required
 
 
 
-Get All Aggregated Provider Stats for a Specific IP of a Sub-Account
+Get All Aggregated Provider Stats for a Specific IP of a Sub-Account <br>
 
 ### Example
 ```javascript
@@ -286,7 +286,7 @@ No authorization required
 
 
 
-Get All Aggregated Provider Stats for a Sub-Account
+Get All Aggregated Provider Stats for a Sub-Account <br>
 
 ### Example
 ```javascript
@@ -338,7 +338,7 @@ No authorization required
 
 
 
-Get All Sub-Account Stats
+Get All Sub-Account Stats <br>
 
 ### Example
 ```javascript
@@ -390,7 +390,7 @@ No authorization required
 
 
 
-Get All Sub-Account Stats by Group
+Get All Sub-Account Stats by Group <br>
 
 ### Example
 ```javascript

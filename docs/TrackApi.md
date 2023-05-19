@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 
-Track Email Open
+Track Email Open <br>
 
 ### Example
 ```javascript
@@ -73,7 +73,7 @@ No authorization required
 
 
 
-Track Link Click
+Track Link Click <br>
 
 ### Example
 ```javascript
@@ -134,7 +134,7 @@ No authorization required
 
 
 
-track link click
+track link click <br>
 
 ### Example
 ```javascript

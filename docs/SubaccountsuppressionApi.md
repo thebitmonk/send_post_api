@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 
-Count Total Suppressions
+Count Total Suppressions <br>
 
 ### Example
 ```javascript
@@ -70,7 +70,7 @@ No authorization required
 
 
 
-Add Email Addresses To Suppression List
+Add Email Addresses To Suppression List <br>
 
 ### Example
 ```javascript
@@ -119,7 +119,7 @@ No authorization required
 
 
 
-Add Email Addresses To Suppression Filter
+Add Email Addresses To Suppression Filter <br>
 
 ### Example
 ```javascript
@@ -127,7 +127,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.SubaccountsuppressionApi();
 
-var body = new SendPostApi.ModelsSuppression(); // ModelsSuppression | Add suppressions to suppression filter
+var body = [new SendPostApi.ModelsSuppression()]; // [ModelsSuppression] | Add suppressions to suppression filter
 
 
 var callback = function(error, data, response) {
@@ -144,7 +144,7 @@ apiInstance.suppressionRouterCreateSuppressionsInSuppressionFilter(body, callbac
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ModelsSuppression**](ModelsSuppression.md)| Add suppressions to suppression filter | 
+ **body** | [**[ModelsSuppression]**](ModelsSuppression.md)| Add suppressions to suppression filter | 
 
 ### Return type
 
@@ -165,7 +165,7 @@ No authorization required
 
 
 
-Delete specific emails which are in suppression list
+Delete specific emails which are in suppression list <br>
 
 ### Example
 ```javascript
@@ -214,7 +214,7 @@ No authorization required
 
 
 
-Delete specific emails which are in suppression list
+Delete specific emails which are in suppression list <br>
 
 ### Example
 ```javascript
@@ -222,7 +222,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.SubaccountsuppressionApi();
 
-var body = new SendPostApi.ModelsSuppression(); // ModelsSuppression | Suppression content
+var body = [new SendPostApi.ModelsSuppression()]; // [ModelsSuppression] | Suppression content
 
 
 var callback = function(error, data, response) {
@@ -239,7 +239,7 @@ apiInstance.suppressionRouterDeleteSuppressionsInSuppressionFilter(body, callbac
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ModelsSuppression**](ModelsSuppression.md)| Suppression content | 
+ **body** | [**[ModelsSuppression]**](ModelsSuppression.md)| Suppression content | 
 
 ### Return type
 
@@ -260,7 +260,7 @@ No authorization required
 
 
 
-Get all suppressions
+Get all suppressions <br>
 
 ### Example
 ```javascript
