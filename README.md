@@ -151,10 +151,10 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterCount**](docs/AccountintegrationApi.md#accountIntegrationRouterCount) | **GET** /account/integration/count | 
 *SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterCreate**](docs/AccountintegrationApi.md#accountIntegrationRouterCreate) | **POST** /account/integration/{itype} | 
 *SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterDelete**](docs/AccountintegrationApi.md#accountIntegrationRouterDelete) | **DELETE** /account/integration/{itype} | 
-*SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterDisableGlockappsIPMonitoring**](docs/AccountintegrationApi.md#accountIntegrationRouterDisableGlockappsIPMonitoring) | **DELETE** /account/integration/glockapps/monitor/{ipid} | 
-*SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterEnableGlockappsIPMonitoring**](docs/AccountintegrationApi.md#accountIntegrationRouterEnableGlockappsIPMonitoring) | **POST** /account/integration/glockapps/monitor/{ipid} | 
+*SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterDisableHetrixToolsIPMonitoring**](docs/AccountintegrationApi.md#accountIntegrationRouterDisableHetrixToolsIPMonitoring) | **DELETE** /account/integration/hetrixtools/monitor/{ipid} | 
+*SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterEnableHetrixToolsIPMonitoring**](docs/AccountintegrationApi.md#accountIntegrationRouterEnableHetrixToolsIPMonitoring) | **POST** /account/integration/hetrixtools/monitor/{ipid} | 
 *SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterGetAll**](docs/AccountintegrationApi.md#accountIntegrationRouterGetAll) | **GET** /account/integration/ | 
-*SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterGetMonitoredIPStats**](docs/AccountintegrationApi.md#accountIntegrationRouterGetMonitoredIPStats) | **GET** /account/integration/glockapps/monitor/stat/{ipid} | 
+*SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterGetMonitoredIPStats**](docs/AccountintegrationApi.md#accountIntegrationRouterGetMonitoredIPStats) | **GET** /account/integration/hetrixtools/monitor/stat/{ipid} | 
 *SendPostApi.AccountintegrationApi* | [**accountIntegrationRouterUpdate**](docs/AccountintegrationApi.md#accountIntegrationRouterUpdate) | **PUT** /account/integration/{itype} | 
 *SendPostApi.AccountinvitationApi* | [**invitationRouterCreate**](docs/AccountinvitationApi.md#invitationRouterCreate) | **POST** /account/invitation/ | 
 *SendPostApi.AccountinvitationApi* | [**invitationRouterDelete**](docs/AccountinvitationApi.md#invitationRouterDelete) | **DELETE** /account/invitation/{invitationId} | 
@@ -386,8 +386,8 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsEventType](docs/ModelsEventType.md)
  - [SendPostApi.ModelsFrequencyType](docs/ModelsFrequencyType.md)
  - [SendPostApi.ModelsFrom](docs/ModelsFrom.md)
- - [SendPostApi.ModelsGlockappsBlacklist](docs/ModelsGlockappsBlacklist.md)
- - [SendPostApi.ModelsGlockappsMonitorStat](docs/ModelsGlockappsMonitorStat.md)
+ - [SendPostApi.ModelsHetrixtoolsBlacklist](docs/ModelsHetrixtoolsBlacklist.md)
+ - [SendPostApi.ModelsHetrixtoolsMonitorStat](docs/ModelsHetrixtoolsMonitorStat.md)
  - [SendPostApi.ModelsIEIP](docs/ModelsIEIP.md)
  - [SendPostApi.ModelsIEMember](docs/ModelsIEMember.md)
  - [SendPostApi.ModelsIESubAccount](docs/ModelsIESubAccount.md)
@@ -429,7 +429,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsQEvent](docs/ModelsQEvent.md)
  - [SendPostApi.ModelsRAssumeAccount](docs/ModelsRAssumeAccount.md)
  - [SendPostApi.ModelsRDSuppression](docs/ModelsRDSuppression.md)
- - [SendPostApi.ModelsRGlockappsMonitorStat](docs/ModelsRGlockappsMonitorStat.md)
+ - [SendPostApi.ModelsRHetrixtoolsMonitorStat](docs/ModelsRHetrixtoolsMonitorStat.md)
  - [SendPostApi.ModelsRIPStat](docs/ModelsRIPStat.md)
  - [SendPostApi.ModelsRStat](docs/ModelsRStat.md)
  - [SendPostApi.ModelsRSuppression](docs/ModelsRSuppression.md)
