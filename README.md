@@ -131,8 +131,12 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountdomainApi* | [**accountDomainRouterCount**](docs/AccountdomainApi.md#accountDomainRouterCount) | **GET** /account/domain/count | 
 *SendPostApi.AccountdomainApi* | [**accountDomainRouterGetAll**](docs/AccountdomainApi.md#accountDomainRouterGetAll) | **GET** /account/domain/ | 
 *SendPostApi.AccountdomainReportApi* | [**domainReportRouterReputation**](docs/AccountdomainReportApi.md#domainReportRouterReputation) | **GET** /account/domainReport/reputation | 
-*SendPostApi.AccountdomainStatApi* | [**domainStatRouterGetAllAggregateDomainStatsByGroup**](docs/AccountdomainStatApi.md#domainStatRouterGetAllAggregateDomainStatsByGroup) | **GET** /account/domainStat/{domainId}/aggregate/provider | 
-*SendPostApi.AccountdomainStatApi* | [**domainStatRouterGetStatsForASingleDomainStats**](docs/AccountdomainStatApi.md#domainStatRouterGetStatsForASingleDomainStats) | **GET** /account/domainStat/{domainId}/aggregate | 
+*SendPostApi.AccountdomainstatApi* | [**domainStatRouterGetAllAggregateDomainStatsByGroup**](docs/AccountdomainstatApi.md#domainStatRouterGetAllAggregateDomainStatsByGroup) | **GET** /account/domain/stat/{domainId}/aggregate/provider | 
+*SendPostApi.AccountdomainstatApi* | [**domainStatRouterGetAllAggregatedProviderStatsForADomain**](docs/AccountdomainstatApi.md#domainStatRouterGetAllAggregatedProviderStatsForADomain) | **GET** /account/domain/stat/{domainId}/aggregate/providers | 
+*SendPostApi.AccountdomainstatApi* | [**domainStatRouterGetAllAggregatedProviderStatsForASpecificSubAccountOfADomain**](docs/AccountdomainstatApi.md#domainStatRouterGetAllAggregatedProviderStatsForASpecificSubAccountOfADomain) | **GET** /account/domain/stat/{domainId}/aggregate/sid/{sid}/providers | 
+*SendPostApi.AccountdomainstatApi* | [**domainStatRouterGetAllAggregatedSubAccountStatsForAnDomain**](docs/AccountdomainstatApi.md#domainStatRouterGetAllAggregatedSubAccountStatsForAnDomain) | **GET** /account/domain/stat/{domainId}/aggregate/subaccounts | 
+*SendPostApi.AccountdomainstatApi* | [**domainStatRouterGetAllDomainStats**](docs/AccountdomainstatApi.md#domainStatRouterGetAllDomainStats) | **GET** /account/domain/stat/{domainId} | 
+*SendPostApi.AccountdomainstatApi* | [**domainStatRouterGetStatsForASingleDomainStats**](docs/AccountdomainstatApi.md#domainStatRouterGetStatsForASingleDomainStats) | **GET** /account/domain/stat/{domainId}/aggregate | 
 *SendPostApi.AccounteventApi* | [**eventRouterCountAllEventsFromAAccountForAGivenTimeRange**](docs/AccounteventApi.md#eventRouterCountAllEventsFromAAccountForAGivenTimeRange) | **GET** /account/event/count | 
 *SendPostApi.AccounteventApi* | [**eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange**](docs/AccounteventApi.md#eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange) | **GET** /account/event/node/count | 
 *SendPostApi.AccounteventApi* | [**eventRouterGet**](docs/AccounteventApi.md#eventRouterGet) | **GET** /account/event/{eventId} | 
@@ -360,6 +364,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsDomain](docs/ModelsDomain.md)
  - [SendPostApi.ModelsDomainAge](docs/ModelsDomainAge.md)
  - [SendPostApi.ModelsDomainCheckResult](docs/ModelsDomainCheckResult.md)
+ - [SendPostApi.ModelsDomainStat](docs/ModelsDomainStat.md)
  - [SendPostApi.ModelsEAccount](docs/ModelsEAccount.md)
  - [SendPostApi.ModelsEAccountMember](docs/ModelsEAccountMember.md)
  - [SendPostApi.ModelsEAccountSetting](docs/ModelsEAccountSetting.md)
@@ -417,6 +422,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsMemberRole](docs/ModelsMemberRole.md)
  - [SendPostApi.ModelsNotificationType](docs/ModelsNotificationType.md)
  - [SendPostApi.ModelsOnboardingChecklist](docs/ModelsOnboardingChecklist.md)
+ - [SendPostApi.ModelsPDStat](docs/ModelsPDStat.md)
  - [SendPostApi.ModelsPIPStat](docs/ModelsPIPStat.md)
  - [SendPostApi.ModelsPaymentOptions](docs/ModelsPaymentOptions.md)
  - [SendPostApi.ModelsPaymentStatus](docs/ModelsPaymentStatus.md)
@@ -436,6 +442,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsReplyTo](docs/ModelsReplyTo.md)
  - [SendPostApi.ModelsReportProvider](docs/ModelsReportProvider.md)
  - [SendPostApi.ModelsResponse](docs/ModelsResponse.md)
+ - [SendPostApi.ModelsSDStat](docs/ModelsSDStat.md)
  - [SendPostApi.ModelsSIPStat](docs/ModelsSIPStat.md)
  - [SendPostApi.ModelsSMTPAuth](docs/ModelsSMTPAuth.md)
  - [SendPostApi.ModelsSMTPStat](docs/ModelsSMTPStat.md)
