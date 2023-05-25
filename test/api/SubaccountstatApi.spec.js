@@ -125,6 +125,58 @@
           done();
         });
       });
+      describe('subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount', function() {
+        it('should call subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount successfully', function(done) {
+          // TODO: uncomment, update parameter values for subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount call and complete the assertions
+          /*
+          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var opts = {};
+          opts.from = "from_example";
+          opts.to = "to_example";
+
+          instance.subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount(xSubAccountApiKey, opts, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            let dataCtr = data;
+            expect(dataCtr).to.be.an(Array);
+            expect(dataCtr).to.not.be.empty();
+            for (let p in dataCtr) {
+              let data = dataCtr[p];
+              expect(data).to.be.a(SendPostApi.ModelsAGDomainStat);
+              expect(data.clicked).to.be.a('number');
+              expect(data.clicked).to.be("0");
+              expect(data.delivered).to.be.a('number');
+              expect(data.delivered).to.be("0");
+              expect(data.domain).to.be.a('string');
+              expect(data.domain).to.be("");
+              expect(data.dropped).to.be.a('number');
+              expect(data.dropped).to.be("0");
+              expect(data.hardBounced).to.be.a('number');
+              expect(data.hardBounced).to.be("0");
+              expect(data.opened).to.be.a('number');
+              expect(data.opened).to.be("0");
+              expect(data.processed).to.be.a('number');
+              expect(data.processed).to.be("0");
+              expect(data.sent).to.be.a('number');
+              expect(data.sent).to.be("0");
+              expect(data.softBounced).to.be.a('number');
+              expect(data.softBounced).to.be("0");
+              expect(data.spam).to.be.a('number');
+              expect(data.spam).to.be("0");
+              expect(data.unsubscribed).to.be.a('number');
+              expect(data.unsubscribed).to.be("0");
+            }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount', function() {
         it('should call subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount successfully', function(done) {
           // TODO: uncomment, update parameter values for subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount call and complete the assertions
