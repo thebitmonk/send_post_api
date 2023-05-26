@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**subAccountStatRouterGetAllAggregateSubAccountStats**](SubaccountstatApi.md#subAccountStatRouterGetAllAggregateSubAccountStats) | **GET** /subaccount/stat/aggregate | 
 [**subAccountStatRouterGetAllAggregateSubAccountStatsByGroup**](SubaccountstatApi.md#subAccountStatRouterGetAllAggregateSubAccountStatsByGroup) | **GET** /subaccount/stat/aggregate/group | 
+[**subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount**](SubaccountstatApi.md#subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount) | **GET** /subaccount/stat/aggregate/domain | 
 [**subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount**](SubaccountstatApi.md#subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount) | **GET** /subaccount/stat/aggregate/groups | 
 [**subAccountStatRouterGetAllAggregatedIPStatsForASubAccount**](SubaccountstatApi.md#subAccountStatRouterGetAllAggregatedIPStatsForASubAccount) | **GET** /subaccount/stat/aggregate/ips | 
 [**subAccountStatRouterGetAllAggregatedProviderStatsForASpecificIPOfASubAccount**](SubaccountstatApi.md#subAccountStatRouterGetAllAggregatedProviderStatsForASpecificIPOfASubAccount) | **GET** /subaccount/stat/aggregate/ip/{ipid}/providers | 
@@ -111,6 +112,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ModelsStat**](ModelsStat.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount"></a>
+# **subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount**
+> [ModelsAGDomainStat] subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount(xSubAccountApiKey, opts)
+
+
+
+Get All Aggregated Domain Stats for a Sub-Account
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.SubaccountstatApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var opts = { 
+  'from': "from_example", // String | from date
+  'to': "to_example" // String | to date
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount(xSubAccountApiKey, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **from** | **String**| from date | [optional] 
+ **to** | **String**| to date | [optional] 
+
+### Return type
+
+[**[ModelsAGDomainStat]**](ModelsAGDomainStat.md)
 
 ### Authorization
 

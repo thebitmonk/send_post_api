@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**accountStatRouterGetAllAccountStatsByGroup**](AccountstatApi.md#accountStatRouterGetAllAccountStatsByGroup) | **GET** /account/stat/group | 
 [**accountStatRouterGetAllAggregateAccountStats**](AccountstatApi.md#accountStatRouterGetAllAggregateAccountStats) | **GET** /account/stat/aggregate | 
 [**accountStatRouterGetAllAggregateAccountStatsByGroup**](AccountstatApi.md#accountStatRouterGetAllAggregateAccountStatsByGroup) | **GET** /account/stat/aggregate/group | 
+[**accountStatRouterGetAllAggregateDomainStats**](AccountstatApi.md#accountStatRouterGetAllAggregateDomainStats) | **GET** /account/stat/aggregate/domain | 
 [**accountStatRouterGetAllAggregateIPStats**](AccountstatApi.md#accountStatRouterGetAllAggregateIPStats) | **GET** /account/stat/aggregate/ip | 
 [**accountStatRouterGetAllAggregateSubAccountStats**](AccountstatApi.md#accountStatRouterGetAllAggregateSubAccountStats) | **GET** /account/stat/aggregate/subaccount | 
 
@@ -216,6 +217,74 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ModelsStat**](ModelsStat.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="accountStatRouterGetAllAggregateDomainStats"></a>
+# **accountStatRouterGetAllAggregateDomainStats**
+> [ModelsAGDomainStat] accountStatRouterGetAllAggregateDomainStats(xAccountApiKey, from, to, opts)
+
+
+
+Get All Aggregate Domain Stats
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccountstatApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var from = "from_example"; // String | from date
+
+var to = "to_example"; // String | to date
+
+var opts = { 
+  'filterBy': "filterBy_example", // String | filterBy
+  'filterValue': 789, // Number | filterValue
+  'orderBy': "orderBy_example", // String | orderBy
+  'sortOrder': "sortOrder_example", // String | sortOrder
+  'search': "search_example", // String | search term
+  'offset': 789, // Number | offset
+  'limit': 789 // Number | limit
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.accountStatRouterGetAllAggregateDomainStats(xAccountApiKey, from, to, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xAccountApiKey** | **String**| Account API Key | 
+ **from** | **String**| from date | 
+ **to** | **String**| to date | 
+ **filterBy** | **String**| filterBy | [optional] 
+ **filterValue** | **Number**| filterValue | [optional] 
+ **orderBy** | **String**| orderBy | [optional] 
+ **sortOrder** | **String**| sortOrder | [optional] 
+ **search** | **String**| search term | [optional] 
+ **offset** | **Number**| offset | [optional] 
+ **limit** | **Number**| limit | [optional] 
+
+### Return type
+
+[**[ModelsAGDomainStat]**](ModelsAGDomainStat.md)
 
 ### Authorization
 
