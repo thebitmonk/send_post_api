@@ -110,14 +110,14 @@
               expect(data.delivered).to.be("0");
               expect(data.dropped).to.be.a('number');
               expect(data.dropped).to.be("0");
-              expect(data.emailType).to.be.a('string');
-              expect(data.emailType).to.be("");
               expect(data.hardBounced).to.be.a('number');
               expect(data.hardBounced).to.be("0");
               expect(data.opened).to.be.a('number');
               expect(data.opened).to.be("0");
               expect(data.processed).to.be.a('number');
               expect(data.processed).to.be("0");
+              expect(data.provider).to.be.a('string');
+              expect(data.provider).to.be("");
               expect(data.sent).to.be.a('number');
               expect(data.sent).to.be("0");
               expect(data.softBounced).to.be.a('number');

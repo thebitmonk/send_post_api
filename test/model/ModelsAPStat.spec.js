@@ -59,12 +59,6 @@
         // expect(instance.dropped).to.be(expectedValueLiteral);
       });
 
-      it('should have the property emailType (base name: "emailType")', function() {
-        // TODO: update the code to test the property emailType
-        expect(instance).to.have.property('emailType');
-        // expect(instance.emailType).to.be(expectedValueLiteral);
-      });
-
       it('should have the property hardBounced (base name: "hardBounced")', function() {
         // TODO: update the code to test the property hardBounced
         expect(instance).to.have.property('hardBounced');
@@ -81,6 +75,12 @@
         // TODO: update the code to test the property processed
         expect(instance).to.have.property('processed');
         // expect(instance.processed).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property provider (base name: "provider")', function() {
+        // TODO: update the code to test the property provider
+        expect(instance).to.have.property('provider');
+        // expect(instance.provider).to.be(expectedValueLiteral);
       });
 
       it('should have the property sent (base name: "sent")', function() {
