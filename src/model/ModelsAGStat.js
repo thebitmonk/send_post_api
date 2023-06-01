@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsStat'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ModelsStat'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsAGStat = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsStat);
+    root.SendPostApi.ModelsAGStat = factory(root.SendPostApi.ApiClient);
   }
-}(this, function(ApiClient, ModelsStat) {
+}(this, function(ApiClient) {
   'use strict';
 
   /**
@@ -55,13 +55,46 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('clicked'))
+        obj.clicked = ApiClient.convertToType(data['clicked'], 'Number');
+      if (data.hasOwnProperty('delivered'))
+        obj.delivered = ApiClient.convertToType(data['delivered'], 'Number');
+      if (data.hasOwnProperty('dropped'))
+        obj.dropped = ApiClient.convertToType(data['dropped'], 'Number');
       if (data.hasOwnProperty('group'))
         obj.group = ApiClient.convertToType(data['group'], 'String');
-      if (data.hasOwnProperty('stat'))
-        obj.stat = ModelsStat.constructFromObject(data['stat']);
+      if (data.hasOwnProperty('hardBounced'))
+        obj.hardBounced = ApiClient.convertToType(data['hardBounced'], 'Number');
+      if (data.hasOwnProperty('opened'))
+        obj.opened = ApiClient.convertToType(data['opened'], 'Number');
+      if (data.hasOwnProperty('processed'))
+        obj.processed = ApiClient.convertToType(data['processed'], 'Number');
+      if (data.hasOwnProperty('sent'))
+        obj.sent = ApiClient.convertToType(data['sent'], 'Number');
+      if (data.hasOwnProperty('softBounced'))
+        obj.softBounced = ApiClient.convertToType(data['softBounced'], 'Number');
+      if (data.hasOwnProperty('spam'))
+        obj.spam = ApiClient.convertToType(data['spam'], 'Number');
+      if (data.hasOwnProperty('unsubscribed'))
+        obj.unsubscribed = ApiClient.convertToType(data['unsubscribed'], 'Number');
     }
     return obj;
   }
+
+  /**
+   * @member {Number} clicked
+   */
+  exports.prototype.clicked = undefined;
+
+  /**
+   * @member {Number} delivered
+   */
+  exports.prototype.delivered = undefined;
+
+  /**
+   * @member {Number} dropped
+   */
+  exports.prototype.dropped = undefined;
 
   /**
    * @member {String} group
@@ -69,9 +102,39 @@
   exports.prototype.group = undefined;
 
   /**
-   * @member {module:model/ModelsStat} stat
+   * @member {Number} hardBounced
    */
-  exports.prototype.stat = undefined;
+  exports.prototype.hardBounced = undefined;
+
+  /**
+   * @member {Number} opened
+   */
+  exports.prototype.opened = undefined;
+
+  /**
+   * @member {Number} processed
+   */
+  exports.prototype.processed = undefined;
+
+  /**
+   * @member {Number} sent
+   */
+  exports.prototype.sent = undefined;
+
+  /**
+   * @member {Number} softBounced
+   */
+  exports.prototype.softBounced = undefined;
+
+  /**
+   * @member {Number} spam
+   */
+  exports.prototype.spam = undefined;
+
+  /**
+   * @member {Number} unsubscribed
+   */
+  exports.prototype.unsubscribed = undefined;
 
 
   return exports;

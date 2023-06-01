@@ -31,14 +31,14 @@
   var instance;
 
   describe('(package)', function() {
-    describe('ModelsAGStat', function() {
+    describe('ModelsAPStat', function() {
       beforeEach(function() {
-        instance = new SendPostApi.ModelsAGStat();
+        instance = new SendPostApi.ModelsAPStat();
       });
 
-      it('should create an instance of ModelsAGStat', function() {
-        // TODO: update the code to test ModelsAGStat
-        expect(instance).to.be.a(SendPostApi.ModelsAGStat);
+      it('should create an instance of ModelsAPStat', function() {
+        // TODO: update the code to test ModelsAPStat
+        expect(instance).to.be.a(SendPostApi.ModelsAPStat);
       });
 
       it('should have the property clicked (base name: "clicked")', function() {
@@ -59,12 +59,6 @@
         // expect(instance.dropped).to.be(expectedValueLiteral);
       });
 
-      it('should have the property group (base name: "group")', function() {
-        // TODO: update the code to test the property group
-        expect(instance).to.have.property('group');
-        // expect(instance.group).to.be(expectedValueLiteral);
-      });
-
       it('should have the property hardBounced (base name: "hardBounced")', function() {
         // TODO: update the code to test the property hardBounced
         expect(instance).to.have.property('hardBounced');
@@ -81,6 +75,12 @@
         // TODO: update the code to test the property processed
         expect(instance).to.have.property('processed');
         // expect(instance.processed).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property provider (base name: "provider")', function() {
+        // TODO: update the code to test the property provider
+        expect(instance).to.have.property('provider');
+        // expect(instance.provider).to.be(expectedValueLiteral);
       });
 
       it('should have the property sent (base name: "sent")', function() {
