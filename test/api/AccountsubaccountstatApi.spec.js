@@ -40,13 +40,13 @@
         it('should call subAccountStatRouterGetAllAggregateSubAccountStats successfully', function(done) {
           // TODO: uncomment, update parameter values for subAccountStatRouterGetAllAggregateSubAccountStats call and complete the assertions
           /*
-          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var xAccountApiKey = "xAccountApiKey_example";
           var sid = 789;
           var opts = {};
           opts.from = "from_example";
           opts.to = "to_example";
 
-          instance.subAccountStatRouterGetAllAggregateSubAccountStats(xSubAccountApiKey, sid, opts, function(error, data, response) {
+          instance.subAccountStatRouterGetAllAggregateSubAccountStats(xAccountApiKey, sid, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -85,13 +85,13 @@
         it('should call subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount successfully', function(done) {
           // TODO: uncomment, update parameter values for subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount call and complete the assertions
           /*
-          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var xAccountApiKey = "xAccountApiKey_example";
           var sid = 789;
           var opts = {};
           opts.from = "from_example";
           opts.to = "to_example";
 
-          instance.subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount(xSubAccountApiKey, sid, opts, function(error, data, response) {
+          instance.subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount(xAccountApiKey, sid, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -138,13 +138,13 @@
         it('should call subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount successfully', function(done) {
           // TODO: uncomment, update parameter values for subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount call and complete the assertions
           /*
-          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var xAccountApiKey = "xAccountApiKey_example";
           var sid = 789;
           var opts = {};
           opts.from = "from_example";
           opts.to = "to_example";
 
-          instance.subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount(xSubAccountApiKey, sid, opts, function(error, data, response) {
+          instance.subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount(xAccountApiKey, sid, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -191,13 +191,13 @@
         it('should call subAccountStatRouterGetAllAggregatedIPStatsForASubAccount successfully', function(done) {
           // TODO: uncomment, update parameter values for subAccountStatRouterGetAllAggregatedIPStatsForASubAccount call and complete the assertions
           /*
-          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var xAccountApiKey = "xAccountApiKey_example";
           var sid = 789;
           var opts = {};
           opts.from = "from_example";
           opts.to = "to_example";
 
-          instance.subAccountStatRouterGetAllAggregatedIPStatsForASubAccount(xSubAccountApiKey, sid, opts, function(error, data, response) {
+          instance.subAccountStatRouterGetAllAggregatedIPStatsForASubAccount(xAccountApiKey, sid, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -246,13 +246,13 @@
         it('should call subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount successfully', function(done) {
           // TODO: uncomment, update parameter values for subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount call and complete the assertions
           /*
-          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var xAccountApiKey = "xAccountApiKey_example";
           var sid = 789;
           var opts = {};
           opts.from = "from_example";
           opts.to = "to_example";
 
-          instance.subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount(xSubAccountApiKey, sid, opts, function(error, data, response) {
+          instance.subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount(xAccountApiKey, sid, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -299,13 +299,13 @@
         it('should call subAccountStatRouterGetAllSubAccountStats successfully', function(done) {
           // TODO: uncomment, update parameter values for subAccountStatRouterGetAllSubAccountStats call and complete the assertions
           /*
-          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var xAccountApiKey = "xAccountApiKey_example";
           var sid = 789;
           var opts = {};
           opts.from = "from_example";
           opts.to = "to_example";
 
-          instance.subAccountStatRouterGetAllSubAccountStats(xSubAccountApiKey, sid, opts, function(error, data, response) {
+          instance.subAccountStatRouterGetAllSubAccountStats(xAccountApiKey, sid, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
