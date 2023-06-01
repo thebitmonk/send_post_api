@@ -40,13 +40,13 @@
         it('should call subAccountStatRouterGetAllAggregateSubAccountStats successfully', function(done) {
           // TODO: uncomment, update parameter values for subAccountStatRouterGetAllAggregateSubAccountStats call and complete the assertions
           /*
-          var sid = 789;
           var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var sid = 789;
           var opts = {};
           opts.from = "from_example";
           opts.to = "to_example";
 
-          instance.subAccountStatRouterGetAllAggregateSubAccountStats(sid, xSubAccountApiKey, opts, function(error, data, response) {
+          instance.subAccountStatRouterGetAllAggregateSubAccountStats(xSubAccountApiKey, sid, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;

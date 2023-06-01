@@ -58,26 +58,26 @@
 
     /**
      * Get All Aggregate Sub-Account Stats
-     * @param {Number} sid the subaccount id you want to get
      * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {Number} sid the subaccount id you want to get
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
      * @param {String} opts.to to date
      * @param {module:api/SubaccountstatApi~subAccountStatRouterGetAllAggregateSubAccountStatsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsStat}
      */
-    this.subAccountStatRouterGetAllAggregateSubAccountStats = function(sid, xSubAccountApiKey, opts, callback) {
+    this.subAccountStatRouterGetAllAggregateSubAccountStats = function(xSubAccountApiKey, sid, opts, callback) {
       opts = opts || {};
       var postBody = null;
-
-      // verify the required parameter 'sid' is set
-      if (sid === undefined || sid === null) {
-        throw new Error("Missing the required parameter 'sid' when calling subAccountStatRouterGetAllAggregateSubAccountStats");
-      }
 
       // verify the required parameter 'xSubAccountApiKey' is set
       if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
         throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling subAccountStatRouterGetAllAggregateSubAccountStats");
+      }
+
+      // verify the required parameter 'sid' is set
+      if (sid === undefined || sid === null) {
+        throw new Error("Missing the required parameter 'sid' when calling subAccountStatRouterGetAllAggregateSubAccountStats");
       }
 
 

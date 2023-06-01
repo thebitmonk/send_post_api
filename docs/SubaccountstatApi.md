@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="subAccountStatRouterGetAllAggregateSubAccountStats"></a>
 # **subAccountStatRouterGetAllAggregateSubAccountStats**
-> ModelsStat subAccountStatRouterGetAllAggregateSubAccountStats(sid, xSubAccountApiKey, opts)
+> ModelsStat subAccountStatRouterGetAllAggregateSubAccountStats(xSubAccountApiKey, sid, opts)
 
 
 
@@ -26,9 +26,9 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.SubaccountstatApi();
 
-var sid = 789; // Number | the subaccount id you want to get
-
 var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var sid = 789; // Number | the subaccount id you want to get
 
 var opts = { 
   'from': "from_example", // String | from date
@@ -42,15 +42,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.subAccountStatRouterGetAllAggregateSubAccountStats(sid, xSubAccountApiKey, opts, callback);
+apiInstance.subAccountStatRouterGetAllAggregateSubAccountStats(xSubAccountApiKey, sid, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sid** | **Number**| the subaccount id you want to get | 
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **sid** | **Number**| the subaccount id you want to get | 
  **from** | **String**| from date | [optional] 
  **to** | **String**| to date | [optional] 
 
