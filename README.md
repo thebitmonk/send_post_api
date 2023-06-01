@@ -228,6 +228,12 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterGetAll**](docs/AccountsubaccountApi.md#subAccountRouterGetAll) | **GET** /account/subaccount/ | 
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterGetAllSubAccountIncidents**](docs/AccountsubaccountApi.md#subAccountRouterGetAllSubAccountIncidents) | **GET** /account/subaccount/{subAccountId}/incident | 
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterUpdate**](docs/AccountsubaccountApi.md#subAccountRouterUpdate) | **PUT** /account/subaccount/{subAccountId} | 
+*SendPostApi.AccountsubaccountstatApi* | [**subAccountStatRouterGetAllAggregateSubAccountStats**](docs/AccountsubaccountstatApi.md#subAccountStatRouterGetAllAggregateSubAccountStats) | **GET** /account/subaccount/stat/{sid}/aggregate | 
+*SendPostApi.AccountsubaccountstatApi* | [**subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount**](docs/AccountsubaccountstatApi.md#subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount) | **GET** /account/subaccount/stat/{sid}/aggregate/domain | 
+*SendPostApi.AccountsubaccountstatApi* | [**subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount**](docs/AccountsubaccountstatApi.md#subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount) | **GET** /account/subaccount/stat/{sid}/aggregate/group | 
+*SendPostApi.AccountsubaccountstatApi* | [**subAccountStatRouterGetAllAggregatedIPStatsForASubAccount**](docs/AccountsubaccountstatApi.md#subAccountStatRouterGetAllAggregatedIPStatsForASubAccount) | **GET** /account/subaccount/stat/{sid}/aggregate/ip | 
+*SendPostApi.AccountsubaccountstatApi* | [**subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount**](docs/AccountsubaccountstatApi.md#subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount) | **GET** /account/subaccount/stat/{sid}/aggregate/provider | 
+*SendPostApi.AccountsubaccountstatApi* | [**subAccountStatRouterGetAllSubAccountStats**](docs/AccountsubaccountstatApi.md#subAccountStatRouterGetAllSubAccountStats) | **GET** /account/subaccount/stat/{sid} | 
 *SendPostApi.AccounttagApi* | [**tagRouterCreate**](docs/AccounttagApi.md#tagRouterCreate) | **POST** /account/tag/ | 
 *SendPostApi.AccounttagApi* | [**tagRouterDelete**](docs/AccounttagApi.md#tagRouterDelete) | **DELETE** /account/tag/{tagid} | 
 *SendPostApi.AccounttagApi* | [**tagRouterGetAll**](docs/AccounttagApi.md#tagRouterGetAll) | **GET** /account/tag/ | 
@@ -283,12 +289,6 @@ Class | Method | HTTP request | Description
 *SendPostApi.SubaccountsenderApi* | [**senderRouterGet**](docs/SubaccountsenderApi.md#senderRouterGet) | **GET** /subaccount/sender/{senderId} | 
 *SendPostApi.SubaccountsenderApi* | [**senderRouterGetAll**](docs/SubaccountsenderApi.md#senderRouterGetAll) | **GET** /subaccount/sender/ | 
 *SendPostApi.SubaccountsenderApi* | [**senderRouterUpdate**](docs/SubaccountsenderApi.md#senderRouterUpdate) | **PUT** /subaccount/sender/{senderId} | 
-*SendPostApi.SubaccountstatApi* | [**subAccountStatRouterGetAllAggregateSubAccountStats**](docs/SubaccountstatApi.md#subAccountStatRouterGetAllAggregateSubAccountStats) | **GET** /subaccount/stat/{sid}/aggregate | 
-*SendPostApi.SubaccountstatApi* | [**subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount**](docs/SubaccountstatApi.md#subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount) | **GET** /subaccount/stat/{sid}/aggregate/domain | 
-*SendPostApi.SubaccountstatApi* | [**subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount**](docs/SubaccountstatApi.md#subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount) | **GET** /subaccount/stat/{sid}/aggregate/group | 
-*SendPostApi.SubaccountstatApi* | [**subAccountStatRouterGetAllAggregatedIPStatsForASubAccount**](docs/SubaccountstatApi.md#subAccountStatRouterGetAllAggregatedIPStatsForASubAccount) | **GET** /subaccount/stat/{sid}/aggregate/ip | 
-*SendPostApi.SubaccountstatApi* | [**subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount**](docs/SubaccountstatApi.md#subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount) | **GET** /subaccount/stat/{sid}/aggregate/provider | 
-*SendPostApi.SubaccountstatApi* | [**subAccountStatRouterGetAllSubAccountStats**](docs/SubaccountstatApi.md#subAccountStatRouterGetAllSubAccountStats) | **GET** /subaccount/stat/{sid} | 
 *SendPostApi.SubaccountsuppressionApi* | [**suppressionRouterCount**](docs/SubaccountsuppressionApi.md#suppressionRouterCount) | **GET** /subaccount/suppression/count | 
 *SendPostApi.SubaccountsuppressionApi* | [**suppressionRouterCreateSuppressions**](docs/SubaccountsuppressionApi.md#suppressionRouterCreateSuppressions) | **POST** /subaccount/suppression/ | 
 *SendPostApi.SubaccountsuppressionApi* | [**suppressionRouterCreateSuppressionsInSuppressionFilter**](docs/SubaccountsuppressionApi.md#suppressionRouterCreateSuppressionsInSuppressionFilter) | **POST** /subaccount/suppression/filter | 
