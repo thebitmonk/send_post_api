@@ -1,4 +1,4 @@
-# SendPostApi.ModelsAIPStat
+# SendPostApi.ModelsAPStat
 
 ## Properties
 Name | Type | Description | Notes
@@ -7,10 +7,9 @@ Name | Type | Description | Notes
 **delivered** | **Number** |  | [optional] 
 **dropped** | **Number** |  | [optional] 
 **hardBounced** | **Number** |  | [optional] 
-**ipid** | **Number** |  | [optional] 
+**name** | **String** |  | [optional] 
 **opened** | **Number** |  | [optional] 
 **processed** | **Number** |  | [optional] 
-**publicIP** | **String** |  | [optional] 
 **sent** | **Number** |  | [optional] 
 **softBounced** | **Number** |  | [optional] 
 **spam** | **Number** |  | [optional] 

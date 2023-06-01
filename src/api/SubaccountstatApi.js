@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsAGDomainStat', 'model/ModelsAGStat', 'model/ModelsAIPStat', 'model/ModelsPIPStat', 'model/ModelsRStat', 'model/ModelsStat'], factory);
+    define(['ApiClient', 'model/ModelsAGDomainStat', 'model/ModelsAGStat', 'model/ModelsAIPStat', 'model/ModelsAPStat', 'model/ModelsRStat', 'model/ModelsStat'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsAGDomainStat'), require('../model/ModelsAGStat'), require('../model/ModelsAIPStat'), require('../model/ModelsPIPStat'), require('../model/ModelsRStat'), require('../model/ModelsStat'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsAGDomainStat'), require('../model/ModelsAGStat'), require('../model/ModelsAIPStat'), require('../model/ModelsAPStat'), require('../model/ModelsRStat'), require('../model/ModelsStat'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.SubaccountstatApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsAGDomainStat, root.SendPostApi.ModelsAGStat, root.SendPostApi.ModelsAIPStat, root.SendPostApi.ModelsPIPStat, root.SendPostApi.ModelsRStat, root.SendPostApi.ModelsStat);
+    root.SendPostApi.SubaccountstatApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsAGDomainStat, root.SendPostApi.ModelsAGStat, root.SendPostApi.ModelsAIPStat, root.SendPostApi.ModelsAPStat, root.SendPostApi.ModelsRStat, root.SendPostApi.ModelsStat);
   }
-}(this, function(ApiClient, ModelsAGDomainStat, ModelsAGStat, ModelsAIPStat, ModelsPIPStat, ModelsRStat, ModelsStat) {
+}(this, function(ApiClient, ModelsAGDomainStat, ModelsAGStat, ModelsAIPStat, ModelsAPStat, ModelsRStat, ModelsStat) {
   'use strict';
 
   /**
@@ -58,6 +58,7 @@
 
     /**
      * Get All Aggregate Sub-Account Stats
+     * @param {Number} sid the subaccount id you want to get
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
@@ -65,9 +66,14 @@
      * @param {module:api/SubaccountstatApi~subAccountStatRouterGetAllAggregateSubAccountStatsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsStat}
      */
-    this.subAccountStatRouterGetAllAggregateSubAccountStats = function(xSubAccountApiKey, opts, callback) {
+    this.subAccountStatRouterGetAllAggregateSubAccountStats = function(sid, xSubAccountApiKey, opts, callback) {
       opts = opts || {};
       var postBody = null;
+
+      // verify the required parameter 'sid' is set
+      if (sid === undefined || sid === null) {
+        throw new Error("Missing the required parameter 'sid' when calling subAccountStatRouterGetAllAggregateSubAccountStats");
+      }
 
       // verify the required parameter 'xSubAccountApiKey' is set
       if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
@@ -76,6 +82,7 @@
 
 
       var pathParams = {
+        'sid': sid
       };
       var queryParams = {
         'from': opts['from'],
@@ -95,67 +102,7 @@
       var returnType = ModelsStat;
 
       return this.apiClient.callApi(
-        '/subaccount/stat/aggregate', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the subAccountStatRouterGetAllAggregateSubAccountStatsByGroup operation.
-     * @callback module:api/SubaccountstatApi~subAccountStatRouterGetAllAggregateSubAccountStatsByGroupCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ModelsStat} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get All Aggregate Sub-Account Stats by Group
-     * @param {String} xSubAccountApiKey Sub-Account API Key
-     * @param {String} group the group whose stats you want
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.from from date
-     * @param {String} opts.to to date
-     * @param {module:api/SubaccountstatApi~subAccountStatRouterGetAllAggregateSubAccountStatsByGroupCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ModelsStat}
-     */
-    this.subAccountStatRouterGetAllAggregateSubAccountStatsByGroup = function(xSubAccountApiKey, group, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'xSubAccountApiKey' is set
-      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling subAccountStatRouterGetAllAggregateSubAccountStatsByGroup");
-      }
-
-      // verify the required parameter 'group' is set
-      if (group === undefined || group === null) {
-        throw new Error("Missing the required parameter 'group' when calling subAccountStatRouterGetAllAggregateSubAccountStatsByGroup");
-      }
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-        'from': opts['from'],
-        'to': opts['to'],
-        'group': group,
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-        'X-SubAccount-ApiKey': xSubAccountApiKey
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = ModelsStat;
-
-      return this.apiClient.callApi(
-        '/subaccount/stat/aggregate/group', 'GET',
+        '/subaccount/stat/{sid}/aggregate', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -172,13 +119,14 @@
     /**
      * Get All Aggregated Domain Stats for a Sub-Account
      * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {Number} sid the subaccount id you want to get
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
      * @param {String} opts.to to date
      * @param {module:api/SubaccountstatApi~subAccountStatRouterGetAllAggregatedDomainStatsForASubAccountCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsAGDomainStat>}
      */
-    this.subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount = function(xSubAccountApiKey, opts, callback) {
+    this.subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount = function(xSubAccountApiKey, sid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -187,8 +135,14 @@
         throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount");
       }
 
+      // verify the required parameter 'sid' is set
+      if (sid === undefined || sid === null) {
+        throw new Error("Missing the required parameter 'sid' when calling subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount");
+      }
+
 
       var pathParams = {
+        'sid': sid
       };
       var queryParams = {
         'from': opts['from'],
@@ -208,7 +162,7 @@
       var returnType = [ModelsAGDomainStat];
 
       return this.apiClient.callApi(
-        '/subaccount/stat/aggregate/domain', 'GET',
+        '/subaccount/stat/{sid}/aggregate/domain', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -225,13 +179,14 @@
     /**
      * Get All Aggregated Group Stats for a Sub-Account
      * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {Number} sid the subaccount id you want to get
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
      * @param {String} opts.to to date
      * @param {module:api/SubaccountstatApi~subAccountStatRouterGetAllAggregatedGroupStatsForASubAccountCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsAGStat>}
      */
-    this.subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount = function(xSubAccountApiKey, opts, callback) {
+    this.subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount = function(xSubAccountApiKey, sid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -240,8 +195,14 @@
         throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount");
       }
 
+      // verify the required parameter 'sid' is set
+      if (sid === undefined || sid === null) {
+        throw new Error("Missing the required parameter 'sid' when calling subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount");
+      }
+
 
       var pathParams = {
+        'sid': sid
       };
       var queryParams = {
         'from': opts['from'],
@@ -261,7 +222,7 @@
       var returnType = [ModelsAGStat];
 
       return this.apiClient.callApi(
-        '/subaccount/stat/aggregate/groups', 'GET',
+        '/subaccount/stat/{sid}/aggregate/group', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -278,13 +239,14 @@
     /**
      * Get All Aggregated IP Stats for a Sub-Account
      * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {Number} sid the subaccount id you want to get
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
      * @param {String} opts.to to date
      * @param {module:api/SubaccountstatApi~subAccountStatRouterGetAllAggregatedIPStatsForASubAccountCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsAIPStat>}
      */
-    this.subAccountStatRouterGetAllAggregatedIPStatsForASubAccount = function(xSubAccountApiKey, opts, callback) {
+    this.subAccountStatRouterGetAllAggregatedIPStatsForASubAccount = function(xSubAccountApiKey, sid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -293,8 +255,14 @@
         throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling subAccountStatRouterGetAllAggregatedIPStatsForASubAccount");
       }
 
+      // verify the required parameter 'sid' is set
+      if (sid === undefined || sid === null) {
+        throw new Error("Missing the required parameter 'sid' when calling subAccountStatRouterGetAllAggregatedIPStatsForASubAccount");
+      }
+
 
       var pathParams = {
+        'sid': sid
       };
       var queryParams = {
         'from': opts['from'],
@@ -314,67 +282,7 @@
       var returnType = [ModelsAIPStat];
 
       return this.apiClient.callApi(
-        '/subaccount/stat/aggregate/ips', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the subAccountStatRouterGetAllAggregatedProviderStatsForASpecificIPOfASubAccount operation.
-     * @callback module:api/SubaccountstatApi~subAccountStatRouterGetAllAggregatedProviderStatsForASpecificIPOfASubAccountCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ModelsPIPStat>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get All Aggregated Provider Stats for a Specific IP of a Sub-Account
-     * @param {String} xSubAccountApiKey Sub-Account API Key
-     * @param {Number} ipid the IPId you want to get
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.from from date
-     * @param {String} opts.to to date
-     * @param {module:api/SubaccountstatApi~subAccountStatRouterGetAllAggregatedProviderStatsForASpecificIPOfASubAccountCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ModelsPIPStat>}
-     */
-    this.subAccountStatRouterGetAllAggregatedProviderStatsForASpecificIPOfASubAccount = function(xSubAccountApiKey, ipid, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'xSubAccountApiKey' is set
-      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling subAccountStatRouterGetAllAggregatedProviderStatsForASpecificIPOfASubAccount");
-      }
-
-      // verify the required parameter 'ipid' is set
-      if (ipid === undefined || ipid === null) {
-        throw new Error("Missing the required parameter 'ipid' when calling subAccountStatRouterGetAllAggregatedProviderStatsForASpecificIPOfASubAccount");
-      }
-
-
-      var pathParams = {
-        'ipid': ipid
-      };
-      var queryParams = {
-        'from': opts['from'],
-        'to': opts['to'],
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-        'X-SubAccount-ApiKey': xSubAccountApiKey
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = [ModelsPIPStat];
-
-      return this.apiClient.callApi(
-        '/subaccount/stat/aggregate/ip/{ipid}/providers', 'GET',
+        '/subaccount/stat/{sid}/aggregate/ip', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -384,20 +292,21 @@
      * Callback function to receive the result of the subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount operation.
      * @callback module:api/SubaccountstatApi~subAccountStatRouterGetAllAggregatedProviderStatsForASubAccountCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ModelsPIPStat>} data The data returned by the service call.
+     * @param {Array.<module:model/ModelsAPStat>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Get All Aggregated Provider Stats for a Sub-Account
      * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {Number} sid the subaccount id you want to get
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
      * @param {String} opts.to to date
      * @param {module:api/SubaccountstatApi~subAccountStatRouterGetAllAggregatedProviderStatsForASubAccountCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ModelsPIPStat>}
+     * data is of type: {@link Array.<module:model/ModelsAPStat>}
      */
-    this.subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount = function(xSubAccountApiKey, opts, callback) {
+    this.subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount = function(xSubAccountApiKey, sid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -406,8 +315,14 @@
         throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount");
       }
 
+      // verify the required parameter 'sid' is set
+      if (sid === undefined || sid === null) {
+        throw new Error("Missing the required parameter 'sid' when calling subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount");
+      }
+
 
       var pathParams = {
+        'sid': sid
       };
       var queryParams = {
         'from': opts['from'],
@@ -424,10 +339,10 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = [ModelsPIPStat];
+      var returnType = [ModelsAPStat];
 
       return this.apiClient.callApi(
-        '/subaccount/stat/aggregate/providers', 'GET',
+        '/subaccount/stat/{sid}/aggregate/provider', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -444,13 +359,14 @@
     /**
      * Get All Sub-Account Stats
      * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {Number} sid the subaccount id you want to get
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
      * @param {String} opts.to to date
      * @param {module:api/SubaccountstatApi~subAccountStatRouterGetAllSubAccountStatsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsRStat>}
      */
-    this.subAccountStatRouterGetAllSubAccountStats = function(xSubAccountApiKey, opts, callback) {
+    this.subAccountStatRouterGetAllSubAccountStats = function(xSubAccountApiKey, sid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -459,8 +375,14 @@
         throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling subAccountStatRouterGetAllSubAccountStats");
       }
 
+      // verify the required parameter 'sid' is set
+      if (sid === undefined || sid === null) {
+        throw new Error("Missing the required parameter 'sid' when calling subAccountStatRouterGetAllSubAccountStats");
+      }
+
 
       var pathParams = {
+        'sid': sid
       };
       var queryParams = {
         'from': opts['from'],
@@ -480,67 +402,7 @@
       var returnType = [ModelsRStat];
 
       return this.apiClient.callApi(
-        '/subaccount/stat/', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the subAccountStatRouterGetAllSubAccountStatsByGroup operation.
-     * @callback module:api/SubaccountstatApi~subAccountStatRouterGetAllSubAccountStatsByGroupCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ModelsRStat>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get All Sub-Account Stats by Group
-     * @param {String} xSubAccountApiKey Sub-Account API Key
-     * @param {String} group the tag whose stats you want
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.from from date
-     * @param {String} opts.to to date
-     * @param {module:api/SubaccountstatApi~subAccountStatRouterGetAllSubAccountStatsByGroupCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ModelsRStat>}
-     */
-    this.subAccountStatRouterGetAllSubAccountStatsByGroup = function(xSubAccountApiKey, group, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'xSubAccountApiKey' is set
-      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling subAccountStatRouterGetAllSubAccountStatsByGroup");
-      }
-
-      // verify the required parameter 'group' is set
-      if (group === undefined || group === null) {
-        throw new Error("Missing the required parameter 'group' when calling subAccountStatRouterGetAllSubAccountStatsByGroup");
-      }
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-        'from': opts['from'],
-        'to': opts['to'],
-        'group': group,
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-        'X-SubAccount-ApiKey': xSubAccountApiKey
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = [ModelsRStat];
-
-      return this.apiClient.callApi(
-        '/subaccount/stat/group', 'GET',
+        '/subaccount/stat/{sid}', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
