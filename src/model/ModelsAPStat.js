@@ -61,10 +61,10 @@
         obj.delivered = ApiClient.convertToType(data['delivered'], 'Number');
       if (data.hasOwnProperty('dropped'))
         obj.dropped = ApiClient.convertToType(data['dropped'], 'Number');
+      if (data.hasOwnProperty('emailType'))
+        obj.emailType = ApiClient.convertToType(data['emailType'], 'String');
       if (data.hasOwnProperty('hardBounced'))
         obj.hardBounced = ApiClient.convertToType(data['hardBounced'], 'Number');
-      if (data.hasOwnProperty('name'))
-        obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('opened'))
         obj.opened = ApiClient.convertToType(data['opened'], 'Number');
       if (data.hasOwnProperty('processed'))
@@ -97,14 +97,14 @@
   exports.prototype.dropped = undefined;
 
   /**
+   * @member {String} emailType
+   */
+  exports.prototype.emailType = undefined;
+
+  /**
    * @member {Number} hardBounced
    */
   exports.prototype.hardBounced = undefined;
-
-  /**
-   * @member {String} name
-   */
-  exports.prototype.name = undefined;
 
   /**
    * @member {Number} opened

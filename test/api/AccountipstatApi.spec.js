@@ -110,10 +110,10 @@
               expect(data.delivered).to.be("0");
               expect(data.dropped).to.be.a('number');
               expect(data.dropped).to.be("0");
+              expect(data.emailType).to.be.a('string');
+              expect(data.emailType).to.be("");
               expect(data.hardBounced).to.be.a('number');
               expect(data.hardBounced).to.be("0");
-              expect(data.name).to.be.a('string');
-              expect(data.name).to.be("");
               expect(data.opened).to.be.a('number');
               expect(data.opened).to.be("0");
               expect(data.processed).to.be.a('number');
