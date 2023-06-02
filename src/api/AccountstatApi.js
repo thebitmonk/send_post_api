@@ -367,6 +367,8 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.filterBy filterBy
      * @param {Number} opts.filterValue filterValue
+     * @param {String} opts.limitBy limitBy
+     * @param {Number} opts.limitValue limitValue
      * @param {String} opts.orderBy orderBy
      * @param {String} opts.sortOrder sortOrder
      * @param {String} opts.search search term
@@ -402,6 +404,8 @@
         'to': to,
         'filterBy': opts['filterBy'],
         'filterValue': opts['filterValue'],
+        'limitBy': opts['limitBy'],
+        'limitValue': opts['limitValue'],
         'orderBy': opts['orderBy'],
         'sortOrder': opts['sortOrder'],
         'search': opts['search'],

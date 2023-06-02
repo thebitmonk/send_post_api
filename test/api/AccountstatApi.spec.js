@@ -301,6 +301,8 @@
           var opts = {};
           opts.filterBy = "filterBy_example";
           opts.filterValue = 789;
+          opts.limitBy = "limitBy_example";
+          opts.limitValue = 789;
           opts.orderBy = "orderBy_example";
           opts.sortOrder = "sortOrder_example";
           opts.search = "search_example";
