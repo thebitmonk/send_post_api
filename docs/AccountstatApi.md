@@ -318,6 +318,8 @@ var to = "to_example"; // String | to date
 var opts = { 
   'filterBy': "filterBy_example", // String | filterBy
   'filterValue': 789, // Number | filterValue
+  'limitBy': "limitBy_example", // String | limitBy
+  'limitValue': 789, // Number | limitValue
   'orderBy': "orderBy_example", // String | orderBy
   'sortOrder': "sortOrder_example", // String | sortOrder
   'search': "search_example", // String | search term
@@ -344,6 +346,8 @@ Name | Type | Description  | Notes
  **to** | **String**| to date | 
  **filterBy** | **String**| filterBy | [optional] 
  **filterValue** | **Number**| filterValue | [optional] 
+ **limitBy** | **String**| limitBy | [optional] 
+ **limitValue** | **Number**| limitValue | [optional] 
  **orderBy** | **String**| orderBy | [optional] 
  **sortOrder** | **String**| sortOrder | [optional] 
  **search** | **String**| search term | [optional] 
