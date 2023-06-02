@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 
-Get All Account Stats <br>
+Get All Account Stats
 
 ### Example
 ```javascript
@@ -70,7 +70,7 @@ No authorization required
 
 
 
-Get All Account Stats by Group <br>
+Get All Account Stats by Group
 
 ### Example
 ```javascript
@@ -125,7 +125,7 @@ No authorization required
 
 
 
-Get All Aggregate Stats <br>
+Get All Aggregate Stats
 
 ### Example
 ```javascript
@@ -177,7 +177,7 @@ No authorization required
 
 
 
-Get All Aggregate Stats by Group <br>
+Get All Aggregate Stats by Group
 
 ### Example
 ```javascript
@@ -232,7 +232,7 @@ No authorization required
 
 
 
-Get All Aggregate IP Stats <br>
+Get All Aggregate IP Stats
 
 ### Example
 ```javascript
@@ -300,7 +300,7 @@ No authorization required
 
 
 
-Get All Aggregate SubAccount Stats <br>
+Get All Aggregate SubAccount Stats
 
 ### Example
 ```javascript

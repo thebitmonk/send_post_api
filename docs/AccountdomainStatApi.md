@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 
-Get All Aggregate Stats by Group <br>
+Get All Aggregate Stats by Group
 
 ### Example
 ```javascript
@@ -72,7 +72,7 @@ No authorization required
 
 
 
-Get All Aggregate Stats <br>
+Get All Aggregate Stats
 
 ### Example
 ```javascript

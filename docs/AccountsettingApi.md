@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 
-update account settings <br>
+update account settings
 
 ### Example
 ```javascript

@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 
-Create Account, sub-account and member <br>
+Create Account, sub-account and member
 
 ### Example
 ```javascript
@@ -64,7 +64,7 @@ No authorization required
 
 
 
-Get Auth Info Details <br>
+Get Auth Info Details
 
 ### Example
 ```javascript
@@ -109,11 +109,11 @@ No authorization required
 
 <a name="authRouterUpdateAuthInfo"></a>
 # **authRouterUpdateAuthInfo**
-> ModelsAuthInfo authRouterUpdateAuthInfo(body, xToken)
+> ModelsAuthInfo authRouterUpdateAuthInfo(name, companyName, onboardQAnswered, uid, sendingVolumePerMonth, hexColor, logoURL, xToken, opts)
 
 
 
-Updates member and accounts related for email verification and on boarding answers <br>
+Updates member and accounts related for email verification and on boarding answers
 
 ### Example
 ```javascript
@@ -121,10 +121,27 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.AuthApi();
 
-var body = new SendPostApi.ModelsEAccountMember(); // ModelsEAccountMember | The Account Member content
+var name = "name_example"; // String | Name
+
+var companyName = "companyName_example"; // String | Company Name
+
+var onboardQAnswered = "onboardQAnswered_example"; // String | Onboarding Questionare answered
+
+var uid = "uid_example"; // String | user id
+
+var sendingVolumePerMonth = "sendingVolumePerMonth_example"; // String | Sending Volume Per Month
+
+var hexColor = "hexColor_example"; // String | company brand color
+
+var logoURL = "logoURL_example"; // String | logo URL
 
 var xToken = "xToken_example"; // String | Firebase dynamic token
 
+var opts = { 
+  'switchingSendpostDescription': "switchingSendpostDescription_example", // String | Why user like to switch to sendpost
+  'currentEmailServiceProvider': "currentEmailServiceProvider_example", // String | Current Email Service Provider
+  'logo': "/path/to/file.txt" // File | Logo file
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -133,15 +150,24 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.authRouterUpdateAuthInfo(body, xToken, callback);
+apiInstance.authRouterUpdateAuthInfo(name, companyName, onboardQAnswered, uid, sendingVolumePerMonth, hexColor, logoURL, xToken, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ModelsEAccountMember**](ModelsEAccountMember.md)| The Account Member content | 
+ **name** | **String**| Name | 
+ **companyName** | **String**| Company Name | 
+ **onboardQAnswered** | **String**| Onboarding Questionare answered | 
+ **uid** | **String**| user id | 
+ **sendingVolumePerMonth** | **String**| Sending Volume Per Month | 
+ **hexColor** | **String**| company brand color | 
+ **logoURL** | **String**| logo URL | 
  **xToken** | **String**| Firebase dynamic token | 
+ **switchingSendpostDescription** | **String**| Why user like to switch to sendpost | [optional] 
+ **currentEmailServiceProvider** | **String**| Current Email Service Provider | [optional] 
+ **logo** | **File**| Logo file | [optional] 
 
 ### Return type
 
@@ -153,6 +179,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json
 
