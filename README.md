@@ -201,6 +201,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountmessageApi* | [**messageRouterGetAllEventsForAMessageIdFromANode**](docs/AccountmessageApi.md#messageRouterGetAllEventsForAMessageIdFromANode) | **GET** /account/message/node/{messageId}/events | 
 *SendPostApi.AccountmessageApi* | [**messageRouterGetMessageFromNode**](docs/AccountmessageApi.md#messageRouterGetMessageFromNode) | **GET** /account/message/node/{messageId} | 
 *SendPostApi.AccountonboardingApi* | [**onboardingRouterGetOnboardingChecklist**](docs/AccountonboardingApi.md#onboardingRouterGetOnboardingChecklist) | **GET** /account/onboarding/checklist | 
+*SendPostApi.AccountonboardingApi* | [**onboardingRouterSendOnboardingWelcomeEmail**](docs/AccountonboardingApi.md#onboardingRouterSendOnboardingWelcomeEmail) | **GET** /account/onboarding/welcome | 
 *SendPostApi.AccountpaymentApi* | [**paymentRouterApplyCouponToStripeCustomer**](docs/AccountpaymentApi.md#paymentRouterApplyCouponToStripeCustomer) | **POST** /account/payment/customer/coupon | 
 *SendPostApi.AccountpaymentApi* | [**paymentRouterCreateCustomerPortal**](docs/AccountpaymentApi.md#paymentRouterCreateCustomerPortal) | **POST** /account/payment/portal | 
 *SendPostApi.AccountpaymentApi* | [**paymentRouterCreatePaymentSubscription**](docs/AccountpaymentApi.md#paymentRouterCreatePaymentSubscription) | **POST** /account/payment/subscription | 
@@ -258,6 +259,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.AuthApi* | [**authRouterCreate**](docs/AuthApi.md#authRouterCreate) | **POST** /auth/create | 
 *SendPostApi.AuthApi* | [**authRouterGetAuthInfo**](docs/AuthApi.md#authRouterGetAuthInfo) | **POST** /auth/info | 
 *SendPostApi.AuthApi* | [**authRouterUpdateAuthInfo**](docs/AuthApi.md#authRouterUpdateAuthInfo) | **PUT** /auth/info | 
+*SendPostApi.AuthApi* | [**authRouterUpdateLogo**](docs/AuthApi.md#authRouterUpdateLogo) | **PUT** /auth/logo | 
 *SendPostApi.ClusterApi* | [**clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster**](docs/ClusterApi.md#clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster) | **POST** /cluster/suppression/filter | 
 *SendPostApi.ClusterApi* | [**clusterRouterDeleteItemFromCacheOfEveryNodeInCluster**](docs/ClusterApi.md#clusterRouterDeleteItemFromCacheOfEveryNodeInCluster) | **DELETE** /cluster/cache | 
 *SendPostApi.ClusterApi* | [**clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster**](docs/ClusterApi.md#clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster) | **DELETE** /cluster/suppression/filter | 
@@ -300,6 +302,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.TrackApi* | [**trackRouterTrackEmailOpen**](docs/TrackApi.md#trackRouterTrackEmailOpen) | **GET** /track/open/{accountId}/{subAccountId}/{ipId}/{emailType}/{messageId}/1.png | 
 *SendPostApi.TrackApi* | [**trackRouterTrackLinkClick**](docs/TrackApi.md#trackRouterTrackLinkClick) | **GET** /track/click/{accountId}/{subAccountId}/{ipId}/{emailType}/{messageId} | 
 *SendPostApi.TrackApi* | [**trackRouterTrackUnsubscribe**](docs/TrackApi.md#trackRouterTrackUnsubscribe) | **GET** /track/unsubscribe/{accountId}/{subAccountId}/{ipId}/{emailType}/{messageId} | 
+*SendPostApi.TrackApi* | [**trackRouterTrackWelcomeLinkClick**](docs/TrackApi.md#trackRouterTrackWelcomeLinkClick) | **GET** /track/click/welcome | 
 
 
 ## Documentation for Models
