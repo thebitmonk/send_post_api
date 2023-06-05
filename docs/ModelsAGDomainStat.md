@@ -1,16 +1,15 @@
-# SendPostApi.ModelsAIPStat
+# SendPostApi.ModelsAGDomainStat
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **clicked** | **Number** |  | [optional] 
 **delivered** | **Number** |  | [optional] 
+**domain** | **String** |  | [optional] 
 **dropped** | **Number** |  | [optional] 
 **hardBounced** | **Number** |  | [optional] 
-**ipid** | **Number** |  | [optional] 
 **opened** | **Number** |  | [optional] 
 **processed** | **Number** |  | [optional] 
-**publicIP** | **String** |  | [optional] 
 **sent** | **Number** |  | [optional] 
 **softBounced** | **Number** |  | [optional] 
 **spam** | **Number** |  | [optional] 

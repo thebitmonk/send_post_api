@@ -31,23 +31,22 @@
   var instance;
 
   beforeEach(function() {
-    instance = new SendPostApi.AccountipstatApi();
+    instance = new SendPostApi.AccountsubaccountstatApi();
   });
 
   describe('(package)', function() {
-    describe('AccountipstatApi', function() {
-      describe('iPStatRouterGetAllAggregateIPStats', function() {
-        it('should call iPStatRouterGetAllAggregateIPStats successfully', function(done) {
-          // TODO: uncomment, update parameter values for iPStatRouterGetAllAggregateIPStats call and complete the assertions
+    describe('AccountsubaccountstatApi', function() {
+      describe('subAccountStatRouterGetAllAggregateSubAccountStats', function() {
+        it('should call subAccountStatRouterGetAllAggregateSubAccountStats successfully', function(done) {
+          // TODO: uncomment, update parameter values for subAccountStatRouterGetAllAggregateSubAccountStats call and complete the assertions
           /*
           var xAccountApiKey = "xAccountApiKey_example";
-          var ipid = 789;
+          var sid = 789;
           var opts = {};
           opts.from = "from_example";
           opts.to = "to_example";
-          opts.provider = "provider_example";
 
-          instance.iPStatRouterGetAllAggregateIPStats(xAccountApiKey, ipid, opts, function(error, data, response) {
+          instance.subAccountStatRouterGetAllAggregateSubAccountStats(xAccountApiKey, sid, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -82,17 +81,178 @@
           done();
         });
       });
-      describe('iPStatRouterGetAllAggregatedProviderStatsForAIP', function() {
-        it('should call iPStatRouterGetAllAggregatedProviderStatsForAIP successfully', function(done) {
-          // TODO: uncomment, update parameter values for iPStatRouterGetAllAggregatedProviderStatsForAIP call and complete the assertions
+      describe('subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount', function() {
+        it('should call subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount successfully', function(done) {
+          // TODO: uncomment, update parameter values for subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount call and complete the assertions
           /*
           var xAccountApiKey = "xAccountApiKey_example";
-          var ipid = 789;
+          var sid = 789;
           var opts = {};
           opts.from = "from_example";
           opts.to = "to_example";
 
-          instance.iPStatRouterGetAllAggregatedProviderStatsForAIP(xAccountApiKey, ipid, opts, function(error, data, response) {
+          instance.subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount(xAccountApiKey, sid, opts, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            let dataCtr = data;
+            expect(dataCtr).to.be.an(Array);
+            expect(dataCtr).to.not.be.empty();
+            for (let p in dataCtr) {
+              let data = dataCtr[p];
+              expect(data).to.be.a(SendPostApi.ModelsAGDomainStat);
+              expect(data.clicked).to.be.a('number');
+              expect(data.clicked).to.be("0");
+              expect(data.delivered).to.be.a('number');
+              expect(data.delivered).to.be("0");
+              expect(data.domain).to.be.a('string');
+              expect(data.domain).to.be("");
+              expect(data.dropped).to.be.a('number');
+              expect(data.dropped).to.be("0");
+              expect(data.hardBounced).to.be.a('number');
+              expect(data.hardBounced).to.be("0");
+              expect(data.opened).to.be.a('number');
+              expect(data.opened).to.be("0");
+              expect(data.processed).to.be.a('number');
+              expect(data.processed).to.be("0");
+              expect(data.sent).to.be.a('number');
+              expect(data.sent).to.be("0");
+              expect(data.softBounced).to.be.a('number');
+              expect(data.softBounced).to.be("0");
+              expect(data.spam).to.be.a('number');
+              expect(data.spam).to.be("0");
+              expect(data.unsubscribed).to.be.a('number');
+              expect(data.unsubscribed).to.be("0");
+            }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount', function() {
+        it('should call subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount successfully', function(done) {
+          // TODO: uncomment, update parameter values for subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount call and complete the assertions
+          /*
+          var xAccountApiKey = "xAccountApiKey_example";
+          var sid = 789;
+          var opts = {};
+          opts.from = "from_example";
+          opts.to = "to_example";
+
+          instance.subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount(xAccountApiKey, sid, opts, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            let dataCtr = data;
+            expect(dataCtr).to.be.an(Array);
+            expect(dataCtr).to.not.be.empty();
+            for (let p in dataCtr) {
+              let data = dataCtr[p];
+              expect(data).to.be.a(SendPostApi.ModelsAGStat);
+              expect(data.clicked).to.be.a('number');
+              expect(data.clicked).to.be("0");
+              expect(data.delivered).to.be.a('number');
+              expect(data.delivered).to.be("0");
+              expect(data.dropped).to.be.a('number');
+              expect(data.dropped).to.be("0");
+              expect(data.group).to.be.a('string');
+              expect(data.group).to.be("");
+              expect(data.hardBounced).to.be.a('number');
+              expect(data.hardBounced).to.be("0");
+              expect(data.opened).to.be.a('number');
+              expect(data.opened).to.be("0");
+              expect(data.processed).to.be.a('number');
+              expect(data.processed).to.be("0");
+              expect(data.sent).to.be.a('number');
+              expect(data.sent).to.be("0");
+              expect(data.softBounced).to.be.a('number');
+              expect(data.softBounced).to.be("0");
+              expect(data.spam).to.be.a('number');
+              expect(data.spam).to.be("0");
+              expect(data.unsubscribed).to.be.a('number');
+              expect(data.unsubscribed).to.be("0");
+            }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('subAccountStatRouterGetAllAggregatedIPStatsForASubAccount', function() {
+        it('should call subAccountStatRouterGetAllAggregatedIPStatsForASubAccount successfully', function(done) {
+          // TODO: uncomment, update parameter values for subAccountStatRouterGetAllAggregatedIPStatsForASubAccount call and complete the assertions
+          /*
+          var xAccountApiKey = "xAccountApiKey_example";
+          var sid = 789;
+          var opts = {};
+          opts.from = "from_example";
+          opts.to = "to_example";
+
+          instance.subAccountStatRouterGetAllAggregatedIPStatsForASubAccount(xAccountApiKey, sid, opts, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            let dataCtr = data;
+            expect(dataCtr).to.be.an(Array);
+            expect(dataCtr).to.not.be.empty();
+            for (let p in dataCtr) {
+              let data = dataCtr[p];
+              expect(data).to.be.a(SendPostApi.ModelsAIPStat);
+              expect(data.clicked).to.be.a('number');
+              expect(data.clicked).to.be("0");
+              expect(data.delivered).to.be.a('number');
+              expect(data.delivered).to.be("0");
+              expect(data.dropped).to.be.a('number');
+              expect(data.dropped).to.be("0");
+              expect(data.hardBounced).to.be.a('number');
+              expect(data.hardBounced).to.be("0");
+              expect(data.ipid).to.be.a('number');
+              expect(data.ipid).to.be("0");
+              expect(data.opened).to.be.a('number');
+              expect(data.opened).to.be("0");
+              expect(data.processed).to.be.a('number');
+              expect(data.processed).to.be("0");
+              expect(data.publicIP).to.be.a('string');
+              expect(data.publicIP).to.be("");
+              expect(data.sent).to.be.a('number');
+              expect(data.sent).to.be("0");
+              expect(data.softBounced).to.be.a('number');
+              expect(data.softBounced).to.be("0");
+              expect(data.spam).to.be.a('number');
+              expect(data.spam).to.be("0");
+              expect(data.unsubscribed).to.be.a('number');
+              expect(data.unsubscribed).to.be("0");
+            }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount', function() {
+        it('should call subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount successfully', function(done) {
+          // TODO: uncomment, update parameter values for subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount call and complete the assertions
+          /*
+          var xAccountApiKey = "xAccountApiKey_example";
+          var sid = 789;
+          var opts = {};
+          opts.from = "from_example";
+          opts.to = "to_example";
+
+          instance.subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount(xAccountApiKey, sid, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -135,19 +295,17 @@
           done();
         });
       });
-      describe('iPStatRouterGetAllAggregatedSubAccountStatsForAnIP', function() {
-        it('should call iPStatRouterGetAllAggregatedSubAccountStatsForAnIP successfully', function(done) {
-          // TODO: uncomment, update parameter values for iPStatRouterGetAllAggregatedSubAccountStatsForAnIP call and complete the assertions
+      describe('subAccountStatRouterGetAllSubAccountStats', function() {
+        it('should call subAccountStatRouterGetAllSubAccountStats successfully', function(done) {
+          // TODO: uncomment, update parameter values for subAccountStatRouterGetAllSubAccountStats call and complete the assertions
           /*
           var xAccountApiKey = "xAccountApiKey_example";
-          var ipid = 789;
+          var sid = 789;
           var opts = {};
           opts.from = "from_example";
           opts.to = "to_example";
-          opts.provider = "provider_example";
-          opts.sortBy = "sortBy_example";
 
-          instance.iPStatRouterGetAllAggregatedSubAccountStatsForAnIP(xAccountApiKey, ipid, opts, function(error, data, response) {
+          instance.subAccountStatRouterGetAllSubAccountStats(xAccountApiKey, sid, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -158,78 +316,18 @@
             expect(dataCtr).to.not.be.empty();
             for (let p in dataCtr) {
               let data = dataCtr[p];
-              expect(data).to.be.a(SendPostApi.ModelsASStat);
-              expect(data.clicked).to.be.a('number');
-              expect(data.clicked).to.be("0");
-              expect(data.delivered).to.be.a('number');
-              expect(data.delivered).to.be("0");
-              expect(data.dropped).to.be.a('number');
-              expect(data.dropped).to.be("0");
-              expect(data.hardBounced).to.be.a('number');
-              expect(data.hardBounced).to.be("0");
-              expect(data.name).to.be.a('string');
-              expect(data.name).to.be("");
-              expect(data.opened).to.be.a('number');
-              expect(data.opened).to.be("0");
-              expect(data.processed).to.be.a('number');
-              expect(data.processed).to.be("0");
-              expect(data.sent).to.be.a('number');
-              expect(data.sent).to.be("0");
-              expect(data.sid).to.be.a('number');
-              expect(data.sid).to.be("0");
-              expect(data.softBounced).to.be.a('number');
-              expect(data.softBounced).to.be("0");
-              expect(data.spam).to.be.a('number');
-              expect(data.spam).to.be("0");
-              expect(data.unsubscribed).to.be.a('number');
-              expect(data.unsubscribed).to.be("0");
-            }
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('iPStatRouterGetAllIPStats', function() {
-        it('should call iPStatRouterGetAllIPStats successfully', function(done) {
-          // TODO: uncomment, update parameter values for iPStatRouterGetAllIPStats call and complete the assertions
-          /*
-          var xAccountApiKey = "xAccountApiKey_example";
-          var ipid = 789;
-          var opts = {};
-          opts.from = "from_example";
-          opts.to = "to_example";
-          opts.provider = "provider_example";
-
-          instance.iPStatRouterGetAllIPStats(xAccountApiKey, ipid, opts, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            let dataCtr = data;
-            expect(dataCtr).to.be.an(Array);
-            expect(dataCtr).to.not.be.empty();
-            for (let p in dataCtr) {
-              let data = dataCtr[p];
-              expect(data).to.be.a(SendPostApi.ModelsRIPStat);
+              expect(data).to.be.a(SendPostApi.ModelsRStat);
               expect(data._date).to.be.a('string');
               expect(data._date).to.be("");
-              expect(data.stat).to.be.a(SendPostApi.ModelsIPStat);
+              expect(data.stat).to.be.a(SendPostApi.ModelsStat);
                     expect(data.stat.clicked).to.be.a('number');
                 expect(data.stat.clicked).to.be("0");
-                expect(data.stat.day).to.be.a('number');
-                expect(data.stat.day).to.be("0");
                 expect(data.stat.delivered).to.be.a('number');
                 expect(data.stat.delivered).to.be("0");
                 expect(data.stat.dropped).to.be.a('number');
                 expect(data.stat.dropped).to.be("0");
                 expect(data.stat.hardBounced).to.be.a('number');
                 expect(data.stat.hardBounced).to.be("0");
-                expect(data.stat.month).to.be.a('number');
-                expect(data.stat.month).to.be("0");
                 expect(data.stat.opened).to.be.a('number');
                 expect(data.stat.opened).to.be("0");
                 expect(data.stat.processed).to.be.a('number');
@@ -242,8 +340,6 @@
                 expect(data.stat.spam).to.be("0");
                 expect(data.stat.unsubscribed).to.be.a('number');
                 expect(data.stat.unsubscribed).to.be("0");
-                expect(data.stat.year).to.be.a('number');
-                expect(data.stat.year).to.be("0");
             }
 
             done();

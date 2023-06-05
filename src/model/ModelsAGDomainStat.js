@@ -26,31 +26,31 @@
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsAIPStat = factory(root.SendPostApi.ApiClient);
+    root.SendPostApi.ModelsAGDomainStat = factory(root.SendPostApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The ModelsAIPStat model module.
-   * @module model/ModelsAIPStat
+   * The ModelsAGDomainStat model module.
+   * @module model/ModelsAGDomainStat
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>ModelsAIPStat</code>.
-   * @alias module:model/ModelsAIPStat
+   * Constructs a new <code>ModelsAGDomainStat</code>.
+   * @alias module:model/ModelsAGDomainStat
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>ModelsAIPStat</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ModelsAGDomainStat</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ModelsAIPStat} obj Optional instance to populate.
-   * @return {module:model/ModelsAIPStat} The populated <code>ModelsAIPStat</code> instance.
+   * @param {module:model/ModelsAGDomainStat} obj Optional instance to populate.
+   * @return {module:model/ModelsAGDomainStat} The populated <code>ModelsAGDomainStat</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -59,18 +59,16 @@
         obj.clicked = ApiClient.convertToType(data['clicked'], 'Number');
       if (data.hasOwnProperty('delivered'))
         obj.delivered = ApiClient.convertToType(data['delivered'], 'Number');
+      if (data.hasOwnProperty('domain'))
+        obj.domain = ApiClient.convertToType(data['domain'], 'String');
       if (data.hasOwnProperty('dropped'))
         obj.dropped = ApiClient.convertToType(data['dropped'], 'Number');
       if (data.hasOwnProperty('hardBounced'))
         obj.hardBounced = ApiClient.convertToType(data['hardBounced'], 'Number');
-      if (data.hasOwnProperty('ipid'))
-        obj.ipid = ApiClient.convertToType(data['ipid'], 'Number');
       if (data.hasOwnProperty('opened'))
         obj.opened = ApiClient.convertToType(data['opened'], 'Number');
       if (data.hasOwnProperty('processed'))
         obj.processed = ApiClient.convertToType(data['processed'], 'Number');
-      if (data.hasOwnProperty('publicIP'))
-        obj.publicIP = ApiClient.convertToType(data['publicIP'], 'String');
       if (data.hasOwnProperty('sent'))
         obj.sent = ApiClient.convertToType(data['sent'], 'Number');
       if (data.hasOwnProperty('softBounced'))
@@ -94,6 +92,11 @@
   exports.prototype.delivered = undefined;
 
   /**
+   * @member {String} domain
+   */
+  exports.prototype.domain = undefined;
+
+  /**
    * @member {Number} dropped
    */
   exports.prototype.dropped = undefined;
@@ -104,11 +107,6 @@
   exports.prototype.hardBounced = undefined;
 
   /**
-   * @member {Number} ipid
-   */
-  exports.prototype.ipid = undefined;
-
-  /**
    * @member {Number} opened
    */
   exports.prototype.opened = undefined;
@@ -117,11 +115,6 @@
    * @member {Number} processed
    */
   exports.prototype.processed = undefined;
-
-  /**
-   * @member {String} publicIP
-   */
-  exports.prototype.publicIP = undefined;
 
   /**
    * @member {Number} sent

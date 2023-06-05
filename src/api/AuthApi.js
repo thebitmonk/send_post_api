@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsAccount', 'model/ModelsAuthInfo', 'model/ModelsEAccount'], factory);
+    define(['ApiClient', 'model/ModelsAccount', 'model/ModelsAuthInfo', 'model/ModelsEAccount', 'model/ModelsEAccountMember'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsAccount'), require('../model/ModelsAuthInfo'), require('../model/ModelsEAccount'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsAccount'), require('../model/ModelsAuthInfo'), require('../model/ModelsEAccount'), require('../model/ModelsEAccountMember'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.AuthApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsAccount, root.SendPostApi.ModelsAuthInfo, root.SendPostApi.ModelsEAccount);
+    root.SendPostApi.AuthApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsAccount, root.SendPostApi.ModelsAuthInfo, root.SendPostApi.ModelsEAccount, root.SendPostApi.ModelsEAccountMember);
   }
-}(this, function(ApiClient, ModelsAccount, ModelsAuthInfo, ModelsEAccount) {
+}(this, function(ApiClient, ModelsAccount, ModelsAuthInfo, ModelsEAccount, ModelsEAccountMember) {
   'use strict';
 
   /**
@@ -164,58 +164,17 @@
 
     /**
      * Updates member and accounts related for email verification and on boarding answers
-     * @param {String} name Name
-     * @param {String} companyName Company Name
-     * @param {String} onboardQAnswered Onboarding Questionare answered
-     * @param {String} uid user id
-     * @param {String} sendingVolumePerMonth Sending Volume Per Month
-     * @param {String} hexColor company brand color
-     * @param {String} logoURL logo URL
+     * @param {module:model/ModelsEAccountMember} body The Account Member content
      * @param {String} xToken Firebase dynamic token
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.switchingSendpostDescription Why user like to switch to sendpost
-     * @param {String} opts.currentEmailServiceProvider Current Email Service Provider
-     * @param {File} opts.logo Logo file
      * @param {module:api/AuthApi~authRouterUpdateAuthInfoCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsAuthInfo}
      */
-    this.authRouterUpdateAuthInfo = function(name, companyName, onboardQAnswered, uid, sendingVolumePerMonth, hexColor, logoURL, xToken, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
+    this.authRouterUpdateAuthInfo = function(body, xToken, callback) {
+      var postBody = body;
 
-      // verify the required parameter 'name' is set
-      if (name === undefined || name === null) {
-        throw new Error("Missing the required parameter 'name' when calling authRouterUpdateAuthInfo");
-      }
-
-      // verify the required parameter 'companyName' is set
-      if (companyName === undefined || companyName === null) {
-        throw new Error("Missing the required parameter 'companyName' when calling authRouterUpdateAuthInfo");
-      }
-
-      // verify the required parameter 'onboardQAnswered' is set
-      if (onboardQAnswered === undefined || onboardQAnswered === null) {
-        throw new Error("Missing the required parameter 'onboardQAnswered' when calling authRouterUpdateAuthInfo");
-      }
-
-      // verify the required parameter 'uid' is set
-      if (uid === undefined || uid === null) {
-        throw new Error("Missing the required parameter 'uid' when calling authRouterUpdateAuthInfo");
-      }
-
-      // verify the required parameter 'sendingVolumePerMonth' is set
-      if (sendingVolumePerMonth === undefined || sendingVolumePerMonth === null) {
-        throw new Error("Missing the required parameter 'sendingVolumePerMonth' when calling authRouterUpdateAuthInfo");
-      }
-
-      // verify the required parameter 'hexColor' is set
-      if (hexColor === undefined || hexColor === null) {
-        throw new Error("Missing the required parameter 'hexColor' when calling authRouterUpdateAuthInfo");
-      }
-
-      // verify the required parameter 'logoURL' is set
-      if (logoURL === undefined || logoURL === null) {
-        throw new Error("Missing the required parameter 'logoURL' when calling authRouterUpdateAuthInfo");
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling authRouterUpdateAuthInfo");
       }
 
       // verify the required parameter 'xToken' is set
@@ -234,25 +193,72 @@
         'X-Token': xToken
       };
       var formParams = {
-        'name': name,
-        'companyName': companyName,
-        'onboardQAnswered': onboardQAnswered,
-        'uid': uid,
-        'sendingVolumePerMonth': sendingVolumePerMonth,
-        'hexColor': hexColor,
-        'logoURL': logoURL,
-        'switchingSendpostDescription': opts['switchingSendpostDescription'],
-        'currentEmailServiceProvider': opts['currentEmailServiceProvider'],
-        'logo': opts['logo']
       };
 
       var authNames = [];
-      var contentTypes = ['multipart/form-data'];
+      var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = ModelsAuthInfo;
 
       return this.apiClient.callApi(
         '/auth/info', 'PUT',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the authRouterUpdateLogo operation.
+     * @callback module:api/AuthApi~authRouterUpdateLogoCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Updates account brand logo for custom templates
+     * @param {String} uid user id
+     * @param {String} xToken Firebase dynamic token
+     * @param {Object} opts Optional parameters
+     * @param {File} opts.logo Logo file
+     * @param {module:api/AuthApi~authRouterUpdateLogoCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.authRouterUpdateLogo = function(uid, xToken, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'uid' is set
+      if (uid === undefined || uid === null) {
+        throw new Error("Missing the required parameter 'uid' when calling authRouterUpdateLogo");
+      }
+
+      // verify the required parameter 'xToken' is set
+      if (xToken === undefined || xToken === null) {
+        throw new Error("Missing the required parameter 'xToken' when calling authRouterUpdateLogo");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-Token': xToken
+      };
+      var formParams = {
+        'logo': opts['logo'],
+        'uid': uid
+      };
+
+      var authNames = [];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/auth/logo', 'PUT',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

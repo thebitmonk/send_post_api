@@ -31,14 +31,14 @@
   var instance;
 
   describe('(package)', function() {
-    describe('ModelsAGStat', function() {
+    describe('ModelsAGDomainStat', function() {
       beforeEach(function() {
-        instance = new SendPostApi.ModelsAGStat();
+        instance = new SendPostApi.ModelsAGDomainStat();
       });
 
-      it('should create an instance of ModelsAGStat', function() {
-        // TODO: update the code to test ModelsAGStat
-        expect(instance).to.be.a(SendPostApi.ModelsAGStat);
+      it('should create an instance of ModelsAGDomainStat', function() {
+        // TODO: update the code to test ModelsAGDomainStat
+        expect(instance).to.be.a(SendPostApi.ModelsAGDomainStat);
       });
 
       it('should have the property clicked (base name: "clicked")', function() {
@@ -53,16 +53,16 @@
         // expect(instance.delivered).to.be(expectedValueLiteral);
       });
 
+      it('should have the property domain (base name: "domain")', function() {
+        // TODO: update the code to test the property domain
+        expect(instance).to.have.property('domain');
+        // expect(instance.domain).to.be(expectedValueLiteral);
+      });
+
       it('should have the property dropped (base name: "dropped")', function() {
         // TODO: update the code to test the property dropped
         expect(instance).to.have.property('dropped');
         // expect(instance.dropped).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property group (base name: "group")', function() {
-        // TODO: update the code to test the property group
-        expect(instance).to.have.property('group');
-        // expect(instance.group).to.be(expectedValueLiteral);
       });
 
       it('should have the property hardBounced (base name: "hardBounced")', function() {

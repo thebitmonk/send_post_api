@@ -59,6 +59,8 @@
             expect(data.alertSlackEndpoint).to.be("");
             expect(data.apiKey).to.be.a('string');
             expect(data.apiKey).to.be("");
+            expect(data.brandColor).to.be.a('string');
+            expect(data.brandColor).to.be("");
             expect(data.companyName).to.be.a('string');
             expect(data.companyName).to.be("");
             expect(data.created).to.be.a('number');
@@ -99,6 +101,8 @@
             expect(data.stripeBasePriceId).to.be("");
             expect(data.stripeUsagePriceId).to.be.a('string');
             expect(data.stripeUsagePriceId).to.be("");
+            expect(data.switchingSendpostDescription).to.be.a('string');
+            expect(data.switchingSendpostDescription).to.be("");
 
             done();
           });
@@ -137,6 +141,8 @@
                 expect(data.alertSlackEndpoint).to.be("");
                 expect(data.apiKey).to.be.a('string');
                 expect(data.apiKey).to.be("");
+                expect(data.brandColor).to.be.a('string');
+                expect(data.brandColor).to.be("");
                 expect(data.companyName).to.be.a('string');
                 expect(data.companyName).to.be("");
                 expect(data.created).to.be.a('number');
@@ -177,6 +183,8 @@
                 expect(data.stripeBasePriceId).to.be("");
                 expect(data.stripeUsagePriceId).to.be.a('string');
                 expect(data.stripeUsagePriceId).to.be("");
+                expect(data.switchingSendpostDescription).to.be.a('string');
+                expect(data.switchingSendpostDescription).to.be("");
 
                       }
             }
@@ -213,20 +221,23 @@
         it('should call authRouterUpdateAuthInfo successfully', function(done) {
           // TODO: uncomment, update parameter values for authRouterUpdateAuthInfo call and complete the assertions
           /*
-          var name = "name_example";
-          var companyName = "companyName_example";
-          var onboardQAnswered = "onboardQAnswered_example";
-          var uid = "uid_example";
-          var sendingVolumePerMonth = "sendingVolumePerMonth_example";
-          var hexColor = "hexColor_example";
-          var logoURL = "logoURL_example";
+          var body = new SendPostApi.ModelsEAccountMember();
+          body.companyName = "";
+          body.currentEmailServiceProvider = "";
+          body.hexColor = "";
+          body.industry = "";
+          body.logoURL = "";
+          body.name = "";
+          body.onboardCFinished = false;
+          body.onboardQAnswered = false;
+          body.phoneNumber = "";
+          body.sendingVolumePerMonth = "";
+          body.switchingSendpostDescription = "";
+          body.uid = "";
+          body.verifyEmail = false;
           var xToken = "xToken_example";
-          var opts = {};
-          opts.switchingSendpostDescription = "switchingSendpostDescription_example";
-          opts.currentEmailServiceProvider = "currentEmailServiceProvider_example";
-          opts.logo = "/path/to/file.txt";
 
-          instance.authRouterUpdateAuthInfo(name, companyName, onboardQAnswered, uid, sendingVolumePerMonth, hexColor, logoURL, xToken, opts, function(error, data, response) {
+          instance.authRouterUpdateAuthInfo(body, xToken, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -244,6 +255,8 @@
                 expect(data.alertSlackEndpoint).to.be("");
                 expect(data.apiKey).to.be.a('string');
                 expect(data.apiKey).to.be("");
+                expect(data.brandColor).to.be.a('string');
+                expect(data.brandColor).to.be("");
                 expect(data.companyName).to.be.a('string');
                 expect(data.companyName).to.be("");
                 expect(data.created).to.be.a('number');
@@ -284,6 +297,8 @@
                 expect(data.stripeBasePriceId).to.be("");
                 expect(data.stripeUsagePriceId).to.be.a('string');
                 expect(data.stripeUsagePriceId).to.be("");
+                expect(data.switchingSendpostDescription).to.be.a('string');
+                expect(data.switchingSendpostDescription).to.be("");
 
                       }
             }
@@ -308,6 +323,28 @@
               expect(data.member.phoneNumber).to.be("");
               expect(data.member.url).to.be.a('string');
               expect(data.member.url).to.be("");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('authRouterUpdateLogo', function() {
+        it('should call authRouterUpdateLogo successfully', function(done) {
+          // TODO: uncomment, update parameter values for authRouterUpdateLogo call
+          /*
+          var uid = "uid_example";
+          var xToken = "xToken_example";
+          var opts = {};
+          opts.logo = "/path/to/file.txt";
+
+          instance.authRouterUpdateLogo(uid, xToken, opts, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
 
             done();
           });

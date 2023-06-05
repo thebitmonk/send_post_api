@@ -31,20 +31,26 @@
   var instance;
 
   describe('(package)', function() {
-    describe('ModelsAGStat', function() {
+    describe('ModelsDomainStat', function() {
       beforeEach(function() {
-        instance = new SendPostApi.ModelsAGStat();
+        instance = new SendPostApi.ModelsDomainStat();
       });
 
-      it('should create an instance of ModelsAGStat', function() {
-        // TODO: update the code to test ModelsAGStat
-        expect(instance).to.be.a(SendPostApi.ModelsAGStat);
+      it('should create an instance of ModelsDomainStat', function() {
+        // TODO: update the code to test ModelsDomainStat
+        expect(instance).to.be.a(SendPostApi.ModelsDomainStat);
       });
 
       it('should have the property clicked (base name: "clicked")', function() {
         // TODO: update the code to test the property clicked
         expect(instance).to.have.property('clicked');
         // expect(instance.clicked).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property day (base name: "day")', function() {
+        // TODO: update the code to test the property day
+        expect(instance).to.have.property('day');
+        // expect(instance.day).to.be(expectedValueLiteral);
       });
 
       it('should have the property delivered (base name: "delivered")', function() {
@@ -59,16 +65,16 @@
         // expect(instance.dropped).to.be(expectedValueLiteral);
       });
 
-      it('should have the property group (base name: "group")', function() {
-        // TODO: update the code to test the property group
-        expect(instance).to.have.property('group');
-        // expect(instance.group).to.be(expectedValueLiteral);
-      });
-
       it('should have the property hardBounced (base name: "hardBounced")', function() {
         // TODO: update the code to test the property hardBounced
         expect(instance).to.have.property('hardBounced');
         // expect(instance.hardBounced).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property month (base name: "month")', function() {
+        // TODO: update the code to test the property month
+        expect(instance).to.have.property('month');
+        // expect(instance.month).to.be(expectedValueLiteral);
       });
 
       it('should have the property opened (base name: "opened")', function() {
@@ -105,6 +111,12 @@
         // TODO: update the code to test the property unsubscribed
         expect(instance).to.have.property('unsubscribed');
         // expect(instance.unsubscribed).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property year (base name: "year")', function() {
+        // TODO: update the code to test the property year
+        expect(instance).to.have.property('year');
+        // expect(instance.year).to.be(expectedValueLiteral);
       });
 
     });

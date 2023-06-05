@@ -31,14 +31,14 @@
   var instance;
 
   describe('(package)', function() {
-    describe('ModelsAGStat', function() {
+    describe('ModelsSDStat', function() {
       beforeEach(function() {
-        instance = new SendPostApi.ModelsAGStat();
+        instance = new SendPostApi.ModelsSDStat();
       });
 
-      it('should create an instance of ModelsAGStat', function() {
-        // TODO: update the code to test ModelsAGStat
-        expect(instance).to.be.a(SendPostApi.ModelsAGStat);
+      it('should create an instance of ModelsSDStat', function() {
+        // TODO: update the code to test ModelsSDStat
+        expect(instance).to.be.a(SendPostApi.ModelsSDStat);
       });
 
       it('should have the property clicked (base name: "clicked")', function() {
@@ -59,16 +59,16 @@
         // expect(instance.dropped).to.be(expectedValueLiteral);
       });
 
-      it('should have the property group (base name: "group")', function() {
-        // TODO: update the code to test the property group
-        expect(instance).to.have.property('group');
-        // expect(instance.group).to.be(expectedValueLiteral);
-      });
-
       it('should have the property hardBounced (base name: "hardBounced")', function() {
         // TODO: update the code to test the property hardBounced
         expect(instance).to.have.property('hardBounced');
         // expect(instance.hardBounced).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property name (base name: "name")', function() {
+        // TODO: update the code to test the property name
+        expect(instance).to.have.property('name');
+        // expect(instance.name).to.be(expectedValueLiteral);
       });
 
       it('should have the property opened (base name: "opened")', function() {
@@ -87,6 +87,12 @@
         // TODO: update the code to test the property sent
         expect(instance).to.have.property('sent');
         // expect(instance.sent).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property sid (base name: "sid")', function() {
+        // TODO: update the code to test the property sid
+        expect(instance).to.have.property('sid');
+        // expect(instance.sid).to.be(expectedValueLiteral);
       });
 
       it('should have the property softBounced (base name: "softBounced")', function() {
