@@ -5,7 +5,7 @@ All URIs are relative to *http://127.0.0.1:8081/api/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**onboardingRouterGetOnboardingChecklist**](AccountonboardingApi.md#onboardingRouterGetOnboardingChecklist) | **GET** /account/onboarding/checklist | 
-[**onboardingRouterSendOnboardingWelcomeEmail**](AccountonboardingApi.md#onboardingRouterSendOnboardingWelcomeEmail) | **GET** /account/onboarding/welcome | 
+[**onboardingRouterSendOnboardingWelcomeEmail**](AccountonboardingApi.md#onboardingRouterSendOnboardingWelcomeEmail) | **POST** /account/onboarding/welcome | 
 
 
 <a name="onboardingRouterGetOnboardingChecklist"></a>

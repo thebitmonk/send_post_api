@@ -201,7 +201,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountmessageApi* | [**messageRouterGetAllEventsForAMessageIdFromANode**](docs/AccountmessageApi.md#messageRouterGetAllEventsForAMessageIdFromANode) | **GET** /account/message/node/{messageId}/events | 
 *SendPostApi.AccountmessageApi* | [**messageRouterGetMessageFromNode**](docs/AccountmessageApi.md#messageRouterGetMessageFromNode) | **GET** /account/message/node/{messageId} | 
 *SendPostApi.AccountonboardingApi* | [**onboardingRouterGetOnboardingChecklist**](docs/AccountonboardingApi.md#onboardingRouterGetOnboardingChecklist) | **GET** /account/onboarding/checklist | 
-*SendPostApi.AccountonboardingApi* | [**onboardingRouterSendOnboardingWelcomeEmail**](docs/AccountonboardingApi.md#onboardingRouterSendOnboardingWelcomeEmail) | **GET** /account/onboarding/welcome | 
+*SendPostApi.AccountonboardingApi* | [**onboardingRouterSendOnboardingWelcomeEmail**](docs/AccountonboardingApi.md#onboardingRouterSendOnboardingWelcomeEmail) | **POST** /account/onboarding/welcome | 
 *SendPostApi.AccountpaymentApi* | [**paymentRouterApplyCouponToStripeCustomer**](docs/AccountpaymentApi.md#paymentRouterApplyCouponToStripeCustomer) | **POST** /account/payment/customer/coupon | 
 *SendPostApi.AccountpaymentApi* | [**paymentRouterCreateCustomerPortal**](docs/AccountpaymentApi.md#paymentRouterCreateCustomerPortal) | **POST** /account/payment/portal | 
 *SendPostApi.AccountpaymentApi* | [**paymentRouterCreatePaymentSubscription**](docs/AccountpaymentApi.md#paymentRouterCreatePaymentSubscription) | **POST** /account/payment/subscription | 
