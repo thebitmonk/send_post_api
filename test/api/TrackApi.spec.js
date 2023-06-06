@@ -106,6 +106,25 @@
           done();
         });
       });
+      describe('trackRouterTrackWelcomeLinkClick', function() {
+        it('should call trackRouterTrackWelcomeLinkClick successfully', function(done) {
+          // TODO: uncomment, update parameter values for trackRouterTrackWelcomeLinkClick call
+          /*
+          var redirecturl = "redirecturl_example";
+
+          instance.trackRouterTrackWelcomeLinkClick(redirecturl, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
     });
   });
 
