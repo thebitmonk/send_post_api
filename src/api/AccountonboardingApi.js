@@ -135,7 +135,7 @@
       var returnType = null;
 
       return this.apiClient.callApi(
-        '/account/onboarding/welcome', 'GET',
+        '/account/onboarding/welcome', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
