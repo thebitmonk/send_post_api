@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 
 
-Allocate IP To Account
+Allocate IP To Account 
 
 ### Example
 ```javascript
@@ -67,7 +67,7 @@ No authorization required
 
 
 
-Count Total AccountIPs
+Count Total AccountIPs 
 
 ### Example
 ```javascript
@@ -121,7 +121,7 @@ No authorization required
 
 
 
-Delete IP
+Delete IP 
 
 ### Example
 ```javascript
@@ -170,7 +170,7 @@ No authorization required
 
 
 
-Find IP by IPId
+Find IP by IPId 
 
 ### Example
 ```javascript
@@ -219,7 +219,7 @@ No authorization required
 
 
 
-Get All IPs
+Get All IPs 
 
 ### Example
 ```javascript
@@ -277,7 +277,7 @@ No authorization required
 
 
 
-Get All Incidents associated with a IP
+Get All Incidents associated with a IP 
 
 ### Example
 ```javascript
@@ -326,7 +326,7 @@ No authorization required
 
 
 
-Find AccountIPPools for IP
+Find AccountIPPools for IP 
 
 ### Example
 ```javascript
@@ -375,7 +375,7 @@ No authorization required
 
 
 
-Get IP health
+Get IP health 
 
 ### Example
 ```javascript
@@ -424,7 +424,7 @@ No authorization required
 
 
 
-Update an IP
+Update an IP 
 
 ### Example
 ```javascript

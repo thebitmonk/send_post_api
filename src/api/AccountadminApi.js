@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Responds back with a custom token for frontend to start login using firebase sdk
+     * Responds back with a custom token for frontend to start login using firebase sdk 
      * @param {String} xAccountApiKey Account API Key
      * @param {String} email email
      * @param {Object} opts Optional parameters

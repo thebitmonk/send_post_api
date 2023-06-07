@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Apply Coupon to Stripe Customer
+     * Apply Coupon to Stripe Customer 
      * @param {String} xAccountApiKey Account API Key
      * @param {module:model/ModelsCouponOptions} body Coupon Code Options
      * @param {module:api/AccountpaymentApi~paymentRouterApplyCouponToStripeCustomerCallback} callback The callback function, accepting three arguments: error, data, response
@@ -109,7 +109,7 @@
      */
 
     /**
-     * Create Customer Portal for account
+     * Create Customer Portal for account 
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountpaymentApi~paymentRouterCreateCustomerPortalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsBillingPortalSession}
@@ -156,7 +156,7 @@
      */
 
     /**
-     * Create Payment Subscription for Stripe
+     * Create Payment Subscription for Stripe 
      * @param {String} xAccountApiKey Account API Key
      * @param {module:model/ModelsPaymentOptions} body PaymentOptions content
      * @param {module:api/AccountpaymentApi~paymentRouterCreatePaymentSubscriptionCallback} callback The callback function, accepting three arguments: error, data, response
@@ -209,7 +209,7 @@
      */
 
     /**
-     * Handle Payment Related Webhooks
+     * Handle Payment Related Webhooks 
      * @param {module:api/AccountpaymentApi~paymentRouterHandlePaymentWebhookCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.paymentRouterHandlePaymentWebhook = function(callback) {

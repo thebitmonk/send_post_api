@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -98,29 +98,35 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SendPostApi.ModelsPDStat);
-            expect(data.clicked).to.be.a('number');
-            expect(data.clicked).to.be("0");
-            expect(data.delivered).to.be.a('number');
-            expect(data.delivered).to.be("0");
-            expect(data.dropped).to.be.a('number');
-            expect(data.dropped).to.be("0");
-            expect(data.hardBounced).to.be.a('number');
-            expect(data.hardBounced).to.be("0");
-            expect(data.name).to.be.a('string');
-            expect(data.name).to.be("");
-            expect(data.opened).to.be.a('number');
-            expect(data.opened).to.be("0");
-            expect(data.processed).to.be.a('number');
-            expect(data.processed).to.be("0");
-            expect(data.sent).to.be.a('number');
-            expect(data.sent).to.be("0");
-            expect(data.softBounced).to.be.a('number');
-            expect(data.softBounced).to.be("0");
-            expect(data.spam).to.be.a('number');
-            expect(data.spam).to.be("0");
-            expect(data.unsubscribed).to.be.a('number');
-            expect(data.unsubscribed).to.be("0");
+            let dataCtr = data;
+            expect(dataCtr).to.be.an(Array);
+            expect(dataCtr).to.not.be.empty();
+            for (let p in dataCtr) {
+              let data = dataCtr[p];
+              expect(data).to.be.a(SendPostApi.ModelsPDStat);
+              expect(data.clicked).to.be.a('number');
+              expect(data.clicked).to.be("0");
+              expect(data.delivered).to.be.a('number');
+              expect(data.delivered).to.be("0");
+              expect(data.dropped).to.be.a('number');
+              expect(data.dropped).to.be("0");
+              expect(data.hardBounced).to.be.a('number');
+              expect(data.hardBounced).to.be("0");
+              expect(data.name).to.be.a('string');
+              expect(data.name).to.be("");
+              expect(data.opened).to.be.a('number');
+              expect(data.opened).to.be("0");
+              expect(data.processed).to.be.a('number');
+              expect(data.processed).to.be("0");
+              expect(data.sent).to.be.a('number');
+              expect(data.sent).to.be("0");
+              expect(data.softBounced).to.be.a('number');
+              expect(data.softBounced).to.be("0");
+              expect(data.spam).to.be.a('number');
+              expect(data.spam).to.be("0");
+              expect(data.unsubscribed).to.be.a('number');
+              expect(data.unsubscribed).to.be("0");
+            }
 
             done();
           });
@@ -244,33 +250,139 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SendPostApi.ModelsDomainStat);
-            expect(data.clicked).to.be.a('number');
-            expect(data.clicked).to.be("0");
-            expect(data.day).to.be.a('number');
-            expect(data.day).to.be("0");
-            expect(data.delivered).to.be.a('number');
-            expect(data.delivered).to.be("0");
-            expect(data.dropped).to.be.a('number');
-            expect(data.dropped).to.be("0");
-            expect(data.hardBounced).to.be.a('number');
-            expect(data.hardBounced).to.be("0");
-            expect(data.month).to.be.a('number');
-            expect(data.month).to.be("0");
-            expect(data.opened).to.be.a('number');
-            expect(data.opened).to.be("0");
-            expect(data.processed).to.be.a('number');
-            expect(data.processed).to.be("0");
-            expect(data.sent).to.be.a('number');
-            expect(data.sent).to.be("0");
-            expect(data.softBounced).to.be.a('number');
-            expect(data.softBounced).to.be("0");
-            expect(data.spam).to.be.a('number');
-            expect(data.spam).to.be("0");
-            expect(data.unsubscribed).to.be.a('number');
-            expect(data.unsubscribed).to.be("0");
-            expect(data.year).to.be.a('number');
-            expect(data.year).to.be("0");
+            let dataCtr = data;
+            expect(dataCtr).to.be.an(Array);
+            expect(dataCtr).to.not.be.empty();
+            for (let p in dataCtr) {
+              let data = dataCtr[p];
+              expect(data).to.be.a(SendPostApi.ModelsRDStat);
+              expect(data.clicked).to.be.a('number');
+              expect(data.clicked).to.be("0");
+              expect(data._date).to.be.a('string');
+              expect(data._date).to.be("");
+              expect(data.delivered).to.be.a('number');
+              expect(data.delivered).to.be("0");
+              expect(data.dropped).to.be.a('number');
+              expect(data.dropped).to.be("0");
+              expect(data.hardBounced).to.be.a('number');
+              expect(data.hardBounced).to.be("0");
+              expect(data.opened).to.be.a('number');
+              expect(data.opened).to.be("0");
+              expect(data.processed).to.be.a('number');
+              expect(data.processed).to.be("0");
+              expect(data.sent).to.be.a('number');
+              expect(data.sent).to.be("0");
+              expect(data.softBounced).to.be.a('number');
+              expect(data.softBounced).to.be("0");
+              expect(data.spam).to.be.a('number');
+              expect(data.spam).to.be("0");
+              expect(data.unsubscribed).to.be.a('number');
+              expect(data.unsubscribed).to.be("0");
+            }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('domainStatRouterGetCurrentDomainBlacklistStats', function() {
+        it('should call domainStatRouterGetCurrentDomainBlacklistStats successfully', function(done) {
+          // TODO: uncomment, update parameter values for domainStatRouterGetCurrentDomainBlacklistStats call and complete the assertions
+          /*
+          var xAccountApiKey = "xAccountApiKey_example";
+          var domainId = 789;
+
+          instance.domainStatRouterGetCurrentDomainBlacklistStats(xAccountApiKey, domainId, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelsBlacklistResource);
+            expect(data.addDate).to.be.a('number');
+            expect(data.addDate).to.be("0");
+            expect(data.blacklistedCount).to.be.a('string');
+            expect(data.blacklistedCount).to.be("");
+            {
+              let dataCtr = data.blacklistedOn;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(SendPostApi.ModelsBlacklistedOn);
+                expect(data.delist).to.be.a('string');
+                expect(data.delist).to.be("");
+                expect(data.RBL).to.be.a('string');
+                expect(data.RBL).to.be("");
+
+                      }
+            }
+            expect(data.contactListID).to.be.a('string');
+            expect(data.contactListID).to.be("");
+            expect(data.ID).to.be.a('string');
+            expect(data.ID).to.be("");
+            expect(data.label).to.be.a('string');
+            expect(data.label).to.be("");
+            expect(data.lastCheck).to.be.a('number');
+            expect(data.lastCheck).to.be("0");
+            expect(data.links).to.be.a(SendPostApi.ModelsLinks);
+                  expect(data.links.reportLink).to.be.a('string');
+              expect(data.links.reportLink).to.be("");
+              expect(data.links.whitelabelReportLink).to.be.a('string');
+              expect(data.links.whitelabelReportLink).to.be("");
+            expect(data.status).to.be.a('string');
+            expect(data.status).to.be("");
+            expect(data.target).to.be.a('string');
+            expect(data.target).to.be("");
+            expect(data.type).to.be.a('string');
+            expect(data.type).to.be("");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('domainStatRouterGetCurrentDomainPostmasterStats', function() {
+        it('should call domainStatRouterGetCurrentDomainPostmasterStats successfully', function(done) {
+          // TODO: uncomment, update parameter values for domainStatRouterGetCurrentDomainPostmasterStats call and complete the assertions
+          /*
+          var xAccountApiKey = "xAccountApiKey_example";
+          var domainId = 789;
+          var opts = {};
+          opts.from = "from_example";
+          opts.to = "to_example";
+
+          instance.domainStatRouterGetCurrentDomainPostmasterStats(xAccountApiKey, domainId, opts, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            let dataCtr = data;
+            expect(dataCtr).to.be.an(Array);
+            expect(dataCtr).to.not.be.empty();
+            for (let p in dataCtr) {
+              let data = dataCtr[p];
+              expect(data).to.be.a(SendPostApi.ModelsPostmasterDomainStat);
+              expect(data.dKIMSuccess).to.be.a('string');
+              expect(data.dKIMSuccess).to.be("");
+              expect(data.dMARCSuccess).to.be.a('string');
+              expect(data.dMARCSuccess).to.be("");
+              expect(data.sPFSuccess).to.be.a('string');
+              expect(data.sPFSuccess).to.be("");
+              expect(data._date).to.be.a('string');
+              expect(data._date).to.be("");
+              expect(data.domainReputation).to.be.a('string');
+              expect(data.domainReputation).to.be("");
+              expect(data.name).to.be.a('string');
+              expect(data.name).to.be("");
+              expect(data.spam).to.be.a('string');
+              expect(data.spam).to.be("");
+            }
 
             done();
           });
@@ -288,6 +400,7 @@
           var opts = {};
           opts.from = "from_example";
           opts.to = "to_example";
+          opts.filterValue = 789;
 
           instance.domainStatRouterGetStatsForASingleDomainStats(xAccountApiKey, domainId, opts, function(error, data, response) {
             if (error) {

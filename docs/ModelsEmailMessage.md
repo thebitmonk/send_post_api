@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **ampBody** | **String** |  | [optional] 
 **attachments** | [**[ModelsAttachment]**](ModelsAttachment.md) |  | [optional] 
 **from** | [**ModelsFrom**](ModelsFrom.md) |  | [optional] 
-**groups** | **Object** |  | [optional] 
+**groups** | **[String]** |  | [optional] 
 **headers** | **Object** |  | [optional] 
 **htmlBody** | **String** |  | [optional] 
 **ippool** | **String** |  | [optional] 

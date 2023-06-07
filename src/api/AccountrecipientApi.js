@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Find all messages sent to a specific recipient
+     * Find all messages sent to a specific recipient 
      * @param {String} xAccountApiKey Account API Key
      * @param {String} recipient email of the recipient
      * @param {module:api/AccountrecipientApi~recipientRouterGetAllMessagesForARecipientCallback} callback The callback function, accepting three arguments: error, data, response
@@ -111,7 +111,7 @@
      */
 
     /**
-     * Find all message sent to a recipient from a specific node
+     * Find all message sent to a recipient from a specific node 
      * @param {String} xAccountApiKey Account API Key
      * @param {String} recipient email of the recipient
      * @param {module:api/AccountrecipientApi~recipientRouterGetAllMessagesForARecipientFromANodeCallback} callback The callback function, accepting three arguments: error, data, response

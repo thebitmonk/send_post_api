@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 
-Delete Member
+Delete Member 
 
 ### Example
 ```javascript
@@ -66,7 +66,7 @@ No authorization required
 
 
 
-Find Member by MemberId
+Find Member by MemberId 
 
 ### Example
 ```javascript
@@ -115,7 +115,7 @@ No authorization required
 
 
 
-Get All Members
+Get All Members 
 
 ### Example
 ```javascript
@@ -161,7 +161,7 @@ No authorization required
 
 
 
-Update Member
+Update Member 
 
 ### Example
 ```javascript
@@ -213,7 +213,7 @@ No authorization required
 
 
 
-Verify Member By Email Request
+Verify Member By Email Request 
 
 ### Example
 ```javascript

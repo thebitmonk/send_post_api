@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 
-Add Email Addresses To Suppression List
+Add Email Addresses To Suppression List 
 
 ### Example
 ```javascript

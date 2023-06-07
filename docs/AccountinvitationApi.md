@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 
-Create Invitation
+Create Invitation 
 
 ### Example
 ```javascript
@@ -64,7 +64,7 @@ No authorization required
 
 
 
-Delete Invitation
+Delete Invitation 
 
 ### Example
 ```javascript
@@ -113,7 +113,7 @@ No authorization required
 
 
 
-Get All Invitations
+Get All Invitations 
 
 ### Example
 ```javascript

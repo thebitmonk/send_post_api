@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 
-Apply Coupon to Stripe Customer
+Apply Coupon to Stripe Customer 
 
 ### Example
 ```javascript
@@ -65,7 +65,7 @@ No authorization required
 
 
 
-Create Customer Portal for account
+Create Customer Portal for account 
 
 ### Example
 ```javascript
@@ -111,7 +111,7 @@ No authorization required
 
 
 
-Create Payment Subscription for Stripe
+Create Payment Subscription for Stripe 
 
 ### Example
 ```javascript
@@ -160,7 +160,7 @@ No authorization required
 
 
 
-Handle Payment Related Webhooks
+Handle Payment Related Webhooks 
 
 ### Example
 ```javascript

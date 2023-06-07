@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 
-Get all System Templates
+Get all System Templates 
 
 ### Example
 ```javascript
