@@ -31,20 +31,14 @@
   var instance;
 
   describe('(package)', function() {
-    describe('ModelsAGDomainStat', function() {
+    describe('ModelsRDStat', function() {
       beforeEach(function() {
-        instance = new SendPostApi.ModelsAGDomainStat();
+        instance = new SendPostApi.ModelsRDStat();
       });
 
-      it('should create an instance of ModelsAGDomainStat', function() {
-        // TODO: update the code to test ModelsAGDomainStat
-        expect(instance).to.be.a(SendPostApi.ModelsAGDomainStat);
-      });
-
-      it('should have the property domainId (base name: "DomainId")', function() {
-        // TODO: update the code to test the property domainId
-        expect(instance).to.have.property('domainId');
-        // expect(instance.domainId).to.be(expectedValueLiteral);
+      it('should create an instance of ModelsRDStat', function() {
+        // TODO: update the code to test ModelsRDStat
+        expect(instance).to.be.a(SendPostApi.ModelsRDStat);
       });
 
       it('should have the property clicked (base name: "clicked")', function() {
@@ -53,16 +47,16 @@
         // expect(instance.clicked).to.be(expectedValueLiteral);
       });
 
+      it('should have the property _date (base name: "date")', function() {
+        // TODO: update the code to test the property _date
+        expect(instance).to.have.property('_date');
+        // expect(instance._date).to.be(expectedValueLiteral);
+      });
+
       it('should have the property delivered (base name: "delivered")', function() {
         // TODO: update the code to test the property delivered
         expect(instance).to.have.property('delivered');
         // expect(instance.delivered).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property domain (base name: "domain")', function() {
-        // TODO: update the code to test the property domain
-        expect(instance).to.have.property('domain');
-        // expect(instance.domain).to.be(expectedValueLiteral);
       });
 
       it('should have the property dropped (base name: "dropped")', function() {

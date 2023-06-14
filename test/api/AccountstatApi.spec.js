@@ -260,6 +260,8 @@
             for (let p in dataCtr) {
               let data = dataCtr[p];
               expect(data).to.be.a(SendPostApi.ModelsAGDomainStat);
+              expect(data.domainId).to.be.a('number');
+              expect(data.domainId).to.be("0");
               expect(data.clicked).to.be.a('number');
               expect(data.clicked).to.be("0");
               expect(data.delivered).to.be.a('number');
