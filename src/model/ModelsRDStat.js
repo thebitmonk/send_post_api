@@ -26,43 +26,41 @@
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsAGDomainStat = factory(root.SendPostApi.ApiClient);
+    root.SendPostApi.ModelsRDStat = factory(root.SendPostApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The ModelsAGDomainStat model module.
-   * @module model/ModelsAGDomainStat
+   * The ModelsRDStat model module.
+   * @module model/ModelsRDStat
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>ModelsAGDomainStat</code>.
-   * @alias module:model/ModelsAGDomainStat
+   * Constructs a new <code>ModelsRDStat</code>.
+   * @alias module:model/ModelsRDStat
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>ModelsAGDomainStat</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ModelsRDStat</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ModelsAGDomainStat} obj Optional instance to populate.
-   * @return {module:model/ModelsAGDomainStat} The populated <code>ModelsAGDomainStat</code> instance.
+   * @param {module:model/ModelsRDStat} obj Optional instance to populate.
+   * @return {module:model/ModelsRDStat} The populated <code>ModelsRDStat</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('DomainId'))
-        obj.domainId = ApiClient.convertToType(data['DomainId'], 'Number');
       if (data.hasOwnProperty('clicked'))
         obj.clicked = ApiClient.convertToType(data['clicked'], 'Number');
+      if (data.hasOwnProperty('date'))
+        obj._date = ApiClient.convertToType(data['date'], 'String');
       if (data.hasOwnProperty('delivered'))
         obj.delivered = ApiClient.convertToType(data['delivered'], 'Number');
-      if (data.hasOwnProperty('domain'))
-        obj.domain = ApiClient.convertToType(data['domain'], 'String');
       if (data.hasOwnProperty('dropped'))
         obj.dropped = ApiClient.convertToType(data['dropped'], 'Number');
       if (data.hasOwnProperty('hardBounced'))
@@ -84,24 +82,19 @@
   }
 
   /**
-   * @member {Number} domainId
-   */
-  exports.prototype.domainId = undefined;
-
-  /**
    * @member {Number} clicked
    */
   exports.prototype.clicked = undefined;
 
   /**
+   * @member {String} _date
+   */
+  exports.prototype._date = undefined;
+
+  /**
    * @member {Number} delivered
    */
   exports.prototype.delivered = undefined;
-
-  /**
-   * @member {String} domain
-   */
-  exports.prototype.domain = undefined;
 
   /**
    * @member {Number} dropped
