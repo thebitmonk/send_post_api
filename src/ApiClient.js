@@ -47,9 +47,9 @@
     /**
      * The base URL against which to resolve every API call's (relative) path.
      * @type {String}
-     * @default http://127.0.0.1:8081/api/v1
+     * @default http://api-stag.sendpost.io/api/v1
      */
-    this.basePath = 'http://127.0.0.1:8081/api/v1'.replace(/\/+$/, '');
+    this.basePath = 'http://api-stag.sendpost.io/api/v1'.replace(/\/+$/, '');
 
     /**
      * The authentication methods to be included for all API calls.
