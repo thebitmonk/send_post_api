@@ -118,7 +118,7 @@ api.accountAdminRouterAssumeAccountGetToken(xAccountApiKey, email, opts, callbac
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://api-stag.sendpost.io/api/v1*
+All URIs are relative to *https://api-stag.sendpost.io/api/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
