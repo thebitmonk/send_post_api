@@ -1,12 +1,11 @@
-# SendPostApi.ModelsAGDomainStat
+# SendPostApi.ModelsRDStat
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**domainId** | **Number** |  | [optional] 
 **clicked** | **Number** |  | [optional] 
+**_date** | **String** |  | [optional] 
 **delivered** | **Number** |  | [optional] 
-**domain** | **String** |  | [optional] 
 **dropped** | **Number** |  | [optional] 
 **hardBounced** | **Number** |  | [optional] 
 **opened** | **Number** |  | [optional] 
