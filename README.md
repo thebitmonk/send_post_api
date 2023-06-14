@@ -129,6 +129,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountalertApi* | [**alertRouterGetAll**](docs/AccountalertApi.md#alertRouterGetAll) | **GET** /account/alert/ | 
 *SendPostApi.AccountalertApi* | [**alertRouterUpdate**](docs/AccountalertApi.md#alertRouterUpdate) | **PUT** /account/alert/{alertId} | 
 *SendPostApi.AccountdomainApi* | [**accountDomainRouterCount**](docs/AccountdomainApi.md#accountDomainRouterCount) | **GET** /account/domain/count | 
+*SendPostApi.AccountdomainApi* | [**accountDomainRouterGet**](docs/AccountdomainApi.md#accountDomainRouterGet) | **GET** /account/domain/{domainId} | 
 *SendPostApi.AccountdomainApi* | [**accountDomainRouterGetAll**](docs/AccountdomainApi.md#accountDomainRouterGetAll) | **GET** /account/domain/ | 
 *SendPostApi.AccountdomainReportApi* | [**domainReportRouterReputation**](docs/AccountdomainReportApi.md#domainReportRouterReputation) | **GET** /account/domainReport/reputation | 
 *SendPostApi.AccountdomainstatApi* | [**domainStatRouterGetAllAggregateDomainStatsByGroup**](docs/AccountdomainstatApi.md#domainStatRouterGetAllAggregateDomainStatsByGroup) | **GET** /account/domain/stat/{domainId}/aggregate/provider | 
@@ -136,6 +137,8 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountdomainstatApi* | [**domainStatRouterGetAllAggregatedProviderStatsForASpecificSubAccountOfADomain**](docs/AccountdomainstatApi.md#domainStatRouterGetAllAggregatedProviderStatsForASpecificSubAccountOfADomain) | **GET** /account/domain/stat/{domainId}/aggregate/sid/{sid}/providers | 
 *SendPostApi.AccountdomainstatApi* | [**domainStatRouterGetAllAggregatedSubAccountStatsForAnDomain**](docs/AccountdomainstatApi.md#domainStatRouterGetAllAggregatedSubAccountStatsForAnDomain) | **GET** /account/domain/stat/{domainId}/aggregate/subaccounts | 
 *SendPostApi.AccountdomainstatApi* | [**domainStatRouterGetAllDomainStats**](docs/AccountdomainstatApi.md#domainStatRouterGetAllDomainStats) | **GET** /account/domain/stat/{domainId} | 
+*SendPostApi.AccountdomainstatApi* | [**domainStatRouterGetCurrentDomainBlacklistStats**](docs/AccountdomainstatApi.md#domainStatRouterGetCurrentDomainBlacklistStats) | **GET** /account/domain/stat/{domainId}/hetrixtools/stat | 
+*SendPostApi.AccountdomainstatApi* | [**domainStatRouterGetCurrentDomainPostmasterStats**](docs/AccountdomainstatApi.md#domainStatRouterGetCurrentDomainPostmasterStats) | **GET** /account/domain/stat/{domainId}/postmaster/stat | 
 *SendPostApi.AccountdomainstatApi* | [**domainStatRouterGetStatsForASingleDomainStats**](docs/AccountdomainstatApi.md#domainStatRouterGetStatsForASingleDomainStats) | **GET** /account/domain/stat/{domainId}/aggregate | 
 *SendPostApi.AccounteventApi* | [**eventRouterCountAllEventsFromAAccountForAGivenTimeRange**](docs/AccounteventApi.md#eventRouterCountAllEventsFromAAccountForAGivenTimeRange) | **GET** /account/event/count | 
 *SendPostApi.AccounteventApi* | [**eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange**](docs/AccounteventApi.md#eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange) | **GET** /account/event/node/count | 
@@ -342,7 +345,9 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsBillingPortalSession](docs/ModelsBillingPortalSession.md)
  - [SendPostApi.ModelsBlackListEngine](docs/ModelsBlackListEngine.md)
  - [SendPostApi.ModelsBlackListResult](docs/ModelsBlackListResult.md)
+ - [SendPostApi.ModelsBlacklistResource](docs/ModelsBlacklistResource.md)
  - [SendPostApi.ModelsBlacklistStatus](docs/ModelsBlacklistStatus.md)
+ - [SendPostApi.ModelsBlacklistedOn](docs/ModelsBlacklistedOn.md)
  - [SendPostApi.ModelsBulkResponse](docs/ModelsBulkResponse.md)
  - [SendPostApi.ModelsCertificateDetails](docs/ModelsCertificateDetails.md)
  - [SendPostApi.ModelsCertificateExtensions](docs/ModelsCertificateExtensions.md)
@@ -367,7 +372,6 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsDomain](docs/ModelsDomain.md)
  - [SendPostApi.ModelsDomainAge](docs/ModelsDomainAge.md)
  - [SendPostApi.ModelsDomainCheckResult](docs/ModelsDomainCheckResult.md)
- - [SendPostApi.ModelsDomainStat](docs/ModelsDomainStat.md)
  - [SendPostApi.ModelsEAccount](docs/ModelsEAccount.md)
  - [SendPostApi.ModelsEAccountMember](docs/ModelsEAccountMember.md)
  - [SendPostApi.ModelsEAccountSetting](docs/ModelsEAccountSetting.md)
@@ -420,6 +424,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsInvitationStatus](docs/ModelsInvitationStatus.md)
  - [SendPostApi.ModelsLabel](docs/ModelsLabel.md)
  - [SendPostApi.ModelsLabelType](docs/ModelsLabelType.md)
+ - [SendPostApi.ModelsLinks](docs/ModelsLinks.md)
  - [SendPostApi.ModelsMailReportResult](docs/ModelsMailReportResult.md)
  - [SendPostApi.ModelsMember](docs/ModelsMember.md)
  - [SendPostApi.ModelsMemberRole](docs/ModelsMemberRole.md)
@@ -428,6 +433,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsPDStat](docs/ModelsPDStat.md)
  - [SendPostApi.ModelsPaymentOptions](docs/ModelsPaymentOptions.md)
  - [SendPostApi.ModelsPaymentStatus](docs/ModelsPaymentStatus.md)
+ - [SendPostApi.ModelsPostmasterDomainStat](docs/ModelsPostmasterDomainStat.md)
  - [SendPostApi.ModelsProvider](docs/ModelsProvider.md)
  - [SendPostApi.ModelsProviderDetails](docs/ModelsProviderDetails.md)
  - [SendPostApi.ModelsProviderResult](docs/ModelsProviderResult.md)
@@ -436,6 +442,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsQEmailMessage](docs/ModelsQEmailMessage.md)
  - [SendPostApi.ModelsQEvent](docs/ModelsQEvent.md)
  - [SendPostApi.ModelsRAssumeAccount](docs/ModelsRAssumeAccount.md)
+ - [SendPostApi.ModelsRDStat](docs/ModelsRDStat.md)
  - [SendPostApi.ModelsRDSuppression](docs/ModelsRDSuppression.md)
  - [SendPostApi.ModelsRHetrixtoolsMonitorStat](docs/ModelsRHetrixtoolsMonitorStat.md)
  - [SendPostApi.ModelsRIPStat](docs/ModelsRIPStat.md)
