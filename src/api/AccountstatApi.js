@@ -655,7 +655,7 @@
      * Callback function to receive the result of the accountStatRouterGetAllAggregateSubAccountStatsCount operation.
      * @callback module:api/AccountstatApi~accountStatRouterGetAllAggregateSubAccountStatsCountCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ModelsCountStat>} data The data returned by the service call.
+     * @param {module:model/ModelsCountStat} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -669,7 +669,7 @@
      * @param {Number} opts.filterValue filterValue
      * @param {String} opts.search search term
      * @param {module:api/AccountstatApi~accountStatRouterGetAllAggregateSubAccountStatsCountCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ModelsCountStat>}
+     * data is of type: {@link module:model/ModelsCountStat}
      */
     this.accountStatRouterGetAllAggregateSubAccountStatsCount = function(xAccountApiKey, from, to, opts, callback) {
       opts = opts || {};
@@ -711,7 +711,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = [ModelsCountStat];
+      var returnType = ModelsCountStat;
 
       return this.apiClient.callApi(
         '/account/stat/aggregate/subaccount/count', 'GET',

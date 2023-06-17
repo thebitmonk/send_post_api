@@ -564,7 +564,7 @@ No authorization required
 
 <a name="accountStatRouterGetAllAggregateSubAccountStatsCount"></a>
 # **accountStatRouterGetAllAggregateSubAccountStatsCount**
-> [ModelsCountStat] accountStatRouterGetAllAggregateSubAccountStatsCount(xAccountApiKey, from, to, opts)
+> ModelsCountStat accountStatRouterGetAllAggregateSubAccountStatsCount(xAccountApiKey, from, to, opts)
 
 
 
@@ -611,7 +611,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[ModelsCountStat]**](ModelsCountStat.md)
+[**ModelsCountStat**](ModelsCountStat.md)
 
 ### Authorization
 

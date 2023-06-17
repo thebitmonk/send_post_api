@@ -495,15 +495,9 @@
               return;
             }
             // TODO: update response assertions
-            let dataCtr = data;
-            expect(dataCtr).to.be.an(Array);
-            expect(dataCtr).to.not.be.empty();
-            for (let p in dataCtr) {
-              let data = dataCtr[p];
-              expect(data).to.be.a(SendPostApi.ModelsCountStat);
-              expect(data.count).to.be.a('number');
-              expect(data.count).to.be("0");
-            }
+            expect(data).to.be.a(SendPostApi.ModelsCountStat);
+            expect(data.count).to.be.a('number');
+            expect(data.count).to.be("0");
 
             done();
           });
