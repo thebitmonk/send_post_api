@@ -293,6 +293,35 @@
           done();
         });
       });
+      describe('accountStatRouterGetAllAggregateDomainStatsCount', function() {
+        it('should call accountStatRouterGetAllAggregateDomainStatsCount successfully', function(done) {
+          // TODO: uncomment, update parameter values for accountStatRouterGetAllAggregateDomainStatsCount call and complete the assertions
+          /*
+          var xAccountApiKey = "xAccountApiKey_example";
+          var from = "from_example";
+          var to = "to_example";
+          var opts = {};
+          opts.filterBy = "filterBy_example";
+          opts.filterValue = 789;
+          opts.search = "search_example";
+
+          instance.accountStatRouterGetAllAggregateDomainStatsCount(xAccountApiKey, from, to, opts, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelsCountStat);
+            expect(data.count).to.be.a('number');
+            expect(data.count).to.be("0");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('accountStatRouterGetAllAggregateIPStats', function() {
         it('should call accountStatRouterGetAllAggregateIPStats successfully', function(done) {
           // TODO: uncomment, update parameter values for accountStatRouterGetAllAggregateIPStats call and complete the assertions
@@ -356,6 +385,37 @@
           done();
         });
       });
+      describe('accountStatRouterGetAllAggregateIPStatsCount', function() {
+        it('should call accountStatRouterGetAllAggregateIPStatsCount successfully', function(done) {
+          // TODO: uncomment, update parameter values for accountStatRouterGetAllAggregateIPStatsCount call and complete the assertions
+          /*
+          var xAccountApiKey = "xAccountApiKey_example";
+          var from = "from_example";
+          var to = "to_example";
+          var opts = {};
+          opts.filterBy = "filterBy_example";
+          opts.filterValue = 789;
+          opts.limitBy = "limitBy_example";
+          opts.limitValue = 789;
+          opts.search = "search_example";
+
+          instance.accountStatRouterGetAllAggregateIPStatsCount(xAccountApiKey, from, to, opts, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelsCountStat);
+            expect(data.count).to.be.a('number');
+            expect(data.count).to.be("0");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('accountStatRouterGetAllAggregateSubAccountStats', function() {
         it('should call accountStatRouterGetAllAggregateSubAccountStats successfully', function(done) {
           // TODO: uncomment, update parameter values for accountStatRouterGetAllAggregateSubAccountStats call and complete the assertions
@@ -409,6 +469,35 @@
               expect(data.unsubscribed).to.be.a('number');
               expect(data.unsubscribed).to.be("0");
             }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('accountStatRouterGetAllAggregateSubAccountStatsCount', function() {
+        it('should call accountStatRouterGetAllAggregateSubAccountStatsCount successfully', function(done) {
+          // TODO: uncomment, update parameter values for accountStatRouterGetAllAggregateSubAccountStatsCount call and complete the assertions
+          /*
+          var xAccountApiKey = "xAccountApiKey_example";
+          var from = "from_example";
+          var to = "to_example";
+          var opts = {};
+          opts.filterBy = "filterBy_example";
+          opts.filterValue = 789;
+          opts.search = "search_example";
+
+          instance.accountStatRouterGetAllAggregateSubAccountStatsCount(xAccountApiKey, from, to, opts, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelsCountStat);
+            expect(data.count).to.be.a('number');
+            expect(data.count).to.be("0");
 
             done();
           });

@@ -9,8 +9,11 @@ Method | HTTP request | Description
 [**accountStatRouterGetAllAggregateAccountStats**](AccountstatApi.md#accountStatRouterGetAllAggregateAccountStats) | **GET** /account/stat/aggregate | 
 [**accountStatRouterGetAllAggregateAccountStatsByGroup**](AccountstatApi.md#accountStatRouterGetAllAggregateAccountStatsByGroup) | **GET** /account/stat/aggregate/group | 
 [**accountStatRouterGetAllAggregateDomainStats**](AccountstatApi.md#accountStatRouterGetAllAggregateDomainStats) | **GET** /account/stat/aggregate/domain | 
+[**accountStatRouterGetAllAggregateDomainStatsCount**](AccountstatApi.md#accountStatRouterGetAllAggregateDomainStatsCount) | **GET** /account/stat/aggregate/domain/count | 
 [**accountStatRouterGetAllAggregateIPStats**](AccountstatApi.md#accountStatRouterGetAllAggregateIPStats) | **GET** /account/stat/aggregate/ip | 
+[**accountStatRouterGetAllAggregateIPStatsCount**](AccountstatApi.md#accountStatRouterGetAllAggregateIPStatsCount) | **GET** /account/stat/aggregate/ip/count | 
 [**accountStatRouterGetAllAggregateSubAccountStats**](AccountstatApi.md#accountStatRouterGetAllAggregateSubAccountStats) | **GET** /account/stat/aggregate/subaccount | 
+[**accountStatRouterGetAllAggregateSubAccountStatsCount**](AccountstatApi.md#accountStatRouterGetAllAggregateSubAccountStatsCount) | **GET** /account/stat/aggregate/subaccount/count | 
 
 
 <a name="accountStatRouterGetAllAccountStats"></a>
@@ -295,6 +298,66 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="accountStatRouterGetAllAggregateDomainStatsCount"></a>
+# **accountStatRouterGetAllAggregateDomainStatsCount**
+> ModelsCountStat accountStatRouterGetAllAggregateDomainStatsCount(xAccountApiKey, from, to, opts)
+
+
+
+Get All Aggregate Domain Stats Count
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccountstatApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var from = "from_example"; // String | from date
+
+var to = "to_example"; // String | to date
+
+var opts = { 
+  'filterBy': "filterBy_example", // String | filterBy
+  'filterValue': 789, // Number | filterValue
+  'search': "search_example" // String | search term
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.accountStatRouterGetAllAggregateDomainStatsCount(xAccountApiKey, from, to, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xAccountApiKey** | **String**| Account API Key | 
+ **from** | **String**| from date | 
+ **to** | **String**| to date | 
+ **filterBy** | **String**| filterBy | [optional] 
+ **filterValue** | **Number**| filterValue | [optional] 
+ **search** | **String**| search term | [optional] 
+
+### Return type
+
+[**ModelsCountStat**](ModelsCountStat.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="accountStatRouterGetAllAggregateIPStats"></a>
 # **accountStatRouterGetAllAggregateIPStats**
 > [ModelsAGIPStat] accountStatRouterGetAllAggregateIPStats(xAccountApiKey, from, to, opts)
@@ -367,6 +430,70 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="accountStatRouterGetAllAggregateIPStatsCount"></a>
+# **accountStatRouterGetAllAggregateIPStatsCount**
+> ModelsCountStat accountStatRouterGetAllAggregateIPStatsCount(xAccountApiKey, from, to, opts)
+
+
+
+Get All Aggregate IP Stats Count
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccountstatApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var from = "from_example"; // String | from date
+
+var to = "to_example"; // String | to date
+
+var opts = { 
+  'filterBy': "filterBy_example", // String | filterBy
+  'filterValue': 789, // Number | filterValue
+  'limitBy': "limitBy_example", // String | limitBy
+  'limitValue': 789, // Number | limitValue
+  'search': "search_example" // String | search term
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.accountStatRouterGetAllAggregateIPStatsCount(xAccountApiKey, from, to, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xAccountApiKey** | **String**| Account API Key | 
+ **from** | **String**| from date | 
+ **to** | **String**| to date | 
+ **filterBy** | **String**| filterBy | [optional] 
+ **filterValue** | **Number**| filterValue | [optional] 
+ **limitBy** | **String**| limitBy | [optional] 
+ **limitValue** | **Number**| limitValue | [optional] 
+ **search** | **String**| search term | [optional] 
+
+### Return type
+
+[**ModelsCountStat**](ModelsCountStat.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="accountStatRouterGetAllAggregateSubAccountStats"></a>
 # **accountStatRouterGetAllAggregateSubAccountStats**
 > [ModelsAGSubAccountStat] accountStatRouterGetAllAggregateSubAccountStats(xAccountApiKey, from, to, opts)
@@ -425,6 +552,66 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[ModelsAGSubAccountStat]**](ModelsAGSubAccountStat.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="accountStatRouterGetAllAggregateSubAccountStatsCount"></a>
+# **accountStatRouterGetAllAggregateSubAccountStatsCount**
+> ModelsCountStat accountStatRouterGetAllAggregateSubAccountStatsCount(xAccountApiKey, from, to, opts)
+
+
+
+Get All Aggregate SubAccount Stats Count
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccountstatApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var from = "from_example"; // String | from date
+
+var to = "to_example"; // String | to date
+
+var opts = { 
+  'filterBy': "filterBy_example", // String | filterBy
+  'filterValue': 789, // Number | filterValue
+  'search': "search_example" // String | search term
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.accountStatRouterGetAllAggregateSubAccountStatsCount(xAccountApiKey, from, to, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xAccountApiKey** | **String**| Account API Key | 
+ **from** | **String**| from date | 
+ **to** | **String**| to date | 
+ **filterBy** | **String**| filterBy | [optional] 
+ **filterValue** | **Number**| filterValue | [optional] 
+ **search** | **String**| search term | [optional] 
+
+### Return type
+
+[**ModelsCountStat**](ModelsCountStat.md)
 
 ### Authorization
 
