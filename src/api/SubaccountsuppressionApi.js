@@ -298,6 +298,60 @@
     }
 
     /**
+     * Callback function to receive the result of the suppressionRouterExportAllSuppressions operation.
+     * @callback module:api/SubaccountsuppressionApi~suppressionRouterExportAllSuppressionsCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Export all suppressions
+     * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.from from date
+     * @param {String} opts.to to date
+     * @param {String} opts.email member email
+     * @param {module:api/SubaccountsuppressionApi~suppressionRouterExportAllSuppressionsCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.suppressionRouterExportAllSuppressions = function(xSubAccountApiKey, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'xSubAccountApiKey' is set
+      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling suppressionRouterExportAllSuppressions");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'from': opts['from'],
+        'to': opts['to'],
+        'email': opts['email'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-SubAccount-ApiKey': xSubAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/subaccount/suppression/export', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the suppressionRouterGetAllSuppressions operation.
      * @callback module:api/SubaccountsuppressionApi~suppressionRouterGetAllSuppressionsCallback
      * @param {String} error Error message, if any.

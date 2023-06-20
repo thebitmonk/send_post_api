@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**suppressionRouterCreateSuppressionsInSuppressionFilter**](SubaccountsuppressionApi.md#suppressionRouterCreateSuppressionsInSuppressionFilter) | **POST** /subaccount/suppression/filter | 
 [**suppressionRouterDeleteSuppression**](SubaccountsuppressionApi.md#suppressionRouterDeleteSuppression) | **DELETE** /subaccount/suppression/ | 
 [**suppressionRouterDeleteSuppressionsInSuppressionFilter**](SubaccountsuppressionApi.md#suppressionRouterDeleteSuppressionsInSuppressionFilter) | **DELETE** /subaccount/suppression/filter | 
+[**suppressionRouterExportAllSuppressions**](SubaccountsuppressionApi.md#suppressionRouterExportAllSuppressions) | **POST** /subaccount/suppression/export | 
 [**suppressionRouterGetAllSuppressions**](SubaccountsuppressionApi.md#suppressionRouterGetAllSuppressions) | **GET** /subaccount/suppression/ | 
 
 
@@ -240,6 +241,60 @@ apiInstance.suppressionRouterDeleteSuppressionsInSuppressionFilter(body, callbac
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**ModelsSuppression**](ModelsSuppression.md)| Suppression content | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="suppressionRouterExportAllSuppressions"></a>
+# **suppressionRouterExportAllSuppressions**
+> suppressionRouterExportAllSuppressions(xSubAccountApiKey, opts)
+
+
+
+Export all suppressions
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.SubaccountsuppressionApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var opts = { 
+  'from': "from_example", // String | from date
+  'to': "to_example", // String | to date
+  'email': "email_example" // String | member email
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+apiInstance.suppressionRouterExportAllSuppressions(xSubAccountApiKey, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **from** | **String**| from date | [optional] 
+ **to** | **String**| to date | [optional] 
+ **email** | **String**| member email | [optional] 
 
 ### Return type
 
