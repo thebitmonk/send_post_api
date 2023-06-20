@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -130,6 +130,34 @@
               done(error);
               return;
             }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('paymentRouterUpdatePaymentSubscription', function() {
+        it('should call paymentRouterUpdatePaymentSubscription successfully', function(done) {
+          // TODO: uncomment, update parameter values for paymentRouterUpdatePaymentSubscription call and complete the assertions
+          /*
+          var xAccountApiKey = "xAccountApiKey_example";
+          var body = new SendPostApi.ModelsPaymentOptions();
+          body.customerId = "";
+          body.ipCount = "0";
+          body.paymentMethodId = "";
+          body.priceId = "";
+
+          instance.paymentRouterUpdatePaymentSubscription(xAccountApiKey, body, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelsPaymentStatus);
+            expect(data.status).to.be.a('string');
+            expect(data.status).to.be("");
 
             done();
           });

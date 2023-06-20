@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -51,12 +51,6 @@
         // TODO: update the code to test the property apiKey
         expect(instance).to.have.property('apiKey');
         // expect(instance.apiKey).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property brandColor (base name: "brandColor")', function() {
-        // TODO: update the code to test the property brandColor
-        expect(instance).to.have.property('brandColor');
-        // expect(instance.brandColor).to.be(expectedValueLiteral);
       });
 
       it('should have the property companyName (base name: "companyName")', function() {
@@ -173,16 +167,16 @@
         // expect(instance.stripeBasePriceId).to.be(expectedValueLiteral);
       });
 
+      it('should have the property stripeSubscriptionItemId (base name: "stripeSubscriptionItemId")', function() {
+        // TODO: update the code to test the property stripeSubscriptionItemId
+        expect(instance).to.have.property('stripeSubscriptionItemId');
+        // expect(instance.stripeSubscriptionItemId).to.be(expectedValueLiteral);
+      });
+
       it('should have the property stripeUsagePriceId (base name: "stripeUsagePriceId")', function() {
         // TODO: update the code to test the property stripeUsagePriceId
         expect(instance).to.have.property('stripeUsagePriceId');
         // expect(instance.stripeUsagePriceId).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property switchingSendpostDescription (base name: "switchingSendpostDescription")', function() {
-        // TODO: update the code to test the property switchingSendpostDescription
-        expect(instance).to.have.property('switchingSendpostDescription');
-        // expect(instance.switchingSendpostDescription).to.be(expectedValueLiteral);
       });
 
     });

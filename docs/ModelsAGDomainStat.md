@@ -3,7 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**domainId** | **Number** |  | [optional] 
 **clicked** | **Number** |  | [optional] 
 **delivered** | **Number** |  | [optional] 
 **domain** | **String** |  | [optional] 

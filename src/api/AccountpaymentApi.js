@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Apply Coupon to Stripe Customer
+     * Apply Coupon to Stripe Customer <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:model/ModelsCouponOptions} body Coupon Code Options
      * @param {module:api/AccountpaymentApi~paymentRouterApplyCouponToStripeCustomerCallback} callback The callback function, accepting three arguments: error, data, response
@@ -109,7 +109,7 @@
      */
 
     /**
-     * Create Customer Portal for account
+     * Create Customer Portal for account <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountpaymentApi~paymentRouterCreateCustomerPortalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsBillingPortalSession}
@@ -156,7 +156,7 @@
      */
 
     /**
-     * Create Payment Subscription for Stripe
+     * Create Payment Subscription for Stripe <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:model/ModelsPaymentOptions} body PaymentOptions content
      * @param {module:api/AccountpaymentApi~paymentRouterCreatePaymentSubscriptionCallback} callback The callback function, accepting three arguments: error, data, response
@@ -209,7 +209,7 @@
      */
 
     /**
-     * Handle Payment Related Webhooks
+     * Handle Payment Related Webhooks <br>
      * @param {module:api/AccountpaymentApi~paymentRouterHandlePaymentWebhookCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.paymentRouterHandlePaymentWebhook = function(callback) {
@@ -234,6 +234,59 @@
 
       return this.apiClient.callApi(
         '/account/payment/webhook', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the paymentRouterUpdatePaymentSubscription operation.
+     * @callback module:api/AccountpaymentApi~paymentRouterUpdatePaymentSubscriptionCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ModelsPaymentStatus} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update Payment Subscription for Stripe <br>
+     * @param {String} xAccountApiKey Account API Key
+     * @param {module:model/ModelsPaymentOptions} body PaymentOptions content
+     * @param {module:api/AccountpaymentApi~paymentRouterUpdatePaymentSubscriptionCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ModelsPaymentStatus}
+     */
+    this.paymentRouterUpdatePaymentSubscription = function(xAccountApiKey, body, callback) {
+      var postBody = body;
+
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling paymentRouterUpdatePaymentSubscription");
+      }
+
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling paymentRouterUpdatePaymentSubscription");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-Account-ApiKey': xAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ModelsPaymentStatus;
+
+      return this.apiClient.callApi(
+        '/account/payment/subscription/update', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

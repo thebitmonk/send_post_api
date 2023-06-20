@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Gets Onboarding Checklist data for account if not present creates a default entry
+     * Gets Onboarding Checklist data for account if not present creates a default entry <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountonboardingApi~onboardingRouterGetOnboardingChecklistCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsOnboardingChecklist}
@@ -90,52 +90,6 @@
 
       return this.apiClient.callApi(
         '/account/onboarding/checklist', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the onboardingRouterSendOnboardingWelcomeEmail operation.
-     * @callback module:api/AccountonboardingApi~onboardingRouterSendOnboardingWelcomeEmailCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Sends welcome email for a newly registered account
-     * @param {String} xAccountApiKey Account API Key
-     * @param {module:api/AccountonboardingApi~onboardingRouterSendOnboardingWelcomeEmailCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    this.onboardingRouterSendOnboardingWelcomeEmail = function(xAccountApiKey, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'xAccountApiKey' is set
-      if (xAccountApiKey === undefined || xAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xAccountApiKey' when calling onboardingRouterSendOnboardingWelcomeEmail");
-      }
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-        'X-Account-ApiKey': xAccountApiKey
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = null;
-
-      return this.apiClient.callApi(
-        '/account/onboarding/welcome', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

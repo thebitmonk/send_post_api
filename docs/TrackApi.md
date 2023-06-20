@@ -7,7 +7,6 @@ Method | HTTP request | Description
 [**trackRouterTrackEmailOpen**](TrackApi.md#trackRouterTrackEmailOpen) | **GET** /track/open/{accountId}/{subAccountId}/{ipId}/{emailType}/{messageId}/1.png | 
 [**trackRouterTrackLinkClick**](TrackApi.md#trackRouterTrackLinkClick) | **GET** /track/click/{accountId}/{subAccountId}/{ipId}/{emailType}/{messageId} | 
 [**trackRouterTrackUnsubscribe**](TrackApi.md#trackRouterTrackUnsubscribe) | **GET** /track/unsubscribe/{accountId}/{subAccountId}/{ipId}/{emailType}/{messageId} | 
-[**trackRouterTrackWelcomeLinkClick**](TrackApi.md#trackRouterTrackWelcomeLinkClick) | **GET** /track/click/welcome | 
 
 
 <a name="trackRouterTrackEmailOpen"></a>
@@ -16,7 +15,7 @@ Method | HTTP request | Description
 
 
 
-Track Email Open
+Track Email Open <br>
 
 ### Example
 ```javascript
@@ -74,7 +73,7 @@ No authorization required
 
 
 
-Track Link Click
+Track Link Click <br>
 
 ### Example
 ```javascript
@@ -135,7 +134,7 @@ No authorization required
 
 
 
-track link click
+track link click <br>
 
 ### Example
 ```javascript
@@ -173,52 +172,6 @@ Name | Type | Description  | Notes
  **subAccountId** | **Number**| The id of sub-account from which email is being sent | 
  **messageId** | **String**| The UUID of message which was sent | 
  **emailType** | **String**| The type of email such as gmail, yahoo etc. which was sent. This is inferred from to email address | 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="trackRouterTrackWelcomeLinkClick"></a>
-# **trackRouterTrackWelcomeLinkClick**
-> trackRouterTrackWelcomeLinkClick(redirecturl)
-
-
-
-Track Welcome Link Click
-
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.TrackApi();
-
-var redirecturl = "redirecturl_example"; // String | The encoded redirect URL
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.trackRouterTrackWelcomeLinkClick(redirecturl, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **redirecturl** | **String**| The encoded redirect URL | 
 
 ### Return type
 

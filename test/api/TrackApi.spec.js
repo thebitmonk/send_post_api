@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -94,25 +94,6 @@
           var emailType = "emailType_example";
 
           instance.trackRouterTrackUnsubscribe(ipId, accountId, subAccountId, messageId, emailType, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('trackRouterTrackWelcomeLinkClick', function() {
-        it('should call trackRouterTrackWelcomeLinkClick successfully', function(done) {
-          // TODO: uncomment, update parameter values for trackRouterTrackWelcomeLinkClick call
-          /*
-          var redirecturl = "redirecturl_example";
-
-          instance.trackRouterTrackWelcomeLinkClick(redirecturl, function(error, data, response) {
             if (error) {
               done(error);
               return;

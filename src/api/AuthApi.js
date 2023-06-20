@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Create Account, sub-account and member
+     * Create Account, sub-account and member <br>
      * @param {module:model/ModelsEAccount} body The Account content
      * @param {String} xToken Firebase dynamic token
      * @param {module:api/AuthApi~authRouterCreateCallback} callback The callback function, accepting three arguments: error, data, response
@@ -110,7 +110,7 @@
      */
 
     /**
-     * Get Auth Info Details
+     * Get Auth Info Details <br>
      * @param {module:model/ModelsEAccount} body The Account content
      * @param {String} xToken Firebase dynamic token
      * @param {module:api/AuthApi~authRouterGetAuthInfoCallback} callback The callback function, accepting three arguments: error, data, response
@@ -163,7 +163,7 @@
      */
 
     /**
-     * Updates member and accounts related for email verification and on boarding answers
+     * Updates member and accounts related for email verification and on boarding answers <br>
      * @param {module:model/ModelsEAccountMember} body The Account Member content
      * @param {String} xToken Firebase dynamic token
      * @param {module:api/AuthApi~authRouterUpdateAuthInfoCallback} callback The callback function, accepting three arguments: error, data, response
@@ -202,63 +202,6 @@
 
       return this.apiClient.callApi(
         '/auth/info', 'PUT',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the authRouterUpdateLogo operation.
-     * @callback module:api/AuthApi~authRouterUpdateLogoCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Updates account brand logo for custom templates
-     * @param {String} uid user id
-     * @param {String} xToken Firebase dynamic token
-     * @param {Object} opts Optional parameters
-     * @param {File} opts.logo Logo file
-     * @param {module:api/AuthApi~authRouterUpdateLogoCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    this.authRouterUpdateLogo = function(uid, xToken, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'uid' is set
-      if (uid === undefined || uid === null) {
-        throw new Error("Missing the required parameter 'uid' when calling authRouterUpdateLogo");
-      }
-
-      // verify the required parameter 'xToken' is set
-      if (xToken === undefined || xToken === null) {
-        throw new Error("Missing the required parameter 'xToken' when calling authRouterUpdateLogo");
-      }
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-        'X-Token': xToken
-      };
-      var formParams = {
-        'logo': opts['logo'],
-        'uid': uid
-      };
-
-      var authNames = [];
-      var contentTypes = ['multipart/form-data'];
-      var accepts = ['application/json'];
-      var returnType = null;
-
-      return this.apiClient.callApi(
-        '/auth/logo', 'PUT',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

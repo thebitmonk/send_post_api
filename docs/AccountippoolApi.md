@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 
-Count Total AccountIPPools
+Count Total AccountIPPools <br>
 
 ### Example
 ```javascript
@@ -64,7 +64,7 @@ No authorization required
 
 
 
-Create AccountIPPool
+Create AccountIPPool <br>
 
 ### Example
 ```javascript
@@ -113,7 +113,7 @@ No authorization required
 
 
 
-Delete AccountIPPool
+Delete AccountIPPool <br>
 
 ### Example
 ```javascript
@@ -162,7 +162,7 @@ No authorization required
 
 
 
-Find AccountIPPool by AccountIPPoolId
+Find AccountIPPool by AccountIPPoolId <br>
 
 ### Example
 ```javascript
@@ -211,7 +211,7 @@ No authorization required
 
 
 
-Get All AccountIPPools
+Get All AccountIPPools <br>
 
 ### Example
 ```javascript
@@ -265,7 +265,7 @@ No authorization required
 
 
 
-Update AccountIPPool
+Update AccountIPPool <br>
 
 ### Example
 ```javascript

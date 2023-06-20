@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -53,12 +53,6 @@
         // expect(instance.currentEmailServiceProvider).to.be(expectedValueLiteral);
       });
 
-      it('should have the property hexColor (base name: "hexColor")', function() {
-        // TODO: update the code to test the property hexColor
-        expect(instance).to.have.property('hexColor');
-        // expect(instance.hexColor).to.be(expectedValueLiteral);
-      });
-
       it('should have the property industry (base name: "industry")', function() {
         // TODO: update the code to test the property industry
         expect(instance).to.have.property('industry');
@@ -99,12 +93,6 @@
         // TODO: update the code to test the property sendingVolumePerMonth
         expect(instance).to.have.property('sendingVolumePerMonth');
         // expect(instance.sendingVolumePerMonth).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property switchingSendpostDescription (base name: "switchingSendpostDescription")', function() {
-        // TODO: update the code to test the property switchingSendpostDescription
-        expect(instance).to.have.property('switchingSendpostDescription');
-        // expect(instance.switchingSendpostDescription).to.be(expectedValueLiteral);
       });
 
       it('should have the property uid (base name: "uid")', function() {

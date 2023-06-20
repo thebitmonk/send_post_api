@@ -5,7 +5,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **alertSlackEndpoint** | **String** |  | [optional] 
 **apiKey** | **String** |  | [optional] 
-**brandColor** | **String** |  | [optional] 
 **companyName** | **String** |  | [optional] 
 **created** | **Number** |  | [optional] 
 **currentEmailServiceProvider** | **String** |  | [optional] 
@@ -25,7 +24,7 @@ Name | Type | Description | Notes
 **sendingVolumePerMonth** | **String** |  | [optional] 
 **slackToken** | **String** |  | [optional] 
 **stripeBasePriceId** | **String** |  | [optional] 
+**stripeSubscriptionItemId** | **String** |  | [optional] 
 **stripeUsagePriceId** | **String** |  | [optional] 
-**switchingSendpostDescription** | **String** |  | [optional] 
 
 

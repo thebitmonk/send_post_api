@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -59,8 +59,6 @@
         obj.alertSlackEndpoint = ApiClient.convertToType(data['alertSlackEndpoint'], 'String');
       if (data.hasOwnProperty('apiKey'))
         obj.apiKey = ApiClient.convertToType(data['apiKey'], 'String');
-      if (data.hasOwnProperty('brandColor'))
-        obj.brandColor = ApiClient.convertToType(data['brandColor'], 'String');
       if (data.hasOwnProperty('companyName'))
         obj.companyName = ApiClient.convertToType(data['companyName'], 'String');
       if (data.hasOwnProperty('created'))
@@ -99,10 +97,10 @@
         obj.slackToken = ApiClient.convertToType(data['slackToken'], 'String');
       if (data.hasOwnProperty('stripeBasePriceId'))
         obj.stripeBasePriceId = ApiClient.convertToType(data['stripeBasePriceId'], 'String');
+      if (data.hasOwnProperty('stripeSubscriptionItemId'))
+        obj.stripeSubscriptionItemId = ApiClient.convertToType(data['stripeSubscriptionItemId'], 'String');
       if (data.hasOwnProperty('stripeUsagePriceId'))
         obj.stripeUsagePriceId = ApiClient.convertToType(data['stripeUsagePriceId'], 'String');
-      if (data.hasOwnProperty('switchingSendpostDescription'))
-        obj.switchingSendpostDescription = ApiClient.convertToType(data['switchingSendpostDescription'], 'String');
     }
     return obj;
   }
@@ -116,11 +114,6 @@
    * @member {String} apiKey
    */
   exports.prototype.apiKey = undefined;
-
-  /**
-   * @member {String} brandColor
-   */
-  exports.prototype.brandColor = undefined;
 
   /**
    * @member {String} companyName
@@ -218,14 +211,14 @@
   exports.prototype.stripeBasePriceId = undefined;
 
   /**
+   * @member {String} stripeSubscriptionItemId
+   */
+  exports.prototype.stripeSubscriptionItemId = undefined;
+
+  /**
    * @member {String} stripeUsagePriceId
    */
   exports.prototype.stripeUsagePriceId = undefined;
-
-  /**
-   * @member {String} switchingSendpostDescription
-   */
-  exports.prototype.switchingSendpostDescription = undefined;
 
 
   return exports;

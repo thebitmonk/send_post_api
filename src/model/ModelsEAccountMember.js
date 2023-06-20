@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -59,8 +59,6 @@
         obj.companyName = ApiClient.convertToType(data['companyName'], 'String');
       if (data.hasOwnProperty('currentEmailServiceProvider'))
         obj.currentEmailServiceProvider = ApiClient.convertToType(data['currentEmailServiceProvider'], 'String');
-      if (data.hasOwnProperty('hexColor'))
-        obj.hexColor = ApiClient.convertToType(data['hexColor'], 'String');
       if (data.hasOwnProperty('industry'))
         obj.industry = ApiClient.convertToType(data['industry'], 'String');
       if (data.hasOwnProperty('logoURL'))
@@ -75,8 +73,6 @@
         obj.phoneNumber = ApiClient.convertToType(data['phoneNumber'], 'String');
       if (data.hasOwnProperty('sendingVolumePerMonth'))
         obj.sendingVolumePerMonth = ApiClient.convertToType(data['sendingVolumePerMonth'], 'String');
-      if (data.hasOwnProperty('switchingSendpostDescription'))
-        obj.switchingSendpostDescription = ApiClient.convertToType(data['switchingSendpostDescription'], 'String');
       if (data.hasOwnProperty('uid'))
         obj.uid = ApiClient.convertToType(data['uid'], 'String');
       if (data.hasOwnProperty('verifyEmail'))
@@ -94,11 +90,6 @@
    * @member {String} currentEmailServiceProvider
    */
   exports.prototype.currentEmailServiceProvider = undefined;
-
-  /**
-   * @member {String} hexColor
-   */
-  exports.prototype.hexColor = undefined;
 
   /**
    * @member {String} industry
@@ -134,11 +125,6 @@
    * @member {String} sendingVolumePerMonth
    */
   exports.prototype.sendingVolumePerMonth = undefined;
-
-  /**
-   * @member {String} switchingSendpostDescription
-   */
-  exports.prototype.switchingSendpostDescription = undefined;
 
   /**
    * @member {String} uid

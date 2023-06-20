@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Track Email Open
+     * Track Email Open <br>
      * @param {Number} ipId The id of ip from which this email message was sent
      * @param {Number} accountId The id of account from which email is being sent
      * @param {Number} subAccountId The id of sub-account from which email is being sent
@@ -131,7 +131,7 @@
      */
 
     /**
-     * Track Link Click
+     * Track Link Click <br>
      * @param {Number} ipId The id of ip from which this email message was sent
      * @param {Number} accountId The id of account from which email is being sent
      * @param {Number} subAccountId The id of sub-account from which email is being sent
@@ -212,7 +212,7 @@
      */
 
     /**
-     * track link click
+     * track link click <br>
      * @param {Number} ipId The id of ip from which this email message was sent
      * @param {Number} accountId The id of account from which email is being sent
      * @param {Number} subAccountId The id of sub-account from which email is being sent
@@ -272,52 +272,6 @@
 
       return this.apiClient.callApi(
         '/track/unsubscribe/{accountId}/{subAccountId}/{ipId}/{emailType}/{messageId}', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the trackRouterTrackWelcomeLinkClick operation.
-     * @callback module:api/TrackApi~trackRouterTrackWelcomeLinkClickCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Track Welcome Link Click
-     * @param {String} redirecturl The encoded redirect URL
-     * @param {module:api/TrackApi~trackRouterTrackWelcomeLinkClickCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    this.trackRouterTrackWelcomeLinkClick = function(redirecturl, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'redirecturl' is set
-      if (redirecturl === undefined || redirecturl === null) {
-        throw new Error("Missing the required parameter 'redirecturl' when calling trackRouterTrackWelcomeLinkClick");
-      }
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-        'redirecturl': redirecturl,
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = null;
-
-      return this.apiClient.callApi(
-        '/track/click/welcome', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

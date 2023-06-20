@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Receive webhooks raised from SMTP servers
+     * Receive webhooks raised from SMTP servers <br>
      * @param {module:model/ModelsWMessage} body The Webhook content
      * @param {module:api/SmtpApi~sMTPRouterReceiveWebhooksRaisedFromSMTPServersCallback} callback The callback function, accepting three arguments: error, data, response
      */

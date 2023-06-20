@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**paymentRouterCreateCustomerPortal**](AccountpaymentApi.md#paymentRouterCreateCustomerPortal) | **POST** /account/payment/portal | 
 [**paymentRouterCreatePaymentSubscription**](AccountpaymentApi.md#paymentRouterCreatePaymentSubscription) | **POST** /account/payment/subscription | 
 [**paymentRouterHandlePaymentWebhook**](AccountpaymentApi.md#paymentRouterHandlePaymentWebhook) | **POST** /account/payment/webhook | 
+[**paymentRouterUpdatePaymentSubscription**](AccountpaymentApi.md#paymentRouterUpdatePaymentSubscription) | **POST** /account/payment/subscription/update | 
 
 
 <a name="paymentRouterApplyCouponToStripeCustomer"></a>
@@ -16,7 +17,7 @@ Method | HTTP request | Description
 
 
 
-Apply Coupon to Stripe Customer
+Apply Coupon to Stripe Customer <br>
 
 ### Example
 ```javascript
@@ -65,7 +66,7 @@ No authorization required
 
 
 
-Create Customer Portal for account
+Create Customer Portal for account <br>
 
 ### Example
 ```javascript
@@ -111,7 +112,7 @@ No authorization required
 
 
 
-Create Payment Subscription for Stripe
+Create Payment Subscription for Stripe <br>
 
 ### Example
 ```javascript
@@ -160,7 +161,7 @@ No authorization required
 
 
 
-Handle Payment Related Webhooks
+Handle Payment Related Webhooks <br>
 
 ### Example
 ```javascript
@@ -184,6 +185,55 @@ This endpoint does not need any parameter.
 ### Return type
 
 null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="paymentRouterUpdatePaymentSubscription"></a>
+# **paymentRouterUpdatePaymentSubscription**
+> ModelsPaymentStatus paymentRouterUpdatePaymentSubscription(xAccountApiKey, body)
+
+
+
+Update Payment Subscription for Stripe <br>
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccountpaymentApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var body = new SendPostApi.ModelsPaymentOptions(); // ModelsPaymentOptions | PaymentOptions content
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.paymentRouterUpdatePaymentSubscription(xAccountApiKey, body, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xAccountApiKey** | **String**| Account API Key | 
+ **body** | [**ModelsPaymentOptions**](ModelsPaymentOptions.md)| PaymentOptions content | 
+
+### Return type
+
+[**ModelsPaymentStatus**](ModelsPaymentStatus.md)
 
 ### Authorization
 

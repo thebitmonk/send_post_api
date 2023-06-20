@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -260,8 +260,6 @@
             for (let p in dataCtr) {
               let data = dataCtr[p];
               expect(data).to.be.a(SendPostApi.ModelsAGDomainStat);
-              expect(data.domainId).to.be.a('number');
-              expect(data.domainId).to.be("0");
               expect(data.clicked).to.be.a('number');
               expect(data.clicked).to.be("0");
               expect(data.delivered).to.be.a('number');
