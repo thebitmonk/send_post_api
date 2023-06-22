@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsAGDomainStat', 'model/ModelsAGIPStat', 'model/ModelsAGSubAccountStat', 'model/ModelsRStat', 'model/ModelsStat'], factory);
+    define(['ApiClient', 'model/ModelsAGDomainStat', 'model/ModelsAGIPStat', 'model/ModelsAGSubAccountStat', 'model/ModelsAccountCycleUsage', 'model/ModelsRStat', 'model/ModelsStat'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsAGDomainStat'), require('../model/ModelsAGIPStat'), require('../model/ModelsAGSubAccountStat'), require('../model/ModelsRStat'), require('../model/ModelsStat'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsAGDomainStat'), require('../model/ModelsAGIPStat'), require('../model/ModelsAGSubAccountStat'), require('../model/ModelsAccountCycleUsage'), require('../model/ModelsRStat'), require('../model/ModelsStat'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.AccountstatApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsAGDomainStat, root.SendPostApi.ModelsAGIPStat, root.SendPostApi.ModelsAGSubAccountStat, root.SendPostApi.ModelsRStat, root.SendPostApi.ModelsStat);
+    root.SendPostApi.AccountstatApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsAGDomainStat, root.SendPostApi.ModelsAGIPStat, root.SendPostApi.ModelsAGSubAccountStat, root.SendPostApi.ModelsAccountCycleUsage, root.SendPostApi.ModelsRStat, root.SendPostApi.ModelsStat);
   }
-}(this, function(ApiClient, ModelsAGDomainStat, ModelsAGIPStat, ModelsAGSubAccountStat, ModelsRStat, ModelsStat) {
+}(this, function(ApiClient, ModelsAGDomainStat, ModelsAGIPStat, ModelsAGSubAccountStat, ModelsAccountCycleUsage, ModelsRStat, ModelsStat) {
   'use strict';
 
   /**
@@ -49,24 +49,25 @@
 
 
     /**
-     * Callback function to receive the result of the accountStatRouterGetAccountStat operation.
-     * @callback module:api/AccountstatApi~accountStatRouterGetAccountStatCallback
+     * Callback function to receive the result of the accountStatRouterGetAccountCycleUsage operation.
+     * @callback module:api/AccountstatApi~accountStatRouterGetAccountCycleUsageCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/ModelsAccountCycleUsage} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Responds back with Account Processed Mails Stat <br>
      * @param {String} xAccountApiKey Account API Key
-     * @param {module:api/AccountstatApi~accountStatRouterGetAccountStatCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/AccountstatApi~accountStatRouterGetAccountCycleUsageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ModelsAccountCycleUsage}
      */
-    this.accountStatRouterGetAccountStat = function(xAccountApiKey, callback) {
+    this.accountStatRouterGetAccountCycleUsage = function(xAccountApiKey, callback) {
       var postBody = null;
 
       // verify the required parameter 'xAccountApiKey' is set
       if (xAccountApiKey === undefined || xAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xAccountApiKey' when calling accountStatRouterGetAccountStat");
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling accountStatRouterGetAccountCycleUsage");
       }
 
 
@@ -85,7 +86,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = null;
+      var returnType = ModelsAccountCycleUsage;
 
       return this.apiClient.callApi(
         '/account/stat/cycleusage', 'GET',

@@ -4,7 +4,7 @@ All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**accountStatRouterGetAccountStat**](AccountstatApi.md#accountStatRouterGetAccountStat) | **GET** /account/stat/cycleusage | 
+[**accountStatRouterGetAccountCycleUsage**](AccountstatApi.md#accountStatRouterGetAccountCycleUsage) | **GET** /account/stat/cycleusage | 
 [**accountStatRouterGetAllAccountStats**](AccountstatApi.md#accountStatRouterGetAllAccountStats) | **GET** /account/stat/ | 
 [**accountStatRouterGetAllAccountStatsByGroup**](AccountstatApi.md#accountStatRouterGetAllAccountStatsByGroup) | **GET** /account/stat/group | 
 [**accountStatRouterGetAllAggregateAccountStats**](AccountstatApi.md#accountStatRouterGetAllAggregateAccountStats) | **GET** /account/stat/aggregate | 
@@ -14,9 +14,9 @@ Method | HTTP request | Description
 [**accountStatRouterGetAllAggregateSubAccountStats**](AccountstatApi.md#accountStatRouterGetAllAggregateSubAccountStats) | **GET** /account/stat/aggregate/subaccount | 
 
 
-<a name="accountStatRouterGetAccountStat"></a>
-# **accountStatRouterGetAccountStat**
-> accountStatRouterGetAccountStat(xAccountApiKey)
+<a name="accountStatRouterGetAccountCycleUsage"></a>
+# **accountStatRouterGetAccountCycleUsage**
+> ModelsAccountCycleUsage accountStatRouterGetAccountCycleUsage(xAccountApiKey)
 
 
 
@@ -35,10 +35,10 @@ var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.accountStatRouterGetAccountStat(xAccountApiKey, callback);
+apiInstance.accountStatRouterGetAccountCycleUsage(xAccountApiKey, callback);
 ```
 
 ### Parameters
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**ModelsAccountCycleUsage**](ModelsAccountCycleUsage.md)
 
 ### Authorization
 

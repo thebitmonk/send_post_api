@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsBillingPortalSession', 'model/ModelsCouponOptions', 'model/ModelsPaymentOptions', 'model/ModelsPaymentStatus'], factory);
+    define(['ApiClient', 'model/ModelsBillingPortalSession', 'model/ModelsCouponOptions', 'model/ModelsPaymentOptions', 'model/ModelsPaymentStatus', 'model/ModelsPricing'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsBillingPortalSession'), require('../model/ModelsCouponOptions'), require('../model/ModelsPaymentOptions'), require('../model/ModelsPaymentStatus'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsBillingPortalSession'), require('../model/ModelsCouponOptions'), require('../model/ModelsPaymentOptions'), require('../model/ModelsPaymentStatus'), require('../model/ModelsPricing'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.AccountpaymentApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsBillingPortalSession, root.SendPostApi.ModelsCouponOptions, root.SendPostApi.ModelsPaymentOptions, root.SendPostApi.ModelsPaymentStatus);
+    root.SendPostApi.AccountpaymentApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsBillingPortalSession, root.SendPostApi.ModelsCouponOptions, root.SendPostApi.ModelsPaymentOptions, root.SendPostApi.ModelsPaymentStatus, root.SendPostApi.ModelsPricing);
   }
-}(this, function(ApiClient, ModelsBillingPortalSession, ModelsCouponOptions, ModelsPaymentOptions, ModelsPaymentStatus) {
+}(this, function(ApiClient, ModelsBillingPortalSession, ModelsCouponOptions, ModelsPaymentOptions, ModelsPaymentStatus, ModelsPricing) {
   'use strict';
 
   /**
@@ -204,7 +204,7 @@
      * Callback function to receive the result of the paymentRouterGetPricingPlans operation.
      * @callback module:api/AccountpaymentApi~paymentRouterGetPricingPlansCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {Array.<module:model/ModelsPricing>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -212,6 +212,7 @@
      * Responds back with slice of pricing plans <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountpaymentApi~paymentRouterGetPricingPlansCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/ModelsPricing>}
      */
     this.paymentRouterGetPricingPlans = function(xAccountApiKey, callback) {
       var postBody = null;
@@ -237,7 +238,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = null;
+      var returnType = [ModelsPricing];
 
       return this.apiClient.callApi(
         '/account/payment/pricing', 'GET',

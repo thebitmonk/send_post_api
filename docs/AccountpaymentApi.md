@@ -157,7 +157,7 @@ No authorization required
 
 <a name="paymentRouterGetPricingPlans"></a>
 # **paymentRouterGetPricingPlans**
-> paymentRouterGetPricingPlans(xAccountApiKey)
+> [ModelsPricing] paymentRouterGetPricingPlans(xAccountApiKey)
 
 
 
@@ -176,7 +176,7 @@ var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 };
 apiInstance.paymentRouterGetPricingPlans(xAccountApiKey, callback);
@@ -190,7 +190,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[ModelsPricing]**](ModelsPricing.md)
 
 ### Authorization
 

@@ -215,7 +215,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountsmtpstatApi* | [**sMTPStatRouterGetAllAggregateSubAccountProviderSMTPStats**](docs/AccountsmtpstatApi.md#sMTPStatRouterGetAllAggregateSubAccountProviderSMTPStats) | **GET** /account/smtp/stat/subaccount/{sid}/provider/{provider}/aggregate | 
 *SendPostApi.AccountsmtpstatApi* | [**sMTPStatRouterGetAllAggregateSubAccountSMTPStats**](docs/AccountsmtpstatApi.md#sMTPStatRouterGetAllAggregateSubAccountSMTPStats) | **GET** /account/smtp/stat/subaccount/{sid}/aggregate | 
 *SendPostApi.AccountsmtpstatApi* | [**sMTPStatRouterGetAllAggregateSubAccountSMTPStatsForIP**](docs/AccountsmtpstatApi.md#sMTPStatRouterGetAllAggregateSubAccountSMTPStatsForIP) | **GET** /account/smtp/stat/subaccount/{sid}/ip/{ipid}/aggregate | 
-*SendPostApi.AccountstatApi* | [**accountStatRouterGetAccountStat**](docs/AccountstatApi.md#accountStatRouterGetAccountStat) | **GET** /account/stat/cycleusage | 
+*SendPostApi.AccountstatApi* | [**accountStatRouterGetAccountCycleUsage**](docs/AccountstatApi.md#accountStatRouterGetAccountCycleUsage) | **GET** /account/stat/cycleusage | 
 *SendPostApi.AccountstatApi* | [**accountStatRouterGetAllAccountStats**](docs/AccountstatApi.md#accountStatRouterGetAllAccountStats) | **GET** /account/stat/ | 
 *SendPostApi.AccountstatApi* | [**accountStatRouterGetAllAccountStatsByGroup**](docs/AccountstatApi.md#accountStatRouterGetAllAccountStatsByGroup) | **GET** /account/stat/group | 
 *SendPostApi.AccountstatApi* | [**accountStatRouterGetAllAggregateAccountStats**](docs/AccountstatApi.md#accountStatRouterGetAllAggregateAccountStats) | **GET** /account/stat/aggregate | 
@@ -306,9 +306,9 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [SendPostApi.Model2788420x140006f0f00False](docs/Model2788420x140006f0f00False.md)
- - [SendPostApi.Model2791230x140006f0ff0False](docs/Model2791230x140006f0ff0False.md)
- - [SendPostApi.Model4924750x140009a5a40False](docs/Model4924750x140009a5a40False.md)
+ - [SendPostApi.Model2789230x140006be150False](docs/Model2789230x140006be150False.md)
+ - [SendPostApi.Model2792040x140006be240False](docs/Model2792040x140006be240False.md)
+ - [SendPostApi.Model4925560x14000964c90False](docs/Model4925560x14000964c90False.md)
  - [SendPostApi.ModelsAGDomainStat](docs/ModelsAGDomainStat.md)
  - [SendPostApi.ModelsAGIPStat](docs/ModelsAGIPStat.md)
  - [SendPostApi.ModelsAGStat](docs/ModelsAGStat.md)
@@ -317,6 +317,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsAPStat](docs/ModelsAPStat.md)
  - [SendPostApi.ModelsASStat](docs/ModelsASStat.md)
  - [SendPostApi.ModelsAccount](docs/ModelsAccount.md)
+ - [SendPostApi.ModelsAccountCycleUsage](docs/ModelsAccountCycleUsage.md)
  - [SendPostApi.ModelsAccountDomain](docs/ModelsAccountDomain.md)
  - [SendPostApi.ModelsAccountIPPool](docs/ModelsAccountIPPool.md)
  - [SendPostApi.ModelsAccountTemplate](docs/ModelsAccountTemplate.md)
@@ -429,6 +430,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsPDStat](docs/ModelsPDStat.md)
  - [SendPostApi.ModelsPaymentOptions](docs/ModelsPaymentOptions.md)
  - [SendPostApi.ModelsPaymentStatus](docs/ModelsPaymentStatus.md)
+ - [SendPostApi.ModelsPricing](docs/ModelsPricing.md)
  - [SendPostApi.ModelsProvider](docs/ModelsProvider.md)
  - [SendPostApi.ModelsProviderDetails](docs/ModelsProviderDetails.md)
  - [SendPostApi.ModelsProviderResult](docs/ModelsProviderResult.md)

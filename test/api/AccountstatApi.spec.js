@@ -36,17 +36,21 @@
 
   describe('(package)', function() {
     describe('AccountstatApi', function() {
-      describe('accountStatRouterGetAccountStat', function() {
-        it('should call accountStatRouterGetAccountStat successfully', function(done) {
-          // TODO: uncomment, update parameter values for accountStatRouterGetAccountStat call
+      describe('accountStatRouterGetAccountCycleUsage', function() {
+        it('should call accountStatRouterGetAccountCycleUsage successfully', function(done) {
+          // TODO: uncomment, update parameter values for accountStatRouterGetAccountCycleUsage call and complete the assertions
           /*
           var xAccountApiKey = "xAccountApiKey_example";
 
-          instance.accountStatRouterGetAccountStat(xAccountApiKey, function(error, data, response) {
+          instance.accountStatRouterGetAccountCycleUsage(xAccountApiKey, function(error, data, response) {
             if (error) {
               done(error);
               return;
             }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelsAccountCycleUsage);
+            expect(data.processed).to.be.a('number');
+            expect(data.processed).to.be("0");
 
             done();
           });
