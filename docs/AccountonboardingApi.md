@@ -1,6 +1,6 @@
 # SendPostApi.AccountonboardingApi
 
-All URIs are relative to *https://api-stag.sendpost.io/api/v1*
+All URIs are relative to *https://api.sendpost.io/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 
-Gets Onboarding Checklist data for account if not present creates a default entry
+Gets Onboarding Checklist data for account if not present creates a default entry 
 
 ### Example
 ```javascript
@@ -60,7 +60,7 @@ No authorization required
 
 
 
-Sends welcome email for a newly registered account
+Sends welcome email for a newly registered account 
 
 ### Example
 ```javascript

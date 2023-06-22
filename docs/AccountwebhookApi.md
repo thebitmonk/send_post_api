@@ -1,6 +1,6 @@
 # SendPostApi.AccountwebhookApi
 
-All URIs are relative to *https://api-stag.sendpost.io/api/v1*
+All URIs are relative to *https://api.sendpost.io/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 
-Count Total AccountWebhooks
+Count Total AccountWebhooks 
 
 ### Example
 ```javascript
@@ -64,7 +64,7 @@ No authorization required
 
 
 
-Create AccountWebhook
+Create AccountWebhook 
 
 ### Example
 ```javascript
@@ -113,7 +113,7 @@ No authorization required
 
 
 
-Delete AccountWebhook
+Delete AccountWebhook 
 
 ### Example
 ```javascript
@@ -162,7 +162,7 @@ No authorization required
 
 
 
-Find AccountWebhook by AccountWebhookId
+Find AccountWebhook by AccountWebhookId 
 
 ### Example
 ```javascript
@@ -211,7 +211,7 @@ No authorization required
 
 
 
-Get All AccountWebhooks
+Get All AccountWebhooks 
 
 ### Example
 ```javascript
@@ -265,7 +265,7 @@ No authorization required
 
 
 
-Update AccountWebhook
+Update AccountWebhook 
 
 ### Example
 ```javascript

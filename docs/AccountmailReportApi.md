@@ -1,6 +1,6 @@
 # SendPostApi.AccountmailReportApi
 
-All URIs are relative to *https://api-stag.sendpost.io/api/v1*
+All URIs are relative to *https://api.sendpost.io/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 
-get reputation of domain
+get reputation of domain 
 
 ### Example
 ```javascript
@@ -60,11 +60,11 @@ No authorization required
 
 <a name="mailReportRouterMailReportGetSingleReport"></a>
 # **mailReportRouterMailReportGetSingleReport**
-> ApiGlockappsMailReport mailReportRouterMailReportGetSingleReport(xAccountApiKey, reportId)
+> ModelsGlockappsMailReport mailReportRouterMailReportGetSingleReport(xAccountApiKey, reportId)
 
 
 
-get Providers available
+get Providers available 
 
 ### Example
 ```javascript
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ApiGlockappsMailReport**](ApiGlockappsMailReport.md)
+[**ModelsGlockappsMailReport**](ModelsGlockappsMailReport.md)
 
 ### Authorization
 
@@ -113,7 +113,7 @@ No authorization required
 
 
 
-get Providers available
+get Providers available 
 
 ### Example
 ```javascript

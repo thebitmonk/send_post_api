@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **name** | **String** |  | [optional] 
 **routingMetaData** | **String** |  | [optional] 
 **routingStrategy** | **Number** |  | [optional] 
+**thirdPartySendingProviders** | [**[ModelsThirdPartySendingProvider]**](ModelsThirdPartySendingProvider.md) |  | [optional] 
 **type** | [**ModelsIPPoolType**](ModelsIPPoolType.md) |  | [optional] 
 
 

@@ -1,6 +1,6 @@
 # SendPostApi.AccountsubaccountApi
 
-All URIs are relative to *https://api-stag.sendpost.io/api/v1*
+All URIs are relative to *https://api.sendpost.io/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 
 
-Count Total Subaccounts
+Count Total Subaccounts 
 
 ### Example
 ```javascript
@@ -73,7 +73,7 @@ No authorization required
 
 
 
-Create SubAccount
+Create SubAccount 
 
 ### Example
 ```javascript
@@ -122,7 +122,7 @@ No authorization required
 
 
 
-Delete SubAccount
+Delete SubAccount 
 
 ### Example
 ```javascript
@@ -171,7 +171,7 @@ No authorization required
 
 
 
-Find SubAccount by SubAccountId
+Find SubAccount by SubAccountId 
 
 ### Example
 ```javascript
@@ -220,7 +220,7 @@ No authorization required
 
 
 
-Get All SubAccounts
+Get All SubAccounts 
 
 ### Example
 ```javascript
@@ -278,7 +278,7 @@ No authorization required
 
 
 
-Get All Incidents associated with a sub-account
+Get All Incidents associated with a sub-account 
 
 ### Example
 ```javascript
@@ -327,7 +327,7 @@ No authorization required
 
 
 
-Update SubAccount
+Update SubAccount 
 
 ### Example
 ```javascript

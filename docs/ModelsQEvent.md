@@ -7,13 +7,14 @@ Name | Type | Description | Notes
 **eventID** | **String** |  | [optional] 
 **eventMetadata** | [**ModelsEventMetadata**](ModelsEventMetadata.md) |  | [optional] 
 **from** | **String** |  | [optional] 
-**groups** | **Object** |  | [optional] 
+**groups** | **[String]** |  | [optional] 
 **ipID** | **Number** |  | [optional] 
 **messageID** | **String** |  | [optional] 
 **messageType** | **String** |  | [optional] 
 **subAccountID** | **Number** |  | [optional] 
 **submittedAt** | **Number** |  | [optional] 
 **to** | **String** |  | [optional] 
+**tpspId** | **Number** |  | [optional] 
 **type** | **Number** |  | [optional] 
 
 

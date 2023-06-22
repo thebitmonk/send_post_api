@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Add comment to Incident
+     * Add comment to Incident 
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} incidentId the incident id
      * @param {module:model/ModelsEComment} body The Comment content
@@ -117,7 +117,7 @@
      */
 
     /**
-     * Count Total Incidents
+     * Count Total Incidents 
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.status status
@@ -172,7 +172,7 @@
      */
 
     /**
-     * Create Incident
+     * Create Incident 
      * @param {String} xAccountApiKey Account API Key
      * @param {module:model/ModelsEIncident} body The Incident content
      * @param {module:api/AccountincidentApi~incidentRouterCreateCallback} callback The callback function, accepting three arguments: error, data, response
@@ -225,7 +225,7 @@
      */
 
     /**
-     * Get All Incidents
+     * Get All Incidents 
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
@@ -284,7 +284,7 @@
      */
 
     /**
-     * Get All Comments Associated with Incident
+     * Get All Comments Associated with Incident 
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} incidentId the IncidentId you want to get comments for
      * @param {module:api/AccountincidentApi~incidentRouterGetAllCommentsCallback} callback The callback function, accepting three arguments: error, data, response
@@ -338,7 +338,7 @@
      */
 
     /**
-     * Find Incident by incidentId
+     * Find Incident by incidentId 
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} incidentId the IncidentId you want to get
      * @param {module:api/AccountincidentApi~incidentRouterGetIncidentCallback} callback The callback function, accepting three arguments: error, data, response
@@ -392,7 +392,7 @@
      */
 
     /**
-     * Update Incident
+     * Update Incident 
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} incidentId the Incident Id you want to update
      * @param {module:model/ModelsEIncident} body The Incident content

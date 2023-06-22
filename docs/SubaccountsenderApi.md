@@ -1,6 +1,6 @@
 # SendPostApi.SubaccountsenderApi
 
-All URIs are relative to *https://api-stag.sendpost.io/api/v1*
+All URIs are relative to *https://api.sendpost.io/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 
-Count Total Senders
+Count Total Senders 
 
 ### Example
 ```javascript
@@ -64,7 +64,7 @@ No authorization required
 
 
 
-Create Sender
+Create Sender 
 
 ### Example
 ```javascript
@@ -113,7 +113,7 @@ No authorization required
 
 
 
-Delete Sender
+Delete Sender 
 
 ### Example
 ```javascript
@@ -162,7 +162,7 @@ No authorization required
 
 
 
-Find Sender by SenderId
+Find Sender by SenderId 
 
 ### Example
 ```javascript
@@ -211,7 +211,7 @@ No authorization required
 
 
 
-Get All Senders
+Get All Senders 
 
 ### Example
 ```javascript
@@ -265,7 +265,7 @@ No authorization required
 
 
 
-Update Sender
+Update Sender 
 
 ### Example
 ```javascript

@@ -1,6 +1,6 @@
 # SendPostApi.AccountippoolApi
 
-All URIs are relative to *https://api-stag.sendpost.io/api/v1*
+All URIs are relative to *https://api.sendpost.io/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 
-Count Total AccountIPPools
+Count Total AccountIPPools 
 
 ### Example
 ```javascript
@@ -64,7 +64,7 @@ No authorization required
 
 
 
-Create AccountIPPool
+Create AccountIPPool 
 
 ### Example
 ```javascript
@@ -113,7 +113,7 @@ No authorization required
 
 
 
-Delete AccountIPPool
+Delete AccountIPPool 
 
 ### Example
 ```javascript
@@ -162,7 +162,7 @@ No authorization required
 
 
 
-Find AccountIPPool by AccountIPPoolId
+Find AccountIPPool by AccountIPPoolId 
 
 ### Example
 ```javascript
@@ -211,7 +211,7 @@ No authorization required
 
 
 
-Get All AccountIPPools
+Get All AccountIPPools 
 
 ### Example
 ```javascript
@@ -265,7 +265,7 @@ No authorization required
 
 
 
-Update AccountIPPool
+Update AccountIPPool 
 
 ### Example
 ```javascript

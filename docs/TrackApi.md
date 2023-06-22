@@ -1,6 +1,6 @@
 # SendPostApi.TrackApi
 
-All URIs are relative to *https://api-stag.sendpost.io/api/v1*
+All URIs are relative to *https://api.sendpost.io/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 
-Track Email Open
+Track Email Open 
 
 ### Example
 ```javascript
@@ -74,7 +74,7 @@ No authorization required
 
 
 
-Track Link Click
+Track Link Click 
 
 ### Example
 ```javascript
@@ -135,7 +135,7 @@ No authorization required
 
 
 
-track link click
+track link click 
 
 ### Example
 ```javascript
@@ -193,7 +193,7 @@ No authorization required
 
 
 
-Track Welcome Link Click
+Track Welcome Link Click 
 
 ### Example
 ```javascript

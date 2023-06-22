@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Count Total Subaccounts
+     * Count Total Subaccounts 
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.filterBy filterBy
@@ -112,7 +112,7 @@
      */
 
     /**
-     * Create SubAccount
+     * Create SubAccount 
      * @param {String} xAccountApiKey Account API Key
      * @param {module:model/ModelsESubAccount} body The SubAccount content
      * @param {module:api/AccountsubaccountApi~subAccountRouterCreateCallback} callback The callback function, accepting three arguments: error, data, response
@@ -165,7 +165,7 @@
      */
 
     /**
-     * Delete SubAccount
+     * Delete SubAccount 
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} subAccountId The SubAccountId you want to delete
      * @param {module:api/AccountsubaccountApi~subAccountRouterDeleteCallback} callback The callback function, accepting three arguments: error, data, response
@@ -219,7 +219,7 @@
      */
 
     /**
-     * Find SubAccount by SubAccountId
+     * Find SubAccount by SubAccountId 
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} subAccountId the SubAccountId you want to get
      * @param {module:api/AccountsubaccountApi~subAccountRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -273,7 +273,7 @@
      */
 
     /**
-     * Get All SubAccounts
+     * Get All SubAccounts 
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
@@ -332,7 +332,7 @@
      */
 
     /**
-     * Get All Incidents associated with a sub-account
+     * Get All Incidents associated with a sub-account 
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} subAccountId The SubAccountId you want to delete
      * @param {module:api/AccountsubaccountApi~subAccountRouterGetAllSubAccountIncidentsCallback} callback The callback function, accepting three arguments: error, data, response
@@ -386,7 +386,7 @@
      */
 
     /**
-     * Update SubAccount
+     * Update SubAccount 
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} subAccountId The SubAccountId you want to update
      * @param {module:model/ModelsESubAccount} body The body
