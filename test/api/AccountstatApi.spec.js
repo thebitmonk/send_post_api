@@ -36,6 +36,25 @@
 
   describe('(package)', function() {
     describe('AccountstatApi', function() {
+      describe('accountStatRouterGetAccountStat', function() {
+        it('should call accountStatRouterGetAccountStat successfully', function(done) {
+          // TODO: uncomment, update parameter values for accountStatRouterGetAccountStat call
+          /*
+          var xAccountApiKey = "xAccountApiKey_example";
+
+          instance.accountStatRouterGetAccountStat(xAccountApiKey, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('accountStatRouterGetAllAccountStats', function() {
         it('should call accountStatRouterGetAllAccountStats successfully', function(done) {
           // TODO: uncomment, update parameter values for accountStatRouterGetAllAccountStats call and complete the assertions

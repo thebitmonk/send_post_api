@@ -204,8 +204,8 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountpaymentApi* | [**paymentRouterApplyCouponToStripeCustomer**](docs/AccountpaymentApi.md#paymentRouterApplyCouponToStripeCustomer) | **POST** /account/payment/customer/coupon | 
 *SendPostApi.AccountpaymentApi* | [**paymentRouterCreateCustomerPortal**](docs/AccountpaymentApi.md#paymentRouterCreateCustomerPortal) | **POST** /account/payment/portal | 
 *SendPostApi.AccountpaymentApi* | [**paymentRouterCreatePaymentSubscription**](docs/AccountpaymentApi.md#paymentRouterCreatePaymentSubscription) | **POST** /account/payment/subscription | 
+*SendPostApi.AccountpaymentApi* | [**paymentRouterGetPricingPlans**](docs/AccountpaymentApi.md#paymentRouterGetPricingPlans) | **GET** /account/payment/pricing | 
 *SendPostApi.AccountpaymentApi* | [**paymentRouterHandlePaymentWebhook**](docs/AccountpaymentApi.md#paymentRouterHandlePaymentWebhook) | **POST** /account/payment/webhook | 
-*SendPostApi.AccountpaymentApi* | [**paymentRouterUpdatePaymentSubscription**](docs/AccountpaymentApi.md#paymentRouterUpdatePaymentSubscription) | **POST** /account/payment/subscription/update | 
 *SendPostApi.AccountrecipientApi* | [**recipientRouterGetAllMessagesForARecipient**](docs/AccountrecipientApi.md#recipientRouterGetAllMessagesForARecipient) | **GET** /account/recipient/{recipient}/messages | 
 *SendPostApi.AccountrecipientApi* | [**recipientRouterGetAllMessagesForARecipientFromANode**](docs/AccountrecipientApi.md#recipientRouterGetAllMessagesForARecipientFromANode) | **GET** /account/recipient/node/{recipient}/messages | 
 *SendPostApi.AccountsettingApi* | [**accountSettingRouterUpdate**](docs/AccountsettingApi.md#accountSettingRouterUpdate) | **PUT** /account/setting/ | 
@@ -215,6 +215,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountsmtpstatApi* | [**sMTPStatRouterGetAllAggregateSubAccountProviderSMTPStats**](docs/AccountsmtpstatApi.md#sMTPStatRouterGetAllAggregateSubAccountProviderSMTPStats) | **GET** /account/smtp/stat/subaccount/{sid}/provider/{provider}/aggregate | 
 *SendPostApi.AccountsmtpstatApi* | [**sMTPStatRouterGetAllAggregateSubAccountSMTPStats**](docs/AccountsmtpstatApi.md#sMTPStatRouterGetAllAggregateSubAccountSMTPStats) | **GET** /account/smtp/stat/subaccount/{sid}/aggregate | 
 *SendPostApi.AccountsmtpstatApi* | [**sMTPStatRouterGetAllAggregateSubAccountSMTPStatsForIP**](docs/AccountsmtpstatApi.md#sMTPStatRouterGetAllAggregateSubAccountSMTPStatsForIP) | **GET** /account/smtp/stat/subaccount/{sid}/ip/{ipid}/aggregate | 
+*SendPostApi.AccountstatApi* | [**accountStatRouterGetAccountStat**](docs/AccountstatApi.md#accountStatRouterGetAccountStat) | **GET** /account/stat/cycleusage | 
 *SendPostApi.AccountstatApi* | [**accountStatRouterGetAllAccountStats**](docs/AccountstatApi.md#accountStatRouterGetAllAccountStats) | **GET** /account/stat/ | 
 *SendPostApi.AccountstatApi* | [**accountStatRouterGetAllAccountStatsByGroup**](docs/AccountstatApi.md#accountStatRouterGetAllAccountStatsByGroup) | **GET** /account/stat/group | 
 *SendPostApi.AccountstatApi* | [**accountStatRouterGetAllAggregateAccountStats**](docs/AccountstatApi.md#accountStatRouterGetAllAggregateAccountStats) | **GET** /account/stat/aggregate | 
@@ -305,9 +306,9 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [SendPostApi.Model2740330x140006ec900False](docs/Model2740330x140006ec900False.md)
- - [SendPostApi.Model2743140x140006ec9f0False](docs/Model2743140x140006ec9f0False.md)
- - [SendPostApi.Model4855290x14000994d20False](docs/Model4855290x14000994d20False.md)
+ - [SendPostApi.Model2788420x140006f0f00False](docs/Model2788420x140006f0f00False.md)
+ - [SendPostApi.Model2791230x140006f0ff0False](docs/Model2791230x140006f0ff0False.md)
+ - [SendPostApi.Model4924750x140009a5a40False](docs/Model4924750x140009a5a40False.md)
  - [SendPostApi.ModelsAGDomainStat](docs/ModelsAGDomainStat.md)
  - [SendPostApi.ModelsAGIPStat](docs/ModelsAGIPStat.md)
  - [SendPostApi.ModelsAGStat](docs/ModelsAGStat.md)

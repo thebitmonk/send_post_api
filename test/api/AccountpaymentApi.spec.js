@@ -120,12 +120,13 @@
           done();
         });
       });
-      describe('paymentRouterHandlePaymentWebhook', function() {
-        it('should call paymentRouterHandlePaymentWebhook successfully', function(done) {
-          // TODO: uncomment paymentRouterHandlePaymentWebhook call
+      describe('paymentRouterGetPricingPlans', function() {
+        it('should call paymentRouterGetPricingPlans successfully', function(done) {
+          // TODO: uncomment, update parameter values for paymentRouterGetPricingPlans call
           /*
+          var xAccountApiKey = "xAccountApiKey_example";
 
-          instance.paymentRouterHandlePaymentWebhook(function(error, data, response) {
+          instance.paymentRouterGetPricingPlans(xAccountApiKey, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -138,26 +139,16 @@
           done();
         });
       });
-      describe('paymentRouterUpdatePaymentSubscription', function() {
-        it('should call paymentRouterUpdatePaymentSubscription successfully', function(done) {
-          // TODO: uncomment, update parameter values for paymentRouterUpdatePaymentSubscription call and complete the assertions
+      describe('paymentRouterHandlePaymentWebhook', function() {
+        it('should call paymentRouterHandlePaymentWebhook successfully', function(done) {
+          // TODO: uncomment paymentRouterHandlePaymentWebhook call
           /*
-          var xAccountApiKey = "xAccountApiKey_example";
-          var body = new SendPostApi.ModelsPaymentOptions();
-          body.customerId = "";
-          body.ipCount = "0";
-          body.paymentMethodId = "";
-          body.priceId = "";
 
-          instance.paymentRouterUpdatePaymentSubscription(xAccountApiKey, body, function(error, data, response) {
+          instance.paymentRouterHandlePaymentWebhook(function(error, data, response) {
             if (error) {
               done(error);
               return;
             }
-            // TODO: update response assertions
-            expect(data).to.be.a(SendPostApi.ModelsPaymentStatus);
-            expect(data.status).to.be.a('string');
-            expect(data.status).to.be("");
 
             done();
           });

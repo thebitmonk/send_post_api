@@ -49,6 +49,52 @@
 
 
     /**
+     * Callback function to receive the result of the accountStatRouterGetAccountStat operation.
+     * @callback module:api/AccountstatApi~accountStatRouterGetAccountStatCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Responds back with Account Processed Mails Stat <br>
+     * @param {String} xAccountApiKey Account API Key
+     * @param {module:api/AccountstatApi~accountStatRouterGetAccountStatCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.accountStatRouterGetAccountStat = function(xAccountApiKey, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling accountStatRouterGetAccountStat");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-Account-ApiKey': xAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/account/stat/cycleusage', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the accountStatRouterGetAllAccountStats operation.
      * @callback module:api/AccountstatApi~accountStatRouterGetAllAccountStatsCallback
      * @param {String} error Error message, if any.

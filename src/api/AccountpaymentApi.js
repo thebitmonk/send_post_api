@@ -201,6 +201,52 @@
     }
 
     /**
+     * Callback function to receive the result of the paymentRouterGetPricingPlans operation.
+     * @callback module:api/AccountpaymentApi~paymentRouterGetPricingPlansCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Responds back with slice of pricing plans <br>
+     * @param {String} xAccountApiKey Account API Key
+     * @param {module:api/AccountpaymentApi~paymentRouterGetPricingPlansCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.paymentRouterGetPricingPlans = function(xAccountApiKey, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling paymentRouterGetPricingPlans");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-Account-ApiKey': xAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/account/payment/pricing', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the paymentRouterHandlePaymentWebhook operation.
      * @callback module:api/AccountpaymentApi~paymentRouterHandlePaymentWebhookCallback
      * @param {String} error Error message, if any.
@@ -234,59 +280,6 @@
 
       return this.apiClient.callApi(
         '/account/payment/webhook', 'POST',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the paymentRouterUpdatePaymentSubscription operation.
-     * @callback module:api/AccountpaymentApi~paymentRouterUpdatePaymentSubscriptionCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ModelsPaymentStatus} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Update Payment Subscription for Stripe <br>
-     * @param {String} xAccountApiKey Account API Key
-     * @param {module:model/ModelsPaymentOptions} body PaymentOptions content
-     * @param {module:api/AccountpaymentApi~paymentRouterUpdatePaymentSubscriptionCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ModelsPaymentStatus}
-     */
-    this.paymentRouterUpdatePaymentSubscription = function(xAccountApiKey, body, callback) {
-      var postBody = body;
-
-      // verify the required parameter 'xAccountApiKey' is set
-      if (xAccountApiKey === undefined || xAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xAccountApiKey' when calling paymentRouterUpdatePaymentSubscription");
-      }
-
-      // verify the required parameter 'body' is set
-      if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling paymentRouterUpdatePaymentSubscription");
-      }
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-        'X-Account-ApiKey': xAccountApiKey
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = ModelsPaymentStatus;
-
-      return this.apiClient.callApi(
-        '/account/payment/subscription/update', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

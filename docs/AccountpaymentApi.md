@@ -7,8 +7,8 @@ Method | HTTP request | Description
 [**paymentRouterApplyCouponToStripeCustomer**](AccountpaymentApi.md#paymentRouterApplyCouponToStripeCustomer) | **POST** /account/payment/customer/coupon | 
 [**paymentRouterCreateCustomerPortal**](AccountpaymentApi.md#paymentRouterCreateCustomerPortal) | **POST** /account/payment/portal | 
 [**paymentRouterCreatePaymentSubscription**](AccountpaymentApi.md#paymentRouterCreatePaymentSubscription) | **POST** /account/payment/subscription | 
+[**paymentRouterGetPricingPlans**](AccountpaymentApi.md#paymentRouterGetPricingPlans) | **GET** /account/payment/pricing | 
 [**paymentRouterHandlePaymentWebhook**](AccountpaymentApi.md#paymentRouterHandlePaymentWebhook) | **POST** /account/payment/webhook | 
-[**paymentRouterUpdatePaymentSubscription**](AccountpaymentApi.md#paymentRouterUpdatePaymentSubscription) | **POST** /account/payment/subscription/update | 
 
 
 <a name="paymentRouterApplyCouponToStripeCustomer"></a>
@@ -155,6 +155,52 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="paymentRouterGetPricingPlans"></a>
+# **paymentRouterGetPricingPlans**
+> paymentRouterGetPricingPlans(xAccountApiKey)
+
+
+
+Responds back with slice of pricing plans <br>
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccountpaymentApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+apiInstance.paymentRouterGetPricingPlans(xAccountApiKey, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xAccountApiKey** | **String**| Account API Key | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="paymentRouterHandlePaymentWebhook"></a>
 # **paymentRouterHandlePaymentWebhook**
 > paymentRouterHandlePaymentWebhook()
@@ -185,55 +231,6 @@ This endpoint does not need any parameter.
 ### Return type
 
 null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="paymentRouterUpdatePaymentSubscription"></a>
-# **paymentRouterUpdatePaymentSubscription**
-> ModelsPaymentStatus paymentRouterUpdatePaymentSubscription(xAccountApiKey, body)
-
-
-
-Update Payment Subscription for Stripe <br>
-
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.AccountpaymentApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var body = new SendPostApi.ModelsPaymentOptions(); // ModelsPaymentOptions | PaymentOptions content
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.paymentRouterUpdatePaymentSubscription(xAccountApiKey, body, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Account API Key | 
- **body** | [**ModelsPaymentOptions**](ModelsPaymentOptions.md)| PaymentOptions content | 
-
-### Return type
-
-[**ModelsPaymentStatus**](ModelsPaymentStatus.md)
 
 ### Authorization
 
