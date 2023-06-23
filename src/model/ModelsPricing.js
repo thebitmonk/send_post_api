@@ -55,12 +55,16 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('baseLimit'))
+        obj.baseLimit = ApiClient.convertToType(data['baseLimit'], 'Number');
+      if (data.hasOwnProperty('basePrice'))
+        obj.basePrice = ApiClient.convertToType(data['basePrice'], 'Number');
       if (data.hasOwnProperty('basePriceId'))
         obj.basePriceId = ApiClient.convertToType(data['basePriceId'], 'String');
-      if (data.hasOwnProperty('limit'))
-        obj.limit = ApiClient.convertToType(data['limit'], 'Number');
-      if (data.hasOwnProperty('overage'))
-        obj.overage = ApiClient.convertToType(data['overage'], 'Number');
+      if (data.hasOwnProperty('overageLimit'))
+        obj.overageLimit = ApiClient.convertToType(data['overageLimit'], 'Number');
+      if (data.hasOwnProperty('overagePrice'))
+        obj.overagePrice = ApiClient.convertToType(data['overagePrice'], 'Number');
       if (data.hasOwnProperty('planName'))
         obj.planName = ApiClient.convertToType(data['planName'], 'String');
       if (data.hasOwnProperty('subscriptionProductId'))
@@ -72,19 +76,29 @@
   }
 
   /**
+   * @member {Number} baseLimit
+   */
+  exports.prototype.baseLimit = undefined;
+
+  /**
+   * @member {Number} basePrice
+   */
+  exports.prototype.basePrice = undefined;
+
+  /**
    * @member {String} basePriceId
    */
   exports.prototype.basePriceId = undefined;
 
   /**
-   * @member {Number} limit
+   * @member {Number} overageLimit
    */
-  exports.prototype.limit = undefined;
+  exports.prototype.overageLimit = undefined;
 
   /**
-   * @member {Number} overage
+   * @member {Number} overagePrice
    */
-  exports.prototype.overage = undefined;
+  exports.prototype.overagePrice = undefined;
 
   /**
    * @member {String} planName

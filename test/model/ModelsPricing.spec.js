@@ -41,22 +41,34 @@
         expect(instance).to.be.a(SendPostApi.ModelsPricing);
       });
 
+      it('should have the property baseLimit (base name: "baseLimit")', function() {
+        // TODO: update the code to test the property baseLimit
+        expect(instance).to.have.property('baseLimit');
+        // expect(instance.baseLimit).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property basePrice (base name: "basePrice")', function() {
+        // TODO: update the code to test the property basePrice
+        expect(instance).to.have.property('basePrice');
+        // expect(instance.basePrice).to.be(expectedValueLiteral);
+      });
+
       it('should have the property basePriceId (base name: "basePriceId")', function() {
         // TODO: update the code to test the property basePriceId
         expect(instance).to.have.property('basePriceId');
         // expect(instance.basePriceId).to.be(expectedValueLiteral);
       });
 
-      it('should have the property limit (base name: "limit")', function() {
-        // TODO: update the code to test the property limit
-        expect(instance).to.have.property('limit');
-        // expect(instance.limit).to.be(expectedValueLiteral);
+      it('should have the property overageLimit (base name: "overageLimit")', function() {
+        // TODO: update the code to test the property overageLimit
+        expect(instance).to.have.property('overageLimit');
+        // expect(instance.overageLimit).to.be(expectedValueLiteral);
       });
 
-      it('should have the property overage (base name: "overage")', function() {
-        // TODO: update the code to test the property overage
-        expect(instance).to.have.property('overage');
-        // expect(instance.overage).to.be(expectedValueLiteral);
+      it('should have the property overagePrice (base name: "overagePrice")', function() {
+        // TODO: update the code to test the property overagePrice
+        expect(instance).to.have.property('overagePrice');
+        // expect(instance.overagePrice).to.be(expectedValueLiteral);
       });
 
       it('should have the property planName (base name: "planName")', function() {

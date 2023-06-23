@@ -49,6 +49,53 @@
 
 
     /**
+     * Callback function to receive the result of the accountSettingRouterGetAccount operation.
+     * @callback module:api/AccountsettingApi~accountSettingRouterGetAccountCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ModelsAccount} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * get latest account details <br>
+     * @param {String} xAccountApiKey Account API Key
+     * @param {module:api/AccountsettingApi~accountSettingRouterGetAccountCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ModelsAccount}
+     */
+    this.accountSettingRouterGetAccount = function(xAccountApiKey, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling accountSettingRouterGetAccount");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-Account-ApiKey': xAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ModelsAccount;
+
+      return this.apiClient.callApi(
+        '/account/setting/', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the accountSettingRouterUpdate operation.
      * @callback module:api/AccountsettingApi~accountSettingRouterUpdateCallback
      * @param {String} error Error message, if any.

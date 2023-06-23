@@ -208,6 +208,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountpaymentApi* | [**paymentRouterHandlePaymentWebhook**](docs/AccountpaymentApi.md#paymentRouterHandlePaymentWebhook) | **POST** /account/payment/webhook | 
 *SendPostApi.AccountrecipientApi* | [**recipientRouterGetAllMessagesForARecipient**](docs/AccountrecipientApi.md#recipientRouterGetAllMessagesForARecipient) | **GET** /account/recipient/{recipient}/messages | 
 *SendPostApi.AccountrecipientApi* | [**recipientRouterGetAllMessagesForARecipientFromANode**](docs/AccountrecipientApi.md#recipientRouterGetAllMessagesForARecipientFromANode) | **GET** /account/recipient/node/{recipient}/messages | 
+*SendPostApi.AccountsettingApi* | [**accountSettingRouterGetAccount**](docs/AccountsettingApi.md#accountSettingRouterGetAccount) | **GET** /account/setting/ | 
 *SendPostApi.AccountsettingApi* | [**accountSettingRouterUpdate**](docs/AccountsettingApi.md#accountSettingRouterUpdate) | **PUT** /account/setting/ | 
 *SendPostApi.AccountsmtpstatApi* | [**sMTPStatRouterGetAllAggregateIPProviderSMTPStats**](docs/AccountsmtpstatApi.md#sMTPStatRouterGetAllAggregateIPProviderSMTPStats) | **GET** /account/smtp/stat/ip/{ipid}/provider/{provider}/aggregate | 
 *SendPostApi.AccountsmtpstatApi* | [**sMTPStatRouterGetAllAggregateIPSMTPStats**](docs/AccountsmtpstatApi.md#sMTPStatRouterGetAllAggregateIPSMTPStats) | **GET** /account/smtp/stat/ip/{ipid}/aggregate | 
@@ -306,9 +307,9 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [SendPostApi.Model2789230x140006be150False](docs/Model2789230x140006be150False.md)
- - [SendPostApi.Model2792040x140006be240False](docs/Model2792040x140006be240False.md)
- - [SendPostApi.Model4925560x14000964c90False](docs/Model4925560x14000964c90False.md)
+ - [SendPostApi.Model2789230x14000772f60False](docs/Model2789230x14000772f60False.md)
+ - [SendPostApi.Model2792040x14000773050False](docs/Model2792040x14000773050False.md)
+ - [SendPostApi.Model4925560x14000a25aa0False](docs/Model4925560x14000a25aa0False.md)
  - [SendPostApi.ModelsAGDomainStat](docs/ModelsAGDomainStat.md)
  - [SendPostApi.ModelsAGIPStat](docs/ModelsAGIPStat.md)
  - [SendPostApi.ModelsAGStat](docs/ModelsAGStat.md)

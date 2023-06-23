@@ -138,12 +138,16 @@
             for (let p in dataCtr) {
               let data = dataCtr[p];
               expect(data).to.be.a(SendPostApi.ModelsPricing);
+              expect(data.baseLimit).to.be.a('number');
+              expect(data.baseLimit).to.be("0");
+              expect(data.basePrice).to.be.a('number');
+              expect(data.basePrice).to.be(0.0);
               expect(data.basePriceId).to.be.a('string');
               expect(data.basePriceId).to.be("");
-              expect(data.limit).to.be.a('number');
-              expect(data.limit).to.be("0");
-              expect(data.overage).to.be.a('number');
-              expect(data.overage).to.be(0.0);
+              expect(data.overageLimit).to.be.a('number');
+              expect(data.overageLimit).to.be("0");
+              expect(data.overagePrice).to.be.a('number');
+              expect(data.overagePrice).to.be(0.0);
               expect(data.planName).to.be.a('string');
               expect(data.planName).to.be("");
               expect(data.subscriptionProductId).to.be.a('string');
