@@ -122,11 +122,10 @@
       });
       describe('paymentRouterGetPricingPlans', function() {
         it('should call paymentRouterGetPricingPlans successfully', function(done) {
-          // TODO: uncomment, update parameter values for paymentRouterGetPricingPlans call and complete the assertions
+          // TODO: uncomment paymentRouterGetPricingPlans call and complete the assertions
           /*
-          var xAccountApiKey = "xAccountApiKey_example";
 
-          instance.paymentRouterGetPricingPlans(xAccountApiKey, function(error, data, response) {
+          instance.paymentRouterGetPricingPlans(function(error, data, response) {
             if (error) {
               done(error);
               return;

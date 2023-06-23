@@ -157,7 +157,7 @@ No authorization required
 
 <a name="paymentRouterGetPricingPlans"></a>
 # **paymentRouterGetPricingPlans**
-> [ModelsPricing] paymentRouterGetPricingPlans(xAccountApiKey)
+> [ModelsPricing] paymentRouterGetPricingPlans()
 
 
 
@@ -169,9 +169,6 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.AccountpaymentApi();
 
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -179,14 +176,11 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.paymentRouterGetPricingPlans(xAccountApiKey, callback);
+apiInstance.paymentRouterGetPricingPlans(callback);
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Account API Key | 
+This endpoint does not need any parameter.
 
 ### Return type
 

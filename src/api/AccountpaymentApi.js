@@ -210,17 +210,11 @@
 
     /**
      * Responds back with slice of pricing plans <br>
-     * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountpaymentApi~paymentRouterGetPricingPlansCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsPricing>}
      */
-    this.paymentRouterGetPricingPlans = function(xAccountApiKey, callback) {
+    this.paymentRouterGetPricingPlans = function(callback) {
       var postBody = null;
-
-      // verify the required parameter 'xAccountApiKey' is set
-      if (xAccountApiKey === undefined || xAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xAccountApiKey' when calling paymentRouterGetPricingPlans");
-      }
 
 
       var pathParams = {
@@ -230,7 +224,6 @@
       var collectionQueryParams = {
       };
       var headerParams = {
-        'X-Account-ApiKey': xAccountApiKey
       };
       var formParams = {
       };
