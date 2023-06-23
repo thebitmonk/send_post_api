@@ -1,6 +1,6 @@
 # SendPostApi.AccounteventApi
 
-All URIs are relative to *https://api.sendpost.io/api/v1*
+All URIs are relative to *https://api-stag.sendpost.io/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 
 
-Count all events from a account for a given time-range 
+Count all events from a account for a given time-range
 
 ### Example
 ```javascript
@@ -80,7 +80,7 @@ No authorization required
 
 
 
-Count all events from a node of a sub-account for a given time-range 
+Count all events from a node of a sub-account for a given time-range
 
 ### Example
 ```javascript
@@ -140,7 +140,7 @@ No authorization required
 
 
 
-Find Event By Id 
+Find Event By Id
 
 ### Example
 ```javascript
@@ -189,7 +189,7 @@ No authorization required
 
 
 
-Find all events of a sub-account from a specific node for a give time-range 
+Find all events of a sub-account from a specific node for a give time-range
 
 ### Example
 ```javascript
@@ -249,7 +249,7 @@ No authorization required
 
 
 
-Find all events from a account for a given time-range 
+Find all events from a account for a given time-range
 
 ### Example
 ```javascript
@@ -313,7 +313,7 @@ No authorization required
 
 
 
-Find all events from a account for a given time-range 
+Find all events from a account for a given time-range
 
 ### Example
 ```javascript
@@ -377,7 +377,7 @@ No authorization required
 
 
 
-Find all events of a account from a specific node 
+Find all events of a account from a specific node
 
 ### Example
 ```javascript
@@ -423,7 +423,7 @@ No authorization required
 
 
 
-Find Event From Node by id 
+Find Event From Node by id
 
 ### Example
 ```javascript

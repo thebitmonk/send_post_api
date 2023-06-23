@@ -1,6 +1,6 @@
 # SendPostApi.AccountsubaccountstatApi
 
-All URIs are relative to *https://api.sendpost.io/api/v1*
+All URIs are relative to *https://api-stag.sendpost.io/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 
-Get All Aggregate Sub-Account Stats 
+Get All Aggregate Sub-Account Stats
 
 ### Example
 ```javascript
@@ -73,7 +73,7 @@ No authorization required
 
 
 
-Get All Aggregated Domain Stats for a Sub-Account 
+Get All Aggregated Domain Stats for a Sub-Account
 
 ### Example
 ```javascript
@@ -128,7 +128,7 @@ No authorization required
 
 
 
-Get All Aggregated Group Stats for a Sub-Account 
+Get All Aggregated Group Stats for a Sub-Account
 
 ### Example
 ```javascript
@@ -183,7 +183,7 @@ No authorization required
 
 
 
-Get All Aggregated IP Stats for a Sub-Account 
+Get All Aggregated IP Stats for a Sub-Account
 
 ### Example
 ```javascript
@@ -238,7 +238,7 @@ No authorization required
 
 
 
-Get All Aggregated Provider Stats for a Sub-Account 
+Get All Aggregated Provider Stats for a Sub-Account
 
 ### Example
 ```javascript
@@ -293,7 +293,7 @@ No authorization required
 
 
 
-Get All Sub-Account Stats 
+Get All Sub-Account Stats
 
 ### Example
 ```javascript

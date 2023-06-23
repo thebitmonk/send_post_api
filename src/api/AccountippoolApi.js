@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Count Total AccountIPPools 
+     * Count Total AccountIPPools
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountippoolApi~accountIPPoolRouterCountCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsCountStat}
@@ -104,7 +104,7 @@
      */
 
     /**
-     * Create AccountIPPool 
+     * Create AccountIPPool
      * @param {String} xAccountApiKey Account API Key
      * @param {module:model/ModelsEIPPool} body The AccountIPPool content
      * @param {module:api/AccountippoolApi~accountIPPoolRouterCreateCallback} callback The callback function, accepting three arguments: error, data, response
@@ -157,7 +157,7 @@
      */
 
     /**
-     * Delete AccountIPPool 
+     * Delete AccountIPPool
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ippoolid The AccountIPPoolId you want to delete
      * @param {module:api/AccountippoolApi~accountIPPoolRouterDeleteCallback} callback The callback function, accepting three arguments: error, data, response
@@ -211,7 +211,7 @@
      */
 
     /**
-     * Find AccountIPPool by AccountIPPoolId 
+     * Find AccountIPPool by AccountIPPoolId
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ippoolid the AccountIPPoolId you want to get
      * @param {module:api/AccountippoolApi~accountIPPoolRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -265,7 +265,7 @@
      */
 
     /**
-     * Get All AccountIPPools 
+     * Get All AccountIPPools
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
@@ -320,7 +320,7 @@
      */
 
     /**
-     * Update AccountIPPool 
+     * Update AccountIPPool
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ippoolid The AccountIPPoolId you want to update
      * @param {module:model/ModelsEIPPool} body The body

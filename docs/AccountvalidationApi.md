@@ -1,6 +1,6 @@
 # SendPostApi.AccountvalidationApi
 
-All URIs are relative to *https://api.sendpost.io/api/v1*
+All URIs are relative to *https://api-stag.sendpost.io/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -66,7 +66,7 @@ No authorization required
 
 
 
-Count Total Validations 
+Count Total Validations
 
 ### Example
 ```javascript
@@ -112,7 +112,7 @@ No authorization required
 
 
 
-Delete a specific validation 
+Delete a specific validation
 
 ### Example
 ```javascript
@@ -161,7 +161,7 @@ No authorization required
 
 
 
-Get all validation 
+Get all validation
 
 ### Example
 ```javascript
@@ -215,7 +215,7 @@ No authorization required
 
 
 
-Validate Email List Synchronously 
+Validate Email List Synchronously
 
 ### Example
 ```javascript

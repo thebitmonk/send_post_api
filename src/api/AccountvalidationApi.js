@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -111,7 +111,7 @@
      */
 
     /**
-     * Count Total Validations 
+     * Count Total Validations
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountvalidationApi~validationRouterCountCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsCountStat}
@@ -158,7 +158,7 @@
      */
 
     /**
-     * Delete a specific validation 
+     * Delete a specific validation
      * @param {String} xAccountApiKey Account API Key
      * @param {module:model/ModelsEValidation} body List of emails to be deleted from validation
      * @param {module:api/AccountvalidationApi~validationRouterDeleteValidationCallback} callback The callback function, accepting three arguments: error, data, response
@@ -211,7 +211,7 @@
      */
 
     /**
-     * Get all validation 
+     * Get all validation
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
@@ -266,7 +266,7 @@
      */
 
     /**
-     * Validate Email List Synchronously 
+     * Validate Email List Synchronously
      * @param {String} xAccountApiKey Account API Key
      * @param {module:model/ModelsEmailList} body The email list to be sent for being validated
      * @param {module:api/AccountvalidationApi~validationRouterValidateEmailListCallback} callback The callback function, accepting three arguments: error, data, response

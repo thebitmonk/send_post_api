@@ -1,6 +1,6 @@
 # SendPostApi.AccountmessageApi
 
-All URIs are relative to *https://api.sendpost.io/api/v1*
+All URIs are relative to *https://api-stag.sendpost.io/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 
-Find Message By Id 
+Find Message By Id
 
 ### Example
 ```javascript
@@ -65,7 +65,7 @@ No authorization required
 
 
 
-Find all events associated with a message id 
+Find all events associated with a message id
 
 ### Example
 ```javascript
@@ -114,7 +114,7 @@ No authorization required
 
 
 
-Find all message events associated with a message id from a specific node 
+Find all message events associated with a message id from a specific node
 
 ### Example
 ```javascript
@@ -163,7 +163,7 @@ No authorization required
 
 
 
-Find Message from node by specific Id 
+Find Message from node by specific Id
 
 ### Example
 ```javascript

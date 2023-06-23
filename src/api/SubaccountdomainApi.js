@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Count Total Domains 
+     * Count Total Domains
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {module:api/SubaccountdomainApi~domainRouterCountCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsCountStat}
@@ -104,7 +104,7 @@
      */
 
     /**
-     * Create Domain 
+     * Create Domain
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {module:model/ModelsEDomain} body The Domain content
      * @param {module:api/SubaccountdomainApi~domainRouterCreateCallback} callback The callback function, accepting three arguments: error, data, response
@@ -157,7 +157,7 @@
      */
 
     /**
-     * Delete Domain 
+     * Delete Domain
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Number} domainId The DomainId you want to delete
      * @param {module:api/SubaccountdomainApi~domainRouterDeleteCallback} callback The callback function, accepting three arguments: error, data, response
@@ -211,7 +211,7 @@
      */
 
     /**
-     * Find Domain by DomainId 
+     * Find Domain by DomainId
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Number} domainId the DomainId you want to get
      * @param {module:api/SubaccountdomainApi~domainRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -265,7 +265,7 @@
      */
 
     /**
-     * Get All Domains 
+     * Get All Domains
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
@@ -320,7 +320,7 @@
      */
 
     /**
-     * Update Domain 
+     * Update Domain
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Number} domainId The DomainId you want to update
      * @param {module:model/ModelsEDomain} body The body
@@ -380,7 +380,7 @@
      */
 
     /**
-     * Verify Domain By Domain Id 
+     * Verify Domain By Domain Id
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Number} domainId the DomainId you want to get
      * @param {module:api/SubaccountdomainApi~domainRouterVerifyCallback} callback The callback function, accepting three arguments: error, data, response
@@ -434,7 +434,7 @@
      */
 
     /**
-     * Verify Domain By Signed Token 
+     * Verify Domain By Signed Token
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Number} domainId the DomainId you want to get
      * @param {String} token The signed token used to verify
@@ -495,7 +495,7 @@
      */
 
     /**
-     * Verify Domain By Email Request 
+     * Verify Domain By Email Request
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Number} domainId the DomainId you want to get
      * @param {module:model/ModelsVerifyByTokenRequest} body The Email to be used to verify

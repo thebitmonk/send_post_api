@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Copy AccountTemplate 
+     * Copy AccountTemplate
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} templateid The id of the template you want to copy
      * @param {module:api/AccounttemplateApi~accountTemplateRouterCopyCallback} callback The callback function, accepting three arguments: error, data, response
@@ -111,7 +111,7 @@
      */
 
     /**
-     * Count total templates 
+     * Count total templates
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.search search term
@@ -162,7 +162,7 @@
      */
 
     /**
-     * Create a new template 
+     * Create a new template
      * @param {String} xAccountApiKey Account API Key
      * @param {module:model/ModelsAccountTemplate} body The AccountTemplate content
      * @param {module:api/AccounttemplateApi~accountTemplateRouterCreateCallback} callback The callback function, accepting three arguments: error, data, response
@@ -215,7 +215,7 @@
      */
 
     /**
-     * Delete AccountTemplate 
+     * Delete AccountTemplate
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} templateid The id of the template you want to delete
      * @param {module:api/AccounttemplateApi~accountTemplateRouterDeleteCallback} callback The callback function, accepting three arguments: error, data, response
@@ -269,7 +269,7 @@
      */
 
     /**
-     * Get single template 
+     * Get single template
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} templateid ID of the template required
      * @param {module:api/AccounttemplateApi~accountTemplateRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -323,7 +323,7 @@
      */
 
     /**
-     * Get all templates 
+     * Get all templates
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
@@ -378,7 +378,7 @@
      */
 
     /**
-     * update template 
+     * update template
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} templateid The id of the template you want to update
      * @param {module:model/ModelsAccountTemplate} body The template content

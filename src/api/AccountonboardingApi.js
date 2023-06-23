@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Gets Onboarding Checklist data for account if not present creates a default entry 
+     * Gets Onboarding Checklist data for account if not present creates a default entry
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountonboardingApi~onboardingRouterGetOnboardingChecklistCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsOnboardingChecklist}
@@ -104,7 +104,7 @@
      */
 
     /**
-     * Sends welcome email for a newly registered account 
+     * Sends welcome email for a newly registered account
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountonboardingApi~onboardingRouterSendOnboardingWelcomeEmailCallback} callback The callback function, accepting three arguments: error, data, response
      */

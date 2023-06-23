@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **eventID** | **String** |  | [optional] 
 **eventMetadata** | [**ModelsEventMetadata**](ModelsEventMetadata.md) |  | [optional] 
 **from** | **String** |  | [optional] 
-**groups** | **[String]** |  | [optional] 
+**groups** | **Object** |  | [optional] 
 **ipID** | **Number** |  | [optional] 
 **messageID** | **String** |  | [optional] 
 **messageType** | **String** |  | [optional] 

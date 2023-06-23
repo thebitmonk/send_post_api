@@ -1,6 +1,6 @@
 # SendPostApi.SystemsuppressionApi
 
-All URIs are relative to *https://api.sendpost.io/api/v1*
+All URIs are relative to *https://api-stag.sendpost.io/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 
-Add Email Addresses To Suppression List 
+Add Email Addresses To Suppression List
 
 ### Example
 ```javascript

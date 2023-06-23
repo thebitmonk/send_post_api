@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Get All Aggregate Stats 
+     * Get All Aggregate Stats
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid the IPId you want to get
      * @param {Object} opts Optional parameters
@@ -119,7 +119,7 @@
      */
 
     /**
-     * Get All Aggregated Provider Stats for a IP 
+     * Get All Aggregated Provider Stats for a IP
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid the IPId you want to get
      * @param {Object} opts Optional parameters
@@ -179,7 +179,7 @@
      */
 
     /**
-     * Get All Aggregated Sub-Account Stats for an IP 
+     * Get All Aggregated Sub-Account Stats for an IP
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid the IPId you want to get
      * @param {Object} opts Optional parameters
@@ -243,7 +243,7 @@
      */
 
     /**
-     * Get All IP Stats 
+     * Get All IP Stats
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid the IPId you want to get
      * @param {Object} opts Optional parameters

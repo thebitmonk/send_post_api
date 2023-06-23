@@ -1,6 +1,6 @@
 # SendPostApi.AccountintegrationApi
 
-All URIs are relative to *https://api.sendpost.io/api/v1*
+All URIs are relative to *https://api-stag.sendpost.io/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 
 
-Count Total AccountIntegrations 
+Count Total AccountIntegrations
 
 ### Example
 ```javascript
@@ -66,7 +66,7 @@ No authorization required
 
 
 
-Create Integration 
+Create Integration
 
 ### Example
 ```javascript
@@ -118,7 +118,7 @@ No authorization required
 
 
 
-Delete Integration 
+Delete Integration
 
 ### Example
 ```javascript
@@ -167,7 +167,7 @@ No authorization required
 
 
 
-Disable IP Monitoring for a single IP 
+Disable IP Monitoring for a single IP
 
 ### Example
 ```javascript
@@ -216,7 +216,7 @@ No authorization required
 
 
 
-Enable IP Monitoring for a single IP 
+Enable IP Monitoring for a single IP
 
 ### Example
 ```javascript
@@ -265,7 +265,7 @@ No authorization required
 
 
 
-Get All Integrations 
+Get All Integrations
 
 ### Example
 ```javascript
@@ -311,7 +311,7 @@ No authorization required
 
 
 
-Get Monitored IP Stats 
+Get Monitored IP Stats
 
 ### Example
 ```javascript
@@ -366,7 +366,7 @@ No authorization required
 
 
 
-Update Integration 
+Update Integration
 
 ### Example
 ```javascript

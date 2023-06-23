@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -47,9 +47,9 @@
     /**
      * The base URL against which to resolve every API call's (relative) path.
      * @type {String}
-     * @default https://api.sendpost.io/api/v1
+     * @default https://api-stag.sendpost.io/api/v1
      */
-    this.basePath = 'https://api.sendpost.io/api/v1'.replace(/\/+$/, '');
+    this.basePath = 'https://api-stag.sendpost.io/api/v1'.replace(/\/+$/, '');
 
     /**
      * The authentication methods to be included for all API calls.

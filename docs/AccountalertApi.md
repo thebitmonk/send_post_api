@@ -1,6 +1,6 @@
 # SendPostApi.AccountalertApi
 
-All URIs are relative to *https://api.sendpost.io/api/v1*
+All URIs are relative to *https://api-stag.sendpost.io/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 
-Count Total Alerts for account 
+Count Total Alerts for account
 
 ### Example
 ```javascript
@@ -67,7 +67,7 @@ No authorization required
 
 
 
-create an alert 
+create an alert
 
 ### Example
 ```javascript
@@ -116,7 +116,7 @@ No authorization required
 
 
 
-Delete Alert 
+Delete Alert
 
 ### Example
 ```javascript
@@ -165,7 +165,7 @@ No authorization required
 
 
 
-Get All Alerts 
+Get All Alerts
 
 ### Example
 ```javascript
@@ -215,11 +215,11 @@ No authorization required
 
 <a name="alertRouterUpdate"></a>
 # **alertRouterUpdate**
-> ModelsAlert alertRouterUpdate(xAccountApiKey, alertId, body)
+> Alert alertRouterUpdate(xAccountApiKey, alertId, body)
 
 
 
-Update an Alert 
+Update an Alert
 
 ### Example
 ```javascript
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ModelsAlert**](ModelsAlert.md)
+[**Alert**](Alert.md)
 
 ### Authorization
 

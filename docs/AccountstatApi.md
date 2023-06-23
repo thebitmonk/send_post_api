@@ -1,6 +1,6 @@
 # SendPostApi.AccountstatApi
 
-All URIs are relative to *https://api.sendpost.io/api/v1*
+All URIs are relative to *https://api-stag.sendpost.io/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -22,7 +22,7 @@ Method | HTTP request | Description
 
 
 
-Get All Account Stats 
+Get All Account Stats
 
 ### Example
 ```javascript
@@ -74,7 +74,7 @@ No authorization required
 
 
 
-Get All Account Stats by Group 
+Get All Account Stats by Group
 
 ### Example
 ```javascript
@@ -129,7 +129,7 @@ No authorization required
 
 
 
-Get All Aggregate Stats 
+Get All Aggregate Stats
 
 ### Example
 ```javascript
@@ -181,7 +181,7 @@ No authorization required
 
 
 
-Get All Aggregate Stats by Group 
+Get All Aggregate Stats by Group
 
 ### Example
 ```javascript
@@ -236,7 +236,7 @@ No authorization required
 
 
 
-Get All Aggregate Domain Stats 
+Get All Aggregate Domain Stats
 
 ### Example
 ```javascript
@@ -304,7 +304,7 @@ No authorization required
 
 
 
-Get All Aggregate Domain Stats Count 
+Get All Aggregate Domain Stats Count
 
 ### Example
 ```javascript
@@ -364,7 +364,7 @@ No authorization required
 
 
 
-Get All Aggregate IP Stats 
+Get All Aggregate IP Stats
 
 ### Example
 ```javascript
@@ -436,7 +436,7 @@ No authorization required
 
 
 
-Get All Aggregate IP Stats Count 
+Get All Aggregate IP Stats Count
 
 ### Example
 ```javascript
@@ -500,7 +500,7 @@ No authorization required
 
 
 
-Get All Aggregate SubAccount Stats 
+Get All Aggregate SubAccount Stats
 
 ### Example
 ```javascript
@@ -568,7 +568,7 @@ No authorization required
 
 
 
-Get All Aggregate SubAccount Stats Count 
+Get All Aggregate SubAccount Stats Count
 
 ### Example
 ```javascript
