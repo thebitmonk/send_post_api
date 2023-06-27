@@ -7,7 +7,10 @@ Method | HTTP request | Description
 [**paymentRouterApplyCouponToStripeCustomer**](AccountpaymentApi.md#paymentRouterApplyCouponToStripeCustomer) | **POST** /account/payment/customer/coupon | 
 [**paymentRouterCreateCustomerPortal**](AccountpaymentApi.md#paymentRouterCreateCustomerPortal) | **POST** /account/payment/portal | 
 [**paymentRouterCreatePaymentSubscription**](AccountpaymentApi.md#paymentRouterCreatePaymentSubscription) | **POST** /account/payment/subscription | 
+[**paymentRouterGetAllCountries**](AccountpaymentApi.md#paymentRouterGetAllCountries) | **GET** /account/payment/pricing/countries | 
 [**paymentRouterGetPricingPlans**](AccountpaymentApi.md#paymentRouterGetPricingPlans) | **GET** /account/payment/pricing | 
+[**paymentRouterGetTaxRateByAddress**](AccountpaymentApi.md#paymentRouterGetTaxRateByAddress) | **POST** /account/payment/tax/address | 
+[**paymentRouterGetTaxRateByIP**](AccountpaymentApi.md#paymentRouterGetTaxRateByIP) | **GET** /account/payment/tax/ip | 
 [**paymentRouterHandlePaymentWebhook**](AccountpaymentApi.md#paymentRouterHandlePaymentWebhook) | **POST** /account/payment/webhook | 
 
 
@@ -155,6 +158,46 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="paymentRouterGetAllCountries"></a>
+# **paymentRouterGetAllCountries**
+> [ModelsCountry] paymentRouterGetAllCountries()
+
+
+
+Responds back with slice of all countries <br>
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccountpaymentApi();
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.paymentRouterGetAllCountries(callback);
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[ModelsCountry]**](ModelsCountry.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="paymentRouterGetPricingPlans"></a>
 # **paymentRouterGetPricingPlans**
 > [ModelsPricing] paymentRouterGetPricingPlans()
@@ -185,6 +228,92 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**[ModelsPricing]**](ModelsPricing.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="paymentRouterGetTaxRateByAddress"></a>
+# **paymentRouterGetTaxRateByAddress**
+> ModelsTaxDetails paymentRouterGetTaxRateByAddress(body)
+
+
+
+Responds back with tax details <br>
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccountpaymentApi();
+
+var body = new SendPostApi.ModelsPaymentAddress(); // ModelsPaymentAddress | Address parameters
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.paymentRouterGetTaxRateByAddress(body, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**ModelsPaymentAddress**](ModelsPaymentAddress.md)| Address parameters | 
+
+### Return type
+
+[**ModelsTaxDetails**](ModelsTaxDetails.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="paymentRouterGetTaxRateByIP"></a>
+# **paymentRouterGetTaxRateByIP**
+> ModelsTaxDetails paymentRouterGetTaxRateByIP()
+
+
+
+Responds back with tax details <br>
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccountpaymentApi();
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.paymentRouterGetTaxRateByIP(callback);
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ModelsTaxDetails**](ModelsTaxDetails.md)
 
 ### Authorization
 
