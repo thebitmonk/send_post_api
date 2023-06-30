@@ -150,6 +150,36 @@
           done();
         });
       });
+      describe('paymentRouterGetCouponCodes', function() {
+        it('should call paymentRouterGetCouponCodes successfully', function(done) {
+          // TODO: uncomment paymentRouterGetCouponCodes call and complete the assertions
+          /*
+
+          instance.paymentRouterGetCouponCodes(function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            let dataCtr = data;
+            expect(dataCtr).to.be.an(Array);
+            expect(dataCtr).to.not.be.empty();
+            for (let p in dataCtr) {
+              let data = dataCtr[p];
+              expect(data).to.be.a(SendPostApi.ModelsCoupon);
+              expect(data.code).to.be.a('string');
+              expect(data.code).to.be("");
+              expect(data.percentage).to.be.a('number');
+              expect(data.percentage).to.be(0.0);
+            }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('paymentRouterGetPricingPlans', function() {
         it('should call paymentRouterGetPricingPlans successfully', function(done) {
           // TODO: uncomment paymentRouterGetPricingPlans call and complete the assertions

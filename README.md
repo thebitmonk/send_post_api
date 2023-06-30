@@ -205,6 +205,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountpaymentApi* | [**paymentRouterCreateCustomerPortal**](docs/AccountpaymentApi.md#paymentRouterCreateCustomerPortal) | **POST** /account/payment/portal | 
 *SendPostApi.AccountpaymentApi* | [**paymentRouterCreatePaymentSubscription**](docs/AccountpaymentApi.md#paymentRouterCreatePaymentSubscription) | **POST** /account/payment/subscription | 
 *SendPostApi.AccountpaymentApi* | [**paymentRouterGetAllCountries**](docs/AccountpaymentApi.md#paymentRouterGetAllCountries) | **GET** /account/payment/pricing/countries | 
+*SendPostApi.AccountpaymentApi* | [**paymentRouterGetCouponCodes**](docs/AccountpaymentApi.md#paymentRouterGetCouponCodes) | **GET** /account/payment/coupons | 
 *SendPostApi.AccountpaymentApi* | [**paymentRouterGetPricingPlans**](docs/AccountpaymentApi.md#paymentRouterGetPricingPlans) | **GET** /account/payment/pricing | 
 *SendPostApi.AccountpaymentApi* | [**paymentRouterGetTaxRateByAddress**](docs/AccountpaymentApi.md#paymentRouterGetTaxRateByAddress) | **POST** /account/payment/tax/address | 
 *SendPostApi.AccountpaymentApi* | [**paymentRouterGetTaxRateByIP**](docs/AccountpaymentApi.md#paymentRouterGetTaxRateByIP) | **GET** /account/payment/tax/ip | 
@@ -310,9 +311,9 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [SendPostApi.Model2782230x140006e8120False](docs/Model2782230x140006e8120False.md)
- - [SendPostApi.Model2785040x140006e8210False](docs/Model2785040x140006e8210False.md)
- - [SendPostApi.Model4915590x1400099a750False](docs/Model4915590x1400099a750False.md)
+ - [SendPostApi.Model2782230x140007c9f20False](docs/Model2782230x140007c9f20False.md)
+ - [SendPostApi.Model2785040x140007ec030False](docs/Model2785040x140007ec030False.md)
+ - [SendPostApi.Model4915590x14000a96570False](docs/Model4915590x14000a96570False.md)
  - [SendPostApi.ModelsAGDomainStat](docs/ModelsAGDomainStat.md)
  - [SendPostApi.ModelsAGIPStat](docs/ModelsAGIPStat.md)
  - [SendPostApi.ModelsAGStat](docs/ModelsAGStat.md)
@@ -364,6 +365,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsCopyTo](docs/ModelsCopyTo.md)
  - [SendPostApi.ModelsCountStat](docs/ModelsCountStat.md)
  - [SendPostApi.ModelsCountry](docs/ModelsCountry.md)
+ - [SendPostApi.ModelsCoupon](docs/ModelsCoupon.md)
  - [SendPostApi.ModelsCouponOptions](docs/ModelsCouponOptions.md)
  - [SendPostApi.ModelsCreateMailReport](docs/ModelsCreateMailReport.md)
  - [SendPostApi.ModelsCustomerQuality](docs/ModelsCustomerQuality.md)
