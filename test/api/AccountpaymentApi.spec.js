@@ -110,6 +110,12 @@
             }
             // TODO: update response assertions
             expect(data).to.be.a(SendPostApi.ModelsPaymentStatus);
+            expect(data.clientSecret).to.be.a('string');
+            expect(data.clientSecret).to.be("");
+            expect(data.message).to.be.a('string');
+            expect(data.message).to.be("");
+            expect(data.redirectUrl).to.be.a('string');
+            expect(data.redirectUrl).to.be("");
             expect(data.status).to.be.a('string');
             expect(data.status).to.be("");
 
