@@ -26,37 +26,39 @@
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsProvider = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsThirdPartySendingProviderType);
+    root.SendPostApi.ModelsThirdPartySendingProvider = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsThirdPartySendingProviderType);
   }
 }(this, function(ApiClient, ModelsThirdPartySendingProviderType) {
   'use strict';
 
   /**
-   * The ModelsProvider model module.
-   * @module model/ModelsProvider
+   * The ModelsThirdPartySendingProvider model module.
+   * @module model/ModelsThirdPartySendingProvider
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>ModelsProvider</code>.
-   * @alias module:model/ModelsProvider
+   * Constructs a new <code>ModelsThirdPartySendingProvider</code>.
+   * @alias module:model/ModelsThirdPartySendingProvider
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>ModelsProvider</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ModelsThirdPartySendingProvider</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ModelsProvider} obj Optional instance to populate.
-   * @return {module:model/ModelsProvider} The populated <code>ModelsProvider</code> instance.
+   * @param {module:model/ModelsThirdPartySendingProvider} obj Optional instance to populate.
+   * @return {module:model/ModelsThirdPartySendingProvider} The populated <code>ModelsThirdPartySendingProvider</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('created'))
         obj.created = ApiClient.convertToType(data['created'], 'Number');
+      if (data.hasOwnProperty('domain'))
+        obj.domain = ApiClient.convertToType(data['domain'], 'String');
       if (data.hasOwnProperty('endpoint'))
         obj.endpoint = ApiClient.convertToType(data['endpoint'], 'String');
       if (data.hasOwnProperty('id'))
@@ -65,18 +67,16 @@
         obj.key = ApiClient.convertToType(data['key'], 'String');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
+      if (data.hasOwnProperty('oauthToken'))
+        obj.oauthToken = ApiClient.convertToType(data['oauthToken'], 'String');
       if (data.hasOwnProperty('port'))
         obj.port = ApiClient.convertToType(data['port'], 'Number');
-      if (data.hasOwnProperty('provider'))
-        obj.provider = ModelsThirdPartySendingProviderType.constructFromObject(data['provider']);
-      if (data.hasOwnProperty('retry_time'))
-        obj.retryTime = ApiClient.convertToType(data['retry_time'], 'Number');
+      if (data.hasOwnProperty('retryTime'))
+        obj.retryTime = ApiClient.convertToType(data['retryTime'], 'Number');
       if (data.hasOwnProperty('secret'))
         obj.secret = ApiClient.convertToType(data['secret'], 'String');
-      if (data.hasOwnProperty('token'))
-        obj.token = ApiClient.convertToType(data['token'], 'String');
-      if (data.hasOwnProperty('updated'))
-        obj.updated = ApiClient.convertToType(data['updated'], 'Number');
+      if (data.hasOwnProperty('type'))
+        obj.type = ModelsThirdPartySendingProviderType.constructFromObject(data['type']);
     }
     return obj;
   }
@@ -85,6 +85,11 @@
    * @member {Number} created
    */
   exports.prototype.created = undefined;
+
+  /**
+   * @member {String} domain
+   */
+  exports.prototype.domain = undefined;
 
   /**
    * @member {String} endpoint
@@ -107,14 +112,14 @@
   exports.prototype.name = undefined;
 
   /**
+   * @member {String} oauthToken
+   */
+  exports.prototype.oauthToken = undefined;
+
+  /**
    * @member {Number} port
    */
   exports.prototype.port = undefined;
-
-  /**
-   * @member {module:model/ModelsThirdPartySendingProviderType} provider
-   */
-  exports.prototype.provider = undefined;
 
   /**
    * @member {Number} retryTime
@@ -127,14 +132,9 @@
   exports.prototype.secret = undefined;
 
   /**
-   * @member {String} token
+   * @member {module:model/ModelsThirdPartySendingProviderType} type
    */
-  exports.prototype.token = undefined;
-
-  /**
-   * @member {Number} updated
-   */
-  exports.prototype.updated = undefined;
+  exports.prototype.type = undefined;
 
 
   return exports;

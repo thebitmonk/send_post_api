@@ -63,6 +63,8 @@
         obj.routingMapping = ApiClient.convertToType(data['routingMapping'], Object);
       if (data.hasOwnProperty('routingStrategy'))
         obj.routingStrategy = ApiClient.convertToType(data['routingStrategy'], 'Number');
+      if (data.hasOwnProperty('tpsps'))
+        obj.tpsps = ApiClient.convertToType(data['tpsps'], ['Number']);
     }
     return obj;
   }
@@ -86,6 +88,11 @@
    * @member {Number} routingStrategy
    */
   exports.prototype.routingStrategy = undefined;
+
+  /**
+   * @member {Array.<Number>} tpsps
+   */
+  exports.prototype.tpsps = undefined;
 
 
   return exports;

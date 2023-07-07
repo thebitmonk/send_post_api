@@ -31,14 +31,14 @@
   var instance;
 
   describe('(package)', function() {
-    describe('ModelsAccountIPPool', function() {
+    describe('ModelsThirdPartySendingProvider', function() {
       beforeEach(function() {
-        instance = new SendPostApi.ModelsAccountIPPool();
+        instance = new SendPostApi.ModelsThirdPartySendingProvider();
       });
 
-      it('should create an instance of ModelsAccountIPPool', function() {
-        // TODO: update the code to test ModelsAccountIPPool
-        expect(instance).to.be.a(SendPostApi.ModelsAccountIPPool);
+      it('should create an instance of ModelsThirdPartySendingProvider', function() {
+        // TODO: update the code to test ModelsThirdPartySendingProvider
+        expect(instance).to.be.a(SendPostApi.ModelsThirdPartySendingProvider);
       });
 
       it('should have the property created (base name: "created")', function() {
@@ -47,16 +47,28 @@
         // expect(instance.created).to.be(expectedValueLiteral);
       });
 
+      it('should have the property domain (base name: "domain")', function() {
+        // TODO: update the code to test the property domain
+        expect(instance).to.have.property('domain');
+        // expect(instance.domain).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property endpoint (base name: "endpoint")', function() {
+        // TODO: update the code to test the property endpoint
+        expect(instance).to.have.property('endpoint');
+        // expect(instance.endpoint).to.be(expectedValueLiteral);
+      });
+
       it('should have the property id (base name: "id")', function() {
         // TODO: update the code to test the property id
         expect(instance).to.have.property('id');
         // expect(instance.id).to.be(expectedValueLiteral);
       });
 
-      it('should have the property ips (base name: "ips")', function() {
-        // TODO: update the code to test the property ips
-        expect(instance).to.have.property('ips');
-        // expect(instance.ips).to.be(expectedValueLiteral);
+      it('should have the property key (base name: "key")', function() {
+        // TODO: update the code to test the property key
+        expect(instance).to.have.property('key');
+        // expect(instance.key).to.be(expectedValueLiteral);
       });
 
       it('should have the property name (base name: "name")', function() {
@@ -65,22 +77,28 @@
         // expect(instance.name).to.be(expectedValueLiteral);
       });
 
-      it('should have the property routingMetaData (base name: "routingMetaData")', function() {
-        // TODO: update the code to test the property routingMetaData
-        expect(instance).to.have.property('routingMetaData');
-        // expect(instance.routingMetaData).to.be(expectedValueLiteral);
+      it('should have the property oauthToken (base name: "oauthToken")', function() {
+        // TODO: update the code to test the property oauthToken
+        expect(instance).to.have.property('oauthToken');
+        // expect(instance.oauthToken).to.be(expectedValueLiteral);
       });
 
-      it('should have the property routingStrategy (base name: "routingStrategy")', function() {
-        // TODO: update the code to test the property routingStrategy
-        expect(instance).to.have.property('routingStrategy');
-        // expect(instance.routingStrategy).to.be(expectedValueLiteral);
+      it('should have the property port (base name: "port")', function() {
+        // TODO: update the code to test the property port
+        expect(instance).to.have.property('port');
+        // expect(instance.port).to.be(expectedValueLiteral);
       });
 
-      it('should have the property thirdPartySendingProviders (base name: "thirdPartySendingProviders")', function() {
-        // TODO: update the code to test the property thirdPartySendingProviders
-        expect(instance).to.have.property('thirdPartySendingProviders');
-        // expect(instance.thirdPartySendingProviders).to.be(expectedValueLiteral);
+      it('should have the property retryTime (base name: "retryTime")', function() {
+        // TODO: update the code to test the property retryTime
+        expect(instance).to.have.property('retryTime');
+        // expect(instance.retryTime).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property secret (base name: "secret")', function() {
+        // TODO: update the code to test the property secret
+        expect(instance).to.have.property('secret');
+        // expect(instance.secret).to.be(expectedValueLiteral);
       });
 
       it('should have the property type (base name: "type")', function() {

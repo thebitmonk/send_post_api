@@ -7,5 +7,6 @@ Name | Type | Description | Notes
 **name** | **String** |  | [optional] 
 **routingMapping** | **Object** |  | [optional] 
 **routingStrategy** | **Number** |  | [optional] 
+**tpsps** | **[Number]** |  | [optional] 
 
 

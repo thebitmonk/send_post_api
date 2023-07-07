@@ -1,18 +1,18 @@
-# SendPostApi.ModelsProvider
+# SendPostApi.ModelsThirdPartySendingProvider
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created** | **Number** |  | [optional] 
+**domain** | **String** |  | [optional] 
 **endpoint** | **String** |  | [optional] 
 **id** | **Number** |  | [optional] 
 **key** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
+**oauthToken** | **String** |  | [optional] 
 **port** | **Number** |  | [optional] 
-**provider** | [**ModelsThirdPartySendingProviderType**](ModelsThirdPartySendingProviderType.md) |  | [optional] 
 **retryTime** | **Number** |  | [optional] 
 **secret** | **String** |  | [optional] 
-**token** | **String** |  | [optional] 
-**updated** | **Number** |  | [optional] 
+**type** | [**ModelsThirdPartySendingProviderType**](ModelsThirdPartySendingProviderType.md) |  | [optional] 
 
 

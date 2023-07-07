@@ -251,6 +251,12 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccounttemplateApi* | [**accountTemplateRouterGet**](docs/AccounttemplateApi.md#accountTemplateRouterGet) | **GET** /account/template/{templateid} | 
 *SendPostApi.AccounttemplateApi* | [**accountTemplateRouterGetAll**](docs/AccounttemplateApi.md#accountTemplateRouterGetAll) | **GET** /account/template/ | 
 *SendPostApi.AccounttemplateApi* | [**accountTemplateRouterUpdate**](docs/AccounttemplateApi.md#accountTemplateRouterUpdate) | **PUT** /account/template/{templateid} | 
+*SendPostApi.AccounttpspApi* | [**tPSPRouterCount**](docs/AccounttpspApi.md#tPSPRouterCount) | **GET** /account/tpsp/count | 
+*SendPostApi.AccounttpspApi* | [**tPSPRouterDelete**](docs/AccounttpspApi.md#tPSPRouterDelete) | **DELETE** /account/tpsp/{tpspId} | 
+*SendPostApi.AccounttpspApi* | [**tPSPRouterGet**](docs/AccounttpspApi.md#tPSPRouterGet) | **GET** /account/tpsp/{tpspId} | 
+*SendPostApi.AccounttpspApi* | [**tPSPRouterGetAll**](docs/AccounttpspApi.md#tPSPRouterGetAll) | **GET** /account/tpsp/ | 
+*SendPostApi.AccounttpspApi* | [**tPSPRouterInsert**](docs/AccounttpspApi.md#tPSPRouterInsert) | **POST** /account/tpsp/ | 
+*SendPostApi.AccounttpspApi* | [**tPSPRouterUpdate**](docs/AccounttpspApi.md#tPSPRouterUpdate) | **PUT** /account/tpsp/{tpspId} | 
 *SendPostApi.AccountvalidationApi* | [**validateRouterValidateEmailBulk**](docs/AccountvalidationApi.md#validateRouterValidateEmailBulk) | **POST** /account/validation/bulk | 
 *SendPostApi.AccountvalidationApi* | [**validationRouterCount**](docs/AccountvalidationApi.md#validationRouterCount) | **GET** /account/validation/count | 
 *SendPostApi.AccountvalidationApi* | [**validationRouterDeleteValidation**](docs/AccountvalidationApi.md#validationRouterDeleteValidation) | **DELETE** /account/validation/ | 
@@ -316,6 +322,7 @@ Class | Method | HTTP request | Description
 
  - [SendPostApi.Alert](docs/Alert.md)
  - [SendPostApi.ApiGlockappsMailReport](docs/ApiGlockappsMailReport.md)
+ - [SendPostApi.EUpdateTPSP](docs/EUpdateTPSP.md)
  - [SendPostApi.ModelFalse](docs/ModelFalse.md)
  - [SendPostApi.ModelsAGDomainStat](docs/ModelsAGDomainStat.md)
  - [SendPostApi.ModelsAGIPStat](docs/ModelsAGIPStat.md)
@@ -391,6 +398,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsESender](docs/ModelsESender.md)
  - [SendPostApi.ModelsESubAccount](docs/ModelsESubAccount.md)
  - [SendPostApi.ModelsESystemDomain](docs/ModelsESystemDomain.md)
+ - [SendPostApi.ModelsEThirdPartySendingProvider](docs/ModelsEThirdPartySendingProvider.md)
  - [SendPostApi.ModelsEValidation](docs/ModelsEValidation.md)
  - [SendPostApi.ModelsEWebhook](docs/ModelsEWebhook.md)
  - [SendPostApi.ModelsEditorTokenResponse](docs/ModelsEditorTokenResponse.md)
@@ -430,6 +438,12 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsLabelType](docs/ModelsLabelType.md)
  - [SendPostApi.ModelsLinks](docs/ModelsLinks.md)
  - [SendPostApi.ModelsMailReportResult](docs/ModelsMailReportResult.md)
+ - [SendPostApi.ModelsMailgunClientInfo](docs/ModelsMailgunClientInfo.md)
+ - [SendPostApi.ModelsMailgunDeliveryStatus](docs/ModelsMailgunDeliveryStatus.md)
+ - [SendPostApi.ModelsMailgunEvent](docs/ModelsMailgunEvent.md)
+ - [SendPostApi.ModelsMailgunMessage](docs/ModelsMailgunMessage.md)
+ - [SendPostApi.ModelsMailgunSignature](docs/ModelsMailgunSignature.md)
+ - [SendPostApi.ModelsMailgunUserVariables](docs/ModelsMailgunUserVariables.md)
  - [SendPostApi.ModelsMember](docs/ModelsMember.md)
  - [SendPostApi.ModelsMemberRole](docs/ModelsMemberRole.md)
  - [SendPostApi.ModelsNotificationType](docs/ModelsNotificationType.md)
@@ -442,7 +456,6 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsProviderDetails](docs/ModelsProviderDetails.md)
  - [SendPostApi.ModelsProviderResult](docs/ModelsProviderResult.md)
  - [SendPostApi.ModelsProviderSettings](docs/ModelsProviderSettings.md)
- - [SendPostApi.ModelsProviderType](docs/ModelsProviderType.md)
  - [SendPostApi.ModelsQEmailMessage](docs/ModelsQEmailMessage.md)
  - [SendPostApi.ModelsQEvent](docs/ModelsQEvent.md)
  - [SendPostApi.ModelsRAssumeAccount](docs/ModelsRAssumeAccount.md)
@@ -461,6 +474,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsSSLCertificate](docs/ModelsSSLCertificate.md)
  - [SendPostApi.ModelsSSLInfo](docs/ModelsSSLInfo.md)
  - [SendPostApi.ModelsSender](docs/ModelsSender.md)
+ - [SendPostApi.ModelsSendgridEvent](docs/ModelsSendgridEvent.md)
  - [SendPostApi.ModelsSingleCleanedMail](docs/ModelsSingleCleanedMail.md)
  - [SendPostApi.ModelsStat](docs/ModelsStat.md)
  - [SendPostApi.ModelsSubAccount](docs/ModelsSubAccount.md)
@@ -473,6 +487,8 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsSystemIPPool](docs/ModelsSystemIPPool.md)
  - [SendPostApi.ModelsSystemTemplate](docs/ModelsSystemTemplate.md)
  - [SendPostApi.ModelsTag](docs/ModelsTag.md)
+ - [SendPostApi.ModelsThirdPartySendingProvider](docs/ModelsThirdPartySendingProvider.md)
+ - [SendPostApi.ModelsThirdPartySendingProviderType](docs/ModelsThirdPartySendingProviderType.md)
  - [SendPostApi.ModelsTo](docs/ModelsTo.md)
  - [SendPostApi.ModelsValidation](docs/ModelsValidation.md)
  - [SendPostApi.ModelsValidationReason](docs/ModelsValidationReason.md)

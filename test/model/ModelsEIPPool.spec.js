@@ -65,6 +65,12 @@
         // expect(instance.routingStrategy).to.be(expectedValueLiteral);
       });
 
+      it('should have the property tpsps (base name: "tpsps")', function() {
+        // TODO: update the code to test the property tpsps
+        expect(instance).to.have.property('tpsps');
+        // expect(instance.tpsps).to.be(expectedValueLiteral);
+      });
+
     });
   });
 

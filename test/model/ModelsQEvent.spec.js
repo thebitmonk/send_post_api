@@ -107,6 +107,12 @@
         // expect(instance.to).to.be(expectedValueLiteral);
       });
 
+      it('should have the property tpspId (base name: "tpspId")', function() {
+        // TODO: update the code to test the property tpspId
+        expect(instance).to.have.property('tpspId');
+        // expect(instance.tpspId).to.be(expectedValueLiteral);
+      });
+
       it('should have the property type (base name: "type")', function() {
         // TODO: update the code to test the property type
         expect(instance).to.have.property('type');

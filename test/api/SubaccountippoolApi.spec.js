@@ -70,6 +70,7 @@
           body.name = "";
           body.routingMapping = ;
           body.routingStrategy = "0";
+          body.tpsps = [0];
 
           instance.iPPoolRouterCreate(xSubAccountApiKey, body, function(error, data, response) {
             if (error) {
@@ -604,6 +605,7 @@
           body.name = "";
           body.routingMapping = ;
           body.routingStrategy = "0";
+          body.tpsps = [0];
 
           instance.iPPoolRouterUpdate(xSubAccountApiKey, ippoolid, body, function(error, data, response) {
             if (error) {

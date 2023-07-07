@@ -77,6 +77,8 @@
         obj.submittedAt = ApiClient.convertToType(data['submittedAt'], 'Number');
       if (data.hasOwnProperty('to'))
         obj.to = ApiClient.convertToType(data['to'], 'String');
+      if (data.hasOwnProperty('tpspId'))
+        obj.tpspId = ApiClient.convertToType(data['tpspId'], 'Number');
       if (data.hasOwnProperty('type'))
         obj.type = ApiClient.convertToType(data['type'], 'Number');
     }
@@ -137,6 +139,11 @@
    * @member {String} to
    */
   exports.prototype.to = undefined;
+
+  /**
+   * @member {Number} tpspId
+   */
+  exports.prototype.tpspId = undefined;
 
   /**
    * @member {Number} type
