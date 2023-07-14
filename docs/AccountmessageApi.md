@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 
-Find Message By Id
+Find Message By Id <br>
 
 ### Example
 ```javascript
@@ -65,7 +65,7 @@ No authorization required
 
 
 
-Find all events associated with a message id
+Find all events associated with a message id <br>
 
 ### Example
 ```javascript
@@ -114,7 +114,7 @@ No authorization required
 
 
 
-Find all message events associated with a message id from a specific node
+Find all message events associated with a message id from a specific node <br>
 
 ### Example
 ```javascript
@@ -163,7 +163,7 @@ No authorization required
 
 
 
-Find Message from node by specific Id
+Find Message from node by specific Id <br>
 
 ### Example
 ```javascript

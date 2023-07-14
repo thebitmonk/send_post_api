@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -171,6 +171,12 @@
         // TODO: update the code to test the property stripeBasePriceId
         expect(instance).to.have.property('stripeBasePriceId');
         // expect(instance.stripeBasePriceId).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property stripeSubscriptionItemId (base name: "stripeSubscriptionItemId")', function() {
+        // TODO: update the code to test the property stripeSubscriptionItemId
+        expect(instance).to.have.property('stripeSubscriptionItemId');
+        // expect(instance.stripeSubscriptionItemId).to.be(expectedValueLiteral);
       });
 
       it('should have the property stripeUsagePriceId (base name: "stripeUsagePriceId")', function() {

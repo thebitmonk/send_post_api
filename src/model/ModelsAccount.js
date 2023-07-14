@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -99,6 +99,8 @@
         obj.slackToken = ApiClient.convertToType(data['slackToken'], 'String');
       if (data.hasOwnProperty('stripeBasePriceId'))
         obj.stripeBasePriceId = ApiClient.convertToType(data['stripeBasePriceId'], 'String');
+      if (data.hasOwnProperty('stripeSubscriptionItemId'))
+        obj.stripeSubscriptionItemId = ApiClient.convertToType(data['stripeSubscriptionItemId'], 'String');
       if (data.hasOwnProperty('stripeUsagePriceId'))
         obj.stripeUsagePriceId = ApiClient.convertToType(data['stripeUsagePriceId'], 'String');
       if (data.hasOwnProperty('switchingSendpostDescription'))
@@ -216,6 +218,11 @@
    * @member {String} stripeBasePriceId
    */
   exports.prototype.stripeBasePriceId = undefined;
+
+  /**
+   * @member {String} stripeSubscriptionItemId
+   */
+  exports.prototype.stripeSubscriptionItemId = undefined;
 
   /**
    * @member {String} stripeUsagePriceId

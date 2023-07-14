@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 
-Count Total TPSPs
+Count Total TPSPs <br>
 
 ### Example
 ```javascript
@@ -68,7 +68,7 @@ No authorization required
 
 
 
-Delete ThirdPartySendingProvider
+Delete ThirdPartySendingProvider <br>
 
 ### Example
 ```javascript
@@ -117,7 +117,7 @@ No authorization required
 
 
 
-Find ThirdPartySendingProvider by TPSPID
+Find ThirdPartySendingProvider by TPSPID <br>
 
 ### Example
 ```javascript
@@ -166,7 +166,7 @@ No authorization required
 
 
 
-Get All TPSPs
+Get All TPSPs <br>
 
 ### Example
 ```javascript
@@ -220,7 +220,7 @@ No authorization required
 
 
 
-Insert ThirdPartySendingProvider
+Insert ThirdPartySendingProvider <br>
 
 ### Example
 ```javascript
@@ -269,7 +269,7 @@ No authorization required
 
 
 
-Update ThirdPartySendingProvider
+Update ThirdPartySendingProvider <br>
 
 ### Example
 ```javascript
@@ -281,7 +281,7 @@ var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var tpspId = 789; // Number | The TPSPID you want to update
 
-var body = new SendPostApi.EUpdateTPSP(); // EUpdateTPSP | The body
+var body = new SendPostApi.ModelsEUpdateTPSP(); // ModelsEUpdateTPSP | The body
 
 
 var callback = function(error, data, response) {
@@ -300,7 +300,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
  **tpspId** | **Number**| The TPSPID you want to update | 
- **body** | [**EUpdateTPSP**](EUpdateTPSP.md)| The body | 
+ **body** | [**ModelsEUpdateTPSP**](ModelsEUpdateTPSP.md)| The body | 
 
 ### Return type
 

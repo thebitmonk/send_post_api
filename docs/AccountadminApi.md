@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 
-Responds back with a custom token for frontend to start login using firebase sdk
+Responds back with a custom token for frontend to start login using firebase sdk <br>
 
 ### Example
 ```javascript

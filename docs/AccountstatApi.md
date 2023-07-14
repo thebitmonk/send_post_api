@@ -4,6 +4,7 @@ All URIs are relative to *https://api-stag.sendpost.io/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**accountStatRouterGetAccountCycleUsage**](AccountstatApi.md#accountStatRouterGetAccountCycleUsage) | **GET** /account/stat/cycleusage | 
 [**accountStatRouterGetAllAccountStats**](AccountstatApi.md#accountStatRouterGetAllAccountStats) | **GET** /account/stat/ | 
 [**accountStatRouterGetAllAccountStatsByGroup**](AccountstatApi.md#accountStatRouterGetAllAccountStatsByGroup) | **GET** /account/stat/group | 
 [**accountStatRouterGetAllAggregateAccountStats**](AccountstatApi.md#accountStatRouterGetAllAggregateAccountStats) | **GET** /account/stat/aggregate | 
@@ -16,13 +17,59 @@ Method | HTTP request | Description
 [**accountStatRouterGetAllAggregateSubAccountStatsCount**](AccountstatApi.md#accountStatRouterGetAllAggregateSubAccountStatsCount) | **GET** /account/stat/aggregate/subaccount/count | 
 
 
+<a name="accountStatRouterGetAccountCycleUsage"></a>
+# **accountStatRouterGetAccountCycleUsage**
+> ModelsAccountCycleUsage accountStatRouterGetAccountCycleUsage(xAccountApiKey)
+
+
+
+Responds back with Account Processed Mails Stat <br>
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccountstatApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.accountStatRouterGetAccountCycleUsage(xAccountApiKey, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xAccountApiKey** | **String**| Account API Key | 
+
+### Return type
+
+[**ModelsAccountCycleUsage**](ModelsAccountCycleUsage.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="accountStatRouterGetAllAccountStats"></a>
 # **accountStatRouterGetAllAccountStats**
 > [ModelsRStat] accountStatRouterGetAllAccountStats(xAccountApiKey, opts)
 
 
 
-Get All Account Stats
+Get All Account Stats <br>
 
 ### Example
 ```javascript
@@ -74,7 +121,7 @@ No authorization required
 
 
 
-Get All Account Stats by Group
+Get All Account Stats by Group <br>
 
 ### Example
 ```javascript
@@ -129,7 +176,7 @@ No authorization required
 
 
 
-Get All Aggregate Stats
+Get All Aggregate Stats <br>
 
 ### Example
 ```javascript
@@ -181,7 +228,7 @@ No authorization required
 
 
 
-Get All Aggregate Stats by Group
+Get All Aggregate Stats by Group <br>
 
 ### Example
 ```javascript
@@ -236,7 +283,7 @@ No authorization required
 
 
 
-Get All Aggregate Domain Stats
+Get All Aggregate Domain Stats <br>
 
 ### Example
 ```javascript
@@ -304,7 +351,7 @@ No authorization required
 
 
 
-Get All Aggregate Domain Stats Count
+Get All Aggregate Domain Stats Count <br>
 
 ### Example
 ```javascript
@@ -364,7 +411,7 @@ No authorization required
 
 
 
-Get All Aggregate IP Stats
+Get All Aggregate IP Stats <br>
 
 ### Example
 ```javascript
@@ -436,7 +483,7 @@ No authorization required
 
 
 
-Get All Aggregate IP Stats Count
+Get All Aggregate IP Stats Count <br>
 
 ### Example
 ```javascript
@@ -500,7 +547,7 @@ No authorization required
 
 
 
-Get All Aggregate SubAccount Stats
+Get All Aggregate SubAccount Stats <br>
 
 ### Example
 ```javascript
@@ -568,7 +615,7 @@ No authorization required
 
 
 
-Get All Aggregate SubAccount Stats Count
+Get All Aggregate SubAccount Stats Count <br>
 
 ### Example
 ```javascript

@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 
-get reputation of domain
+get reputation of domain <br>
 
 ### Example
 ```javascript

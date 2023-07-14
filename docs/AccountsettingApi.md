@@ -4,8 +4,55 @@ All URIs are relative to *https://api-stag.sendpost.io/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**accountSettingRouterGetAccount**](AccountsettingApi.md#accountSettingRouterGetAccount) | **GET** /account/setting/ | 
 [**accountSettingRouterUpdate**](AccountsettingApi.md#accountSettingRouterUpdate) | **PUT** /account/setting/ | 
 
+
+<a name="accountSettingRouterGetAccount"></a>
+# **accountSettingRouterGetAccount**
+> ModelsAccount accountSettingRouterGetAccount(xAccountApiKey)
+
+
+
+get latest account details <br>
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccountsettingApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.accountSettingRouterGetAccount(xAccountApiKey, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xAccountApiKey** | **String**| Account API Key | 
+
+### Return type
+
+[**ModelsAccount**](ModelsAccount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="accountSettingRouterUpdate"></a>
 # **accountSettingRouterUpdate**
@@ -13,7 +60,7 @@ Method | HTTP request | Description
 
 
 
-update account settings
+update account settings <br>
 
 ### Example
 ```javascript
