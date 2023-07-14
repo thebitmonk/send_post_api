@@ -41,6 +41,12 @@
         expect(instance).to.be.a(SendPostApi.ModelsAGDomainStat);
       });
 
+      it('should have the property domainId (base name: "DomainId")', function() {
+        // TODO: update the code to test the property domainId
+        expect(instance).to.have.property('domainId');
+        // expect(instance.domainId).to.be(expectedValueLiteral);
+      });
+
       it('should have the property clicked (base name: "clicked")', function() {
         // TODO: update the code to test the property clicked
         expect(instance).to.have.property('clicked');

@@ -53,6 +53,12 @@
         // expect(instance.apiKey).to.be(expectedValueLiteral);
       });
 
+      it('should have the property brandColor (base name: "brandColor")', function() {
+        // TODO: update the code to test the property brandColor
+        expect(instance).to.have.property('brandColor');
+        // expect(instance.brandColor).to.be(expectedValueLiteral);
+      });
+
       it('should have the property companyName (base name: "companyName")', function() {
         // TODO: update the code to test the property companyName
         expect(instance).to.have.property('companyName');
@@ -177,6 +183,12 @@
         // TODO: update the code to test the property stripeUsagePriceId
         expect(instance).to.have.property('stripeUsagePriceId');
         // expect(instance.stripeUsagePriceId).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property switchingSendpostDescription (base name: "switchingSendpostDescription")', function() {
+        // TODO: update the code to test the property switchingSendpostDescription
+        expect(instance).to.have.property('switchingSendpostDescription');
+        // expect(instance.switchingSendpostDescription).to.be(expectedValueLiteral);
       });
 
     });

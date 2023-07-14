@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('DomainId'))
+        obj.domainId = ApiClient.convertToType(data['DomainId'], 'Number');
       if (data.hasOwnProperty('clicked'))
         obj.clicked = ApiClient.convertToType(data['clicked'], 'Number');
       if (data.hasOwnProperty('delivered'))
@@ -80,6 +82,11 @@
     }
     return obj;
   }
+
+  /**
+   * @member {Number} domainId
+   */
+  exports.prototype.domainId = undefined;
 
   /**
    * @member {Number} clicked

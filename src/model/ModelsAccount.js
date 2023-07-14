@@ -59,6 +59,8 @@
         obj.alertSlackEndpoint = ApiClient.convertToType(data['alertSlackEndpoint'], 'String');
       if (data.hasOwnProperty('apiKey'))
         obj.apiKey = ApiClient.convertToType(data['apiKey'], 'String');
+      if (data.hasOwnProperty('brandColor'))
+        obj.brandColor = ApiClient.convertToType(data['brandColor'], 'String');
       if (data.hasOwnProperty('companyName'))
         obj.companyName = ApiClient.convertToType(data['companyName'], 'String');
       if (data.hasOwnProperty('created'))
@@ -101,6 +103,8 @@
         obj.stripeSubscriptionItemId = ApiClient.convertToType(data['stripeSubscriptionItemId'], 'String');
       if (data.hasOwnProperty('stripeUsagePriceId'))
         obj.stripeUsagePriceId = ApiClient.convertToType(data['stripeUsagePriceId'], 'String');
+      if (data.hasOwnProperty('switchingSendpostDescription'))
+        obj.switchingSendpostDescription = ApiClient.convertToType(data['switchingSendpostDescription'], 'String');
     }
     return obj;
   }
@@ -114,6 +118,11 @@
    * @member {String} apiKey
    */
   exports.prototype.apiKey = undefined;
+
+  /**
+   * @member {String} brandColor
+   */
+  exports.prototype.brandColor = undefined;
 
   /**
    * @member {String} companyName
@@ -219,6 +228,11 @@
    * @member {String} stripeUsagePriceId
    */
   exports.prototype.stripeUsagePriceId = undefined;
+
+  /**
+   * @member {String} switchingSendpostDescription
+   */
+  exports.prototype.switchingSendpostDescription = undefined;
 
 
   return exports;

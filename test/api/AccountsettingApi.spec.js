@@ -53,6 +53,8 @@
             expect(data.alertSlackEndpoint).to.be("");
             expect(data.apiKey).to.be.a('string');
             expect(data.apiKey).to.be("");
+            expect(data.brandColor).to.be.a('string');
+            expect(data.brandColor).to.be("");
             expect(data.companyName).to.be.a('string');
             expect(data.companyName).to.be("");
             expect(data.created).to.be.a('number');
@@ -95,6 +97,8 @@
             expect(data.stripeSubscriptionItemId).to.be("");
             expect(data.stripeUsagePriceId).to.be.a('string');
             expect(data.stripeUsagePriceId).to.be("");
+            expect(data.switchingSendpostDescription).to.be.a('string');
+            expect(data.switchingSendpostDescription).to.be("");
 
             done();
           });
@@ -123,6 +127,8 @@
             expect(data.alertSlackEndpoint).to.be("");
             expect(data.apiKey).to.be.a('string');
             expect(data.apiKey).to.be("");
+            expect(data.brandColor).to.be.a('string');
+            expect(data.brandColor).to.be("");
             expect(data.companyName).to.be.a('string');
             expect(data.companyName).to.be("");
             expect(data.created).to.be.a('number');
@@ -165,6 +171,8 @@
             expect(data.stripeSubscriptionItemId).to.be("");
             expect(data.stripeUsagePriceId).to.be.a('string');
             expect(data.stripeUsagePriceId).to.be("");
+            expect(data.switchingSendpostDescription).to.be.a('string');
+            expect(data.switchingSendpostDescription).to.be("");
 
             done();
           });

@@ -320,6 +320,8 @@
               expect(data.submittedAt).to.be("0");
               expect(data.to).to.be.a('string');
               expect(data.to).to.be("");
+              expect(data.tpspId).to.be.a('number');
+              expect(data.tpspId).to.be("0");
               expect(data.type).to.be.a('number');
               expect(data.type).to.be("0");
             }
@@ -419,6 +421,8 @@
               expect(data.submittedAt).to.be("0");
               expect(data.to).to.be.a('string');
               expect(data.to).to.be("");
+              expect(data.tpspId).to.be.a('number');
+              expect(data.tpspId).to.be("0");
               expect(data.type).to.be.a('number');
               expect(data.type).to.be("0");
             }

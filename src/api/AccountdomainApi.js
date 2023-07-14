@@ -100,6 +100,60 @@
     }
 
     /**
+     * Callback function to receive the result of the accountDomainRouterGet operation.
+     * @callback module:api/AccountdomainApi~accountDomainRouterGetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ModelsAccountDomain} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Find Domain by DomainId <br>
+     * @param {String} xAccountApiKey Account API Key
+     * @param {Number} domainId the DomainId you want to get
+     * @param {module:api/AccountdomainApi~accountDomainRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ModelsAccountDomain}
+     */
+    this.accountDomainRouterGet = function(xAccountApiKey, domainId, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling accountDomainRouterGet");
+      }
+
+      // verify the required parameter 'domainId' is set
+      if (domainId === undefined || domainId === null) {
+        throw new Error("Missing the required parameter 'domainId' when calling accountDomainRouterGet");
+      }
+
+
+      var pathParams = {
+        'domainId': domainId
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-Account-ApiKey': xAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ModelsAccountDomain;
+
+      return this.apiClient.callApi(
+        '/account/domain/{domainId}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the accountDomainRouterGetAll operation.
      * @callback module:api/AccountdomainApi~accountDomainRouterGetAllCallback
      * @param {String} error Error message, if any.

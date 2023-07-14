@@ -59,6 +59,8 @@
             expect(data.alertSlackEndpoint).to.be("");
             expect(data.apiKey).to.be.a('string');
             expect(data.apiKey).to.be("");
+            expect(data.brandColor).to.be.a('string');
+            expect(data.brandColor).to.be("");
             expect(data.companyName).to.be.a('string');
             expect(data.companyName).to.be("");
             expect(data.created).to.be.a('number');
@@ -101,6 +103,8 @@
             expect(data.stripeSubscriptionItemId).to.be("");
             expect(data.stripeUsagePriceId).to.be.a('string');
             expect(data.stripeUsagePriceId).to.be("");
+            expect(data.switchingSendpostDescription).to.be.a('string');
+            expect(data.switchingSendpostDescription).to.be("");
 
             done();
           });
@@ -139,6 +143,8 @@
                 expect(data.alertSlackEndpoint).to.be("");
                 expect(data.apiKey).to.be.a('string');
                 expect(data.apiKey).to.be("");
+                expect(data.brandColor).to.be.a('string');
+                expect(data.brandColor).to.be("");
                 expect(data.companyName).to.be.a('string');
                 expect(data.companyName).to.be("");
                 expect(data.created).to.be.a('number');
@@ -181,6 +187,8 @@
                 expect(data.stripeSubscriptionItemId).to.be("");
                 expect(data.stripeUsagePriceId).to.be.a('string');
                 expect(data.stripeUsagePriceId).to.be("");
+                expect(data.switchingSendpostDescription).to.be.a('string');
+                expect(data.switchingSendpostDescription).to.be("");
 
                       }
             }
@@ -220,6 +228,7 @@
           var body = new SendPostApi.ModelsEAccountMember();
           body.companyName = "";
           body.currentEmailServiceProvider = "";
+          body.hexColor = "";
           body.industry = "";
           body.logoURL = "";
           body.name = "";
@@ -227,6 +236,7 @@
           body.onboardQAnswered = false;
           body.phoneNumber = "";
           body.sendingVolumePerMonth = "";
+          body.switchingSendpostDescription = "";
           body.uid = "";
           body.verifyEmail = false;
           var xToken = "xToken_example";
@@ -249,6 +259,8 @@
                 expect(data.alertSlackEndpoint).to.be("");
                 expect(data.apiKey).to.be.a('string');
                 expect(data.apiKey).to.be("");
+                expect(data.brandColor).to.be.a('string');
+                expect(data.brandColor).to.be("");
                 expect(data.companyName).to.be.a('string');
                 expect(data.companyName).to.be("");
                 expect(data.created).to.be.a('number');
@@ -291,6 +303,8 @@
                 expect(data.stripeSubscriptionItemId).to.be("");
                 expect(data.stripeUsagePriceId).to.be.a('string');
                 expect(data.stripeUsagePriceId).to.be("");
+                expect(data.switchingSendpostDescription).to.be.a('string');
+                expect(data.switchingSendpostDescription).to.be("");
 
                       }
             }
@@ -315,6 +329,28 @@
               expect(data.member.phoneNumber).to.be("");
               expect(data.member.url).to.be.a('string');
               expect(data.member.url).to.be("");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('authRouterUpdateLogo', function() {
+        it('should call authRouterUpdateLogo successfully', function(done) {
+          // TODO: uncomment, update parameter values for authRouterUpdateLogo call
+          /*
+          var uid = "uid_example";
+          var xToken = "xToken_example";
+          var opts = {};
+          opts.logo = "/path/to/file.txt";
+
+          instance.authRouterUpdateLogo(uid, xToken, opts, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
 
             done();
           });

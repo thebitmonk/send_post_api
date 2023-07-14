@@ -276,6 +276,52 @@
         authNames, contentTypes, accepts, returnType, callback
       );
     }
+
+    /**
+     * Callback function to receive the result of the trackRouterTrackWelcomeLinkClick operation.
+     * @callback module:api/TrackApi~trackRouterTrackWelcomeLinkClickCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Track Welcome Link Click <br>
+     * @param {String} redirecturl The encoded redirect URL
+     * @param {module:api/TrackApi~trackRouterTrackWelcomeLinkClickCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.trackRouterTrackWelcomeLinkClick = function(redirecturl, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'redirecturl' is set
+      if (redirecturl === undefined || redirecturl === null) {
+        throw new Error("Missing the required parameter 'redirecturl' when calling trackRouterTrackWelcomeLinkClick");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'redirecturl': redirecturl,
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/track/click/welcome', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
   };
 
   return exports;
