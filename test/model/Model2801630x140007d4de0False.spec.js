@@ -31,20 +31,14 @@
   var instance;
 
   describe('(package)', function() {
-    describe('ModelsPaymentStatus', function() {
+    describe('Model2801630x140007d4de0False', function() {
       beforeEach(function() {
-        instance = new SendPostApi.ModelsPaymentStatus();
+        instance = new SendPostApi.Model2801630x140007d4de0False();
       });
 
-      it('should create an instance of ModelsPaymentStatus', function() {
-        // TODO: update the code to test ModelsPaymentStatus
-        expect(instance).to.be.a(SendPostApi.ModelsPaymentStatus);
-      });
-
-      it('should have the property status (base name: "status")', function() {
-        // TODO: update the code to test the property status
-        expect(instance).to.have.property('status');
-        // expect(instance.status).to.be(expectedValueLiteral);
+      it('should create an instance of Model2801630x140007d4de0False', function() {
+        // TODO: update the code to test Model2801630x140007d4de0False
+        expect(instance).to.be.a(SendPostApi.Model2801630x140007d4de0False);
       });
 
     });

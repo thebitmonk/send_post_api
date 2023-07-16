@@ -203,20 +203,16 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountmessageApi* | [**messageRouterGetAllEventsForAMessageId**](docs/AccountmessageApi.md#messageRouterGetAllEventsForAMessageId) | **GET** /account/message/{messageId}/events | 
 *SendPostApi.AccountmessageApi* | [**messageRouterGetAllEventsForAMessageIdFromANode**](docs/AccountmessageApi.md#messageRouterGetAllEventsForAMessageIdFromANode) | **GET** /account/message/node/{messageId}/events | 
 *SendPostApi.AccountmessageApi* | [**messageRouterGetMessageFromNode**](docs/AccountmessageApi.md#messageRouterGetMessageFromNode) | **GET** /account/message/node/{messageId} | 
+*SendPostApi.AccountonboardingApi* | [**onboardingRouterCreateUnlockTicket**](docs/AccountonboardingApi.md#onboardingRouterCreateUnlockTicket) | **POST** /account/onboarding/unlockticket | 
 *SendPostApi.AccountonboardingApi* | [**onboardingRouterGetOnboardingChecklist**](docs/AccountonboardingApi.md#onboardingRouterGetOnboardingChecklist) | **GET** /account/onboarding/checklist | 
 *SendPostApi.AccountonboardingApi* | [**onboardingRouterSendOnboardingWelcomeEmail**](docs/AccountonboardingApi.md#onboardingRouterSendOnboardingWelcomeEmail) | **POST** /account/onboarding/welcome | 
 *SendPostApi.AccountpaymentApi* | [**paymentRouterApplyCouponToStripeCustomer**](docs/AccountpaymentApi.md#paymentRouterApplyCouponToStripeCustomer) | **POST** /account/payment/customer/coupon | 
 *SendPostApi.AccountpaymentApi* | [**paymentRouterCreateCustomerPortal**](docs/AccountpaymentApi.md#paymentRouterCreateCustomerPortal) | **POST** /account/payment/portal | 
 *SendPostApi.AccountpaymentApi* | [**paymentRouterCreatePaymentSubscription**](docs/AccountpaymentApi.md#paymentRouterCreatePaymentSubscription) | **POST** /account/payment/subscription | 
-*SendPostApi.AccountpaymentApi* | [**paymentRouterGetAllCountries**](docs/AccountpaymentApi.md#paymentRouterGetAllCountries) | **GET** /account/payment/pricing/countries | 
-*SendPostApi.AccountpaymentApi* | [**paymentRouterGetCouponCodes**](docs/AccountpaymentApi.md#paymentRouterGetCouponCodes) | **GET** /account/payment/coupons | 
-*SendPostApi.AccountpaymentApi* | [**paymentRouterGetPricingPlans**](docs/AccountpaymentApi.md#paymentRouterGetPricingPlans) | **GET** /account/payment/pricing | 
-*SendPostApi.AccountpaymentApi* | [**paymentRouterGetTaxRateByAddress**](docs/AccountpaymentApi.md#paymentRouterGetTaxRateByAddress) | **POST** /account/payment/tax/address | 
-*SendPostApi.AccountpaymentApi* | [**paymentRouterGetTaxRateByIP**](docs/AccountpaymentApi.md#paymentRouterGetTaxRateByIP) | **GET** /account/payment/tax/ip | 
 *SendPostApi.AccountpaymentApi* | [**paymentRouterHandlePaymentWebhook**](docs/AccountpaymentApi.md#paymentRouterHandlePaymentWebhook) | **POST** /account/payment/webhook | 
 *SendPostApi.AccountrecipientApi* | [**recipientRouterGetAllMessagesForARecipient**](docs/AccountrecipientApi.md#recipientRouterGetAllMessagesForARecipient) | **GET** /account/recipient/{recipient}/messages | 
 *SendPostApi.AccountrecipientApi* | [**recipientRouterGetAllMessagesForARecipientFromANode**](docs/AccountrecipientApi.md#recipientRouterGetAllMessagesForARecipientFromANode) | **GET** /account/recipient/node/{recipient}/messages | 
-*SendPostApi.AccountsettingApi* | [**accountSettingRouterGetAccount**](docs/AccountsettingApi.md#accountSettingRouterGetAccount) | **GET** /account/setting/ | 
+*SendPostApi.AccountsettingApi* | [**accountSettingRouterCheckDedicatedIPExist**](docs/AccountsettingApi.md#accountSettingRouterCheckDedicatedIPExist) | **GET** /account/setting/dedicated | 
 *SendPostApi.AccountsettingApi* | [**accountSettingRouterUpdate**](docs/AccountsettingApi.md#accountSettingRouterUpdate) | **PUT** /account/setting/ | 
 *SendPostApi.AccountsmtpstatApi* | [**sMTPStatRouterGetAllAggregateIPProviderSMTPStats**](docs/AccountsmtpstatApi.md#sMTPStatRouterGetAllAggregateIPProviderSMTPStats) | **GET** /account/smtp/stat/ip/{ipid}/provider/{provider}/aggregate | 
 *SendPostApi.AccountsmtpstatApi* | [**sMTPStatRouterGetAllAggregateIPSMTPStats**](docs/AccountsmtpstatApi.md#sMTPStatRouterGetAllAggregateIPSMTPStats) | **GET** /account/smtp/stat/ip/{ipid}/aggregate | 
@@ -224,7 +220,6 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountsmtpstatApi* | [**sMTPStatRouterGetAllAggregateSubAccountProviderSMTPStats**](docs/AccountsmtpstatApi.md#sMTPStatRouterGetAllAggregateSubAccountProviderSMTPStats) | **GET** /account/smtp/stat/subaccount/{sid}/provider/{provider}/aggregate | 
 *SendPostApi.AccountsmtpstatApi* | [**sMTPStatRouterGetAllAggregateSubAccountSMTPStats**](docs/AccountsmtpstatApi.md#sMTPStatRouterGetAllAggregateSubAccountSMTPStats) | **GET** /account/smtp/stat/subaccount/{sid}/aggregate | 
 *SendPostApi.AccountsmtpstatApi* | [**sMTPStatRouterGetAllAggregateSubAccountSMTPStatsForIP**](docs/AccountsmtpstatApi.md#sMTPStatRouterGetAllAggregateSubAccountSMTPStatsForIP) | **GET** /account/smtp/stat/subaccount/{sid}/ip/{ipid}/aggregate | 
-*SendPostApi.AccountstatApi* | [**accountStatRouterGetAccountCycleUsage**](docs/AccountstatApi.md#accountStatRouterGetAccountCycleUsage) | **GET** /account/stat/cycleusage | 
 *SendPostApi.AccountstatApi* | [**accountStatRouterGetAllAccountStats**](docs/AccountstatApi.md#accountStatRouterGetAllAccountStats) | **GET** /account/stat/ | 
 *SendPostApi.AccountstatApi* | [**accountStatRouterGetAllAccountStatsByGroup**](docs/AccountstatApi.md#accountStatRouterGetAllAccountStatsByGroup) | **GET** /account/stat/group | 
 *SendPostApi.AccountstatApi* | [**accountStatRouterGetAllAggregateAccountStats**](docs/AccountstatApi.md#accountStatRouterGetAllAggregateAccountStats) | **GET** /account/stat/aggregate | 
@@ -327,9 +322,9 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [SendPostApi.Model2910400x14000700510False](docs/Model2910400x14000700510False.md)
- - [SendPostApi.Model2913210x14000700600False](docs/Model2913210x14000700600False.md)
- - [SendPostApi.Model5547110x14000a62f90False](docs/Model5547110x14000a62f90False.md)
+ - [SendPostApi.Model2798820x140007d4cf0False](docs/Model2798820x140007d4cf0False.md)
+ - [SendPostApi.Model2801630x140007d4de0False](docs/Model2801630x140007d4de0False.md)
+ - [SendPostApi.Model5416700x14000b35560False](docs/Model5416700x14000b35560False.md)
  - [SendPostApi.ModelsAGDomainStat](docs/ModelsAGDomainStat.md)
  - [SendPostApi.ModelsAGIPStat](docs/ModelsAGIPStat.md)
  - [SendPostApi.ModelsAGStat](docs/ModelsAGStat.md)
@@ -338,7 +333,6 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsAPStat](docs/ModelsAPStat.md)
  - [SendPostApi.ModelsASStat](docs/ModelsASStat.md)
  - [SendPostApi.ModelsAccount](docs/ModelsAccount.md)
- - [SendPostApi.ModelsAccountCycleUsage](docs/ModelsAccountCycleUsage.md)
  - [SendPostApi.ModelsAccountDomain](docs/ModelsAccountDomain.md)
  - [SendPostApi.ModelsAccountIPPool](docs/ModelsAccountIPPool.md)
  - [SendPostApi.ModelsAccountTemplate](docs/ModelsAccountTemplate.md)
@@ -382,12 +376,11 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsContent](docs/ModelsContent.md)
  - [SendPostApi.ModelsCopyTo](docs/ModelsCopyTo.md)
  - [SendPostApi.ModelsCountStat](docs/ModelsCountStat.md)
- - [SendPostApi.ModelsCountry](docs/ModelsCountry.md)
- - [SendPostApi.ModelsCoupon](docs/ModelsCoupon.md)
  - [SendPostApi.ModelsCouponOptions](docs/ModelsCouponOptions.md)
  - [SendPostApi.ModelsCreateMailReport](docs/ModelsCreateMailReport.md)
  - [SendPostApi.ModelsCustomerQuality](docs/ModelsCustomerQuality.md)
  - [SendPostApi.ModelsDNSRecord](docs/ModelsDNSRecord.md)
+ - [SendPostApi.ModelsDedicatedIPs](docs/ModelsDedicatedIPs.md)
  - [SendPostApi.ModelsDeleteResponse](docs/ModelsDeleteResponse.md)
  - [SendPostApi.ModelsDetailedAlert](docs/ModelsDetailedAlert.md)
  - [SendPostApi.ModelsDomain](docs/ModelsDomain.md)
@@ -461,11 +454,9 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsNotificationType](docs/ModelsNotificationType.md)
  - [SendPostApi.ModelsOnboardingChecklist](docs/ModelsOnboardingChecklist.md)
  - [SendPostApi.ModelsPDStat](docs/ModelsPDStat.md)
- - [SendPostApi.ModelsPaymentAddress](docs/ModelsPaymentAddress.md)
  - [SendPostApi.ModelsPaymentOptions](docs/ModelsPaymentOptions.md)
  - [SendPostApi.ModelsPaymentStatus](docs/ModelsPaymentStatus.md)
  - [SendPostApi.ModelsPostmasterDomainStat](docs/ModelsPostmasterDomainStat.md)
- - [SendPostApi.ModelsPricing](docs/ModelsPricing.md)
  - [SendPostApi.ModelsProvider](docs/ModelsProvider.md)
  - [SendPostApi.ModelsProviderDetails](docs/ModelsProviderDetails.md)
  - [SendPostApi.ModelsProviderResult](docs/ModelsProviderResult.md)
@@ -501,7 +492,6 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsSystemIPPool](docs/ModelsSystemIPPool.md)
  - [SendPostApi.ModelsSystemTemplate](docs/ModelsSystemTemplate.md)
  - [SendPostApi.ModelsTag](docs/ModelsTag.md)
- - [SendPostApi.ModelsTaxDetails](docs/ModelsTaxDetails.md)
  - [SendPostApi.ModelsThirdPartySendingProvider](docs/ModelsThirdPartySendingProvider.md)
  - [SendPostApi.ModelsThirdPartySendingProviderType](docs/ModelsThirdPartySendingProviderType.md)
  - [SendPostApi.ModelsTo](docs/ModelsTo.md)

@@ -25,7 +25,6 @@ Name | Type | Description | Notes
 **sendingVolumePerMonth** | **String** |  | [optional] 
 **slackToken** | **String** |  | [optional] 
 **stripeBasePriceId** | **String** |  | [optional] 
-**stripeSubscriptionItemId** | **String** |  | [optional] 
 **stripeUsagePriceId** | **String** |  | [optional] 
 **switchingSendpostDescription** | **String** |  | [optional] 
 

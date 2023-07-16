@@ -26,45 +26,38 @@
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsPaymentStatus = factory(root.SendPostApi.ApiClient);
+    root.SendPostApi.Model2801630x140007d4de0False = factory(root.SendPostApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The ModelsPaymentStatus model module.
-   * @module model/ModelsPaymentStatus
+   * The Model2801630x140007d4de0False model module.
+   * @module model/Model2801630x140007d4de0False
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>ModelsPaymentStatus</code>.
-   * @alias module:model/ModelsPaymentStatus
+   * Constructs a new <code>Model2801630x140007d4de0False</code>.
+   * @alias module:model/Model2801630x140007d4de0False
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>ModelsPaymentStatus</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>Model2801630x140007d4de0False</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ModelsPaymentStatus} obj Optional instance to populate.
-   * @return {module:model/ModelsPaymentStatus} The populated <code>ModelsPaymentStatus</code> instance.
+   * @param {module:model/Model2801630x140007d4de0False} obj Optional instance to populate.
+   * @return {module:model/Model2801630x140007d4de0False} The populated <code>Model2801630x140007d4de0False</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('status'))
-        obj.status = ApiClient.convertToType(data['status'], 'String');
     }
     return obj;
   }
-
-  /**
-   * @member {String} status
-   */
-  exports.prototype.status = undefined;
 
 
   return exports;

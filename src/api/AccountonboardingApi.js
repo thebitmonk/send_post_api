@@ -49,6 +49,52 @@
 
 
     /**
+     * Callback function to receive the result of the onboardingRouterCreateUnlockTicket operation.
+     * @callback module:api/AccountonboardingApi~onboardingRouterCreateUnlockTicketCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Creates unlock ticket on hubspot <br>
+     * @param {String} xAccountApiKey Account API Key
+     * @param {module:api/AccountonboardingApi~onboardingRouterCreateUnlockTicketCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.onboardingRouterCreateUnlockTicket = function(xAccountApiKey, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling onboardingRouterCreateUnlockTicket");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-Account-ApiKey': xAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/account/onboarding/unlockticket', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the onboardingRouterGetOnboardingChecklist operation.
      * @callback module:api/AccountonboardingApi~onboardingRouterGetOnboardingChecklistCallback
      * @param {String} error Error message, if any.

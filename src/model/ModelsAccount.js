@@ -99,8 +99,6 @@
         obj.slackToken = ApiClient.convertToType(data['slackToken'], 'String');
       if (data.hasOwnProperty('stripeBasePriceId'))
         obj.stripeBasePriceId = ApiClient.convertToType(data['stripeBasePriceId'], 'String');
-      if (data.hasOwnProperty('stripeSubscriptionItemId'))
-        obj.stripeSubscriptionItemId = ApiClient.convertToType(data['stripeSubscriptionItemId'], 'String');
       if (data.hasOwnProperty('stripeUsagePriceId'))
         obj.stripeUsagePriceId = ApiClient.convertToType(data['stripeUsagePriceId'], 'String');
       if (data.hasOwnProperty('switchingSendpostDescription'))
@@ -218,11 +216,6 @@
    * @member {String} stripeBasePriceId
    */
   exports.prototype.stripeBasePriceId = undefined;
-
-  /**
-   * @member {String} stripeSubscriptionItemId
-   */
-  exports.prototype.stripeSubscriptionItemId = undefined;
 
   /**
    * @member {String} stripeUsagePriceId
