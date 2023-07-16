@@ -49,53 +49,6 @@
 
 
     /**
-     * Callback function to receive the result of the accountSettingRouterCheckDedicatedIPExist operation.
-     * @callback module:api/AccountsettingApi~accountSettingRouterCheckDedicatedIPExistCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ModelsDedicatedIPs} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * check if account has dedicated ip's <br>
-     * @param {String} xAccountApiKey Account API Key
-     * @param {module:api/AccountsettingApi~accountSettingRouterCheckDedicatedIPExistCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ModelsDedicatedIPs}
-     */
-    this.accountSettingRouterCheckDedicatedIPExist = function(xAccountApiKey, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'xAccountApiKey' is set
-      if (xAccountApiKey === undefined || xAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xAccountApiKey' when calling accountSettingRouterCheckDedicatedIPExist");
-      }
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-        'X-Account-ApiKey': xAccountApiKey
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = ModelsDedicatedIPs;
-
-      return this.apiClient.callApi(
-        '/account/setting/dedicated', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the accountSettingRouterGetAccount operation.
      * @callback module:api/AccountsettingApi~accountSettingRouterGetAccountCallback
      * @param {String} error Error message, if any.

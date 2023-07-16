@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsAGDomainStat', 'model/ModelsAGIPStat', 'model/ModelsAGSubAccountStat', 'model/ModelsAGTPSPStat', 'model/ModelsAccountCycleUsage', 'model/ModelsCountStat', 'model/ModelsRStat', 'model/ModelsStat'], factory);
+    define(['ApiClient', 'model/ModelsAGDomainStat', 'model/ModelsAGIPStat', 'model/ModelsAGSubAccountStat', 'model/ModelsAccountCycleUsage', 'model/ModelsCountStat', 'model/ModelsRStat', 'model/ModelsStat'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsAGDomainStat'), require('../model/ModelsAGIPStat'), require('../model/ModelsAGSubAccountStat'), require('../model/ModelsAGTPSPStat'), require('../model/ModelsAccountCycleUsage'), require('../model/ModelsCountStat'), require('../model/ModelsRStat'), require('../model/ModelsStat'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsAGDomainStat'), require('../model/ModelsAGIPStat'), require('../model/ModelsAGSubAccountStat'), require('../model/ModelsAccountCycleUsage'), require('../model/ModelsCountStat'), require('../model/ModelsRStat'), require('../model/ModelsStat'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.AccountstatApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsAGDomainStat, root.SendPostApi.ModelsAGIPStat, root.SendPostApi.ModelsAGSubAccountStat, root.SendPostApi.ModelsAGTPSPStat, root.SendPostApi.ModelsAccountCycleUsage, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsRStat, root.SendPostApi.ModelsStat);
+    root.SendPostApi.AccountstatApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsAGDomainStat, root.SendPostApi.ModelsAGIPStat, root.SendPostApi.ModelsAGSubAccountStat, root.SendPostApi.ModelsAccountCycleUsage, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsRStat, root.SendPostApi.ModelsStat);
   }
-}(this, function(ApiClient, ModelsAGDomainStat, ModelsAGIPStat, ModelsAGSubAccountStat, ModelsAGTPSPStat, ModelsAccountCycleUsage, ModelsCountStat, ModelsRStat, ModelsStat) {
+}(this, function(ApiClient, ModelsAGDomainStat, ModelsAGIPStat, ModelsAGSubAccountStat, ModelsAccountCycleUsage, ModelsCountStat, ModelsRStat, ModelsStat) {
   'use strict';
 
   /**
