@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 
-Gets Onboarding Checklist data for account if not present creates a default entry
+Gets Onboarding Checklist data for account if not present creates a default entry <br>
 
 ### Example
 ```javascript
@@ -60,7 +60,7 @@ No authorization required
 
 
 
-Sends welcome email for a newly registered account
+Sends welcome email for a newly registered account <br>
 
 ### Example
 ```javascript

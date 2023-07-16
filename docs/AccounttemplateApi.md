@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 
 
-Copy AccountTemplate
+Copy AccountTemplate <br>
 
 ### Example
 ```javascript
@@ -68,7 +68,7 @@ No authorization required
 
 
 
-Count total templates
+Count total templates <br>
 
 ### Example
 ```javascript
@@ -118,7 +118,7 @@ No authorization required
 
 
 
-Create a new template
+Create a new template <br>
 
 ### Example
 ```javascript
@@ -167,7 +167,7 @@ No authorization required
 
 
 
-Delete AccountTemplate
+Delete AccountTemplate <br>
 
 ### Example
 ```javascript
@@ -216,7 +216,7 @@ No authorization required
 
 
 
-Get single template
+Get single template <br>
 
 ### Example
 ```javascript
@@ -265,7 +265,7 @@ No authorization required
 
 
 
-Get all templates
+Get all templates <br>
 
 ### Example
 ```javascript
@@ -319,7 +319,7 @@ No authorization required
 
 
 
-update template
+update template <br>
 
 ### Example
 ```javascript

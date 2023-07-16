@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -36,6 +36,29 @@
 
   describe('(package)', function() {
     describe('AccountstatApi', function() {
+      describe('accountStatRouterGetAccountCycleUsage', function() {
+        it('should call accountStatRouterGetAccountCycleUsage successfully', function(done) {
+          // TODO: uncomment, update parameter values for accountStatRouterGetAccountCycleUsage call and complete the assertions
+          /*
+          var xAccountApiKey = "xAccountApiKey_example";
+
+          instance.accountStatRouterGetAccountCycleUsage(xAccountApiKey, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelsAccountCycleUsage);
+            expect(data.processed).to.be.a('number');
+            expect(data.processed).to.be("0");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('accountStatRouterGetAllAccountStats', function() {
         it('should call accountStatRouterGetAllAccountStats successfully', function(done) {
           // TODO: uncomment, update parameter values for accountStatRouterGetAllAccountStats call and complete the assertions

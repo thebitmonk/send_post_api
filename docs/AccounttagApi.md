@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 
-Create Tag
+Create Tag <br>
 
 ### Example
 ```javascript
@@ -64,7 +64,7 @@ No authorization required
 
 
 
-Delete Tag
+Delete Tag <br>
 
 ### Example
 ```javascript
@@ -113,7 +113,7 @@ No authorization required
 
 
 
-Get All Tags
+Get All Tags <br>
 
 ### Example
 ```javascript
