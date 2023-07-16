@@ -4,17 +4,17 @@ All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**accountSettingRouterCheckDedicatedIPExist**](AccountsettingApi.md#accountSettingRouterCheckDedicatedIPExist) | **GET** /account/setting/dedicated | 
+[**accountSettingRouterGetAccount**](AccountsettingApi.md#accountSettingRouterGetAccount) | **GET** /account/setting/ | 
 [**accountSettingRouterUpdate**](AccountsettingApi.md#accountSettingRouterUpdate) | **PUT** /account/setting/ | 
 
 
-<a name="accountSettingRouterCheckDedicatedIPExist"></a>
-# **accountSettingRouterCheckDedicatedIPExist**
-> ModelsDedicatedIPs accountSettingRouterCheckDedicatedIPExist(xAccountApiKey)
+<a name="accountSettingRouterGetAccount"></a>
+# **accountSettingRouterGetAccount**
+> ModelsAccount accountSettingRouterGetAccount(xAccountApiKey)
 
 
 
-check if account has dedicated ip's <br>
+get latest account details <br>
 
 ### Example
 ```javascript
@@ -32,7 +32,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.accountSettingRouterCheckDedicatedIPExist(xAccountApiKey, callback);
+apiInstance.accountSettingRouterGetAccount(xAccountApiKey, callback);
 ```
 
 ### Parameters
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ModelsDedicatedIPs**](ModelsDedicatedIPs.md)
+[**ModelsAccount**](ModelsAccount.md)
 
 ### Authorization
 

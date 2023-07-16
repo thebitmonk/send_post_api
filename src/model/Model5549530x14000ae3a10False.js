@@ -26,66 +26,38 @@
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsPaymentStatus = factory(root.SendPostApi.ApiClient);
+    root.SendPostApi.Model5549530x14000ae3a10False = factory(root.SendPostApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The ModelsPaymentStatus model module.
-   * @module model/ModelsPaymentStatus
+   * The Model5549530x14000ae3a10False model module.
+   * @module model/Model5549530x14000ae3a10False
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>ModelsPaymentStatus</code>.
-   * @alias module:model/ModelsPaymentStatus
+   * Constructs a new <code>Model5549530x14000ae3a10False</code>.
+   * @alias module:model/Model5549530x14000ae3a10False
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>ModelsPaymentStatus</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>Model5549530x14000ae3a10False</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ModelsPaymentStatus} obj Optional instance to populate.
-   * @return {module:model/ModelsPaymentStatus} The populated <code>ModelsPaymentStatus</code> instance.
+   * @param {module:model/Model5549530x14000ae3a10False} obj Optional instance to populate.
+   * @return {module:model/Model5549530x14000ae3a10False} The populated <code>Model5549530x14000ae3a10False</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('clientSecret'))
-        obj.clientSecret = ApiClient.convertToType(data['clientSecret'], 'String');
-      if (data.hasOwnProperty('message'))
-        obj.message = ApiClient.convertToType(data['message'], 'String');
-      if (data.hasOwnProperty('redirectUrl'))
-        obj.redirectUrl = ApiClient.convertToType(data['redirectUrl'], 'String');
-      if (data.hasOwnProperty('status'))
-        obj.status = ApiClient.convertToType(data['status'], 'String');
     }
     return obj;
   }
-
-  /**
-   * @member {String} clientSecret
-   */
-  exports.prototype.clientSecret = undefined;
-
-  /**
-   * @member {String} message
-   */
-  exports.prototype.message = undefined;
-
-  /**
-   * @member {String} redirectUrl
-   */
-  exports.prototype.redirectUrl = undefined;
-
-  /**
-   * @member {String} status
-   */
-  exports.prototype.status = undefined;
 
 
   return exports;
