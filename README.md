@@ -203,6 +203,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountmessageApi* | [**messageRouterGetAllEventsForAMessageId**](docs/AccountmessageApi.md#messageRouterGetAllEventsForAMessageId) | **GET** /account/message/{messageId}/events | 
 *SendPostApi.AccountmessageApi* | [**messageRouterGetAllEventsForAMessageIdFromANode**](docs/AccountmessageApi.md#messageRouterGetAllEventsForAMessageIdFromANode) | **GET** /account/message/node/{messageId}/events | 
 *SendPostApi.AccountmessageApi* | [**messageRouterGetMessageFromNode**](docs/AccountmessageApi.md#messageRouterGetMessageFromNode) | **GET** /account/message/node/{messageId} | 
+*SendPostApi.AccountonboardingApi* | [**onboardingRouterCreateUnlockTicket**](docs/AccountonboardingApi.md#onboardingRouterCreateUnlockTicket) | **POST** /account/onboarding/unlockticket | 
 *SendPostApi.AccountonboardingApi* | [**onboardingRouterGetOnboardingChecklist**](docs/AccountonboardingApi.md#onboardingRouterGetOnboardingChecklist) | **GET** /account/onboarding/checklist | 
 *SendPostApi.AccountonboardingApi* | [**onboardingRouterSendOnboardingWelcomeEmail**](docs/AccountonboardingApi.md#onboardingRouterSendOnboardingWelcomeEmail) | **POST** /account/onboarding/welcome | 
 *SendPostApi.AccountpaymentApi* | [**paymentRouterApplyCouponToStripeCustomer**](docs/AccountpaymentApi.md#paymentRouterApplyCouponToStripeCustomer) | **POST** /account/payment/customer/coupon | 
@@ -216,6 +217,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountpaymentApi* | [**paymentRouterHandlePaymentWebhook**](docs/AccountpaymentApi.md#paymentRouterHandlePaymentWebhook) | **POST** /account/payment/webhook | 
 *SendPostApi.AccountrecipientApi* | [**recipientRouterGetAllMessagesForARecipient**](docs/AccountrecipientApi.md#recipientRouterGetAllMessagesForARecipient) | **GET** /account/recipient/{recipient}/messages | 
 *SendPostApi.AccountrecipientApi* | [**recipientRouterGetAllMessagesForARecipientFromANode**](docs/AccountrecipientApi.md#recipientRouterGetAllMessagesForARecipientFromANode) | **GET** /account/recipient/node/{recipient}/messages | 
+*SendPostApi.AccountsettingApi* | [**accountSettingRouterCheckDedicatedIPExist**](docs/AccountsettingApi.md#accountSettingRouterCheckDedicatedIPExist) | **GET** /account/setting/dedicated | 
 *SendPostApi.AccountsettingApi* | [**accountSettingRouterGetAccount**](docs/AccountsettingApi.md#accountSettingRouterGetAccount) | **GET** /account/setting/ | 
 *SendPostApi.AccountsettingApi* | [**accountSettingRouterUpdate**](docs/AccountsettingApi.md#accountSettingRouterUpdate) | **PUT** /account/setting/ | 
 *SendPostApi.AccountsmtpstatApi* | [**sMTPStatRouterGetAllAggregateIPProviderSMTPStats**](docs/AccountsmtpstatApi.md#sMTPStatRouterGetAllAggregateIPProviderSMTPStats) | **GET** /account/smtp/stat/ip/{ipid}/provider/{provider}/aggregate | 
@@ -327,9 +329,9 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [SendPostApi.Model2910400x1400078cd50False](docs/Model2910400x1400078cd50False.md)
- - [SendPostApi.Model2913210x1400078ce40False](docs/Model2913210x1400078ce40False.md)
- - [SendPostApi.Model5549530x14000aeba10False](docs/Model5549530x14000aeba10False.md)
+ - [SendPostApi.Model2917850x140006e9650False](docs/Model2917850x140006e9650False.md)
+ - [SendPostApi.Model2920660x140006e9740False](docs/Model2920660x140006e9740False.md)
+ - [SendPostApi.Model5557070x14000a5a330False](docs/Model5557070x14000a5a330False.md)
  - [SendPostApi.ModelsAGDomainStat](docs/ModelsAGDomainStat.md)
  - [SendPostApi.ModelsAGIPStat](docs/ModelsAGIPStat.md)
  - [SendPostApi.ModelsAGStat](docs/ModelsAGStat.md)
@@ -342,6 +344,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsAccountDomain](docs/ModelsAccountDomain.md)
  - [SendPostApi.ModelsAccountIPPool](docs/ModelsAccountIPPool.md)
  - [SendPostApi.ModelsAccountTemplate](docs/ModelsAccountTemplate.md)
+ - [SendPostApi.ModelsAccountUnlockTicket](docs/ModelsAccountUnlockTicket.md)
  - [SendPostApi.ModelsAccountWebhook](docs/ModelsAccountWebhook.md)
  - [SendPostApi.ModelsAlert](docs/ModelsAlert.md)
  - [SendPostApi.ModelsAlertLabel](docs/ModelsAlertLabel.md)
@@ -388,6 +391,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsCreateMailReport](docs/ModelsCreateMailReport.md)
  - [SendPostApi.ModelsCustomerQuality](docs/ModelsCustomerQuality.md)
  - [SendPostApi.ModelsDNSRecord](docs/ModelsDNSRecord.md)
+ - [SendPostApi.ModelsDedicatedIPs](docs/ModelsDedicatedIPs.md)
  - [SendPostApi.ModelsDeleteResponse](docs/ModelsDeleteResponse.md)
  - [SendPostApi.ModelsDetailedAlert](docs/ModelsDetailedAlert.md)
  - [SendPostApi.ModelsDomain](docs/ModelsDomain.md)

@@ -36,6 +36,29 @@
 
   describe('(package)', function() {
     describe('AccountsettingApi', function() {
+      describe('accountSettingRouterCheckDedicatedIPExist', function() {
+        it('should call accountSettingRouterCheckDedicatedIPExist successfully', function(done) {
+          // TODO: uncomment, update parameter values for accountSettingRouterCheckDedicatedIPExist call and complete the assertions
+          /*
+          var xAccountApiKey = "xAccountApiKey_example";
+
+          instance.accountSettingRouterCheckDedicatedIPExist(xAccountApiKey, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelsDedicatedIPs);
+            expect(data.found).to.be.a('boolean');
+            expect(data.found).to.be(false);
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('accountSettingRouterGetAccount', function() {
         it('should call accountSettingRouterGetAccount successfully', function(done) {
           // TODO: uncomment, update parameter values for accountSettingRouterGetAccount call and complete the assertions
