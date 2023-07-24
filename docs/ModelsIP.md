@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **aolSettings** | **String** |  | [optional] 
+**attSettings** | **String** |  | [optional] 
 **autoWarmupEnabled** | **Boolean** |  | [optional] 
 **comcastSettings** | **String** |  | [optional] 
 **created** | **Number** |  | [optional] 

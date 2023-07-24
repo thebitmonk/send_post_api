@@ -388,6 +388,8 @@
               expect(data.relatedIP).to.be.a(SendPostApi.ModelsIP);
                     expect(data.relatedIP.aolSettings).to.be.a('string');
                 expect(data.relatedIP.aolSettings).to.be("");
+                expect(data.relatedIP.attSettings).to.be.a('string');
+                expect(data.relatedIP.attSettings).to.be("");
                 expect(data.relatedIP.autoWarmupEnabled).to.be.a('boolean');
                 expect(data.relatedIP.autoWarmupEnabled).to.be(false);
                 expect(data.relatedIP.comcastSettings).to.be.a('string');
