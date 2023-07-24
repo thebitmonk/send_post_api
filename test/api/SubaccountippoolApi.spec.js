@@ -92,6 +92,8 @@
                 expect(data).to.be.a(SendPostApi.ModelsIP);
                 expect(data.aolSettings).to.be.a('string');
                 expect(data.aolSettings).to.be("");
+                expect(data.attSettings).to.be.a('string');
+                expect(data.attSettings).to.be("");
                 expect(data.autoWarmupEnabled).to.be.a('boolean');
                 expect(data.autoWarmupEnabled).to.be(false);
                 expect(data.comcastSettings).to.be.a('string');
@@ -282,6 +284,8 @@
                 expect(data).to.be.a(SendPostApi.ModelsIP);
                 expect(data.aolSettings).to.be.a('string');
                 expect(data.aolSettings).to.be("");
+                expect(data.attSettings).to.be.a('string');
+                expect(data.attSettings).to.be("");
                 expect(data.autoWarmupEnabled).to.be.a('boolean');
                 expect(data.autoWarmupEnabled).to.be(false);
                 expect(data.comcastSettings).to.be.a('string');
@@ -454,6 +458,8 @@
                   expect(data).to.be.a(SendPostApi.ModelsIP);
                   expect(data.aolSettings).to.be.a('string');
                   expect(data.aolSettings).to.be("");
+                  expect(data.attSettings).to.be.a('string');
+                  expect(data.attSettings).to.be("");
                   expect(data.autoWarmupEnabled).to.be.a('boolean');
                   expect(data.autoWarmupEnabled).to.be(false);
                   expect(data.comcastSettings).to.be.a('string');
@@ -627,6 +633,8 @@
                 expect(data).to.be.a(SendPostApi.ModelsIP);
                 expect(data.aolSettings).to.be.a('string');
                 expect(data.aolSettings).to.be("");
+                expect(data.attSettings).to.be.a('string');
+                expect(data.attSettings).to.be("");
                 expect(data.autoWarmupEnabled).to.be.a('boolean');
                 expect(data.autoWarmupEnabled).to.be(false);
                 expect(data.comcastSettings).to.be.a('string');
