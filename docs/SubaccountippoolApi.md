@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 
-Count Total IPPools
+Count Total IPPools 
 
 ### Example
 ```javascript
@@ -64,7 +64,7 @@ No authorization required
 
 
 
-Create IPPool
+Create IPPool 
 
 ### Example
 ```javascript
@@ -113,7 +113,7 @@ No authorization required
 
 
 
-Delete IPPool
+Delete IPPool 
 
 ### Example
 ```javascript
@@ -162,7 +162,7 @@ No authorization required
 
 
 
-Find IPPool by IPPoolId
+Find IPPool by IPPoolId 
 
 ### Example
 ```javascript
@@ -211,7 +211,7 @@ No authorization required
 
 
 
-Get All IPPools
+Get All IPPools 
 
 ### Example
 ```javascript
@@ -265,7 +265,7 @@ No authorization required
 
 
 
-Update IPPool
+Update IPPool 
 
 ### Example
 ```javascript

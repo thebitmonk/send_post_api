@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 
-Count Total Account Domains
+Count Total Account Domains 
 
 ### Example
 ```javascript
@@ -65,7 +65,7 @@ No authorization required
 
 
 
-Find Domain by DomainId
+Find Domain by DomainId 
 
 ### Example
 ```javascript
@@ -114,7 +114,7 @@ No authorization required
 
 
 
-Get All Domains
+Get All Domains 
 
 ### Example
 ```javascript

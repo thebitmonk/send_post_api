@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 
-Count Total Labels
+Count Total Labels 
 
 ### Example
 ```javascript
@@ -67,7 +67,7 @@ No authorization required
 
 
 
-Create Label
+Create Label 
 
 ### Example
 ```javascript
@@ -116,7 +116,7 @@ No authorization required
 
 
 
-Delete Label
+Delete Label 
 
 ### Example
 ```javascript
@@ -165,7 +165,7 @@ No authorization required
 
 
 
-Find Label by LabelId
+Find Label by LabelId 
 
 ### Example
 ```javascript
@@ -214,7 +214,7 @@ No authorization required
 
 
 
-Get All Labels
+Get All Labels 
 
 ### Example
 ```javascript
@@ -271,7 +271,7 @@ No authorization required
 
 
 
-Update Label
+Update Label 
 
 ### Example
 ```javascript

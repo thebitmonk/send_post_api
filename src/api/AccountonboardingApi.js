@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsOnboardingChecklist'], factory);
+    define(['ApiClient', 'model/ModelsAccountUnlockTicket', 'model/ModelsOnboardingChecklist'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsOnboardingChecklist'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsAccountUnlockTicket'), require('../model/ModelsOnboardingChecklist'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.AccountonboardingApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsOnboardingChecklist);
+    root.SendPostApi.AccountonboardingApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsAccountUnlockTicket, root.SendPostApi.ModelsOnboardingChecklist);
   }
-}(this, function(ApiClient, ModelsOnboardingChecklist) {
+}(this, function(ApiClient, ModelsAccountUnlockTicket, ModelsOnboardingChecklist) {
   'use strict';
 
   /**
@@ -49,6 +49,58 @@
 
 
     /**
+     * Callback function to receive the result of the onboardingRouterCreateUnlockTicket operation.
+     * @callback module:api/AccountonboardingApi~onboardingRouterCreateUnlockTicketCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Creates unlock ticket on hubspot 
+     * @param {String} xAccountApiKey Account API Key
+     * @param {module:model/ModelsAccountUnlockTicket} body Content values for creating ticket
+     * @param {module:api/AccountonboardingApi~onboardingRouterCreateUnlockTicketCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.onboardingRouterCreateUnlockTicket = function(xAccountApiKey, body, callback) {
+      var postBody = body;
+
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling onboardingRouterCreateUnlockTicket");
+      }
+
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling onboardingRouterCreateUnlockTicket");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-Account-ApiKey': xAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/account/onboarding/unlockticket', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the onboardingRouterGetOnboardingChecklist operation.
      * @callback module:api/AccountonboardingApi~onboardingRouterGetOnboardingChecklistCallback
      * @param {String} error Error message, if any.
@@ -57,7 +109,7 @@
      */
 
     /**
-     * Gets Onboarding Checklist data for account if not present creates a default entry
+     * Gets Onboarding Checklist data for account if not present creates a default entry 
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountonboardingApi~onboardingRouterGetOnboardingChecklistCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsOnboardingChecklist}
@@ -104,7 +156,7 @@
      */
 
     /**
-     * Sends welcome email for a newly registered account
+     * Sends welcome email for a newly registered account 
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountonboardingApi~onboardingRouterSendOnboardingWelcomeEmailCallback} callback The callback function, accepting three arguments: error, data, response
      */

@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Count Total Suppressions
+     * Count Total Suppressions 
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
@@ -110,7 +110,7 @@
      */
 
     /**
-     * Add Email Addresses To Suppression List
+     * Add Email Addresses To Suppression List 
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {module:model/ModelsRSuppression} body Suppression content
      * @param {module:api/SubaccountsuppressionApi~suppressionRouterCreateSuppressionsCallback} callback The callback function, accepting three arguments: error, data, response
@@ -163,8 +163,8 @@
      */
 
     /**
-     * Add Email Addresses To Suppression Filter
-     * @param {module:model/ModelsSuppression} body Add suppressions to suppression filter
+     * Add Email Addresses To Suppression Filter 
+     * @param {Array.<module:model/ModelsSuppression>} body Add suppressions to suppression filter
      * @param {module:api/SubaccountsuppressionApi~suppressionRouterCreateSuppressionsInSuppressionFilterCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.suppressionRouterCreateSuppressionsInSuppressionFilter = function(body, callback) {
@@ -208,7 +208,7 @@
      */
 
     /**
-     * Delete specific emails which are in suppression list
+     * Delete specific emails which are in suppression list 
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {module:model/ModelsRDSuppression} body Suppression content
      * @param {module:api/SubaccountsuppressionApi~suppressionRouterDeleteSuppressionCallback} callback The callback function, accepting three arguments: error, data, response
@@ -261,8 +261,8 @@
      */
 
     /**
-     * Delete specific emails which are in suppression list
-     * @param {module:model/ModelsSuppression} body Suppression content
+     * Delete specific emails which are in suppression list 
+     * @param {Array.<module:model/ModelsSuppression>} body Suppression content
      * @param {module:api/SubaccountsuppressionApi~suppressionRouterDeleteSuppressionsInSuppressionFilterCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.suppressionRouterDeleteSuppressionsInSuppressionFilter = function(body, callback) {
@@ -306,7 +306,7 @@
      */
 
     /**
-     * Export all suppressions
+     * Export all suppressions 
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
@@ -360,7 +360,7 @@
      */
 
     /**
-     * Get all suppressions
+     * Get all suppressions 
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset

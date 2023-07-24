@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -17,12 +17,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Alert', 'model/ApiGlockappsMailReport', 'model/ModelFalse', 'model/ModelsAGDomainStat', 'model/ModelsAGIPStat', 'model/ModelsAGStat', 'model/ModelsAGSubAccountStat', 'model/ModelsAIPStat', 'model/ModelsAPStat', 'model/ModelsASStat', 'model/ModelsAccount', 'model/ModelsAccountDomain', 'model/ModelsAccountIPPool', 'model/ModelsAccountTemplate', 'model/ModelsAccountWebhook', 'model/ModelsAlertLabel', 'model/ModelsAlertRequest', 'model/ModelsAlertResponse', 'model/ModelsAllClusterCache', 'model/ModelsAttachment', 'model/ModelsAuthInfo', 'model/ModelsAutoWarmupContent', 'model/ModelsAutoWarmupContentRequest', 'model/ModelsAutoWarmupDailySchedule', 'model/ModelsAutoWarmupDomainSchedule', 'model/ModelsAutoWarmupPlan', 'model/ModelsAutoWarmupPlanRequest', 'model/ModelsAutoWarmupRecipient', 'model/ModelsAutoWarmupRecipientResponse', 'model/ModelsBackOffConfiguration', 'model/ModelsBackOffDecreaseType', 'model/ModelsBackOffTrigger', 'model/ModelsBillingPortalSession', 'model/ModelsBlackListEngine', 'model/ModelsBlackListResult', 'model/ModelsBlacklistResource', 'model/ModelsBlacklistStatus', 'model/ModelsBlacklistedOn', 'model/ModelsBulkResponse', 'model/ModelsCertificateDetails', 'model/ModelsCertificateExtensions', 'model/ModelsCertificateIssuer', 'model/ModelsCertificateSignature', 'model/ModelsCertificateSubject', 'model/ModelsCertificateValidity', 'model/ModelsCity', 'model/ModelsCleanedList', 'model/ModelsClusterCache', 'model/ModelsComment', 'model/ModelsConsumerStats', 'model/ModelsContent', 'model/ModelsCopyTo', 'model/ModelsCountStat', 'model/ModelsCouponOptions', 'model/ModelsCreateMailReport', 'model/ModelsCustomerQuality', 'model/ModelsDNSRecord', 'model/ModelsDeleteResponse', 'model/ModelsDetailedAlert', 'model/ModelsDomain', 'model/ModelsDomainAge', 'model/ModelsDomainCheckResult', 'model/ModelsEAccount', 'model/ModelsEAccountMember', 'model/ModelsEAccountSetting', 'model/ModelsEAlert', 'model/ModelsEComment', 'model/ModelsEDomain', 'model/ModelsEIP', 'model/ModelsEIPPool', 'model/ModelsEIncident', 'model/ModelsEIntegration', 'model/ModelsEInvitation', 'model/ModelsEMember', 'model/ModelsESender', 'model/ModelsESubAccount', 'model/ModelsESystemDomain', 'model/ModelsEValidation', 'model/ModelsEWebhook', 'model/ModelsEditorTokenResponse', 'model/ModelsEmailErrorCode', 'model/ModelsEmailList', 'model/ModelsEmailMessage', 'model/ModelsEmailResponse', 'model/ModelsEventMetadata', 'model/ModelsEventType', 'model/ModelsFrequencyType', 'model/ModelsFrom', 'model/ModelsHetrixtoolsBlacklist', 'model/ModelsHetrixtoolsMonitorStat', 'model/ModelsIEIP', 'model/ModelsIEMember', 'model/ModelsIESubAccount', 'model/ModelsIETag', 'model/ModelsIIP', 'model/ModelsIIPUpdateType', 'model/ModelsIP', 'model/ModelsIPDomainWarmupStatus', 'model/ModelsIPHealthResponse', 'model/ModelsIPPool', 'model/ModelsIPPoolType', 'model/ModelsIPProviderSettings', 'model/ModelsIPStat', 'model/ModelsIPType', 'model/ModelsIncident', 'model/ModelsIncidentStatus', 'model/ModelsInstance', 'model/ModelsIntegration', 'model/ModelsIntegrationSettings', 'model/ModelsIntegrationType', 'model/ModelsInvitation', 'model/ModelsInvitationStatus', 'model/ModelsLabel', 'model/ModelsLabelType', 'model/ModelsLinks', 'model/ModelsMailReportResult', 'model/ModelsMember', 'model/ModelsMemberRole', 'model/ModelsNotificationType', 'model/ModelsOnboardingChecklist', 'model/ModelsPDStat', 'model/ModelsPaymentOptions', 'model/ModelsPaymentStatus', 'model/ModelsPostmasterDomainStat', 'model/ModelsProvider', 'model/ModelsProviderDetails', 'model/ModelsProviderResult', 'model/ModelsProviderSettings', 'model/ModelsProviderType', 'model/ModelsQEmailMessage', 'model/ModelsQEvent', 'model/ModelsRAssumeAccount', 'model/ModelsRDStat', 'model/ModelsRDSuppression', 'model/ModelsRHetrixtoolsMonitorStat', 'model/ModelsRIPStat', 'model/ModelsRStat', 'model/ModelsRSuppression', 'model/ModelsReplyTo', 'model/ModelsReportProvider', 'model/ModelsResponse', 'model/ModelsSDStat', 'model/ModelsSMTPAuth', 'model/ModelsSMTPStat', 'model/ModelsSSLCertificate', 'model/ModelsSSLInfo', 'model/ModelsSender', 'model/ModelsSingleCleanedMail', 'model/ModelsStat', 'model/ModelsSubAccount', 'model/ModelsSubAccountType', 'model/ModelsSuppression', 'model/ModelsSuppressionEmail', 'model/ModelsSuppressionReason', 'model/ModelsSystemDNSRecord', 'model/ModelsSystemDomain', 'model/ModelsSystemIPPool', 'model/ModelsSystemTemplate', 'model/ModelsTag', 'model/ModelsTo', 'model/ModelsValidation', 'model/ModelsValidationReason', 'model/ModelsVerifyByMemberTokenRequest', 'model/ModelsVerifyByTokenRequest', 'model/ModelsWMessage', 'model/Provider', 'model/UaparserDevice', 'model/UaparserOs', 'model/UaparserUserAgent', 'api/AccountadminApi', 'api/AccountalertApi', 'api/AccountdomainApi', 'api/AccountdomainReportApi', 'api/AccountdomainstatApi', 'api/AccounteventApi', 'api/AccountincidentApi', 'api/AccountintegrationApi', 'api/AccountinvitationApi', 'api/AccountipApi', 'api/AccountippoolApi', 'api/AccountipstatApi', 'api/AccountlabelApi', 'api/AccountmailReportApi', 'api/AccountmemberApi', 'api/AccountmessageApi', 'api/AccountonboardingApi', 'api/AccountpaymentApi', 'api/AccountrecipientApi', 'api/AccountsettingApi', 'api/AccountsmtpstatApi', 'api/AccountstatApi', 'api/AccountsubaccountApi', 'api/AccountsubaccountstatApi', 'api/AccounttagApi', 'api/AccounttemplateApi', 'api/AccountvalidationApi', 'api/AccountwebhookApi', 'api/AuthApi', 'api/ClusterApi', 'api/EditorApi', 'api/SmtpApi', 'api/SubaccountdomainApi', 'api/SubaccountemailApi', 'api/SubaccountippoolApi', 'api/SubaccountsenderApi', 'api/SubaccountsuppressionApi', 'api/SystemsuppressionApi', 'api/SystemtemplateApi', 'api/TrackApi'], factory);
+    define(['ApiClient', 'model/Model2917850x14000714f90False', 'model/Model2920660x14000715080False', 'model/Model5557070x14000a69c50False', 'model/ModelsAGDomainStat', 'model/ModelsAGIPStat', 'model/ModelsAGStat', 'model/ModelsAGSubAccountStat', 'model/ModelsAGTPSPStat', 'model/ModelsAIPStat', 'model/ModelsAPStat', 'model/ModelsASStat', 'model/ModelsAccount', 'model/ModelsAccountCycleUsage', 'model/ModelsAccountDomain', 'model/ModelsAccountIPPool', 'model/ModelsAccountTemplate', 'model/ModelsAccountUnlockTicket', 'model/ModelsAccountWebhook', 'model/ModelsAlert', 'model/ModelsAlertLabel', 'model/ModelsAlertRequest', 'model/ModelsAlertResponse', 'model/ModelsAllClusterCache', 'model/ModelsAttachment', 'model/ModelsAuthInfo', 'model/ModelsAutoWarmupContent', 'model/ModelsAutoWarmupContentRequest', 'model/ModelsAutoWarmupDailySchedule', 'model/ModelsAutoWarmupDomainSchedule', 'model/ModelsAutoWarmupPlan', 'model/ModelsAutoWarmupPlanRequest', 'model/ModelsAutoWarmupRecipient', 'model/ModelsAutoWarmupRecipientResponse', 'model/ModelsBackOffConfiguration', 'model/ModelsBackOffDecreaseType', 'model/ModelsBackOffTrigger', 'model/ModelsBillingPortalSession', 'model/ModelsBlackListEngine', 'model/ModelsBlackListResult', 'model/ModelsBlacklistResource', 'model/ModelsBlacklistStatus', 'model/ModelsBlacklistedOn', 'model/ModelsBulkResponse', 'model/ModelsCertificateDetails', 'model/ModelsCertificateExtensions', 'model/ModelsCertificateIssuer', 'model/ModelsCertificateSignature', 'model/ModelsCertificateSubject', 'model/ModelsCertificateValidity', 'model/ModelsCity', 'model/ModelsCleanedList', 'model/ModelsClusterCache', 'model/ModelsComment', 'model/ModelsConsumerStats', 'model/ModelsContent', 'model/ModelsCopyTo', 'model/ModelsCountStat', 'model/ModelsCountry', 'model/ModelsCoupon', 'model/ModelsCouponOptions', 'model/ModelsCreateMailReport', 'model/ModelsCustomerQuality', 'model/ModelsDNSRecord', 'model/ModelsDedicatedIPs', 'model/ModelsDeleteResponse', 'model/ModelsDetailedAlert', 'model/ModelsDomain', 'model/ModelsDomainAge', 'model/ModelsDomainCheckResult', 'model/ModelsEAccount', 'model/ModelsEAccountMember', 'model/ModelsEAccountSetting', 'model/ModelsEAlert', 'model/ModelsEComment', 'model/ModelsEDomain', 'model/ModelsEIP', 'model/ModelsEIPPool', 'model/ModelsEIncident', 'model/ModelsEIntegration', 'model/ModelsEInvitation', 'model/ModelsEMember', 'model/ModelsESender', 'model/ModelsESubAccount', 'model/ModelsESystemDomain', 'model/ModelsEThirdPartySendingProvider', 'model/ModelsEUpdateTPSP', 'model/ModelsEValidation', 'model/ModelsEWebhook', 'model/ModelsEditorTokenResponse', 'model/ModelsEmailErrorCode', 'model/ModelsEmailList', 'model/ModelsEmailMessage', 'model/ModelsEmailResponse', 'model/ModelsEventMetadata', 'model/ModelsEventType', 'model/ModelsFrequencyType', 'model/ModelsFrom', 'model/ModelsGlockappsMailReport', 'model/ModelsHetrixtoolsBlacklist', 'model/ModelsHetrixtoolsMonitorStat', 'model/ModelsIEIP', 'model/ModelsIEMember', 'model/ModelsIESubAccount', 'model/ModelsIETag', 'model/ModelsIIP', 'model/ModelsIIPUpdateType', 'model/ModelsIP', 'model/ModelsIPDomainWarmupStatus', 'model/ModelsIPHealthResponse', 'model/ModelsIPPool', 'model/ModelsIPPoolType', 'model/ModelsIPProviderSettings', 'model/ModelsIPStat', 'model/ModelsIPType', 'model/ModelsIncident', 'model/ModelsIncidentStatus', 'model/ModelsInstance', 'model/ModelsIntegration', 'model/ModelsIntegrationSettings', 'model/ModelsIntegrationType', 'model/ModelsInvitation', 'model/ModelsInvitationStatus', 'model/ModelsLabel', 'model/ModelsLabelType', 'model/ModelsLinks', 'model/ModelsMailReportResult', 'model/ModelsMailgunClientInfo', 'model/ModelsMailgunDeliveryStatus', 'model/ModelsMailgunEvent', 'model/ModelsMailgunMessage', 'model/ModelsMailgunSignature', 'model/ModelsMailgunUserVariables', 'model/ModelsMember', 'model/ModelsMemberRole', 'model/ModelsNotificationType', 'model/ModelsOnboardingChecklist', 'model/ModelsPDStat', 'model/ModelsPaymentAddress', 'model/ModelsPaymentOptions', 'model/ModelsPaymentStatus', 'model/ModelsPostmasterDomainStat', 'model/ModelsPricing', 'model/ModelsProvider', 'model/ModelsProviderDetails', 'model/ModelsProviderResult', 'model/ModelsProviderSettings', 'model/ModelsQEmailMessage', 'model/ModelsQEvent', 'model/ModelsRAssumeAccount', 'model/ModelsRDStat', 'model/ModelsRDSuppression', 'model/ModelsRHetrixtoolsMonitorStat', 'model/ModelsRIPStat', 'model/ModelsRStat', 'model/ModelsRSuppression', 'model/ModelsReplyTo', 'model/ModelsReportProvider', 'model/ModelsResponse', 'model/ModelsSDStat', 'model/ModelsSMTPAuth', 'model/ModelsSMTPStat', 'model/ModelsSSLCertificate', 'model/ModelsSSLInfo', 'model/ModelsSender', 'model/ModelsSendgridEvent', 'model/ModelsSingleCleanedMail', 'model/ModelsStat', 'model/ModelsSubAccount', 'model/ModelsSubAccountType', 'model/ModelsSuppression', 'model/ModelsSuppressionEmail', 'model/ModelsSuppressionReason', 'model/ModelsSystemDNSRecord', 'model/ModelsSystemDomain', 'model/ModelsSystemIPPool', 'model/ModelsSystemTemplate', 'model/ModelsTag', 'model/ModelsTaxDetails', 'model/ModelsThirdPartySendingProvider', 'model/ModelsThirdPartySendingProviderType', 'model/ModelsTo', 'model/ModelsValidation', 'model/ModelsValidationReason', 'model/ModelsVerifyByMemberTokenRequest', 'model/ModelsVerifyByTokenRequest', 'model/ModelsWMessage', 'model/UaparserDevice', 'model/UaparserOs', 'model/UaparserUserAgent', 'api/AccountadminApi', 'api/AccountalertApi', 'api/AccountdomainApi', 'api/AccountdomainReportApi', 'api/AccountdomainstatApi', 'api/AccounteventApi', 'api/AccountincidentApi', 'api/AccountintegrationApi', 'api/AccountinvitationApi', 'api/AccountipApi', 'api/AccountippoolApi', 'api/AccountipstatApi', 'api/AccountlabelApi', 'api/AccountmailReportApi', 'api/AccountmemberApi', 'api/AccountmessageApi', 'api/AccountonboardingApi', 'api/AccountpaymentApi', 'api/AccountrecipientApi', 'api/AccountsettingApi', 'api/AccountsmtpstatApi', 'api/AccountstatApi', 'api/AccountsubaccountApi', 'api/AccountsubaccountstatApi', 'api/AccounttagApi', 'api/AccounttemplateApi', 'api/AccounttpspApi', 'api/AccounttpspstatApi', 'api/AccountvalidationApi', 'api/AccountwebhookApi', 'api/AuthApi', 'api/ClusterApi', 'api/EditorApi', 'api/SmtpApi', 'api/SubaccountdomainApi', 'api/SubaccountemailApi', 'api/SubaccountippoolApi', 'api/SubaccountsenderApi', 'api/SubaccountsuppressionApi', 'api/SystemsuppressionApi', 'api/SystemtemplateApi', 'api/TrackApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/Alert'), require('./model/ApiGlockappsMailReport'), require('./model/ModelFalse'), require('./model/ModelsAGDomainStat'), require('./model/ModelsAGIPStat'), require('./model/ModelsAGStat'), require('./model/ModelsAGSubAccountStat'), require('./model/ModelsAIPStat'), require('./model/ModelsAPStat'), require('./model/ModelsASStat'), require('./model/ModelsAccount'), require('./model/ModelsAccountDomain'), require('./model/ModelsAccountIPPool'), require('./model/ModelsAccountTemplate'), require('./model/ModelsAccountWebhook'), require('./model/ModelsAlertLabel'), require('./model/ModelsAlertRequest'), require('./model/ModelsAlertResponse'), require('./model/ModelsAllClusterCache'), require('./model/ModelsAttachment'), require('./model/ModelsAuthInfo'), require('./model/ModelsAutoWarmupContent'), require('./model/ModelsAutoWarmupContentRequest'), require('./model/ModelsAutoWarmupDailySchedule'), require('./model/ModelsAutoWarmupDomainSchedule'), require('./model/ModelsAutoWarmupPlan'), require('./model/ModelsAutoWarmupPlanRequest'), require('./model/ModelsAutoWarmupRecipient'), require('./model/ModelsAutoWarmupRecipientResponse'), require('./model/ModelsBackOffConfiguration'), require('./model/ModelsBackOffDecreaseType'), require('./model/ModelsBackOffTrigger'), require('./model/ModelsBillingPortalSession'), require('./model/ModelsBlackListEngine'), require('./model/ModelsBlackListResult'), require('./model/ModelsBlacklistResource'), require('./model/ModelsBlacklistStatus'), require('./model/ModelsBlacklistedOn'), require('./model/ModelsBulkResponse'), require('./model/ModelsCertificateDetails'), require('./model/ModelsCertificateExtensions'), require('./model/ModelsCertificateIssuer'), require('./model/ModelsCertificateSignature'), require('./model/ModelsCertificateSubject'), require('./model/ModelsCertificateValidity'), require('./model/ModelsCity'), require('./model/ModelsCleanedList'), require('./model/ModelsClusterCache'), require('./model/ModelsComment'), require('./model/ModelsConsumerStats'), require('./model/ModelsContent'), require('./model/ModelsCopyTo'), require('./model/ModelsCountStat'), require('./model/ModelsCouponOptions'), require('./model/ModelsCreateMailReport'), require('./model/ModelsCustomerQuality'), require('./model/ModelsDNSRecord'), require('./model/ModelsDeleteResponse'), require('./model/ModelsDetailedAlert'), require('./model/ModelsDomain'), require('./model/ModelsDomainAge'), require('./model/ModelsDomainCheckResult'), require('./model/ModelsEAccount'), require('./model/ModelsEAccountMember'), require('./model/ModelsEAccountSetting'), require('./model/ModelsEAlert'), require('./model/ModelsEComment'), require('./model/ModelsEDomain'), require('./model/ModelsEIP'), require('./model/ModelsEIPPool'), require('./model/ModelsEIncident'), require('./model/ModelsEIntegration'), require('./model/ModelsEInvitation'), require('./model/ModelsEMember'), require('./model/ModelsESender'), require('./model/ModelsESubAccount'), require('./model/ModelsESystemDomain'), require('./model/ModelsEValidation'), require('./model/ModelsEWebhook'), require('./model/ModelsEditorTokenResponse'), require('./model/ModelsEmailErrorCode'), require('./model/ModelsEmailList'), require('./model/ModelsEmailMessage'), require('./model/ModelsEmailResponse'), require('./model/ModelsEventMetadata'), require('./model/ModelsEventType'), require('./model/ModelsFrequencyType'), require('./model/ModelsFrom'), require('./model/ModelsHetrixtoolsBlacklist'), require('./model/ModelsHetrixtoolsMonitorStat'), require('./model/ModelsIEIP'), require('./model/ModelsIEMember'), require('./model/ModelsIESubAccount'), require('./model/ModelsIETag'), require('./model/ModelsIIP'), require('./model/ModelsIIPUpdateType'), require('./model/ModelsIP'), require('./model/ModelsIPDomainWarmupStatus'), require('./model/ModelsIPHealthResponse'), require('./model/ModelsIPPool'), require('./model/ModelsIPPoolType'), require('./model/ModelsIPProviderSettings'), require('./model/ModelsIPStat'), require('./model/ModelsIPType'), require('./model/ModelsIncident'), require('./model/ModelsIncidentStatus'), require('./model/ModelsInstance'), require('./model/ModelsIntegration'), require('./model/ModelsIntegrationSettings'), require('./model/ModelsIntegrationType'), require('./model/ModelsInvitation'), require('./model/ModelsInvitationStatus'), require('./model/ModelsLabel'), require('./model/ModelsLabelType'), require('./model/ModelsLinks'), require('./model/ModelsMailReportResult'), require('./model/ModelsMember'), require('./model/ModelsMemberRole'), require('./model/ModelsNotificationType'), require('./model/ModelsOnboardingChecklist'), require('./model/ModelsPDStat'), require('./model/ModelsPaymentOptions'), require('./model/ModelsPaymentStatus'), require('./model/ModelsPostmasterDomainStat'), require('./model/ModelsProvider'), require('./model/ModelsProviderDetails'), require('./model/ModelsProviderResult'), require('./model/ModelsProviderSettings'), require('./model/ModelsProviderType'), require('./model/ModelsQEmailMessage'), require('./model/ModelsQEvent'), require('./model/ModelsRAssumeAccount'), require('./model/ModelsRDStat'), require('./model/ModelsRDSuppression'), require('./model/ModelsRHetrixtoolsMonitorStat'), require('./model/ModelsRIPStat'), require('./model/ModelsRStat'), require('./model/ModelsRSuppression'), require('./model/ModelsReplyTo'), require('./model/ModelsReportProvider'), require('./model/ModelsResponse'), require('./model/ModelsSDStat'), require('./model/ModelsSMTPAuth'), require('./model/ModelsSMTPStat'), require('./model/ModelsSSLCertificate'), require('./model/ModelsSSLInfo'), require('./model/ModelsSender'), require('./model/ModelsSingleCleanedMail'), require('./model/ModelsStat'), require('./model/ModelsSubAccount'), require('./model/ModelsSubAccountType'), require('./model/ModelsSuppression'), require('./model/ModelsSuppressionEmail'), require('./model/ModelsSuppressionReason'), require('./model/ModelsSystemDNSRecord'), require('./model/ModelsSystemDomain'), require('./model/ModelsSystemIPPool'), require('./model/ModelsSystemTemplate'), require('./model/ModelsTag'), require('./model/ModelsTo'), require('./model/ModelsValidation'), require('./model/ModelsValidationReason'), require('./model/ModelsVerifyByMemberTokenRequest'), require('./model/ModelsVerifyByTokenRequest'), require('./model/ModelsWMessage'), require('./model/Provider'), require('./model/UaparserDevice'), require('./model/UaparserOs'), require('./model/UaparserUserAgent'), require('./api/AccountadminApi'), require('./api/AccountalertApi'), require('./api/AccountdomainApi'), require('./api/AccountdomainReportApi'), require('./api/AccountdomainstatApi'), require('./api/AccounteventApi'), require('./api/AccountincidentApi'), require('./api/AccountintegrationApi'), require('./api/AccountinvitationApi'), require('./api/AccountipApi'), require('./api/AccountippoolApi'), require('./api/AccountipstatApi'), require('./api/AccountlabelApi'), require('./api/AccountmailReportApi'), require('./api/AccountmemberApi'), require('./api/AccountmessageApi'), require('./api/AccountonboardingApi'), require('./api/AccountpaymentApi'), require('./api/AccountrecipientApi'), require('./api/AccountsettingApi'), require('./api/AccountsmtpstatApi'), require('./api/AccountstatApi'), require('./api/AccountsubaccountApi'), require('./api/AccountsubaccountstatApi'), require('./api/AccounttagApi'), require('./api/AccounttemplateApi'), require('./api/AccountvalidationApi'), require('./api/AccountwebhookApi'), require('./api/AuthApi'), require('./api/ClusterApi'), require('./api/EditorApi'), require('./api/SmtpApi'), require('./api/SubaccountdomainApi'), require('./api/SubaccountemailApi'), require('./api/SubaccountippoolApi'), require('./api/SubaccountsenderApi'), require('./api/SubaccountsuppressionApi'), require('./api/SystemsuppressionApi'), require('./api/SystemtemplateApi'), require('./api/TrackApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/Model2917850x14000714f90False'), require('./model/Model2920660x14000715080False'), require('./model/Model5557070x14000a69c50False'), require('./model/ModelsAGDomainStat'), require('./model/ModelsAGIPStat'), require('./model/ModelsAGStat'), require('./model/ModelsAGSubAccountStat'), require('./model/ModelsAGTPSPStat'), require('./model/ModelsAIPStat'), require('./model/ModelsAPStat'), require('./model/ModelsASStat'), require('./model/ModelsAccount'), require('./model/ModelsAccountCycleUsage'), require('./model/ModelsAccountDomain'), require('./model/ModelsAccountIPPool'), require('./model/ModelsAccountTemplate'), require('./model/ModelsAccountUnlockTicket'), require('./model/ModelsAccountWebhook'), require('./model/ModelsAlert'), require('./model/ModelsAlertLabel'), require('./model/ModelsAlertRequest'), require('./model/ModelsAlertResponse'), require('./model/ModelsAllClusterCache'), require('./model/ModelsAttachment'), require('./model/ModelsAuthInfo'), require('./model/ModelsAutoWarmupContent'), require('./model/ModelsAutoWarmupContentRequest'), require('./model/ModelsAutoWarmupDailySchedule'), require('./model/ModelsAutoWarmupDomainSchedule'), require('./model/ModelsAutoWarmupPlan'), require('./model/ModelsAutoWarmupPlanRequest'), require('./model/ModelsAutoWarmupRecipient'), require('./model/ModelsAutoWarmupRecipientResponse'), require('./model/ModelsBackOffConfiguration'), require('./model/ModelsBackOffDecreaseType'), require('./model/ModelsBackOffTrigger'), require('./model/ModelsBillingPortalSession'), require('./model/ModelsBlackListEngine'), require('./model/ModelsBlackListResult'), require('./model/ModelsBlacklistResource'), require('./model/ModelsBlacklistStatus'), require('./model/ModelsBlacklistedOn'), require('./model/ModelsBulkResponse'), require('./model/ModelsCertificateDetails'), require('./model/ModelsCertificateExtensions'), require('./model/ModelsCertificateIssuer'), require('./model/ModelsCertificateSignature'), require('./model/ModelsCertificateSubject'), require('./model/ModelsCertificateValidity'), require('./model/ModelsCity'), require('./model/ModelsCleanedList'), require('./model/ModelsClusterCache'), require('./model/ModelsComment'), require('./model/ModelsConsumerStats'), require('./model/ModelsContent'), require('./model/ModelsCopyTo'), require('./model/ModelsCountStat'), require('./model/ModelsCountry'), require('./model/ModelsCoupon'), require('./model/ModelsCouponOptions'), require('./model/ModelsCreateMailReport'), require('./model/ModelsCustomerQuality'), require('./model/ModelsDNSRecord'), require('./model/ModelsDedicatedIPs'), require('./model/ModelsDeleteResponse'), require('./model/ModelsDetailedAlert'), require('./model/ModelsDomain'), require('./model/ModelsDomainAge'), require('./model/ModelsDomainCheckResult'), require('./model/ModelsEAccount'), require('./model/ModelsEAccountMember'), require('./model/ModelsEAccountSetting'), require('./model/ModelsEAlert'), require('./model/ModelsEComment'), require('./model/ModelsEDomain'), require('./model/ModelsEIP'), require('./model/ModelsEIPPool'), require('./model/ModelsEIncident'), require('./model/ModelsEIntegration'), require('./model/ModelsEInvitation'), require('./model/ModelsEMember'), require('./model/ModelsESender'), require('./model/ModelsESubAccount'), require('./model/ModelsESystemDomain'), require('./model/ModelsEThirdPartySendingProvider'), require('./model/ModelsEUpdateTPSP'), require('./model/ModelsEValidation'), require('./model/ModelsEWebhook'), require('./model/ModelsEditorTokenResponse'), require('./model/ModelsEmailErrorCode'), require('./model/ModelsEmailList'), require('./model/ModelsEmailMessage'), require('./model/ModelsEmailResponse'), require('./model/ModelsEventMetadata'), require('./model/ModelsEventType'), require('./model/ModelsFrequencyType'), require('./model/ModelsFrom'), require('./model/ModelsGlockappsMailReport'), require('./model/ModelsHetrixtoolsBlacklist'), require('./model/ModelsHetrixtoolsMonitorStat'), require('./model/ModelsIEIP'), require('./model/ModelsIEMember'), require('./model/ModelsIESubAccount'), require('./model/ModelsIETag'), require('./model/ModelsIIP'), require('./model/ModelsIIPUpdateType'), require('./model/ModelsIP'), require('./model/ModelsIPDomainWarmupStatus'), require('./model/ModelsIPHealthResponse'), require('./model/ModelsIPPool'), require('./model/ModelsIPPoolType'), require('./model/ModelsIPProviderSettings'), require('./model/ModelsIPStat'), require('./model/ModelsIPType'), require('./model/ModelsIncident'), require('./model/ModelsIncidentStatus'), require('./model/ModelsInstance'), require('./model/ModelsIntegration'), require('./model/ModelsIntegrationSettings'), require('./model/ModelsIntegrationType'), require('./model/ModelsInvitation'), require('./model/ModelsInvitationStatus'), require('./model/ModelsLabel'), require('./model/ModelsLabelType'), require('./model/ModelsLinks'), require('./model/ModelsMailReportResult'), require('./model/ModelsMailgunClientInfo'), require('./model/ModelsMailgunDeliveryStatus'), require('./model/ModelsMailgunEvent'), require('./model/ModelsMailgunMessage'), require('./model/ModelsMailgunSignature'), require('./model/ModelsMailgunUserVariables'), require('./model/ModelsMember'), require('./model/ModelsMemberRole'), require('./model/ModelsNotificationType'), require('./model/ModelsOnboardingChecklist'), require('./model/ModelsPDStat'), require('./model/ModelsPaymentAddress'), require('./model/ModelsPaymentOptions'), require('./model/ModelsPaymentStatus'), require('./model/ModelsPostmasterDomainStat'), require('./model/ModelsPricing'), require('./model/ModelsProvider'), require('./model/ModelsProviderDetails'), require('./model/ModelsProviderResult'), require('./model/ModelsProviderSettings'), require('./model/ModelsQEmailMessage'), require('./model/ModelsQEvent'), require('./model/ModelsRAssumeAccount'), require('./model/ModelsRDStat'), require('./model/ModelsRDSuppression'), require('./model/ModelsRHetrixtoolsMonitorStat'), require('./model/ModelsRIPStat'), require('./model/ModelsRStat'), require('./model/ModelsRSuppression'), require('./model/ModelsReplyTo'), require('./model/ModelsReportProvider'), require('./model/ModelsResponse'), require('./model/ModelsSDStat'), require('./model/ModelsSMTPAuth'), require('./model/ModelsSMTPStat'), require('./model/ModelsSSLCertificate'), require('./model/ModelsSSLInfo'), require('./model/ModelsSender'), require('./model/ModelsSendgridEvent'), require('./model/ModelsSingleCleanedMail'), require('./model/ModelsStat'), require('./model/ModelsSubAccount'), require('./model/ModelsSubAccountType'), require('./model/ModelsSuppression'), require('./model/ModelsSuppressionEmail'), require('./model/ModelsSuppressionReason'), require('./model/ModelsSystemDNSRecord'), require('./model/ModelsSystemDomain'), require('./model/ModelsSystemIPPool'), require('./model/ModelsSystemTemplate'), require('./model/ModelsTag'), require('./model/ModelsTaxDetails'), require('./model/ModelsThirdPartySendingProvider'), require('./model/ModelsThirdPartySendingProviderType'), require('./model/ModelsTo'), require('./model/ModelsValidation'), require('./model/ModelsValidationReason'), require('./model/ModelsVerifyByMemberTokenRequest'), require('./model/ModelsVerifyByTokenRequest'), require('./model/ModelsWMessage'), require('./model/UaparserDevice'), require('./model/UaparserOs'), require('./model/UaparserUserAgent'), require('./api/AccountadminApi'), require('./api/AccountalertApi'), require('./api/AccountdomainApi'), require('./api/AccountdomainReportApi'), require('./api/AccountdomainstatApi'), require('./api/AccounteventApi'), require('./api/AccountincidentApi'), require('./api/AccountintegrationApi'), require('./api/AccountinvitationApi'), require('./api/AccountipApi'), require('./api/AccountippoolApi'), require('./api/AccountipstatApi'), require('./api/AccountlabelApi'), require('./api/AccountmailReportApi'), require('./api/AccountmemberApi'), require('./api/AccountmessageApi'), require('./api/AccountonboardingApi'), require('./api/AccountpaymentApi'), require('./api/AccountrecipientApi'), require('./api/AccountsettingApi'), require('./api/AccountsmtpstatApi'), require('./api/AccountstatApi'), require('./api/AccountsubaccountApi'), require('./api/AccountsubaccountstatApi'), require('./api/AccounttagApi'), require('./api/AccounttemplateApi'), require('./api/AccounttpspApi'), require('./api/AccounttpspstatApi'), require('./api/AccountvalidationApi'), require('./api/AccountwebhookApi'), require('./api/AuthApi'), require('./api/ClusterApi'), require('./api/EditorApi'), require('./api/SmtpApi'), require('./api/SubaccountdomainApi'), require('./api/SubaccountemailApi'), require('./api/SubaccountippoolApi'), require('./api/SubaccountsenderApi'), require('./api/SubaccountsuppressionApi'), require('./api/SystemsuppressionApi'), require('./api/SystemtemplateApi'), require('./api/TrackApi'));
   }
-}(function(ApiClient, Alert, ApiGlockappsMailReport, ModelFalse, ModelsAGDomainStat, ModelsAGIPStat, ModelsAGStat, ModelsAGSubAccountStat, ModelsAIPStat, ModelsAPStat, ModelsASStat, ModelsAccount, ModelsAccountDomain, ModelsAccountIPPool, ModelsAccountTemplate, ModelsAccountWebhook, ModelsAlertLabel, ModelsAlertRequest, ModelsAlertResponse, ModelsAllClusterCache, ModelsAttachment, ModelsAuthInfo, ModelsAutoWarmupContent, ModelsAutoWarmupContentRequest, ModelsAutoWarmupDailySchedule, ModelsAutoWarmupDomainSchedule, ModelsAutoWarmupPlan, ModelsAutoWarmupPlanRequest, ModelsAutoWarmupRecipient, ModelsAutoWarmupRecipientResponse, ModelsBackOffConfiguration, ModelsBackOffDecreaseType, ModelsBackOffTrigger, ModelsBillingPortalSession, ModelsBlackListEngine, ModelsBlackListResult, ModelsBlacklistResource, ModelsBlacklistStatus, ModelsBlacklistedOn, ModelsBulkResponse, ModelsCertificateDetails, ModelsCertificateExtensions, ModelsCertificateIssuer, ModelsCertificateSignature, ModelsCertificateSubject, ModelsCertificateValidity, ModelsCity, ModelsCleanedList, ModelsClusterCache, ModelsComment, ModelsConsumerStats, ModelsContent, ModelsCopyTo, ModelsCountStat, ModelsCouponOptions, ModelsCreateMailReport, ModelsCustomerQuality, ModelsDNSRecord, ModelsDeleteResponse, ModelsDetailedAlert, ModelsDomain, ModelsDomainAge, ModelsDomainCheckResult, ModelsEAccount, ModelsEAccountMember, ModelsEAccountSetting, ModelsEAlert, ModelsEComment, ModelsEDomain, ModelsEIP, ModelsEIPPool, ModelsEIncident, ModelsEIntegration, ModelsEInvitation, ModelsEMember, ModelsESender, ModelsESubAccount, ModelsESystemDomain, ModelsEValidation, ModelsEWebhook, ModelsEditorTokenResponse, ModelsEmailErrorCode, ModelsEmailList, ModelsEmailMessage, ModelsEmailResponse, ModelsEventMetadata, ModelsEventType, ModelsFrequencyType, ModelsFrom, ModelsHetrixtoolsBlacklist, ModelsHetrixtoolsMonitorStat, ModelsIEIP, ModelsIEMember, ModelsIESubAccount, ModelsIETag, ModelsIIP, ModelsIIPUpdateType, ModelsIP, ModelsIPDomainWarmupStatus, ModelsIPHealthResponse, ModelsIPPool, ModelsIPPoolType, ModelsIPProviderSettings, ModelsIPStat, ModelsIPType, ModelsIncident, ModelsIncidentStatus, ModelsInstance, ModelsIntegration, ModelsIntegrationSettings, ModelsIntegrationType, ModelsInvitation, ModelsInvitationStatus, ModelsLabel, ModelsLabelType, ModelsLinks, ModelsMailReportResult, ModelsMember, ModelsMemberRole, ModelsNotificationType, ModelsOnboardingChecklist, ModelsPDStat, ModelsPaymentOptions, ModelsPaymentStatus, ModelsPostmasterDomainStat, ModelsProvider, ModelsProviderDetails, ModelsProviderResult, ModelsProviderSettings, ModelsProviderType, ModelsQEmailMessage, ModelsQEvent, ModelsRAssumeAccount, ModelsRDStat, ModelsRDSuppression, ModelsRHetrixtoolsMonitorStat, ModelsRIPStat, ModelsRStat, ModelsRSuppression, ModelsReplyTo, ModelsReportProvider, ModelsResponse, ModelsSDStat, ModelsSMTPAuth, ModelsSMTPStat, ModelsSSLCertificate, ModelsSSLInfo, ModelsSender, ModelsSingleCleanedMail, ModelsStat, ModelsSubAccount, ModelsSubAccountType, ModelsSuppression, ModelsSuppressionEmail, ModelsSuppressionReason, ModelsSystemDNSRecord, ModelsSystemDomain, ModelsSystemIPPool, ModelsSystemTemplate, ModelsTag, ModelsTo, ModelsValidation, ModelsValidationReason, ModelsVerifyByMemberTokenRequest, ModelsVerifyByTokenRequest, ModelsWMessage, Provider, UaparserDevice, UaparserOs, UaparserUserAgent, AccountadminApi, AccountalertApi, AccountdomainApi, AccountdomainReportApi, AccountdomainstatApi, AccounteventApi, AccountincidentApi, AccountintegrationApi, AccountinvitationApi, AccountipApi, AccountippoolApi, AccountipstatApi, AccountlabelApi, AccountmailReportApi, AccountmemberApi, AccountmessageApi, AccountonboardingApi, AccountpaymentApi, AccountrecipientApi, AccountsettingApi, AccountsmtpstatApi, AccountstatApi, AccountsubaccountApi, AccountsubaccountstatApi, AccounttagApi, AccounttemplateApi, AccountvalidationApi, AccountwebhookApi, AuthApi, ClusterApi, EditorApi, SmtpApi, SubaccountdomainApi, SubaccountemailApi, SubaccountippoolApi, SubaccountsenderApi, SubaccountsuppressionApi, SystemsuppressionApi, SystemtemplateApi, TrackApi) {
+}(function(ApiClient, Model2917850x14000714f90False, Model2920660x14000715080False, Model5557070x14000a69c50False, ModelsAGDomainStat, ModelsAGIPStat, ModelsAGStat, ModelsAGSubAccountStat, ModelsAGTPSPStat, ModelsAIPStat, ModelsAPStat, ModelsASStat, ModelsAccount, ModelsAccountCycleUsage, ModelsAccountDomain, ModelsAccountIPPool, ModelsAccountTemplate, ModelsAccountUnlockTicket, ModelsAccountWebhook, ModelsAlert, ModelsAlertLabel, ModelsAlertRequest, ModelsAlertResponse, ModelsAllClusterCache, ModelsAttachment, ModelsAuthInfo, ModelsAutoWarmupContent, ModelsAutoWarmupContentRequest, ModelsAutoWarmupDailySchedule, ModelsAutoWarmupDomainSchedule, ModelsAutoWarmupPlan, ModelsAutoWarmupPlanRequest, ModelsAutoWarmupRecipient, ModelsAutoWarmupRecipientResponse, ModelsBackOffConfiguration, ModelsBackOffDecreaseType, ModelsBackOffTrigger, ModelsBillingPortalSession, ModelsBlackListEngine, ModelsBlackListResult, ModelsBlacklistResource, ModelsBlacklistStatus, ModelsBlacklistedOn, ModelsBulkResponse, ModelsCertificateDetails, ModelsCertificateExtensions, ModelsCertificateIssuer, ModelsCertificateSignature, ModelsCertificateSubject, ModelsCertificateValidity, ModelsCity, ModelsCleanedList, ModelsClusterCache, ModelsComment, ModelsConsumerStats, ModelsContent, ModelsCopyTo, ModelsCountStat, ModelsCountry, ModelsCoupon, ModelsCouponOptions, ModelsCreateMailReport, ModelsCustomerQuality, ModelsDNSRecord, ModelsDedicatedIPs, ModelsDeleteResponse, ModelsDetailedAlert, ModelsDomain, ModelsDomainAge, ModelsDomainCheckResult, ModelsEAccount, ModelsEAccountMember, ModelsEAccountSetting, ModelsEAlert, ModelsEComment, ModelsEDomain, ModelsEIP, ModelsEIPPool, ModelsEIncident, ModelsEIntegration, ModelsEInvitation, ModelsEMember, ModelsESender, ModelsESubAccount, ModelsESystemDomain, ModelsEThirdPartySendingProvider, ModelsEUpdateTPSP, ModelsEValidation, ModelsEWebhook, ModelsEditorTokenResponse, ModelsEmailErrorCode, ModelsEmailList, ModelsEmailMessage, ModelsEmailResponse, ModelsEventMetadata, ModelsEventType, ModelsFrequencyType, ModelsFrom, ModelsGlockappsMailReport, ModelsHetrixtoolsBlacklist, ModelsHetrixtoolsMonitorStat, ModelsIEIP, ModelsIEMember, ModelsIESubAccount, ModelsIETag, ModelsIIP, ModelsIIPUpdateType, ModelsIP, ModelsIPDomainWarmupStatus, ModelsIPHealthResponse, ModelsIPPool, ModelsIPPoolType, ModelsIPProviderSettings, ModelsIPStat, ModelsIPType, ModelsIncident, ModelsIncidentStatus, ModelsInstance, ModelsIntegration, ModelsIntegrationSettings, ModelsIntegrationType, ModelsInvitation, ModelsInvitationStatus, ModelsLabel, ModelsLabelType, ModelsLinks, ModelsMailReportResult, ModelsMailgunClientInfo, ModelsMailgunDeliveryStatus, ModelsMailgunEvent, ModelsMailgunMessage, ModelsMailgunSignature, ModelsMailgunUserVariables, ModelsMember, ModelsMemberRole, ModelsNotificationType, ModelsOnboardingChecklist, ModelsPDStat, ModelsPaymentAddress, ModelsPaymentOptions, ModelsPaymentStatus, ModelsPostmasterDomainStat, ModelsPricing, ModelsProvider, ModelsProviderDetails, ModelsProviderResult, ModelsProviderSettings, ModelsQEmailMessage, ModelsQEvent, ModelsRAssumeAccount, ModelsRDStat, ModelsRDSuppression, ModelsRHetrixtoolsMonitorStat, ModelsRIPStat, ModelsRStat, ModelsRSuppression, ModelsReplyTo, ModelsReportProvider, ModelsResponse, ModelsSDStat, ModelsSMTPAuth, ModelsSMTPStat, ModelsSSLCertificate, ModelsSSLInfo, ModelsSender, ModelsSendgridEvent, ModelsSingleCleanedMail, ModelsStat, ModelsSubAccount, ModelsSubAccountType, ModelsSuppression, ModelsSuppressionEmail, ModelsSuppressionReason, ModelsSystemDNSRecord, ModelsSystemDomain, ModelsSystemIPPool, ModelsSystemTemplate, ModelsTag, ModelsTaxDetails, ModelsThirdPartySendingProvider, ModelsThirdPartySendingProviderType, ModelsTo, ModelsValidation, ModelsValidationReason, ModelsVerifyByMemberTokenRequest, ModelsVerifyByTokenRequest, ModelsWMessage, UaparserDevice, UaparserOs, UaparserUserAgent, AccountadminApi, AccountalertApi, AccountdomainApi, AccountdomainReportApi, AccountdomainstatApi, AccounteventApi, AccountincidentApi, AccountintegrationApi, AccountinvitationApi, AccountipApi, AccountippoolApi, AccountipstatApi, AccountlabelApi, AccountmailReportApi, AccountmemberApi, AccountmessageApi, AccountonboardingApi, AccountpaymentApi, AccountrecipientApi, AccountsettingApi, AccountsmtpstatApi, AccountstatApi, AccountsubaccountApi, AccountsubaccountstatApi, AccounttagApi, AccounttemplateApi, AccounttpspApi, AccounttpspstatApi, AccountvalidationApi, AccountwebhookApi, AuthApi, ClusterApi, EditorApi, SmtpApi, SubaccountdomainApi, SubaccountemailApi, SubaccountippoolApi, SubaccountsenderApi, SubaccountsuppressionApi, SystemsuppressionApi, SystemtemplateApi, TrackApi) {
   'use strict';
 
   /**
@@ -63,20 +63,20 @@
      */
     ApiClient: ApiClient,
     /**
-     * The Alert model constructor.
-     * @property {module:model/Alert}
+     * The Model2917850x14000714f90False model constructor.
+     * @property {module:model/Model2917850x14000714f90False}
      */
-    Alert: Alert,
+    Model2917850x14000714f90False: Model2917850x14000714f90False,
     /**
-     * The ApiGlockappsMailReport model constructor.
-     * @property {module:model/ApiGlockappsMailReport}
+     * The Model2920660x14000715080False model constructor.
+     * @property {module:model/Model2920660x14000715080False}
      */
-    ApiGlockappsMailReport: ApiGlockappsMailReport,
+    Model2920660x14000715080False: Model2920660x14000715080False,
     /**
-     * The ModelFalse model constructor.
-     * @property {module:model/ModelFalse}
+     * The Model5557070x14000a69c50False model constructor.
+     * @property {module:model/Model5557070x14000a69c50False}
      */
-    ModelFalse: ModelFalse,
+    Model5557070x14000a69c50False: Model5557070x14000a69c50False,
     /**
      * The ModelsAGDomainStat model constructor.
      * @property {module:model/ModelsAGDomainStat}
@@ -98,6 +98,11 @@
      */
     ModelsAGSubAccountStat: ModelsAGSubAccountStat,
     /**
+     * The ModelsAGTPSPStat model constructor.
+     * @property {module:model/ModelsAGTPSPStat}
+     */
+    ModelsAGTPSPStat: ModelsAGTPSPStat,
+    /**
      * The ModelsAIPStat model constructor.
      * @property {module:model/ModelsAIPStat}
      */
@@ -118,6 +123,11 @@
      */
     ModelsAccount: ModelsAccount,
     /**
+     * The ModelsAccountCycleUsage model constructor.
+     * @property {module:model/ModelsAccountCycleUsage}
+     */
+    ModelsAccountCycleUsage: ModelsAccountCycleUsage,
+    /**
      * The ModelsAccountDomain model constructor.
      * @property {module:model/ModelsAccountDomain}
      */
@@ -133,10 +143,20 @@
      */
     ModelsAccountTemplate: ModelsAccountTemplate,
     /**
+     * The ModelsAccountUnlockTicket model constructor.
+     * @property {module:model/ModelsAccountUnlockTicket}
+     */
+    ModelsAccountUnlockTicket: ModelsAccountUnlockTicket,
+    /**
      * The ModelsAccountWebhook model constructor.
      * @property {module:model/ModelsAccountWebhook}
      */
     ModelsAccountWebhook: ModelsAccountWebhook,
+    /**
+     * The ModelsAlert model constructor.
+     * @property {module:model/ModelsAlert}
+     */
+    ModelsAlert: ModelsAlert,
     /**
      * The ModelsAlertLabel model constructor.
      * @property {module:model/ModelsAlertLabel}
@@ -328,6 +348,16 @@
      */
     ModelsCountStat: ModelsCountStat,
     /**
+     * The ModelsCountry model constructor.
+     * @property {module:model/ModelsCountry}
+     */
+    ModelsCountry: ModelsCountry,
+    /**
+     * The ModelsCoupon model constructor.
+     * @property {module:model/ModelsCoupon}
+     */
+    ModelsCoupon: ModelsCoupon,
+    /**
      * The ModelsCouponOptions model constructor.
      * @property {module:model/ModelsCouponOptions}
      */
@@ -347,6 +377,11 @@
      * @property {module:model/ModelsDNSRecord}
      */
     ModelsDNSRecord: ModelsDNSRecord,
+    /**
+     * The ModelsDedicatedIPs model constructor.
+     * @property {module:model/ModelsDedicatedIPs}
+     */
+    ModelsDedicatedIPs: ModelsDedicatedIPs,
     /**
      * The ModelsDeleteResponse model constructor.
      * @property {module:model/ModelsDeleteResponse}
@@ -448,6 +483,16 @@
      */
     ModelsESystemDomain: ModelsESystemDomain,
     /**
+     * The ModelsEThirdPartySendingProvider model constructor.
+     * @property {module:model/ModelsEThirdPartySendingProvider}
+     */
+    ModelsEThirdPartySendingProvider: ModelsEThirdPartySendingProvider,
+    /**
+     * The ModelsEUpdateTPSP model constructor.
+     * @property {module:model/ModelsEUpdateTPSP}
+     */
+    ModelsEUpdateTPSP: ModelsEUpdateTPSP,
+    /**
      * The ModelsEValidation model constructor.
      * @property {module:model/ModelsEValidation}
      */
@@ -502,6 +547,11 @@
      * @property {module:model/ModelsFrom}
      */
     ModelsFrom: ModelsFrom,
+    /**
+     * The ModelsGlockappsMailReport model constructor.
+     * @property {module:model/ModelsGlockappsMailReport}
+     */
+    ModelsGlockappsMailReport: ModelsGlockappsMailReport,
     /**
      * The ModelsHetrixtoolsBlacklist model constructor.
      * @property {module:model/ModelsHetrixtoolsBlacklist}
@@ -643,6 +693,36 @@
      */
     ModelsMailReportResult: ModelsMailReportResult,
     /**
+     * The ModelsMailgunClientInfo model constructor.
+     * @property {module:model/ModelsMailgunClientInfo}
+     */
+    ModelsMailgunClientInfo: ModelsMailgunClientInfo,
+    /**
+     * The ModelsMailgunDeliveryStatus model constructor.
+     * @property {module:model/ModelsMailgunDeliveryStatus}
+     */
+    ModelsMailgunDeliveryStatus: ModelsMailgunDeliveryStatus,
+    /**
+     * The ModelsMailgunEvent model constructor.
+     * @property {module:model/ModelsMailgunEvent}
+     */
+    ModelsMailgunEvent: ModelsMailgunEvent,
+    /**
+     * The ModelsMailgunMessage model constructor.
+     * @property {module:model/ModelsMailgunMessage}
+     */
+    ModelsMailgunMessage: ModelsMailgunMessage,
+    /**
+     * The ModelsMailgunSignature model constructor.
+     * @property {module:model/ModelsMailgunSignature}
+     */
+    ModelsMailgunSignature: ModelsMailgunSignature,
+    /**
+     * The ModelsMailgunUserVariables model constructor.
+     * @property {module:model/ModelsMailgunUserVariables}
+     */
+    ModelsMailgunUserVariables: ModelsMailgunUserVariables,
+    /**
      * The ModelsMember model constructor.
      * @property {module:model/ModelsMember}
      */
@@ -668,6 +748,11 @@
      */
     ModelsPDStat: ModelsPDStat,
     /**
+     * The ModelsPaymentAddress model constructor.
+     * @property {module:model/ModelsPaymentAddress}
+     */
+    ModelsPaymentAddress: ModelsPaymentAddress,
+    /**
      * The ModelsPaymentOptions model constructor.
      * @property {module:model/ModelsPaymentOptions}
      */
@@ -682,6 +767,11 @@
      * @property {module:model/ModelsPostmasterDomainStat}
      */
     ModelsPostmasterDomainStat: ModelsPostmasterDomainStat,
+    /**
+     * The ModelsPricing model constructor.
+     * @property {module:model/ModelsPricing}
+     */
+    ModelsPricing: ModelsPricing,
     /**
      * The ModelsProvider model constructor.
      * @property {module:model/ModelsProvider}
@@ -702,11 +792,6 @@
      * @property {module:model/ModelsProviderSettings}
      */
     ModelsProviderSettings: ModelsProviderSettings,
-    /**
-     * The ModelsProviderType model constructor.
-     * @property {module:model/ModelsProviderType}
-     */
-    ModelsProviderType: ModelsProviderType,
     /**
      * The ModelsQEmailMessage model constructor.
      * @property {module:model/ModelsQEmailMessage}
@@ -798,6 +883,11 @@
      */
     ModelsSender: ModelsSender,
     /**
+     * The ModelsSendgridEvent model constructor.
+     * @property {module:model/ModelsSendgridEvent}
+     */
+    ModelsSendgridEvent: ModelsSendgridEvent,
+    /**
      * The ModelsSingleCleanedMail model constructor.
      * @property {module:model/ModelsSingleCleanedMail}
      */
@@ -858,6 +948,21 @@
      */
     ModelsTag: ModelsTag,
     /**
+     * The ModelsTaxDetails model constructor.
+     * @property {module:model/ModelsTaxDetails}
+     */
+    ModelsTaxDetails: ModelsTaxDetails,
+    /**
+     * The ModelsThirdPartySendingProvider model constructor.
+     * @property {module:model/ModelsThirdPartySendingProvider}
+     */
+    ModelsThirdPartySendingProvider: ModelsThirdPartySendingProvider,
+    /**
+     * The ModelsThirdPartySendingProviderType model constructor.
+     * @property {module:model/ModelsThirdPartySendingProviderType}
+     */
+    ModelsThirdPartySendingProviderType: ModelsThirdPartySendingProviderType,
+    /**
      * The ModelsTo model constructor.
      * @property {module:model/ModelsTo}
      */
@@ -887,11 +992,6 @@
      * @property {module:model/ModelsWMessage}
      */
     ModelsWMessage: ModelsWMessage,
-    /**
-     * The Provider model constructor.
-     * @property {module:model/Provider}
-     */
-    Provider: Provider,
     /**
      * The UaparserDevice model constructor.
      * @property {module:model/UaparserDevice}
@@ -1037,6 +1137,16 @@
      * @property {module:api/AccounttemplateApi}
      */
     AccounttemplateApi: AccounttemplateApi,
+    /**
+     * The AccounttpspApi service constructor.
+     * @property {module:api/AccounttpspApi}
+     */
+    AccounttpspApi: AccounttpspApi,
+    /**
+     * The AccounttpspstatApi service constructor.
+     * @property {module:api/AccounttpspstatApi}
+     */
+    AccounttpspstatApi: AccounttpspstatApi,
     /**
      * The AccountvalidationApi service constructor.
      * @property {module:api/AccountvalidationApi}

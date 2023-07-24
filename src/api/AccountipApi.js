@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Allocate IP To Account
+     * Allocate IP To Account 
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountipApi~iPRouterAllocateIPCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsIP>}
@@ -104,7 +104,7 @@
      */
 
     /**
-     * Count Total AccountIPs
+     * Count Total AccountIPs 
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.filterBy filterBy
@@ -159,7 +159,7 @@
      */
 
     /**
-     * Delete IP
+     * Delete IP 
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid The IPId you want to delete
      * @param {module:api/AccountipApi~iPRouterDeleteCallback} callback The callback function, accepting three arguments: error, data, response
@@ -213,7 +213,7 @@
      */
 
     /**
-     * Find IP by IPId
+     * Find IP by IPId 
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid the IPId you want to get
      * @param {module:api/AccountipApi~iPRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -267,7 +267,7 @@
      */
 
     /**
-     * Get All IPs
+     * Get All IPs 
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
@@ -326,7 +326,7 @@
      */
 
     /**
-     * Get All Incidents associated with a IP
+     * Get All Incidents associated with a IP 
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid The ipid whose incidents you want to retrieve
      * @param {module:api/AccountipApi~iPRouterGetAllIPIncidentsCallback} callback The callback function, accepting three arguments: error, data, response
@@ -380,7 +380,7 @@
      */
 
     /**
-     * Find AccountIPPools for IP
+     * Find AccountIPPools for IP 
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid the IPId you want to get
      * @param {module:api/AccountipApi~iPRouterGetIPAccountIPPoolsCallback} callback The callback function, accepting three arguments: error, data, response
@@ -434,7 +434,7 @@
      */
 
     /**
-     * Get IP health
+     * Get IP health 
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid The IP you want to update
      * @param {module:api/AccountipApi~iPRouterGetIpHealthCallback} callback The callback function, accepting three arguments: error, data, response
@@ -488,7 +488,7 @@
      */
 
     /**
-     * Update an IP
+     * Update an IP 
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid The IP you want to update
      * @param {module:model/ModelsIIP} body The IP Email Provider Settings

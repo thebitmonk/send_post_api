@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Count Total Senders
+     * Count Total Senders 
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {module:api/SubaccountsenderApi~senderRouterCountCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsCountStat}
@@ -104,7 +104,7 @@
      */
 
     /**
-     * Create Sender
+     * Create Sender 
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {module:model/ModelsESender} body The Sender content
      * @param {module:api/SubaccountsenderApi~senderRouterCreateCallback} callback The callback function, accepting three arguments: error, data, response
@@ -157,7 +157,7 @@
      */
 
     /**
-     * Delete Sender
+     * Delete Sender 
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Number} senderId The SenderId you want to delete
      * @param {module:api/SubaccountsenderApi~senderRouterDeleteCallback} callback The callback function, accepting three arguments: error, data, response
@@ -211,7 +211,7 @@
      */
 
     /**
-     * Find Sender by SenderId
+     * Find Sender by SenderId 
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Number} senderId the SenderId you want to get
      * @param {module:api/SubaccountsenderApi~senderRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -265,7 +265,7 @@
      */
 
     /**
-     * Get All Senders
+     * Get All Senders 
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
@@ -320,7 +320,7 @@
      */
 
     /**
-     * Update Sender
+     * Update Sender 
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Number} senderId The SenderId you want to update
      * @param {module:model/ModelsESender} body The body
