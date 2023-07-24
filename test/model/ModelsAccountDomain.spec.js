@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -63,6 +63,18 @@
         // TODO: update the code to test the property dkimVerified
         expect(instance).to.have.property('dkimVerified');
         // expect(instance.dkimVerified).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property dmarc (base name: "dmarc")', function() {
+        // TODO: update the code to test the property dmarc
+        expect(instance).to.have.property('dmarc');
+        // expect(instance.dmarc).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property dmarcVerified (base name: "dmarcVerified")', function() {
+        // TODO: update the code to test the property dmarcVerified
+        expect(instance).to.have.property('dmarcVerified');
+        // expect(instance.dmarcVerified).to.be(expectedValueLiteral);
       });
 
       it('should have the property id (base name: "id")', function() {

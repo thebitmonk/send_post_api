@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsAccount', 'model/ModelsEAccountSetting'], factory);
+    define(['ApiClient', 'model/ModelsAccount', 'model/ModelsDedicatedIPs', 'model/ModelsEAccountSetting'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsAccount'), require('../model/ModelsEAccountSetting'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsAccount'), require('../model/ModelsDedicatedIPs'), require('../model/ModelsEAccountSetting'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.AccountsettingApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsAccount, root.SendPostApi.ModelsEAccountSetting);
+    root.SendPostApi.AccountsettingApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsAccount, root.SendPostApi.ModelsDedicatedIPs, root.SendPostApi.ModelsEAccountSetting);
   }
-}(this, function(ApiClient, ModelsAccount, ModelsEAccountSetting) {
+}(this, function(ApiClient, ModelsAccount, ModelsDedicatedIPs, ModelsEAccountSetting) {
   'use strict';
 
   /**
@@ -49,6 +49,100 @@
 
 
     /**
+     * Callback function to receive the result of the accountSettingRouterCheckDedicatedIPExist operation.
+     * @callback module:api/AccountsettingApi~accountSettingRouterCheckDedicatedIPExistCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ModelsDedicatedIPs} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * check if account has dedicated ip's <br>
+     * @param {String} xAccountApiKey Account API Key
+     * @param {module:api/AccountsettingApi~accountSettingRouterCheckDedicatedIPExistCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ModelsDedicatedIPs}
+     */
+    this.accountSettingRouterCheckDedicatedIPExist = function(xAccountApiKey, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling accountSettingRouterCheckDedicatedIPExist");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-Account-ApiKey': xAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ModelsDedicatedIPs;
+
+      return this.apiClient.callApi(
+        '/account/setting/dedicated', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the accountSettingRouterGetAccount operation.
+     * @callback module:api/AccountsettingApi~accountSettingRouterGetAccountCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ModelsAccount} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * get latest account details <br>
+     * @param {String} xAccountApiKey Account API Key
+     * @param {module:api/AccountsettingApi~accountSettingRouterGetAccountCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ModelsAccount}
+     */
+    this.accountSettingRouterGetAccount = function(xAccountApiKey, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling accountSettingRouterGetAccount");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-Account-ApiKey': xAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ModelsAccount;
+
+      return this.apiClient.callApi(
+        '/account/setting/', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the accountSettingRouterUpdate operation.
      * @callback module:api/AccountsettingApi~accountSettingRouterUpdateCallback
      * @param {String} error Error message, if any.
@@ -57,7 +151,7 @@
      */
 
     /**
-     * update account settings
+     * update account settings <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:model/ModelsEAccountSetting} body The account settings to be updated
      * @param {module:api/AccountsettingApi~accountSettingRouterUpdateCallback} callback The callback function, accepting three arguments: error, data, response

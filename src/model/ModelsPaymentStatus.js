@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -55,11 +55,32 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('clientSecret'))
+        obj.clientSecret = ApiClient.convertToType(data['clientSecret'], 'String');
+      if (data.hasOwnProperty('message'))
+        obj.message = ApiClient.convertToType(data['message'], 'String');
+      if (data.hasOwnProperty('redirectUrl'))
+        obj.redirectUrl = ApiClient.convertToType(data['redirectUrl'], 'String');
       if (data.hasOwnProperty('status'))
         obj.status = ApiClient.convertToType(data['status'], 'String');
     }
     return obj;
   }
+
+  /**
+   * @member {String} clientSecret
+   */
+  exports.prototype.clientSecret = undefined;
+
+  /**
+   * @member {String} message
+   */
+  exports.prototype.message = undefined;
+
+  /**
+   * @member {String} redirectUrl
+   */
+  exports.prototype.redirectUrl = undefined;
 
   /**
    * @member {String} status

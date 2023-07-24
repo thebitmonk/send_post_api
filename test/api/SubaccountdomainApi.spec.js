@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -87,6 +87,15 @@
             expect(data.dkimConfig).to.be("");
             expect(data.dkimVerified).to.be.a('boolean');
             expect(data.dkimVerified).to.be(false);
+            expect(data.dmarc).to.be.a(SendPostApi.ModelsDNSRecord);
+                  expect(data.dmarc.host).to.be.a('string');
+              expect(data.dmarc.host).to.be("");
+              expect(data.dmarc.textValue).to.be.a('string');
+              expect(data.dmarc.textValue).to.be("");
+              expect(data.dmarc.type).to.be.a('string');
+              expect(data.dmarc.type).to.be("");
+            expect(data.dmarcVerified).to.be.a('boolean');
+            expect(data.dmarcVerified).to.be(false);
             expect(data.id).to.be.a('number');
             expect(data.id).to.be("0");
             expect(data.name).to.be.a('string');
@@ -172,6 +181,15 @@
             expect(data.dkimConfig).to.be("");
             expect(data.dkimVerified).to.be.a('boolean');
             expect(data.dkimVerified).to.be(false);
+            expect(data.dmarc).to.be.a(SendPostApi.ModelsDNSRecord);
+                  expect(data.dmarc.host).to.be.a('string');
+              expect(data.dmarc.host).to.be("");
+              expect(data.dmarc.textValue).to.be.a('string');
+              expect(data.dmarc.textValue).to.be("");
+              expect(data.dmarc.type).to.be.a('string');
+              expect(data.dmarc.type).to.be("");
+            expect(data.dmarcVerified).to.be.a('boolean');
+            expect(data.dmarcVerified).to.be(false);
             expect(data.id).to.be.a('number');
             expect(data.id).to.be("0");
             expect(data.name).to.be.a('string');
@@ -239,6 +257,15 @@
               expect(data.dkimConfig).to.be("");
               expect(data.dkimVerified).to.be.a('boolean');
               expect(data.dkimVerified).to.be(false);
+              expect(data.dmarc).to.be.a(SendPostApi.ModelsDNSRecord);
+                    expect(data.dmarc.host).to.be.a('string');
+                expect(data.dmarc.host).to.be("");
+                expect(data.dmarc.textValue).to.be.a('string');
+                expect(data.dmarc.textValue).to.be("");
+                expect(data.dmarc.type).to.be.a('string');
+                expect(data.dmarc.type).to.be("");
+              expect(data.dmarcVerified).to.be.a('boolean');
+              expect(data.dmarcVerified).to.be(false);
               expect(data.id).to.be.a('number');
               expect(data.id).to.be("0");
               expect(data.name).to.be.a('string');
@@ -301,6 +328,15 @@
             expect(data.dkimConfig).to.be("");
             expect(data.dkimVerified).to.be.a('boolean');
             expect(data.dkimVerified).to.be(false);
+            expect(data.dmarc).to.be.a(SendPostApi.ModelsDNSRecord);
+                  expect(data.dmarc.host).to.be.a('string');
+              expect(data.dmarc.host).to.be("");
+              expect(data.dmarc.textValue).to.be.a('string');
+              expect(data.dmarc.textValue).to.be("");
+              expect(data.dmarc.type).to.be.a('string');
+              expect(data.dmarc.type).to.be("");
+            expect(data.dmarcVerified).to.be.a('boolean');
+            expect(data.dmarcVerified).to.be(false);
             expect(data.id).to.be.a('number');
             expect(data.id).to.be("0");
             expect(data.name).to.be.a('string');
@@ -360,6 +396,15 @@
             expect(data.dkimConfig).to.be("");
             expect(data.dkimVerified).to.be.a('boolean');
             expect(data.dkimVerified).to.be(false);
+            expect(data.dmarc).to.be.a(SendPostApi.ModelsDNSRecord);
+                  expect(data.dmarc.host).to.be.a('string');
+              expect(data.dmarc.host).to.be("");
+              expect(data.dmarc.textValue).to.be.a('string');
+              expect(data.dmarc.textValue).to.be("");
+              expect(data.dmarc.type).to.be.a('string');
+              expect(data.dmarc.type).to.be("");
+            expect(data.dmarcVerified).to.be.a('boolean');
+            expect(data.dmarcVerified).to.be(false);
             expect(data.id).to.be.a('number');
             expect(data.id).to.be("0");
             expect(data.name).to.be.a('string');
@@ -420,6 +465,15 @@
             expect(data.dkimConfig).to.be("");
             expect(data.dkimVerified).to.be.a('boolean');
             expect(data.dkimVerified).to.be(false);
+            expect(data.dmarc).to.be.a(SendPostApi.ModelsDNSRecord);
+                  expect(data.dmarc.host).to.be.a('string');
+              expect(data.dmarc.host).to.be("");
+              expect(data.dmarc.textValue).to.be.a('string');
+              expect(data.dmarc.textValue).to.be("");
+              expect(data.dmarc.type).to.be.a('string');
+              expect(data.dmarc.type).to.be("");
+            expect(data.dmarcVerified).to.be.a('boolean');
+            expect(data.dmarcVerified).to.be(false);
             expect(data.id).to.be.a('number');
             expect(data.id).to.be("0");
             expect(data.name).to.be.a('string');

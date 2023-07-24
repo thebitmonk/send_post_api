@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -63,6 +63,10 @@
         obj.dkimConfig = ApiClient.convertToType(data['dkimConfig'], 'String');
       if (data.hasOwnProperty('dkimVerified'))
         obj.dkimVerified = ApiClient.convertToType(data['dkimVerified'], 'Boolean');
+      if (data.hasOwnProperty('dmarc'))
+        obj.dmarc = ModelsDNSRecord.constructFromObject(data['dmarc']);
+      if (data.hasOwnProperty('dmarcVerified'))
+        obj.dmarcVerified = ApiClient.convertToType(data['dmarcVerified'], 'Boolean');
       if (data.hasOwnProperty('id'))
         obj.id = ApiClient.convertToType(data['id'], 'Number');
       if (data.hasOwnProperty('name'))
@@ -102,6 +106,16 @@
    * @member {Boolean} dkimVerified
    */
   exports.prototype.dkimVerified = undefined;
+
+  /**
+   * @member {module:model/ModelsDNSRecord} dmarc
+   */
+  exports.prototype.dmarc = undefined;
+
+  /**
+   * @member {Boolean} dmarcVerified
+   */
+  exports.prototype.dmarcVerified = undefined;
 
   /**
    * @member {Number} id

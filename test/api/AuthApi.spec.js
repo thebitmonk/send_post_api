@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -99,6 +99,8 @@
             expect(data.slackToken).to.be("");
             expect(data.stripeBasePriceId).to.be.a('string');
             expect(data.stripeBasePriceId).to.be("");
+            expect(data.stripeSubscriptionItemId).to.be.a('string');
+            expect(data.stripeSubscriptionItemId).to.be("");
             expect(data.stripeUsagePriceId).to.be.a('string');
             expect(data.stripeUsagePriceId).to.be("");
             expect(data.switchingSendpostDescription).to.be.a('string');
@@ -181,6 +183,8 @@
                 expect(data.slackToken).to.be("");
                 expect(data.stripeBasePriceId).to.be.a('string');
                 expect(data.stripeBasePriceId).to.be("");
+                expect(data.stripeSubscriptionItemId).to.be.a('string');
+                expect(data.stripeSubscriptionItemId).to.be("");
                 expect(data.stripeUsagePriceId).to.be.a('string');
                 expect(data.stripeUsagePriceId).to.be("");
                 expect(data.switchingSendpostDescription).to.be.a('string');
@@ -295,6 +299,8 @@
                 expect(data.slackToken).to.be("");
                 expect(data.stripeBasePriceId).to.be.a('string');
                 expect(data.stripeBasePriceId).to.be("");
+                expect(data.stripeSubscriptionItemId).to.be.a('string');
+                expect(data.stripeSubscriptionItemId).to.be("");
                 expect(data.stripeUsagePriceId).to.be.a('string');
                 expect(data.stripeUsagePriceId).to.be("");
                 expect(data.switchingSendpostDescription).to.be.a('string');
