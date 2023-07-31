@@ -237,6 +237,8 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountstatApi* | [**accountStatRouterGetAllAggregateIPStatsCount**](docs/AccountstatApi.md#accountStatRouterGetAllAggregateIPStatsCount) | **GET** /account/stat/aggregate/ip/count | 
 *SendPostApi.AccountstatApi* | [**accountStatRouterGetAllAggregateSubAccountStats**](docs/AccountstatApi.md#accountStatRouterGetAllAggregateSubAccountStats) | **GET** /account/stat/aggregate/subaccount | 
 *SendPostApi.AccountstatApi* | [**accountStatRouterGetAllAggregateSubAccountStatsCount**](docs/AccountstatApi.md#accountStatRouterGetAllAggregateSubAccountStatsCount) | **GET** /account/stat/aggregate/subaccount/count | 
+*SendPostApi.AccountstatApi* | [**accountStatRouterGetAllAggregateThirdPartyProvidersStats**](docs/AccountstatApi.md#accountStatRouterGetAllAggregateThirdPartyProvidersStats) | **GET** /account/stat/aggregate/tpsp | 
+*SendPostApi.AccountstatApi* | [**accountStatRouterGetAllAggregateThirdPartyProvidersStatsCount**](docs/AccountstatApi.md#accountStatRouterGetAllAggregateThirdPartyProvidersStatsCount) | **GET** /account/stat/aggregate/tpsp/count | 
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterCount**](docs/AccountsubaccountApi.md#subAccountRouterCount) | **GET** /account/subaccount/count | 
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterCreate**](docs/AccountsubaccountApi.md#subAccountRouterCreate) | **POST** /account/subaccount/ | 
 *SendPostApi.AccountsubaccountApi* | [**subAccountRouterDelete**](docs/AccountsubaccountApi.md#subAccountRouterDelete) | **DELETE** /account/subaccount/{subAccountId} | 
@@ -266,6 +268,10 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccounttpspApi* | [**tPSPRouterGetAll**](docs/AccounttpspApi.md#tPSPRouterGetAll) | **GET** /account/tpsp/ | 
 *SendPostApi.AccounttpspApi* | [**tPSPRouterInsert**](docs/AccounttpspApi.md#tPSPRouterInsert) | **POST** /account/tpsp/ | 
 *SendPostApi.AccounttpspApi* | [**tPSPRouterUpdate**](docs/AccounttpspApi.md#tPSPRouterUpdate) | **PUT** /account/tpsp/{tpspId} | 
+*SendPostApi.AccounttpspstatApi* | [**thirdPartyProviderStatRouterGetAllAggregateThirdPartyProvidersStats**](docs/AccounttpspstatApi.md#thirdPartyProviderStatRouterGetAllAggregateThirdPartyProvidersStats) | **GET** /account/tpsp/stat/{tpspid}/aggregate | 
+*SendPostApi.AccounttpspstatApi* | [**thirdPartyProviderStatRouterGetAllAggregatedProviderStatsForAThirdPartyProvider**](docs/AccounttpspstatApi.md#thirdPartyProviderStatRouterGetAllAggregatedProviderStatsForAThirdPartyProvider) | **GET** /account/tpsp/stat/{tpspid}/aggregate/provider | 
+*SendPostApi.AccounttpspstatApi* | [**thirdPartyProviderStatRouterGetAllAggregatedSubAccountStatsForAnThirdPartyProvider**](docs/AccounttpspstatApi.md#thirdPartyProviderStatRouterGetAllAggregatedSubAccountStatsForAnThirdPartyProvider) | **GET** /account/tpsp/stat/{tpspid}/aggregate/subaccount | 
+*SendPostApi.AccounttpspstatApi* | [**thirdPartyProviderStatRouterGetAllThirdPartyProvidersStats**](docs/AccounttpspstatApi.md#thirdPartyProviderStatRouterGetAllThirdPartyProvidersStats) | **GET** /account/tpsp/stat/{tpspid} | 
 *SendPostApi.AccountvalidationApi* | [**validateRouterValidateEmailBulk**](docs/AccountvalidationApi.md#validateRouterValidateEmailBulk) | **POST** /account/validation/bulk | 
 *SendPostApi.AccountvalidationApi* | [**validationRouterCount**](docs/AccountvalidationApi.md#validationRouterCount) | **GET** /account/validation/count | 
 *SendPostApi.AccountvalidationApi* | [**validationRouterDeleteValidation**](docs/AccountvalidationApi.md#validationRouterDeleteValidation) | **DELETE** /account/validation/ | 
@@ -329,13 +335,14 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [SendPostApi.Model2943100x140006dc630False](docs/Model2943100x140006dc630False.md)
- - [SendPostApi.Model2945910x140006dc720False](docs/Model2945910x140006dc720False.md)
- - [SendPostApi.Model5590270x14000a29650False](docs/Model5590270x14000a29650False.md)
+ - [SendPostApi.Model2970570x140006e9890False](docs/Model2970570x140006e9890False.md)
+ - [SendPostApi.Model2973380x140006e9980False](docs/Model2973380x140006e9980False.md)
+ - [SendPostApi.Model5633000x14000a49410False](docs/Model5633000x14000a49410False.md)
  - [SendPostApi.ModelsAGDomainStat](docs/ModelsAGDomainStat.md)
  - [SendPostApi.ModelsAGIPStat](docs/ModelsAGIPStat.md)
  - [SendPostApi.ModelsAGStat](docs/ModelsAGStat.md)
  - [SendPostApi.ModelsAGSubAccountStat](docs/ModelsAGSubAccountStat.md)
+ - [SendPostApi.ModelsAGTPSPStat](docs/ModelsAGTPSPStat.md)
  - [SendPostApi.ModelsAIPStat](docs/ModelsAIPStat.md)
  - [SendPostApi.ModelsAPStat](docs/ModelsAPStat.md)
  - [SendPostApi.ModelsASStat](docs/ModelsASStat.md)

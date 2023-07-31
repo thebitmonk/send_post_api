@@ -57,7 +57,7 @@
      */
 
     /**
-     * Count Total AccountWebhooks <br>
+     * Count Total AccountWebhooks 
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountwebhookApi~accountWebhookRouterCountCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsCountStat}
@@ -104,7 +104,7 @@
      */
 
     /**
-     * Create AccountWebhook <br>
+     * Create AccountWebhook 
      * @param {String} xAccountApiKey Account API Key
      * @param {module:model/ModelsEWebhook} body The AccountWebhook content
      * @param {module:api/AccountwebhookApi~accountWebhookRouterCreateCallback} callback The callback function, accepting three arguments: error, data, response
@@ -157,7 +157,7 @@
      */
 
     /**
-     * Delete AccountWebhook <br>
+     * Delete AccountWebhook 
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} webhookId The AccountWebhookId you want to delete
      * @param {module:api/AccountwebhookApi~accountWebhookRouterDeleteCallback} callback The callback function, accepting three arguments: error, data, response
@@ -211,7 +211,7 @@
      */
 
     /**
-     * Find AccountWebhook by AccountWebhookId <br>
+     * Find AccountWebhook by AccountWebhookId 
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} webhookId the AccountWebhookId you want to get
      * @param {module:api/AccountwebhookApi~accountWebhookRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -265,7 +265,7 @@
      */
 
     /**
-     * Get All AccountWebhooks <br>
+     * Get All AccountWebhooks 
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
@@ -320,7 +320,7 @@
      */
 
     /**
-     * Update AccountWebhook <br>
+     * Update AccountWebhook 
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} webhookId The AccountWebhookId you want to update
      * @param {module:model/ModelsEWebhook} body The body

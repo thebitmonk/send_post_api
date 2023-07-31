@@ -57,7 +57,7 @@
      */
 
     /**
-     * fetch Bee editor token <br>
+     * fetch Bee editor token 
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/EditorApi~editorApiRouterGetTokenCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsEditorTokenResponse}

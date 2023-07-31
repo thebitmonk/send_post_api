@@ -57,7 +57,7 @@
      */
 
     /**
-     * Count Total TPSPs <br>
+     * Count Total TPSPs 
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.search search term
@@ -108,7 +108,7 @@
      */
 
     /**
-     * Delete ThirdPartySendingProvider <br>
+     * Delete ThirdPartySendingProvider 
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} tpspId The TPSPID you want to delete
      * @param {module:api/AccounttpspApi~tPSPRouterDeleteCallback} callback The callback function, accepting three arguments: error, data, response
@@ -162,7 +162,7 @@
      */
 
     /**
-     * Find ThirdPartySendingProvider by TPSPID <br>
+     * Find ThirdPartySendingProvider by TPSPID 
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} tpspId the TPSPID you want to get
      * @param {module:api/AccounttpspApi~tPSPRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -216,7 +216,7 @@
      */
 
     /**
-     * Get All TPSPs <br>
+     * Get All TPSPs 
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
@@ -271,7 +271,7 @@
      */
 
     /**
-     * Insert ThirdPartySendingProvider <br>
+     * Insert ThirdPartySendingProvider 
      * @param {String} xAccountApiKey Account API Key
      * @param {module:model/ModelsEThirdPartySendingProvider} body The body
      * @param {module:api/AccounttpspApi~tPSPRouterInsertCallback} callback The callback function, accepting three arguments: error, data, response
@@ -324,7 +324,7 @@
      */
 
     /**
-     * Update ThirdPartySendingProvider <br>
+     * Update ThirdPartySendingProvider 
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} tpspId The TPSPID you want to update
      * @param {module:model/ModelsEUpdateTPSP} body The body

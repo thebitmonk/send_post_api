@@ -15,6 +15,8 @@ Method | HTTP request | Description
 [**accountStatRouterGetAllAggregateIPStatsCount**](AccountstatApi.md#accountStatRouterGetAllAggregateIPStatsCount) | **GET** /account/stat/aggregate/ip/count | 
 [**accountStatRouterGetAllAggregateSubAccountStats**](AccountstatApi.md#accountStatRouterGetAllAggregateSubAccountStats) | **GET** /account/stat/aggregate/subaccount | 
 [**accountStatRouterGetAllAggregateSubAccountStatsCount**](AccountstatApi.md#accountStatRouterGetAllAggregateSubAccountStatsCount) | **GET** /account/stat/aggregate/subaccount/count | 
+[**accountStatRouterGetAllAggregateThirdPartyProvidersStats**](AccountstatApi.md#accountStatRouterGetAllAggregateThirdPartyProvidersStats) | **GET** /account/stat/aggregate/tpsp | 
+[**accountStatRouterGetAllAggregateThirdPartyProvidersStatsCount**](AccountstatApi.md#accountStatRouterGetAllAggregateThirdPartyProvidersStatsCount) | **GET** /account/stat/aggregate/tpsp/count | 
 
 
 <a name="accountStatRouterGetAccountCycleUsage"></a>
@@ -23,7 +25,7 @@ Method | HTTP request | Description
 
 
 
-Responds back with Account Processed Mails Stat <br>
+Responds back with Account Processed Mails Stat 
 
 ### Example
 ```javascript
@@ -69,7 +71,7 @@ No authorization required
 
 
 
-Get All Account Stats <br>
+Get All Account Stats 
 
 ### Example
 ```javascript
@@ -121,7 +123,7 @@ No authorization required
 
 
 
-Get All Account Stats by Group <br>
+Get All Account Stats by Group 
 
 ### Example
 ```javascript
@@ -176,7 +178,7 @@ No authorization required
 
 
 
-Get All Aggregate Stats <br>
+Get All Aggregate Stats 
 
 ### Example
 ```javascript
@@ -228,7 +230,7 @@ No authorization required
 
 
 
-Get All Aggregate Stats by Group <br>
+Get All Aggregate Stats by Group 
 
 ### Example
 ```javascript
@@ -283,7 +285,7 @@ No authorization required
 
 
 
-Get All Aggregate Domain Stats <br>
+Get All Aggregate Domain Stats 
 
 ### Example
 ```javascript
@@ -351,7 +353,7 @@ No authorization required
 
 
 
-Get All Aggregate Domain Stats Count <br>
+Get All Aggregate Domain Stats Count 
 
 ### Example
 ```javascript
@@ -411,7 +413,7 @@ No authorization required
 
 
 
-Get All Aggregate IP Stats <br>
+Get All Aggregate IP Stats 
 
 ### Example
 ```javascript
@@ -483,7 +485,7 @@ No authorization required
 
 
 
-Get All Aggregate IP Stats Count <br>
+Get All Aggregate IP Stats Count 
 
 ### Example
 ```javascript
@@ -547,7 +549,7 @@ No authorization required
 
 
 
-Get All Aggregate SubAccount Stats <br>
+Get All Aggregate SubAccount Stats 
 
 ### Example
 ```javascript
@@ -615,7 +617,7 @@ No authorization required
 
 
 
-Get All Aggregate SubAccount Stats Count <br>
+Get All Aggregate SubAccount Stats Count 
 
 ### Example
 ```javascript
@@ -643,6 +645,134 @@ var callback = function(error, data, response) {
   }
 };
 apiInstance.accountStatRouterGetAllAggregateSubAccountStatsCount(xAccountApiKey, from, to, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xAccountApiKey** | **String**| Account API Key | 
+ **from** | **String**| from date | 
+ **to** | **String**| to date | 
+ **filterBy** | **String**| filterBy | [optional] 
+ **filterValue** | **Number**| filterValue | [optional] 
+ **search** | **String**| search term | [optional] 
+
+### Return type
+
+[**ModelsCountStat**](ModelsCountStat.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="accountStatRouterGetAllAggregateThirdPartyProvidersStats"></a>
+# **accountStatRouterGetAllAggregateThirdPartyProvidersStats**
+> [ModelsAGTPSPStat] accountStatRouterGetAllAggregateThirdPartyProvidersStats(xAccountApiKey, from, to, opts)
+
+
+
+Get All Aggregate Third Party Providers Stats 
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccountstatApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var from = "from_example"; // String | from date
+
+var to = "to_example"; // String | to date
+
+var opts = { 
+  'filterBy': "filterBy_example", // String | filterBy
+  'filterValue': 789, // Number | filterValue
+  'orderBy': "orderBy_example", // String | orderBy
+  'sortOrder': "sortOrder_example", // String | sortOrder
+  'search': "search_example", // String | search term
+  'offset': 789, // Number | offset
+  'limit': 789 // Number | limit
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.accountStatRouterGetAllAggregateThirdPartyProvidersStats(xAccountApiKey, from, to, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xAccountApiKey** | **String**| Account API Key | 
+ **from** | **String**| from date | 
+ **to** | **String**| to date | 
+ **filterBy** | **String**| filterBy | [optional] 
+ **filterValue** | **Number**| filterValue | [optional] 
+ **orderBy** | **String**| orderBy | [optional] 
+ **sortOrder** | **String**| sortOrder | [optional] 
+ **search** | **String**| search term | [optional] 
+ **offset** | **Number**| offset | [optional] 
+ **limit** | **Number**| limit | [optional] 
+
+### Return type
+
+[**[ModelsAGTPSPStat]**](ModelsAGTPSPStat.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="accountStatRouterGetAllAggregateThirdPartyProvidersStatsCount"></a>
+# **accountStatRouterGetAllAggregateThirdPartyProvidersStatsCount**
+> ModelsCountStat accountStatRouterGetAllAggregateThirdPartyProvidersStatsCount(xAccountApiKey, from, to, opts)
+
+
+
+Get All Aggregate Third Party Providers Stats Count 
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccountstatApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var from = "from_example"; // String | from date
+
+var to = "to_example"; // String | to date
+
+var opts = { 
+  'filterBy': "filterBy_example", // String | filterBy
+  'filterValue': 789, // Number | filterValue
+  'search': "search_example" // String | search term
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.accountStatRouterGetAllAggregateThirdPartyProvidersStatsCount(xAccountApiKey, from, to, opts, callback);
 ```
 
 ### Parameters

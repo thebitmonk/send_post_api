@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 
-Get All Aggregate Sub-Account Stats <br>
+Get All Aggregate Sub-Account Stats 
 
 ### Example
 ```javascript
@@ -73,7 +73,7 @@ No authorization required
 
 
 
-Get All Aggregated Domain Stats for a Sub-Account <br>
+Get All Aggregated Domain Stats for a Sub-Account 
 
 ### Example
 ```javascript
@@ -128,7 +128,7 @@ No authorization required
 
 
 
-Get All Aggregated Group Stats for a Sub-Account <br>
+Get All Aggregated Group Stats for a Sub-Account 
 
 ### Example
 ```javascript
@@ -183,7 +183,7 @@ No authorization required
 
 
 
-Get All Aggregated IP Stats for a Sub-Account <br>
+Get All Aggregated IP Stats for a Sub-Account 
 
 ### Example
 ```javascript
@@ -238,7 +238,7 @@ No authorization required
 
 
 
-Get All Aggregated Provider Stats for a Sub-Account <br>
+Get All Aggregated Provider Stats for a Sub-Account 
 
 ### Example
 ```javascript
@@ -293,7 +293,7 @@ No authorization required
 
 
 
-Get All Sub-Account Stats <br>
+Get All Sub-Account Stats 
 
 ### Example
 ```javascript

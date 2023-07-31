@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsAGDomainStat', 'model/ModelsAGIPStat', 'model/ModelsAGSubAccountStat', 'model/ModelsAccountCycleUsage', 'model/ModelsCountStat', 'model/ModelsRStat', 'model/ModelsStat'], factory);
+    define(['ApiClient', 'model/ModelsAGDomainStat', 'model/ModelsAGIPStat', 'model/ModelsAGSubAccountStat', 'model/ModelsAGTPSPStat', 'model/ModelsAccountCycleUsage', 'model/ModelsCountStat', 'model/ModelsRStat', 'model/ModelsStat'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsAGDomainStat'), require('../model/ModelsAGIPStat'), require('../model/ModelsAGSubAccountStat'), require('../model/ModelsAccountCycleUsage'), require('../model/ModelsCountStat'), require('../model/ModelsRStat'), require('../model/ModelsStat'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsAGDomainStat'), require('../model/ModelsAGIPStat'), require('../model/ModelsAGSubAccountStat'), require('../model/ModelsAGTPSPStat'), require('../model/ModelsAccountCycleUsage'), require('../model/ModelsCountStat'), require('../model/ModelsRStat'), require('../model/ModelsStat'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.AccountstatApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsAGDomainStat, root.SendPostApi.ModelsAGIPStat, root.SendPostApi.ModelsAGSubAccountStat, root.SendPostApi.ModelsAccountCycleUsage, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsRStat, root.SendPostApi.ModelsStat);
+    root.SendPostApi.AccountstatApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsAGDomainStat, root.SendPostApi.ModelsAGIPStat, root.SendPostApi.ModelsAGSubAccountStat, root.SendPostApi.ModelsAGTPSPStat, root.SendPostApi.ModelsAccountCycleUsage, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsRStat, root.SendPostApi.ModelsStat);
   }
-}(this, function(ApiClient, ModelsAGDomainStat, ModelsAGIPStat, ModelsAGSubAccountStat, ModelsAccountCycleUsage, ModelsCountStat, ModelsRStat, ModelsStat) {
+}(this, function(ApiClient, ModelsAGDomainStat, ModelsAGIPStat, ModelsAGSubAccountStat, ModelsAGTPSPStat, ModelsAccountCycleUsage, ModelsCountStat, ModelsRStat, ModelsStat) {
   'use strict';
 
   /**
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Responds back with Account Processed Mails Stat <br>
+     * Responds back with Account Processed Mails Stat 
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountstatApi~accountStatRouterGetAccountCycleUsageCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsAccountCycleUsage}
@@ -104,7 +104,7 @@
      */
 
     /**
-     * Get All Account Stats <br>
+     * Get All Account Stats 
      * @param {String} xAccountApiKey Sub-Account API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
@@ -157,7 +157,7 @@
      */
 
     /**
-     * Get All Account Stats by Group <br>
+     * Get All Account Stats by Group 
      * @param {String} xAccountApiKey Sub-Account API Key
      * @param {String} group the group whose stats you want
      * @param {Object} opts Optional parameters
@@ -217,7 +217,7 @@
      */
 
     /**
-     * Get All Aggregate Stats <br>
+     * Get All Aggregate Stats 
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
@@ -270,7 +270,7 @@
      */
 
     /**
-     * Get All Aggregate Stats by Group <br>
+     * Get All Aggregate Stats by Group 
      * @param {String} xAccountApiKey Sub-Account API Key
      * @param {String} group the group whose stats you want
      * @param {Object} opts Optional parameters
@@ -330,7 +330,7 @@
      */
 
     /**
-     * Get All Aggregate Domain Stats <br>
+     * Get All Aggregate Domain Stats 
      * @param {String} xAccountApiKey Account API Key
      * @param {String} from from date
      * @param {String} to to date
@@ -407,7 +407,7 @@
      */
 
     /**
-     * Get All Aggregate Domain Stats Count <br>
+     * Get All Aggregate Domain Stats Count 
      * @param {String} xAccountApiKey Account API Key
      * @param {String} from from date
      * @param {String} to to date
@@ -476,7 +476,7 @@
      */
 
     /**
-     * Get All Aggregate IP Stats <br>
+     * Get All Aggregate IP Stats 
      * @param {String} xAccountApiKey Account API Key
      * @param {String} from from date
      * @param {String} to to date
@@ -557,7 +557,7 @@
      */
 
     /**
-     * Get All Aggregate IP Stats Count <br>
+     * Get All Aggregate IP Stats Count 
      * @param {String} xAccountApiKey Account API Key
      * @param {String} from from date
      * @param {String} to to date
@@ -630,7 +630,7 @@
      */
 
     /**
-     * Get All Aggregate SubAccount Stats <br>
+     * Get All Aggregate SubAccount Stats 
      * @param {String} xAccountApiKey Account API Key
      * @param {String} from from date
      * @param {String} to to date
@@ -707,7 +707,7 @@
      */
 
     /**
-     * Get All Aggregate SubAccount Stats Count <br>
+     * Get All Aggregate SubAccount Stats Count 
      * @param {String} xAccountApiKey Account API Key
      * @param {String} from from date
      * @param {String} to to date
@@ -762,6 +762,152 @@
 
       return this.apiClient.callApi(
         '/account/stat/aggregate/subaccount/count', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the accountStatRouterGetAllAggregateThirdPartyProvidersStats operation.
+     * @callback module:api/AccountstatApi~accountStatRouterGetAllAggregateThirdPartyProvidersStatsCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/ModelsAGTPSPStat>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get All Aggregate Third Party Providers Stats 
+     * @param {String} xAccountApiKey Account API Key
+     * @param {String} from from date
+     * @param {String} to to date
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.filterBy filterBy
+     * @param {Number} opts.filterValue filterValue
+     * @param {String} opts.orderBy orderBy
+     * @param {String} opts.sortOrder sortOrder
+     * @param {String} opts.search search term
+     * @param {Number} opts.offset offset
+     * @param {Number} opts.limit limit
+     * @param {module:api/AccountstatApi~accountStatRouterGetAllAggregateThirdPartyProvidersStatsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/ModelsAGTPSPStat>}
+     */
+    this.accountStatRouterGetAllAggregateThirdPartyProvidersStats = function(xAccountApiKey, from, to, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling accountStatRouterGetAllAggregateThirdPartyProvidersStats");
+      }
+
+      // verify the required parameter 'from' is set
+      if (from === undefined || from === null) {
+        throw new Error("Missing the required parameter 'from' when calling accountStatRouterGetAllAggregateThirdPartyProvidersStats");
+      }
+
+      // verify the required parameter 'to' is set
+      if (to === undefined || to === null) {
+        throw new Error("Missing the required parameter 'to' when calling accountStatRouterGetAllAggregateThirdPartyProvidersStats");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'from': from,
+        'to': to,
+        'filterBy': opts['filterBy'],
+        'filterValue': opts['filterValue'],
+        'orderBy': opts['orderBy'],
+        'sortOrder': opts['sortOrder'],
+        'search': opts['search'],
+        'offset': opts['offset'],
+        'limit': opts['limit'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-Account-ApiKey': xAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = [ModelsAGTPSPStat];
+
+      return this.apiClient.callApi(
+        '/account/stat/aggregate/tpsp', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the accountStatRouterGetAllAggregateThirdPartyProvidersStatsCount operation.
+     * @callback module:api/AccountstatApi~accountStatRouterGetAllAggregateThirdPartyProvidersStatsCountCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ModelsCountStat} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get All Aggregate Third Party Providers Stats Count 
+     * @param {String} xAccountApiKey Account API Key
+     * @param {String} from from date
+     * @param {String} to to date
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.filterBy filterBy
+     * @param {Number} opts.filterValue filterValue
+     * @param {String} opts.search search term
+     * @param {module:api/AccountstatApi~accountStatRouterGetAllAggregateThirdPartyProvidersStatsCountCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ModelsCountStat}
+     */
+    this.accountStatRouterGetAllAggregateThirdPartyProvidersStatsCount = function(xAccountApiKey, from, to, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling accountStatRouterGetAllAggregateThirdPartyProvidersStatsCount");
+      }
+
+      // verify the required parameter 'from' is set
+      if (from === undefined || from === null) {
+        throw new Error("Missing the required parameter 'from' when calling accountStatRouterGetAllAggregateThirdPartyProvidersStatsCount");
+      }
+
+      // verify the required parameter 'to' is set
+      if (to === undefined || to === null) {
+        throw new Error("Missing the required parameter 'to' when calling accountStatRouterGetAllAggregateThirdPartyProvidersStatsCount");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'from': from,
+        'to': to,
+        'filterBy': opts['filterBy'],
+        'filterValue': opts['filterValue'],
+        'search': opts['search'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-Account-ApiKey': xAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ModelsCountStat;
+
+      return this.apiClient.callApi(
+        '/account/stat/aggregate/tpsp/count', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

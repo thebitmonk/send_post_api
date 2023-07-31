@@ -57,7 +57,7 @@
      */
 
     /**
-     * Receive webhooks raised from SMTP servers <br>
+     * Receive webhooks raised from SMTP servers 
      * @param {module:model/ModelsWMessage} body The Webhook content
      * @param {module:api/SmtpApi~sMTPRouterReceiveWebhooksRaisedFromSMTPServersCallback} callback The callback function, accepting three arguments: error, data, response
      */

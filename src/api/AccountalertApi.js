@@ -57,7 +57,7 @@
      */
 
     /**
-     * Count Total Alerts for account <br>
+     * Count Total Alerts for account 
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.search search term
@@ -108,7 +108,7 @@
      */
 
     /**
-     * create an alert <br>
+     * create an alert 
      * @param {String} xAccountApiKey Account API Key
      * @param {module:model/ModelsAlertRequest} body The List to br sent
      * @param {module:api/AccountalertApi~alertRouterCreateAlertCallback} callback The callback function, accepting three arguments: error, data, response
@@ -161,7 +161,7 @@
      */
 
     /**
-     * Delete Alert <br>
+     * Delete Alert 
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} alertId The AlertId you want to delete
      * @param {module:api/AccountalertApi~alertRouterDeleteCallback} callback The callback function, accepting three arguments: error, data, response
@@ -215,7 +215,7 @@
      */
 
     /**
-     * Get All Alerts <br>
+     * Get All Alerts 
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
@@ -270,7 +270,7 @@
      */
 
     /**
-     * Update an Alert <br>
+     * Update an Alert 
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} alertId The alert you want to update
      * @param {module:model/ModelsEAlert} body The alert  Settings

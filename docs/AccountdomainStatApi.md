@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 
 
-Get All Aggregate Stats by Group <br>
+Get All Aggregate Stats by Group 
 
 ### Example
 ```javascript
@@ -78,7 +78,7 @@ No authorization required
 
 
 
-Get All Aggregated Provider Stats for a Domain <br>
+Get All Aggregated Provider Stats for a Domain 
 
 ### Example
 ```javascript
@@ -133,7 +133,7 @@ No authorization required
 
 
 
-Get All Aggregated Provider Stats for a Specific Sub-Account of a Domain <br>
+Get All Aggregated Provider Stats for a Specific Sub-Account of a Domain 
 
 ### Example
 ```javascript
@@ -191,7 +191,7 @@ No authorization required
 
 
 
-Get All Aggregated Sub-Account Stats for an Domain <br>
+Get All Aggregated Sub-Account Stats for an Domain 
 
 ### Example
 ```javascript
@@ -249,7 +249,7 @@ No authorization required
 
 
 
-Get All Domain Stats <br>
+Get All Domain Stats 
 
 ### Example
 ```javascript
@@ -307,7 +307,7 @@ No authorization required
 
 
 
-Get All Current Domain Blacklist stats <br>
+Get All Current Domain Blacklist stats 
 
 ### Example
 ```javascript
@@ -356,7 +356,7 @@ No authorization required
 
 
 
-Get All Current Domain Postmaster stats <br>
+Get All Current Domain Postmaster stats 
 
 ### Example
 ```javascript
@@ -411,7 +411,7 @@ No authorization required
 
 
 
-Get All Aggregate Stats <br>
+Get All Aggregate Stats 
 
 ### Example
 ```javascript

@@ -57,7 +57,7 @@
      */
 
     /**
-     * Responds back with a custom token for frontend to start login using firebase sdk <br>
+     * Responds back with a custom token for frontend to start login using firebase sdk 
      * @param {String} xAccountApiKey Account API Key
      * @param {String} email email
      * @param {Object} opts Optional parameters

@@ -57,7 +57,7 @@
      */
 
     /**
-     * Track Email Open <br>
+     * Track Email Open 
      * @param {Number} ipId The id of ip from which this email message was sent
      * @param {Number} accountId The id of account from which email is being sent
      * @param {Number} subAccountId The id of sub-account from which email is being sent
@@ -131,7 +131,7 @@
      */
 
     /**
-     * Track Link Click <br>
+     * Track Link Click 
      * @param {Number} ipId The id of ip from which this email message was sent
      * @param {Number} accountId The id of account from which email is being sent
      * @param {Number} subAccountId The id of sub-account from which email is being sent
@@ -212,7 +212,7 @@
      */
 
     /**
-     * track link click <br>
+     * track link click 
      * @param {Number} ipId The id of ip from which this email message was sent
      * @param {Number} accountId The id of account from which email is being sent
      * @param {Number} subAccountId The id of sub-account from which email is being sent
@@ -286,7 +286,7 @@
      */
 
     /**
-     * Track Welcome Link Click <br>
+     * Track Welcome Link Click 
      * @param {String} redirecturl The encoded redirect URL
      * @param {module:api/TrackApi~trackRouterTrackWelcomeLinkClickCallback} callback The callback function, accepting three arguments: error, data, response
      */

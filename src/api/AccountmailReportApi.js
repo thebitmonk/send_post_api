@@ -57,7 +57,7 @@
      */
 
     /**
-     * get reputation of domain <br>
+     * get reputation of domain 
      * @param {String} xAccountApiKey Account API Key
      * @param {module:model/ModelsCreateMailReport} body The IP Email Provider Settings
      * @param {module:api/AccountmailReportApi~mailReportRouterMailReportCallback} callback The callback function, accepting three arguments: error, data, response
@@ -110,7 +110,7 @@
      */
 
     /**
-     * get Providers available <br>
+     * get Providers available 
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} reportId the report id you want to get
      * @param {module:api/AccountmailReportApi~mailReportRouterMailReportGetSingleReportCallback} callback The callback function, accepting three arguments: error, data, response
@@ -164,7 +164,7 @@
      */
 
     /**
-     * get Providers available <br>
+     * get Providers available 
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountmailReportApi~mailReportRouterMailReportProvidersCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsProviderResult}

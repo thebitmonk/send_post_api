@@ -57,7 +57,7 @@
      */
 
     /**
-     * Add Email Addresses To Suppression List <br>
+     * Add Email Addresses To Suppression List 
      * @param {String} xSystemApiKey System API Key
      * @param {Number} subAccountId The SubAccountId you want to delete
      * @param {module:model/ModelsRSuppression} body Suppression content

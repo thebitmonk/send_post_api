@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 
-Find all messages sent to a specific recipient <br>
+Find all messages sent to a specific recipient 
 
 ### Example
 ```javascript
@@ -63,7 +63,7 @@ No authorization required
 
 
 
-Find all message sent to a recipient from a specific node <br>
+Find all message sent to a recipient from a specific node 
 
 ### Example
 ```javascript

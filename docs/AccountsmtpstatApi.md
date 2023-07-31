@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 
-Get All Aggregate IP Provider SMTP Stats <br>
+Get All Aggregate IP Provider SMTP Stats 
 
 ### Example
 ```javascript
@@ -76,7 +76,7 @@ No authorization required
 
 
 
-Get All Aggregate IP SMTP Stats <br>
+Get All Aggregate IP SMTP Stats 
 
 ### Example
 ```javascript
@@ -133,7 +133,7 @@ No authorization required
 
 
 
-Get All Aggregate IP SMTP Stats For SubAccount <br>
+Get All Aggregate IP SMTP Stats For SubAccount 
 
 ### Example
 ```javascript
@@ -193,7 +193,7 @@ No authorization required
 
 
 
-Get All Aggregate SubAccount Provider SMTP Stats <br>
+Get All Aggregate SubAccount Provider SMTP Stats 
 
 ### Example
 ```javascript
@@ -251,7 +251,7 @@ No authorization required
 
 
 
-Get All Aggregate SubAccount SMTP Stats <br>
+Get All Aggregate SubAccount SMTP Stats 
 
 ### Example
 ```javascript
@@ -308,7 +308,7 @@ No authorization required
 
 
 
-Get All Aggregate SubAccount SMTP Stats For IP <br>
+Get All Aggregate SubAccount SMTP Stats For IP 
 
 ### Example
 ```javascript

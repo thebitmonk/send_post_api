@@ -57,7 +57,7 @@
      */
 
     /**
-     * Creates unlock ticket on hubspot <br>
+     * Creates unlock ticket on hubspot 
      * @param {String} xAccountApiKey Account API Key
      * @param {module:model/ModelsAccountUnlockTicket} body Content values for creating ticket
      * @param {module:api/AccountonboardingApi~onboardingRouterCreateUnlockTicketCallback} callback The callback function, accepting three arguments: error, data, response
@@ -109,7 +109,7 @@
      */
 
     /**
-     * Gets Onboarding Checklist data for account if not present creates a default entry <br>
+     * Gets Onboarding Checklist data for account if not present creates a default entry 
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountonboardingApi~onboardingRouterGetOnboardingChecklistCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsOnboardingChecklist}
@@ -156,7 +156,7 @@
      */
 
     /**
-     * Sends welcome email for a newly registered account <br>
+     * Sends welcome email for a newly registered account 
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountonboardingApi~onboardingRouterSendOnboardingWelcomeEmailCallback} callback The callback function, accepting three arguments: error, data, response
      */

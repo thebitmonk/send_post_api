@@ -57,7 +57,7 @@
      */
 
     /**
-     * Count Total AccountIPPools <br>
+     * Count Total AccountIPPools 
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountippoolApi~accountIPPoolRouterCountCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsCountStat}
@@ -104,7 +104,7 @@
      */
 
     /**
-     * Create AccountIPPool <br>
+     * Create AccountIPPool 
      * @param {String} xAccountApiKey Account API Key
      * @param {module:model/ModelsEIPPool} body The AccountIPPool content
      * @param {module:api/AccountippoolApi~accountIPPoolRouterCreateCallback} callback The callback function, accepting three arguments: error, data, response
@@ -157,7 +157,7 @@
      */
 
     /**
-     * Delete AccountIPPool <br>
+     * Delete AccountIPPool 
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ippoolid The AccountIPPoolId you want to delete
      * @param {module:api/AccountippoolApi~accountIPPoolRouterDeleteCallback} callback The callback function, accepting three arguments: error, data, response
@@ -211,7 +211,7 @@
      */
 
     /**
-     * Find AccountIPPool by AccountIPPoolId <br>
+     * Find AccountIPPool by AccountIPPoolId 
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ippoolid the AccountIPPoolId you want to get
      * @param {module:api/AccountippoolApi~accountIPPoolRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -265,7 +265,7 @@
      */
 
     /**
-     * Get All AccountIPPools <br>
+     * Get All AccountIPPools 
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
@@ -320,7 +320,7 @@
      */
 
     /**
-     * Update AccountIPPool <br>
+     * Update AccountIPPool 
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ippoolid The AccountIPPoolId you want to update
      * @param {module:model/ModelsEIPPool} body The body

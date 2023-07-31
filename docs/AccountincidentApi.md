@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 
 
-Add comment to Incident <br>
+Add comment to Incident 
 
 ### Example
 ```javascript
@@ -71,7 +71,7 @@ No authorization required
 
 
 
-Count Total Incidents <br>
+Count Total Incidents 
 
 ### Example
 ```javascript
@@ -125,7 +125,7 @@ No authorization required
 
 
 
-Create Incident <br>
+Create Incident 
 
 ### Example
 ```javascript
@@ -174,7 +174,7 @@ No authorization required
 
 
 
-Get All Incidents <br>
+Get All Incidents 
 
 ### Example
 ```javascript
@@ -232,7 +232,7 @@ No authorization required
 
 
 
-Get All Comments Associated with Incident <br>
+Get All Comments Associated with Incident 
 
 ### Example
 ```javascript
@@ -281,7 +281,7 @@ No authorization required
 
 
 
-Find Incident by incidentId <br>
+Find Incident by incidentId 
 
 ### Example
 ```javascript
@@ -330,7 +330,7 @@ No authorization required
 
 
 
-Update Incident <br>
+Update Incident 
 
 ### Example
 ```javascript

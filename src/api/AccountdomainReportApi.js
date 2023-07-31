@@ -57,7 +57,7 @@
      */
 
     /**
-     * get reputation of domain <br>
+     * get reputation of domain 
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.ip ip

@@ -57,7 +57,7 @@
      */
 
     /**
-     * Count Total Labels <br>
+     * Count Total Labels 
      * @param {String} xAccountApiKey Account API Key
      * @param {String} type get all labels type
      * @param {module:api/AccountlabelApi~labelRouterCountCallback} callback The callback function, accepting three arguments: error, data, response
@@ -111,7 +111,7 @@
      */
 
     /**
-     * Create Label <br>
+     * Create Label 
      * @param {String} xAccountApiKey Account API Key
      * @param {module:model/ModelsLabel} body The Label content
      * @param {module:api/AccountlabelApi~labelRouterCreateCallback} callback The callback function, accepting three arguments: error, data, response
@@ -164,7 +164,7 @@
      */
 
     /**
-     * Delete Label <br>
+     * Delete Label 
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} labelId The LabelId you want to delete
      * @param {module:api/AccountlabelApi~labelRouterDeleteCallback} callback The callback function, accepting three arguments: error, data, response
@@ -218,7 +218,7 @@
      */
 
     /**
-     * Find Label by LabelId <br>
+     * Find Label by LabelId 
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} labelId the LabelId you want to get
      * @param {module:api/AccountlabelApi~labelRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -272,7 +272,7 @@
      */
 
     /**
-     * Get All Labels <br>
+     * Get All Labels 
      * @param {String} xAccountApiKey Account API Key
      * @param {String} type get all labels type
      * @param {Object} opts Optional parameters
@@ -334,7 +334,7 @@
      */
 
     /**
-     * Update Label <br>
+     * Update Label 
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} labelId The LabelId you want to update
      * @param {module:model/ModelsLabel} body The body

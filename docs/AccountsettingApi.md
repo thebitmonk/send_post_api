@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 
-check if account has dedicated ip's <br>
+check if account has dedicated ip's 
 
 ### Example
 ```javascript
@@ -61,7 +61,7 @@ No authorization required
 
 
 
-get latest account details <br>
+get latest account details 
 
 ### Example
 ```javascript
@@ -107,7 +107,7 @@ No authorization required
 
 
 
-update account settings <br>
+update account settings 
 
 ### Example
 ```javascript

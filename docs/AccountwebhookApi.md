@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 
-Count Total AccountWebhooks <br>
+Count Total AccountWebhooks 
 
 ### Example
 ```javascript
@@ -64,7 +64,7 @@ No authorization required
 
 
 
-Create AccountWebhook <br>
+Create AccountWebhook 
 
 ### Example
 ```javascript
@@ -113,7 +113,7 @@ No authorization required
 
 
 
-Delete AccountWebhook <br>
+Delete AccountWebhook 
 
 ### Example
 ```javascript
@@ -162,7 +162,7 @@ No authorization required
 
 
 
-Find AccountWebhook by AccountWebhookId <br>
+Find AccountWebhook by AccountWebhookId 
 
 ### Example
 ```javascript
@@ -211,7 +211,7 @@ No authorization required
 
 
 
-Get All AccountWebhooks <br>
+Get All AccountWebhooks 
 
 ### Example
 ```javascript
@@ -265,7 +265,7 @@ No authorization required
 
 
 
-Update AccountWebhook <br>
+Update AccountWebhook 
 
 ### Example
 ```javascript
