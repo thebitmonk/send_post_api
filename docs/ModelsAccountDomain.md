@@ -7,6 +7,8 @@ Name | Type | Description | Notes
 **dkim** | [**ModelsDNSRecord**](ModelsDNSRecord.md) |  | [optional] 
 **dkimConfig** | **String** |  | [optional] 
 **dkimVerified** | **Boolean** |  | [optional] 
+**dmarc** | [**ModelsDNSRecord**](ModelsDNSRecord.md) |  | [optional] 
+**dmarcVerified** | **Boolean** |  | [optional] 
 **id** | **Number** |  | [optional] 
 **name** | **String** |  | [optional] 
 **returnPath** | [**ModelsDNSRecord**](ModelsDNSRecord.md) |  | [optional] 

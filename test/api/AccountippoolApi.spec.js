@@ -70,6 +70,7 @@
           body.name = "";
           body.routingMapping = ;
           body.routingStrategy = "0";
+          body.tpsps = [0];
 
           instance.accountIPPoolRouterCreate(xAccountApiKey, body, function(error, data, response) {
             if (error) {
@@ -91,6 +92,8 @@
                 expect(data).to.be.a(SendPostApi.ModelsIP);
                 expect(data.aolSettings).to.be.a('string');
                 expect(data.aolSettings).to.be("");
+                expect(data.attSettings).to.be.a('string');
+                expect(data.attSettings).to.be("");
                 expect(data.autoWarmupEnabled).to.be.a('boolean');
                 expect(data.autoWarmupEnabled).to.be(false);
                 expect(data.comcastSettings).to.be.a('string');
@@ -219,6 +222,40 @@
             expect(data.routingMetaData).to.be("");
             expect(data.routingStrategy).to.be.a('number');
             expect(data.routingStrategy).to.be("0");
+            {
+              let dataCtr = data.thirdPartySendingProviders;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(SendPostApi.ModelsThirdPartySendingProvider);
+                expect(data.created).to.be.a('number');
+                expect(data.created).to.be("0");
+                expect(data.domain).to.be.a('string');
+                expect(data.domain).to.be("");
+                expect(data.endpoint).to.be.a('string');
+                expect(data.endpoint).to.be("");
+                expect(data.id).to.be.a('number');
+                expect(data.id).to.be("0");
+                expect(data.key).to.be.a('string');
+                expect(data.key).to.be("");
+                expect(data.name).to.be.a('string');
+                expect(data.name).to.be("");
+                expect(data.oauthToken).to.be.a('string');
+                expect(data.oauthToken).to.be("");
+                expect(data.port).to.be.a('number');
+                expect(data.port).to.be("0");
+                expect(data.ratePerHour).to.be.a('number');
+                expect(data.ratePerHour).to.be("0");
+                expect(data.retryTime).to.be.a('number');
+                expect(data.retryTime).to.be("0");
+                expect(data.secret).to.be.a('string');
+                expect(data.secret).to.be("");
+                expect(data.type).to.be.a(SendPostApi.ModelsThirdPartySendingProviderType);
+        
+
+                      }
+            }
             expect(data.type).to.be.a(SendPostApi.ModelsIPPoolType);
     
             done();
@@ -281,6 +318,8 @@
                 expect(data).to.be.a(SendPostApi.ModelsIP);
                 expect(data.aolSettings).to.be.a('string');
                 expect(data.aolSettings).to.be("");
+                expect(data.attSettings).to.be.a('string');
+                expect(data.attSettings).to.be("");
                 expect(data.autoWarmupEnabled).to.be.a('boolean');
                 expect(data.autoWarmupEnabled).to.be(false);
                 expect(data.comcastSettings).to.be.a('string');
@@ -409,6 +448,40 @@
             expect(data.routingMetaData).to.be("");
             expect(data.routingStrategy).to.be.a('number');
             expect(data.routingStrategy).to.be("0");
+            {
+              let dataCtr = data.thirdPartySendingProviders;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(SendPostApi.ModelsThirdPartySendingProvider);
+                expect(data.created).to.be.a('number');
+                expect(data.created).to.be("0");
+                expect(data.domain).to.be.a('string');
+                expect(data.domain).to.be("");
+                expect(data.endpoint).to.be.a('string');
+                expect(data.endpoint).to.be("");
+                expect(data.id).to.be.a('number');
+                expect(data.id).to.be("0");
+                expect(data.key).to.be.a('string');
+                expect(data.key).to.be("");
+                expect(data.name).to.be.a('string');
+                expect(data.name).to.be("");
+                expect(data.oauthToken).to.be.a('string');
+                expect(data.oauthToken).to.be("");
+                expect(data.port).to.be.a('number');
+                expect(data.port).to.be("0");
+                expect(data.ratePerHour).to.be.a('number');
+                expect(data.ratePerHour).to.be("0");
+                expect(data.retryTime).to.be.a('number');
+                expect(data.retryTime).to.be("0");
+                expect(data.secret).to.be.a('string');
+                expect(data.secret).to.be("");
+                expect(data.type).to.be.a(SendPostApi.ModelsThirdPartySendingProviderType);
+        
+
+                      }
+            }
             expect(data.type).to.be.a(SendPostApi.ModelsIPPoolType);
     
             done();
@@ -453,6 +526,8 @@
                   expect(data).to.be.a(SendPostApi.ModelsIP);
                   expect(data.aolSettings).to.be.a('string');
                   expect(data.aolSettings).to.be("");
+                  expect(data.attSettings).to.be.a('string');
+                  expect(data.attSettings).to.be("");
                   expect(data.autoWarmupEnabled).to.be.a('boolean');
                   expect(data.autoWarmupEnabled).to.be(false);
                   expect(data.comcastSettings).to.be.a('string');
@@ -581,6 +656,40 @@
               expect(data.routingMetaData).to.be("");
               expect(data.routingStrategy).to.be.a('number');
               expect(data.routingStrategy).to.be("0");
+              {
+                let dataCtr = data.thirdPartySendingProviders;
+                expect(dataCtr).to.be.an(Array);
+                expect(dataCtr).to.not.be.empty();
+                for (let p in dataCtr) {
+                  let data = dataCtr[p];
+                  expect(data).to.be.a(SendPostApi.ModelsThirdPartySendingProvider);
+                  expect(data.created).to.be.a('number');
+                  expect(data.created).to.be("0");
+                  expect(data.domain).to.be.a('string');
+                  expect(data.domain).to.be("");
+                  expect(data.endpoint).to.be.a('string');
+                  expect(data.endpoint).to.be("");
+                  expect(data.id).to.be.a('number');
+                  expect(data.id).to.be("0");
+                  expect(data.key).to.be.a('string');
+                  expect(data.key).to.be("");
+                  expect(data.name).to.be.a('string');
+                  expect(data.name).to.be("");
+                  expect(data.oauthToken).to.be.a('string');
+                  expect(data.oauthToken).to.be("");
+                  expect(data.port).to.be.a('number');
+                  expect(data.port).to.be("0");
+                  expect(data.ratePerHour).to.be.a('number');
+                  expect(data.ratePerHour).to.be("0");
+                  expect(data.retryTime).to.be.a('number');
+                  expect(data.retryTime).to.be("0");
+                  expect(data.secret).to.be.a('string');
+                  expect(data.secret).to.be("");
+                  expect(data.type).to.be.a(SendPostApi.ModelsThirdPartySendingProviderType);
+          
+  
+                        }
+              }
               expect(data.type).to.be.a(SendPostApi.ModelsIPPoolType);
       
             }
@@ -604,6 +713,7 @@
           body.name = "";
           body.routingMapping = ;
           body.routingStrategy = "0";
+          body.tpsps = [0];
 
           instance.accountIPPoolRouterUpdate(xAccountApiKey, ippoolid, body, function(error, data, response) {
             if (error) {
@@ -625,6 +735,8 @@
                 expect(data).to.be.a(SendPostApi.ModelsIP);
                 expect(data.aolSettings).to.be.a('string');
                 expect(data.aolSettings).to.be("");
+                expect(data.attSettings).to.be.a('string');
+                expect(data.attSettings).to.be("");
                 expect(data.autoWarmupEnabled).to.be.a('boolean');
                 expect(data.autoWarmupEnabled).to.be(false);
                 expect(data.comcastSettings).to.be.a('string');
@@ -753,6 +865,40 @@
             expect(data.routingMetaData).to.be("");
             expect(data.routingStrategy).to.be.a('number');
             expect(data.routingStrategy).to.be("0");
+            {
+              let dataCtr = data.thirdPartySendingProviders;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(SendPostApi.ModelsThirdPartySendingProvider);
+                expect(data.created).to.be.a('number');
+                expect(data.created).to.be("0");
+                expect(data.domain).to.be.a('string');
+                expect(data.domain).to.be("");
+                expect(data.endpoint).to.be.a('string');
+                expect(data.endpoint).to.be("");
+                expect(data.id).to.be.a('number');
+                expect(data.id).to.be("0");
+                expect(data.key).to.be.a('string');
+                expect(data.key).to.be("");
+                expect(data.name).to.be.a('string');
+                expect(data.name).to.be("");
+                expect(data.oauthToken).to.be.a('string');
+                expect(data.oauthToken).to.be("");
+                expect(data.port).to.be.a('number');
+                expect(data.port).to.be("0");
+                expect(data.ratePerHour).to.be.a('number');
+                expect(data.ratePerHour).to.be("0");
+                expect(data.retryTime).to.be.a('number');
+                expect(data.retryTime).to.be("0");
+                expect(data.secret).to.be.a('string');
+                expect(data.secret).to.be("");
+                expect(data.type).to.be.a(SendPostApi.ModelsThirdPartySendingProviderType);
+        
+
+                      }
+            }
             expect(data.type).to.be.a(SendPostApi.ModelsIPPoolType);
     
             done();

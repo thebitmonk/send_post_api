@@ -47,6 +47,12 @@
         // expect(instance.aolSettings).to.be(expectedValueLiteral);
       });
 
+      it('should have the property attSettings (base name: "attSettings")', function() {
+        // TODO: update the code to test the property attSettings
+        expect(instance).to.have.property('attSettings');
+        // expect(instance.attSettings).to.be(expectedValueLiteral);
+      });
+
       it('should have the property autoWarmupEnabled (base name: "autoWarmupEnabled")', function() {
         // TODO: update the code to test the property autoWarmupEnabled
         expect(instance).to.have.property('autoWarmupEnabled');

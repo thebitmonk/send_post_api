@@ -99,6 +99,8 @@
             expect(data.slackToken).to.be("");
             expect(data.stripeBasePriceId).to.be.a('string');
             expect(data.stripeBasePriceId).to.be("");
+            expect(data.stripeSubscriptionItemId).to.be.a('string');
+            expect(data.stripeSubscriptionItemId).to.be("");
             expect(data.stripeUsagePriceId).to.be.a('string');
             expect(data.stripeUsagePriceId).to.be("");
             expect(data.switchingSendpostDescription).to.be.a('string');
@@ -181,6 +183,8 @@
                 expect(data.slackToken).to.be("");
                 expect(data.stripeBasePriceId).to.be.a('string');
                 expect(data.stripeBasePriceId).to.be("");
+                expect(data.stripeSubscriptionItemId).to.be.a('string');
+                expect(data.stripeSubscriptionItemId).to.be("");
                 expect(data.stripeUsagePriceId).to.be.a('string');
                 expect(data.stripeUsagePriceId).to.be("");
                 expect(data.switchingSendpostDescription).to.be.a('string');
@@ -295,6 +299,8 @@
                 expect(data.slackToken).to.be("");
                 expect(data.stripeBasePriceId).to.be.a('string');
                 expect(data.stripeBasePriceId).to.be("");
+                expect(data.stripeSubscriptionItemId).to.be.a('string');
+                expect(data.stripeSubscriptionItemId).to.be("");
                 expect(data.stripeUsagePriceId).to.be.a('string');
                 expect(data.stripeUsagePriceId).to.be("");
                 expect(data.switchingSendpostDescription).to.be.a('string');

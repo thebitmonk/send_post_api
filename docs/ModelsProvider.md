@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **key** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
 **port** | **Number** |  | [optional] 
-**provider** | [**ModelsProviderType**](ModelsProviderType.md) |  | [optional] 
+**provider** | [**ModelsThirdPartySendingProviderType**](ModelsThirdPartySendingProviderType.md) |  | [optional] 
 **retryTime** | **Number** |  | [optional] 
 **secret** | **String** |  | [optional] 
 **token** | **String** |  | [optional] 

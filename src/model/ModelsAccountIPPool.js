@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsIP', 'model/ModelsIPPoolType'], factory);
+    define(['ApiClient', 'model/ModelsIP', 'model/ModelsIPPoolType', 'model/ModelsThirdPartySendingProvider'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ModelsIP'), require('./ModelsIPPoolType'));
+    module.exports = factory(require('../ApiClient'), require('./ModelsIP'), require('./ModelsIPPoolType'), require('./ModelsThirdPartySendingProvider'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsAccountIPPool = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsIP, root.SendPostApi.ModelsIPPoolType);
+    root.SendPostApi.ModelsAccountIPPool = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsIP, root.SendPostApi.ModelsIPPoolType, root.SendPostApi.ModelsThirdPartySendingProvider);
   }
-}(this, function(ApiClient, ModelsIP, ModelsIPPoolType) {
+}(this, function(ApiClient, ModelsIP, ModelsIPPoolType, ModelsThirdPartySendingProvider) {
   'use strict';
 
   /**
@@ -67,6 +67,8 @@
         obj.routingMetaData = ApiClient.convertToType(data['routingMetaData'], 'String');
       if (data.hasOwnProperty('routingStrategy'))
         obj.routingStrategy = ApiClient.convertToType(data['routingStrategy'], 'Number');
+      if (data.hasOwnProperty('thirdPartySendingProviders'))
+        obj.thirdPartySendingProviders = ApiClient.convertToType(data['thirdPartySendingProviders'], [ModelsThirdPartySendingProvider]);
       if (data.hasOwnProperty('type'))
         obj.type = ModelsIPPoolType.constructFromObject(data['type']);
     }
@@ -102,6 +104,11 @@
    * @member {Number} routingStrategy
    */
   exports.prototype.routingStrategy = undefined;
+
+  /**
+   * @member {Array.<module:model/ModelsThirdPartySendingProvider>} thirdPartySendingProviders
+   */
+  exports.prototype.thirdPartySendingProviders = undefined;
 
   /**
    * @member {module:model/ModelsIPPoolType} type

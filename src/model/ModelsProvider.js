@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsProviderType'], factory);
+    define(['ApiClient', 'model/ModelsThirdPartySendingProviderType'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ModelsProviderType'));
+    module.exports = factory(require('../ApiClient'), require('./ModelsThirdPartySendingProviderType'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsProvider = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsProviderType);
+    root.SendPostApi.ModelsProvider = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsThirdPartySendingProviderType);
   }
-}(this, function(ApiClient, ModelsProviderType) {
+}(this, function(ApiClient, ModelsThirdPartySendingProviderType) {
   'use strict';
 
   /**
@@ -68,7 +68,7 @@
       if (data.hasOwnProperty('port'))
         obj.port = ApiClient.convertToType(data['port'], 'Number');
       if (data.hasOwnProperty('provider'))
-        obj.provider = ModelsProviderType.constructFromObject(data['provider']);
+        obj.provider = ModelsThirdPartySendingProviderType.constructFromObject(data['provider']);
       if (data.hasOwnProperty('retry_time'))
         obj.retryTime = ApiClient.convertToType(data['retry_time'], 'Number');
       if (data.hasOwnProperty('secret'))
@@ -112,7 +112,7 @@
   exports.prototype.port = undefined;
 
   /**
-   * @member {module:model/ModelsProviderType} provider
+   * @member {module:model/ModelsThirdPartySendingProviderType} provider
    */
   exports.prototype.provider = undefined;
 

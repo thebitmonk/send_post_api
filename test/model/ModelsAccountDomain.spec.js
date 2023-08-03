@@ -65,6 +65,18 @@
         // expect(instance.dkimVerified).to.be(expectedValueLiteral);
       });
 
+      it('should have the property dmarc (base name: "dmarc")', function() {
+        // TODO: update the code to test the property dmarc
+        expect(instance).to.have.property('dmarc');
+        // expect(instance.dmarc).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property dmarcVerified (base name: "dmarcVerified")', function() {
+        // TODO: update the code to test the property dmarcVerified
+        expect(instance).to.have.property('dmarcVerified');
+        // expect(instance.dmarcVerified).to.be(expectedValueLiteral);
+      });
+
       it('should have the property id (base name: "id")', function() {
         // TODO: update the code to test the property id
         expect(instance).to.have.property('id');

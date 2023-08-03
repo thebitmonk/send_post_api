@@ -36,6 +36,33 @@
 
   describe('(package)', function() {
     describe('AccountonboardingApi', function() {
+      describe('onboardingRouterCreateUnlockTicket', function() {
+        it('should call onboardingRouterCreateUnlockTicket successfully', function(done) {
+          // TODO: uncomment, update parameter values for onboardingRouterCreateUnlockTicket call
+          /*
+          var xAccountApiKey = "xAccountApiKey_example";
+          var body = new SendPostApi.ModelsAccountUnlockTicket();
+          body.accountEmail = "";
+          body.businessWebURL = "";
+          body.coldEmails = "";
+          body.emailCollection = "";
+          body.emailContent = "";
+          body.sendingDomains = "";
+          body.sendingVolumePerMonth = "";
+
+          instance.onboardingRouterCreateUnlockTicket(xAccountApiKey, body, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('onboardingRouterGetOnboardingChecklist', function() {
         it('should call onboardingRouterGetOnboardingChecklist successfully', function(done) {
           // TODO: uncomment, update parameter values for onboardingRouterGetOnboardingChecklist call and complete the assertions

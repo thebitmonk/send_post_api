@@ -36,6 +36,100 @@
 
   describe('(package)', function() {
     describe('AccountsettingApi', function() {
+      describe('accountSettingRouterCheckDedicatedIPExist', function() {
+        it('should call accountSettingRouterCheckDedicatedIPExist successfully', function(done) {
+          // TODO: uncomment, update parameter values for accountSettingRouterCheckDedicatedIPExist call and complete the assertions
+          /*
+          var xAccountApiKey = "xAccountApiKey_example";
+
+          instance.accountSettingRouterCheckDedicatedIPExist(xAccountApiKey, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelsDedicatedIPs);
+            expect(data.found).to.be.a('boolean');
+            expect(data.found).to.be(false);
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('accountSettingRouterGetAccount', function() {
+        it('should call accountSettingRouterGetAccount successfully', function(done) {
+          // TODO: uncomment, update parameter values for accountSettingRouterGetAccount call and complete the assertions
+          /*
+          var xAccountApiKey = "xAccountApiKey_example";
+
+          instance.accountSettingRouterGetAccount(xAccountApiKey, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelsAccount);
+            expect(data.alertSlackEndpoint).to.be.a('string');
+            expect(data.alertSlackEndpoint).to.be("");
+            expect(data.apiKey).to.be.a('string');
+            expect(data.apiKey).to.be("");
+            expect(data.brandColor).to.be.a('string');
+            expect(data.brandColor).to.be("");
+            expect(data.companyName).to.be.a('string');
+            expect(data.companyName).to.be("");
+            expect(data.created).to.be.a('number');
+            expect(data.created).to.be("0");
+            expect(data.currentEmailServiceProvider).to.be.a('string');
+            expect(data.currentEmailServiceProvider).to.be("");
+            expect(data.id).to.be.a('number');
+            expect(data.id).to.be("0");
+            expect(data.incidentSlackEndpoint).to.be.a('string');
+            expect(data.incidentSlackEndpoint).to.be("");
+            expect(data.industry).to.be.a('string');
+            expect(data.industry).to.be("");
+            expect(data.isAdmin).to.be.a('boolean');
+            expect(data.isAdmin).to.be(false);
+            expect(data.isCanceled).to.be.a('boolean');
+            expect(data.isCanceled).to.be(false);
+            expect(data.isLastPaymentFailed).to.be.a('boolean');
+            expect(data.isLastPaymentFailed).to.be(false);
+            expect(data.isUpgraded).to.be.a('boolean');
+            expect(data.isUpgraded).to.be(false);
+            expect(data.lockThreshold).to.be.a('number');
+            expect(data.lockThreshold).to.be("0");
+            expect(data.locked).to.be.a('boolean');
+            expect(data.locked).to.be(false);
+            expect(data.logoURL).to.be.a('string');
+            expect(data.logoURL).to.be("");
+            expect(data.name).to.be.a('string');
+            expect(data.name).to.be("");
+            expect(data.onboardCFinished).to.be.a('boolean');
+            expect(data.onboardCFinished).to.be(false);
+            expect(data.onboardQAnswered).to.be.a('boolean');
+            expect(data.onboardQAnswered).to.be(false);
+            expect(data.sendingVolumePerMonth).to.be.a('string');
+            expect(data.sendingVolumePerMonth).to.be("");
+            expect(data.slackToken).to.be.a('string');
+            expect(data.slackToken).to.be("");
+            expect(data.stripeBasePriceId).to.be.a('string');
+            expect(data.stripeBasePriceId).to.be("");
+            expect(data.stripeSubscriptionItemId).to.be.a('string');
+            expect(data.stripeSubscriptionItemId).to.be("");
+            expect(data.stripeUsagePriceId).to.be.a('string');
+            expect(data.stripeUsagePriceId).to.be("");
+            expect(data.switchingSendpostDescription).to.be.a('string');
+            expect(data.switchingSendpostDescription).to.be("");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('accountSettingRouterUpdate', function() {
         it('should call accountSettingRouterUpdate successfully', function(done) {
           // TODO: uncomment, update parameter values for accountSettingRouterUpdate call and complete the assertions
@@ -96,6 +190,8 @@
             expect(data.slackToken).to.be("");
             expect(data.stripeBasePriceId).to.be.a('string');
             expect(data.stripeBasePriceId).to.be("");
+            expect(data.stripeSubscriptionItemId).to.be.a('string');
+            expect(data.stripeSubscriptionItemId).to.be("");
             expect(data.stripeUsagePriceId).to.be.a('string');
             expect(data.stripeUsagePriceId).to.be("");
             expect(data.switchingSendpostDescription).to.be.a('string');

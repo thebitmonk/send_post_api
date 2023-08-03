@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **subAccountID** | **Number** |  | [optional] 
 **submittedAt** | **Number** |  | [optional] 
 **to** | **String** |  | [optional] 
+**tpspId** | **Number** |  | [optional] 
 **type** | **Number** |  | [optional] 
 
 
