@@ -335,9 +335,9 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [SendPostApi.Model2970570x140006e9890False](docs/Model2970570x140006e9890False.md)
- - [SendPostApi.Model2973380x140006e9980False](docs/Model2973380x140006e9980False.md)
- - [SendPostApi.Model5633000x14000a49410False](docs/Model5633000x14000a49410False.md)
+ - [SendPostApi.Model2921640x140006fe660False](docs/Model2921640x140006fe660False.md)
+ - [SendPostApi.Model2924450x140006fe750False](docs/Model2924450x140006fe750False.md)
+ - [SendPostApi.Model5575920x14000a637d0False](docs/Model5575920x14000a637d0False.md)
  - [SendPostApi.ModelsAGDomainStat](docs/ModelsAGDomainStat.md)
  - [SendPostApi.ModelsAGIPStat](docs/ModelsAGIPStat.md)
  - [SendPostApi.ModelsAGStat](docs/ModelsAGStat.md)
@@ -457,9 +457,11 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsIntegrationType](docs/ModelsIntegrationType.md)
  - [SendPostApi.ModelsInvitation](docs/ModelsInvitation.md)
  - [SendPostApi.ModelsInvitationStatus](docs/ModelsInvitationStatus.md)
+ - [SendPostApi.ModelsJobStatus](docs/ModelsJobStatus.md)
  - [SendPostApi.ModelsLabel](docs/ModelsLabel.md)
  - [SendPostApi.ModelsLabelType](docs/ModelsLabelType.md)
  - [SendPostApi.ModelsLinks](docs/ModelsLinks.md)
+ - [SendPostApi.ModelsListCleaningJob](docs/ModelsListCleaningJob.md)
  - [SendPostApi.ModelsMailReportResult](docs/ModelsMailReportResult.md)
  - [SendPostApi.ModelsMailgunClientInfo](docs/ModelsMailgunClientInfo.md)
  - [SendPostApi.ModelsMailgunDeliveryStatus](docs/ModelsMailgunDeliveryStatus.md)
