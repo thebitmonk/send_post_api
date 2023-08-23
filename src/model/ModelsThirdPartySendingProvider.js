@@ -71,6 +71,8 @@
         obj.oauthToken = ApiClient.convertToType(data['oauthToken'], 'String');
       if (data.hasOwnProperty('port'))
         obj.port = ApiClient.convertToType(data['port'], 'Number');
+      if (data.hasOwnProperty('ratePerHour'))
+        obj.ratePerHour = ApiClient.convertToType(data['ratePerHour'], 'Number');
       if (data.hasOwnProperty('retryTime'))
         obj.retryTime = ApiClient.convertToType(data['retryTime'], 'Number');
       if (data.hasOwnProperty('secret'))
@@ -120,6 +122,11 @@
    * @member {Number} port
    */
   exports.prototype.port = undefined;
+
+  /**
+   * @member {Number} ratePerHour
+   */
+  exports.prototype.ratePerHour = undefined;
 
   /**
    * @member {Number} retryTime

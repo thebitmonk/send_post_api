@@ -89,6 +89,12 @@
         // expect(instance.port).to.be(expectedValueLiteral);
       });
 
+      it('should have the property ratePerHour (base name: "ratePerHour")', function() {
+        // TODO: update the code to test the property ratePerHour
+        expect(instance).to.have.property('ratePerHour');
+        // expect(instance.ratePerHour).to.be(expectedValueLiteral);
+      });
+
       it('should have the property retryTime (base name: "retryTime")', function() {
         // TODO: update the code to test the property retryTime
         expect(instance).to.have.property('retryTime');

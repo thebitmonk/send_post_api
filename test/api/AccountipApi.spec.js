@@ -1005,6 +1005,8 @@
                   expect(data.oauthToken).to.be("");
                   expect(data.port).to.be.a('number');
                   expect(data.port).to.be("0");
+                  expect(data.ratePerHour).to.be.a('number');
+                  expect(data.ratePerHour).to.be("0");
                   expect(data.retryTime).to.be.a('number');
                   expect(data.retryTime).to.be("0");
                   expect(data.secret).to.be.a('string');

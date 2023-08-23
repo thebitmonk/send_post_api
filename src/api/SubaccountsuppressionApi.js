@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsCountStat', 'model/ModelsRDSuppression', 'model/ModelsRSuppression', 'model/ModelsSuppression'], factory);
+    define(['ApiClient', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsRDSuppression', 'model/ModelsRSuppression', 'model/ModelsSuppression'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsCountStat'), require('../model/ModelsRDSuppression'), require('../model/ModelsRSuppression'), require('../model/ModelsSuppression'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsRDSuppression'), require('../model/ModelsRSuppression'), require('../model/ModelsSuppression'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.SubaccountsuppressionApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsRDSuppression, root.SendPostApi.ModelsRSuppression, root.SendPostApi.ModelsSuppression);
+    root.SendPostApi.SubaccountsuppressionApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsRDSuppression, root.SendPostApi.ModelsRSuppression, root.SendPostApi.ModelsSuppression);
   }
-}(this, function(ApiClient, ModelsCountStat, ModelsRDSuppression, ModelsRSuppression, ModelsSuppression) {
+}(this, function(ApiClient, ModelsCountStat, ModelsDeleteResponse, ModelsRDSuppression, ModelsRSuppression, ModelsSuppression) {
   'use strict';
 
   /**
@@ -105,7 +105,7 @@
      * Callback function to receive the result of the suppressionRouterCreateSuppressions operation.
      * @callback module:api/SubaccountsuppressionApi~suppressionRouterCreateSuppressionsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ModelsSuppression} data The data returned by the service call.
+     * @param {Array.<module:model/ModelsSuppression>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -114,7 +114,7 @@
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {module:model/ModelsRSuppression} body Suppression content
      * @param {module:api/SubaccountsuppressionApi~suppressionRouterCreateSuppressionsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ModelsSuppression}
+     * data is of type: {@link Array.<module:model/ModelsSuppression>}
      */
     this.suppressionRouterCreateSuppressions = function(xSubAccountApiKey, body, callback) {
       var postBody = body;
@@ -145,7 +145,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = ModelsSuppression;
+      var returnType = [ModelsSuppression];
 
       return this.apiClient.callApi(
         '/subaccount/suppression/', 'POST',
@@ -203,7 +203,7 @@
      * Callback function to receive the result of the suppressionRouterDeleteSuppression operation.
      * @callback module:api/SubaccountsuppressionApi~suppressionRouterDeleteSuppressionCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ModelsSuppression} data The data returned by the service call.
+     * @param {Array.<module:model/ModelsDeleteResponse>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -212,7 +212,7 @@
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {module:model/ModelsRDSuppression} body Suppression content
      * @param {module:api/SubaccountsuppressionApi~suppressionRouterDeleteSuppressionCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ModelsSuppression}
+     * data is of type: {@link Array.<module:model/ModelsDeleteResponse>}
      */
     this.suppressionRouterDeleteSuppression = function(xSubAccountApiKey, body, callback) {
       var postBody = body;
@@ -243,7 +243,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = ModelsSuppression;
+      var returnType = [ModelsDeleteResponse];
 
       return this.apiClient.callApi(
         '/subaccount/suppression/', 'DELETE',

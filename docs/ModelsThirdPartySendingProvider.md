@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **name** | **String** |  | [optional] 
 **oauthToken** | **String** |  | [optional] 
 **port** | **Number** |  | [optional] 
+**ratePerHour** | **Number** |  | [optional] 
 **retryTime** | **Number** |  | [optional] 
 **secret** | **String** |  | [optional] 
 **type** | [**ModelsThirdPartySendingProviderType**](ModelsThirdPartySendingProviderType.md) |  | [optional] 
