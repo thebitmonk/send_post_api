@@ -1,6 +1,7 @@
 # SendPostApi.ModelsDomainAge
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **domainAgeFound** | **Boolean** |  | [optional] 

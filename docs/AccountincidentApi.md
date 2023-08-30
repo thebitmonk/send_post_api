@@ -1,20 +1,21 @@
-# SendPostApi.AccountincidentApi
+# SendPostApi.AccountIncidentApi
 
 All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**incidentRouterAdd**](AccountincidentApi.md#incidentRouterAdd) | **POST** /account/incident/{incidentId}/comment | 
-[**incidentRouterCount**](AccountincidentApi.md#incidentRouterCount) | **GET** /account/incident/count | 
-[**incidentRouterCreate**](AccountincidentApi.md#incidentRouterCreate) | **POST** /account/incident/ | 
-[**incidentRouterGetAll**](AccountincidentApi.md#incidentRouterGetAll) | **GET** /account/incident/ | 
-[**incidentRouterGetAllComments**](AccountincidentApi.md#incidentRouterGetAllComments) | **GET** /account/incident/{incidentId}/comment | 
-[**incidentRouterGetIncident**](AccountincidentApi.md#incidentRouterGetIncident) | **GET** /account/incident/{incidentId} | 
-[**incidentRouterUpdate**](AccountincidentApi.md#incidentRouterUpdate) | **PUT** /account/incident/{incidentId} | 
+[**incidentRouterAdd**](AccountIncidentApi.md#incidentRouterAdd) | **POST** /account/incident/{incidentId}/comment | 
+[**incidentRouterCount**](AccountIncidentApi.md#incidentRouterCount) | **GET** /account/incident/count | 
+[**incidentRouterCreate**](AccountIncidentApi.md#incidentRouterCreate) | **POST** /account/incident/ | 
+[**incidentRouterGetAll**](AccountIncidentApi.md#incidentRouterGetAll) | **GET** /account/incident/ | 
+[**incidentRouterGetAllComments**](AccountIncidentApi.md#incidentRouterGetAllComments) | **GET** /account/incident/{incidentId}/comment | 
+[**incidentRouterGetIncident**](AccountIncidentApi.md#incidentRouterGetIncident) | **GET** /account/incident/{incidentId} | 
+[**incidentRouterUpdate**](AccountIncidentApi.md#incidentRouterUpdate) | **PUT** /account/incident/{incidentId} | 
 
 
-<a name="incidentRouterAdd"></a>
-# **incidentRouterAdd**
+
+## incidentRouterAdd
+
 > ModelsComment incidentRouterAdd(xAccountApiKey, incidentId, body)
 
 
@@ -22,29 +23,25 @@ Method | HTTP request | Description
 Add comment to Incident
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountincidentApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var incidentId = 789; // Number | the incident id
-
-var body = new SendPostApi.ModelsEComment(); // ModelsEComment | The Comment content
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountIncidentApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let incidentId = 789; // Number | the incident id
+let body = new SendPostApi.ModelsEComment(); // ModelsEComment | The Comment content
+apiInstance.incidentRouterAdd(xAccountApiKey, incidentId, body, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.incidentRouterAdd(xAccountApiKey, incidentId, body, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -62,11 +59,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="incidentRouterCount"></a>
-# **incidentRouterCount**
+
+## incidentRouterCount
+
 > ModelsCountStat incidentRouterCount(xAccountApiKey, opts)
 
 
@@ -74,30 +72,28 @@ No authorization required
 Count Total Incidents
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountincidentApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountIncidentApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let opts = {
   'status': 789, // Number | status
   'tag': 789, // Number | status
   'search': "search_example" // String | search term
 };
-
-var callback = function(error, data, response) {
+apiInstance.incidentRouterCount(xAccountApiKey, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.incidentRouterCount(xAccountApiKey, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -116,11 +112,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="incidentRouterCreate"></a>
-# **incidentRouterCreate**
+
+## incidentRouterCreate
+
 > ModelsIncident incidentRouterCreate(xAccountApiKey, body)
 
 
@@ -128,27 +125,24 @@ No authorization required
 Create Incident
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountincidentApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var body = new SendPostApi.ModelsEIncident(); // ModelsEIncident | The Incident content
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountIncidentApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let body = new SendPostApi.ModelsEIncident(); // ModelsEIncident | The Incident content
+apiInstance.incidentRouterCreate(xAccountApiKey, body, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.incidentRouterCreate(xAccountApiKey, body, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -165,11 +159,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="incidentRouterGetAll"></a>
-# **incidentRouterGetAll**
+
+## incidentRouterGetAll
+
 > [ModelsIncident] incidentRouterGetAll(xAccountApiKey, opts)
 
 
@@ -177,32 +172,30 @@ No authorization required
 Get All Incidents
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountincidentApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountIncidentApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let opts = {
   'offset': 789, // Number | offset
   'limit': 789, // Number | limit
   'search': "search_example", // String | search term
   'status': 789, // Number | status
   'tag': 789 // Number | status
 };
-
-var callback = function(error, data, response) {
+apiInstance.incidentRouterGetAll(xAccountApiKey, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.incidentRouterGetAll(xAccountApiKey, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -223,11 +216,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="incidentRouterGetAllComments"></a>
-# **incidentRouterGetAllComments**
+
+## incidentRouterGetAllComments
+
 > [ModelsComment] incidentRouterGetAllComments(xAccountApiKey, incidentId)
 
 
@@ -235,27 +229,24 @@ No authorization required
 Get All Comments Associated with Incident
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountincidentApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var incidentId = 789; // Number | the IncidentId you want to get comments for
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountIncidentApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let incidentId = 789; // Number | the IncidentId you want to get comments for
+apiInstance.incidentRouterGetAllComments(xAccountApiKey, incidentId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.incidentRouterGetAllComments(xAccountApiKey, incidentId, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -272,11 +263,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="incidentRouterGetIncident"></a>
-# **incidentRouterGetIncident**
+
+## incidentRouterGetIncident
+
 > ModelsIncident incidentRouterGetIncident(xAccountApiKey, incidentId)
 
 
@@ -284,27 +276,24 @@ No authorization required
 Find Incident by incidentId
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountincidentApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var incidentId = 789; // Number | the IncidentId you want to get
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountIncidentApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let incidentId = 789; // Number | the IncidentId you want to get
+apiInstance.incidentRouterGetIncident(xAccountApiKey, incidentId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.incidentRouterGetIncident(xAccountApiKey, incidentId, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -321,11 +310,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="incidentRouterUpdate"></a>
-# **incidentRouterUpdate**
+
+## incidentRouterUpdate
+
 > ModelsIncident incidentRouterUpdate(xAccountApiKey, incidentId, body)
 
 
@@ -333,29 +323,25 @@ No authorization required
 Update Incident
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountincidentApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var incidentId = 789; // Number | the Incident Id you want to update
-
-var body = new SendPostApi.ModelsEIncident(); // ModelsEIncident | The Incident content
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountIncidentApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let incidentId = 789; // Number | the Incident Id you want to update
+let body = new SendPostApi.ModelsEIncident(); // ModelsEIncident | The Incident content
+apiInstance.incidentRouterUpdate(xAccountApiKey, incidentId, body, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.incidentRouterUpdate(xAccountApiKey, incidentId, body, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -373,6 +359,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 

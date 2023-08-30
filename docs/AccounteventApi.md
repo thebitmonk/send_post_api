@@ -1,21 +1,22 @@
-# SendPostApi.AccounteventApi
+# SendPostApi.AccountEventApi
 
 All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**eventRouterCountAllEventsFromAAccountForAGivenTimeRange**](AccounteventApi.md#eventRouterCountAllEventsFromAAccountForAGivenTimeRange) | **GET** /account/event/count | 
-[**eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange**](AccounteventApi.md#eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange) | **GET** /account/event/node/count | 
-[**eventRouterGet**](AccounteventApi.md#eventRouterGet) | **GET** /account/event/{eventId} | 
-[**eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange**](AccounteventApi.md#eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange) | **GET** /account/event/node/timestampkeys | 
-[**eventRouterGetAllEventsFromAAccountForAGivenTimeRange**](AccounteventApi.md#eventRouterGetAllEventsFromAAccountForAGivenTimeRange) | **GET** /account/event/ | 
-[**eventRouterGetAllEventsFromAnAccountWhichHasOnlyProccessed**](AccounteventApi.md#eventRouterGetAllEventsFromAnAccountWhichHasOnlyProccessed) | **GET** /account/event/node/eventType | 
-[**eventRouterGetAllEventsOfAAccountFromASpecificNode**](AccounteventApi.md#eventRouterGetAllEventsOfAAccountFromASpecificNode) | **POST** /account/event/node | 
-[**eventRouterGetEventInNode**](AccounteventApi.md#eventRouterGetEventInNode) | **GET** /account/event/node/{eventId} | 
+[**eventRouterCountAllEventsFromAAccountForAGivenTimeRange**](AccountEventApi.md#eventRouterCountAllEventsFromAAccountForAGivenTimeRange) | **GET** /account/event/count | 
+[**eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange**](AccountEventApi.md#eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange) | **GET** /account/event/node/count | 
+[**eventRouterGet**](AccountEventApi.md#eventRouterGet) | **GET** /account/event/{eventId} | 
+[**eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange**](AccountEventApi.md#eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange) | **GET** /account/event/node/timestampkeys | 
+[**eventRouterGetAllEventsFromAAccountForAGivenTimeRange**](AccountEventApi.md#eventRouterGetAllEventsFromAAccountForAGivenTimeRange) | **GET** /account/event/ | 
+[**eventRouterGetAllEventsFromAnAccountWhichHasOnlyProccessed**](AccountEventApi.md#eventRouterGetAllEventsFromAnAccountWhichHasOnlyProccessed) | **GET** /account/event/node/eventType | 
+[**eventRouterGetAllEventsOfAAccountFromASpecificNode**](AccountEventApi.md#eventRouterGetAllEventsOfAAccountFromASpecificNode) | **POST** /account/event/node | 
+[**eventRouterGetEventInNode**](AccountEventApi.md#eventRouterGetEventInNode) | **GET** /account/event/node/{eventId} | 
 
 
-<a name="eventRouterCountAllEventsFromAAccountForAGivenTimeRange"></a>
-# **eventRouterCountAllEventsFromAAccountForAGivenTimeRange**
+
+## eventRouterCountAllEventsFromAAccountForAGivenTimeRange
+
 > ModelsCountStat eventRouterCountAllEventsFromAAccountForAGivenTimeRange(xAccountApiKey, opts)
 
 
@@ -23,14 +24,13 @@ Method | HTTP request | Description
 Count all events from a account for a given time-range
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccounteventApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountEventApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let opts = {
   'search': "search_example", // String | search term
   'type': "type_example", // String | search type
   'from': "from_example", // String | from date
@@ -38,18 +38,17 @@ var opts = {
   'source': "source_example", // String | data source from which to get timestamp keys subaccount or ip
   'sourceId': "sourceId_example" // String | source id from which to get timestamp keys subaccount or ip
 };
-
-var callback = function(error, data, response) {
+apiInstance.eventRouterCountAllEventsFromAAccountForAGivenTimeRange(xAccountApiKey, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.eventRouterCountAllEventsFromAAccountForAGivenTimeRange(xAccountApiKey, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -71,11 +70,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange"></a>
-# **eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange**
+
+## eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange
+
 > ModelsCountStat eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange(xAccountApiKey, opts)
 
 
@@ -83,14 +83,13 @@ No authorization required
 Count all events from a node of a sub-account for a given time-range
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccounteventApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountEventApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let opts = {
   'search': "search_example", // String | search term
   'type': "type_example", // String | search type
   'from': "from_example", // String | from date
@@ -98,18 +97,17 @@ var opts = {
   'source': "source_example", // String | data source from which to get timestamp keys subaccount or ip
   'sourceId': "sourceId_example" // String | source id from which to get timestamp keys subaccount or ip
 };
-
-var callback = function(error, data, response) {
+apiInstance.eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange(xAccountApiKey, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange(xAccountApiKey, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -131,11 +129,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="eventRouterGet"></a>
-# **eventRouterGet**
+
+## eventRouterGet
+
 > ModelsQEvent eventRouterGet(xAccountApiKey, eventId)
 
 
@@ -143,27 +142,24 @@ No authorization required
 Find Event By Id
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccounteventApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var eventId = "eventId_example"; // String | the eventId that you want to retrieve
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountEventApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let eventId = "eventId_example"; // String | the eventId that you want to retrieve
+apiInstance.eventRouterGet(xAccountApiKey, eventId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.eventRouterGet(xAccountApiKey, eventId, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -180,11 +176,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange"></a>
-# **eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange**
+
+## eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange
+
 > [ModelsQEvent] eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange(xAccountApiKey, opts)
 
 
@@ -192,14 +189,13 @@ No authorization required
 Find all events of a sub-account from a specific node for a give time-range
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccounteventApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountEventApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let opts = {
   'search': "search_example", // String | search term
   'type': "type_example", // String | search type
   'from': "from_example", // String | from date
@@ -207,18 +203,17 @@ var opts = {
   'source': "source_example", // String | data source from which to get timestamp keys subaccount or ip
   'sourceId': "sourceId_example" // String | source id from which to get timestamp keys subaccount or ip
 };
-
-var callback = function(error, data, response) {
+apiInstance.eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange(xAccountApiKey, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange(xAccountApiKey, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -240,11 +235,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="eventRouterGetAllEventsFromAAccountForAGivenTimeRange"></a>
-# **eventRouterGetAllEventsFromAAccountForAGivenTimeRange**
+
+## eventRouterGetAllEventsFromAAccountForAGivenTimeRange
+
 > [ModelsQEvent] eventRouterGetAllEventsFromAAccountForAGivenTimeRange(xAccountApiKey, opts)
 
 
@@ -252,14 +248,13 @@ No authorization required
 Find all events from a account for a given time-range
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccounteventApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountEventApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let opts = {
   'offset': 789, // Number | offset
   'limit': 789, // Number | limit
   'search': "search_example", // String | search term
@@ -269,18 +264,17 @@ var opts = {
   'source': "source_example", // String | data source from which to get timestamp keys subaccount or ip
   'sourceId': "sourceId_example" // String | source id from which to get timestamp keys subaccount or ip
 };
-
-var callback = function(error, data, response) {
+apiInstance.eventRouterGetAllEventsFromAAccountForAGivenTimeRange(xAccountApiKey, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.eventRouterGetAllEventsFromAAccountForAGivenTimeRange(xAccountApiKey, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -304,11 +298,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="eventRouterGetAllEventsFromAnAccountWhichHasOnlyProccessed"></a>
-# **eventRouterGetAllEventsFromAnAccountWhichHasOnlyProccessed**
+
+## eventRouterGetAllEventsFromAnAccountWhichHasOnlyProccessed
+
 > [ModelsQEvent] eventRouterGetAllEventsFromAnAccountWhichHasOnlyProccessed(xAccountApiKey, opts)
 
 
@@ -316,14 +311,13 @@ No authorization required
 Find all events from a account for a given time-range
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccounteventApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountEventApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let opts = {
   'offset': 789, // Number | offset
   'limit': 789, // Number | limit
   'type': "type_example", // String | search type
@@ -333,18 +327,17 @@ var opts = {
   'source': "source_example", // String | data source from which to get timestamp keys subaccount or ip
   'sourceId': "sourceId_example" // String | source id from which to get timestamp keys subaccount or ip
 };
-
-var callback = function(error, data, response) {
+apiInstance.eventRouterGetAllEventsFromAnAccountWhichHasOnlyProccessed(xAccountApiKey, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.eventRouterGetAllEventsFromAnAccountWhichHasOnlyProccessed(xAccountApiKey, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -368,11 +361,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="eventRouterGetAllEventsOfAAccountFromASpecificNode"></a>
-# **eventRouterGetAllEventsOfAAccountFromASpecificNode**
+
+## eventRouterGetAllEventsOfAAccountFromASpecificNode
+
 > [ModelsQEvent] eventRouterGetAllEventsOfAAccountFromASpecificNode(xAccountApiKey)
 
 
@@ -380,25 +374,23 @@ No authorization required
 Find all events of a account from a specific node
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccounteventApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountEventApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+apiInstance.eventRouterGetAllEventsOfAAccountFromASpecificNode(xAccountApiKey, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.eventRouterGetAllEventsOfAAccountFromASpecificNode(xAccountApiKey, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -414,11 +406,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="eventRouterGetEventInNode"></a>
-# **eventRouterGetEventInNode**
+
+## eventRouterGetEventInNode
+
 > ModelsQEvent eventRouterGetEventInNode(xAccountApiKey, eventId)
 
 
@@ -426,27 +419,24 @@ No authorization required
 Find Event From Node by id
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccounteventApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var eventId = "eventId_example"; // String | the eventId that you want to retrieve
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountEventApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let eventId = "eventId_example"; // String | the eventId that you want to retrieve
+apiInstance.eventRouterGetEventInNode(xAccountApiKey, eventId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.eventRouterGetEventInNode(xAccountApiKey, eventId, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -463,6 +453,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 

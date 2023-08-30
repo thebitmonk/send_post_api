@@ -1,15 +1,16 @@
-# SendPostApi.SubaccountemailApi
+# SendPostApi.SubaccountEmailApi
 
 All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**emailRouterSendEmail**](SubaccountemailApi.md#emailRouterSendEmail) | **POST** /subaccount/email/ | 
-[**emailRouterSendEmailWithTemplate**](SubaccountemailApi.md#emailRouterSendEmailWithTemplate) | **POST** /subaccount/email/template | 
+[**emailRouterSendEmail**](SubaccountEmailApi.md#emailRouterSendEmail) | **POST** /subaccount/email/ | 
+[**emailRouterSendEmailWithTemplate**](SubaccountEmailApi.md#emailRouterSendEmailWithTemplate) | **POST** /subaccount/email/template | 
 
 
-<a name="emailRouterSendEmail"></a>
-# **emailRouterSendEmail**
+
+## emailRouterSendEmail
+
 > [ModelsEmailResponse] emailRouterSendEmail(xSubAccountApiKey, body, opts)
 
 
@@ -17,31 +18,28 @@ Method | HTTP request | Description
 Send Email To Contacts
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.SubaccountemailApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var body = new SendPostApi.ModelsEmailMessage(); // ModelsEmailMessage | The Email Message
-
-var opts = { 
+let apiInstance = new SendPostApi.SubaccountEmailApi();
+let xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+let body = new SendPostApi.ModelsEmailMessage(); // ModelsEmailMessage | The Email Message
+let opts = {
   'xSendPostMockEmail': true, // Boolean | Mock email header
   'xSendPostMockTimeShift': "xSendPostMockTimeShift_example" // String | Mock email time shift
 };
-
-var callback = function(error, data, response) {
+apiInstance.emailRouterSendEmail(xSubAccountApiKey, body, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.emailRouterSendEmail(xSubAccountApiKey, body, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -60,11 +58,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="emailRouterSendEmailWithTemplate"></a>
-# **emailRouterSendEmailWithTemplate**
+
+## emailRouterSendEmailWithTemplate
+
 > [ModelsEmailResponse] emailRouterSendEmailWithTemplate(xSubAccountApiKey, body)
 
 
@@ -72,27 +71,24 @@ No authorization required
 Send Email To Contacts With Template
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.SubaccountemailApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var body = new SendPostApi.ModelsEmailMessage(); // ModelsEmailMessage | The Email Message
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.SubaccountEmailApi();
+let xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+let body = new SendPostApi.ModelsEmailMessage(); // ModelsEmailMessage | The Email Message
+apiInstance.emailRouterSendEmailWithTemplate(xSubAccountApiKey, body, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.emailRouterSendEmailWithTemplate(xSubAccountApiKey, body, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -109,6 +105,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 

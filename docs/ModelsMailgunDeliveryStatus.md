@@ -1,6 +1,7 @@
 # SendPostApi.ModelsMailgunDeliveryStatus
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **attemptNo** | **Number** |  | [optional] 

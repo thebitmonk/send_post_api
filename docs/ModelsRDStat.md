@@ -1,10 +1,11 @@
 # SendPostApi.ModelsRDStat
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **clicked** | **Number** |  | [optional] 
-**_date** | **String** |  | [optional] 
+**date** | **String** |  | [optional] 
 **delivered** | **Number** |  | [optional] 
 **dropped** | **Number** |  | [optional] 
 **hardBounced** | **Number** |  | [optional] 

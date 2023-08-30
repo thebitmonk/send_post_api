@@ -1,6 +1,7 @@
 # SendPostApi.ModelsDomainCheckResult
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **dmarcPresent** | **Boolean** |  | [optional] 

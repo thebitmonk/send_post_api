@@ -1,6 +1,7 @@
 # SendPostApi.ModelsComment
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **author** | [**ModelsMember**](ModelsMember.md) |  | [optional] 

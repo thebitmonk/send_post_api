@@ -1,6 +1,7 @@
 # SendPostApi.ModelsIPProviderSettings
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **maxConcurrentConnections** | **Number** |  | [optional] 

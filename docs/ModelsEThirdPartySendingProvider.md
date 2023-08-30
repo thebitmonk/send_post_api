@@ -1,6 +1,7 @@
 # SendPostApi.ModelsEThirdPartySendingProvider
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **domain** | **String** |  | [optional] 
@@ -11,6 +12,6 @@ Name | Type | Description | Notes
 **port** | **Number** |  | [optional] 
 **retryTime** | **Number** |  | [optional] 
 **secret** | **String** |  | [optional] 
-**type** | [**ModelsThirdPartySendingProviderType**](ModelsThirdPartySendingProviderType.md) |  | [optional] 
+**type** | **Number** |  | [optional] 
 
 

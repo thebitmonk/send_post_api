@@ -1,10 +1,11 @@
 # SendPostApi.ModelsAutoWarmupRecipientResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **email** | **String** |  | [optional] 
-**errorCode** | [**ModelsEmailErrorCode**](ModelsEmailErrorCode.md) |  | [optional] 
+**errorCode** | **Object** |  | [optional] 
 **message** | **String** |  | [optional] 
 
 

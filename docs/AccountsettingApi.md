@@ -1,42 +1,41 @@
-# SendPostApi.AccountsettingApi
+# SendPostApi.AccountSettingApi
 
 All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**accountSettingRouterCheckDedicatedIPExist**](AccountsettingApi.md#accountSettingRouterCheckDedicatedIPExist) | **GET** /account/setting/dedicated | 
-[**accountSettingRouterGetAccount**](AccountsettingApi.md#accountSettingRouterGetAccount) | **GET** /account/setting/ | 
-[**accountSettingRouterUpdate**](AccountsettingApi.md#accountSettingRouterUpdate) | **PUT** /account/setting/ | 
+[**accountSettingRouterCheckDedicatedIPExist**](AccountSettingApi.md#accountSettingRouterCheckDedicatedIPExist) | **GET** /account/setting/dedicated | 
+[**accountSettingRouterGetAccount**](AccountSettingApi.md#accountSettingRouterGetAccount) | **GET** /account/setting/ | 
+[**accountSettingRouterUpdate**](AccountSettingApi.md#accountSettingRouterUpdate) | **PUT** /account/setting/ | 
 
 
-<a name="accountSettingRouterCheckDedicatedIPExist"></a>
-# **accountSettingRouterCheckDedicatedIPExist**
+
+## accountSettingRouterCheckDedicatedIPExist
+
 > ModelsDedicatedIPs accountSettingRouterCheckDedicatedIPExist(xAccountApiKey)
 
 
 
-check if account has dedicated ip's
+check if account has dedicated ip&#39;s
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountsettingApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountSettingApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+apiInstance.accountSettingRouterCheckDedicatedIPExist(xAccountApiKey, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.accountSettingRouterCheckDedicatedIPExist(xAccountApiKey, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -52,11 +51,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="accountSettingRouterGetAccount"></a>
-# **accountSettingRouterGetAccount**
+
+## accountSettingRouterGetAccount
+
 > ModelsAccount accountSettingRouterGetAccount(xAccountApiKey)
 
 
@@ -64,25 +64,23 @@ No authorization required
 get latest account details
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountsettingApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountSettingApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+apiInstance.accountSettingRouterGetAccount(xAccountApiKey, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.accountSettingRouterGetAccount(xAccountApiKey, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -98,11 +96,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="accountSettingRouterUpdate"></a>
-# **accountSettingRouterUpdate**
+
+## accountSettingRouterUpdate
+
 > ModelsAccount accountSettingRouterUpdate(xAccountApiKey, body)
 
 
@@ -110,27 +109,24 @@ No authorization required
 update account settings
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountsettingApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var body = new SendPostApi.ModelsEAccountSetting(); // ModelsEAccountSetting | The account settings to be updated
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountSettingApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let body = new SendPostApi.ModelsEAccountSetting(); // ModelsEAccountSetting | The account settings to be updated
+apiInstance.accountSettingRouterUpdate(xAccountApiKey, body, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.accountSettingRouterUpdate(xAccountApiKey, body, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -147,6 +143,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 

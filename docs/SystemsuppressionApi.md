@@ -1,14 +1,15 @@
-# SendPostApi.SystemsuppressionApi
+# SendPostApi.SystemSuppressionApi
 
 All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**systemSuppressionRouterCreateSuppressionsViaSendX**](SystemsuppressionApi.md#systemSuppressionRouterCreateSuppressionsViaSendX) | **POST** /system/suppression/{subAccountId} | 
+[**systemSuppressionRouterCreateSuppressionsViaSendX**](SystemSuppressionApi.md#systemSuppressionRouterCreateSuppressionsViaSendX) | **POST** /system/suppression/{subAccountId} | 
 
 
-<a name="systemSuppressionRouterCreateSuppressionsViaSendX"></a>
-# **systemSuppressionRouterCreateSuppressionsViaSendX**
+
+## systemSuppressionRouterCreateSuppressionsViaSendX
+
 > ModelsSuppression systemSuppressionRouterCreateSuppressionsViaSendX(xSystemApiKey, subAccountId, body)
 
 
@@ -16,29 +17,25 @@ Method | HTTP request | Description
 Add Email Addresses To Suppression List
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.SystemsuppressionApi();
-
-var xSystemApiKey = "xSystemApiKey_example"; // String | System API Key
-
-var subAccountId = 789; // Number | The SubAccountId you want to delete
-
-var body = new SendPostApi.ModelsRSuppression(); // ModelsRSuppression | Suppression content
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.SystemSuppressionApi();
+let xSystemApiKey = "xSystemApiKey_example"; // String | System API Key
+let subAccountId = 789; // Number | The SubAccountId you want to delete
+let body = new SendPostApi.ModelsRSuppression(); // ModelsRSuppression | Suppression content
+apiInstance.systemSuppressionRouterCreateSuppressionsViaSendX(xSystemApiKey, subAccountId, body, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.systemSuppressionRouterCreateSuppressionsViaSendX(xSystemApiKey, subAccountId, body, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -56,6 +53,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 

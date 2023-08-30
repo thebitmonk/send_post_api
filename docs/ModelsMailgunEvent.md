@@ -1,6 +1,7 @@
 # SendPostApi.ModelsMailgunEvent
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **clientInfo** | [**ModelsMailgunClientInfo**](ModelsMailgunClientInfo.md) |  | [optional] 

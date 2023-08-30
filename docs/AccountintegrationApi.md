@@ -1,21 +1,22 @@
-# SendPostApi.AccountintegrationApi
+# SendPostApi.AccountIntegrationApi
 
 All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**accountIntegrationRouterCount**](AccountintegrationApi.md#accountIntegrationRouterCount) | **GET** /account/integration/count | 
-[**accountIntegrationRouterCreate**](AccountintegrationApi.md#accountIntegrationRouterCreate) | **POST** /account/integration/{itype} | 
-[**accountIntegrationRouterDelete**](AccountintegrationApi.md#accountIntegrationRouterDelete) | **DELETE** /account/integration/{itype} | 
-[**accountIntegrationRouterDisableHetrixToolsIPMonitoring**](AccountintegrationApi.md#accountIntegrationRouterDisableHetrixToolsIPMonitoring) | **DELETE** /account/integration/hetrixtools/monitor/{ipid} | 
-[**accountIntegrationRouterEnableHetrixToolsIPMonitoring**](AccountintegrationApi.md#accountIntegrationRouterEnableHetrixToolsIPMonitoring) | **POST** /account/integration/hetrixtools/monitor/{ipid} | 
-[**accountIntegrationRouterGetAll**](AccountintegrationApi.md#accountIntegrationRouterGetAll) | **GET** /account/integration/ | 
-[**accountIntegrationRouterGetMonitoredIPStats**](AccountintegrationApi.md#accountIntegrationRouterGetMonitoredIPStats) | **GET** /account/integration/hetrixtools/monitor/stat/{ipid} | 
-[**accountIntegrationRouterUpdate**](AccountintegrationApi.md#accountIntegrationRouterUpdate) | **PUT** /account/integration/{itype} | 
+[**accountIntegrationRouterCount**](AccountIntegrationApi.md#accountIntegrationRouterCount) | **GET** /account/integration/count | 
+[**accountIntegrationRouterCreate**](AccountIntegrationApi.md#accountIntegrationRouterCreate) | **POST** /account/integration/{itype} | 
+[**accountIntegrationRouterDelete**](AccountIntegrationApi.md#accountIntegrationRouterDelete) | **DELETE** /account/integration/{itype} | 
+[**accountIntegrationRouterDisableHetrixToolsIPMonitoring**](AccountIntegrationApi.md#accountIntegrationRouterDisableHetrixToolsIPMonitoring) | **DELETE** /account/integration/hetrixtools/monitor/{ipid} | 
+[**accountIntegrationRouterEnableHetrixToolsIPMonitoring**](AccountIntegrationApi.md#accountIntegrationRouterEnableHetrixToolsIPMonitoring) | **POST** /account/integration/hetrixtools/monitor/{ipid} | 
+[**accountIntegrationRouterGetAll**](AccountIntegrationApi.md#accountIntegrationRouterGetAll) | **GET** /account/integration/ | 
+[**accountIntegrationRouterGetMonitoredIPStats**](AccountIntegrationApi.md#accountIntegrationRouterGetMonitoredIPStats) | **GET** /account/integration/hetrixtools/monitor/stat/{ipid} | 
+[**accountIntegrationRouterUpdate**](AccountIntegrationApi.md#accountIntegrationRouterUpdate) | **PUT** /account/integration/{itype} | 
 
 
-<a name="accountIntegrationRouterCount"></a>
-# **accountIntegrationRouterCount**
+
+## accountIntegrationRouterCount
+
 > ModelsCountStat accountIntegrationRouterCount(xAccountApiKey)
 
 
@@ -23,25 +24,23 @@ Method | HTTP request | Description
 Count Total AccountIntegrations
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountintegrationApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountIntegrationApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+apiInstance.accountIntegrationRouterCount(xAccountApiKey, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.accountIntegrationRouterCount(xAccountApiKey, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -57,11 +56,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="accountIntegrationRouterCreate"></a>
-# **accountIntegrationRouterCreate**
+
+## accountIntegrationRouterCreate
+
 > ModelsIntegration accountIntegrationRouterCreate(xAccountApiKey, itype, body)
 
 
@@ -69,29 +69,25 @@ No authorization required
 Create Integration
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountintegrationApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var itype = "itype_example"; // String | The integration type you want to create
-
-var body = new SendPostApi.ModelsEIntegration(); // ModelsEIntegration | The Integration content
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountIntegrationApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let itype = "itype_example"; // String | The integration type you want to create
+let body = new SendPostApi.ModelsEIntegration(); // ModelsEIntegration | The Integration content
+apiInstance.accountIntegrationRouterCreate(xAccountApiKey, itype, body, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.accountIntegrationRouterCreate(xAccountApiKey, itype, body, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -109,11 +105,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="accountIntegrationRouterDelete"></a>
-# **accountIntegrationRouterDelete**
+
+## accountIntegrationRouterDelete
+
 > ModelsDeleteResponse accountIntegrationRouterDelete(xAccountApiKey, itype)
 
 
@@ -121,27 +118,24 @@ No authorization required
 Delete Integration
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountintegrationApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var itype = "itype_example"; // String | The integration type you want to update
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountIntegrationApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let itype = "itype_example"; // String | The integration type you want to update
+apiInstance.accountIntegrationRouterDelete(xAccountApiKey, itype, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.accountIntegrationRouterDelete(xAccountApiKey, itype, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -158,11 +152,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="accountIntegrationRouterDisableHetrixToolsIPMonitoring"></a>
-# **accountIntegrationRouterDisableHetrixToolsIPMonitoring**
+
+## accountIntegrationRouterDisableHetrixToolsIPMonitoring
+
 > ModelsDeleteResponse accountIntegrationRouterDisableHetrixToolsIPMonitoring(xAccountApiKey, ipid)
 
 
@@ -170,27 +165,24 @@ No authorization required
 Disable IP Monitoring for a single IP
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountintegrationApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var ipid = 789; // Number | the IPId you want to disable monitoring for
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountIntegrationApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let ipid = 789; // Number | the IPId you want to disable monitoring for
+apiInstance.accountIntegrationRouterDisableHetrixToolsIPMonitoring(xAccountApiKey, ipid, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.accountIntegrationRouterDisableHetrixToolsIPMonitoring(xAccountApiKey, ipid, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -207,11 +199,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="accountIntegrationRouterEnableHetrixToolsIPMonitoring"></a>
-# **accountIntegrationRouterEnableHetrixToolsIPMonitoring**
+
+## accountIntegrationRouterEnableHetrixToolsIPMonitoring
+
 > ModelsResponse accountIntegrationRouterEnableHetrixToolsIPMonitoring(xAccountApiKey, ipid)
 
 
@@ -219,27 +212,24 @@ No authorization required
 Enable IP Monitoring for a single IP
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountintegrationApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var ipid = 789; // Number | the IPId you want to enable monitoring for
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountIntegrationApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let ipid = 789; // Number | the IPId you want to enable monitoring for
+apiInstance.accountIntegrationRouterEnableHetrixToolsIPMonitoring(xAccountApiKey, ipid, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.accountIntegrationRouterEnableHetrixToolsIPMonitoring(xAccountApiKey, ipid, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -256,11 +246,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="accountIntegrationRouterGetAll"></a>
-# **accountIntegrationRouterGetAll**
+
+## accountIntegrationRouterGetAll
+
 > [ModelsIntegration] accountIntegrationRouterGetAll(xAccountApiKey)
 
 
@@ -268,25 +259,23 @@ No authorization required
 Get All Integrations
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountintegrationApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountIntegrationApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+apiInstance.accountIntegrationRouterGetAll(xAccountApiKey, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.accountIntegrationRouterGetAll(xAccountApiKey, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -302,11 +291,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="accountIntegrationRouterGetMonitoredIPStats"></a>
-# **accountIntegrationRouterGetMonitoredIPStats**
+
+## accountIntegrationRouterGetMonitoredIPStats
+
 > [ModelsRHetrixtoolsMonitorStat] accountIntegrationRouterGetMonitoredIPStats(xAccountApiKey, ipid, opts)
 
 
@@ -314,31 +304,28 @@ No authorization required
 Get Monitored IP Stats
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountintegrationApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var ipid = 789; // Number | the IPId for which you want monitored stats
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountIntegrationApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let ipid = 789; // Number | the IPId for which you want monitored stats
+let opts = {
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
 };
-
-var callback = function(error, data, response) {
+apiInstance.accountIntegrationRouterGetMonitoredIPStats(xAccountApiKey, ipid, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.accountIntegrationRouterGetMonitoredIPStats(xAccountApiKey, ipid, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -357,11 +344,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="accountIntegrationRouterUpdate"></a>
-# **accountIntegrationRouterUpdate**
+
+## accountIntegrationRouterUpdate
+
 > ModelsIntegration accountIntegrationRouterUpdate(xAccountApiKey, itype, body)
 
 
@@ -369,29 +357,25 @@ No authorization required
 Update Integration
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountintegrationApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var itype = "itype_example"; // String | The integration type you want to update
-
-var body = new SendPostApi.ModelsEIntegration(); // ModelsEIntegration | The Integration content
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountIntegrationApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let itype = "itype_example"; // String | The integration type you want to update
+let body = new SendPostApi.ModelsEIntegration(); // ModelsEIntegration | The Integration content
+apiInstance.accountIntegrationRouterUpdate(xAccountApiKey, itype, body, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.accountIntegrationRouterUpdate(xAccountApiKey, itype, body, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -409,6 +393,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 

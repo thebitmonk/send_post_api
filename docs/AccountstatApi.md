@@ -1,26 +1,27 @@
-# SendPostApi.AccountstatApi
+# SendPostApi.AccountStatApi
 
 All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**accountStatRouterGetAccountCycleUsage**](AccountstatApi.md#accountStatRouterGetAccountCycleUsage) | **GET** /account/stat/cycleusage | 
-[**accountStatRouterGetAllAccountStats**](AccountstatApi.md#accountStatRouterGetAllAccountStats) | **GET** /account/stat/ | 
-[**accountStatRouterGetAllAccountStatsByGroup**](AccountstatApi.md#accountStatRouterGetAllAccountStatsByGroup) | **GET** /account/stat/group | 
-[**accountStatRouterGetAllAggregateAccountStats**](AccountstatApi.md#accountStatRouterGetAllAggregateAccountStats) | **GET** /account/stat/aggregate | 
-[**accountStatRouterGetAllAggregateAccountStatsByGroup**](AccountstatApi.md#accountStatRouterGetAllAggregateAccountStatsByGroup) | **GET** /account/stat/aggregate/group | 
-[**accountStatRouterGetAllAggregateDomainStats**](AccountstatApi.md#accountStatRouterGetAllAggregateDomainStats) | **GET** /account/stat/aggregate/domain | 
-[**accountStatRouterGetAllAggregateDomainStatsCount**](AccountstatApi.md#accountStatRouterGetAllAggregateDomainStatsCount) | **GET** /account/stat/aggregate/domain/count | 
-[**accountStatRouterGetAllAggregateIPStats**](AccountstatApi.md#accountStatRouterGetAllAggregateIPStats) | **GET** /account/stat/aggregate/ip | 
-[**accountStatRouterGetAllAggregateIPStatsCount**](AccountstatApi.md#accountStatRouterGetAllAggregateIPStatsCount) | **GET** /account/stat/aggregate/ip/count | 
-[**accountStatRouterGetAllAggregateSubAccountStats**](AccountstatApi.md#accountStatRouterGetAllAggregateSubAccountStats) | **GET** /account/stat/aggregate/subaccount | 
-[**accountStatRouterGetAllAggregateSubAccountStatsCount**](AccountstatApi.md#accountStatRouterGetAllAggregateSubAccountStatsCount) | **GET** /account/stat/aggregate/subaccount/count | 
-[**accountStatRouterGetAllAggregateThirdPartyProvidersStats**](AccountstatApi.md#accountStatRouterGetAllAggregateThirdPartyProvidersStats) | **GET** /account/stat/aggregate/tpsp | 
-[**accountStatRouterGetAllAggregateThirdPartyProvidersStatsCount**](AccountstatApi.md#accountStatRouterGetAllAggregateThirdPartyProvidersStatsCount) | **GET** /account/stat/aggregate/tpsp/count | 
+[**accountStatRouterGetAccountCycleUsage**](AccountStatApi.md#accountStatRouterGetAccountCycleUsage) | **GET** /account/stat/cycleusage | 
+[**accountStatRouterGetAllAccountStats**](AccountStatApi.md#accountStatRouterGetAllAccountStats) | **GET** /account/stat/ | 
+[**accountStatRouterGetAllAccountStatsByGroup**](AccountStatApi.md#accountStatRouterGetAllAccountStatsByGroup) | **GET** /account/stat/group | 
+[**accountStatRouterGetAllAggregateAccountStats**](AccountStatApi.md#accountStatRouterGetAllAggregateAccountStats) | **GET** /account/stat/aggregate | 
+[**accountStatRouterGetAllAggregateAccountStatsByGroup**](AccountStatApi.md#accountStatRouterGetAllAggregateAccountStatsByGroup) | **GET** /account/stat/aggregate/group | 
+[**accountStatRouterGetAllAggregateDomainStats**](AccountStatApi.md#accountStatRouterGetAllAggregateDomainStats) | **GET** /account/stat/aggregate/domain | 
+[**accountStatRouterGetAllAggregateDomainStatsCount**](AccountStatApi.md#accountStatRouterGetAllAggregateDomainStatsCount) | **GET** /account/stat/aggregate/domain/count | 
+[**accountStatRouterGetAllAggregateIPStats**](AccountStatApi.md#accountStatRouterGetAllAggregateIPStats) | **GET** /account/stat/aggregate/ip | 
+[**accountStatRouterGetAllAggregateIPStatsCount**](AccountStatApi.md#accountStatRouterGetAllAggregateIPStatsCount) | **GET** /account/stat/aggregate/ip/count | 
+[**accountStatRouterGetAllAggregateSubAccountStats**](AccountStatApi.md#accountStatRouterGetAllAggregateSubAccountStats) | **GET** /account/stat/aggregate/subaccount | 
+[**accountStatRouterGetAllAggregateSubAccountStatsCount**](AccountStatApi.md#accountStatRouterGetAllAggregateSubAccountStatsCount) | **GET** /account/stat/aggregate/subaccount/count | 
+[**accountStatRouterGetAllAggregateThirdPartyProvidersStats**](AccountStatApi.md#accountStatRouterGetAllAggregateThirdPartyProvidersStats) | **GET** /account/stat/aggregate/tpsp | 
+[**accountStatRouterGetAllAggregateThirdPartyProvidersStatsCount**](AccountStatApi.md#accountStatRouterGetAllAggregateThirdPartyProvidersStatsCount) | **GET** /account/stat/aggregate/tpsp/count | 
 
 
-<a name="accountStatRouterGetAccountCycleUsage"></a>
-# **accountStatRouterGetAccountCycleUsage**
+
+## accountStatRouterGetAccountCycleUsage
+
 > ModelsAccountCycleUsage accountStatRouterGetAccountCycleUsage(xAccountApiKey)
 
 
@@ -28,25 +29,23 @@ Method | HTTP request | Description
 Responds back with Account Processed Mails Stat
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountStatApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+apiInstance.accountStatRouterGetAccountCycleUsage(xAccountApiKey, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.accountStatRouterGetAccountCycleUsage(xAccountApiKey, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -62,11 +61,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="accountStatRouterGetAllAccountStats"></a>
-# **accountStatRouterGetAllAccountStats**
+
+## accountStatRouterGetAllAccountStats
+
 > [ModelsRStat] accountStatRouterGetAllAccountStats(xAccountApiKey, opts)
 
 
@@ -74,29 +74,27 @@ No authorization required
 Get All Account Stats
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Sub-Account API Key
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountStatApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Sub-Account API Key
+let opts = {
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
 };
-
-var callback = function(error, data, response) {
+apiInstance.accountStatRouterGetAllAccountStats(xAccountApiKey, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.accountStatRouterGetAllAccountStats(xAccountApiKey, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -114,11 +112,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="accountStatRouterGetAllAccountStatsByGroup"></a>
-# **accountStatRouterGetAllAccountStatsByGroup**
+
+## accountStatRouterGetAllAccountStatsByGroup
+
 > [ModelsRStat] accountStatRouterGetAllAccountStatsByGroup(xAccountApiKey, group, opts)
 
 
@@ -126,31 +125,28 @@ No authorization required
 Get All Account Stats by Group
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Sub-Account API Key
-
-var group = "group_example"; // String | the group whose stats you want
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountStatApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Sub-Account API Key
+let group = "group_example"; // String | the group whose stats you want
+let opts = {
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
 };
-
-var callback = function(error, data, response) {
+apiInstance.accountStatRouterGetAllAccountStatsByGroup(xAccountApiKey, group, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.accountStatRouterGetAllAccountStatsByGroup(xAccountApiKey, group, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -169,11 +165,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="accountStatRouterGetAllAggregateAccountStats"></a>
-# **accountStatRouterGetAllAggregateAccountStats**
+
+## accountStatRouterGetAllAggregateAccountStats
+
 > ModelsStat accountStatRouterGetAllAggregateAccountStats(xAccountApiKey, opts)
 
 
@@ -181,29 +178,27 @@ No authorization required
 Get All Aggregate Stats
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountStatApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let opts = {
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
 };
-
-var callback = function(error, data, response) {
+apiInstance.accountStatRouterGetAllAggregateAccountStats(xAccountApiKey, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.accountStatRouterGetAllAggregateAccountStats(xAccountApiKey, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -221,11 +216,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="accountStatRouterGetAllAggregateAccountStatsByGroup"></a>
-# **accountStatRouterGetAllAggregateAccountStatsByGroup**
+
+## accountStatRouterGetAllAggregateAccountStatsByGroup
+
 > ModelsStat accountStatRouterGetAllAggregateAccountStatsByGroup(xAccountApiKey, group, opts)
 
 
@@ -233,31 +229,28 @@ No authorization required
 Get All Aggregate Stats by Group
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Sub-Account API Key
-
-var group = "group_example"; // String | the group whose stats you want
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountStatApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Sub-Account API Key
+let group = "group_example"; // String | the group whose stats you want
+let opts = {
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
 };
-
-var callback = function(error, data, response) {
+apiInstance.accountStatRouterGetAllAggregateAccountStatsByGroup(xAccountApiKey, group, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.accountStatRouterGetAllAggregateAccountStatsByGroup(xAccountApiKey, group, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -276,11 +269,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="accountStatRouterGetAllAggregateDomainStats"></a>
-# **accountStatRouterGetAllAggregateDomainStats**
+
+## accountStatRouterGetAllAggregateDomainStats
+
 > [ModelsAGDomainStat] accountStatRouterGetAllAggregateDomainStats(xAccountApiKey, from, to, opts)
 
 
@@ -288,18 +282,15 @@ No authorization required
 Get All Aggregate Domain Stats
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var from = "from_example"; // String | from date
-
-var to = "to_example"; // String | to date
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountStatApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let from = "from_example"; // String | from date
+let to = "to_example"; // String | to date
+let opts = {
   'filterBy': "filterBy_example", // String | filterBy
   'filterValue': 789, // Number | filterValue
   'orderBy': "orderBy_example", // String | orderBy
@@ -308,18 +299,17 @@ var opts = {
   'offset': 789, // Number | offset
   'limit': 789 // Number | limit
 };
-
-var callback = function(error, data, response) {
+apiInstance.accountStatRouterGetAllAggregateDomainStats(xAccountApiKey, from, to, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.accountStatRouterGetAllAggregateDomainStats(xAccountApiKey, from, to, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -344,11 +334,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="accountStatRouterGetAllAggregateDomainStatsCount"></a>
-# **accountStatRouterGetAllAggregateDomainStatsCount**
+
+## accountStatRouterGetAllAggregateDomainStatsCount
+
 > ModelsCountStat accountStatRouterGetAllAggregateDomainStatsCount(xAccountApiKey, from, to, opts)
 
 
@@ -356,34 +347,30 @@ No authorization required
 Get All Aggregate Domain Stats Count
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var from = "from_example"; // String | from date
-
-var to = "to_example"; // String | to date
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountStatApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let from = "from_example"; // String | from date
+let to = "to_example"; // String | to date
+let opts = {
   'filterBy': "filterBy_example", // String | filterBy
   'filterValue': 789, // Number | filterValue
   'search': "search_example" // String | search term
 };
-
-var callback = function(error, data, response) {
+apiInstance.accountStatRouterGetAllAggregateDomainStatsCount(xAccountApiKey, from, to, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.accountStatRouterGetAllAggregateDomainStatsCount(xAccountApiKey, from, to, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -404,11 +391,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="accountStatRouterGetAllAggregateIPStats"></a>
-# **accountStatRouterGetAllAggregateIPStats**
+
+## accountStatRouterGetAllAggregateIPStats
+
 > [ModelsAGIPStat] accountStatRouterGetAllAggregateIPStats(xAccountApiKey, from, to, opts)
 
 
@@ -416,18 +404,15 @@ No authorization required
 Get All Aggregate IP Stats
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var from = "from_example"; // String | from date
-
-var to = "to_example"; // String | to date
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountStatApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let from = "from_example"; // String | from date
+let to = "to_example"; // String | to date
+let opts = {
   'filterBy': "filterBy_example", // String | filterBy
   'filterValue': 789, // Number | filterValue
   'limitBy': "limitBy_example", // String | limitBy
@@ -438,18 +423,17 @@ var opts = {
   'offset': 789, // Number | offset
   'limit': 789 // Number | limit
 };
-
-var callback = function(error, data, response) {
+apiInstance.accountStatRouterGetAllAggregateIPStats(xAccountApiKey, from, to, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.accountStatRouterGetAllAggregateIPStats(xAccountApiKey, from, to, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -476,11 +460,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="accountStatRouterGetAllAggregateIPStatsCount"></a>
-# **accountStatRouterGetAllAggregateIPStatsCount**
+
+## accountStatRouterGetAllAggregateIPStatsCount
+
 > ModelsCountStat accountStatRouterGetAllAggregateIPStatsCount(xAccountApiKey, from, to, opts)
 
 
@@ -488,36 +473,32 @@ No authorization required
 Get All Aggregate IP Stats Count
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var from = "from_example"; // String | from date
-
-var to = "to_example"; // String | to date
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountStatApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let from = "from_example"; // String | from date
+let to = "to_example"; // String | to date
+let opts = {
   'filterBy': "filterBy_example", // String | filterBy
   'filterValue': 789, // Number | filterValue
   'limitBy': "limitBy_example", // String | limitBy
   'limitValue': 789, // Number | limitValue
   'search': "search_example" // String | search term
 };
-
-var callback = function(error, data, response) {
+apiInstance.accountStatRouterGetAllAggregateIPStatsCount(xAccountApiKey, from, to, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.accountStatRouterGetAllAggregateIPStatsCount(xAccountApiKey, from, to, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -540,11 +521,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="accountStatRouterGetAllAggregateSubAccountStats"></a>
-# **accountStatRouterGetAllAggregateSubAccountStats**
+
+## accountStatRouterGetAllAggregateSubAccountStats
+
 > [ModelsAGSubAccountStat] accountStatRouterGetAllAggregateSubAccountStats(xAccountApiKey, from, to, opts)
 
 
@@ -552,18 +534,15 @@ No authorization required
 Get All Aggregate SubAccount Stats
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var from = "from_example"; // String | from date
-
-var to = "to_example"; // String | to date
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountStatApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let from = "from_example"; // String | from date
+let to = "to_example"; // String | to date
+let opts = {
   'filterBy': "filterBy_example", // String | filterBy
   'filterValue': 789, // Number | filterValue
   'orderBy': "orderBy_example", // String | orderBy
@@ -572,18 +551,17 @@ var opts = {
   'offset': 789, // Number | offset
   'limit': 789 // Number | limit
 };
-
-var callback = function(error, data, response) {
+apiInstance.accountStatRouterGetAllAggregateSubAccountStats(xAccountApiKey, from, to, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.accountStatRouterGetAllAggregateSubAccountStats(xAccountApiKey, from, to, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -608,11 +586,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="accountStatRouterGetAllAggregateSubAccountStatsCount"></a>
-# **accountStatRouterGetAllAggregateSubAccountStatsCount**
+
+## accountStatRouterGetAllAggregateSubAccountStatsCount
+
 > ModelsCountStat accountStatRouterGetAllAggregateSubAccountStatsCount(xAccountApiKey, from, to, opts)
 
 
@@ -620,34 +599,30 @@ No authorization required
 Get All Aggregate SubAccount Stats Count
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var from = "from_example"; // String | from date
-
-var to = "to_example"; // String | to date
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountStatApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let from = "from_example"; // String | from date
+let to = "to_example"; // String | to date
+let opts = {
   'filterBy': "filterBy_example", // String | filterBy
   'filterValue': 789, // Number | filterValue
   'search': "search_example" // String | search term
 };
-
-var callback = function(error, data, response) {
+apiInstance.accountStatRouterGetAllAggregateSubAccountStatsCount(xAccountApiKey, from, to, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.accountStatRouterGetAllAggregateSubAccountStatsCount(xAccountApiKey, from, to, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -668,11 +643,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="accountStatRouterGetAllAggregateThirdPartyProvidersStats"></a>
-# **accountStatRouterGetAllAggregateThirdPartyProvidersStats**
+
+## accountStatRouterGetAllAggregateThirdPartyProvidersStats
+
 > [ModelsAGTPSPStat] accountStatRouterGetAllAggregateThirdPartyProvidersStats(xAccountApiKey, from, to, opts)
 
 
@@ -680,18 +656,15 @@ No authorization required
 Get All Aggregate Third Party Providers Stats
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var from = "from_example"; // String | from date
-
-var to = "to_example"; // String | to date
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountStatApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let from = "from_example"; // String | from date
+let to = "to_example"; // String | to date
+let opts = {
   'filterBy': "filterBy_example", // String | filterBy
   'filterValue': 789, // Number | filterValue
   'orderBy': "orderBy_example", // String | orderBy
@@ -700,18 +673,17 @@ var opts = {
   'offset': 789, // Number | offset
   'limit': 789 // Number | limit
 };
-
-var callback = function(error, data, response) {
+apiInstance.accountStatRouterGetAllAggregateThirdPartyProvidersStats(xAccountApiKey, from, to, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.accountStatRouterGetAllAggregateThirdPartyProvidersStats(xAccountApiKey, from, to, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -736,11 +708,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="accountStatRouterGetAllAggregateThirdPartyProvidersStatsCount"></a>
-# **accountStatRouterGetAllAggregateThirdPartyProvidersStatsCount**
+
+## accountStatRouterGetAllAggregateThirdPartyProvidersStatsCount
+
 > ModelsCountStat accountStatRouterGetAllAggregateThirdPartyProvidersStatsCount(xAccountApiKey, from, to, opts)
 
 
@@ -748,34 +721,30 @@ No authorization required
 Get All Aggregate Third Party Providers Stats Count
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var from = "from_example"; // String | from date
-
-var to = "to_example"; // String | to date
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountStatApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let from = "from_example"; // String | from date
+let to = "to_example"; // String | to date
+let opts = {
   'filterBy': "filterBy_example", // String | filterBy
   'filterValue': 789, // Number | filterValue
   'search': "search_example" // String | search term
 };
-
-var callback = function(error, data, response) {
+apiInstance.accountStatRouterGetAllAggregateThirdPartyProvidersStatsCount(xAccountApiKey, from, to, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.accountStatRouterGetAllAggregateThirdPartyProvidersStatsCount(xAccountApiKey, from, to, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -796,6 +765,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 

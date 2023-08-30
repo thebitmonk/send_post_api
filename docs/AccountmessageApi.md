@@ -1,17 +1,18 @@
-# SendPostApi.AccountmessageApi
+# SendPostApi.AccountMessageApi
 
 All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**messageRouterGet**](AccountmessageApi.md#messageRouterGet) | **GET** /account/message/{messageId} | 
-[**messageRouterGetAllEventsForAMessageId**](AccountmessageApi.md#messageRouterGetAllEventsForAMessageId) | **GET** /account/message/{messageId}/events | 
-[**messageRouterGetAllEventsForAMessageIdFromANode**](AccountmessageApi.md#messageRouterGetAllEventsForAMessageIdFromANode) | **GET** /account/message/node/{messageId}/events | 
-[**messageRouterGetMessageFromNode**](AccountmessageApi.md#messageRouterGetMessageFromNode) | **GET** /account/message/node/{messageId} | 
+[**messageRouterGet**](AccountMessageApi.md#messageRouterGet) | **GET** /account/message/{messageId} | 
+[**messageRouterGetAllEventsForAMessageId**](AccountMessageApi.md#messageRouterGetAllEventsForAMessageId) | **GET** /account/message/{messageId}/events | 
+[**messageRouterGetAllEventsForAMessageIdFromANode**](AccountMessageApi.md#messageRouterGetAllEventsForAMessageIdFromANode) | **GET** /account/message/node/{messageId}/events | 
+[**messageRouterGetMessageFromNode**](AccountMessageApi.md#messageRouterGetMessageFromNode) | **GET** /account/message/node/{messageId} | 
 
 
-<a name="messageRouterGet"></a>
-# **messageRouterGet**
+
+## messageRouterGet
+
 > ModelsQEmailMessage messageRouterGet(xAccountApiKey, messageId)
 
 
@@ -19,27 +20,24 @@ Method | HTTP request | Description
 Find Message By Id
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountmessageApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Sub-Account API Key
-
-var messageId = "messageId_example"; // String | the messageId that you want to retrieve
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountMessageApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Sub-Account API Key
+let messageId = "messageId_example"; // String | the messageId that you want to retrieve
+apiInstance.messageRouterGet(xAccountApiKey, messageId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.messageRouterGet(xAccountApiKey, messageId, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -56,11 +54,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="messageRouterGetAllEventsForAMessageId"></a>
-# **messageRouterGetAllEventsForAMessageId**
+
+## messageRouterGetAllEventsForAMessageId
+
 > [ModelsQEvent] messageRouterGetAllEventsForAMessageId(xAccountApiKey, messageId)
 
 
@@ -68,27 +67,24 @@ No authorization required
 Find all events associated with a message id
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountmessageApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var messageId = "messageId_example"; // String | the messageId that you want to retrieve
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountMessageApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let messageId = "messageId_example"; // String | the messageId that you want to retrieve
+apiInstance.messageRouterGetAllEventsForAMessageId(xAccountApiKey, messageId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.messageRouterGetAllEventsForAMessageId(xAccountApiKey, messageId, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -105,11 +101,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="messageRouterGetAllEventsForAMessageIdFromANode"></a>
-# **messageRouterGetAllEventsForAMessageIdFromANode**
+
+## messageRouterGetAllEventsForAMessageIdFromANode
+
 > [ModelsQEvent] messageRouterGetAllEventsForAMessageIdFromANode(xAccountApiKey, messageId)
 
 
@@ -117,27 +114,24 @@ No authorization required
 Find all message events associated with a message id from a specific node
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountmessageApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var messageId = "messageId_example"; // String | the messageId that you want to retrieve
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountMessageApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let messageId = "messageId_example"; // String | the messageId that you want to retrieve
+apiInstance.messageRouterGetAllEventsForAMessageIdFromANode(xAccountApiKey, messageId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.messageRouterGetAllEventsForAMessageIdFromANode(xAccountApiKey, messageId, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -154,11 +148,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="messageRouterGetMessageFromNode"></a>
-# **messageRouterGetMessageFromNode**
+
+## messageRouterGetMessageFromNode
+
 > ModelsQEmailMessage messageRouterGetMessageFromNode(xAccountApiKey, messageId)
 
 
@@ -166,27 +161,24 @@ No authorization required
 Find Message from node by specific Id
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountmessageApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var messageId = "messageId_example"; // String | the messageId that you want to retrieve
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountMessageApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let messageId = "messageId_example"; // String | the messageId that you want to retrieve
+apiInstance.messageRouterGetMessageFromNode(xAccountApiKey, messageId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.messageRouterGetMessageFromNode(xAccountApiKey, messageId, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -203,6 +195,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 

@@ -1,19 +1,20 @@
-# SendPostApi.AccounttpspApi
+# SendPostApi.AccountTpspApi
 
 All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**tPSPRouterCount**](AccounttpspApi.md#tPSPRouterCount) | **GET** /account/tpsp/count | 
-[**tPSPRouterDelete**](AccounttpspApi.md#tPSPRouterDelete) | **DELETE** /account/tpsp/{tpspId} | 
-[**tPSPRouterGet**](AccounttpspApi.md#tPSPRouterGet) | **GET** /account/tpsp/{tpspId} | 
-[**tPSPRouterGetAll**](AccounttpspApi.md#tPSPRouterGetAll) | **GET** /account/tpsp/ | 
-[**tPSPRouterInsert**](AccounttpspApi.md#tPSPRouterInsert) | **POST** /account/tpsp/ | 
-[**tPSPRouterUpdate**](AccounttpspApi.md#tPSPRouterUpdate) | **PUT** /account/tpsp/{tpspId} | 
+[**tPSPRouterCount**](AccountTpspApi.md#tPSPRouterCount) | **GET** /account/tpsp/count | 
+[**tPSPRouterDelete**](AccountTpspApi.md#tPSPRouterDelete) | **DELETE** /account/tpsp/{tpspId} | 
+[**tPSPRouterGet**](AccountTpspApi.md#tPSPRouterGet) | **GET** /account/tpsp/{tpspId} | 
+[**tPSPRouterGetAll**](AccountTpspApi.md#tPSPRouterGetAll) | **GET** /account/tpsp/ | 
+[**tPSPRouterInsert**](AccountTpspApi.md#tPSPRouterInsert) | **POST** /account/tpsp/ | 
+[**tPSPRouterUpdate**](AccountTpspApi.md#tPSPRouterUpdate) | **PUT** /account/tpsp/{tpspId} | 
 
 
-<a name="tPSPRouterCount"></a>
-# **tPSPRouterCount**
+
+## tPSPRouterCount
+
 > ModelsCountStat tPSPRouterCount(xAccountApiKey, opts)
 
 
@@ -21,28 +22,26 @@ Method | HTTP request | Description
 Count Total TPSPs
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccounttpspApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountTpspApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let opts = {
   'search': "search_example" // String | search term
 };
-
-var callback = function(error, data, response) {
+apiInstance.tPSPRouterCount(xAccountApiKey, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.tPSPRouterCount(xAccountApiKey, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -59,11 +58,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="tPSPRouterDelete"></a>
-# **tPSPRouterDelete**
+
+## tPSPRouterDelete
+
 > ModelsDeleteResponse tPSPRouterDelete(xAccountApiKey, tpspId)
 
 
@@ -71,27 +71,24 @@ No authorization required
 Delete ThirdPartySendingProvider
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccounttpspApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var tpspId = 789; // Number | The TPSPID you want to delete
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountTpspApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let tpspId = 789; // Number | The TPSPID you want to delete
+apiInstance.tPSPRouterDelete(xAccountApiKey, tpspId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.tPSPRouterDelete(xAccountApiKey, tpspId, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -108,11 +105,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="tPSPRouterGet"></a>
-# **tPSPRouterGet**
+
+## tPSPRouterGet
+
 > ModelsThirdPartySendingProvider tPSPRouterGet(xAccountApiKey, tpspId)
 
 
@@ -120,27 +118,24 @@ No authorization required
 Find ThirdPartySendingProvider by TPSPID
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccounttpspApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var tpspId = 789; // Number | the TPSPID you want to get
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountTpspApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let tpspId = 789; // Number | the TPSPID you want to get
+apiInstance.tPSPRouterGet(xAccountApiKey, tpspId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.tPSPRouterGet(xAccountApiKey, tpspId, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -157,11 +152,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="tPSPRouterGetAll"></a>
-# **tPSPRouterGetAll**
+
+## tPSPRouterGetAll
+
 > [ModelsThirdPartySendingProvider] tPSPRouterGetAll(xAccountApiKey, opts)
 
 
@@ -169,30 +165,28 @@ No authorization required
 Get All TPSPs
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccounttpspApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountTpspApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let opts = {
   'offset': 789, // Number | offset
   'limit': 789, // Number | limit
   'search': "search_example" // String | search term
 };
-
-var callback = function(error, data, response) {
+apiInstance.tPSPRouterGetAll(xAccountApiKey, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.tPSPRouterGetAll(xAccountApiKey, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -211,11 +205,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="tPSPRouterInsert"></a>
-# **tPSPRouterInsert**
+
+## tPSPRouterInsert
+
 > ModelsThirdPartySendingProvider tPSPRouterInsert(xAccountApiKey, body)
 
 
@@ -223,27 +218,24 @@ No authorization required
 Insert ThirdPartySendingProvider
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccounttpspApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var body = new SendPostApi.ModelsEThirdPartySendingProvider(); // ModelsEThirdPartySendingProvider | The body
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountTpspApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let body = new SendPostApi.ModelsEThirdPartySendingProvider(); // ModelsEThirdPartySendingProvider | The body
+apiInstance.tPSPRouterInsert(xAccountApiKey, body, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.tPSPRouterInsert(xAccountApiKey, body, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -260,11 +252,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="tPSPRouterUpdate"></a>
-# **tPSPRouterUpdate**
+
+## tPSPRouterUpdate
+
 > ModelsThirdPartySendingProvider tPSPRouterUpdate(xAccountApiKey, tpspId, body)
 
 
@@ -272,35 +265,31 @@ No authorization required
 Update ThirdPartySendingProvider
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccounttpspApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var tpspId = 789; // Number | The TPSPID you want to update
-
-var body = new SendPostApi.EUpdateTPSP(); // EUpdateTPSP | The body
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountTpspApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let tpspId = 789; // Number | The TPSPID you want to update
+let body = {key: null}; // Object | The body
+apiInstance.tPSPRouterUpdate(xAccountApiKey, tpspId, body, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.tPSPRouterUpdate(xAccountApiKey, tpspId, body, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
  **tpspId** | **Number**| The TPSPID you want to update | 
- **body** | [**EUpdateTPSP**](EUpdateTPSP.md)| The body | 
+ **body** | **Object**| The body | 
 
 ### Return type
 
@@ -312,6 +301,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 

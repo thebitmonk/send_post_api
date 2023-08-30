@@ -1,6 +1,7 @@
 # SendPostApi.ModelsMailgunClientInfo
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **bot** | **String** |  | [optional] 

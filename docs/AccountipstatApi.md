@@ -1,17 +1,18 @@
-# SendPostApi.AccountipstatApi
+# SendPostApi.AccountIpStatApi
 
 All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**iPStatRouterGetAllAggregateIPStats**](AccountipstatApi.md#iPStatRouterGetAllAggregateIPStats) | **GET** /account/ip/stat/{ipid}/aggregate | 
-[**iPStatRouterGetAllAggregatedProviderStatsForAIP**](AccountipstatApi.md#iPStatRouterGetAllAggregatedProviderStatsForAIP) | **GET** /account/ip/stat/{ipid}/aggregate/provider | 
-[**iPStatRouterGetAllAggregatedSubAccountStatsForAnIP**](AccountipstatApi.md#iPStatRouterGetAllAggregatedSubAccountStatsForAnIP) | **GET** /account/ip/stat/{ipid}/aggregate/subaccount | 
-[**iPStatRouterGetAllIPStats**](AccountipstatApi.md#iPStatRouterGetAllIPStats) | **GET** /account/ip/stat/{ipid} | 
+[**iPStatRouterGetAllAggregateIPStats**](AccountIpStatApi.md#iPStatRouterGetAllAggregateIPStats) | **GET** /account/ip/stat/{ipid}/aggregate | 
+[**iPStatRouterGetAllAggregatedProviderStatsForAIP**](AccountIpStatApi.md#iPStatRouterGetAllAggregatedProviderStatsForAIP) | **GET** /account/ip/stat/{ipid}/aggregate/provider | 
+[**iPStatRouterGetAllAggregatedSubAccountStatsForAnIP**](AccountIpStatApi.md#iPStatRouterGetAllAggregatedSubAccountStatsForAnIP) | **GET** /account/ip/stat/{ipid}/aggregate/subaccount | 
+[**iPStatRouterGetAllIPStats**](AccountIpStatApi.md#iPStatRouterGetAllIPStats) | **GET** /account/ip/stat/{ipid} | 
 
 
-<a name="iPStatRouterGetAllAggregateIPStats"></a>
-# **iPStatRouterGetAllAggregateIPStats**
+
+## iPStatRouterGetAllAggregateIPStats
+
 > ModelsStat iPStatRouterGetAllAggregateIPStats(xAccountApiKey, ipid, opts)
 
 
@@ -19,32 +20,29 @@ Method | HTTP request | Description
 Get All Aggregate Stats
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountipstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var ipid = 789; // Number | the IPId you want to get
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountIpStatApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let ipid = 789; // Number | the IPId you want to get
+let opts = {
   'from': "from_example", // String | from date
   'to': "to_example", // String | to date
   'provider': "provider_example" // String | the provider whose stats you want
 };
-
-var callback = function(error, data, response) {
+apiInstance.iPStatRouterGetAllAggregateIPStats(xAccountApiKey, ipid, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.iPStatRouterGetAllAggregateIPStats(xAccountApiKey, ipid, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -64,11 +62,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="iPStatRouterGetAllAggregatedProviderStatsForAIP"></a>
-# **iPStatRouterGetAllAggregatedProviderStatsForAIP**
+
+## iPStatRouterGetAllAggregatedProviderStatsForAIP
+
 > [ModelsAPStat] iPStatRouterGetAllAggregatedProviderStatsForAIP(xAccountApiKey, ipid, opts)
 
 
@@ -76,31 +75,28 @@ No authorization required
 Get All Aggregated Provider Stats for a IP
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountipstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var ipid = 789; // Number | the IPId you want to get
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountIpStatApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let ipid = 789; // Number | the IPId you want to get
+let opts = {
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
 };
-
-var callback = function(error, data, response) {
+apiInstance.iPStatRouterGetAllAggregatedProviderStatsForAIP(xAccountApiKey, ipid, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.iPStatRouterGetAllAggregatedProviderStatsForAIP(xAccountApiKey, ipid, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -119,11 +115,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="iPStatRouterGetAllAggregatedSubAccountStatsForAnIP"></a>
-# **iPStatRouterGetAllAggregatedSubAccountStatsForAnIP**
+
+## iPStatRouterGetAllAggregatedSubAccountStatsForAnIP
+
 > [ModelsASStat] iPStatRouterGetAllAggregatedSubAccountStatsForAnIP(xAccountApiKey, ipid, opts)
 
 
@@ -131,33 +128,30 @@ No authorization required
 Get All Aggregated Sub-Account Stats for an IP
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountipstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var ipid = 789; // Number | the IPId you want to get
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountIpStatApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let ipid = 789; // Number | the IPId you want to get
+let opts = {
   'from': "from_example", // String | from date
   'to': "to_example", // String | to date
   'provider': "provider_example", // String | the provider whose stats you want
   'sortBy': "sortBy_example" // String | the sorting order
 };
-
-var callback = function(error, data, response) {
+apiInstance.iPStatRouterGetAllAggregatedSubAccountStatsForAnIP(xAccountApiKey, ipid, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.iPStatRouterGetAllAggregatedSubAccountStatsForAnIP(xAccountApiKey, ipid, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -178,11 +172,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="iPStatRouterGetAllIPStats"></a>
-# **iPStatRouterGetAllIPStats**
+
+## iPStatRouterGetAllIPStats
+
 > [ModelsRIPStat] iPStatRouterGetAllIPStats(xAccountApiKey, ipid, opts)
 
 
@@ -190,32 +185,29 @@ No authorization required
 Get All IP Stats
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountipstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var ipid = 789; // Number | the IPId you want to get
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountIpStatApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let ipid = 789; // Number | the IPId you want to get
+let opts = {
   'from': "from_example", // String | from date
   'to': "to_example", // String | to date
   'provider': "provider_example" // String | the provider whose stats you want
 };
-
-var callback = function(error, data, response) {
+apiInstance.iPStatRouterGetAllIPStats(xAccountApiKey, ipid, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.iPStatRouterGetAllIPStats(xAccountApiKey, ipid, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -235,6 +227,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 

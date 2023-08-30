@@ -1,6 +1,7 @@
 # SendPostApi.ModelsConsumerStats
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **connectedTimestamp** | **Number** |  | [optional] 

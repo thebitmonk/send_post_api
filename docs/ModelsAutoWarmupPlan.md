@@ -1,6 +1,7 @@
 # SendPostApi.ModelsAutoWarmupPlan
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created** | **Number** |  | [optional] 

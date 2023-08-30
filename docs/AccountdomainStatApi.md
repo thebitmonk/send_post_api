@@ -1,21 +1,22 @@
-# SendPostApi.AccountdomainstatApi
+# SendPostApi.AccountDomainStatApi
 
 All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**domainStatRouterGetAllAggregateDomainStatsByGroup**](AccountdomainstatApi.md#domainStatRouterGetAllAggregateDomainStatsByGroup) | **GET** /account/domain/stat/{domainId}/aggregate/provider | 
-[**domainStatRouterGetAllAggregatedProviderStatsForADomain**](AccountdomainstatApi.md#domainStatRouterGetAllAggregatedProviderStatsForADomain) | **GET** /account/domain/stat/{domainId}/aggregate/providers | 
-[**domainStatRouterGetAllAggregatedProviderStatsForASpecificSubAccountOfADomain**](AccountdomainstatApi.md#domainStatRouterGetAllAggregatedProviderStatsForASpecificSubAccountOfADomain) | **GET** /account/domain/stat/{domainId}/aggregate/sid/{sid}/providers | 
-[**domainStatRouterGetAllAggregatedSubAccountStatsForAnDomain**](AccountdomainstatApi.md#domainStatRouterGetAllAggregatedSubAccountStatsForAnDomain) | **GET** /account/domain/stat/{domainId}/aggregate/subaccounts | 
-[**domainStatRouterGetAllDomainStats**](AccountdomainstatApi.md#domainStatRouterGetAllDomainStats) | **GET** /account/domain/stat/{domainId} | 
-[**domainStatRouterGetCurrentDomainBlacklistStats**](AccountdomainstatApi.md#domainStatRouterGetCurrentDomainBlacklistStats) | **GET** /account/domain/stat/{domainId}/hetrixtools/stat | 
-[**domainStatRouterGetCurrentDomainPostmasterStats**](AccountdomainstatApi.md#domainStatRouterGetCurrentDomainPostmasterStats) | **GET** /account/domain/stat/{domainId}/postmaster/stat | 
-[**domainStatRouterGetStatsForASingleDomainStats**](AccountdomainstatApi.md#domainStatRouterGetStatsForASingleDomainStats) | **GET** /account/domain/stat/{domainId}/aggregate | 
+[**domainStatRouterGetAllAggregateDomainStatsByGroup**](AccountDomainStatApi.md#domainStatRouterGetAllAggregateDomainStatsByGroup) | **GET** /account/domain/stat/{domainId}/aggregate/provider | 
+[**domainStatRouterGetAllAggregatedProviderStatsForADomain**](AccountDomainStatApi.md#domainStatRouterGetAllAggregatedProviderStatsForADomain) | **GET** /account/domain/stat/{domainId}/aggregate/providers | 
+[**domainStatRouterGetAllAggregatedProviderStatsForASpecificSubAccountOfADomain**](AccountDomainStatApi.md#domainStatRouterGetAllAggregatedProviderStatsForASpecificSubAccountOfADomain) | **GET** /account/domain/stat/{domainId}/aggregate/sid/{sid}/providers | 
+[**domainStatRouterGetAllAggregatedSubAccountStatsForAnDomain**](AccountDomainStatApi.md#domainStatRouterGetAllAggregatedSubAccountStatsForAnDomain) | **GET** /account/domain/stat/{domainId}/aggregate/subaccounts | 
+[**domainStatRouterGetAllDomainStats**](AccountDomainStatApi.md#domainStatRouterGetAllDomainStats) | **GET** /account/domain/stat/{domainId} | 
+[**domainStatRouterGetCurrentDomainBlacklistStats**](AccountDomainStatApi.md#domainStatRouterGetCurrentDomainBlacklistStats) | **GET** /account/domain/stat/{domainId}/hetrixtools/stat | 
+[**domainStatRouterGetCurrentDomainPostmasterStats**](AccountDomainStatApi.md#domainStatRouterGetCurrentDomainPostmasterStats) | **GET** /account/domain/stat/{domainId}/postmaster/stat | 
+[**domainStatRouterGetStatsForASingleDomainStats**](AccountDomainStatApi.md#domainStatRouterGetStatsForASingleDomainStats) | **GET** /account/domain/stat/{domainId}/aggregate | 
 
 
-<a name="domainStatRouterGetAllAggregateDomainStatsByGroup"></a>
-# **domainStatRouterGetAllAggregateDomainStatsByGroup**
+
+## domainStatRouterGetAllAggregateDomainStatsByGroup
+
 > ModelsStat domainStatRouterGetAllAggregateDomainStatsByGroup(xAccountApiKey, domainId, provider, opts)
 
 
@@ -23,33 +24,29 @@ Method | HTTP request | Description
 Get All Aggregate Stats by Group
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountdomainstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var domainId = 789; // Number | the domainName you want to get
-
-var provider = "provider_example"; // String | the group whose stats you want
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountDomainStatApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let domainId = 789; // Number | the domainName you want to get
+let provider = "provider_example"; // String | the group whose stats you want
+let opts = {
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
 };
-
-var callback = function(error, data, response) {
+apiInstance.domainStatRouterGetAllAggregateDomainStatsByGroup(xAccountApiKey, domainId, provider, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.domainStatRouterGetAllAggregateDomainStatsByGroup(xAccountApiKey, domainId, provider, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -69,11 +66,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="domainStatRouterGetAllAggregatedProviderStatsForADomain"></a>
-# **domainStatRouterGetAllAggregatedProviderStatsForADomain**
+
+## domainStatRouterGetAllAggregatedProviderStatsForADomain
+
 > [ModelsPDStat] domainStatRouterGetAllAggregatedProviderStatsForADomain(xAccountApiKey, domainId, opts)
 
 
@@ -81,31 +79,28 @@ No authorization required
 Get All Aggregated Provider Stats for a Domain
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountdomainstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var domainId = 789; // Number | the domainName you want to get
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountDomainStatApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let domainId = 789; // Number | the domainName you want to get
+let opts = {
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
 };
-
-var callback = function(error, data, response) {
+apiInstance.domainStatRouterGetAllAggregatedProviderStatsForADomain(xAccountApiKey, domainId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.domainStatRouterGetAllAggregatedProviderStatsForADomain(xAccountApiKey, domainId, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -124,11 +119,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="domainStatRouterGetAllAggregatedProviderStatsForASpecificSubAccountOfADomain"></a>
-# **domainStatRouterGetAllAggregatedProviderStatsForASpecificSubAccountOfADomain**
+
+## domainStatRouterGetAllAggregatedProviderStatsForASpecificSubAccountOfADomain
+
 > ModelsPDStat domainStatRouterGetAllAggregatedProviderStatsForASpecificSubAccountOfADomain(xAccountApiKey, domainId, sid, opts)
 
 
@@ -136,33 +132,29 @@ No authorization required
 Get All Aggregated Provider Stats for a Specific Sub-Account of a Domain
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountdomainstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var domainId = 789; // Number | the domainName you want to get
-
-var sid = 789; // Number | the Sub Account Id you want to get
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountDomainStatApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let domainId = 789; // Number | the domainName you want to get
+let sid = 789; // Number | the Sub Account Id you want to get
+let opts = {
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
 };
-
-var callback = function(error, data, response) {
+apiInstance.domainStatRouterGetAllAggregatedProviderStatsForASpecificSubAccountOfADomain(xAccountApiKey, domainId, sid, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.domainStatRouterGetAllAggregatedProviderStatsForASpecificSubAccountOfADomain(xAccountApiKey, domainId, sid, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -182,11 +174,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="domainStatRouterGetAllAggregatedSubAccountStatsForAnDomain"></a>
-# **domainStatRouterGetAllAggregatedSubAccountStatsForAnDomain**
+
+## domainStatRouterGetAllAggregatedSubAccountStatsForAnDomain
+
 > ModelsSDStat domainStatRouterGetAllAggregatedSubAccountStatsForAnDomain(xAccountApiKey, domainId, provider, opts)
 
 
@@ -194,33 +187,29 @@ No authorization required
 Get All Aggregated Sub-Account Stats for an Domain
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountdomainstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var domainId = 789; // Number | the domainName you want to get
-
-var provider = "provider_example"; // String | the group whose stats you want
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountDomainStatApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let domainId = 789; // Number | the domainName you want to get
+let provider = "provider_example"; // String | the group whose stats you want
+let opts = {
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
 };
-
-var callback = function(error, data, response) {
+apiInstance.domainStatRouterGetAllAggregatedSubAccountStatsForAnDomain(xAccountApiKey, domainId, provider, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.domainStatRouterGetAllAggregatedSubAccountStatsForAnDomain(xAccountApiKey, domainId, provider, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -240,11 +229,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="domainStatRouterGetAllDomainStats"></a>
-# **domainStatRouterGetAllDomainStats**
+
+## domainStatRouterGetAllDomainStats
+
 > [ModelsRDStat] domainStatRouterGetAllDomainStats(xAccountApiKey, domainId, provider, opts)
 
 
@@ -252,33 +242,29 @@ No authorization required
 Get All Domain Stats
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountdomainstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var domainId = 789; // Number | the domainName you want to get
-
-var provider = "provider_example"; // String | the group whose stats you want
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountDomainStatApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let domainId = 789; // Number | the domainName you want to get
+let provider = "provider_example"; // String | the group whose stats you want
+let opts = {
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
 };
-
-var callback = function(error, data, response) {
+apiInstance.domainStatRouterGetAllDomainStats(xAccountApiKey, domainId, provider, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.domainStatRouterGetAllDomainStats(xAccountApiKey, domainId, provider, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -298,11 +284,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="domainStatRouterGetCurrentDomainBlacklistStats"></a>
-# **domainStatRouterGetCurrentDomainBlacklistStats**
+
+## domainStatRouterGetCurrentDomainBlacklistStats
+
 > ModelsBlacklistResource domainStatRouterGetCurrentDomainBlacklistStats(xAccountApiKey, domainId)
 
 
@@ -310,27 +297,24 @@ No authorization required
 Get All Current Domain Blacklist stats
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountdomainstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var domainId = 789; // Number | the domainName you want to get
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountDomainStatApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let domainId = 789; // Number | the domainName you want to get
+apiInstance.domainStatRouterGetCurrentDomainBlacklistStats(xAccountApiKey, domainId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.domainStatRouterGetCurrentDomainBlacklistStats(xAccountApiKey, domainId, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -347,11 +331,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="domainStatRouterGetCurrentDomainPostmasterStats"></a>
-# **domainStatRouterGetCurrentDomainPostmasterStats**
+
+## domainStatRouterGetCurrentDomainPostmasterStats
+
 > [ModelsPostmasterDomainStat] domainStatRouterGetCurrentDomainPostmasterStats(xAccountApiKey, domainId, opts)
 
 
@@ -359,31 +344,28 @@ No authorization required
 Get All Current Domain Postmaster stats
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountdomainstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var domainId = 789; // Number | the domainName you want to get
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountDomainStatApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let domainId = 789; // Number | the domainName you want to get
+let opts = {
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
 };
-
-var callback = function(error, data, response) {
+apiInstance.domainStatRouterGetCurrentDomainPostmasterStats(xAccountApiKey, domainId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.domainStatRouterGetCurrentDomainPostmasterStats(xAccountApiKey, domainId, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -402,11 +384,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="domainStatRouterGetStatsForASingleDomainStats"></a>
-# **domainStatRouterGetStatsForASingleDomainStats**
+
+## domainStatRouterGetStatsForASingleDomainStats
+
 > ModelsStat domainStatRouterGetStatsForASingleDomainStats(xAccountApiKey, domainId, opts)
 
 
@@ -414,32 +397,29 @@ No authorization required
 Get All Aggregate Stats
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountdomainstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var domainId = "domainId_example"; // String | the domainID you want to get
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountDomainStatApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let domainId = "domainId_example"; // String | the domainID you want to get
+let opts = {
   'from': "from_example", // String | from date
   'to': "to_example", // String | to date
   'filterValue': 789 // Number | filterValue
 };
-
-var callback = function(error, data, response) {
+apiInstance.domainStatRouterGetStatsForASingleDomainStats(xAccountApiKey, domainId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.domainStatRouterGetStatsForASingleDomainStats(xAccountApiKey, domainId, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -459,6 +439,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 

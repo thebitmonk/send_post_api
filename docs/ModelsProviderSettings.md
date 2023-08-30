@@ -1,6 +1,7 @@
 # SendPostApi.ModelsProviderSettings
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **backOffConfiguration** | [**ModelsBackOffConfiguration**](ModelsBackOffConfiguration.md) |  | [optional] 

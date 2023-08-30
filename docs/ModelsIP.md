@@ -1,6 +1,7 @@
 # SendPostApi.ModelsIP
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **aolSettings** | **String** |  | [optional] 
@@ -23,7 +24,7 @@ Name | Type | Description | Notes
 **qqSettings** | **String** |  | [optional] 
 **reverseDNSHostname** | **String** |  | [optional] 
 **systemDomain** | [**ModelsSystemDomain**](ModelsSystemDomain.md) |  | [optional] 
-**type** | [**ModelsIPType**](ModelsIPType.md) |  | [optional] 
+**type** | **Object** |  | [optional] 
 **yahooSettings** | **String** |  | [optional] 
 **yandexSettings** | **String** |  | [optional] 
 **zohoSettings** | **String** |  | [optional] 

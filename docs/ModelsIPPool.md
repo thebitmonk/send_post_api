@@ -1,6 +1,7 @@
 # SendPostApi.ModelsIPPool
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created** | **Number** |  | [optional] 
@@ -9,6 +10,6 @@ Name | Type | Description | Notes
 **name** | **String** |  | [optional] 
 **routingMetaData** | **String** |  | [optional] 
 **routingStrategy** | **Number** |  | [optional] 
-**type** | [**ModelsIPPoolType**](ModelsIPPoolType.md) |  | [optional] 
+**type** | **Object** |  | [optional] 
 
 

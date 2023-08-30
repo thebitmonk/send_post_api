@@ -1,6 +1,7 @@
 # SendPostApi.ModelsEventMetadata
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **clickedURL** | **String** |  | [optional] 

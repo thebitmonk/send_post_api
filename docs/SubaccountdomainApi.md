@@ -1,22 +1,23 @@
-# SendPostApi.SubaccountdomainApi
+# SendPostApi.SubaccountDomainApi
 
 All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**domainRouterCount**](SubaccountdomainApi.md#domainRouterCount) | **GET** /subaccount/domain/count | 
-[**domainRouterCreate**](SubaccountdomainApi.md#domainRouterCreate) | **POST** /subaccount/domain/ | 
-[**domainRouterDelete**](SubaccountdomainApi.md#domainRouterDelete) | **DELETE** /subaccount/domain/{domainId} | 
-[**domainRouterGet**](SubaccountdomainApi.md#domainRouterGet) | **GET** /subaccount/domain/{domainId} | 
-[**domainRouterGetAll**](SubaccountdomainApi.md#domainRouterGetAll) | **GET** /subaccount/domain/ | 
-[**domainRouterUpdate**](SubaccountdomainApi.md#domainRouterUpdate) | **PUT** /subaccount/domain/{domainId} | 
-[**domainRouterVerify**](SubaccountdomainApi.md#domainRouterVerify) | **POST** /subaccount/domain/{domainId}/verify | 
-[**domainRouterVerifyByToken**](SubaccountdomainApi.md#domainRouterVerifyByToken) | **POST** /subaccount/domain/{domainId}/verify/email/{token} | 
-[**domainRouterVerifyRequest**](SubaccountdomainApi.md#domainRouterVerifyRequest) | **POST** /subaccount/domain/{domainId}/verify/email | 
+[**domainRouterCount**](SubaccountDomainApi.md#domainRouterCount) | **GET** /subaccount/domain/count | 
+[**domainRouterCreate**](SubaccountDomainApi.md#domainRouterCreate) | **POST** /subaccount/domain/ | 
+[**domainRouterDelete**](SubaccountDomainApi.md#domainRouterDelete) | **DELETE** /subaccount/domain/{domainId} | 
+[**domainRouterGet**](SubaccountDomainApi.md#domainRouterGet) | **GET** /subaccount/domain/{domainId} | 
+[**domainRouterGetAll**](SubaccountDomainApi.md#domainRouterGetAll) | **GET** /subaccount/domain/ | 
+[**domainRouterUpdate**](SubaccountDomainApi.md#domainRouterUpdate) | **PUT** /subaccount/domain/{domainId} | 
+[**domainRouterVerify**](SubaccountDomainApi.md#domainRouterVerify) | **POST** /subaccount/domain/{domainId}/verify | 
+[**domainRouterVerifyByToken**](SubaccountDomainApi.md#domainRouterVerifyByToken) | **POST** /subaccount/domain/{domainId}/verify/email/{token} | 
+[**domainRouterVerifyRequest**](SubaccountDomainApi.md#domainRouterVerifyRequest) | **POST** /subaccount/domain/{domainId}/verify/email | 
 
 
-<a name="domainRouterCount"></a>
-# **domainRouterCount**
+
+## domainRouterCount
+
 > ModelsCountStat domainRouterCount(xSubAccountApiKey)
 
 
@@ -24,25 +25,23 @@ Method | HTTP request | Description
 Count Total Domains
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.SubaccountdomainApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.SubaccountDomainApi();
+let xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+apiInstance.domainRouterCount(xSubAccountApiKey, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.domainRouterCount(xSubAccountApiKey, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -58,11 +57,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="domainRouterCreate"></a>
-# **domainRouterCreate**
+
+## domainRouterCreate
+
 > ModelsDomain domainRouterCreate(xSubAccountApiKey, body)
 
 
@@ -70,27 +70,24 @@ No authorization required
 Create Domain
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.SubaccountdomainApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var body = new SendPostApi.ModelsEDomain(); // ModelsEDomain | The Domain content
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.SubaccountDomainApi();
+let xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+let body = new SendPostApi.ModelsEDomain(); // ModelsEDomain | The Domain content
+apiInstance.domainRouterCreate(xSubAccountApiKey, body, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.domainRouterCreate(xSubAccountApiKey, body, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -107,11 +104,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="domainRouterDelete"></a>
-# **domainRouterDelete**
+
+## domainRouterDelete
+
 > ModelsDeleteResponse domainRouterDelete(xSubAccountApiKey, domainId)
 
 
@@ -119,27 +117,24 @@ No authorization required
 Delete Domain
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.SubaccountdomainApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var domainId = 789; // Number | The DomainId you want to delete
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.SubaccountDomainApi();
+let xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+let domainId = 789; // Number | The DomainId you want to delete
+apiInstance.domainRouterDelete(xSubAccountApiKey, domainId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.domainRouterDelete(xSubAccountApiKey, domainId, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -156,11 +151,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="domainRouterGet"></a>
-# **domainRouterGet**
+
+## domainRouterGet
+
 > ModelsDomain domainRouterGet(xSubAccountApiKey, domainId)
 
 
@@ -168,27 +164,24 @@ No authorization required
 Find Domain by DomainId
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.SubaccountdomainApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var domainId = 789; // Number | the DomainId you want to get
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.SubaccountDomainApi();
+let xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+let domainId = 789; // Number | the DomainId you want to get
+apiInstance.domainRouterGet(xSubAccountApiKey, domainId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.domainRouterGet(xSubAccountApiKey, domainId, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -205,11 +198,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="domainRouterGetAll"></a>
-# **domainRouterGetAll**
+
+## domainRouterGetAll
+
 > [ModelsDomain] domainRouterGetAll(xSubAccountApiKey, opts)
 
 
@@ -217,30 +211,28 @@ No authorization required
 Get All Domains
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.SubaccountdomainApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var opts = { 
+let apiInstance = new SendPostApi.SubaccountDomainApi();
+let xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+let opts = {
   'offset': 789, // Number | offset
   'limit': 789, // Number | limit
   'search': "search_example" // String | search term
 };
-
-var callback = function(error, data, response) {
+apiInstance.domainRouterGetAll(xSubAccountApiKey, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.domainRouterGetAll(xSubAccountApiKey, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -259,11 +251,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="domainRouterUpdate"></a>
-# **domainRouterUpdate**
+
+## domainRouterUpdate
+
 > ModelsDomain domainRouterUpdate(xSubAccountApiKey, domainId, body)
 
 
@@ -271,29 +264,25 @@ No authorization required
 Update Domain
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.SubaccountdomainApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var domainId = 789; // Number | The DomainId you want to update
-
-var body = new SendPostApi.ModelsEDomain(); // ModelsEDomain | The body
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.SubaccountDomainApi();
+let xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+let domainId = 789; // Number | The DomainId you want to update
+let body = new SendPostApi.ModelsEDomain(); // ModelsEDomain | The body
+apiInstance.domainRouterUpdate(xSubAccountApiKey, domainId, body, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.domainRouterUpdate(xSubAccountApiKey, domainId, body, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -311,11 +300,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="domainRouterVerify"></a>
-# **domainRouterVerify**
+
+## domainRouterVerify
+
 > ModelsDomain domainRouterVerify(xSubAccountApiKey, domainId)
 
 
@@ -323,27 +313,24 @@ No authorization required
 Verify Domain By Domain Id
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.SubaccountdomainApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var domainId = 789; // Number | the DomainId you want to get
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.SubaccountDomainApi();
+let xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+let domainId = 789; // Number | the DomainId you want to get
+apiInstance.domainRouterVerify(xSubAccountApiKey, domainId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.domainRouterVerify(xSubAccountApiKey, domainId, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -360,11 +347,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="domainRouterVerifyByToken"></a>
-# **domainRouterVerifyByToken**
+
+## domainRouterVerifyByToken
+
 > ModelsDomain domainRouterVerifyByToken(xSubAccountApiKey, domainId, token)
 
 
@@ -372,29 +360,25 @@ No authorization required
 Verify Domain By Signed Token
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.SubaccountdomainApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var domainId = 789; // Number | the DomainId you want to get
-
-var token = "token_example"; // String | The signed token used to verify
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.SubaccountDomainApi();
+let xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+let domainId = 789; // Number | the DomainId you want to get
+let token = "token_example"; // String | The signed token used to verify
+apiInstance.domainRouterVerifyByToken(xSubAccountApiKey, domainId, token, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.domainRouterVerifyByToken(xSubAccountApiKey, domainId, token, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -412,11 +396,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="domainRouterVerifyRequest"></a>
-# **domainRouterVerifyRequest**
+
+## domainRouterVerifyRequest
+
 > domainRouterVerifyRequest(xSubAccountApiKey, domainId, body, opts)
 
 
@@ -424,32 +409,28 @@ No authorization required
 Verify Domain By Email Request
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.SubaccountdomainApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var domainId = 789; // Number | the DomainId you want to get
-
-var body = new SendPostApi.ModelsVerifyByTokenRequest(); // ModelsVerifyByTokenRequest | The Email to be used to verify
-
-var opts = { 
+let apiInstance = new SendPostApi.SubaccountDomainApi();
+let xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+let domainId = 789; // Number | the DomainId you want to get
+let body = new SendPostApi.ModelsVerifyByTokenRequest(); // ModelsVerifyByTokenRequest | The Email to be used to verify
+let opts = {
   'redirectPath': "redirectPath_example" // String | redirectPath
 };
-
-var callback = function(error, data, response) {
+apiInstance.domainRouterVerifyRequest(xSubAccountApiKey, domainId, body, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-};
-apiInstance.domainRouterVerifyRequest(xSubAccountApiKey, domainId, body, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -468,6 +449,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: Not defined
 

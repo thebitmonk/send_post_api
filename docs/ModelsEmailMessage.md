@@ -1,6 +1,7 @@
 # SendPostApi.ModelsEmailMessage
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ampBody** | **String** |  | [optional] 

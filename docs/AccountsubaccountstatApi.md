@@ -1,19 +1,20 @@
-# SendPostApi.AccountsubaccountstatApi
+# SendPostApi.AccountSubaccountStatApi
 
 All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**subAccountStatRouterGetAllAggregateSubAccountStats**](AccountsubaccountstatApi.md#subAccountStatRouterGetAllAggregateSubAccountStats) | **GET** /account/subaccount/stat/{sid}/aggregate | 
-[**subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount**](AccountsubaccountstatApi.md#subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount) | **GET** /account/subaccount/stat/{sid}/aggregate/domain | 
-[**subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount**](AccountsubaccountstatApi.md#subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount) | **GET** /account/subaccount/stat/{sid}/aggregate/group | 
-[**subAccountStatRouterGetAllAggregatedIPStatsForASubAccount**](AccountsubaccountstatApi.md#subAccountStatRouterGetAllAggregatedIPStatsForASubAccount) | **GET** /account/subaccount/stat/{sid}/aggregate/ip | 
-[**subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount**](AccountsubaccountstatApi.md#subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount) | **GET** /account/subaccount/stat/{sid}/aggregate/provider | 
-[**subAccountStatRouterGetAllSubAccountStats**](AccountsubaccountstatApi.md#subAccountStatRouterGetAllSubAccountStats) | **GET** /account/subaccount/stat/{sid} | 
+[**subAccountStatRouterGetAllAggregateSubAccountStats**](AccountSubaccountStatApi.md#subAccountStatRouterGetAllAggregateSubAccountStats) | **GET** /account/subaccount/stat/{sid}/aggregate | 
+[**subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount**](AccountSubaccountStatApi.md#subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount) | **GET** /account/subaccount/stat/{sid}/aggregate/domain | 
+[**subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount**](AccountSubaccountStatApi.md#subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount) | **GET** /account/subaccount/stat/{sid}/aggregate/group | 
+[**subAccountStatRouterGetAllAggregatedIPStatsForASubAccount**](AccountSubaccountStatApi.md#subAccountStatRouterGetAllAggregatedIPStatsForASubAccount) | **GET** /account/subaccount/stat/{sid}/aggregate/ip | 
+[**subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount**](AccountSubaccountStatApi.md#subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount) | **GET** /account/subaccount/stat/{sid}/aggregate/provider | 
+[**subAccountStatRouterGetAllSubAccountStats**](AccountSubaccountStatApi.md#subAccountStatRouterGetAllSubAccountStats) | **GET** /account/subaccount/stat/{sid} | 
 
 
-<a name="subAccountStatRouterGetAllAggregateSubAccountStats"></a>
-# **subAccountStatRouterGetAllAggregateSubAccountStats**
+
+## subAccountStatRouterGetAllAggregateSubAccountStats
+
 > ModelsStat subAccountStatRouterGetAllAggregateSubAccountStats(xAccountApiKey, sid, opts)
 
 
@@ -21,31 +22,28 @@ Method | HTTP request | Description
 Get All Aggregate Sub-Account Stats
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountsubaccountstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var sid = 789; // Number | the subaccount id you want to get
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountSubaccountStatApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let sid = 789; // Number | the subaccount id you want to get
+let opts = {
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
 };
-
-var callback = function(error, data, response) {
+apiInstance.subAccountStatRouterGetAllAggregateSubAccountStats(xAccountApiKey, sid, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.subAccountStatRouterGetAllAggregateSubAccountStats(xAccountApiKey, sid, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -64,11 +62,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount"></a>
-# **subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount**
+
+## subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount
+
 > [ModelsAGDomainStat] subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount(xAccountApiKey, sid, opts)
 
 
@@ -76,31 +75,28 @@ No authorization required
 Get All Aggregated Domain Stats for a Sub-Account
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountsubaccountstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var sid = 789; // Number | the subaccount id you want to get
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountSubaccountStatApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let sid = 789; // Number | the subaccount id you want to get
+let opts = {
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
 };
-
-var callback = function(error, data, response) {
+apiInstance.subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount(xAccountApiKey, sid, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.subAccountStatRouterGetAllAggregatedDomainStatsForASubAccount(xAccountApiKey, sid, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -119,11 +115,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount"></a>
-# **subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount**
+
+## subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount
+
 > [ModelsAGStat] subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount(xAccountApiKey, sid, opts)
 
 
@@ -131,31 +128,28 @@ No authorization required
 Get All Aggregated Group Stats for a Sub-Account
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountsubaccountstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var sid = 789; // Number | the subaccount id you want to get
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountSubaccountStatApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let sid = 789; // Number | the subaccount id you want to get
+let opts = {
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
 };
-
-var callback = function(error, data, response) {
+apiInstance.subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount(xAccountApiKey, sid, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.subAccountStatRouterGetAllAggregatedGroupStatsForASubAccount(xAccountApiKey, sid, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -174,11 +168,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="subAccountStatRouterGetAllAggregatedIPStatsForASubAccount"></a>
-# **subAccountStatRouterGetAllAggregatedIPStatsForASubAccount**
+
+## subAccountStatRouterGetAllAggregatedIPStatsForASubAccount
+
 > [ModelsAIPStat] subAccountStatRouterGetAllAggregatedIPStatsForASubAccount(xAccountApiKey, sid, opts)
 
 
@@ -186,31 +181,28 @@ No authorization required
 Get All Aggregated IP Stats for a Sub-Account
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountsubaccountstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var sid = 789; // Number | the subaccount id you want to get
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountSubaccountStatApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let sid = 789; // Number | the subaccount id you want to get
+let opts = {
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
 };
-
-var callback = function(error, data, response) {
+apiInstance.subAccountStatRouterGetAllAggregatedIPStatsForASubAccount(xAccountApiKey, sid, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.subAccountStatRouterGetAllAggregatedIPStatsForASubAccount(xAccountApiKey, sid, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -229,11 +221,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount"></a>
-# **subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount**
+
+## subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount
+
 > [ModelsAPStat] subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount(xAccountApiKey, sid, opts)
 
 
@@ -241,31 +234,28 @@ No authorization required
 Get All Aggregated Provider Stats for a Sub-Account
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountsubaccountstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var sid = 789; // Number | the subaccount id you want to get
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountSubaccountStatApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let sid = 789; // Number | the subaccount id you want to get
+let opts = {
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
 };
-
-var callback = function(error, data, response) {
+apiInstance.subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount(xAccountApiKey, sid, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.subAccountStatRouterGetAllAggregatedProviderStatsForASubAccount(xAccountApiKey, sid, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -284,11 +274,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="subAccountStatRouterGetAllSubAccountStats"></a>
-# **subAccountStatRouterGetAllSubAccountStats**
+
+## subAccountStatRouterGetAllSubAccountStats
+
 > [ModelsRStat] subAccountStatRouterGetAllSubAccountStats(xAccountApiKey, sid, opts)
 
 
@@ -296,31 +287,28 @@ No authorization required
 Get All Sub-Account Stats
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountsubaccountstatApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var sid = 789; // Number | the subaccount id you want to get
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountSubaccountStatApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let sid = 789; // Number | the subaccount id you want to get
+let opts = {
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
 };
-
-var callback = function(error, data, response) {
+apiInstance.subAccountStatRouterGetAllSubAccountStats(xAccountApiKey, sid, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.subAccountStatRouterGetAllSubAccountStats(xAccountApiKey, sid, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -339,6 +327,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 

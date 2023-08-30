@@ -1,19 +1,20 @@
-# SendPostApi.AccountlabelApi
+# SendPostApi.AccountLabelApi
 
 All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**labelRouterCount**](AccountlabelApi.md#labelRouterCount) | **GET** /account/label/count | 
-[**labelRouterCreate**](AccountlabelApi.md#labelRouterCreate) | **POST** /account/label/ | 
-[**labelRouterDelete**](AccountlabelApi.md#labelRouterDelete) | **DELETE** /account/label/{labelId} | 
-[**labelRouterGet**](AccountlabelApi.md#labelRouterGet) | **GET** /account/label/{labelId} | 
-[**labelRouterGetAll**](AccountlabelApi.md#labelRouterGetAll) | **GET** /account/label/ | 
-[**labelRouterUpdate**](AccountlabelApi.md#labelRouterUpdate) | **PUT** /account/label/{labelId} | 
+[**labelRouterCount**](AccountLabelApi.md#labelRouterCount) | **GET** /account/label/count | 
+[**labelRouterCreate**](AccountLabelApi.md#labelRouterCreate) | **POST** /account/label/ | 
+[**labelRouterDelete**](AccountLabelApi.md#labelRouterDelete) | **DELETE** /account/label/{labelId} | 
+[**labelRouterGet**](AccountLabelApi.md#labelRouterGet) | **GET** /account/label/{labelId} | 
+[**labelRouterGetAll**](AccountLabelApi.md#labelRouterGetAll) | **GET** /account/label/ | 
+[**labelRouterUpdate**](AccountLabelApi.md#labelRouterUpdate) | **PUT** /account/label/{labelId} | 
 
 
-<a name="labelRouterCount"></a>
-# **labelRouterCount**
+
+## labelRouterCount
+
 > ModelsCountStat labelRouterCount(xAccountApiKey, type)
 
 
@@ -21,27 +22,24 @@ Method | HTTP request | Description
 Count Total Labels
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountlabelApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var type = "type_example"; // String | get all labels type
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountLabelApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let type = "type_example"; // String | get all labels type
+apiInstance.labelRouterCount(xAccountApiKey, type, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.labelRouterCount(xAccountApiKey, type, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -58,11 +56,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="labelRouterCreate"></a>
-# **labelRouterCreate**
+
+## labelRouterCreate
+
 > ModelsLabel labelRouterCreate(xAccountApiKey, body)
 
 
@@ -70,27 +69,24 @@ No authorization required
 Create Label
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountlabelApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var body = new SendPostApi.ModelsLabel(); // ModelsLabel | The Label content
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountLabelApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let body = new SendPostApi.ModelsLabel(); // ModelsLabel | The Label content
+apiInstance.labelRouterCreate(xAccountApiKey, body, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.labelRouterCreate(xAccountApiKey, body, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -107,11 +103,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="labelRouterDelete"></a>
-# **labelRouterDelete**
+
+## labelRouterDelete
+
 > ModelsDeleteResponse labelRouterDelete(xAccountApiKey, labelId)
 
 
@@ -119,27 +116,24 @@ No authorization required
 Delete Label
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountlabelApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var labelId = 789; // Number | The LabelId you want to delete
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountLabelApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let labelId = 789; // Number | The LabelId you want to delete
+apiInstance.labelRouterDelete(xAccountApiKey, labelId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.labelRouterDelete(xAccountApiKey, labelId, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -156,11 +150,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="labelRouterGet"></a>
-# **labelRouterGet**
+
+## labelRouterGet
+
 > ModelsLabel labelRouterGet(xAccountApiKey, labelId)
 
 
@@ -168,27 +163,24 @@ No authorization required
 Find Label by LabelId
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountlabelApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var labelId = 789; // Number | the LabelId you want to get
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountLabelApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let labelId = 789; // Number | the LabelId you want to get
+apiInstance.labelRouterGet(xAccountApiKey, labelId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.labelRouterGet(xAccountApiKey, labelId, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -205,11 +197,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="labelRouterGetAll"></a>
-# **labelRouterGetAll**
+
+## labelRouterGetAll
+
 > [ModelsLabel] labelRouterGetAll(xAccountApiKey, type, opts)
 
 
@@ -217,32 +210,29 @@ No authorization required
 Get All Labels
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountlabelApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var type = "type_example"; // String | get all labels type
-
-var opts = { 
+let apiInstance = new SendPostApi.AccountLabelApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let type = "type_example"; // String | get all labels type
+let opts = {
   'offset': 789, // Number | offset
   'limit': 789, // Number | limit
   'search': "search_example" // String | search term
 };
-
-var callback = function(error, data, response) {
+apiInstance.labelRouterGetAll(xAccountApiKey, type, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.labelRouterGetAll(xAccountApiKey, type, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -262,11 +252,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="labelRouterUpdate"></a>
-# **labelRouterUpdate**
+
+## labelRouterUpdate
+
 > ModelsLabel labelRouterUpdate(xAccountApiKey, labelId, body)
 
 
@@ -274,29 +265,25 @@ No authorization required
 Update Label
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountlabelApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var labelId = 789; // Number | The LabelId you want to update
-
-var body = new SendPostApi.ModelsLabel(); // ModelsLabel | The body
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountLabelApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let labelId = 789; // Number | The LabelId you want to update
+let body = new SendPostApi.ModelsLabel(); // ModelsLabel | The body
+apiInstance.labelRouterUpdate(xAccountApiKey, labelId, body, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.labelRouterUpdate(xAccountApiKey, labelId, body, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -314,6 +301,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 

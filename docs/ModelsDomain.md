@@ -1,6 +1,7 @@
 # SendPostApi.ModelsDomain
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created** | **Number** |  | [optional] 

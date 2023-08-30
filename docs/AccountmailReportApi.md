@@ -1,16 +1,17 @@
-# SendPostApi.AccountmailReportApi
+# SendPostApi.AccountMailReportApi
 
 All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**mailReportRouterMailReport**](AccountmailReportApi.md#mailReportRouterMailReport) | **POST** /account/mailReport/ | 
-[**mailReportRouterMailReportGetSingleReport**](AccountmailReportApi.md#mailReportRouterMailReportGetSingleReport) | **GET** /account/mailReport/{reportId} | 
-[**mailReportRouterMailReportProviders**](AccountmailReportApi.md#mailReportRouterMailReportProviders) | **GET** /account/mailReport/provider | 
+[**mailReportRouterMailReport**](AccountMailReportApi.md#mailReportRouterMailReport) | **POST** /account/mailReport/ | 
+[**mailReportRouterMailReportGetSingleReport**](AccountMailReportApi.md#mailReportRouterMailReportGetSingleReport) | **GET** /account/mailReport/{reportId} | 
+[**mailReportRouterMailReportProviders**](AccountMailReportApi.md#mailReportRouterMailReportProviders) | **GET** /account/mailReport/provider | 
 
 
-<a name="mailReportRouterMailReport"></a>
-# **mailReportRouterMailReport**
+
+## mailReportRouterMailReport
+
 > ModelsMailReportResult mailReportRouterMailReport(xAccountApiKey, body)
 
 
@@ -18,27 +19,24 @@ Method | HTTP request | Description
 get reputation of domain
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountmailReportApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var body = new SendPostApi.ModelsCreateMailReport(); // ModelsCreateMailReport | The IP Email Provider Settings
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountMailReportApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let body = new SendPostApi.ModelsCreateMailReport(); // ModelsCreateMailReport | The IP Email Provider Settings
+apiInstance.mailReportRouterMailReport(xAccountApiKey, body, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.mailReportRouterMailReport(xAccountApiKey, body, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -55,39 +53,37 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="mailReportRouterMailReportGetSingleReport"></a>
-# **mailReportRouterMailReportGetSingleReport**
-> ApiGlockappsMailReport mailReportRouterMailReportGetSingleReport(xAccountApiKey, reportId)
+
+## mailReportRouterMailReportGetSingleReport
+
+> Object mailReportRouterMailReportGetSingleReport(xAccountApiKey, reportId)
 
 
 
 get Providers available
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountmailReportApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-var reportId = 789; // Number | the report id you want to get
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountMailReportApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+let reportId = 789; // Number | the report id you want to get
+apiInstance.mailReportRouterMailReportGetSingleReport(xAccountApiKey, reportId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.mailReportRouterMailReportGetSingleReport(xAccountApiKey, reportId, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -96,7 +92,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ApiGlockappsMailReport**](ApiGlockappsMailReport.md)
+**Object**
 
 ### Authorization
 
@@ -104,11 +100,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="mailReportRouterMailReportProviders"></a>
-# **mailReportRouterMailReportProviders**
+
+## mailReportRouterMailReportProviders
+
 > ModelsProviderResult mailReportRouterMailReportProviders(xAccountApiKey)
 
 
@@ -116,25 +113,23 @@ No authorization required
 get Providers available
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.AccountmailReportApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.AccountMailReportApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+apiInstance.mailReportRouterMailReportProviders(xAccountApiKey, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.mailReportRouterMailReportProviders(xAccountApiKey, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -150,6 +145,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 

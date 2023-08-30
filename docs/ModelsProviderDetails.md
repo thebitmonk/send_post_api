@@ -1,6 +1,7 @@
 # SendPostApi.ModelsProviderDetails
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **consumerStats** | [**ModelsConsumerStats**](ModelsConsumerStats.md) |  | [optional] 

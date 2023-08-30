@@ -1,14 +1,15 @@
-# SendPostApi.SystemtemplateApi
+# SendPostApi.SystemTemplateApi
 
 All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**systemTemplateRouterGetAllSystemTemplates**](SystemtemplateApi.md#systemTemplateRouterGetAllSystemTemplates) | **GET** /system/template/ | 
+[**systemTemplateRouterGetAllSystemTemplates**](SystemTemplateApi.md#systemTemplateRouterGetAllSystemTemplates) | **GET** /system/template/ | 
 
 
-<a name="systemTemplateRouterGetAllSystemTemplates"></a>
-# **systemTemplateRouterGetAllSystemTemplates**
+
+## systemTemplateRouterGetAllSystemTemplates
+
 > [ModelsSystemTemplate] systemTemplateRouterGetAllSystemTemplates(xAccountApiKey)
 
 
@@ -16,25 +17,23 @@ Method | HTTP request | Description
 Get all System Templates
 
 ### Example
+
 ```javascript
-var SendPostApi = require('send_post_api');
+import SendPostApi from 'send_post_api';
 
-var apiInstance = new SendPostApi.SystemtemplateApi();
-
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SendPostApi.SystemTemplateApi();
+let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+apiInstance.systemTemplateRouterGetAllSystemTemplates(xAccountApiKey, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.systemTemplateRouterGetAllSystemTemplates(xAccountApiKey, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -50,6 +49,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
