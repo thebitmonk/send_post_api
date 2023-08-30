@@ -1,7 +1,6 @@
 # SendPostApi.ModelsBlacklistResource
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **addDate** | **Number** |  | [optional] 

@@ -1,7 +1,6 @@
 # SendPostApi.ModelsCertificateValidity
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **daysLeft** | **Number** |  | [optional] 

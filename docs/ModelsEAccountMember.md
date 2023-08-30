@@ -1,7 +1,6 @@
 # SendPostApi.ModelsEAccountMember
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **companyName** | **String** |  | [optional] 

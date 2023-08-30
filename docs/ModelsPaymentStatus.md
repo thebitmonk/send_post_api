@@ -1,7 +1,6 @@
 # SendPostApi.ModelsPaymentStatus
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **clientSecret** | **String** |  | [optional] 

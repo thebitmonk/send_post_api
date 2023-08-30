@@ -1,7 +1,6 @@
 # SendPostApi.ModelsEIncident
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **assignedTo** | [**ModelsIEMember**](ModelsIEMember.md) |  | [optional] 

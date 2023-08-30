@@ -1,7 +1,6 @@
 # SendPostApi.ModelsSender
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created** | **Number** |  | [optional] 

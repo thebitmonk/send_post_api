@@ -1,7 +1,6 @@
 # SendPostApi.ModelsCertificateExtensions
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **authorityInfoAccess** | **String** |  | [optional] 

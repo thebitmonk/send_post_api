@@ -1,7 +1,6 @@
 # SendPostApi.ModelsPricing
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **baseLimit** | **Number** |  | [optional] 

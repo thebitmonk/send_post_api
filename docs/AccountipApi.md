@@ -1,23 +1,22 @@
-# SendPostApi.AccountIpApi
+# SendPostApi.AccountipApi
 
 All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**iPRouterAllocateIP**](AccountIpApi.md#iPRouterAllocateIP) | **POST** /account/ip/allocate | 
-[**iPRouterCount**](AccountIpApi.md#iPRouterCount) | **GET** /account/ip/count | 
-[**iPRouterDelete**](AccountIpApi.md#iPRouterDelete) | **DELETE** /account/ip/{ipid} | 
-[**iPRouterGet**](AccountIpApi.md#iPRouterGet) | **GET** /account/ip/{ipid} | 
-[**iPRouterGetAll**](AccountIpApi.md#iPRouterGetAll) | **GET** /account/ip/ | 
-[**iPRouterGetAllIPIncidents**](AccountIpApi.md#iPRouterGetAllIPIncidents) | **GET** /account/ip/{ipid}/incident | 
-[**iPRouterGetIPAccountIPPools**](AccountIpApi.md#iPRouterGetIPAccountIPPools) | **GET** /account/ip/{ipid}/ippool | 
-[**iPRouterGetIpHealth**](AccountIpApi.md#iPRouterGetIpHealth) | **GET** /account/ip/{ipid}/health | 
-[**iPRouterUpdate**](AccountIpApi.md#iPRouterUpdate) | **PUT** /account/ip/{ipid} | 
+[**iPRouterAllocateIP**](AccountipApi.md#iPRouterAllocateIP) | **POST** /account/ip/allocate | 
+[**iPRouterCount**](AccountipApi.md#iPRouterCount) | **GET** /account/ip/count | 
+[**iPRouterDelete**](AccountipApi.md#iPRouterDelete) | **DELETE** /account/ip/{ipid} | 
+[**iPRouterGet**](AccountipApi.md#iPRouterGet) | **GET** /account/ip/{ipid} | 
+[**iPRouterGetAll**](AccountipApi.md#iPRouterGetAll) | **GET** /account/ip/ | 
+[**iPRouterGetAllIPIncidents**](AccountipApi.md#iPRouterGetAllIPIncidents) | **GET** /account/ip/{ipid}/incident | 
+[**iPRouterGetIPAccountIPPools**](AccountipApi.md#iPRouterGetIPAccountIPPools) | **GET** /account/ip/{ipid}/ippool | 
+[**iPRouterGetIpHealth**](AccountipApi.md#iPRouterGetIpHealth) | **GET** /account/ip/{ipid}/health | 
+[**iPRouterUpdate**](AccountipApi.md#iPRouterUpdate) | **PUT** /account/ip/{ipid} | 
 
 
-
-## iPRouterAllocateIP
-
+<a name="iPRouterAllocateIP"></a>
+# **iPRouterAllocateIP**
 > [ModelsIP] iPRouterAllocateIP(xAccountApiKey)
 
 
@@ -25,23 +24,25 @@ Method | HTTP request | Description
 Allocate IP To Account
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountIpApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-apiInstance.iPRouterAllocateIP(xAccountApiKey, (error, data, response) => {
+var apiInstance = new SendPostApi.AccountipApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.iPRouterAllocateIP(xAccountApiKey, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -57,12 +58,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## iPRouterCount
-
+<a name="iPRouterCount"></a>
+# **iPRouterCount**
 > ModelsCountStat iPRouterCount(xAccountApiKey, opts)
 
 
@@ -70,28 +70,30 @@ No authorization required
 Count Total AccountIPs
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountIpApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let opts = {
+var apiInstance = new SendPostApi.AccountipApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var opts = { 
   'filterBy': "filterBy_example", // String | filterBy
   'filterValue': 789, // Number | filterValue
   'search': "search_example" // String | search term
 };
-apiInstance.iPRouterCount(xAccountApiKey, opts, (error, data, response) => {
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.iPRouterCount(xAccountApiKey, opts, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -110,12 +112,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## iPRouterDelete
-
+<a name="iPRouterDelete"></a>
+# **iPRouterDelete**
 > ModelsDeleteResponse iPRouterDelete(xAccountApiKey, ipid)
 
 
@@ -123,24 +124,27 @@ No authorization required
 Delete IP
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountIpApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let ipid = 789; // Number | The IPId you want to delete
-apiInstance.iPRouterDelete(xAccountApiKey, ipid, (error, data, response) => {
+var apiInstance = new SendPostApi.AccountipApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var ipid = 789; // Number | The IPId you want to delete
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.iPRouterDelete(xAccountApiKey, ipid, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -157,12 +161,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## iPRouterGet
-
+<a name="iPRouterGet"></a>
+# **iPRouterGet**
 > ModelsIP iPRouterGet(xAccountApiKey, ipid)
 
 
@@ -170,24 +173,27 @@ No authorization required
 Find IP by IPId
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountIpApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let ipid = 789; // Number | the IPId you want to get
-apiInstance.iPRouterGet(xAccountApiKey, ipid, (error, data, response) => {
+var apiInstance = new SendPostApi.AccountipApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var ipid = 789; // Number | the IPId you want to get
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.iPRouterGet(xAccountApiKey, ipid, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -204,12 +210,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## iPRouterGetAll
-
+<a name="iPRouterGetAll"></a>
+# **iPRouterGetAll**
 > [ModelsIP] iPRouterGetAll(xAccountApiKey, opts)
 
 
@@ -217,30 +222,32 @@ No authorization required
 Get All IPs
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountIpApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let opts = {
+var apiInstance = new SendPostApi.AccountipApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var opts = { 
   'offset': 789, // Number | offset
   'limit': 789, // Number | limit
   'filterBy': "filterBy_example", // String | filterBy
   'filterValue': 789, // Number | filterValue
   'search': "search_example" // String | search term
 };
-apiInstance.iPRouterGetAll(xAccountApiKey, opts, (error, data, response) => {
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.iPRouterGetAll(xAccountApiKey, opts, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -261,12 +268,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## iPRouterGetAllIPIncidents
-
+<a name="iPRouterGetAllIPIncidents"></a>
+# **iPRouterGetAllIPIncidents**
 > [ModelsIncident] iPRouterGetAllIPIncidents(xAccountApiKey, ipid)
 
 
@@ -274,24 +280,27 @@ No authorization required
 Get All Incidents associated with a IP
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountIpApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let ipid = 789; // Number | The ipid whose incidents you want to retrieve
-apiInstance.iPRouterGetAllIPIncidents(xAccountApiKey, ipid, (error, data, response) => {
+var apiInstance = new SendPostApi.AccountipApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var ipid = 789; // Number | The ipid whose incidents you want to retrieve
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.iPRouterGetAllIPIncidents(xAccountApiKey, ipid, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -308,12 +317,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## iPRouterGetIPAccountIPPools
-
+<a name="iPRouterGetIPAccountIPPools"></a>
+# **iPRouterGetIPAccountIPPools**
 > [ModelsAccountIPPool] iPRouterGetIPAccountIPPools(xAccountApiKey, ipid)
 
 
@@ -321,24 +329,27 @@ No authorization required
 Find AccountIPPools for IP
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountIpApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let ipid = 789; // Number | the IPId you want to get
-apiInstance.iPRouterGetIPAccountIPPools(xAccountApiKey, ipid, (error, data, response) => {
+var apiInstance = new SendPostApi.AccountipApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var ipid = 789; // Number | the IPId you want to get
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.iPRouterGetIPAccountIPPools(xAccountApiKey, ipid, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -355,12 +366,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## iPRouterGetIpHealth
-
+<a name="iPRouterGetIpHealth"></a>
+# **iPRouterGetIpHealth**
 > ModelsIPHealthResponse iPRouterGetIpHealth(xAccountApiKey, ipid)
 
 
@@ -368,24 +378,27 @@ No authorization required
 Get IP health
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountIpApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let ipid = 789; // Number | The IP you want to update
-apiInstance.iPRouterGetIpHealth(xAccountApiKey, ipid, (error, data, response) => {
+var apiInstance = new SendPostApi.AccountipApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var ipid = 789; // Number | The IP you want to update
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.iPRouterGetIpHealth(xAccountApiKey, ipid, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -402,12 +415,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## iPRouterUpdate
-
+<a name="iPRouterUpdate"></a>
+# **iPRouterUpdate**
 > ModelsIP iPRouterUpdate(xAccountApiKey, ipid, body)
 
 
@@ -415,25 +427,29 @@ No authorization required
 Update an IP
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountIpApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let ipid = 789; // Number | The IP you want to update
-let body = new SendPostApi.ModelsIIP(); // ModelsIIP | The IP Email Provider Settings
-apiInstance.iPRouterUpdate(xAccountApiKey, ipid, body, (error, data, response) => {
+var apiInstance = new SendPostApi.AccountipApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var ipid = 789; // Number | The IP you want to update
+
+var body = new SendPostApi.ModelsIIP(); // ModelsIIP | The IP Email Provider Settings
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.iPRouterUpdate(xAccountApiKey, ipid, body, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -451,6 +467,6 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 

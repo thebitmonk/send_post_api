@@ -1,7 +1,6 @@
 # SendPostApi.ModelsSubAccount
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **apiKey** | **String** |  | [optional] 
@@ -10,6 +9,6 @@ Name | Type | Description | Notes
 **labels** | [**[ModelsLabel]**](ModelsLabel.md) |  | [optional] 
 **name** | **String** |  | [optional] 
 **smtpAuths** | [**[ModelsSMTPAuth]**](ModelsSMTPAuth.md) |  | [optional] 
-**type** | **Object** |  | [optional] 
+**type** | [**ModelsSubAccountType**](ModelsSubAccountType.md) |  | [optional] 
 
 

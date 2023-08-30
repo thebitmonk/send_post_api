@@ -1,10 +1,9 @@
 # SendPostApi.ModelsEmailResponse
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**errorCode** | **Object** |  | [optional] 
+**errorCode** | [**ModelsEmailErrorCode**](ModelsEmailErrorCode.md) |  | [optional] 
 **message** | **String** |  | [optional] 
 **messageId** | **String** |  | [optional] 
 **submittedAt** | **Number** |  | [optional] 

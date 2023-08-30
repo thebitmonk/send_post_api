@@ -1,7 +1,6 @@
 # SendPostApi.ModelsCertificateSignature
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **serial** | **String** |  | [optional] 

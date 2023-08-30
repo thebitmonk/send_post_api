@@ -1,7 +1,6 @@
 # SendPostApi.ModelsAccountUnlockTicket
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **accountEmail** | **String** |  | [optional] 

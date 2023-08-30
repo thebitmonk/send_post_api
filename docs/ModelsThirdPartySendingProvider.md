@@ -1,7 +1,6 @@
 # SendPostApi.ModelsThirdPartySendingProvider
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created** | **Number** |  | [optional] 
@@ -15,6 +14,6 @@ Name | Type | Description | Notes
 **ratePerHour** | **Number** |  | [optional] 
 **retryTime** | **Number** |  | [optional] 
 **secret** | **String** |  | [optional] 
-**type** | **Number** |  | [optional] 
+**type** | [**ModelsThirdPartySendingProviderType**](ModelsThirdPartySendingProviderType.md) |  | [optional] 
 
 

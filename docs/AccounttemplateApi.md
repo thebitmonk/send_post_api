@@ -1,21 +1,20 @@
-# SendPostApi.AccountTemplateApi
+# SendPostApi.AccounttemplateApi
 
 All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**accountTemplateRouterCopy**](AccountTemplateApi.md#accountTemplateRouterCopy) | **POST** /account/template/{templateid}/copy | 
-[**accountTemplateRouterCount**](AccountTemplateApi.md#accountTemplateRouterCount) | **GET** /account/template/count | 
-[**accountTemplateRouterCreate**](AccountTemplateApi.md#accountTemplateRouterCreate) | **POST** /account/template/ | 
-[**accountTemplateRouterDelete**](AccountTemplateApi.md#accountTemplateRouterDelete) | **DELETE** /account/template/{templateid} | 
-[**accountTemplateRouterGet**](AccountTemplateApi.md#accountTemplateRouterGet) | **GET** /account/template/{templateid} | 
-[**accountTemplateRouterGetAll**](AccountTemplateApi.md#accountTemplateRouterGetAll) | **GET** /account/template/ | 
-[**accountTemplateRouterUpdate**](AccountTemplateApi.md#accountTemplateRouterUpdate) | **PUT** /account/template/{templateid} | 
+[**accountTemplateRouterCopy**](AccounttemplateApi.md#accountTemplateRouterCopy) | **POST** /account/template/{templateid}/copy | 
+[**accountTemplateRouterCount**](AccounttemplateApi.md#accountTemplateRouterCount) | **GET** /account/template/count | 
+[**accountTemplateRouterCreate**](AccounttemplateApi.md#accountTemplateRouterCreate) | **POST** /account/template/ | 
+[**accountTemplateRouterDelete**](AccounttemplateApi.md#accountTemplateRouterDelete) | **DELETE** /account/template/{templateid} | 
+[**accountTemplateRouterGet**](AccounttemplateApi.md#accountTemplateRouterGet) | **GET** /account/template/{templateid} | 
+[**accountTemplateRouterGetAll**](AccounttemplateApi.md#accountTemplateRouterGetAll) | **GET** /account/template/ | 
+[**accountTemplateRouterUpdate**](AccounttemplateApi.md#accountTemplateRouterUpdate) | **PUT** /account/template/{templateid} | 
 
 
-
-## accountTemplateRouterCopy
-
+<a name="accountTemplateRouterCopy"></a>
+# **accountTemplateRouterCopy**
 > ModelsAccountTemplate accountTemplateRouterCopy(xAccountApiKey, templateid)
 
 
@@ -23,24 +22,27 @@ Method | HTTP request | Description
 Copy AccountTemplate
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountTemplateApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let templateid = 789; // Number | The id of the template you want to copy
-apiInstance.accountTemplateRouterCopy(xAccountApiKey, templateid, (error, data, response) => {
+var apiInstance = new SendPostApi.AccounttemplateApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var templateid = 789; // Number | The id of the template you want to copy
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.accountTemplateRouterCopy(xAccountApiKey, templateid, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -57,12 +59,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## accountTemplateRouterCount
-
+<a name="accountTemplateRouterCount"></a>
+# **accountTemplateRouterCount**
 > ModelsCountStat accountTemplateRouterCount(xAccountApiKey, opts)
 
 
@@ -70,26 +71,28 @@ No authorization required
 Count total templates
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountTemplateApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let opts = {
+var apiInstance = new SendPostApi.AccounttemplateApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var opts = { 
   'search': "search_example" // String | search term
 };
-apiInstance.accountTemplateRouterCount(xAccountApiKey, opts, (error, data, response) => {
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.accountTemplateRouterCount(xAccountApiKey, opts, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -106,12 +109,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## accountTemplateRouterCreate
-
+<a name="accountTemplateRouterCreate"></a>
+# **accountTemplateRouterCreate**
 > ModelsAccountTemplate accountTemplateRouterCreate(xAccountApiKey, body)
 
 
@@ -119,24 +121,27 @@ No authorization required
 Create a new template
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountTemplateApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let body = new SendPostApi.ModelsAccountTemplate(); // ModelsAccountTemplate | The AccountTemplate content
-apiInstance.accountTemplateRouterCreate(xAccountApiKey, body, (error, data, response) => {
+var apiInstance = new SendPostApi.AccounttemplateApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var body = new SendPostApi.ModelsAccountTemplate(); // ModelsAccountTemplate | The AccountTemplate content
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.accountTemplateRouterCreate(xAccountApiKey, body, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -153,12 +158,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## accountTemplateRouterDelete
-
+<a name="accountTemplateRouterDelete"></a>
+# **accountTemplateRouterDelete**
 > ModelsDeleteResponse accountTemplateRouterDelete(xAccountApiKey, templateid)
 
 
@@ -166,24 +170,27 @@ No authorization required
 Delete AccountTemplate
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountTemplateApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let templateid = 789; // Number | The id of the template you want to delete
-apiInstance.accountTemplateRouterDelete(xAccountApiKey, templateid, (error, data, response) => {
+var apiInstance = new SendPostApi.AccounttemplateApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var templateid = 789; // Number | The id of the template you want to delete
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.accountTemplateRouterDelete(xAccountApiKey, templateid, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -200,12 +207,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## accountTemplateRouterGet
-
+<a name="accountTemplateRouterGet"></a>
+# **accountTemplateRouterGet**
 > ModelsAccountTemplate accountTemplateRouterGet(xAccountApiKey, templateid)
 
 
@@ -213,24 +219,27 @@ No authorization required
 Get single template
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountTemplateApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let templateid = 789; // Number | ID of the template required
-apiInstance.accountTemplateRouterGet(xAccountApiKey, templateid, (error, data, response) => {
+var apiInstance = new SendPostApi.AccounttemplateApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var templateid = 789; // Number | ID of the template required
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.accountTemplateRouterGet(xAccountApiKey, templateid, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -247,12 +256,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## accountTemplateRouterGetAll
-
+<a name="accountTemplateRouterGetAll"></a>
+# **accountTemplateRouterGetAll**
 > [ModelsAccountTemplate] accountTemplateRouterGetAll(xAccountApiKey, opts)
 
 
@@ -260,28 +268,30 @@ No authorization required
 Get all templates
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountTemplateApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let opts = {
+var apiInstance = new SendPostApi.AccounttemplateApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var opts = { 
   'offset': 789, // Number | offset
   'limit': 789, // Number | limit
   'search': "search_example" // String | search term
 };
-apiInstance.accountTemplateRouterGetAll(xAccountApiKey, opts, (error, data, response) => {
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.accountTemplateRouterGetAll(xAccountApiKey, opts, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -300,12 +310,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## accountTemplateRouterUpdate
-
+<a name="accountTemplateRouterUpdate"></a>
+# **accountTemplateRouterUpdate**
 > ModelsAccountTemplate accountTemplateRouterUpdate(xAccountApiKey, templateid, body)
 
 
@@ -313,25 +322,29 @@ No authorization required
 update template
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountTemplateApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let templateid = 789; // Number | The id of the template you want to update
-let body = new SendPostApi.ModelsAccountTemplate(); // ModelsAccountTemplate | The template content
-apiInstance.accountTemplateRouterUpdate(xAccountApiKey, templateid, body, (error, data, response) => {
+var apiInstance = new SendPostApi.AccounttemplateApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var templateid = 789; // Number | The id of the template you want to update
+
+var body = new SendPostApi.ModelsAccountTemplate(); // ModelsAccountTemplate | The template content
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.accountTemplateRouterUpdate(xAccountApiKey, templateid, body, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -349,6 +362,6 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 

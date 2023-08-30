@@ -1,20 +1,19 @@
-# SendPostApi.SubaccountIppoolApi
+# SendPostApi.SubaccountippoolApi
 
 All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**iPPoolRouterCount**](SubaccountIppoolApi.md#iPPoolRouterCount) | **GET** /subaccount/ippool/count | 
-[**iPPoolRouterCreate**](SubaccountIppoolApi.md#iPPoolRouterCreate) | **POST** /subaccount/ippool/ | 
-[**iPPoolRouterDelete**](SubaccountIppoolApi.md#iPPoolRouterDelete) | **DELETE** /subaccount/ippool/{ippoolid} | 
-[**iPPoolRouterGet**](SubaccountIppoolApi.md#iPPoolRouterGet) | **GET** /subaccount/ippool/{ippoolid} | 
-[**iPPoolRouterGetAll**](SubaccountIppoolApi.md#iPPoolRouterGetAll) | **GET** /subaccount/ippool/ | 
-[**iPPoolRouterUpdate**](SubaccountIppoolApi.md#iPPoolRouterUpdate) | **PUT** /subaccount/ippool/{ippoolid} | 
+[**iPPoolRouterCount**](SubaccountippoolApi.md#iPPoolRouterCount) | **GET** /subaccount/ippool/count | 
+[**iPPoolRouterCreate**](SubaccountippoolApi.md#iPPoolRouterCreate) | **POST** /subaccount/ippool/ | 
+[**iPPoolRouterDelete**](SubaccountippoolApi.md#iPPoolRouterDelete) | **DELETE** /subaccount/ippool/{ippoolid} | 
+[**iPPoolRouterGet**](SubaccountippoolApi.md#iPPoolRouterGet) | **GET** /subaccount/ippool/{ippoolid} | 
+[**iPPoolRouterGetAll**](SubaccountippoolApi.md#iPPoolRouterGetAll) | **GET** /subaccount/ippool/ | 
+[**iPPoolRouterUpdate**](SubaccountippoolApi.md#iPPoolRouterUpdate) | **PUT** /subaccount/ippool/{ippoolid} | 
 
 
-
-## iPPoolRouterCount
-
+<a name="iPPoolRouterCount"></a>
+# **iPPoolRouterCount**
 > ModelsCountStat iPPoolRouterCount(xSubAccountApiKey)
 
 
@@ -22,23 +21,25 @@ Method | HTTP request | Description
 Count Total IPPools
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.SubaccountIppoolApi();
-let xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-apiInstance.iPPoolRouterCount(xSubAccountApiKey, (error, data, response) => {
+var apiInstance = new SendPostApi.SubaccountippoolApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.iPPoolRouterCount(xSubAccountApiKey, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -54,12 +55,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## iPPoolRouterCreate
-
+<a name="iPPoolRouterCreate"></a>
+# **iPPoolRouterCreate**
 > ModelsIPPool iPPoolRouterCreate(xSubAccountApiKey, body)
 
 
@@ -67,24 +67,27 @@ No authorization required
 Create IPPool
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.SubaccountIppoolApi();
-let xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-let body = new SendPostApi.ModelsEIPPool(); // ModelsEIPPool | The IPPool content
-apiInstance.iPPoolRouterCreate(xSubAccountApiKey, body, (error, data, response) => {
+var apiInstance = new SendPostApi.SubaccountippoolApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var body = new SendPostApi.ModelsEIPPool(); // ModelsEIPPool | The IPPool content
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.iPPoolRouterCreate(xSubAccountApiKey, body, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -101,12 +104,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## iPPoolRouterDelete
-
+<a name="iPPoolRouterDelete"></a>
+# **iPPoolRouterDelete**
 > ModelsDeleteResponse iPPoolRouterDelete(xSubAccountApiKey, ippoolid)
 
 
@@ -114,24 +116,27 @@ No authorization required
 Delete IPPool
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.SubaccountIppoolApi();
-let xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-let ippoolid = 789; // Number | The IPPoolId you want to delete
-apiInstance.iPPoolRouterDelete(xSubAccountApiKey, ippoolid, (error, data, response) => {
+var apiInstance = new SendPostApi.SubaccountippoolApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var ippoolid = 789; // Number | The IPPoolId you want to delete
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.iPPoolRouterDelete(xSubAccountApiKey, ippoolid, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -148,12 +153,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## iPPoolRouterGet
-
+<a name="iPPoolRouterGet"></a>
+# **iPPoolRouterGet**
 > ModelsIPPool iPPoolRouterGet(xSubAccountApiKey, ippoolid)
 
 
@@ -161,24 +165,27 @@ No authorization required
 Find IPPool by IPPoolId
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.SubaccountIppoolApi();
-let xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-let ippoolid = 789; // Number | the IPPoolId you want to get
-apiInstance.iPPoolRouterGet(xSubAccountApiKey, ippoolid, (error, data, response) => {
+var apiInstance = new SendPostApi.SubaccountippoolApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var ippoolid = 789; // Number | the IPPoolId you want to get
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.iPPoolRouterGet(xSubAccountApiKey, ippoolid, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -195,12 +202,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## iPPoolRouterGetAll
-
+<a name="iPPoolRouterGetAll"></a>
+# **iPPoolRouterGetAll**
 > [ModelsIPPool] iPPoolRouterGetAll(xSubAccountApiKey, opts)
 
 
@@ -208,28 +214,30 @@ No authorization required
 Get All IPPools
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.SubaccountIppoolApi();
-let xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-let opts = {
+var apiInstance = new SendPostApi.SubaccountippoolApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var opts = { 
   'offset': 789, // Number | offset
   'limit': 789, // Number | limit
   'search': "search_example" // String | search term
 };
-apiInstance.iPPoolRouterGetAll(xSubAccountApiKey, opts, (error, data, response) => {
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.iPPoolRouterGetAll(xSubAccountApiKey, opts, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -248,12 +256,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## iPPoolRouterUpdate
-
+<a name="iPPoolRouterUpdate"></a>
+# **iPPoolRouterUpdate**
 > ModelsIPPool iPPoolRouterUpdate(xSubAccountApiKey, ippoolid, body)
 
 
@@ -261,25 +268,29 @@ No authorization required
 Update IPPool
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.SubaccountIppoolApi();
-let xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-let ippoolid = 789; // Number | The IPPoolId you want to update
-let body = new SendPostApi.ModelsEIPPool(); // ModelsEIPPool | The body
-apiInstance.iPPoolRouterUpdate(xSubAccountApiKey, ippoolid, body, (error, data, response) => {
+var apiInstance = new SendPostApi.SubaccountippoolApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var ippoolid = 789; // Number | The IPPoolId you want to update
+
+var body = new SendPostApi.ModelsEIPPool(); // ModelsEIPPool | The body
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.iPPoolRouterUpdate(xSubAccountApiKey, ippoolid, body, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -297,6 +308,6 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 

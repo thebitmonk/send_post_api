@@ -1,18 +1,17 @@
-# SendPostApi.AccountTpspStatApi
+# SendPostApi.AccounttpspstatApi
 
 All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**thirdPartyProviderStatRouterGetAllAggregateThirdPartyProvidersStats**](AccountTpspStatApi.md#thirdPartyProviderStatRouterGetAllAggregateThirdPartyProvidersStats) | **GET** /account/tpsp/stat/{tpspid}/aggregate | 
-[**thirdPartyProviderStatRouterGetAllAggregatedProviderStatsForAThirdPartyProvider**](AccountTpspStatApi.md#thirdPartyProviderStatRouterGetAllAggregatedProviderStatsForAThirdPartyProvider) | **GET** /account/tpsp/stat/{tpspid}/aggregate/provider | 
-[**thirdPartyProviderStatRouterGetAllAggregatedSubAccountStatsForAnThirdPartyProvider**](AccountTpspStatApi.md#thirdPartyProviderStatRouterGetAllAggregatedSubAccountStatsForAnThirdPartyProvider) | **GET** /account/tpsp/stat/{tpspid}/aggregate/subaccount | 
-[**thirdPartyProviderStatRouterGetAllThirdPartyProvidersStats**](AccountTpspStatApi.md#thirdPartyProviderStatRouterGetAllThirdPartyProvidersStats) | **GET** /account/tpsp/stat/{tpspid} | 
+[**thirdPartyProviderStatRouterGetAllAggregateThirdPartyProvidersStats**](AccounttpspstatApi.md#thirdPartyProviderStatRouterGetAllAggregateThirdPartyProvidersStats) | **GET** /account/tpsp/stat/{tpspid}/aggregate | 
+[**thirdPartyProviderStatRouterGetAllAggregatedProviderStatsForAThirdPartyProvider**](AccounttpspstatApi.md#thirdPartyProviderStatRouterGetAllAggregatedProviderStatsForAThirdPartyProvider) | **GET** /account/tpsp/stat/{tpspid}/aggregate/provider | 
+[**thirdPartyProviderStatRouterGetAllAggregatedSubAccountStatsForAnThirdPartyProvider**](AccounttpspstatApi.md#thirdPartyProviderStatRouterGetAllAggregatedSubAccountStatsForAnThirdPartyProvider) | **GET** /account/tpsp/stat/{tpspid}/aggregate/subaccount | 
+[**thirdPartyProviderStatRouterGetAllThirdPartyProvidersStats**](AccounttpspstatApi.md#thirdPartyProviderStatRouterGetAllThirdPartyProvidersStats) | **GET** /account/tpsp/stat/{tpspid} | 
 
 
-
-## thirdPartyProviderStatRouterGetAllAggregateThirdPartyProvidersStats
-
+<a name="thirdPartyProviderStatRouterGetAllAggregateThirdPartyProvidersStats"></a>
+# **thirdPartyProviderStatRouterGetAllAggregateThirdPartyProvidersStats**
 > ModelsStat thirdPartyProviderStatRouterGetAllAggregateThirdPartyProvidersStats(xAccountApiKey, tpspid, opts)
 
 
@@ -20,29 +19,32 @@ Method | HTTP request | Description
 Get All Aggregate Stats
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountTpspStatApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let tpspid = 789; // Number | the tpspId you want to get
-let opts = {
+var apiInstance = new SendPostApi.AccounttpspstatApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var tpspid = 789; // Number | the tpspId you want to get
+
+var opts = { 
   'from': "from_example", // String | from date
   'to': "to_example", // String | to date
   'provider': "provider_example" // String | the provider whose stats you want
 };
-apiInstance.thirdPartyProviderStatRouterGetAllAggregateThirdPartyProvidersStats(xAccountApiKey, tpspid, opts, (error, data, response) => {
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.thirdPartyProviderStatRouterGetAllAggregateThirdPartyProvidersStats(xAccountApiKey, tpspid, opts, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -62,12 +64,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## thirdPartyProviderStatRouterGetAllAggregatedProviderStatsForAThirdPartyProvider
-
+<a name="thirdPartyProviderStatRouterGetAllAggregatedProviderStatsForAThirdPartyProvider"></a>
+# **thirdPartyProviderStatRouterGetAllAggregatedProviderStatsForAThirdPartyProvider**
 > [ModelsAPStat] thirdPartyProviderStatRouterGetAllAggregatedProviderStatsForAThirdPartyProvider(xAccountApiKey, tpspid, opts)
 
 
@@ -75,28 +76,31 @@ No authorization required
 Get All Aggregated Provider Stats for a Third Party Provider
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountTpspStatApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let tpspid = 789; // Number | the tpspId you want to get
-let opts = {
+var apiInstance = new SendPostApi.AccounttpspstatApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var tpspid = 789; // Number | the tpspId you want to get
+
+var opts = { 
   'from': "from_example", // String | from date
   'to': "to_example" // String | to date
 };
-apiInstance.thirdPartyProviderStatRouterGetAllAggregatedProviderStatsForAThirdPartyProvider(xAccountApiKey, tpspid, opts, (error, data, response) => {
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.thirdPartyProviderStatRouterGetAllAggregatedProviderStatsForAThirdPartyProvider(xAccountApiKey, tpspid, opts, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -115,12 +119,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## thirdPartyProviderStatRouterGetAllAggregatedSubAccountStatsForAnThirdPartyProvider
-
+<a name="thirdPartyProviderStatRouterGetAllAggregatedSubAccountStatsForAnThirdPartyProvider"></a>
+# **thirdPartyProviderStatRouterGetAllAggregatedSubAccountStatsForAnThirdPartyProvider**
 > [ModelsASStat] thirdPartyProviderStatRouterGetAllAggregatedSubAccountStatsForAnThirdPartyProvider(xAccountApiKey, tpspid, opts)
 
 
@@ -128,30 +131,33 @@ No authorization required
 Get All Aggregated Sub-Account Stats for an Third Party Provider
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountTpspStatApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let tpspid = 789; // Number | the TPSPId you want to get
-let opts = {
+var apiInstance = new SendPostApi.AccounttpspstatApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var tpspid = 789; // Number | the TPSPId you want to get
+
+var opts = { 
   'from': "from_example", // String | from date
   'to': "to_example", // String | to date
   'provider': "provider_example", // String | the provider whose stats you want
   'sortBy': "sortBy_example" // String | the sorting order
 };
-apiInstance.thirdPartyProviderStatRouterGetAllAggregatedSubAccountStatsForAnThirdPartyProvider(xAccountApiKey, tpspid, opts, (error, data, response) => {
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.thirdPartyProviderStatRouterGetAllAggregatedSubAccountStatsForAnThirdPartyProvider(xAccountApiKey, tpspid, opts, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -172,12 +178,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## thirdPartyProviderStatRouterGetAllThirdPartyProvidersStats
-
+<a name="thirdPartyProviderStatRouterGetAllThirdPartyProvidersStats"></a>
+# **thirdPartyProviderStatRouterGetAllThirdPartyProvidersStats**
 > [ModelsRIPStat] thirdPartyProviderStatRouterGetAllThirdPartyProvidersStats(xAccountApiKey, tpspid, opts)
 
 
@@ -185,29 +190,32 @@ No authorization required
 Get All Third Party Providers Stats
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountTpspStatApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let tpspid = 789; // Number | the tpspId you want to get
-let opts = {
+var apiInstance = new SendPostApi.AccounttpspstatApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var tpspid = 789; // Number | the tpspId you want to get
+
+var opts = { 
   'from': "from_example", // String | from date
   'to': "to_example", // String | to date
   'provider': "provider_example" // String | the provider whose stats you want
 };
-apiInstance.thirdPartyProviderStatRouterGetAllThirdPartyProvidersStats(xAccountApiKey, tpspid, opts, (error, data, response) => {
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.thirdPartyProviderStatRouterGetAllThirdPartyProvidersStats(xAccountApiKey, tpspid, opts, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -227,6 +235,6 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 

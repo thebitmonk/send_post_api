@@ -1,10 +1,9 @@
 # SendPostApi.ModelsRStat
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**date** | **String** |  | [optional] 
+**_date** | **String** |  | [optional] 
 **stat** | [**ModelsStat**](ModelsStat.md) |  | [optional] 
 
 

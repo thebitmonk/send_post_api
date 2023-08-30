@@ -1,7 +1,6 @@
 # SendPostApi.ModelsAccountIPPool
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created** | **Number** |  | [optional] 
@@ -11,7 +10,7 @@ Name | Type | Description | Notes
 **routingMetaData** | **String** |  | [optional] 
 **routingStrategy** | **Number** |  | [optional] 
 **thirdPartySendingProviders** | [**[ModelsThirdPartySendingProvider]**](ModelsThirdPartySendingProvider.md) |  | [optional] 
-**toAccountIPPools** | [**[ModelsAccountIPPool]**](ModelsAccountIPPool.md) |  | [optional] 
-**type** | **Object** |  | [optional] 
+**toAccountIPPools** | **[Object]** |  | [optional] 
+**type** | [**ModelsIPPoolType**](ModelsIPPoolType.md) |  | [optional] 
 
 

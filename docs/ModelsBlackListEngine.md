@@ -1,7 +1,6 @@
 # SendPostApi.ModelsBlackListEngine
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **confidence** | **String** |  | [optional] 

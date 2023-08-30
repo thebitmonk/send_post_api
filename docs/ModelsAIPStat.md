@@ -1,7 +1,6 @@
 # SendPostApi.ModelsAIPStat
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **clicked** | **Number** |  | [optional] 

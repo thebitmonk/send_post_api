@@ -1,7 +1,6 @@
 # SendPostApi.ModelsQEvent
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **accountID** | **Number** |  | [optional] 

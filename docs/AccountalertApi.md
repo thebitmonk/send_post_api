@@ -1,19 +1,18 @@
-# SendPostApi.AccountAlertApi
+# SendPostApi.AccountalertApi
 
 All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**alertRouterCount**](AccountAlertApi.md#alertRouterCount) | **GET** /account/alert/count | 
-[**alertRouterCreateAlert**](AccountAlertApi.md#alertRouterCreateAlert) | **POST** /account/alert/ | 
-[**alertRouterDelete**](AccountAlertApi.md#alertRouterDelete) | **DELETE** /account/alert/{alertId} | 
-[**alertRouterGetAll**](AccountAlertApi.md#alertRouterGetAll) | **GET** /account/alert/ | 
-[**alertRouterUpdate**](AccountAlertApi.md#alertRouterUpdate) | **PUT** /account/alert/{alertId} | 
+[**alertRouterCount**](AccountalertApi.md#alertRouterCount) | **GET** /account/alert/count | 
+[**alertRouterCreateAlert**](AccountalertApi.md#alertRouterCreateAlert) | **POST** /account/alert/ | 
+[**alertRouterDelete**](AccountalertApi.md#alertRouterDelete) | **DELETE** /account/alert/{alertId} | 
+[**alertRouterGetAll**](AccountalertApi.md#alertRouterGetAll) | **GET** /account/alert/ | 
+[**alertRouterUpdate**](AccountalertApi.md#alertRouterUpdate) | **PUT** /account/alert/{alertId} | 
 
 
-
-## alertRouterCount
-
+<a name="alertRouterCount"></a>
+# **alertRouterCount**
 > ModelsCountStat alertRouterCount(xAccountApiKey, opts)
 
 
@@ -21,26 +20,28 @@ Method | HTTP request | Description
 Count Total Alerts for account
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountAlertApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let opts = {
+var apiInstance = new SendPostApi.AccountalertApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var opts = { 
   'search': "search_example" // String | search term
 };
-apiInstance.alertRouterCount(xAccountApiKey, opts, (error, data, response) => {
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.alertRouterCount(xAccountApiKey, opts, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -57,12 +58,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## alertRouterCreateAlert
-
+<a name="alertRouterCreateAlert"></a>
+# **alertRouterCreateAlert**
 > ModelsAlertResponse alertRouterCreateAlert(xAccountApiKey, body)
 
 
@@ -70,24 +70,27 @@ No authorization required
 create an alert
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountAlertApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let body = new SendPostApi.ModelsAlertRequest(); // ModelsAlertRequest | The List to br sent
-apiInstance.alertRouterCreateAlert(xAccountApiKey, body, (error, data, response) => {
+var apiInstance = new SendPostApi.AccountalertApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var body = new SendPostApi.ModelsAlertRequest(); // ModelsAlertRequest | The List to br sent
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.alertRouterCreateAlert(xAccountApiKey, body, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -104,12 +107,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## alertRouterDelete
-
+<a name="alertRouterDelete"></a>
+# **alertRouterDelete**
 > ModelsDeleteResponse alertRouterDelete(xAccountApiKey, alertId)
 
 
@@ -117,24 +119,27 @@ No authorization required
 Delete Alert
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountAlertApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let alertId = 789; // Number | The AlertId you want to delete
-apiInstance.alertRouterDelete(xAccountApiKey, alertId, (error, data, response) => {
+var apiInstance = new SendPostApi.AccountalertApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var alertId = 789; // Number | The AlertId you want to delete
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.alertRouterDelete(xAccountApiKey, alertId, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -151,12 +156,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## alertRouterGetAll
-
+<a name="alertRouterGetAll"></a>
+# **alertRouterGetAll**
 > [ModelsDetailedAlert] alertRouterGetAll(xAccountApiKey, opts)
 
 
@@ -164,28 +168,30 @@ No authorization required
 Get All Alerts
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountAlertApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let opts = {
+var apiInstance = new SendPostApi.AccountalertApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var opts = { 
   'offset': 789, // Number | offset
   'limit': 789, // Number | limit
   'search': "search_example" // String | search term
 };
-apiInstance.alertRouterGetAll(xAccountApiKey, opts, (error, data, response) => {
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.alertRouterGetAll(xAccountApiKey, opts, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -204,38 +210,41 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## alertRouterUpdate
-
-> Object alertRouterUpdate(xAccountApiKey, alertId, body)
+<a name="alertRouterUpdate"></a>
+# **alertRouterUpdate**
+> Alert alertRouterUpdate(xAccountApiKey, alertId, body)
 
 
 
 Update an Alert
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountAlertApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let alertId = 789; // Number | The alert you want to update
-let body = new SendPostApi.ModelsEAlert(); // ModelsEAlert | The alert  Settings
-apiInstance.alertRouterUpdate(xAccountApiKey, alertId, body, (error, data, response) => {
+var apiInstance = new SendPostApi.AccountalertApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var alertId = 789; // Number | The alert you want to update
+
+var body = new SendPostApi.ModelsEAlert(); // ModelsEAlert | The alert  Settings
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.alertRouterUpdate(xAccountApiKey, alertId, body, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -245,7 +254,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**Alert**](Alert.md)
 
 ### Authorization
 
@@ -253,6 +262,6 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 

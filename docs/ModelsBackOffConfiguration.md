@@ -1,16 +1,15 @@
 # SendPostApi.ModelsBackOffConfiguration
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **concurrentConnections** | **Number** |  | [optional] 
-**concurrentConnectionsType** | **Object** |  | [optional] 
+**concurrentConnectionsType** | [**ModelsBackOffDecreaseType**](ModelsBackOffDecreaseType.md) |  | [optional] 
 **sendPerDay** | **Number** |  | [optional] 
-**sendPerDayType** | **Object** |  | [optional] 
+**sendPerDayType** | [**ModelsBackOffDecreaseType**](ModelsBackOffDecreaseType.md) |  | [optional] 
 **sendPerHour** | **Number** |  | [optional] 
-**sendPerHourType** | **Object** |  | [optional] 
+**sendPerHourType** | [**ModelsBackOffDecreaseType**](ModelsBackOffDecreaseType.md) |  | [optional] 
 **sendPerMinute** | **Number** |  | [optional] 
-**sendPerMinuteType** | **Object** |  | [optional] 
+**sendPerMinuteType** | [**ModelsBackOffDecreaseType**](ModelsBackOffDecreaseType.md) |  | [optional] 
 
 

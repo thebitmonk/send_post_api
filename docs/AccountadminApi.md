@@ -1,15 +1,14 @@
-# SendPostApi.AccountAdminApi
+# SendPostApi.AccountadminApi
 
 All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**accountAdminRouterAssumeAccountGetToken**](AccountAdminApi.md#accountAdminRouterAssumeAccountGetToken) | **GET** /account/admin/assume | 
+[**accountAdminRouterAssumeAccountGetToken**](AccountadminApi.md#accountAdminRouterAssumeAccountGetToken) | **GET** /account/admin/assume | 
 
 
-
-## accountAdminRouterAssumeAccountGetToken
-
+<a name="accountAdminRouterAssumeAccountGetToken"></a>
+# **accountAdminRouterAssumeAccountGetToken**
 > ModelsRAssumeAccount accountAdminRouterAssumeAccountGetToken(xAccountApiKey, email, opts)
 
 
@@ -17,27 +16,30 @@ Method | HTTP request | Description
 Responds back with a custom token for frontend to start login using firebase sdk
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountAdminApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let email = "email_example"; // String | email
-let opts = {
+var apiInstance = new SendPostApi.AccountadminApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var email = "email_example"; // String | email
+
+var opts = { 
   'uid': "uid_example" // String | firebase uid if you have
 };
-apiInstance.accountAdminRouterAssumeAccountGetToken(xAccountApiKey, email, opts, (error, data, response) => {
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.accountAdminRouterAssumeAccountGetToken(xAccountApiKey, email, opts, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -55,6 +57,6 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 

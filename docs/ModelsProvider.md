@@ -1,7 +1,6 @@
 # SendPostApi.ModelsProvider
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created** | **Number** |  | [optional] 
@@ -10,7 +9,7 @@ Name | Type | Description | Notes
 **key** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
 **port** | **Number** |  | [optional] 
-**provider** | **Number** |  | [optional] 
+**provider** | [**ModelsThirdPartySendingProviderType**](ModelsThirdPartySendingProviderType.md) |  | [optional] 
 **retryTime** | **Number** |  | [optional] 
 **secret** | **String** |  | [optional] 
 **token** | **String** |  | [optional] 

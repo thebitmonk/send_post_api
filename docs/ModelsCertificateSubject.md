@@ -1,7 +1,6 @@
 # SendPostApi.ModelsCertificateSubject
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **alternativeNames** | **String** |  | [optional] 

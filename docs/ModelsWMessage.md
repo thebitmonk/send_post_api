@@ -1,7 +1,6 @@
 # SendPostApi.ModelsWMessage
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **accountID** | **Number** |  | [optional] 
@@ -17,6 +16,6 @@ Name | Type | Description | Notes
 **subAccountID** | **Number** |  | [optional] 
 **submittedAt** | **Number** |  | [optional] 
 **to** | **String** |  | [optional] 
-**type** | **Object** |  | [optional] 
+**type** | [**ModelsEventType**](ModelsEventType.md) |  | [optional] 
 
 

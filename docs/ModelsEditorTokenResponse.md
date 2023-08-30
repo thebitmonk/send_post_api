@@ -1,7 +1,6 @@
 # SendPostApi.ModelsEditorTokenResponse
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **expires** | **String** |  | [optional] 

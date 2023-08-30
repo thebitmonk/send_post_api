@@ -10,39 +10,41 @@ Method | HTTP request | Description
 [**authRouterUpdateLogo**](AuthApi.md#authRouterUpdateLogo) | **PUT** /auth/logo | 
 
 
-
-## authRouterCreate
-
-> ModelsAccount authRouterCreate(xToken, body)
+<a name="authRouterCreate"></a>
+# **authRouterCreate**
+> ModelsAccount authRouterCreate(body, xToken)
 
 
 
 Create Account, sub-account and member
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AuthApi();
-let xToken = "xToken_example"; // String | Firebase dynamic token
-let body = new SendPostApi.ModelsEAccount(); // ModelsEAccount | The Account content
-apiInstance.authRouterCreate(xToken, body, (error, data, response) => {
+var apiInstance = new SendPostApi.AuthApi();
+
+var body = new SendPostApi.ModelsEAccount(); // ModelsEAccount | The Account content
+
+var xToken = "xToken_example"; // String | Firebase dynamic token
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.authRouterCreate(body, xToken, callback);
 ```
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xToken** | **String**| Firebase dynamic token | 
  **body** | [**ModelsEAccount**](ModelsEAccount.md)| The Account content | 
+ **xToken** | **String**| Firebase dynamic token | 
 
 ### Return type
 
@@ -54,42 +56,44 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## authRouterGetAuthInfo
-
-> ModelsAuthInfo authRouterGetAuthInfo(xToken, body)
+<a name="authRouterGetAuthInfo"></a>
+# **authRouterGetAuthInfo**
+> ModelsAuthInfo authRouterGetAuthInfo(body, xToken)
 
 
 
 Get Auth Info Details
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AuthApi();
-let xToken = "xToken_example"; // String | Firebase dynamic token
-let body = new SendPostApi.ModelsEAccount(); // ModelsEAccount | The Account content
-apiInstance.authRouterGetAuthInfo(xToken, body, (error, data, response) => {
+var apiInstance = new SendPostApi.AuthApi();
+
+var body = new SendPostApi.ModelsEAccount(); // ModelsEAccount | The Account content
+
+var xToken = "xToken_example"; // String | Firebase dynamic token
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.authRouterGetAuthInfo(body, xToken, callback);
 ```
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xToken** | **String**| Firebase dynamic token | 
  **body** | [**ModelsEAccount**](ModelsEAccount.md)| The Account content | 
+ **xToken** | **String**| Firebase dynamic token | 
 
 ### Return type
 
@@ -101,42 +105,44 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## authRouterUpdateAuthInfo
-
-> ModelsAuthInfo authRouterUpdateAuthInfo(xToken, body)
+<a name="authRouterUpdateAuthInfo"></a>
+# **authRouterUpdateAuthInfo**
+> ModelsAuthInfo authRouterUpdateAuthInfo(body, xToken)
 
 
 
 Updates member and accounts related for email verification and on boarding answers
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AuthApi();
-let xToken = "xToken_example"; // String | Firebase dynamic token
-let body = new SendPostApi.ModelsEAccountMember(); // ModelsEAccountMember | The Account Member content
-apiInstance.authRouterUpdateAuthInfo(xToken, body, (error, data, response) => {
+var apiInstance = new SendPostApi.AuthApi();
+
+var body = new SendPostApi.ModelsEAccountMember(); // ModelsEAccountMember | The Account Member content
+
+var xToken = "xToken_example"; // String | Firebase dynamic token
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.authRouterUpdateAuthInfo(body, xToken, callback);
 ```
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xToken** | **String**| Firebase dynamic token | 
  **body** | [**ModelsEAccountMember**](ModelsEAccountMember.md)| The Account Member content | 
+ **xToken** | **String**| Firebase dynamic token | 
 
 ### Return type
 
@@ -148,45 +154,47 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## authRouterUpdateLogo
-
-> authRouterUpdateLogo(xToken, uid, opts)
+<a name="authRouterUpdateLogo"></a>
+# **authRouterUpdateLogo**
+> authRouterUpdateLogo(uid, xToken, opts)
 
 
 
 Updates account brand logo for custom templates
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AuthApi();
-let xToken = "xToken_example"; // String | Firebase dynamic token
-let uid = "uid_example"; // String | user id
-let opts = {
-  'logo': "/path/to/file" // File | Logo file
+var apiInstance = new SendPostApi.AuthApi();
+
+var uid = "uid_example"; // String | user id
+
+var xToken = "xToken_example"; // String | Firebase dynamic token
+
+var opts = { 
+  'logo': "/path/to/file.txt" // File | Logo file
 };
-apiInstance.authRouterUpdateLogo(xToken, uid, opts, (error, data, response) => {
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-});
+};
+apiInstance.authRouterUpdateLogo(uid, xToken, opts, callback);
 ```
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xToken** | **String**| Firebase dynamic token | 
  **uid** | **String**| user id | 
+ **xToken** | **String**| Firebase dynamic token | 
  **logo** | **File**| Logo file | [optional] 
 
 ### Return type
@@ -199,6 +207,6 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: multipart/form-data
-- **Accept**: Not defined
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
 

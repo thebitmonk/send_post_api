@@ -1,7 +1,6 @@
 # SendPostApi.ModelsCertificateIssuer
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **commonName** | **String** |  | [optional] 

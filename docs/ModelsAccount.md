@@ -1,7 +1,6 @@
 # SendPostApi.ModelsAccount
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **alertSlackEndpoint** | **String** |  | [optional] 

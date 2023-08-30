@@ -1,16 +1,15 @@
-# SendPostApi.AccountRecipientApi
+# SendPostApi.AccountrecipientApi
 
 All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**recipientRouterGetAllMessagesForARecipient**](AccountRecipientApi.md#recipientRouterGetAllMessagesForARecipient) | **GET** /account/recipient/{recipient}/messages | 
-[**recipientRouterGetAllMessagesForARecipientFromANode**](AccountRecipientApi.md#recipientRouterGetAllMessagesForARecipientFromANode) | **GET** /account/recipient/node/{recipient}/messages | 
+[**recipientRouterGetAllMessagesForARecipient**](AccountrecipientApi.md#recipientRouterGetAllMessagesForARecipient) | **GET** /account/recipient/{recipient}/messages | 
+[**recipientRouterGetAllMessagesForARecipientFromANode**](AccountrecipientApi.md#recipientRouterGetAllMessagesForARecipientFromANode) | **GET** /account/recipient/node/{recipient}/messages | 
 
 
-
-## recipientRouterGetAllMessagesForARecipient
-
+<a name="recipientRouterGetAllMessagesForARecipient"></a>
+# **recipientRouterGetAllMessagesForARecipient**
 > [ModelsQEmailMessage] recipientRouterGetAllMessagesForARecipient(xAccountApiKey, recipient)
 
 
@@ -18,24 +17,27 @@ Method | HTTP request | Description
 Find all messages sent to a specific recipient
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountRecipientApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let recipient = "recipient_example"; // String | email of the recipient
-apiInstance.recipientRouterGetAllMessagesForARecipient(xAccountApiKey, recipient, (error, data, response) => {
+var apiInstance = new SendPostApi.AccountrecipientApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var recipient = "recipient_example"; // String | email of the recipient
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.recipientRouterGetAllMessagesForARecipient(xAccountApiKey, recipient, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -52,12 +54,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## recipientRouterGetAllMessagesForARecipientFromANode
-
+<a name="recipientRouterGetAllMessagesForARecipientFromANode"></a>
+# **recipientRouterGetAllMessagesForARecipientFromANode**
 > [ModelsQEmailMessage] recipientRouterGetAllMessagesForARecipientFromANode(xAccountApiKey, recipient)
 
 
@@ -65,24 +66,27 @@ No authorization required
 Find all message sent to a recipient from a specific node
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountRecipientApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let recipient = "recipient_example"; // String | email of the recipient
-apiInstance.recipientRouterGetAllMessagesForARecipientFromANode(xAccountApiKey, recipient, (error, data, response) => {
+var apiInstance = new SendPostApi.AccountrecipientApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var recipient = "recipient_example"; // String | email of the recipient
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.recipientRouterGetAllMessagesForARecipientFromANode(xAccountApiKey, recipient, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -99,6 +103,6 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 

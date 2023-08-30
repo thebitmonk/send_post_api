@@ -1,7 +1,6 @@
 # SendPostApi.ModelsBlackListResult
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **alexaTop100k** | **Boolean** |  | [optional] 

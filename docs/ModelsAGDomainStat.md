@@ -1,7 +1,6 @@
 # SendPostApi.ModelsAGDomainStat
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **domainId** | **Number** |  | [optional] 

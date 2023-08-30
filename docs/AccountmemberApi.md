@@ -1,19 +1,18 @@
-# SendPostApi.AccountMemberApi
+# SendPostApi.AccountmemberApi
 
 All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**memberRouterDelete**](AccountMemberApi.md#memberRouterDelete) | **DELETE** /account/member/{memberId} | 
-[**memberRouterGet**](AccountMemberApi.md#memberRouterGet) | **GET** /account/member/{memberId} | 
-[**memberRouterGetAll**](AccountMemberApi.md#memberRouterGetAll) | **GET** /account/member/ | 
-[**memberRouterUpdate**](AccountMemberApi.md#memberRouterUpdate) | **PUT** /account/member/{memberId} | 
-[**memberRouterVerifyByEmailRequest**](AccountMemberApi.md#memberRouterVerifyByEmailRequest) | **POST** /account/member/{memberId}/verify/email | 
+[**memberRouterDelete**](AccountmemberApi.md#memberRouterDelete) | **DELETE** /account/member/{memberId} | 
+[**memberRouterGet**](AccountmemberApi.md#memberRouterGet) | **GET** /account/member/{memberId} | 
+[**memberRouterGetAll**](AccountmemberApi.md#memberRouterGetAll) | **GET** /account/member/ | 
+[**memberRouterUpdate**](AccountmemberApi.md#memberRouterUpdate) | **PUT** /account/member/{memberId} | 
+[**memberRouterVerifyByEmailRequest**](AccountmemberApi.md#memberRouterVerifyByEmailRequest) | **POST** /account/member/{memberId}/verify/email | 
 
 
-
-## memberRouterDelete
-
+<a name="memberRouterDelete"></a>
+# **memberRouterDelete**
 > ModelsDeleteResponse memberRouterDelete(xAccountApiKey, memberId)
 
 
@@ -21,24 +20,27 @@ Method | HTTP request | Description
 Delete Member
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountMemberApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let memberId = 789; // Number | The MemberId you want to delete
-apiInstance.memberRouterDelete(xAccountApiKey, memberId, (error, data, response) => {
+var apiInstance = new SendPostApi.AccountmemberApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var memberId = 789; // Number | The MemberId you want to delete
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.memberRouterDelete(xAccountApiKey, memberId, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -55,12 +57,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## memberRouterGet
-
+<a name="memberRouterGet"></a>
+# **memberRouterGet**
 > ModelsMember memberRouterGet(xAccountApiKey, memberId)
 
 
@@ -68,24 +69,27 @@ No authorization required
 Find Member by MemberId
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountMemberApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let memberId = 789; // Number | the MemberId you want to get
-apiInstance.memberRouterGet(xAccountApiKey, memberId, (error, data, response) => {
+var apiInstance = new SendPostApi.AccountmemberApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var memberId = 789; // Number | the MemberId you want to get
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.memberRouterGet(xAccountApiKey, memberId, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -102,12 +106,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## memberRouterGetAll
-
+<a name="memberRouterGetAll"></a>
+# **memberRouterGetAll**
 > [ModelsMember] memberRouterGetAll(xAccountApiKey)
 
 
@@ -115,23 +118,25 @@ No authorization required
 Get All Members
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountMemberApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-apiInstance.memberRouterGetAll(xAccountApiKey, (error, data, response) => {
+var apiInstance = new SendPostApi.AccountmemberApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.memberRouterGetAll(xAccountApiKey, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -147,12 +152,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## memberRouterUpdate
-
+<a name="memberRouterUpdate"></a>
+# **memberRouterUpdate**
 > ModelsMember memberRouterUpdate(xAccountApiKey, memberId, body)
 
 
@@ -160,25 +164,29 @@ No authorization required
 Update Member
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountMemberApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let memberId = 789; // Number | The MemberId you want to update
-let body = new SendPostApi.ModelsEMember(); // ModelsEMember | The body
-apiInstance.memberRouterUpdate(xAccountApiKey, memberId, body, (error, data, response) => {
+var apiInstance = new SendPostApi.AccountmemberApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var memberId = 789; // Number | The MemberId you want to update
+
+var body = new SendPostApi.ModelsEMember(); // ModelsEMember | The body
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.memberRouterUpdate(xAccountApiKey, memberId, body, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -196,12 +204,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## memberRouterVerifyByEmailRequest
-
+<a name="memberRouterVerifyByEmailRequest"></a>
+# **memberRouterVerifyByEmailRequest**
 > memberRouterVerifyByEmailRequest(xAccountApiKey, memberId, body)
 
 
@@ -209,25 +216,29 @@ No authorization required
 Verify Member By Email Request
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountMemberApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let memberId = 789; // Number | the MemberId who is inviting new member to join the account
-let body = new SendPostApi.ModelsVerifyByMemberTokenRequest(); // ModelsVerifyByMemberTokenRequest | The Email to be used to verify
-apiInstance.memberRouterVerifyByEmailRequest(xAccountApiKey, memberId, body, (error, data, response) => {
+var apiInstance = new SendPostApi.AccountmemberApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var memberId = 789; // Number | the MemberId who is inviting new member to join the account
+
+var body = new SendPostApi.ModelsVerifyByMemberTokenRequest(); // ModelsVerifyByMemberTokenRequest | The Email to be used to verify
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-});
+};
+apiInstance.memberRouterVerifyByEmailRequest(xAccountApiKey, memberId, body, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -245,6 +256,6 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 

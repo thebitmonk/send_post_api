@@ -1,17 +1,16 @@
-# SendPostApi.AccountTagApi
+# SendPostApi.AccounttagApi
 
 All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**tagRouterCreate**](AccountTagApi.md#tagRouterCreate) | **POST** /account/tag/ | 
-[**tagRouterDelete**](AccountTagApi.md#tagRouterDelete) | **DELETE** /account/tag/{tagid} | 
-[**tagRouterGetAll**](AccountTagApi.md#tagRouterGetAll) | **GET** /account/tag/ | 
+[**tagRouterCreate**](AccounttagApi.md#tagRouterCreate) | **POST** /account/tag/ | 
+[**tagRouterDelete**](AccounttagApi.md#tagRouterDelete) | **DELETE** /account/tag/{tagid} | 
+[**tagRouterGetAll**](AccounttagApi.md#tagRouterGetAll) | **GET** /account/tag/ | 
 
 
-
-## tagRouterCreate
-
+<a name="tagRouterCreate"></a>
+# **tagRouterCreate**
 > ModelsTag tagRouterCreate(xAccountApiKey, body)
 
 
@@ -19,24 +18,27 @@ Method | HTTP request | Description
 Create Tag
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountTagApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let body = new SendPostApi.ModelsTag(); // ModelsTag | The Tag content
-apiInstance.tagRouterCreate(xAccountApiKey, body, (error, data, response) => {
+var apiInstance = new SendPostApi.AccounttagApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var body = new SendPostApi.ModelsTag(); // ModelsTag | The Tag content
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.tagRouterCreate(xAccountApiKey, body, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -53,12 +55,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## tagRouterDelete
-
+<a name="tagRouterDelete"></a>
+# **tagRouterDelete**
 > ModelsDeleteResponse tagRouterDelete(xAccountApiKey, tagid)
 
 
@@ -66,24 +67,27 @@ No authorization required
 Delete Tag
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountTagApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let tagid = 789; // Number | The AccountTagId you want to delete
-apiInstance.tagRouterDelete(xAccountApiKey, tagid, (error, data, response) => {
+var apiInstance = new SendPostApi.AccounttagApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var tagid = 789; // Number | The AccountTagId you want to delete
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.tagRouterDelete(xAccountApiKey, tagid, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -100,12 +104,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## tagRouterGetAll
-
+<a name="tagRouterGetAll"></a>
+# **tagRouterGetAll**
 > [ModelsTag] tagRouterGetAll(xAccountApiKey)
 
 
@@ -113,23 +116,25 @@ No authorization required
 Get All Tags
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountTagApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-apiInstance.tagRouterGetAll(xAccountApiKey, (error, data, response) => {
+var apiInstance = new SendPostApi.AccounttagApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.tagRouterGetAll(xAccountApiKey, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -145,6 +150,6 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 

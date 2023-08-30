@@ -12,9 +12,8 @@ Method | HTTP request | Description
 [**trackRouterTrackWelcomeLinkClick**](TrackApi.md#trackRouterTrackWelcomeLinkClick) | **GET** /track/click/welcome | 
 
 
-
-## trackRouterTrackEmailOpen
-
+<a name="trackRouterTrackEmailOpen"></a>
+# **trackRouterTrackEmailOpen**
 > trackRouterTrackEmailOpen(ipId, accountId, subAccountId, messageId, emailType)
 
 
@@ -22,27 +21,33 @@ Method | HTTP request | Description
 Track Email Open
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.TrackApi();
-let ipId = 789; // Number | The id of ip from which this email message was sent
-let accountId = 789; // Number | The id of account from which email is being sent
-let subAccountId = 789; // Number | The id of sub-account from which email is being sent
-let messageId = "messageId_example"; // String | The UUID of message which was sent
-let emailType = "emailType_example"; // String | The type of email such as gmail, yahoo etc. which was sent. This is inferred from to email address
-apiInstance.trackRouterTrackEmailOpen(ipId, accountId, subAccountId, messageId, emailType, (error, data, response) => {
+var apiInstance = new SendPostApi.TrackApi();
+
+var ipId = 789; // Number | The id of ip from which this email message was sent
+
+var accountId = 789; // Number | The id of account from which email is being sent
+
+var subAccountId = 789; // Number | The id of sub-account from which email is being sent
+
+var messageId = "messageId_example"; // String | The UUID of message which was sent
+
+var emailType = "emailType_example"; // String | The type of email such as gmail, yahoo etc. which was sent. This is inferred from to email address
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-});
+};
+apiInstance.trackRouterTrackEmailOpen(ipId, accountId, subAccountId, messageId, emailType, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -62,12 +67,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## trackRouterTrackLinkClick
-
+<a name="trackRouterTrackLinkClick"></a>
+# **trackRouterTrackLinkClick**
 > trackRouterTrackLinkClick(ipId, accountId, subAccountId, messageId, emailType, redirecturl)
 
 
@@ -75,28 +79,35 @@ No authorization required
 Track Link Click
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.TrackApi();
-let ipId = 789; // Number | The id of ip from which this email message was sent
-let accountId = 789; // Number | The id of account from which email is being sent
-let subAccountId = 789; // Number | The id of sub-account from which email is being sent
-let messageId = "messageId_example"; // String | The UUID of message which was sent
-let emailType = "emailType_example"; // String | The type of email such as gmail, yahoo etc. which was sent. This is inferred from to email address
-let redirecturl = "redirecturl_example"; // String | The encoded redirect URL
-apiInstance.trackRouterTrackLinkClick(ipId, accountId, subAccountId, messageId, emailType, redirecturl, (error, data, response) => {
+var apiInstance = new SendPostApi.TrackApi();
+
+var ipId = 789; // Number | The id of ip from which this email message was sent
+
+var accountId = 789; // Number | The id of account from which email is being sent
+
+var subAccountId = 789; // Number | The id of sub-account from which email is being sent
+
+var messageId = "messageId_example"; // String | The UUID of message which was sent
+
+var emailType = "emailType_example"; // String | The type of email such as gmail, yahoo etc. which was sent. This is inferred from to email address
+
+var redirecturl = "redirecturl_example"; // String | The encoded redirect URL
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-});
+};
+apiInstance.trackRouterTrackLinkClick(ipId, accountId, subAccountId, messageId, emailType, redirecturl, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -117,12 +128,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## trackRouterTrackTPSPEmailOpen
-
+<a name="trackRouterTrackTPSPEmailOpen"></a>
+# **trackRouterTrackTPSPEmailOpen**
 > trackRouterTrackTPSPEmailOpen(tpspId, accountId, subAccountId, messageId, emailType)
 
 
@@ -130,27 +140,33 @@ No authorization required
 Track TPSP Email Open
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.TrackApi();
-let tpspId = 789; // Number | The id of tpsp from which this email message was sent
-let accountId = 789; // Number | The id of account from which email is being sent
-let subAccountId = 789; // Number | The id of sub-account from which email is being sent
-let messageId = "messageId_example"; // String | The UUID of message which was sent
-let emailType = "emailType_example"; // String | The type of email such as gmail, yahoo etc. which was sent. This is inferred from to email address
-apiInstance.trackRouterTrackTPSPEmailOpen(tpspId, accountId, subAccountId, messageId, emailType, (error, data, response) => {
+var apiInstance = new SendPostApi.TrackApi();
+
+var tpspId = 789; // Number | The id of tpsp from which this email message was sent
+
+var accountId = 789; // Number | The id of account from which email is being sent
+
+var subAccountId = 789; // Number | The id of sub-account from which email is being sent
+
+var messageId = "messageId_example"; // String | The UUID of message which was sent
+
+var emailType = "emailType_example"; // String | The type of email such as gmail, yahoo etc. which was sent. This is inferred from to email address
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-});
+};
+apiInstance.trackRouterTrackTPSPEmailOpen(tpspId, accountId, subAccountId, messageId, emailType, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -170,12 +186,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## trackRouterTrackTPSPLinkClick
-
+<a name="trackRouterTrackTPSPLinkClick"></a>
+# **trackRouterTrackTPSPLinkClick**
 > trackRouterTrackTPSPLinkClick(tpspId, accountId, subAccountId, messageId, emailType, redirecturl)
 
 
@@ -183,28 +198,35 @@ No authorization required
 Track TPSP Link Click
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.TrackApi();
-let tpspId = 789; // Number | The id of tpsp from which this email message was sent
-let accountId = 789; // Number | The id of account from which email is being sent
-let subAccountId = 789; // Number | The id of sub-account from which email is being sent
-let messageId = "messageId_example"; // String | The UUID of message which was sent
-let emailType = "emailType_example"; // String | The type of email such as gmail, yahoo etc. which was sent. This is inferred from to email address
-let redirecturl = "redirecturl_example"; // String | The encoded redirect URL
-apiInstance.trackRouterTrackTPSPLinkClick(tpspId, accountId, subAccountId, messageId, emailType, redirecturl, (error, data, response) => {
+var apiInstance = new SendPostApi.TrackApi();
+
+var tpspId = 789; // Number | The id of tpsp from which this email message was sent
+
+var accountId = 789; // Number | The id of account from which email is being sent
+
+var subAccountId = 789; // Number | The id of sub-account from which email is being sent
+
+var messageId = "messageId_example"; // String | The UUID of message which was sent
+
+var emailType = "emailType_example"; // String | The type of email such as gmail, yahoo etc. which was sent. This is inferred from to email address
+
+var redirecturl = "redirecturl_example"; // String | The encoded redirect URL
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-});
+};
+apiInstance.trackRouterTrackTPSPLinkClick(tpspId, accountId, subAccountId, messageId, emailType, redirecturl, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -225,12 +247,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## trackRouterTrackUnsubscribe
-
+<a name="trackRouterTrackUnsubscribe"></a>
+# **trackRouterTrackUnsubscribe**
 > trackRouterTrackUnsubscribe(ipId, accountId, subAccountId, messageId, emailType)
 
 
@@ -238,27 +259,33 @@ No authorization required
 track link click
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.TrackApi();
-let ipId = 789; // Number | The id of ip from which this email message was sent
-let accountId = 789; // Number | The id of account from which email is being sent
-let subAccountId = 789; // Number | The id of sub-account from which email is being sent
-let messageId = "messageId_example"; // String | The UUID of message which was sent
-let emailType = "emailType_example"; // String | The type of email such as gmail, yahoo etc. which was sent. This is inferred from to email address
-apiInstance.trackRouterTrackUnsubscribe(ipId, accountId, subAccountId, messageId, emailType, (error, data, response) => {
+var apiInstance = new SendPostApi.TrackApi();
+
+var ipId = 789; // Number | The id of ip from which this email message was sent
+
+var accountId = 789; // Number | The id of account from which email is being sent
+
+var subAccountId = 789; // Number | The id of sub-account from which email is being sent
+
+var messageId = "messageId_example"; // String | The UUID of message which was sent
+
+var emailType = "emailType_example"; // String | The type of email such as gmail, yahoo etc. which was sent. This is inferred from to email address
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-});
+};
+apiInstance.trackRouterTrackUnsubscribe(ipId, accountId, subAccountId, messageId, emailType, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -278,12 +305,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## trackRouterTrackWelcomeLinkClick
-
+<a name="trackRouterTrackWelcomeLinkClick"></a>
+# **trackRouterTrackWelcomeLinkClick**
 > trackRouterTrackWelcomeLinkClick(redirecturl)
 
 
@@ -291,23 +317,25 @@ No authorization required
 Track Welcome Link Click
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.TrackApi();
-let redirecturl = "redirecturl_example"; // String | The encoded redirect URL
-apiInstance.trackRouterTrackWelcomeLinkClick(redirecturl, (error, data, response) => {
+var apiInstance = new SendPostApi.TrackApi();
+
+var redirecturl = "redirecturl_example"; // String | The encoded redirect URL
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-});
+};
+apiInstance.trackRouterTrackWelcomeLinkClick(redirecturl, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -323,6 +351,6 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 

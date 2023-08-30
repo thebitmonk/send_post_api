@@ -1,7 +1,6 @@
 # SendPostApi.ModelsEInvitation
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **fromEmail** | **String** |  | [optional] 

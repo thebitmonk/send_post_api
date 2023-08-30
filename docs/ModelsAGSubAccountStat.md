@@ -1,7 +1,6 @@
 # SendPostApi.ModelsAGSubAccountStat
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **clicked** | **Number** |  | [optional] 

@@ -1,7 +1,6 @@
 # SendPostApi.ModelsSSLCertificate
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **details** | [**ModelsCertificateDetails**](ModelsCertificateDetails.md) |  | [optional] 

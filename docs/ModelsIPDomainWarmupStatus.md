@@ -1,7 +1,6 @@
 # SendPostApi.ModelsIPDomainWarmupStatus
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **autoWarmupDelay** | **Number** |  | [optional] 

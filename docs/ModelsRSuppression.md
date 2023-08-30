@@ -1,7 +1,6 @@
 # SendPostApi.ModelsRSuppression
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **hardBounce** | [**[ModelsSuppressionEmail]**](ModelsSuppressionEmail.md) |  | [optional] 

@@ -1,17 +1,16 @@
-# SendPostApi.AccountDomainApi
+# SendPostApi.AccountdomainApi
 
 All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**accountDomainRouterCount**](AccountDomainApi.md#accountDomainRouterCount) | **GET** /account/domain/count | 
-[**accountDomainRouterGet**](AccountDomainApi.md#accountDomainRouterGet) | **GET** /account/domain/{domainId} | 
-[**accountDomainRouterGetAll**](AccountDomainApi.md#accountDomainRouterGetAll) | **GET** /account/domain/ | 
+[**accountDomainRouterCount**](AccountdomainApi.md#accountDomainRouterCount) | **GET** /account/domain/count | 
+[**accountDomainRouterGet**](AccountdomainApi.md#accountDomainRouterGet) | **GET** /account/domain/{domainId} | 
+[**accountDomainRouterGetAll**](AccountdomainApi.md#accountDomainRouterGetAll) | **GET** /account/domain/ | 
 
 
-
-## accountDomainRouterCount
-
+<a name="accountDomainRouterCount"></a>
+# **accountDomainRouterCount**
 > ModelsCountStat accountDomainRouterCount(xAccountApiKey, opts)
 
 
@@ -19,26 +18,28 @@ Method | HTTP request | Description
 Count Total Account Domains
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountDomainApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Sub-Account API Key
-let opts = {
+var apiInstance = new SendPostApi.AccountdomainApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Sub-Account API Key
+
+var opts = { 
   'search': "search_example" // String | search term
 };
-apiInstance.accountDomainRouterCount(xAccountApiKey, opts, (error, data, response) => {
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.accountDomainRouterCount(xAccountApiKey, opts, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -55,12 +56,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## accountDomainRouterGet
-
+<a name="accountDomainRouterGet"></a>
+# **accountDomainRouterGet**
 > ModelsAccountDomain accountDomainRouterGet(xAccountApiKey, domainId)
 
 
@@ -68,24 +68,27 @@ No authorization required
 Find Domain by DomainId
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountDomainApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let domainId = 789; // Number | the DomainId you want to get
-apiInstance.accountDomainRouterGet(xAccountApiKey, domainId, (error, data, response) => {
+var apiInstance = new SendPostApi.AccountdomainApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var domainId = 789; // Number | the DomainId you want to get
+
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.accountDomainRouterGet(xAccountApiKey, domainId, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -102,12 +105,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## accountDomainRouterGetAll
-
+<a name="accountDomainRouterGetAll"></a>
+# **accountDomainRouterGetAll**
 > [ModelsAccountDomain] accountDomainRouterGetAll(xAccountApiKey, opts)
 
 
@@ -115,28 +117,30 @@ No authorization required
 Get All Domains
 
 ### Example
-
 ```javascript
-import SendPostApi from 'send_post_api';
+var SendPostApi = require('send_post_api');
 
-let apiInstance = new SendPostApi.AccountDomainApi();
-let xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
-let opts = {
+var apiInstance = new SendPostApi.AccountdomainApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var opts = { 
   'offset': 789, // Number | offset
   'limit': 789, // Number | limit
   'search': "search_example" // String | search term
 };
-apiInstance.accountDomainRouterGetAll(xAccountApiKey, opts, (error, data, response) => {
+
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.accountDomainRouterGetAll(xAccountApiKey, opts, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -155,6 +159,6 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
