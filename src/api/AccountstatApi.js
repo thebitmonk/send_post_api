@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Responds back with Account Processed Mails Stat <br>
+     * Responds back with Account Processed Mails Stat
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountstatApi~accountStatRouterGetAccountCycleUsageCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsAccountCycleUsage}
@@ -104,7 +104,7 @@
      */
 
     /**
-     * Get All Account Stats <br>
+     * Get All Account Stats
      * @param {String} xAccountApiKey Sub-Account API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
@@ -157,7 +157,7 @@
      */
 
     /**
-     * Get All Account Stats by Group <br>
+     * Get All Account Stats by Group
      * @param {String} xAccountApiKey Sub-Account API Key
      * @param {String} group the group whose stats you want
      * @param {Object} opts Optional parameters
@@ -217,7 +217,7 @@
      */
 
     /**
-     * Get All Aggregate Stats <br>
+     * Get All Aggregate Stats
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
@@ -270,7 +270,7 @@
      */
 
     /**
-     * Get All Aggregate Stats by Group <br>
+     * Get All Aggregate Stats by Group
      * @param {String} xAccountApiKey Sub-Account API Key
      * @param {String} group the group whose stats you want
      * @param {Object} opts Optional parameters
@@ -330,7 +330,7 @@
      */
 
     /**
-     * Get All Aggregate Domain Stats <br>
+     * Get All Aggregate Domain Stats
      * @param {String} xAccountApiKey Account API Key
      * @param {String} from from date
      * @param {String} to to date
@@ -407,7 +407,7 @@
      */
 
     /**
-     * Get All Aggregate Domain Stats Count <br>
+     * Get All Aggregate Domain Stats Count
      * @param {String} xAccountApiKey Account API Key
      * @param {String} from from date
      * @param {String} to to date
@@ -476,7 +476,7 @@
      */
 
     /**
-     * Get All Aggregate IP Stats <br>
+     * Get All Aggregate IP Stats
      * @param {String} xAccountApiKey Account API Key
      * @param {String} from from date
      * @param {String} to to date
@@ -557,7 +557,7 @@
      */
 
     /**
-     * Get All Aggregate IP Stats Count <br>
+     * Get All Aggregate IP Stats Count
      * @param {String} xAccountApiKey Account API Key
      * @param {String} from from date
      * @param {String} to to date
@@ -630,7 +630,7 @@
      */
 
     /**
-     * Get All Aggregate SubAccount Stats <br>
+     * Get All Aggregate SubAccount Stats
      * @param {String} xAccountApiKey Account API Key
      * @param {String} from from date
      * @param {String} to to date
@@ -707,7 +707,7 @@
      */
 
     /**
-     * Get All Aggregate SubAccount Stats Count <br>
+     * Get All Aggregate SubAccount Stats Count
      * @param {String} xAccountApiKey Account API Key
      * @param {String} from from date
      * @param {String} to to date
@@ -776,7 +776,7 @@
      */
 
     /**
-     * Get All Aggregate Third Party Providers Stats <br>
+     * Get All Aggregate Third Party Providers Stats
      * @param {String} xAccountApiKey Account API Key
      * @param {String} from from date
      * @param {String} to to date
@@ -853,7 +853,7 @@
      */
 
     /**
-     * Get All Aggregate Third Party Providers Stats Count <br>
+     * Get All Aggregate Third Party Providers Stats Count
      * @param {String} xAccountApiKey Account API Key
      * @param {String} from from date
      * @param {String} to to date

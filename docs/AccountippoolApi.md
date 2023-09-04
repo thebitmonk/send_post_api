@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**accountIPPoolRouterDelete**](AccountippoolApi.md#accountIPPoolRouterDelete) | **DELETE** /account/ippool/{ippoolid} | 
 [**accountIPPoolRouterGet**](AccountippoolApi.md#accountIPPoolRouterGet) | **GET** /account/ippool/{ippoolid} | 
 [**accountIPPoolRouterGetAll**](AccountippoolApi.md#accountIPPoolRouterGetAll) | **GET** /account/ippool/ | 
+[**accountIPPoolRouterSearchAll**](AccountippoolApi.md#accountIPPoolRouterSearchAll) | **GET** /account/ippool/search | 
 [**accountIPPoolRouterUpdate**](AccountippoolApi.md#accountIPPoolRouterUpdate) | **PUT** /account/ippool/{ippoolid} | 
 
 
@@ -18,7 +19,7 @@ Method | HTTP request | Description
 
 
 
-Count Total AccountIPPools <br>
+Count Total AccountIPPools
 
 ### Example
 ```javascript
@@ -64,7 +65,7 @@ No authorization required
 
 
 
-Create AccountIPPool <br>
+Create AccountIPPool
 
 ### Example
 ```javascript
@@ -113,7 +114,7 @@ No authorization required
 
 
 
-Delete AccountIPPool <br>
+Delete AccountIPPool
 
 ### Example
 ```javascript
@@ -162,7 +163,7 @@ No authorization required
 
 
 
-Find AccountIPPool by AccountIPPoolId <br>
+Find AccountIPPool by AccountIPPoolId
 
 ### Example
 ```javascript
@@ -211,7 +212,7 @@ No authorization required
 
 
 
-Get All AccountIPPools <br>
+Get All AccountIPPools
 
 ### Example
 ```javascript
@@ -259,13 +260,67 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="accountIPPoolRouterSearchAll"></a>
+# **accountIPPoolRouterSearchAll**
+> [ModelsAccountIPPool] accountIPPoolRouterSearchAll(xAccountApiKey, opts)
+
+
+
+Get All AccountIPPools without fetching IPs, TPSPs and other pools
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccountippoolApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var opts = { 
+  'offset': 789, // Number | offset
+  'limit': 789, // Number | limit
+  'search': "search_example" // String | search term
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.accountIPPoolRouterSearchAll(xAccountApiKey, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xAccountApiKey** | **String**| Account API Key | 
+ **offset** | **Number**| offset | [optional] 
+ **limit** | **Number**| limit | [optional] 
+ **search** | **String**| search term | [optional] 
+
+### Return type
+
+[**[ModelsAccountIPPool]**](ModelsAccountIPPool.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="accountIPPoolRouterUpdate"></a>
 # **accountIPPoolRouterUpdate**
 > ModelsAccountIPPool accountIPPoolRouterUpdate(xAccountApiKey, ippoolid, body)
 
 
 
-Update AccountIPPool <br>
+Update AccountIPPool
 
 ### Example
 ```javascript

@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -68,7 +68,7 @@
           var xAccountApiKey = "xAccountApiKey_example";
           var body = new SendPostApi.ModelsAlertRequest();
           body.active = false;
-          body.emails = [""];
+          body.emails = ;
           body.entityType = "";
           body.entityValue = "0";
           body.label = new SendPostApi.ModelsAlertLabel();
@@ -191,7 +191,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SendPostApi.ModelsAlert);
+            expect(data).to.be.a(SendPostApi.Alert);
 
             done();
           });

@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsEThirdPartySendingProvider', 'model/ModelsEUpdateTPSP', 'model/ModelsThirdPartySendingProvider'], factory);
+    define(['ApiClient', 'model/EUpdateTPSP', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsEThirdPartySendingProvider', 'model/ModelsThirdPartySendingProvider'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsEThirdPartySendingProvider'), require('../model/ModelsEUpdateTPSP'), require('../model/ModelsThirdPartySendingProvider'));
+    module.exports = factory(require('../ApiClient'), require('../model/EUpdateTPSP'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsEThirdPartySendingProvider'), require('../model/ModelsThirdPartySendingProvider'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.AccounttpspApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsEThirdPartySendingProvider, root.SendPostApi.ModelsEUpdateTPSP, root.SendPostApi.ModelsThirdPartySendingProvider);
+    root.SendPostApi.AccounttpspApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.EUpdateTPSP, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsEThirdPartySendingProvider, root.SendPostApi.ModelsThirdPartySendingProvider);
   }
-}(this, function(ApiClient, ModelsCountStat, ModelsDeleteResponse, ModelsEThirdPartySendingProvider, ModelsEUpdateTPSP, ModelsThirdPartySendingProvider) {
+}(this, function(ApiClient, EUpdateTPSP, ModelsCountStat, ModelsDeleteResponse, ModelsEThirdPartySendingProvider, ModelsThirdPartySendingProvider) {
   'use strict';
 
   /**
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Count Total TPSPs <br>
+     * Count Total TPSPs
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.search search term
@@ -108,7 +108,7 @@
      */
 
     /**
-     * Delete ThirdPartySendingProvider <br>
+     * Delete ThirdPartySendingProvider
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} tpspId The TPSPID you want to delete
      * @param {module:api/AccounttpspApi~tPSPRouterDeleteCallback} callback The callback function, accepting three arguments: error, data, response
@@ -162,7 +162,7 @@
      */
 
     /**
-     * Find ThirdPartySendingProvider by TPSPID <br>
+     * Find ThirdPartySendingProvider by TPSPID
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} tpspId the TPSPID you want to get
      * @param {module:api/AccounttpspApi~tPSPRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -216,7 +216,7 @@
      */
 
     /**
-     * Get All TPSPs <br>
+     * Get All TPSPs
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
@@ -271,7 +271,7 @@
      */
 
     /**
-     * Insert ThirdPartySendingProvider <br>
+     * Insert ThirdPartySendingProvider
      * @param {String} xAccountApiKey Account API Key
      * @param {module:model/ModelsEThirdPartySendingProvider} body The body
      * @param {module:api/AccounttpspApi~tPSPRouterInsertCallback} callback The callback function, accepting three arguments: error, data, response
@@ -324,10 +324,10 @@
      */
 
     /**
-     * Update ThirdPartySendingProvider <br>
+     * Update ThirdPartySendingProvider
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} tpspId The TPSPID you want to update
-     * @param {module:model/ModelsEUpdateTPSP} body The body
+     * @param {module:model/EUpdateTPSP} body The body
      * @param {module:api/AccounttpspApi~tPSPRouterUpdateCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsThirdPartySendingProvider}
      */

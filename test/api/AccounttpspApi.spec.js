@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -247,7 +247,7 @@
           /*
           var xAccountApiKey = "xAccountApiKey_example";
           var tpspId = 789;
-          var body = new SendPostApi.ModelsEUpdateTPSP();
+          var body = new SendPostApi.EUpdateTPSP();
 
           instance.tPSPRouterUpdate(xAccountApiKey, tpspId, body, function(error, data, response) {
             if (error) {

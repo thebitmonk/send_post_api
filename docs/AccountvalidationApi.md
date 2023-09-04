@@ -62,11 +62,11 @@ No authorization required
 
 <a name="validationRouterCount"></a>
 # **validationRouterCount**
-> ModelsCountStat validationRouterCount(xSubAccountApiKey)
+> ModelsCountStat validationRouterCount(xAccountApiKey)
 
 
 
-Count Total Validations <br>
+Count Total Validations
 
 ### Example
 ```javascript
@@ -74,7 +74,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.AccountvalidationApi();
 
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | SubAccount API Key
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 
 var callback = function(error, data, response) {
@@ -84,14 +84,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.validationRouterCount(xSubAccountApiKey, callback);
+apiInstance.validationRouterCount(xAccountApiKey, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| SubAccount API Key | 
+ **xAccountApiKey** | **String**| Account API Key | 
 
 ### Return type
 
@@ -112,7 +112,7 @@ No authorization required
 
 
 
-Delete a specific validation <br>
+Delete a specific validation
 
 ### Example
 ```javascript
@@ -157,11 +157,11 @@ No authorization required
 
 <a name="validationRouterGetAll"></a>
 # **validationRouterGetAll**
-> [ModelsListCleaningJob] validationRouterGetAll(xSubAccountApiKey, opts)
+> [ModelsValidation] validationRouterGetAll(xAccountApiKey, opts)
 
 
 
-Get all validation <br>
+Get all validation
 
 ### Example
 ```javascript
@@ -169,7 +169,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.AccountvalidationApi();
 
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | SubAccount API Key
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var opts = { 
   'offset': 789, // Number | offset
@@ -184,21 +184,21 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.validationRouterGetAll(xSubAccountApiKey, opts, callback);
+apiInstance.validationRouterGetAll(xAccountApiKey, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| SubAccount API Key | 
+ **xAccountApiKey** | **String**| Account API Key | 
  **offset** | **Number**| offset | [optional] 
  **limit** | **Number**| limit | [optional] 
  **search** | **String**| search | [optional] 
 
 ### Return type
 
-[**[ModelsListCleaningJob]**](ModelsListCleaningJob.md)
+[**[ModelsValidation]**](ModelsValidation.md)
 
 ### Authorization
 
@@ -211,11 +211,11 @@ No authorization required
 
 <a name="validationRouterValidateEmailList"></a>
 # **validationRouterValidateEmailList**
-> ModelsCleanedList validationRouterValidateEmailList(xSubAccountApiKey, body)
+> ModelsCleanedList validationRouterValidateEmailList(xAccountApiKey, body)
 
 
 
-Validate Email List Synchronously <br>
+Validate Email List Synchronously
 
 ### Example
 ```javascript
@@ -223,7 +223,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.AccountvalidationApi();
 
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var body = new SendPostApi.ModelsEmailList(); // ModelsEmailList | The email list to be sent for being validated
 
@@ -235,14 +235,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.validationRouterValidateEmailList(xSubAccountApiKey, body, callback);
+apiInstance.validationRouterValidateEmailList(xAccountApiKey, body, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **xAccountApiKey** | **String**| Account API Key | 
  **body** | [**ModelsEmailList**](ModelsEmailList.md)| The email list to be sent for being validated | 
 
 ### Return type

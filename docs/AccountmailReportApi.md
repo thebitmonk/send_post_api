@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 
-get reputation of domain <br>
+get reputation of domain
 
 ### Example
 ```javascript
@@ -60,11 +60,11 @@ No authorization required
 
 <a name="mailReportRouterMailReportGetSingleReport"></a>
 # **mailReportRouterMailReportGetSingleReport**
-> ModelsGlockappsMailReport mailReportRouterMailReportGetSingleReport(xAccountApiKey, reportId)
+> ApiGlockappsMailReport mailReportRouterMailReportGetSingleReport(xAccountApiKey, reportId)
 
 
 
-get Providers available <br>
+get Providers available
 
 ### Example
 ```javascript
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ModelsGlockappsMailReport**](ModelsGlockappsMailReport.md)
+[**ApiGlockappsMailReport**](ApiGlockappsMailReport.md)
 
 ### Authorization
 
@@ -113,7 +113,7 @@ No authorization required
 
 
 
-get Providers available <br>
+get Providers available
 
 ### Example
 ```javascript

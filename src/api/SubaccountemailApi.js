@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Send Email To Contacts <br>
+     * Send Email To Contacts
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {module:model/ModelsEmailMessage} body The Email Message
      * @param {Object} opts Optional parameters
@@ -116,7 +116,7 @@
      */
 
     /**
-     * Send Email To Contacts With Template <br>
+     * Send Email To Contacts With Template
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {module:model/ModelsEmailMessage} body The Email Message
      * @param {module:api/SubaccountemailApi~emailRouterSendEmailWithTemplateCallback} callback The callback function, accepting three arguments: error, data, response

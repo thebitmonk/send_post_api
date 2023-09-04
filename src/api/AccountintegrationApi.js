@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Count Total AccountIntegrations <br>
+     * Count Total AccountIntegrations
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountintegrationApi~accountIntegrationRouterCountCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsCountStat}
@@ -104,7 +104,7 @@
      */
 
     /**
-     * Create Integration <br>
+     * Create Integration
      * @param {String} xAccountApiKey Account API Key
      * @param {String} itype The integration type you want to create
      * @param {module:model/ModelsEIntegration} body The Integration content
@@ -164,7 +164,7 @@
      */
 
     /**
-     * Delete Integration <br>
+     * Delete Integration
      * @param {String} xAccountApiKey Account API Key
      * @param {String} itype The integration type you want to update
      * @param {module:api/AccountintegrationApi~accountIntegrationRouterDeleteCallback} callback The callback function, accepting three arguments: error, data, response
@@ -218,7 +218,7 @@
      */
 
     /**
-     * Disable IP Monitoring for a single IP <br>
+     * Disable IP Monitoring for a single IP
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid the IPId you want to disable monitoring for
      * @param {module:api/AccountintegrationApi~accountIntegrationRouterDisableHetrixToolsIPMonitoringCallback} callback The callback function, accepting three arguments: error, data, response
@@ -272,7 +272,7 @@
      */
 
     /**
-     * Enable IP Monitoring for a single IP <br>
+     * Enable IP Monitoring for a single IP
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid the IPId you want to enable monitoring for
      * @param {module:api/AccountintegrationApi~accountIntegrationRouterEnableHetrixToolsIPMonitoringCallback} callback The callback function, accepting three arguments: error, data, response
@@ -326,7 +326,7 @@
      */
 
     /**
-     * Get All Integrations <br>
+     * Get All Integrations
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountintegrationApi~accountIntegrationRouterGetAllCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsIntegration>}
@@ -373,7 +373,7 @@
      */
 
     /**
-     * Get Monitored IP Stats <br>
+     * Get Monitored IP Stats
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid the IPId for which you want monitored stats
      * @param {Object} opts Optional parameters
@@ -433,7 +433,7 @@
      */
 
     /**
-     * Update Integration <br>
+     * Update Integration
      * @param {String} xAccountApiKey Account API Key
      * @param {String} itype The integration type you want to update
      * @param {module:model/ModelsEIntegration} body The Integration content

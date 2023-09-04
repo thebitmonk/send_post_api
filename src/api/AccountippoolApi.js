@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Count Total AccountIPPools <br>
+     * Count Total AccountIPPools
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountippoolApi~accountIPPoolRouterCountCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsCountStat}
@@ -104,7 +104,7 @@
      */
 
     /**
-     * Create AccountIPPool <br>
+     * Create AccountIPPool
      * @param {String} xAccountApiKey Account API Key
      * @param {module:model/ModelsEIPPool} body The AccountIPPool content
      * @param {module:api/AccountippoolApi~accountIPPoolRouterCreateCallback} callback The callback function, accepting three arguments: error, data, response
@@ -157,7 +157,7 @@
      */
 
     /**
-     * Delete AccountIPPool <br>
+     * Delete AccountIPPool
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ippoolid The AccountIPPoolId you want to delete
      * @param {module:api/AccountippoolApi~accountIPPoolRouterDeleteCallback} callback The callback function, accepting three arguments: error, data, response
@@ -211,7 +211,7 @@
      */
 
     /**
-     * Find AccountIPPool by AccountIPPoolId <br>
+     * Find AccountIPPool by AccountIPPoolId
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ippoolid the AccountIPPoolId you want to get
      * @param {module:api/AccountippoolApi~accountIPPoolRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -265,7 +265,7 @@
      */
 
     /**
-     * Get All AccountIPPools <br>
+     * Get All AccountIPPools
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
@@ -312,6 +312,61 @@
     }
 
     /**
+     * Callback function to receive the result of the accountIPPoolRouterSearchAll operation.
+     * @callback module:api/AccountippoolApi~accountIPPoolRouterSearchAllCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/ModelsAccountIPPool>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get All AccountIPPools without fetching IPs, TPSPs and other pools
+     * @param {String} xAccountApiKey Account API Key
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.offset offset
+     * @param {Number} opts.limit limit
+     * @param {String} opts.search search term
+     * @param {module:api/AccountippoolApi~accountIPPoolRouterSearchAllCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/ModelsAccountIPPool>}
+     */
+    this.accountIPPoolRouterSearchAll = function(xAccountApiKey, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling accountIPPoolRouterSearchAll");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'offset': opts['offset'],
+        'limit': opts['limit'],
+        'search': opts['search'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-Account-ApiKey': xAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = [ModelsAccountIPPool];
+
+      return this.apiClient.callApi(
+        '/account/ippool/search', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the accountIPPoolRouterUpdate operation.
      * @callback module:api/AccountippoolApi~accountIPPoolRouterUpdateCallback
      * @param {String} error Error message, if any.
@@ -320,7 +375,7 @@
      */
 
     /**
-     * Update AccountIPPool <br>
+     * Update AccountIPPool
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ippoolid The AccountIPPoolId you want to update
      * @param {module:model/ModelsEIPPool} body The body

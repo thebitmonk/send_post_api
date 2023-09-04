@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -1016,6 +1016,16 @@
   
                         }
               }
+              {
+                let dataCtr = data.toAccountIPPools;
+                expect(dataCtr).to.be.an(Array);
+                expect(dataCtr).to.not.be.empty();
+                for (let p in dataCtr) {
+                  let data = dataCtr[p];
+                  expect(data).to.be.a(Object);
+                  expect(data).to.be();
+                }
+              }
               expect(data.type).to.be.a(SendPostApi.ModelsIPPoolType);
       
             }
@@ -1103,7 +1113,7 @@
           var xAccountApiKey = "xAccountApiKey_example";
           var ipid = 789;
           var body = new SendPostApi.ModelsIIP();
-          body.labels = [""];
+          body.labels = ;
           body.providerSettings = new SendPostApi.ModelsProviderSettings();
           body.providerSettings.backOffConfiguration = new SendPostApi.ModelsBackOffConfiguration();
           body.providerSettings.backOffConfiguration.concurrentConnections = "0";

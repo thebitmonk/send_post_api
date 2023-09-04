@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 
-Add items to suppression filter of every node in cluster <br>
+Add items to suppression filter of every node in cluster
 
 ### Example
 ```javascript
@@ -26,7 +26,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.ClusterApi();
 
-var body = [new SendPostApi.ModelsSuppression()]; // [ModelsSuppression] | Add suppressions to suppression filter
+var body = new SendPostApi.ModelsSuppression(); // ModelsSuppression | Add suppressions to suppression filter
 
 
 var callback = function(error, data, response) {
@@ -43,7 +43,7 @@ apiInstance.clusterRouterAddItemsToSuppressionFilterOfEveryNodeInCluster(body, c
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**[ModelsSuppression]**](ModelsSuppression.md)| Add suppressions to suppression filter | 
+ **body** | [**ModelsSuppression**](ModelsSuppression.md)| Add suppressions to suppression filter | 
 
 ### Return type
 
@@ -64,7 +64,7 @@ No authorization required
 
 
 
-Delete item from cache of every node in cluster <br>
+Delete item from cache of every node in cluster
 
 ### Example
 ```javascript
@@ -116,7 +116,7 @@ No authorization required
 
 
 
-Delete items from suppression filter of every node in cluster <br>
+Delete items from suppression filter of every node in cluster
 
 ### Example
 ```javascript
@@ -124,7 +124,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.ClusterApi();
 
-var body = [new SendPostApi.ModelsSuppression()]; // [ModelsSuppression] | Delete suppressions from suppression filter
+var body = new SendPostApi.ModelsSuppression(); // ModelsSuppression | Delete suppressions from suppression filter
 
 
 var callback = function(error, data, response) {
@@ -141,7 +141,7 @@ apiInstance.clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInCluster(bo
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**[ModelsSuppression]**](ModelsSuppression.md)| Delete suppressions from suppression filter | 
+ **body** | [**ModelsSuppression**](ModelsSuppression.md)| Delete suppressions from suppression filter | 
 
 ### Return type
 
@@ -162,7 +162,7 @@ No authorization required
 
 
 
-Get item from cache of every node in cluster <br>
+Get item from cache of every node in cluster
 
 ### Example
 ```javascript
@@ -214,7 +214,7 @@ No authorization required
 
 
 
-Delete item from cache of specific node in cluster <br>
+Delete item from cache of specific node in cluster
 
 ### Example
 ```javascript
@@ -266,7 +266,7 @@ No authorization required
 
 
 
-Get item from cache of specific node in cluster <br>
+Get item from cache of specific node in cluster
 
 ### Example
 ```javascript

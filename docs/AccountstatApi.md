@@ -25,7 +25,7 @@ Method | HTTP request | Description
 
 
 
-Responds back with Account Processed Mails Stat <br>
+Responds back with Account Processed Mails Stat
 
 ### Example
 ```javascript
@@ -71,7 +71,7 @@ No authorization required
 
 
 
-Get All Account Stats <br>
+Get All Account Stats
 
 ### Example
 ```javascript
@@ -123,7 +123,7 @@ No authorization required
 
 
 
-Get All Account Stats by Group <br>
+Get All Account Stats by Group
 
 ### Example
 ```javascript
@@ -178,7 +178,7 @@ No authorization required
 
 
 
-Get All Aggregate Stats <br>
+Get All Aggregate Stats
 
 ### Example
 ```javascript
@@ -230,7 +230,7 @@ No authorization required
 
 
 
-Get All Aggregate Stats by Group <br>
+Get All Aggregate Stats by Group
 
 ### Example
 ```javascript
@@ -285,7 +285,7 @@ No authorization required
 
 
 
-Get All Aggregate Domain Stats <br>
+Get All Aggregate Domain Stats
 
 ### Example
 ```javascript
@@ -353,7 +353,7 @@ No authorization required
 
 
 
-Get All Aggregate Domain Stats Count <br>
+Get All Aggregate Domain Stats Count
 
 ### Example
 ```javascript
@@ -413,7 +413,7 @@ No authorization required
 
 
 
-Get All Aggregate IP Stats <br>
+Get All Aggregate IP Stats
 
 ### Example
 ```javascript
@@ -485,7 +485,7 @@ No authorization required
 
 
 
-Get All Aggregate IP Stats Count <br>
+Get All Aggregate IP Stats Count
 
 ### Example
 ```javascript
@@ -549,7 +549,7 @@ No authorization required
 
 
 
-Get All Aggregate SubAccount Stats <br>
+Get All Aggregate SubAccount Stats
 
 ### Example
 ```javascript
@@ -617,7 +617,7 @@ No authorization required
 
 
 
-Get All Aggregate SubAccount Stats Count <br>
+Get All Aggregate SubAccount Stats Count
 
 ### Example
 ```javascript
@@ -677,7 +677,7 @@ No authorization required
 
 
 
-Get All Aggregate Third Party Providers Stats <br>
+Get All Aggregate Third Party Providers Stats
 
 ### Example
 ```javascript
@@ -745,7 +745,7 @@ No authorization required
 
 
 
-Get All Aggregate Third Party Providers Stats Count <br>
+Get All Aggregate Third Party Providers Stats Count
 
 ### Example
 ```javascript

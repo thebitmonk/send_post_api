@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 
-Creates unlock ticket on hubspot <br>
+Creates unlock ticket on hubspot
 
 ### Example
 ```javascript
@@ -64,7 +64,7 @@ No authorization required
 
 
 
-Gets Onboarding Checklist data for account if not present creates a default entry <br>
+Gets Onboarding Checklist data for account if not present creates a default entry
 
 ### Example
 ```javascript
@@ -110,7 +110,7 @@ No authorization required
 
 
 
-Sends welcome email for a newly registered account <br>
+Sends welcome email for a newly registered account
 
 ### Example
 ```javascript
