@@ -1,11 +1,13 @@
 # SendPostApi.TrackApi
 
-All URIs are relative to *https://api-stag.sendpost.io/api/v1*
+All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**trackRouterTrackEmailOpen**](TrackApi.md#trackRouterTrackEmailOpen) | **GET** /track/open/{accountId}/{subAccountId}/{ipId}/{emailType}/{messageId}/1.png | 
 [**trackRouterTrackLinkClick**](TrackApi.md#trackRouterTrackLinkClick) | **GET** /track/click/{accountId}/{subAccountId}/{ipId}/{emailType}/{messageId} | 
+[**trackRouterTrackTPSPEmailOpen**](TrackApi.md#trackRouterTrackTPSPEmailOpen) | **GET** /track/tpsp/open/{accountId}/{subAccountId}/{tpspId}/{emailType}/{messageId}/1.png | 
+[**trackRouterTrackTPSPLinkClick**](TrackApi.md#trackRouterTrackTPSPLinkClick) | **GET** /track/tpsp/click/{accountId}/{subAccountId}/{tpspId}/{emailType}/{messageId} | 
 [**trackRouterTrackUnsubscribe**](TrackApi.md#trackRouterTrackUnsubscribe) | **GET** /track/unsubscribe/{accountId}/{subAccountId}/{ipId}/{emailType}/{messageId} | 
 [**trackRouterTrackWelcomeLinkClick**](TrackApi.md#trackRouterTrackWelcomeLinkClick) | **GET** /track/click/welcome | 
 
@@ -16,7 +18,7 @@ Method | HTTP request | Description
 
 
 
-Track Email Open 
+Track Email Open <br>
 
 ### Example
 ```javascript
@@ -74,7 +76,7 @@ No authorization required
 
 
 
-Track Link Click 
+Track Link Click <br>
 
 ### Example
 ```javascript
@@ -129,13 +131,132 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="trackRouterTrackTPSPEmailOpen"></a>
+# **trackRouterTrackTPSPEmailOpen**
+> trackRouterTrackTPSPEmailOpen(tpspId, accountId, subAccountId, messageId, emailType)
+
+
+
+Track TPSP Email Open
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.TrackApi();
+
+var tpspId = 789; // Number | The id of tpsp from which this email message was sent
+
+var accountId = 789; // Number | The id of account from which email is being sent
+
+var subAccountId = 789; // Number | The id of sub-account from which email is being sent
+
+var messageId = "messageId_example"; // String | The UUID of message which was sent
+
+var emailType = "emailType_example"; // String | The type of email such as gmail, yahoo etc. which was sent. This is inferred from to email address
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+apiInstance.trackRouterTrackTPSPEmailOpen(tpspId, accountId, subAccountId, messageId, emailType, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tpspId** | **Number**| The id of tpsp from which this email message was sent | 
+ **accountId** | **Number**| The id of account from which email is being sent | 
+ **subAccountId** | **Number**| The id of sub-account from which email is being sent | 
+ **messageId** | **String**| The UUID of message which was sent | 
+ **emailType** | **String**| The type of email such as gmail, yahoo etc. which was sent. This is inferred from to email address | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="trackRouterTrackTPSPLinkClick"></a>
+# **trackRouterTrackTPSPLinkClick**
+> trackRouterTrackTPSPLinkClick(tpspId, accountId, subAccountId, messageId, emailType, redirecturl)
+
+
+
+Track TPSP Link Click
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.TrackApi();
+
+var tpspId = 789; // Number | The id of tpsp from which this email message was sent
+
+var accountId = 789; // Number | The id of account from which email is being sent
+
+var subAccountId = 789; // Number | The id of sub-account from which email is being sent
+
+var messageId = "messageId_example"; // String | The UUID of message which was sent
+
+var emailType = "emailType_example"; // String | The type of email such as gmail, yahoo etc. which was sent. This is inferred from to email address
+
+var redirecturl = "redirecturl_example"; // String | The encoded redirect URL
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+apiInstance.trackRouterTrackTPSPLinkClick(tpspId, accountId, subAccountId, messageId, emailType, redirecturl, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tpspId** | **Number**| The id of tpsp from which this email message was sent | 
+ **accountId** | **Number**| The id of account from which email is being sent | 
+ **subAccountId** | **Number**| The id of sub-account from which email is being sent | 
+ **messageId** | **String**| The UUID of message which was sent | 
+ **emailType** | **String**| The type of email such as gmail, yahoo etc. which was sent. This is inferred from to email address | 
+ **redirecturl** | **String**| The encoded redirect URL | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="trackRouterTrackUnsubscribe"></a>
 # **trackRouterTrackUnsubscribe**
 > trackRouterTrackUnsubscribe(ipId, accountId, subAccountId, messageId, emailType)
 
 
 
-track link click 
+track link click <br>
 
 ### Example
 ```javascript
@@ -193,7 +314,7 @@ No authorization required
 
 
 
-Track Welcome Link Click 
+Track Welcome Link Click <br>
 
 ### Example
 ```javascript

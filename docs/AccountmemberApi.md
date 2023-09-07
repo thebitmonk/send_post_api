@@ -1,6 +1,6 @@
 # SendPostApi.AccountmemberApi
 
-All URIs are relative to *https://api-stag.sendpost.io/api/v1*
+All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 
-Delete Member 
+Delete Member <br>
 
 ### Example
 ```javascript
@@ -66,7 +66,7 @@ No authorization required
 
 
 
-Find Member by MemberId 
+Find Member by MemberId <br>
 
 ### Example
 ```javascript
@@ -115,7 +115,7 @@ No authorization required
 
 
 
-Get All Members 
+Get All Members <br>
 
 ### Example
 ```javascript
@@ -161,7 +161,7 @@ No authorization required
 
 
 
-Update Member 
+Update Member <br>
 
 ### Example
 ```javascript
@@ -173,7 +173,7 @@ var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var memberId = 789; // Number | The MemberId you want to update
 
-var body = new SendPostApi.ModelsEMember(); // ModelsEMember | The body
+var body = new SendPostApi.ModelsUMember(); // ModelsUMember | The body
 
 
 var callback = function(error, data, response) {
@@ -192,7 +192,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
  **memberId** | **Number**| The MemberId you want to update | 
- **body** | [**ModelsEMember**](ModelsEMember.md)| The body | 
+ **body** | [**ModelsUMember**](ModelsUMember.md)| The body | 
 
 ### Return type
 
@@ -213,7 +213,7 @@ No authorization required
 
 
 
-Verify Member By Email Request 
+Verify Member By Email Request <br>
 
 ### Example
 ```javascript

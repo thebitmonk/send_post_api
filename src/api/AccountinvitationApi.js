@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsDeleteResponse', 'model/ModelsEInvitation', 'model/ModelsInvitation'], factory);
+    define(['ApiClient', 'model/ModelsDeleteResponse', 'model/ModelsEInvitation', 'model/ModelsEMember', 'model/ModelsInvitation'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsDeleteResponse'), require('../model/ModelsEInvitation'), require('../model/ModelsInvitation'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsDeleteResponse'), require('../model/ModelsEInvitation'), require('../model/ModelsEMember'), require('../model/ModelsInvitation'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.AccountinvitationApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsEInvitation, root.SendPostApi.ModelsInvitation);
+    root.SendPostApi.AccountinvitationApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsEInvitation, root.SendPostApi.ModelsEMember, root.SendPostApi.ModelsInvitation);
   }
-}(this, function(ApiClient, ModelsDeleteResponse, ModelsEInvitation, ModelsInvitation) {
+}(this, function(ApiClient, ModelsDeleteResponse, ModelsEInvitation, ModelsEMember, ModelsInvitation) {
   'use strict';
 
   /**
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Create Invitation 
+     * Create Invitation <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:model/ModelsEInvitation} body The Invitation content
      * @param {module:api/AccountinvitationApi~invitationRouterCreateCallback} callback The callback function, accepting three arguments: error, data, response
@@ -110,14 +110,15 @@
      */
 
     /**
-     * Delete Invitation 
+     * Delete Invitation <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} invitationId The InvitationId you want to delete
+     * @param {module:model/ModelsEMember} body The triggering action member
      * @param {module:api/AccountinvitationApi~invitationRouterDeleteCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsDeleteResponse}
      */
-    this.invitationRouterDelete = function(xAccountApiKey, invitationId, callback) {
-      var postBody = null;
+    this.invitationRouterDelete = function(xAccountApiKey, invitationId, body, callback) {
+      var postBody = body;
 
       // verify the required parameter 'xAccountApiKey' is set
       if (xAccountApiKey === undefined || xAccountApiKey === null) {
@@ -127,6 +128,11 @@
       // verify the required parameter 'invitationId' is set
       if (invitationId === undefined || invitationId === null) {
         throw new Error("Missing the required parameter 'invitationId' when calling invitationRouterDelete");
+      }
+
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling invitationRouterDelete");
       }
 
 
@@ -164,7 +170,7 @@
      */
 
     /**
-     * Get All Invitations 
+     * Get All Invitations <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountinvitationApi~invitationRouterGetAllCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsInvitation>}

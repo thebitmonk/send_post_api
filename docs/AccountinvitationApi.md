@@ -1,6 +1,6 @@
 # SendPostApi.AccountinvitationApi
 
-All URIs are relative to *https://api-stag.sendpost.io/api/v1*
+All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 
-Create Invitation 
+Create Invitation <br>
 
 ### Example
 ```javascript
@@ -60,11 +60,11 @@ No authorization required
 
 <a name="invitationRouterDelete"></a>
 # **invitationRouterDelete**
-> ModelsDeleteResponse invitationRouterDelete(xAccountApiKey, invitationId)
+> ModelsDeleteResponse invitationRouterDelete(xAccountApiKey, invitationId, body)
 
 
 
-Delete Invitation 
+Delete Invitation <br>
 
 ### Example
 ```javascript
@@ -76,6 +76,8 @@ var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var invitationId = 789; // Number | The InvitationId you want to delete
 
+var body = new SendPostApi.ModelsEMember(); // ModelsEMember | The triggering action member
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -84,7 +86,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.invitationRouterDelete(xAccountApiKey, invitationId, callback);
+apiInstance.invitationRouterDelete(xAccountApiKey, invitationId, body, callback);
 ```
 
 ### Parameters
@@ -93,6 +95,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
  **invitationId** | **Number**| The InvitationId you want to delete | 
+ **body** | [**ModelsEMember**](ModelsEMember.md)| The triggering action member | 
 
 ### Return type
 
@@ -113,7 +116,7 @@ No authorization required
 
 
 
-Get All Invitations 
+Get All Invitations <br>
 
 ### Example
 ```javascript

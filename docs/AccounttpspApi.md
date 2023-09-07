@@ -1,6 +1,6 @@
 # SendPostApi.AccounttpspApi
 
-All URIs are relative to *https://api-stag.sendpost.io/api/v1*
+All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 
-Count Total TPSPs 
+Count Total TPSPs <br>
 
 ### Example
 ```javascript
@@ -64,11 +64,11 @@ No authorization required
 
 <a name="tPSPRouterDelete"></a>
 # **tPSPRouterDelete**
-> ModelsDeleteResponse tPSPRouterDelete(xAccountApiKey, tpspId)
+> ModelsDeleteResponse tPSPRouterDelete(xAccountApiKey, tpspId, body)
 
 
 
-Delete ThirdPartySendingProvider 
+Delete ThirdPartySendingProvider <br>
 
 ### Example
 ```javascript
@@ -80,6 +80,8 @@ var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var tpspId = 789; // Number | The TPSPID you want to delete
 
+var body = new SendPostApi.ModelsEMember(); // ModelsEMember | The triggering action member
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -88,7 +90,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.tPSPRouterDelete(xAccountApiKey, tpspId, callback);
+apiInstance.tPSPRouterDelete(xAccountApiKey, tpspId, body, callback);
 ```
 
 ### Parameters
@@ -97,6 +99,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
  **tpspId** | **Number**| The TPSPID you want to delete | 
+ **body** | [**ModelsEMember**](ModelsEMember.md)| The triggering action member | 
 
 ### Return type
 
@@ -117,7 +120,7 @@ No authorization required
 
 
 
-Find ThirdPartySendingProvider by TPSPID 
+Find ThirdPartySendingProvider by TPSPID <br>
 
 ### Example
 ```javascript
@@ -166,7 +169,7 @@ No authorization required
 
 
 
-Get All TPSPs 
+Get All TPSPs <br>
 
 ### Example
 ```javascript
@@ -220,7 +223,7 @@ No authorization required
 
 
 
-Insert ThirdPartySendingProvider 
+Insert ThirdPartySendingProvider <br>
 
 ### Example
 ```javascript
@@ -269,7 +272,7 @@ No authorization required
 
 
 
-Update ThirdPartySendingProvider 
+Update ThirdPartySendingProvider <br>
 
 ### Example
 ```javascript

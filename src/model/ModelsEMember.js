@@ -55,23 +55,16 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('name'))
-        obj.name = ApiClient.convertToType(data['name'], 'String');
-      if (data.hasOwnProperty('url'))
-        obj.url = ApiClient.convertToType(data['url'], 'String');
+      if (data.hasOwnProperty('id'))
+        obj.id = ApiClient.convertToType(data['id'], 'Number');
     }
     return obj;
   }
 
   /**
-   * @member {String} name
+   * @member {Number} id
    */
-  exports.prototype.name = undefined;
-
-  /**
-   * @member {String} url
-   */
-  exports.prototype.url = undefined;
+  exports.prototype.id = undefined;
 
 
   return exports;

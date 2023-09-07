@@ -66,9 +66,9 @@
         it('should call validationRouterCount successfully', function(done) {
           // TODO: uncomment, update parameter values for validationRouterCount call and complete the assertions
           /*
-          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var xAccountApiKey = "xAccountApiKey_example";
 
-          instance.validationRouterCount(xSubAccountApiKey, function(error, data, response) {
+          instance.validationRouterCount(xAccountApiKey, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -120,13 +120,13 @@
         it('should call validationRouterGetAll successfully', function(done) {
           // TODO: uncomment, update parameter values for validationRouterGetAll call and complete the assertions
           /*
-          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var xAccountApiKey = "xAccountApiKey_example";
           var opts = {};
           opts.offset = 789;
           opts.limit = 789;
           opts.search = "search_example";
 
-          instance.validationRouterGetAll(xSubAccountApiKey, opts, function(error, data, response) {
+          instance.validationRouterGetAll(xAccountApiKey, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -137,24 +137,17 @@
             expect(dataCtr).to.not.be.empty();
             for (let p in dataCtr) {
               let data = dataCtr[p];
-              expect(data).to.be.a(SendPostApi.ModelsListCleaningJob);
-              expect(data.batchSize).to.be.a('number');
-              expect(data.batchSize).to.be("0");
+              expect(data).to.be.a(SendPostApi.ModelsValidation);
               expect(data.created).to.be.a('number');
               expect(data.created).to.be("0");
-              expect(data.currentBatch).to.be.a('number');
-              expect(data.currentBatch).to.be("0");
+              expect(data.email).to.be.a('string');
+              expect(data.email).to.be("");
+              expect(data.error).to.be.a('string');
+              expect(data.error).to.be("");
               expect(data.id).to.be.a('number');
               expect(data.id).to.be("0");
-              expect(data.resultInvalidPath).to.be.a('string');
-              expect(data.resultInvalidPath).to.be("");
-              expect(data.resultPath).to.be.a('string');
-              expect(data.resultPath).to.be("");
-              expect(data.resultValidPath).to.be.a('string');
-              expect(data.resultValidPath).to.be("");
-              expect(data.status).to.be.a(SendPostApi.ModelsJobStatus);
-                  expect(data.updated).to.be.a('number');
-              expect(data.updated).to.be("0");
+              expect(data.reason).to.be.a(SendPostApi.ModelsValidationReason);
+      
             }
 
             done();
@@ -168,11 +161,11 @@
         it('should call validationRouterValidateEmailList successfully', function(done) {
           // TODO: uncomment, update parameter values for validationRouterValidateEmailList call and complete the assertions
           /*
-          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var xAccountApiKey = "xAccountApiKey_example";
           var body = new SendPostApi.ModelsEmailList();
           body.emailIds = [""];
 
-          instance.validationRouterValidateEmailList(xSubAccountApiKey, body, function(error, data, response) {
+          instance.validationRouterValidateEmailList(xAccountApiKey, body, function(error, data, response) {
             if (error) {
               done(error);
               return;

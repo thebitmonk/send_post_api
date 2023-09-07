@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsAccountWebhook', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsEWebhook'], factory);
+    define(['ApiClient', 'model/ModelsAccountWebhook', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsEMember', 'model/ModelsEWebhook'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsAccountWebhook'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsEWebhook'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsAccountWebhook'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsEMember'), require('../model/ModelsEWebhook'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.AccountwebhookApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsAccountWebhook, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsEWebhook);
+    root.SendPostApi.AccountwebhookApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsAccountWebhook, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsEMember, root.SendPostApi.ModelsEWebhook);
   }
-}(this, function(ApiClient, ModelsAccountWebhook, ModelsCountStat, ModelsDeleteResponse, ModelsEWebhook) {
+}(this, function(ApiClient, ModelsAccountWebhook, ModelsCountStat, ModelsDeleteResponse, ModelsEMember, ModelsEWebhook) {
   'use strict';
 
   /**
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Count Total AccountWebhooks 
+     * Count Total AccountWebhooks <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountwebhookApi~accountWebhookRouterCountCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsCountStat}
@@ -104,7 +104,7 @@
      */
 
     /**
-     * Create AccountWebhook 
+     * Create AccountWebhook <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:model/ModelsEWebhook} body The AccountWebhook content
      * @param {module:api/AccountwebhookApi~accountWebhookRouterCreateCallback} callback The callback function, accepting three arguments: error, data, response
@@ -157,14 +157,15 @@
      */
 
     /**
-     * Delete AccountWebhook 
+     * Delete AccountWebhook <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} webhookId The AccountWebhookId you want to delete
+     * @param {module:model/ModelsEMember} body The triggering action member
      * @param {module:api/AccountwebhookApi~accountWebhookRouterDeleteCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsDeleteResponse}
      */
-    this.accountWebhookRouterDelete = function(xAccountApiKey, webhookId, callback) {
-      var postBody = null;
+    this.accountWebhookRouterDelete = function(xAccountApiKey, webhookId, body, callback) {
+      var postBody = body;
 
       // verify the required parameter 'xAccountApiKey' is set
       if (xAccountApiKey === undefined || xAccountApiKey === null) {
@@ -174,6 +175,11 @@
       // verify the required parameter 'webhookId' is set
       if (webhookId === undefined || webhookId === null) {
         throw new Error("Missing the required parameter 'webhookId' when calling accountWebhookRouterDelete");
+      }
+
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling accountWebhookRouterDelete");
       }
 
 
@@ -211,7 +217,7 @@
      */
 
     /**
-     * Find AccountWebhook by AccountWebhookId 
+     * Find AccountWebhook by AccountWebhookId <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} webhookId the AccountWebhookId you want to get
      * @param {module:api/AccountwebhookApi~accountWebhookRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -265,7 +271,7 @@
      */
 
     /**
-     * Get All AccountWebhooks 
+     * Get All AccountWebhooks <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
@@ -320,7 +326,7 @@
      */
 
     /**
-     * Update AccountWebhook 
+     * Update AccountWebhook <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} webhookId The AccountWebhookId you want to update
      * @param {module:model/ModelsEWebhook} body The body

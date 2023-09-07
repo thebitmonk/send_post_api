@@ -1,6 +1,6 @@
 # SendPostApi.SubaccountemailApi
 
-All URIs are relative to *https://api-stag.sendpost.io/api/v1*
+All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 
-Send Email To Contacts 
+Send Email To Contacts <br>
 
 ### Example
 ```javascript
@@ -69,7 +69,7 @@ No authorization required
 
 
 
-Send Email To Contacts With Template 
+Send Email To Contacts With Template <br>
 
 ### Example
 ```javascript

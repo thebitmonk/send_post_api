@@ -1,6 +1,6 @@
 # SendPostApi.SubaccountsuppressionApi
 
-All URIs are relative to *https://api-stag.sendpost.io/api/v1*
+All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 
 
-Count Total Suppressions 
+Count Total Suppressions <br>
 
 ### Example
 ```javascript
@@ -67,11 +67,11 @@ No authorization required
 
 <a name="suppressionRouterCreateSuppressions"></a>
 # **suppressionRouterCreateSuppressions**
-> ModelsSuppression suppressionRouterCreateSuppressions(xSubAccountApiKey, body)
+> [ModelsSuppression] suppressionRouterCreateSuppressions(xSubAccountApiKey, body)
 
 
 
-Add Email Addresses To Suppression List 
+Add Email Addresses To Suppression List <br>
 
 ### Example
 ```javascript
@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ModelsSuppression**](ModelsSuppression.md)
+[**[ModelsSuppression]**](ModelsSuppression.md)
 
 ### Authorization
 
@@ -120,7 +120,7 @@ No authorization required
 
 
 
-Add Email Addresses To Suppression Filter 
+Add Email Addresses To Suppression Filter <br>
 
 ### Example
 ```javascript
@@ -162,11 +162,11 @@ No authorization required
 
 <a name="suppressionRouterDeleteSuppression"></a>
 # **suppressionRouterDeleteSuppression**
-> ModelsSuppression suppressionRouterDeleteSuppression(xSubAccountApiKey, body)
+> [ModelsDeleteResponse] suppressionRouterDeleteSuppression(xSubAccountApiKey, body)
 
 
 
-Delete specific emails which are in suppression list 
+Delete specific emails which are in suppression list <br>
 
 ### Example
 ```javascript
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ModelsSuppression**](ModelsSuppression.md)
+[**[ModelsDeleteResponse]**](ModelsDeleteResponse.md)
 
 ### Authorization
 
@@ -215,7 +215,7 @@ No authorization required
 
 
 
-Delete specific emails which are in suppression list 
+Delete specific emails which are in suppression list <br>
 
 ### Example
 ```javascript
@@ -261,7 +261,7 @@ No authorization required
 
 
 
-Export all suppressions 
+Export all suppressions <br>
 
 ### Example
 ```javascript
@@ -315,7 +315,7 @@ No authorization required
 
 
 
-Get all suppressions 
+Get all suppressions <br>
 
 ### Example
 ```javascript

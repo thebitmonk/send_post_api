@@ -74,8 +74,10 @@
           /*
           var xAccountApiKey = "xAccountApiKey_example";
           var invitationId = 789;
+          var body = new SendPostApi.ModelsEMember();
+          body.id = "0";
 
-          instance.invitationRouterDelete(xAccountApiKey, invitationId, function(error, data, response) {
+          instance.invitationRouterDelete(xAccountApiKey, invitationId, body, function(error, data, response) {
             if (error) {
               done(error);
               return;

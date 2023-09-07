@@ -1,6 +1,6 @@
 # SendPostApi.AccountdomainApi
 
-All URIs are relative to *https://api-stag.sendpost.io/api/v1*
+All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 
-Count Total Account Domains 
+Count Total Account Domains <br>
 
 ### Example
 ```javascript
@@ -65,7 +65,7 @@ No authorization required
 
 
 
-Find Domain by DomainId 
+Find Domain by DomainId <br>
 
 ### Example
 ```javascript
@@ -114,7 +114,7 @@ No authorization required
 
 
 
-Get All Domains 
+Get All Domains <br>
 
 ### Example
 ```javascript

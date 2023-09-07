@@ -1,6 +1,6 @@
 # SendPostApi.AccountsmtpstatApi
 
-All URIs are relative to *https://api-stag.sendpost.io/api/v1*
+All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 
-Get All Aggregate IP Provider SMTP Stats 
+Get All Aggregate IP Provider SMTP Stats <br>
 
 ### Example
 ```javascript
@@ -76,7 +76,7 @@ No authorization required
 
 
 
-Get All Aggregate IP SMTP Stats 
+Get All Aggregate IP SMTP Stats <br>
 
 ### Example
 ```javascript
@@ -133,7 +133,7 @@ No authorization required
 
 
 
-Get All Aggregate IP SMTP Stats For SubAccount 
+Get All Aggregate IP SMTP Stats For SubAccount <br>
 
 ### Example
 ```javascript
@@ -193,7 +193,7 @@ No authorization required
 
 
 
-Get All Aggregate SubAccount Provider SMTP Stats 
+Get All Aggregate SubAccount Provider SMTP Stats <br>
 
 ### Example
 ```javascript
@@ -251,7 +251,7 @@ No authorization required
 
 
 
-Get All Aggregate SubAccount SMTP Stats 
+Get All Aggregate SubAccount SMTP Stats <br>
 
 ### Example
 ```javascript
@@ -308,7 +308,7 @@ No authorization required
 
 
 
-Get All Aggregate SubAccount SMTP Stats For IP 
+Get All Aggregate SubAccount SMTP Stats For IP <br>
 
 ### Example
 ```javascript

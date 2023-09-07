@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**active** | **String** |  | [optional] 
+**active** | **Boolean** |  | [optional] 
+**memberId** | **Number** |  | [optional] 
 
 

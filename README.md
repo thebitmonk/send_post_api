@@ -118,7 +118,7 @@ api.accountAdminRouterAssumeAccountGetToken(xAccountApiKey, email, opts, callbac
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api-stag.sendpost.io/api/v1*
+All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -180,6 +180,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountippoolApi* | [**accountIPPoolRouterDelete**](docs/AccountippoolApi.md#accountIPPoolRouterDelete) | **DELETE** /account/ippool/{ippoolid} | 
 *SendPostApi.AccountippoolApi* | [**accountIPPoolRouterGet**](docs/AccountippoolApi.md#accountIPPoolRouterGet) | **GET** /account/ippool/{ippoolid} | 
 *SendPostApi.AccountippoolApi* | [**accountIPPoolRouterGetAll**](docs/AccountippoolApi.md#accountIPPoolRouterGetAll) | **GET** /account/ippool/ | 
+*SendPostApi.AccountippoolApi* | [**accountIPPoolRouterSearchAll**](docs/AccountippoolApi.md#accountIPPoolRouterSearchAll) | **GET** /account/ippool/search | 
 *SendPostApi.AccountippoolApi* | [**accountIPPoolRouterUpdate**](docs/AccountippoolApi.md#accountIPPoolRouterUpdate) | **PUT** /account/ippool/{ippoolid} | 
 *SendPostApi.AccountipstatApi* | [**iPStatRouterGetAllAggregateIPStats**](docs/AccountipstatApi.md#iPStatRouterGetAllAggregateIPStats) | **GET** /account/ip/stat/{ipid}/aggregate | 
 *SendPostApi.AccountipstatApi* | [**iPStatRouterGetAllAggregatedProviderStatsForAIP**](docs/AccountipstatApi.md#iPStatRouterGetAllAggregatedProviderStatsForAIP) | **GET** /account/ip/stat/{ipid}/aggregate/provider | 
@@ -329,15 +330,17 @@ Class | Method | HTTP request | Description
 *SendPostApi.SystemtemplateApi* | [**systemTemplateRouterGetAllSystemTemplates**](docs/SystemtemplateApi.md#systemTemplateRouterGetAllSystemTemplates) | **GET** /system/template/ | 
 *SendPostApi.TrackApi* | [**trackRouterTrackEmailOpen**](docs/TrackApi.md#trackRouterTrackEmailOpen) | **GET** /track/open/{accountId}/{subAccountId}/{ipId}/{emailType}/{messageId}/1.png | 
 *SendPostApi.TrackApi* | [**trackRouterTrackLinkClick**](docs/TrackApi.md#trackRouterTrackLinkClick) | **GET** /track/click/{accountId}/{subAccountId}/{ipId}/{emailType}/{messageId} | 
+*SendPostApi.TrackApi* | [**trackRouterTrackTPSPEmailOpen**](docs/TrackApi.md#trackRouterTrackTPSPEmailOpen) | **GET** /track/tpsp/open/{accountId}/{subAccountId}/{tpspId}/{emailType}/{messageId}/1.png | 
+*SendPostApi.TrackApi* | [**trackRouterTrackTPSPLinkClick**](docs/TrackApi.md#trackRouterTrackTPSPLinkClick) | **GET** /track/tpsp/click/{accountId}/{subAccountId}/{tpspId}/{emailType}/{messageId} | 
 *SendPostApi.TrackApi* | [**trackRouterTrackUnsubscribe**](docs/TrackApi.md#trackRouterTrackUnsubscribe) | **GET** /track/unsubscribe/{accountId}/{subAccountId}/{ipId}/{emailType}/{messageId} | 
 *SendPostApi.TrackApi* | [**trackRouterTrackWelcomeLinkClick**](docs/TrackApi.md#trackRouterTrackWelcomeLinkClick) | **GET** /track/click/welcome | 
 
 
 ## Documentation for Models
 
- - [SendPostApi.Model2921640x140006fe660False](docs/Model2921640x140006fe660False.md)
- - [SendPostApi.Model2924450x140006fe750False](docs/Model2924450x140006fe750False.md)
- - [SendPostApi.Model5575920x14000a637d0False](docs/Model5575920x14000a637d0False.md)
+ - [SendPostApi.Model3044710x1400079f020False](docs/Model3044710x1400079f020False.md)
+ - [SendPostApi.Model3047520x1400079f110False](docs/Model3047520x1400079f110False.md)
+ - [SendPostApi.Model5729300x14000b14ea0False](docs/Model5729300x14000b14ea0False.md)
  - [SendPostApi.ModelsAGDomainStat](docs/ModelsAGDomainStat.md)
  - [SendPostApi.ModelsAGIPStat](docs/ModelsAGIPStat.md)
  - [SendPostApi.ModelsAGStat](docs/ModelsAGStat.md)
@@ -407,6 +410,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsEAccount](docs/ModelsEAccount.md)
  - [SendPostApi.ModelsEAccountMember](docs/ModelsEAccountMember.md)
  - [SendPostApi.ModelsEAccountSetting](docs/ModelsEAccountSetting.md)
+ - [SendPostApi.ModelsEAccountTemplate](docs/ModelsEAccountTemplate.md)
  - [SendPostApi.ModelsEAlert](docs/ModelsEAlert.md)
  - [SendPostApi.ModelsEComment](docs/ModelsEComment.md)
  - [SendPostApi.ModelsEDomain](docs/ModelsEDomain.md)
@@ -419,6 +423,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsESender](docs/ModelsESender.md)
  - [SendPostApi.ModelsESubAccount](docs/ModelsESubAccount.md)
  - [SendPostApi.ModelsESystemDomain](docs/ModelsESystemDomain.md)
+ - [SendPostApi.ModelsETag](docs/ModelsETag.md)
  - [SendPostApi.ModelsEThirdPartySendingProvider](docs/ModelsEThirdPartySendingProvider.md)
  - [SendPostApi.ModelsEUpdateTPSP](docs/ModelsEUpdateTPSP.md)
  - [SendPostApi.ModelsEValidation](docs/ModelsEValidation.md)
@@ -457,11 +462,9 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsIntegrationType](docs/ModelsIntegrationType.md)
  - [SendPostApi.ModelsInvitation](docs/ModelsInvitation.md)
  - [SendPostApi.ModelsInvitationStatus](docs/ModelsInvitationStatus.md)
- - [SendPostApi.ModelsJobStatus](docs/ModelsJobStatus.md)
  - [SendPostApi.ModelsLabel](docs/ModelsLabel.md)
  - [SendPostApi.ModelsLabelType](docs/ModelsLabelType.md)
  - [SendPostApi.ModelsLinks](docs/ModelsLinks.md)
- - [SendPostApi.ModelsListCleaningJob](docs/ModelsListCleaningJob.md)
  - [SendPostApi.ModelsMailReportResult](docs/ModelsMailReportResult.md)
  - [SendPostApi.ModelsMailgunClientInfo](docs/ModelsMailgunClientInfo.md)
  - [SendPostApi.ModelsMailgunDeliveryStatus](docs/ModelsMailgunDeliveryStatus.md)
@@ -518,6 +521,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsThirdPartySendingProvider](docs/ModelsThirdPartySendingProvider.md)
  - [SendPostApi.ModelsThirdPartySendingProviderType](docs/ModelsThirdPartySendingProviderType.md)
  - [SendPostApi.ModelsTo](docs/ModelsTo.md)
+ - [SendPostApi.ModelsUMember](docs/ModelsUMember.md)
  - [SendPostApi.ModelsValidation](docs/ModelsValidation.md)
  - [SendPostApi.ModelsValidationReason](docs/ModelsValidationReason.md)
  - [SendPostApi.ModelsVerifyByMemberTokenRequest](docs/ModelsVerifyByMemberTokenRequest.md)

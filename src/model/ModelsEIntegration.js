@@ -57,6 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('key'))
         obj.key = ApiClient.convertToType(data['key'], 'String');
+      if (data.hasOwnProperty('memberId'))
+        obj.memberId = ApiClient.convertToType(data['memberId'], 'Number');
       if (data.hasOwnProperty('settings'))
         obj.settings = ModelsIntegrationSettings.constructFromObject(data['settings']);
     }
@@ -67,6 +69,11 @@
    * @member {String} key
    */
   exports.prototype.key = undefined;
+
+  /**
+   * @member {Number} memberId
+   */
+  exports.prototype.memberId = undefined;
 
   /**
    * @member {module:model/ModelsIntegrationSettings} settings

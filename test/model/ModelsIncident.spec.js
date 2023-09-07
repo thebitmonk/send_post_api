@@ -77,6 +77,12 @@
         // expect(instance.id).to.be(expectedValueLiteral);
       });
 
+      it('should have the property modifiedBy (base name: "modifiedBy")', function() {
+        // TODO: update the code to test the property modifiedBy
+        expect(instance).to.have.property('modifiedBy');
+        // expect(instance.modifiedBy).to.be(expectedValueLiteral);
+      });
+
       it('should have the property relatedIP (base name: "relatedIP")', function() {
         // TODO: update the code to test the property relatedIP
         expect(instance).to.have.property('relatedIP');

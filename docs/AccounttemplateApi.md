@@ -1,6 +1,6 @@
 # SendPostApi.AccounttemplateApi
 
-All URIs are relative to *https://api-stag.sendpost.io/api/v1*
+All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 
 
-Copy AccountTemplate 
+Copy AccountTemplate <br>
 
 ### Example
 ```javascript
@@ -68,7 +68,7 @@ No authorization required
 
 
 
-Count total templates 
+Count total templates <br>
 
 ### Example
 ```javascript
@@ -118,7 +118,7 @@ No authorization required
 
 
 
-Create a new template 
+Create a new template <br>
 
 ### Example
 ```javascript
@@ -128,7 +128,7 @@ var apiInstance = new SendPostApi.AccounttemplateApi();
 
 var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
-var body = new SendPostApi.ModelsAccountTemplate(); // ModelsAccountTemplate | The AccountTemplate content
+var body = new SendPostApi.ModelsEAccountTemplate(); // ModelsEAccountTemplate | The AccountTemplate content
 
 
 var callback = function(error, data, response) {
@@ -146,7 +146,7 @@ apiInstance.accountTemplateRouterCreate(xAccountApiKey, body, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
- **body** | [**ModelsAccountTemplate**](ModelsAccountTemplate.md)| The AccountTemplate content | 
+ **body** | [**ModelsEAccountTemplate**](ModelsEAccountTemplate.md)| The AccountTemplate content | 
 
 ### Return type
 
@@ -163,11 +163,11 @@ No authorization required
 
 <a name="accountTemplateRouterDelete"></a>
 # **accountTemplateRouterDelete**
-> ModelsDeleteResponse accountTemplateRouterDelete(xAccountApiKey, templateid)
+> ModelsDeleteResponse accountTemplateRouterDelete(xAccountApiKey, templateid, body)
 
 
 
-Delete AccountTemplate 
+Delete AccountTemplate <br>
 
 ### Example
 ```javascript
@@ -179,6 +179,8 @@ var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var templateid = 789; // Number | The id of the template you want to delete
 
+var body = new SendPostApi.ModelsEMember(); // ModelsEMember | The triggering action member
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -187,7 +189,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.accountTemplateRouterDelete(xAccountApiKey, templateid, callback);
+apiInstance.accountTemplateRouterDelete(xAccountApiKey, templateid, body, callback);
 ```
 
 ### Parameters
@@ -196,6 +198,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
  **templateid** | **Number**| The id of the template you want to delete | 
+ **body** | [**ModelsEMember**](ModelsEMember.md)| The triggering action member | 
 
 ### Return type
 
@@ -216,7 +219,7 @@ No authorization required
 
 
 
-Get single template 
+Get single template <br>
 
 ### Example
 ```javascript
@@ -265,7 +268,7 @@ No authorization required
 
 
 
-Get all templates 
+Get all templates <br>
 
 ### Example
 ```javascript
@@ -319,7 +322,7 @@ No authorization required
 
 
 
-update template 
+update template <br>
 
 ### Example
 ```javascript
@@ -331,7 +334,7 @@ var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var templateid = 789; // Number | The id of the template you want to update
 
-var body = new SendPostApi.ModelsAccountTemplate(); // ModelsAccountTemplate | The template content
+var body = new SendPostApi.ModelsEAccountTemplate(); // ModelsEAccountTemplate | The template content
 
 
 var callback = function(error, data, response) {
@@ -350,7 +353,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
  **templateid** | **Number**| The id of the template you want to update | 
- **body** | [**ModelsAccountTemplate**](ModelsAccountTemplate.md)| The template content | 
+ **body** | [**ModelsEAccountTemplate**](ModelsEAccountTemplate.md)| The template content | 
 
 ### Return type
 

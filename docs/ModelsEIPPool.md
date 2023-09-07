@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **routingMapping** | **Object** |  | [optional] 
 **routingStrategy** | **Number** |  | [optional] 
 **tpsps** | **[Number]** |  | [optional] 
+**memberId** | **Number** |  | [optional] 
 
 

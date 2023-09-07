@@ -1,6 +1,6 @@
 # SendPostApi.AuthApi
 
-All URIs are relative to *https://api-stag.sendpost.io/api/v1*
+All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 
-Create Account, sub-account and member 
+Create Account, sub-account and member <br>
 
 ### Example
 ```javascript
@@ -65,7 +65,7 @@ No authorization required
 
 
 
-Get Auth Info Details 
+Get Auth Info Details <br>
 
 ### Example
 ```javascript
@@ -114,7 +114,7 @@ No authorization required
 
 
 
-Updates member and accounts related for email verification and on boarding answers 
+Updates member and accounts related for email verification and on boarding answers <br>
 
 ### Example
 ```javascript

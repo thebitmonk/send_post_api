@@ -57,7 +57,7 @@
      */
 
     /**
-     * Get All Aggregate Stats 
+     * Get All Aggregate Stats <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} tpspid the tpspId you want to get
      * @param {Object} opts Optional parameters
@@ -119,7 +119,7 @@
      */
 
     /**
-     * Get All Aggregated Provider Stats for a Third Party Provider 
+     * Get All Aggregated Provider Stats for a Third Party Provider <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} tpspid the tpspId you want to get
      * @param {Object} opts Optional parameters
@@ -179,7 +179,7 @@
      */
 
     /**
-     * Get All Aggregated Sub-Account Stats for an Third Party Provider 
+     * Get All Aggregated Sub-Account Stats for an Third Party Provider <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} tpspid the TPSPId you want to get
      * @param {Object} opts Optional parameters
@@ -243,7 +243,7 @@
      */
 
     /**
-     * Get All Third Party Providers Stats 
+     * Get All Third Party Providers Stats <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} tpspid the tpspId you want to get
      * @param {Object} opts Optional parameters

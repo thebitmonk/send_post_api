@@ -53,6 +53,12 @@
         // expect(instance.logoURL).to.be(expectedValueLiteral);
       });
 
+      it('should have the property memberId (base name: "memberId")', function() {
+        // TODO: update the code to test the property memberId
+        expect(instance).to.have.property('memberId');
+        // expect(instance.memberId).to.be(expectedValueLiteral);
+      });
+
     });
   });
 

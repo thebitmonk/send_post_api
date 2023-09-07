@@ -4,11 +4,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **active** | **Boolean** |  | [optional] 
+**assignedMemberId** | **Number** |  | [optional] 
 **emails** | **[String]** |  | [optional] 
 **entityType** | **String** |  | [optional] 
 **entityValue** | **Number** |  | [optional] 
 **label** | [**ModelsAlertLabel**](ModelsAlertLabel.md) |  | [optional] 
-**member** | **Number** |  | [optional] 
+**memberId** | **Number** |  | [optional] 
 **name** | **String** |  | [optional] 
 **notificationType** | [**ModelsNotificationType**](ModelsNotificationType.md) |  | [optional] 
 **parameter** | **Number** |  | [optional] 

@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsEIntegration', 'model/ModelsIntegration', 'model/ModelsRHetrixtoolsMonitorStat', 'model/ModelsResponse'], factory);
+    define(['ApiClient', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsEIntegration', 'model/ModelsEMember', 'model/ModelsIntegration', 'model/ModelsRHetrixtoolsMonitorStat', 'model/ModelsResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsEIntegration'), require('../model/ModelsIntegration'), require('../model/ModelsRHetrixtoolsMonitorStat'), require('../model/ModelsResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsEIntegration'), require('../model/ModelsEMember'), require('../model/ModelsIntegration'), require('../model/ModelsRHetrixtoolsMonitorStat'), require('../model/ModelsResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.AccountintegrationApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsEIntegration, root.SendPostApi.ModelsIntegration, root.SendPostApi.ModelsRHetrixtoolsMonitorStat, root.SendPostApi.ModelsResponse);
+    root.SendPostApi.AccountintegrationApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsEIntegration, root.SendPostApi.ModelsEMember, root.SendPostApi.ModelsIntegration, root.SendPostApi.ModelsRHetrixtoolsMonitorStat, root.SendPostApi.ModelsResponse);
   }
-}(this, function(ApiClient, ModelsCountStat, ModelsDeleteResponse, ModelsEIntegration, ModelsIntegration, ModelsRHetrixtoolsMonitorStat, ModelsResponse) {
+}(this, function(ApiClient, ModelsCountStat, ModelsDeleteResponse, ModelsEIntegration, ModelsEMember, ModelsIntegration, ModelsRHetrixtoolsMonitorStat, ModelsResponse) {
   'use strict';
 
   /**
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Count Total AccountIntegrations 
+     * Count Total AccountIntegrations <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountintegrationApi~accountIntegrationRouterCountCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsCountStat}
@@ -104,7 +104,7 @@
      */
 
     /**
-     * Create Integration 
+     * Create Integration <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {String} itype The integration type you want to create
      * @param {module:model/ModelsEIntegration} body The Integration content
@@ -164,14 +164,15 @@
      */
 
     /**
-     * Delete Integration 
+     * Delete Integration <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {String} itype The integration type you want to update
+     * @param {module:model/ModelsEMember} body The triggering action member
      * @param {module:api/AccountintegrationApi~accountIntegrationRouterDeleteCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsDeleteResponse}
      */
-    this.accountIntegrationRouterDelete = function(xAccountApiKey, itype, callback) {
-      var postBody = null;
+    this.accountIntegrationRouterDelete = function(xAccountApiKey, itype, body, callback) {
+      var postBody = body;
 
       // verify the required parameter 'xAccountApiKey' is set
       if (xAccountApiKey === undefined || xAccountApiKey === null) {
@@ -181,6 +182,11 @@
       // verify the required parameter 'itype' is set
       if (itype === undefined || itype === null) {
         throw new Error("Missing the required parameter 'itype' when calling accountIntegrationRouterDelete");
+      }
+
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling accountIntegrationRouterDelete");
       }
 
 
@@ -218,14 +224,15 @@
      */
 
     /**
-     * Disable IP Monitoring for a single IP 
+     * Disable IP Monitoring for a single IP <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid the IPId you want to disable monitoring for
+     * @param {module:model/ModelsEMember} body The triggering action member
      * @param {module:api/AccountintegrationApi~accountIntegrationRouterDisableHetrixToolsIPMonitoringCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsDeleteResponse}
      */
-    this.accountIntegrationRouterDisableHetrixToolsIPMonitoring = function(xAccountApiKey, ipid, callback) {
-      var postBody = null;
+    this.accountIntegrationRouterDisableHetrixToolsIPMonitoring = function(xAccountApiKey, ipid, body, callback) {
+      var postBody = body;
 
       // verify the required parameter 'xAccountApiKey' is set
       if (xAccountApiKey === undefined || xAccountApiKey === null) {
@@ -235,6 +242,11 @@
       // verify the required parameter 'ipid' is set
       if (ipid === undefined || ipid === null) {
         throw new Error("Missing the required parameter 'ipid' when calling accountIntegrationRouterDisableHetrixToolsIPMonitoring");
+      }
+
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling accountIntegrationRouterDisableHetrixToolsIPMonitoring");
       }
 
 
@@ -272,14 +284,15 @@
      */
 
     /**
-     * Enable IP Monitoring for a single IP 
+     * Enable IP Monitoring for a single IP <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid the IPId you want to enable monitoring for
+     * @param {module:model/ModelsEMember} body The triggering action member
      * @param {module:api/AccountintegrationApi~accountIntegrationRouterEnableHetrixToolsIPMonitoringCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsResponse}
      */
-    this.accountIntegrationRouterEnableHetrixToolsIPMonitoring = function(xAccountApiKey, ipid, callback) {
-      var postBody = null;
+    this.accountIntegrationRouterEnableHetrixToolsIPMonitoring = function(xAccountApiKey, ipid, body, callback) {
+      var postBody = body;
 
       // verify the required parameter 'xAccountApiKey' is set
       if (xAccountApiKey === undefined || xAccountApiKey === null) {
@@ -289,6 +302,11 @@
       // verify the required parameter 'ipid' is set
       if (ipid === undefined || ipid === null) {
         throw new Error("Missing the required parameter 'ipid' when calling accountIntegrationRouterEnableHetrixToolsIPMonitoring");
+      }
+
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling accountIntegrationRouterEnableHetrixToolsIPMonitoring");
       }
 
 
@@ -326,7 +344,7 @@
      */
 
     /**
-     * Get All Integrations 
+     * Get All Integrations <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountintegrationApi~accountIntegrationRouterGetAllCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsIntegration>}
@@ -373,7 +391,7 @@
      */
 
     /**
-     * Get Monitored IP Stats 
+     * Get Monitored IP Stats <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid the IPId for which you want monitored stats
      * @param {Object} opts Optional parameters
@@ -433,7 +451,7 @@
      */
 
     /**
-     * Update Integration 
+     * Update Integration <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {String} itype The integration type you want to update
      * @param {module:model/ModelsEIntegration} body The Integration content

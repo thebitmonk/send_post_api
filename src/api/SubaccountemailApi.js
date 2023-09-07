@@ -57,7 +57,7 @@
      */
 
     /**
-     * Send Email To Contacts 
+     * Send Email To Contacts <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {module:model/ModelsEmailMessage} body The Email Message
      * @param {Object} opts Optional parameters
@@ -116,7 +116,7 @@
      */
 
     /**
-     * Send Email To Contacts With Template 
+     * Send Email To Contacts With Template <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {module:model/ModelsEmailMessage} body The Email Message
      * @param {module:api/SubaccountemailApi~emailRouterSendEmailWithTemplateCallback} callback The callback function, accepting three arguments: error, data, response

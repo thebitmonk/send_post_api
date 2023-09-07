@@ -1,6 +1,6 @@
 # SendPostApi.AccountlabelApi
 
-All URIs are relative to *https://api-stag.sendpost.io/api/v1*
+All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 
-Count Total Labels 
+Count Total Labels <br>
 
 ### Example
 ```javascript
@@ -67,7 +67,7 @@ No authorization required
 
 
 
-Create Label 
+Create Label <br>
 
 ### Example
 ```javascript
@@ -116,7 +116,7 @@ No authorization required
 
 
 
-Delete Label 
+Delete Label <br>
 
 ### Example
 ```javascript
@@ -165,7 +165,7 @@ No authorization required
 
 
 
-Find Label by LabelId 
+Find Label by LabelId <br>
 
 ### Example
 ```javascript
@@ -214,7 +214,7 @@ No authorization required
 
 
 
-Get All Labels 
+Get All Labels <br>
 
 ### Example
 ```javascript
@@ -271,7 +271,7 @@ No authorization required
 
 
 
-Update Label 
+Update Label <br>
 
 ### Example
 ```javascript

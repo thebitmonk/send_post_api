@@ -57,7 +57,7 @@
      */
 
     /**
-     * Get all System Templates 
+     * Get all System Templates <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/SystemtemplateApi~systemTemplateRouterGetAllSystemTemplatesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsSystemTemplate>}

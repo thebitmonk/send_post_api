@@ -1,6 +1,6 @@
 # SendPostApi.AccountincidentApi
 
-All URIs are relative to *https://api-stag.sendpost.io/api/v1*
+All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 
 
-Add comment to Incident 
+Add comment to Incident <br>
 
 ### Example
 ```javascript
@@ -71,7 +71,7 @@ No authorization required
 
 
 
-Count Total Incidents 
+Count Total Incidents <br>
 
 ### Example
 ```javascript
@@ -125,7 +125,7 @@ No authorization required
 
 
 
-Create Incident 
+Create Incident <br>
 
 ### Example
 ```javascript
@@ -174,7 +174,7 @@ No authorization required
 
 
 
-Get All Incidents 
+Get All Incidents <br>
 
 ### Example
 ```javascript
@@ -232,7 +232,7 @@ No authorization required
 
 
 
-Get All Comments Associated with Incident 
+Get All Comments Associated with Incident <br>
 
 ### Example
 ```javascript
@@ -281,7 +281,7 @@ No authorization required
 
 
 
-Find Incident by incidentId 
+Find Incident by incidentId <br>
 
 ### Example
 ```javascript
@@ -330,7 +330,7 @@ No authorization required
 
 
 
-Update Incident 
+Update Incident <br>
 
 ### Example
 ```javascript

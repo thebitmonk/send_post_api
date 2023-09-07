@@ -1,6 +1,6 @@
 # SendPostApi.AccountsubaccountApi
 
-All URIs are relative to *https://api-stag.sendpost.io/api/v1*
+All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 
 
-Count Total Subaccounts 
+Count Total Subaccounts <br>
 
 ### Example
 ```javascript
@@ -73,7 +73,7 @@ No authorization required
 
 
 
-Create SubAccount 
+Create SubAccount <br>
 
 ### Example
 ```javascript
@@ -118,11 +118,11 @@ No authorization required
 
 <a name="subAccountRouterDelete"></a>
 # **subAccountRouterDelete**
-> ModelsDeleteResponse subAccountRouterDelete(xAccountApiKey, subAccountId)
+> ModelsDeleteResponse subAccountRouterDelete(xAccountApiKey, subAccountId, body)
 
 
 
-Delete SubAccount 
+Delete SubAccount <br>
 
 ### Example
 ```javascript
@@ -134,6 +134,8 @@ var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var subAccountId = 789; // Number | The SubAccountId you want to delete
 
+var body = new SendPostApi.ModelsEMember(); // ModelsEMember | The triggering action member
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -142,7 +144,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.subAccountRouterDelete(xAccountApiKey, subAccountId, callback);
+apiInstance.subAccountRouterDelete(xAccountApiKey, subAccountId, body, callback);
 ```
 
 ### Parameters
@@ -151,6 +153,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
  **subAccountId** | **Number**| The SubAccountId you want to delete | 
+ **body** | [**ModelsEMember**](ModelsEMember.md)| The triggering action member | 
 
 ### Return type
 
@@ -171,7 +174,7 @@ No authorization required
 
 
 
-Find SubAccount by SubAccountId 
+Find SubAccount by SubAccountId <br>
 
 ### Example
 ```javascript
@@ -220,7 +223,7 @@ No authorization required
 
 
 
-Get All SubAccounts 
+Get All SubAccounts <br>
 
 ### Example
 ```javascript
@@ -278,7 +281,7 @@ No authorization required
 
 
 
-Get All Incidents associated with a sub-account 
+Get All Incidents associated with a sub-account <br>
 
 ### Example
 ```javascript
@@ -327,7 +330,7 @@ No authorization required
 
 
 
-Update SubAccount 
+Update SubAccount <br>
 
 ### Example
 ```javascript

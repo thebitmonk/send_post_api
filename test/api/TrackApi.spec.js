@@ -83,6 +83,53 @@
           done();
         });
       });
+      describe('trackRouterTrackTPSPEmailOpen', function() {
+        it('should call trackRouterTrackTPSPEmailOpen successfully', function(done) {
+          // TODO: uncomment, update parameter values for trackRouterTrackTPSPEmailOpen call
+          /*
+          var tpspId = 789;
+          var accountId = 789;
+          var subAccountId = 789;
+          var messageId = "messageId_example";
+          var emailType = "emailType_example";
+
+          instance.trackRouterTrackTPSPEmailOpen(tpspId, accountId, subAccountId, messageId, emailType, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('trackRouterTrackTPSPLinkClick', function() {
+        it('should call trackRouterTrackTPSPLinkClick successfully', function(done) {
+          // TODO: uncomment, update parameter values for trackRouterTrackTPSPLinkClick call
+          /*
+          var tpspId = 789;
+          var accountId = 789;
+          var subAccountId = 789;
+          var messageId = "messageId_example";
+          var emailType = "emailType_example";
+          var redirecturl = "redirecturl_example";
+
+          instance.trackRouterTrackTPSPLinkClick(tpspId, accountId, subAccountId, messageId, emailType, redirecturl, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('trackRouterTrackUnsubscribe', function() {
         it('should call trackRouterTrackUnsubscribe successfully', function(done) {
           // TODO: uncomment, update parameter values for trackRouterTrackUnsubscribe call

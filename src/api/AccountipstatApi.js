@@ -57,7 +57,7 @@
      */
 
     /**
-     * Get All Aggregate Stats 
+     * Get All Aggregate Stats <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid the IPId you want to get
      * @param {Object} opts Optional parameters
@@ -119,7 +119,7 @@
      */
 
     /**
-     * Get All Aggregated Provider Stats for a IP 
+     * Get All Aggregated Provider Stats for a IP <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid the IPId you want to get
      * @param {Object} opts Optional parameters
@@ -179,7 +179,7 @@
      */
 
     /**
-     * Get All Aggregated Sub-Account Stats for an IP 
+     * Get All Aggregated Sub-Account Stats for an IP <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid the IPId you want to get
      * @param {Object} opts Optional parameters
@@ -243,7 +243,7 @@
      */
 
     /**
-     * Get All IP Stats 
+     * Get All IP Stats <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid the IPId you want to get
      * @param {Object} opts Optional parameters
