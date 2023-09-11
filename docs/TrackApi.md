@@ -1,6 +1,6 @@
 # SendPostApi.TrackApi
 
-All URIs are relative to *http://127.0.0.1:8081/api/v1*
+All URIs are relative to *https://api-stag.sendpost.io/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -137,7 +137,7 @@ No authorization required
 
 
 
-Track TPSP Email Open
+Track TPSP Email Open <br>
 
 ### Example
 ```javascript
@@ -195,7 +195,7 @@ No authorization required
 
 
 
-Track TPSP Link Click
+Track TPSP Link Click <br>
 
 ### Example
 ```javascript

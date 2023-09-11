@@ -118,7 +118,7 @@ api.accountAdminRouterAssumeAccountGetToken(xAccountApiKey, email, opts, callbac
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://127.0.0.1:8081/api/v1*
+All URIs are relative to *https://api-stag.sendpost.io/api/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -338,9 +338,9 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [SendPostApi.Model3044710x1400079f020False](docs/Model3044710x1400079f020False.md)
- - [SendPostApi.Model3047520x1400079f110False](docs/Model3047520x1400079f110False.md)
- - [SendPostApi.Model5729300x14000b14ea0False](docs/Model5729300x14000b14ea0False.md)
+ - [SendPostApi.Model3227680x140007359b0False](docs/Model3227680x140007359b0False.md)
+ - [SendPostApi.Model3230490x14000735aa0False](docs/Model3230490x14000735aa0False.md)
+ - [SendPostApi.Model6326400x14000b240c0False](docs/Model6326400x14000b240c0False.md)
  - [SendPostApi.ModelsAGDomainStat](docs/ModelsAGDomainStat.md)
  - [SendPostApi.ModelsAGIPStat](docs/ModelsAGIPStat.md)
  - [SendPostApi.ModelsAGStat](docs/ModelsAGStat.md)
@@ -462,9 +462,11 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsIntegrationType](docs/ModelsIntegrationType.md)
  - [SendPostApi.ModelsInvitation](docs/ModelsInvitation.md)
  - [SendPostApi.ModelsInvitationStatus](docs/ModelsInvitationStatus.md)
+ - [SendPostApi.ModelsJobStatus](docs/ModelsJobStatus.md)
  - [SendPostApi.ModelsLabel](docs/ModelsLabel.md)
  - [SendPostApi.ModelsLabelType](docs/ModelsLabelType.md)
  - [SendPostApi.ModelsLinks](docs/ModelsLinks.md)
+ - [SendPostApi.ModelsListCleaningJob](docs/ModelsListCleaningJob.md)
  - [SendPostApi.ModelsMailReportResult](docs/ModelsMailReportResult.md)
  - [SendPostApi.ModelsMailgunClientInfo](docs/ModelsMailgunClientInfo.md)
  - [SendPostApi.ModelsMailgunDeliveryStatus](docs/ModelsMailgunDeliveryStatus.md)

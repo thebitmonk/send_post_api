@@ -212,7 +212,7 @@
      */
 
     /**
-     * Track TPSP Email Open
+     * Track TPSP Email Open <br>
      * @param {Number} tpspId The id of tpsp from which this email message was sent
      * @param {Number} accountId The id of account from which email is being sent
      * @param {Number} subAccountId The id of sub-account from which email is being sent
@@ -286,7 +286,7 @@
      */
 
     /**
-     * Track TPSP Link Click
+     * Track TPSP Link Click <br>
      * @param {Number} tpspId The id of tpsp from which this email message was sent
      * @param {Number} accountId The id of account from which email is being sent
      * @param {Number} subAccountId The id of sub-account from which email is being sent

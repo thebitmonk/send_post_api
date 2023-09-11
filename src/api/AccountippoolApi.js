@@ -326,7 +326,7 @@
      */
 
     /**
-     * Get All AccountIPPools without fetching IPs, TPSPs and other pools
+     * Get All AccountIPPools without fetching IPs, TPSPs and other pools <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
