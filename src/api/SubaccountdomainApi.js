@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsDomain', 'model/ModelsEDomain', 'model/ModelsVerifyByTokenRequest'], factory);
+    define(['ApiClient', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsDomain', 'model/ModelsEDomain', 'model/ModelsEMember', 'model/ModelsVerifyByTokenRequest'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsDomain'), require('../model/ModelsEDomain'), require('../model/ModelsVerifyByTokenRequest'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsDomain'), require('../model/ModelsEDomain'), require('../model/ModelsEMember'), require('../model/ModelsVerifyByTokenRequest'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.SubaccountdomainApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsDomain, root.SendPostApi.ModelsEDomain, root.SendPostApi.ModelsVerifyByTokenRequest);
+    root.SendPostApi.SubaccountdomainApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsDomain, root.SendPostApi.ModelsEDomain, root.SendPostApi.ModelsEMember, root.SendPostApi.ModelsVerifyByTokenRequest);
   }
-}(this, function(ApiClient, ModelsCountStat, ModelsDeleteResponse, ModelsDomain, ModelsEDomain, ModelsVerifyByTokenRequest) {
+}(this, function(ApiClient, ModelsCountStat, ModelsDeleteResponse, ModelsDomain, ModelsEDomain, ModelsEMember, ModelsVerifyByTokenRequest) {
   'use strict';
 
   /**
@@ -160,11 +160,12 @@
      * Delete Domain <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Number} domainId The DomainId you want to delete
+     * @param {module:model/ModelsEMember} body The triggering action member
      * @param {module:api/SubaccountdomainApi~domainRouterDeleteCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsDeleteResponse}
      */
-    this.domainRouterDelete = function(xSubAccountApiKey, domainId, callback) {
-      var postBody = null;
+    this.domainRouterDelete = function(xSubAccountApiKey, domainId, body, callback) {
+      var postBody = body;
 
       // verify the required parameter 'xSubAccountApiKey' is set
       if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
@@ -174,6 +175,11 @@
       // verify the required parameter 'domainId' is set
       if (domainId === undefined || domainId === null) {
         throw new Error("Missing the required parameter 'domainId' when calling domainRouterDelete");
+      }
+
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling domainRouterDelete");
       }
 
 

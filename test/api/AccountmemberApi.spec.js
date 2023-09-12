@@ -157,7 +157,7 @@
           /*
           var xAccountApiKey = "xAccountApiKey_example";
           var memberId = 789;
-          var body = new SendPostApi.ModelsEMember();
+          var body = new SendPostApi.ModelsUMember();
           body.name = "";
           body.url = "";
 

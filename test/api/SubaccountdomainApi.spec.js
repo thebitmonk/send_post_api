@@ -65,6 +65,7 @@
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
           var body = new SendPostApi.ModelsEDomain();
+          body.memberId = "0";
           body.name = "";
 
           instance.domainRouterCreate(xSubAccountApiKey, body, function(error, data, response) {
@@ -134,8 +135,10 @@
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
           var domainId = 789;
+          var body = new SendPostApi.ModelsEMember();
+          body.id = "0";
 
-          instance.domainRouterDelete(xSubAccountApiKey, domainId, function(error, data, response) {
+          instance.domainRouterDelete(xSubAccountApiKey, domainId, body, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -306,6 +309,7 @@
           var xSubAccountApiKey = "xSubAccountApiKey_example";
           var domainId = 789;
           var body = new SendPostApi.ModelsEDomain();
+          body.memberId = "0";
           body.name = "";
 
           instance.domainRouterUpdate(xSubAccountApiKey, domainId, body, function(error, data, response) {

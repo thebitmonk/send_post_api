@@ -62,7 +62,7 @@ No authorization required
 
 <a name="validationRouterCount"></a>
 # **validationRouterCount**
-> ModelsCountStat validationRouterCount(xAccountApiKey)
+> ModelsCountStat validationRouterCount(xSubAccountApiKey)
 
 
 
@@ -74,7 +74,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.AccountvalidationApi();
 
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | SubAccount API Key
 
 
 var callback = function(error, data, response) {
@@ -84,14 +84,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.validationRouterCount(xAccountApiKey, callback);
+apiInstance.validationRouterCount(xSubAccountApiKey, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Account API Key | 
+ **xSubAccountApiKey** | **String**| SubAccount API Key | 
 
 ### Return type
 
@@ -157,7 +157,7 @@ No authorization required
 
 <a name="validationRouterGetAll"></a>
 # **validationRouterGetAll**
-> [ModelsValidation] validationRouterGetAll(xAccountApiKey, opts)
+> [ModelsListCleaningJob] validationRouterGetAll(xSubAccountApiKey, opts)
 
 
 
@@ -169,7 +169,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.AccountvalidationApi();
 
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | SubAccount API Key
 
 var opts = { 
   'offset': 789, // Number | offset
@@ -184,21 +184,21 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.validationRouterGetAll(xAccountApiKey, opts, callback);
+apiInstance.validationRouterGetAll(xSubAccountApiKey, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Account API Key | 
+ **xSubAccountApiKey** | **String**| SubAccount API Key | 
  **offset** | **Number**| offset | [optional] 
  **limit** | **Number**| limit | [optional] 
  **search** | **String**| search | [optional] 
 
 ### Return type
 
-[**[ModelsValidation]**](ModelsValidation.md)
+[**[ModelsListCleaningJob]**](ModelsListCleaningJob.md)
 
 ### Authorization
 
@@ -211,7 +211,7 @@ No authorization required
 
 <a name="validationRouterValidateEmailList"></a>
 # **validationRouterValidateEmailList**
-> ModelsCleanedList validationRouterValidateEmailList(xAccountApiKey, body)
+> ModelsCleanedList validationRouterValidateEmailList(xSubAccountApiKey, body)
 
 
 
@@ -223,7 +223,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.AccountvalidationApi();
 
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
 
 var body = new SendPostApi.ModelsEmailList(); // ModelsEmailList | The email list to be sent for being validated
 
@@ -235,14 +235,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.validationRouterValidateEmailList(xAccountApiKey, body, callback);
+apiInstance.validationRouterValidateEmailList(xSubAccountApiKey, body, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Account API Key | 
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
  **body** | [**ModelsEmailList**](ModelsEmailList.md)| The email list to be sent for being validated | 
 
 ### Return type

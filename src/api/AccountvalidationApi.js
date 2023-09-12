@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsBulkResponse', 'model/ModelsCleanedList', 'model/ModelsCountStat', 'model/ModelsEValidation', 'model/ModelsEmailList', 'model/ModelsValidation'], factory);
+    define(['ApiClient', 'model/ModelsBulkResponse', 'model/ModelsCleanedList', 'model/ModelsCountStat', 'model/ModelsEValidation', 'model/ModelsEmailList', 'model/ModelsListCleaningJob', 'model/ModelsValidation'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsBulkResponse'), require('../model/ModelsCleanedList'), require('../model/ModelsCountStat'), require('../model/ModelsEValidation'), require('../model/ModelsEmailList'), require('../model/ModelsValidation'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsBulkResponse'), require('../model/ModelsCleanedList'), require('../model/ModelsCountStat'), require('../model/ModelsEValidation'), require('../model/ModelsEmailList'), require('../model/ModelsListCleaningJob'), require('../model/ModelsValidation'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.AccountvalidationApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsBulkResponse, root.SendPostApi.ModelsCleanedList, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsEValidation, root.SendPostApi.ModelsEmailList, root.SendPostApi.ModelsValidation);
+    root.SendPostApi.AccountvalidationApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsBulkResponse, root.SendPostApi.ModelsCleanedList, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsEValidation, root.SendPostApi.ModelsEmailList, root.SendPostApi.ModelsListCleaningJob, root.SendPostApi.ModelsValidation);
   }
-}(this, function(ApiClient, ModelsBulkResponse, ModelsCleanedList, ModelsCountStat, ModelsEValidation, ModelsEmailList, ModelsValidation) {
+}(this, function(ApiClient, ModelsBulkResponse, ModelsCleanedList, ModelsCountStat, ModelsEValidation, ModelsEmailList, ModelsListCleaningJob, ModelsValidation) {
   'use strict';
 
   /**
@@ -112,16 +112,16 @@
 
     /**
      * Count Total Validations <br>
-     * @param {String} xAccountApiKey Account API Key
+     * @param {String} xSubAccountApiKey SubAccount API Key
      * @param {module:api/AccountvalidationApi~validationRouterCountCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsCountStat}
      */
-    this.validationRouterCount = function(xAccountApiKey, callback) {
+    this.validationRouterCount = function(xSubAccountApiKey, callback) {
       var postBody = null;
 
-      // verify the required parameter 'xAccountApiKey' is set
-      if (xAccountApiKey === undefined || xAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xAccountApiKey' when calling validationRouterCount");
+      // verify the required parameter 'xSubAccountApiKey' is set
+      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling validationRouterCount");
       }
 
 
@@ -132,7 +132,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
-        'X-Account-ApiKey': xAccountApiKey
+        'X-SubAccount-ApiKey': xSubAccountApiKey
       };
       var formParams = {
       };
@@ -206,27 +206,27 @@
      * Callback function to receive the result of the validationRouterGetAll operation.
      * @callback module:api/AccountvalidationApi~validationRouterGetAllCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ModelsValidation>} data The data returned by the service call.
+     * @param {Array.<module:model/ModelsListCleaningJob>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Get all validation <br>
-     * @param {String} xAccountApiKey Account API Key
+     * @param {String} xSubAccountApiKey SubAccount API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
      * @param {Number} opts.limit limit
      * @param {String} opts.search search
      * @param {module:api/AccountvalidationApi~validationRouterGetAllCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ModelsValidation>}
+     * data is of type: {@link Array.<module:model/ModelsListCleaningJob>}
      */
-    this.validationRouterGetAll = function(xAccountApiKey, opts, callback) {
+    this.validationRouterGetAll = function(xSubAccountApiKey, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'xAccountApiKey' is set
-      if (xAccountApiKey === undefined || xAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xAccountApiKey' when calling validationRouterGetAll");
+      // verify the required parameter 'xSubAccountApiKey' is set
+      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling validationRouterGetAll");
       }
 
 
@@ -240,7 +240,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
-        'X-Account-ApiKey': xAccountApiKey
+        'X-SubAccount-ApiKey': xSubAccountApiKey
       };
       var formParams = {
       };
@@ -248,7 +248,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = [ModelsValidation];
+      var returnType = [ModelsListCleaningJob];
 
       return this.apiClient.callApi(
         '/account/validation/', 'GET',
@@ -267,17 +267,17 @@
 
     /**
      * Validate Email List Synchronously <br>
-     * @param {String} xAccountApiKey Account API Key
+     * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {module:model/ModelsEmailList} body The email list to be sent for being validated
      * @param {module:api/AccountvalidationApi~validationRouterValidateEmailListCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsCleanedList}
      */
-    this.validationRouterValidateEmailList = function(xAccountApiKey, body, callback) {
+    this.validationRouterValidateEmailList = function(xSubAccountApiKey, body, callback) {
       var postBody = body;
 
-      // verify the required parameter 'xAccountApiKey' is set
-      if (xAccountApiKey === undefined || xAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xAccountApiKey' when calling validationRouterValidateEmailList");
+      // verify the required parameter 'xSubAccountApiKey' is set
+      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling validationRouterValidateEmailList");
       }
 
       // verify the required parameter 'body' is set
@@ -293,7 +293,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
-        'X-Account-ApiKey': xAccountApiKey
+        'X-SubAccount-ApiKey': xSubAccountApiKey
       };
       var formParams = {
       };

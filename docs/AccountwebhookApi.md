@@ -109,7 +109,7 @@ No authorization required
 
 <a name="accountWebhookRouterDelete"></a>
 # **accountWebhookRouterDelete**
-> ModelsDeleteResponse accountWebhookRouterDelete(xAccountApiKey, webhookId)
+> ModelsDeleteResponse accountWebhookRouterDelete(xAccountApiKey, webhookId, body)
 
 
 
@@ -125,6 +125,8 @@ var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var webhookId = 789; // Number | The AccountWebhookId you want to delete
 
+var body = new SendPostApi.ModelsEMember(); // ModelsEMember | The triggering action member
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -133,7 +135,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.accountWebhookRouterDelete(xAccountApiKey, webhookId, callback);
+apiInstance.accountWebhookRouterDelete(xAccountApiKey, webhookId, body, callback);
 ```
 
 ### Parameters
@@ -142,6 +144,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
  **webhookId** | **Number**| The AccountWebhookId you want to delete | 
+ **body** | [**ModelsEMember**](ModelsEMember.md)| The triggering action member | 
 
 ### Return type
 

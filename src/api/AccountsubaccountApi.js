@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsESubAccount', 'model/ModelsIncident', 'model/ModelsSubAccount'], factory);
+    define(['ApiClient', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsEMember', 'model/ModelsESubAccount', 'model/ModelsIncident', 'model/ModelsSubAccount'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsESubAccount'), require('../model/ModelsIncident'), require('../model/ModelsSubAccount'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsEMember'), require('../model/ModelsESubAccount'), require('../model/ModelsIncident'), require('../model/ModelsSubAccount'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.AccountsubaccountApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsESubAccount, root.SendPostApi.ModelsIncident, root.SendPostApi.ModelsSubAccount);
+    root.SendPostApi.AccountsubaccountApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsEMember, root.SendPostApi.ModelsESubAccount, root.SendPostApi.ModelsIncident, root.SendPostApi.ModelsSubAccount);
   }
-}(this, function(ApiClient, ModelsCountStat, ModelsDeleteResponse, ModelsESubAccount, ModelsIncident, ModelsSubAccount) {
+}(this, function(ApiClient, ModelsCountStat, ModelsDeleteResponse, ModelsEMember, ModelsESubAccount, ModelsIncident, ModelsSubAccount) {
   'use strict';
 
   /**
@@ -168,11 +168,12 @@
      * Delete SubAccount <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} subAccountId The SubAccountId you want to delete
+     * @param {module:model/ModelsEMember} body The triggering action member
      * @param {module:api/AccountsubaccountApi~subAccountRouterDeleteCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsDeleteResponse}
      */
-    this.subAccountRouterDelete = function(xAccountApiKey, subAccountId, callback) {
-      var postBody = null;
+    this.subAccountRouterDelete = function(xAccountApiKey, subAccountId, body, callback) {
+      var postBody = body;
 
       // verify the required parameter 'xAccountApiKey' is set
       if (xAccountApiKey === undefined || xAccountApiKey === null) {
@@ -182,6 +183,11 @@
       // verify the required parameter 'subAccountId' is set
       if (subAccountId === undefined || subAccountId === null) {
         throw new Error("Missing the required parameter 'subAccountId' when calling subAccountRouterDelete");
+      }
+
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling subAccountRouterDelete");
       }
 
 

@@ -71,6 +71,12 @@
         // expect(instance.created).to.be(expectedValueLiteral);
       });
 
+      it('should have the property createdBy (base name: "createdBy")', function() {
+        // TODO: update the code to test the property createdBy
+        expect(instance).to.have.property('createdBy');
+        // expect(instance.createdBy).to.be(expectedValueLiteral);
+      });
+
       it('should have the property currentEmailServiceProvider (base name: "currentEmailServiceProvider")', function() {
         // TODO: update the code to test the property currentEmailServiceProvider
         expect(instance).to.have.property('currentEmailServiceProvider');
@@ -189,6 +195,12 @@
         // TODO: update the code to test the property switchingSendpostDescription
         expect(instance).to.have.property('switchingSendpostDescription');
         // expect(instance.switchingSendpostDescription).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property updatedBy (base name: "updatedBy")', function() {
+        // TODO: update the code to test the property updatedBy
+        expect(instance).to.have.property('updatedBy');
+        // expect(instance.updatedBy).to.be(expectedValueLiteral);
       });
 
     });

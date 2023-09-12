@@ -64,7 +64,7 @@ No authorization required
 
 <a name="tPSPRouterDelete"></a>
 # **tPSPRouterDelete**
-> ModelsDeleteResponse tPSPRouterDelete(xAccountApiKey, tpspId)
+> ModelsDeleteResponse tPSPRouterDelete(xAccountApiKey, tpspId, body)
 
 
 
@@ -80,6 +80,8 @@ var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var tpspId = 789; // Number | The TPSPID you want to delete
 
+var body = new SendPostApi.ModelsEMember(); // ModelsEMember | The triggering action member
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -88,7 +90,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.tPSPRouterDelete(xAccountApiKey, tpspId, callback);
+apiInstance.tPSPRouterDelete(xAccountApiKey, tpspId, body, callback);
 ```
 
 ### Parameters
@@ -97,6 +99,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
  **tpspId** | **Number**| The TPSPID you want to delete | 
+ **body** | [**ModelsEMember**](ModelsEMember.md)| The triggering action member | 
 
 ### Return type
 

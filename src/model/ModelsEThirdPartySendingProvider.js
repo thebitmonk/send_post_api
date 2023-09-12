@@ -61,6 +61,8 @@
         obj.endpoint = ApiClient.convertToType(data['endpoint'], 'String');
       if (data.hasOwnProperty('key'))
         obj.key = ApiClient.convertToType(data['key'], 'String');
+      if (data.hasOwnProperty('memberId'))
+        obj.memberId = ApiClient.convertToType(data['memberId'], 'Number');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('oauthToken'))
@@ -91,6 +93,11 @@
    * @member {String} key
    */
   exports.prototype.key = undefined;
+
+  /**
+   * @member {Number} memberId
+   */
+  exports.prototype.memberId = undefined;
 
   /**
    * @member {String} name

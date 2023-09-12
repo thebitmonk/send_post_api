@@ -83,6 +83,12 @@
         // expect(instance.thirdPartySendingProviders).to.be(expectedValueLiteral);
       });
 
+      it('should have the property toAccountIPPools (base name: "toAccountIPPools")', function() {
+        // TODO: update the code to test the property toAccountIPPools
+        expect(instance).to.have.property('toAccountIPPools');
+        // expect(instance.toAccountIPPools).to.be(expectedValueLiteral);
+      });
+
       it('should have the property type (base name: "type")', function() {
         // TODO: update the code to test the property type
         expect(instance).to.have.property('type');

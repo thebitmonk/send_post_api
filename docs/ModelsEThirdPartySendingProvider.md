@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **domain** | **String** |  | [optional] 
 **endpoint** | **String** |  | [optional] 
 **key** | **String** |  | [optional] 
+**memberId** | **Number** |  | [optional] 
 **name** | **String** |  | [optional] 
 **oauthToken** | **String** |  | [optional] 
 **port** | **Number** |  | [optional] 

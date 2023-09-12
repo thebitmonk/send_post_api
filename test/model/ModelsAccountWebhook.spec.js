@@ -53,6 +53,12 @@
         // expect(instance.created).to.be(expectedValueLiteral);
       });
 
+      it('should have the property createdBy (base name: "created_by")', function() {
+        // TODO: update the code to test the property createdBy
+        expect(instance).to.have.property('createdBy');
+        // expect(instance.createdBy).to.be(expectedValueLiteral);
+      });
+
       it('should have the property delivered (base name: "delivered")', function() {
         // TODO: update the code to test the property delivered
         expect(instance).to.have.property('delivered');
@@ -117,6 +123,12 @@
         // TODO: update the code to test the property unsubscribed
         expect(instance).to.have.property('unsubscribed');
         // expect(instance.unsubscribed).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property updatedBy (base name: "updated_by")', function() {
+        // TODO: update the code to test the property updatedBy
+        expect(instance).to.have.property('updatedBy');
+        // expect(instance.updatedBy).to.be(expectedValueLiteral);
       });
 
       it('should have the property url (base name: "url")', function() {

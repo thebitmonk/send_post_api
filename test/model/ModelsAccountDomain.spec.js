@@ -47,6 +47,12 @@
         // expect(instance.created).to.be(expectedValueLiteral);
       });
 
+      it('should have the property createdBy (base name: "created_by")', function() {
+        // TODO: update the code to test the property createdBy
+        expect(instance).to.have.property('createdBy');
+        // expect(instance.createdBy).to.be(expectedValueLiteral);
+      });
+
       it('should have the property dkim (base name: "dkim")', function() {
         // TODO: update the code to test the property dkim
         expect(instance).to.have.property('dkim');
@@ -117,6 +123,12 @@
         // TODO: update the code to test the property trackVerified
         expect(instance).to.have.property('trackVerified');
         // expect(instance.trackVerified).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property updatedBy (base name: "updated_by")', function() {
+        // TODO: update the code to test the property updatedBy
+        expect(instance).to.have.property('updatedBy');
+        // expect(instance.updatedBy).to.be(expectedValueLiteral);
       });
 
       it('should have the property verified (base name: "verified")', function() {

@@ -69,6 +69,8 @@
         obj.routingStrategy = ApiClient.convertToType(data['routingStrategy'], 'Number');
       if (data.hasOwnProperty('thirdPartySendingProviders'))
         obj.thirdPartySendingProviders = ApiClient.convertToType(data['thirdPartySendingProviders'], [ModelsThirdPartySendingProvider]);
+      if (data.hasOwnProperty('toAccountIPPools'))
+        obj.toAccountIPPools = ApiClient.convertToType(data['toAccountIPPools'], [Object]);
       if (data.hasOwnProperty('type'))
         obj.type = ModelsIPPoolType.constructFromObject(data['type']);
     }
@@ -109,6 +111,11 @@
    * @member {Array.<module:model/ModelsThirdPartySendingProvider>} thirdPartySendingProviders
    */
   exports.prototype.thirdPartySendingProviders = undefined;
+
+  /**
+   * @member {Array.<Object>} toAccountIPPools
+   */
+  exports.prototype.toAccountIPPools = undefined;
 
   /**
    * @member {module:model/ModelsIPPoolType} type

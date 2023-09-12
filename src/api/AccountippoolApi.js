@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsAccountIPPool', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsEIPPool'], factory);
+    define(['ApiClient', 'model/ModelsAccountIPPool', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsEIPPool', 'model/ModelsEMember'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsAccountIPPool'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsEIPPool'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsAccountIPPool'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsEIPPool'), require('../model/ModelsEMember'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.AccountippoolApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsAccountIPPool, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsEIPPool);
+    root.SendPostApi.AccountippoolApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsAccountIPPool, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsEIPPool, root.SendPostApi.ModelsEMember);
   }
-}(this, function(ApiClient, ModelsAccountIPPool, ModelsCountStat, ModelsDeleteResponse, ModelsEIPPool) {
+}(this, function(ApiClient, ModelsAccountIPPool, ModelsCountStat, ModelsDeleteResponse, ModelsEIPPool, ModelsEMember) {
   'use strict';
 
   /**
@@ -160,11 +160,12 @@
      * Delete AccountIPPool <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ippoolid The AccountIPPoolId you want to delete
+     * @param {module:model/ModelsEMember} body The triggering action member
      * @param {module:api/AccountippoolApi~accountIPPoolRouterDeleteCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsDeleteResponse}
      */
-    this.accountIPPoolRouterDelete = function(xAccountApiKey, ippoolid, callback) {
-      var postBody = null;
+    this.accountIPPoolRouterDelete = function(xAccountApiKey, ippoolid, body, callback) {
+      var postBody = body;
 
       // verify the required parameter 'xAccountApiKey' is set
       if (xAccountApiKey === undefined || xAccountApiKey === null) {
@@ -174,6 +175,11 @@
       // verify the required parameter 'ippoolid' is set
       if (ippoolid === undefined || ippoolid === null) {
         throw new Error("Missing the required parameter 'ippoolid' when calling accountIPPoolRouterDelete");
+      }
+
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling accountIPPoolRouterDelete");
       }
 
 
@@ -306,6 +312,61 @@
 
       return this.apiClient.callApi(
         '/account/ippool/', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the accountIPPoolRouterSearchAll operation.
+     * @callback module:api/AccountippoolApi~accountIPPoolRouterSearchAllCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/ModelsAccountIPPool>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get All AccountIPPools without fetching IPs, TPSPs and other pools <br>
+     * @param {String} xAccountApiKey Account API Key
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.offset offset
+     * @param {Number} opts.limit limit
+     * @param {String} opts.search search term
+     * @param {module:api/AccountippoolApi~accountIPPoolRouterSearchAllCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/ModelsAccountIPPool>}
+     */
+    this.accountIPPoolRouterSearchAll = function(xAccountApiKey, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling accountIPPoolRouterSearchAll");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'offset': opts['offset'],
+        'limit': opts['limit'],
+        'search': opts['search'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-Account-ApiKey': xAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = [ModelsAccountIPPool];
+
+      return this.apiClient.callApi(
+        '/account/ippool/search', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
