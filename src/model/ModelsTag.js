@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/ModelsMember'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./ModelsMember'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsTag = factory(root.SendPostApi.ApiClient);
+    root.SendPostApi.ModelsTag = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsMember);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, ModelsMember) {
   'use strict';
 
   /**
@@ -59,6 +59,8 @@
         obj.color = ApiClient.convertToType(data['color'], 'String');
       if (data.hasOwnProperty('created'))
         obj.created = ApiClient.convertToType(data['created'], 'Number');
+      if (data.hasOwnProperty('createdBy'))
+        obj.createdBy = ModelsMember.constructFromObject(data['createdBy']);
       if (data.hasOwnProperty('description'))
         obj.description = ApiClient.convertToType(data['description'], 'String');
       if (data.hasOwnProperty('id'))
@@ -67,6 +69,8 @@
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('updated'))
         obj.updated = ApiClient.convertToType(data['updated'], 'Number');
+      if (data.hasOwnProperty('updatedBy'))
+        obj.updatedBy = ModelsMember.constructFromObject(data['updatedBy']);
     }
     return obj;
   }
@@ -80,6 +84,11 @@
    * @member {Number} created
    */
   exports.prototype.created = undefined;
+
+  /**
+   * @member {module:model/ModelsMember} createdBy
+   */
+  exports.prototype.createdBy = undefined;
 
   /**
    * @member {String} description
@@ -100,6 +109,11 @@
    * @member {Number} updated
    */
   exports.prototype.updated = undefined;
+
+  /**
+   * @member {module:model/ModelsMember} updatedBy
+   */
+  exports.prototype.updatedBy = undefined;
 
 
   return exports;

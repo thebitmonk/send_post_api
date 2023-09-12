@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 
-Track Email Open
+Track Email Open <br>
 
 ### Example
 ```javascript
@@ -76,7 +76,7 @@ No authorization required
 
 
 
-Track Link Click
+Track Link Click <br>
 
 ### Example
 ```javascript
@@ -137,7 +137,7 @@ No authorization required
 
 
 
-Track TPSP Email Open
+Track TPSP Email Open <br>
 
 ### Example
 ```javascript
@@ -195,7 +195,7 @@ No authorization required
 
 
 
-Track TPSP Link Click
+Track TPSP Link Click <br>
 
 ### Example
 ```javascript
@@ -256,7 +256,7 @@ No authorization required
 
 
 
-track link click
+track link click <br>
 
 ### Example
 ```javascript
@@ -314,7 +314,7 @@ No authorization required
 
 
 
-Track Welcome Link Click
+Track Welcome Link Click <br>
 
 ### Example
 ```javascript

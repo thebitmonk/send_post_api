@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -71,6 +71,7 @@
           var body = new SendPostApi.ModelsESubAccount();
           body.name = "";
           body.labels = [""];
+          body.memberId = "0";
 
           instance.subAccountRouterCreate(xAccountApiKey, body, function(error, data, response) {
             if (error) {
@@ -83,6 +84,27 @@
             expect(data.apiKey).to.be("");
             expect(data.created).to.be.a('number');
             expect(data.created).to.be("0");
+            expect(data.createdBy).to.be.a(SendPostApi.ModelsMember);
+                  expect(data.createdBy.companyName).to.be.a('string');
+              expect(data.createdBy.companyName).to.be("");
+              expect(data.createdBy.created).to.be.a('number');
+              expect(data.createdBy.created).to.be("0");
+              expect(data.createdBy.email).to.be.a('string');
+              expect(data.createdBy.email).to.be("");
+              expect(data.createdBy.id).to.be.a('number');
+              expect(data.createdBy.id).to.be("0");
+              expect(data.createdBy.isForbidden).to.be.a('boolean');
+              expect(data.createdBy.isForbidden).to.be(false);
+              expect(data.createdBy.isVerified).to.be.a('boolean');
+              expect(data.createdBy.isVerified).to.be(false);
+              expect(data.createdBy.name).to.be.a('string');
+              expect(data.createdBy.name).to.be("");
+              expect(data.createdBy.onboardQAnswered).to.be.a('boolean');
+              expect(data.createdBy.onboardQAnswered).to.be(false);
+              expect(data.createdBy.phoneNumber).to.be.a('string');
+              expect(data.createdBy.phoneNumber).to.be("");
+              expect(data.createdBy.url).to.be.a('string');
+              expect(data.createdBy.url).to.be("");
             expect(data.id).to.be.a('number');
             expect(data.id).to.be("0");
             {
@@ -128,7 +150,28 @@
                       }
             }
             expect(data.type).to.be.a(SendPostApi.ModelsSubAccountType);
-    
+                expect(data.updatedBy).to.be.a(SendPostApi.ModelsMember);
+                  expect(data.updatedBy.companyName).to.be.a('string');
+              expect(data.updatedBy.companyName).to.be("");
+              expect(data.updatedBy.created).to.be.a('number');
+              expect(data.updatedBy.created).to.be("0");
+              expect(data.updatedBy.email).to.be.a('string');
+              expect(data.updatedBy.email).to.be("");
+              expect(data.updatedBy.id).to.be.a('number');
+              expect(data.updatedBy.id).to.be("0");
+              expect(data.updatedBy.isForbidden).to.be.a('boolean');
+              expect(data.updatedBy.isForbidden).to.be(false);
+              expect(data.updatedBy.isVerified).to.be.a('boolean');
+              expect(data.updatedBy.isVerified).to.be(false);
+              expect(data.updatedBy.name).to.be.a('string');
+              expect(data.updatedBy.name).to.be("");
+              expect(data.updatedBy.onboardQAnswered).to.be.a('boolean');
+              expect(data.updatedBy.onboardQAnswered).to.be(false);
+              expect(data.updatedBy.phoneNumber).to.be.a('string');
+              expect(data.updatedBy.phoneNumber).to.be("");
+              expect(data.updatedBy.url).to.be.a('string');
+              expect(data.updatedBy.url).to.be("");
+
             done();
           });
           */
@@ -142,8 +185,10 @@
           /*
           var xAccountApiKey = "xAccountApiKey_example";
           var subAccountId = 789;
+          var body = new SendPostApi.ModelsEMember();
+          body.id = "0";
 
-          instance.subAccountRouterDelete(xAccountApiKey, subAccountId, function(error, data, response) {
+          instance.subAccountRouterDelete(xAccountApiKey, subAccountId, body, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -180,6 +225,27 @@
             expect(data.apiKey).to.be("");
             expect(data.created).to.be.a('number');
             expect(data.created).to.be("0");
+            expect(data.createdBy).to.be.a(SendPostApi.ModelsMember);
+                  expect(data.createdBy.companyName).to.be.a('string');
+              expect(data.createdBy.companyName).to.be("");
+              expect(data.createdBy.created).to.be.a('number');
+              expect(data.createdBy.created).to.be("0");
+              expect(data.createdBy.email).to.be.a('string');
+              expect(data.createdBy.email).to.be("");
+              expect(data.createdBy.id).to.be.a('number');
+              expect(data.createdBy.id).to.be("0");
+              expect(data.createdBy.isForbidden).to.be.a('boolean');
+              expect(data.createdBy.isForbidden).to.be(false);
+              expect(data.createdBy.isVerified).to.be.a('boolean');
+              expect(data.createdBy.isVerified).to.be(false);
+              expect(data.createdBy.name).to.be.a('string');
+              expect(data.createdBy.name).to.be("");
+              expect(data.createdBy.onboardQAnswered).to.be.a('boolean');
+              expect(data.createdBy.onboardQAnswered).to.be(false);
+              expect(data.createdBy.phoneNumber).to.be.a('string');
+              expect(data.createdBy.phoneNumber).to.be("");
+              expect(data.createdBy.url).to.be.a('string');
+              expect(data.createdBy.url).to.be("");
             expect(data.id).to.be.a('number');
             expect(data.id).to.be("0");
             {
@@ -225,7 +291,28 @@
                       }
             }
             expect(data.type).to.be.a(SendPostApi.ModelsSubAccountType);
-    
+                expect(data.updatedBy).to.be.a(SendPostApi.ModelsMember);
+                  expect(data.updatedBy.companyName).to.be.a('string');
+              expect(data.updatedBy.companyName).to.be("");
+              expect(data.updatedBy.created).to.be.a('number');
+              expect(data.updatedBy.created).to.be("0");
+              expect(data.updatedBy.email).to.be.a('string');
+              expect(data.updatedBy.email).to.be("");
+              expect(data.updatedBy.id).to.be.a('number');
+              expect(data.updatedBy.id).to.be("0");
+              expect(data.updatedBy.isForbidden).to.be.a('boolean');
+              expect(data.updatedBy.isForbidden).to.be(false);
+              expect(data.updatedBy.isVerified).to.be.a('boolean');
+              expect(data.updatedBy.isVerified).to.be(false);
+              expect(data.updatedBy.name).to.be.a('string');
+              expect(data.updatedBy.name).to.be("");
+              expect(data.updatedBy.onboardQAnswered).to.be.a('boolean');
+              expect(data.updatedBy.onboardQAnswered).to.be(false);
+              expect(data.updatedBy.phoneNumber).to.be.a('string');
+              expect(data.updatedBy.phoneNumber).to.be("");
+              expect(data.updatedBy.url).to.be.a('string');
+              expect(data.updatedBy.url).to.be("");
+
             done();
           });
           */
@@ -261,6 +348,27 @@
               expect(data.apiKey).to.be("");
               expect(data.created).to.be.a('number');
               expect(data.created).to.be("0");
+              expect(data.createdBy).to.be.a(SendPostApi.ModelsMember);
+                    expect(data.createdBy.companyName).to.be.a('string');
+                expect(data.createdBy.companyName).to.be("");
+                expect(data.createdBy.created).to.be.a('number');
+                expect(data.createdBy.created).to.be("0");
+                expect(data.createdBy.email).to.be.a('string');
+                expect(data.createdBy.email).to.be("");
+                expect(data.createdBy.id).to.be.a('number');
+                expect(data.createdBy.id).to.be("0");
+                expect(data.createdBy.isForbidden).to.be.a('boolean');
+                expect(data.createdBy.isForbidden).to.be(false);
+                expect(data.createdBy.isVerified).to.be.a('boolean');
+                expect(data.createdBy.isVerified).to.be(false);
+                expect(data.createdBy.name).to.be.a('string');
+                expect(data.createdBy.name).to.be("");
+                expect(data.createdBy.onboardQAnswered).to.be.a('boolean');
+                expect(data.createdBy.onboardQAnswered).to.be(false);
+                expect(data.createdBy.phoneNumber).to.be.a('string');
+                expect(data.createdBy.phoneNumber).to.be("");
+                expect(data.createdBy.url).to.be.a('string');
+                expect(data.createdBy.url).to.be("");
               expect(data.id).to.be.a('number');
               expect(data.id).to.be("0");
               {
@@ -306,7 +414,27 @@
                         }
               }
               expect(data.type).to.be.a(SendPostApi.ModelsSubAccountType);
-      
+                  expect(data.updatedBy).to.be.a(SendPostApi.ModelsMember);
+                    expect(data.updatedBy.companyName).to.be.a('string');
+                expect(data.updatedBy.companyName).to.be("");
+                expect(data.updatedBy.created).to.be.a('number');
+                expect(data.updatedBy.created).to.be("0");
+                expect(data.updatedBy.email).to.be.a('string');
+                expect(data.updatedBy.email).to.be("");
+                expect(data.updatedBy.id).to.be.a('number');
+                expect(data.updatedBy.id).to.be("0");
+                expect(data.updatedBy.isForbidden).to.be.a('boolean');
+                expect(data.updatedBy.isForbidden).to.be(false);
+                expect(data.updatedBy.isVerified).to.be.a('boolean');
+                expect(data.updatedBy.isVerified).to.be(false);
+                expect(data.updatedBy.name).to.be.a('string');
+                expect(data.updatedBy.name).to.be("");
+                expect(data.updatedBy.onboardQAnswered).to.be.a('boolean');
+                expect(data.updatedBy.onboardQAnswered).to.be(false);
+                expect(data.updatedBy.phoneNumber).to.be.a('string');
+                expect(data.updatedBy.phoneNumber).to.be("");
+                expect(data.updatedBy.url).to.be.a('string');
+                expect(data.updatedBy.url).to.be("");
             }
 
             done();
@@ -385,6 +513,27 @@
               expect(data.description).to.be("");
               expect(data.id).to.be.a('number');
               expect(data.id).to.be("0");
+              expect(data.modifiedBy).to.be.a(SendPostApi.ModelsMember);
+                    expect(data.modifiedBy.companyName).to.be.a('string');
+                expect(data.modifiedBy.companyName).to.be("");
+                expect(data.modifiedBy.created).to.be.a('number');
+                expect(data.modifiedBy.created).to.be("0");
+                expect(data.modifiedBy.email).to.be.a('string');
+                expect(data.modifiedBy.email).to.be("");
+                expect(data.modifiedBy.id).to.be.a('number');
+                expect(data.modifiedBy.id).to.be("0");
+                expect(data.modifiedBy.isForbidden).to.be.a('boolean');
+                expect(data.modifiedBy.isForbidden).to.be(false);
+                expect(data.modifiedBy.isVerified).to.be.a('boolean');
+                expect(data.modifiedBy.isVerified).to.be(false);
+                expect(data.modifiedBy.name).to.be.a('string');
+                expect(data.modifiedBy.name).to.be("");
+                expect(data.modifiedBy.onboardQAnswered).to.be.a('boolean');
+                expect(data.modifiedBy.onboardQAnswered).to.be(false);
+                expect(data.modifiedBy.phoneNumber).to.be.a('string');
+                expect(data.modifiedBy.phoneNumber).to.be("");
+                expect(data.modifiedBy.url).to.be.a('string');
+                expect(data.modifiedBy.url).to.be("");
               expect(data.relatedIP).to.be.a(SendPostApi.ModelsIP);
                     expect(data.relatedIP.aolSettings).to.be.a('string');
                 expect(data.relatedIP.aolSettings).to.be("");
@@ -514,6 +663,27 @@
                 expect(data.relatedSubAccount.apiKey).to.be("");
                 expect(data.relatedSubAccount.created).to.be.a('number');
                 expect(data.relatedSubAccount.created).to.be("0");
+                expect(data.relatedSubAccount.createdBy).to.be.a(SendPostApi.ModelsMember);
+                      expect(data.relatedSubAccount.createdBy.companyName).to.be.a('string');
+                  expect(data.relatedSubAccount.createdBy.companyName).to.be("");
+                  expect(data.relatedSubAccount.createdBy.created).to.be.a('number');
+                  expect(data.relatedSubAccount.createdBy.created).to.be("0");
+                  expect(data.relatedSubAccount.createdBy.email).to.be.a('string');
+                  expect(data.relatedSubAccount.createdBy.email).to.be("");
+                  expect(data.relatedSubAccount.createdBy.id).to.be.a('number');
+                  expect(data.relatedSubAccount.createdBy.id).to.be("0");
+                  expect(data.relatedSubAccount.createdBy.isForbidden).to.be.a('boolean');
+                  expect(data.relatedSubAccount.createdBy.isForbidden).to.be(false);
+                  expect(data.relatedSubAccount.createdBy.isVerified).to.be.a('boolean');
+                  expect(data.relatedSubAccount.createdBy.isVerified).to.be(false);
+                  expect(data.relatedSubAccount.createdBy.name).to.be.a('string');
+                  expect(data.relatedSubAccount.createdBy.name).to.be("");
+                  expect(data.relatedSubAccount.createdBy.onboardQAnswered).to.be.a('boolean');
+                  expect(data.relatedSubAccount.createdBy.onboardQAnswered).to.be(false);
+                  expect(data.relatedSubAccount.createdBy.phoneNumber).to.be.a('string');
+                  expect(data.relatedSubAccount.createdBy.phoneNumber).to.be("");
+                  expect(data.relatedSubAccount.createdBy.url).to.be.a('string');
+                  expect(data.relatedSubAccount.createdBy.url).to.be("");
                 expect(data.relatedSubAccount.id).to.be.a('number');
                 expect(data.relatedSubAccount.id).to.be("0");
                 {
@@ -559,7 +729,27 @@
                           }
                 }
                 expect(data.relatedSubAccount.type).to.be.a(SendPostApi.ModelsSubAccountType);
-        
+                    expect(data.relatedSubAccount.updatedBy).to.be.a(SendPostApi.ModelsMember);
+                      expect(data.relatedSubAccount.updatedBy.companyName).to.be.a('string');
+                  expect(data.relatedSubAccount.updatedBy.companyName).to.be("");
+                  expect(data.relatedSubAccount.updatedBy.created).to.be.a('number');
+                  expect(data.relatedSubAccount.updatedBy.created).to.be("0");
+                  expect(data.relatedSubAccount.updatedBy.email).to.be.a('string');
+                  expect(data.relatedSubAccount.updatedBy.email).to.be("");
+                  expect(data.relatedSubAccount.updatedBy.id).to.be.a('number');
+                  expect(data.relatedSubAccount.updatedBy.id).to.be("0");
+                  expect(data.relatedSubAccount.updatedBy.isForbidden).to.be.a('boolean');
+                  expect(data.relatedSubAccount.updatedBy.isForbidden).to.be(false);
+                  expect(data.relatedSubAccount.updatedBy.isVerified).to.be.a('boolean');
+                  expect(data.relatedSubAccount.updatedBy.isVerified).to.be(false);
+                  expect(data.relatedSubAccount.updatedBy.name).to.be.a('string');
+                  expect(data.relatedSubAccount.updatedBy.name).to.be("");
+                  expect(data.relatedSubAccount.updatedBy.onboardQAnswered).to.be.a('boolean');
+                  expect(data.relatedSubAccount.updatedBy.onboardQAnswered).to.be(false);
+                  expect(data.relatedSubAccount.updatedBy.phoneNumber).to.be.a('string');
+                  expect(data.relatedSubAccount.updatedBy.phoneNumber).to.be("");
+                  expect(data.relatedSubAccount.updatedBy.url).to.be.a('string');
+                  expect(data.relatedSubAccount.updatedBy.url).to.be("");
               expect(data.status).to.be.a(SendPostApi.ModelsIncidentStatus);
                   expect(data.summary).to.be.a('string');
               expect(data.summary).to.be("");
@@ -574,6 +764,27 @@
                   expect(data.color).to.be("");
                   expect(data.created).to.be.a('number');
                   expect(data.created).to.be("0");
+                  expect(data.createdBy).to.be.a(SendPostApi.ModelsMember);
+                        expect(data.createdBy.companyName).to.be.a('string');
+                    expect(data.createdBy.companyName).to.be("");
+                    expect(data.createdBy.created).to.be.a('number');
+                    expect(data.createdBy.created).to.be("0");
+                    expect(data.createdBy.email).to.be.a('string');
+                    expect(data.createdBy.email).to.be("");
+                    expect(data.createdBy.id).to.be.a('number');
+                    expect(data.createdBy.id).to.be("0");
+                    expect(data.createdBy.isForbidden).to.be.a('boolean');
+                    expect(data.createdBy.isForbidden).to.be(false);
+                    expect(data.createdBy.isVerified).to.be.a('boolean');
+                    expect(data.createdBy.isVerified).to.be(false);
+                    expect(data.createdBy.name).to.be.a('string');
+                    expect(data.createdBy.name).to.be("");
+                    expect(data.createdBy.onboardQAnswered).to.be.a('boolean');
+                    expect(data.createdBy.onboardQAnswered).to.be(false);
+                    expect(data.createdBy.phoneNumber).to.be.a('string');
+                    expect(data.createdBy.phoneNumber).to.be("");
+                    expect(data.createdBy.url).to.be.a('string');
+                    expect(data.createdBy.url).to.be("");
                   expect(data.description).to.be.a('string');
                   expect(data.description).to.be("");
                   expect(data.id).to.be.a('number');
@@ -582,6 +793,27 @@
                   expect(data.name).to.be("");
                   expect(data.updated).to.be.a('number');
                   expect(data.updated).to.be("0");
+                  expect(data.updatedBy).to.be.a(SendPostApi.ModelsMember);
+                        expect(data.updatedBy.companyName).to.be.a('string');
+                    expect(data.updatedBy.companyName).to.be("");
+                    expect(data.updatedBy.created).to.be.a('number');
+                    expect(data.updatedBy.created).to.be("0");
+                    expect(data.updatedBy.email).to.be.a('string');
+                    expect(data.updatedBy.email).to.be("");
+                    expect(data.updatedBy.id).to.be.a('number');
+                    expect(data.updatedBy.id).to.be("0");
+                    expect(data.updatedBy.isForbidden).to.be.a('boolean');
+                    expect(data.updatedBy.isForbidden).to.be(false);
+                    expect(data.updatedBy.isVerified).to.be.a('boolean');
+                    expect(data.updatedBy.isVerified).to.be(false);
+                    expect(data.updatedBy.name).to.be.a('string');
+                    expect(data.updatedBy.name).to.be("");
+                    expect(data.updatedBy.onboardQAnswered).to.be.a('boolean');
+                    expect(data.updatedBy.onboardQAnswered).to.be(false);
+                    expect(data.updatedBy.phoneNumber).to.be.a('string');
+                    expect(data.updatedBy.phoneNumber).to.be("");
+                    expect(data.updatedBy.url).to.be.a('string');
+                    expect(data.updatedBy.url).to.be("");
   
                         }
               }
@@ -605,6 +837,7 @@
           var body = new SendPostApi.ModelsESubAccount();
           body.name = "";
           body.labels = [""];
+          body.memberId = "0";
 
           instance.subAccountRouterUpdate(xAccountApiKey, subAccountId, body, function(error, data, response) {
             if (error) {
@@ -617,6 +850,27 @@
             expect(data.apiKey).to.be("");
             expect(data.created).to.be.a('number');
             expect(data.created).to.be("0");
+            expect(data.createdBy).to.be.a(SendPostApi.ModelsMember);
+                  expect(data.createdBy.companyName).to.be.a('string');
+              expect(data.createdBy.companyName).to.be("");
+              expect(data.createdBy.created).to.be.a('number');
+              expect(data.createdBy.created).to.be("0");
+              expect(data.createdBy.email).to.be.a('string');
+              expect(data.createdBy.email).to.be("");
+              expect(data.createdBy.id).to.be.a('number');
+              expect(data.createdBy.id).to.be("0");
+              expect(data.createdBy.isForbidden).to.be.a('boolean');
+              expect(data.createdBy.isForbidden).to.be(false);
+              expect(data.createdBy.isVerified).to.be.a('boolean');
+              expect(data.createdBy.isVerified).to.be(false);
+              expect(data.createdBy.name).to.be.a('string');
+              expect(data.createdBy.name).to.be("");
+              expect(data.createdBy.onboardQAnswered).to.be.a('boolean');
+              expect(data.createdBy.onboardQAnswered).to.be(false);
+              expect(data.createdBy.phoneNumber).to.be.a('string');
+              expect(data.createdBy.phoneNumber).to.be("");
+              expect(data.createdBy.url).to.be.a('string');
+              expect(data.createdBy.url).to.be("");
             expect(data.id).to.be.a('number');
             expect(data.id).to.be("0");
             {
@@ -662,7 +916,28 @@
                       }
             }
             expect(data.type).to.be.a(SendPostApi.ModelsSubAccountType);
-    
+                expect(data.updatedBy).to.be.a(SendPostApi.ModelsMember);
+                  expect(data.updatedBy.companyName).to.be.a('string');
+              expect(data.updatedBy.companyName).to.be("");
+              expect(data.updatedBy.created).to.be.a('number');
+              expect(data.updatedBy.created).to.be("0");
+              expect(data.updatedBy.email).to.be.a('string');
+              expect(data.updatedBy.email).to.be("");
+              expect(data.updatedBy.id).to.be.a('number');
+              expect(data.updatedBy.id).to.be("0");
+              expect(data.updatedBy.isForbidden).to.be.a('boolean');
+              expect(data.updatedBy.isForbidden).to.be(false);
+              expect(data.updatedBy.isVerified).to.be.a('boolean');
+              expect(data.updatedBy.isVerified).to.be(false);
+              expect(data.updatedBy.name).to.be.a('string');
+              expect(data.updatedBy.name).to.be("");
+              expect(data.updatedBy.onboardQAnswered).to.be.a('boolean');
+              expect(data.updatedBy.onboardQAnswered).to.be(false);
+              expect(data.updatedBy.phoneNumber).to.be.a('string');
+              expect(data.updatedBy.phoneNumber).to.be("");
+              expect(data.updatedBy.url).to.be.a('string');
+              expect(data.updatedBy.url).to.be("");
+
             done();
           });
           */

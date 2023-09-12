@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **brandColor** | **String** |  | [optional] 
 **companyName** | **String** |  | [optional] 
 **created** | **Number** |  | [optional] 
+**createdBy** | [**ModelsMember**](ModelsMember.md) |  | [optional] 
 **currentEmailServiceProvider** | **String** |  | [optional] 
 **id** | **Number** |  | [optional] 
 **incidentSlackEndpoint** | **String** |  | [optional] 
@@ -28,5 +29,6 @@ Name | Type | Description | Notes
 **stripeSubscriptionItemId** | **String** |  | [optional] 
 **stripeUsagePriceId** | **String** |  | [optional] 
 **switchingSendpostDescription** | **String** |  | [optional] 
+**updatedBy** | [**ModelsMember**](ModelsMember.md) |  | [optional] 
 
 

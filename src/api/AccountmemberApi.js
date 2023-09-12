@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsDeleteResponse', 'model/ModelsEMember', 'model/ModelsMember', 'model/ModelsVerifyByMemberTokenRequest'], factory);
+    define(['ApiClient', 'model/ModelsDeleteResponse', 'model/ModelsMember', 'model/ModelsUMember', 'model/ModelsVerifyByMemberTokenRequest'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsDeleteResponse'), require('../model/ModelsEMember'), require('../model/ModelsMember'), require('../model/ModelsVerifyByMemberTokenRequest'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsDeleteResponse'), require('../model/ModelsMember'), require('../model/ModelsUMember'), require('../model/ModelsVerifyByMemberTokenRequest'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.AccountmemberApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsEMember, root.SendPostApi.ModelsMember, root.SendPostApi.ModelsVerifyByMemberTokenRequest);
+    root.SendPostApi.AccountmemberApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsMember, root.SendPostApi.ModelsUMember, root.SendPostApi.ModelsVerifyByMemberTokenRequest);
   }
-}(this, function(ApiClient, ModelsDeleteResponse, ModelsEMember, ModelsMember, ModelsVerifyByMemberTokenRequest) {
+}(this, function(ApiClient, ModelsDeleteResponse, ModelsMember, ModelsUMember, ModelsVerifyByMemberTokenRequest) {
   'use strict';
 
   /**
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Delete Member
+     * Delete Member <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} memberId The MemberId you want to delete
      * @param {module:api/AccountmemberApi~memberRouterDeleteCallback} callback The callback function, accepting three arguments: error, data, response
@@ -111,7 +111,7 @@
      */
 
     /**
-     * Find Member by MemberId
+     * Find Member by MemberId <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} memberId the MemberId you want to get
      * @param {module:api/AccountmemberApi~memberRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -165,7 +165,7 @@
      */
 
     /**
-     * Get All Members
+     * Get All Members <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountmemberApi~memberRouterGetAllCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsMember>}
@@ -212,10 +212,10 @@
      */
 
     /**
-     * Update Member
+     * Update Member <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} memberId The MemberId you want to update
-     * @param {module:model/ModelsEMember} body The body
+     * @param {module:model/ModelsUMember} body The body
      * @param {module:api/AccountmemberApi~memberRouterUpdateCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsMember}
      */
@@ -272,7 +272,7 @@
      */
 
     /**
-     * Verify Member By Email Request
+     * Verify Member By Email Request <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} memberId the MemberId who is inviting new member to join the account
      * @param {module:model/ModelsVerifyByMemberTokenRequest} body The Email to be used to verify

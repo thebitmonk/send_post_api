@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **dropped** | **Boolean** |  | [optional] 
 **enabled** | **Boolean** |  | [optional] 
 **hardBounced** | **Boolean** |  | [optional] 
+**memberId** | **Number** |  | [optional] 
 **opened** | **Boolean** |  | [optional] 
 **processed** | **Boolean** |  | [optional] 
 **sent** | **Boolean** |  | [optional] 

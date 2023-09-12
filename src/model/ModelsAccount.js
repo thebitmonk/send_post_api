@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/ModelsMember'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./ModelsMember'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsAccount = factory(root.SendPostApi.ApiClient);
+    root.SendPostApi.ModelsAccount = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsMember);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, ModelsMember) {
   'use strict';
 
   /**
@@ -65,6 +65,8 @@
         obj.companyName = ApiClient.convertToType(data['companyName'], 'String');
       if (data.hasOwnProperty('created'))
         obj.created = ApiClient.convertToType(data['created'], 'Number');
+      if (data.hasOwnProperty('createdBy'))
+        obj.createdBy = ModelsMember.constructFromObject(data['createdBy']);
       if (data.hasOwnProperty('currentEmailServiceProvider'))
         obj.currentEmailServiceProvider = ApiClient.convertToType(data['currentEmailServiceProvider'], 'String');
       if (data.hasOwnProperty('id'))
@@ -105,6 +107,8 @@
         obj.stripeUsagePriceId = ApiClient.convertToType(data['stripeUsagePriceId'], 'String');
       if (data.hasOwnProperty('switchingSendpostDescription'))
         obj.switchingSendpostDescription = ApiClient.convertToType(data['switchingSendpostDescription'], 'String');
+      if (data.hasOwnProperty('updatedBy'))
+        obj.updatedBy = ModelsMember.constructFromObject(data['updatedBy']);
     }
     return obj;
   }
@@ -133,6 +137,11 @@
    * @member {Number} created
    */
   exports.prototype.created = undefined;
+
+  /**
+   * @member {module:model/ModelsMember} createdBy
+   */
+  exports.prototype.createdBy = undefined;
 
   /**
    * @member {String} currentEmailServiceProvider
@@ -233,6 +242,11 @@
    * @member {String} switchingSendpostDescription
    */
   exports.prototype.switchingSendpostDescription = undefined;
+
+  /**
+   * @member {module:model/ModelsMember} updatedBy
+   */
+  exports.prototype.updatedBy = undefined;
 
 
   return exports;

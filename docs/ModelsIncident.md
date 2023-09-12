@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **created** | **Number** |  | [optional] 
 **description** | **String** |  | [optional] 
 **id** | **Number** |  | [optional] 
+**modifiedBy** | [**ModelsMember**](ModelsMember.md) |  | [optional] 
 **relatedIP** | [**ModelsIP**](ModelsIP.md) |  | [optional] 
 **relatedSubAccount** | [**ModelsSubAccount**](ModelsSubAccount.md) |  | [optional] 
 **status** | [**ModelsIncidentStatus**](ModelsIncidentStatus.md) |  | [optional] 

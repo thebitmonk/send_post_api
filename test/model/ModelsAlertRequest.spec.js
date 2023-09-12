@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -47,6 +47,12 @@
         // expect(instance.active).to.be(expectedValueLiteral);
       });
 
+      it('should have the property assignedMemberId (base name: "assignedMemberId")', function() {
+        // TODO: update the code to test the property assignedMemberId
+        expect(instance).to.have.property('assignedMemberId');
+        // expect(instance.assignedMemberId).to.be(expectedValueLiteral);
+      });
+
       it('should have the property emails (base name: "emails")', function() {
         // TODO: update the code to test the property emails
         expect(instance).to.have.property('emails');
@@ -71,10 +77,10 @@
         // expect(instance.label).to.be(expectedValueLiteral);
       });
 
-      it('should have the property member (base name: "member")', function() {
-        // TODO: update the code to test the property member
-        expect(instance).to.have.property('member');
-        // expect(instance.member).to.be(expectedValueLiteral);
+      it('should have the property memberId (base name: "memberId")', function() {
+        // TODO: update the code to test the property memberId
+        expect(instance).to.have.property('memberId');
+        // expect(instance.memberId).to.be(expectedValueLiteral);
       });
 
       it('should have the property name (base name: "name")', function() {

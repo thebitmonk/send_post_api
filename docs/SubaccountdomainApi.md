@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 
 
-Count Total Domains
+Count Total Domains <br>
 
 ### Example
 ```javascript
@@ -67,7 +67,7 @@ No authorization required
 
 
 
-Create Domain
+Create Domain <br>
 
 ### Example
 ```javascript
@@ -112,11 +112,11 @@ No authorization required
 
 <a name="domainRouterDelete"></a>
 # **domainRouterDelete**
-> ModelsDeleteResponse domainRouterDelete(xSubAccountApiKey, domainId)
+> ModelsDeleteResponse domainRouterDelete(xSubAccountApiKey, domainId, body)
 
 
 
-Delete Domain
+Delete Domain <br>
 
 ### Example
 ```javascript
@@ -128,6 +128,8 @@ var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API
 
 var domainId = 789; // Number | The DomainId you want to delete
 
+var body = new SendPostApi.ModelsEMember(); // ModelsEMember | The triggering action member
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -136,7 +138,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.domainRouterDelete(xSubAccountApiKey, domainId, callback);
+apiInstance.domainRouterDelete(xSubAccountApiKey, domainId, body, callback);
 ```
 
 ### Parameters
@@ -145,6 +147,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
  **domainId** | **Number**| The DomainId you want to delete | 
+ **body** | [**ModelsEMember**](ModelsEMember.md)| The triggering action member | 
 
 ### Return type
 
@@ -165,7 +168,7 @@ No authorization required
 
 
 
-Find Domain by DomainId
+Find Domain by DomainId <br>
 
 ### Example
 ```javascript
@@ -214,7 +217,7 @@ No authorization required
 
 
 
-Get All Domains
+Get All Domains <br>
 
 ### Example
 ```javascript
@@ -268,7 +271,7 @@ No authorization required
 
 
 
-Update Domain
+Update Domain <br>
 
 ### Example
 ```javascript
@@ -320,7 +323,7 @@ No authorization required
 
 
 
-Verify Domain By Domain Id
+Verify Domain By Domain Id <br>
 
 ### Example
 ```javascript
@@ -369,7 +372,7 @@ No authorization required
 
 
 
-Verify Domain By Signed Token
+Verify Domain By Signed Token <br>
 
 ### Example
 ```javascript
@@ -421,7 +424,7 @@ No authorization required
 
 
 
-Verify Domain By Email Request
+Verify Domain By Email Request <br>
 
 ### Example
 ```javascript

@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsAccountIPPool', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsEIPPool'], factory);
+    define(['ApiClient', 'model/ModelsAccountIPPool', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsEIPPool', 'model/ModelsEMember'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsAccountIPPool'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsEIPPool'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsAccountIPPool'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsEIPPool'), require('../model/ModelsEMember'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.AccountippoolApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsAccountIPPool, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsEIPPool);
+    root.SendPostApi.AccountippoolApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsAccountIPPool, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsEIPPool, root.SendPostApi.ModelsEMember);
   }
-}(this, function(ApiClient, ModelsAccountIPPool, ModelsCountStat, ModelsDeleteResponse, ModelsEIPPool) {
+}(this, function(ApiClient, ModelsAccountIPPool, ModelsCountStat, ModelsDeleteResponse, ModelsEIPPool, ModelsEMember) {
   'use strict';
 
   /**
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Count Total AccountIPPools
+     * Count Total AccountIPPools <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountippoolApi~accountIPPoolRouterCountCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsCountStat}
@@ -104,7 +104,7 @@
      */
 
     /**
-     * Create AccountIPPool
+     * Create AccountIPPool <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:model/ModelsEIPPool} body The AccountIPPool content
      * @param {module:api/AccountippoolApi~accountIPPoolRouterCreateCallback} callback The callback function, accepting three arguments: error, data, response
@@ -157,14 +157,15 @@
      */
 
     /**
-     * Delete AccountIPPool
+     * Delete AccountIPPool <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ippoolid The AccountIPPoolId you want to delete
+     * @param {module:model/ModelsEMember} body The triggering action member
      * @param {module:api/AccountippoolApi~accountIPPoolRouterDeleteCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsDeleteResponse}
      */
-    this.accountIPPoolRouterDelete = function(xAccountApiKey, ippoolid, callback) {
-      var postBody = null;
+    this.accountIPPoolRouterDelete = function(xAccountApiKey, ippoolid, body, callback) {
+      var postBody = body;
 
       // verify the required parameter 'xAccountApiKey' is set
       if (xAccountApiKey === undefined || xAccountApiKey === null) {
@@ -174,6 +175,11 @@
       // verify the required parameter 'ippoolid' is set
       if (ippoolid === undefined || ippoolid === null) {
         throw new Error("Missing the required parameter 'ippoolid' when calling accountIPPoolRouterDelete");
+      }
+
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling accountIPPoolRouterDelete");
       }
 
 
@@ -211,7 +217,7 @@
      */
 
     /**
-     * Find AccountIPPool by AccountIPPoolId
+     * Find AccountIPPool by AccountIPPoolId <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ippoolid the AccountIPPoolId you want to get
      * @param {module:api/AccountippoolApi~accountIPPoolRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -265,7 +271,7 @@
      */
 
     /**
-     * Get All AccountIPPools
+     * Get All AccountIPPools <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
@@ -320,7 +326,7 @@
      */
 
     /**
-     * Get All AccountIPPools without fetching IPs, TPSPs and other pools
+     * Get All AccountIPPools without fetching IPs, TPSPs and other pools <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
@@ -375,7 +381,7 @@
      */
 
     /**
-     * Update AccountIPPool
+     * Update AccountIPPool <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ippoolid The AccountIPPoolId you want to update
      * @param {module:model/ModelsEIPPool} body The body

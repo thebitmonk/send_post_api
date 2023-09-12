@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 
 
-Count Total AccountIntegrations
+Count Total AccountIntegrations <br>
 
 ### Example
 ```javascript
@@ -66,7 +66,7 @@ No authorization required
 
 
 
-Create Integration
+Create Integration <br>
 
 ### Example
 ```javascript
@@ -114,11 +114,11 @@ No authorization required
 
 <a name="accountIntegrationRouterDelete"></a>
 # **accountIntegrationRouterDelete**
-> ModelsDeleteResponse accountIntegrationRouterDelete(xAccountApiKey, itype)
+> ModelsDeleteResponse accountIntegrationRouterDelete(xAccountApiKey, itype, body)
 
 
 
-Delete Integration
+Delete Integration <br>
 
 ### Example
 ```javascript
@@ -130,6 +130,8 @@ var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var itype = "itype_example"; // String | The integration type you want to update
 
+var body = new SendPostApi.ModelsEMember(); // ModelsEMember | The triggering action member
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -138,7 +140,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.accountIntegrationRouterDelete(xAccountApiKey, itype, callback);
+apiInstance.accountIntegrationRouterDelete(xAccountApiKey, itype, body, callback);
 ```
 
 ### Parameters
@@ -147,6 +149,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
  **itype** | **String**| The integration type you want to update | 
+ **body** | [**ModelsEMember**](ModelsEMember.md)| The triggering action member | 
 
 ### Return type
 
@@ -163,11 +166,11 @@ No authorization required
 
 <a name="accountIntegrationRouterDisableHetrixToolsIPMonitoring"></a>
 # **accountIntegrationRouterDisableHetrixToolsIPMonitoring**
-> ModelsDeleteResponse accountIntegrationRouterDisableHetrixToolsIPMonitoring(xAccountApiKey, ipid)
+> ModelsDeleteResponse accountIntegrationRouterDisableHetrixToolsIPMonitoring(xAccountApiKey, ipid, body)
 
 
 
-Disable IP Monitoring for a single IP
+Disable IP Monitoring for a single IP <br>
 
 ### Example
 ```javascript
@@ -179,6 +182,8 @@ var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var ipid = 789; // Number | the IPId you want to disable monitoring for
 
+var body = new SendPostApi.ModelsEMember(); // ModelsEMember | The triggering action member
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -187,7 +192,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.accountIntegrationRouterDisableHetrixToolsIPMonitoring(xAccountApiKey, ipid, callback);
+apiInstance.accountIntegrationRouterDisableHetrixToolsIPMonitoring(xAccountApiKey, ipid, body, callback);
 ```
 
 ### Parameters
@@ -196,6 +201,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
  **ipid** | **Number**| the IPId you want to disable monitoring for | 
+ **body** | [**ModelsEMember**](ModelsEMember.md)| The triggering action member | 
 
 ### Return type
 
@@ -212,11 +218,11 @@ No authorization required
 
 <a name="accountIntegrationRouterEnableHetrixToolsIPMonitoring"></a>
 # **accountIntegrationRouterEnableHetrixToolsIPMonitoring**
-> ModelsResponse accountIntegrationRouterEnableHetrixToolsIPMonitoring(xAccountApiKey, ipid)
+> ModelsResponse accountIntegrationRouterEnableHetrixToolsIPMonitoring(xAccountApiKey, ipid, body)
 
 
 
-Enable IP Monitoring for a single IP
+Enable IP Monitoring for a single IP <br>
 
 ### Example
 ```javascript
@@ -228,6 +234,8 @@ var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var ipid = 789; // Number | the IPId you want to enable monitoring for
 
+var body = new SendPostApi.ModelsEMember(); // ModelsEMember | The triggering action member
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -236,7 +244,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.accountIntegrationRouterEnableHetrixToolsIPMonitoring(xAccountApiKey, ipid, callback);
+apiInstance.accountIntegrationRouterEnableHetrixToolsIPMonitoring(xAccountApiKey, ipid, body, callback);
 ```
 
 ### Parameters
@@ -245,6 +253,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
  **ipid** | **Number**| the IPId you want to enable monitoring for | 
+ **body** | [**ModelsEMember**](ModelsEMember.md)| The triggering action member | 
 
 ### Return type
 
@@ -265,7 +274,7 @@ No authorization required
 
 
 
-Get All Integrations
+Get All Integrations <br>
 
 ### Example
 ```javascript
@@ -311,7 +320,7 @@ No authorization required
 
 
 
-Get Monitored IP Stats
+Get Monitored IP Stats <br>
 
 ### Example
 ```javascript
@@ -366,7 +375,7 @@ No authorization required
 
 
 
-Update Integration
+Update Integration <br>
 
 ### Example
 ```javascript

@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsLabel', 'model/ModelsSMTPAuth', 'model/ModelsSubAccountType'], factory);
+    define(['ApiClient', 'model/ModelsLabel', 'model/ModelsMember', 'model/ModelsSMTPAuth', 'model/ModelsSubAccountType'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ModelsLabel'), require('./ModelsSMTPAuth'), require('./ModelsSubAccountType'));
+    module.exports = factory(require('../ApiClient'), require('./ModelsLabel'), require('./ModelsMember'), require('./ModelsSMTPAuth'), require('./ModelsSubAccountType'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsSubAccount = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsLabel, root.SendPostApi.ModelsSMTPAuth, root.SendPostApi.ModelsSubAccountType);
+    root.SendPostApi.ModelsSubAccount = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsLabel, root.SendPostApi.ModelsMember, root.SendPostApi.ModelsSMTPAuth, root.SendPostApi.ModelsSubAccountType);
   }
-}(this, function(ApiClient, ModelsLabel, ModelsSMTPAuth, ModelsSubAccountType) {
+}(this, function(ApiClient, ModelsLabel, ModelsMember, ModelsSMTPAuth, ModelsSubAccountType) {
   'use strict';
 
   /**
@@ -59,6 +59,8 @@
         obj.apiKey = ApiClient.convertToType(data['apiKey'], 'String');
       if (data.hasOwnProperty('created'))
         obj.created = ApiClient.convertToType(data['created'], 'Number');
+      if (data.hasOwnProperty('created_by'))
+        obj.createdBy = ModelsMember.constructFromObject(data['created_by']);
       if (data.hasOwnProperty('id'))
         obj.id = ApiClient.convertToType(data['id'], 'Number');
       if (data.hasOwnProperty('labels'))
@@ -69,6 +71,8 @@
         obj.smtpAuths = ApiClient.convertToType(data['smtpAuths'], [ModelsSMTPAuth]);
       if (data.hasOwnProperty('type'))
         obj.type = ModelsSubAccountType.constructFromObject(data['type']);
+      if (data.hasOwnProperty('updated_by'))
+        obj.updatedBy = ModelsMember.constructFromObject(data['updated_by']);
     }
     return obj;
   }
@@ -82,6 +86,11 @@
    * @member {Number} created
    */
   exports.prototype.created = undefined;
+
+  /**
+   * @member {module:model/ModelsMember} createdBy
+   */
+  exports.prototype.createdBy = undefined;
 
   /**
    * @member {Number} id
@@ -107,6 +116,11 @@
    * @member {module:model/ModelsSubAccountType} type
    */
   exports.prototype.type = undefined;
+
+  /**
+   * @member {module:model/ModelsMember} updatedBy
+   */
+  exports.prototype.updatedBy = undefined;
 
 
   return exports;

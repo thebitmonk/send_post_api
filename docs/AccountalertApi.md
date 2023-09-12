@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 
-Count Total Alerts for account
+Count Total Alerts for account <br>
 
 ### Example
 ```javascript
@@ -67,7 +67,7 @@ No authorization required
 
 
 
-create an alert
+create an alert <br>
 
 ### Example
 ```javascript
@@ -112,11 +112,11 @@ No authorization required
 
 <a name="alertRouterDelete"></a>
 # **alertRouterDelete**
-> ModelsDeleteResponse alertRouterDelete(xAccountApiKey, alertId)
+> ModelsDeleteResponse alertRouterDelete(xAccountApiKey, alertId, body)
 
 
 
-Delete Alert
+Delete Alert <br>
 
 ### Example
 ```javascript
@@ -128,6 +128,8 @@ var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var alertId = 789; // Number | The AlertId you want to delete
 
+var body = new SendPostApi.ModelsEMember(); // ModelsEMember | The triggering action member
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -136,7 +138,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.alertRouterDelete(xAccountApiKey, alertId, callback);
+apiInstance.alertRouterDelete(xAccountApiKey, alertId, body, callback);
 ```
 
 ### Parameters
@@ -145,6 +147,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
  **alertId** | **Number**| The AlertId you want to delete | 
+ **body** | [**ModelsEMember**](ModelsEMember.md)| The triggering action member | 
 
 ### Return type
 
@@ -165,7 +168,7 @@ No authorization required
 
 
 
-Get All Alerts
+Get All Alerts <br>
 
 ### Example
 ```javascript
@@ -215,11 +218,11 @@ No authorization required
 
 <a name="alertRouterUpdate"></a>
 # **alertRouterUpdate**
-> Alert alertRouterUpdate(xAccountApiKey, alertId, body)
+> ModelsAlert alertRouterUpdate(xAccountApiKey, alertId, body)
 
 
 
-Update an Alert
+Update an Alert <br>
 
 ### Example
 ```javascript
@@ -254,7 +257,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Alert**](Alert.md)
+[**ModelsAlert**](ModelsAlert.md)
 
 ### Authorization
 

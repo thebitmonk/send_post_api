@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -57,16 +57,18 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('active'))
         obj.active = ApiClient.convertToType(data['active'], 'Boolean');
+      if (data.hasOwnProperty('assignedMemberId'))
+        obj.assignedMemberId = ApiClient.convertToType(data['assignedMemberId'], 'Number');
       if (data.hasOwnProperty('emails'))
-        obj.emails = ApiClient.convertToType(data['emails'], Object);
+        obj.emails = ApiClient.convertToType(data['emails'], ['String']);
       if (data.hasOwnProperty('entityType'))
         obj.entityType = ApiClient.convertToType(data['entityType'], 'String');
       if (data.hasOwnProperty('entityValue'))
         obj.entityValue = ApiClient.convertToType(data['entityValue'], 'Number');
       if (data.hasOwnProperty('label'))
         obj.label = ModelsAlertLabel.constructFromObject(data['label']);
-      if (data.hasOwnProperty('member'))
-        obj.member = ApiClient.convertToType(data['member'], 'Number');
+      if (data.hasOwnProperty('memberId'))
+        obj.memberId = ApiClient.convertToType(data['memberId'], 'Number');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('notificationType'))
@@ -91,7 +93,12 @@
   exports.prototype.active = undefined;
 
   /**
-   * @member {Object} emails
+   * @member {Number} assignedMemberId
+   */
+  exports.prototype.assignedMemberId = undefined;
+
+  /**
+   * @member {Array.<String>} emails
    */
   exports.prototype.emails = undefined;
 
@@ -111,9 +118,9 @@
   exports.prototype.label = undefined;
 
   /**
-   * @member {Number} member
+   * @member {Number} memberId
    */
-  exports.prototype.member = undefined;
+  exports.prototype.memberId = undefined;
 
   /**
    * @member {String} name
