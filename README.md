@@ -338,9 +338,9 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [SendPostApi.Model3234360x140008603c0False](docs/Model3234360x140008603c0False.md)
- - [SendPostApi.Model3237170x140008604b0False](docs/Model3237170x140008604b0False.md)
- - [SendPostApi.Model6333080x14000c5eab0False](docs/Model6333080x14000c5eab0False.md)
+ - [SendPostApi.Model3234360x1400075c540False](docs/Model3234360x1400075c540False.md)
+ - [SendPostApi.Model3237170x1400075c630False](docs/Model3237170x1400075c630False.md)
+ - [SendPostApi.Model6333080x14000b60c30False](docs/Model6333080x14000b60c30False.md)
  - [SendPostApi.ModelsAGDomainStat](docs/ModelsAGDomainStat.md)
  - [SendPostApi.ModelsAGIPStat](docs/ModelsAGIPStat.md)
  - [SendPostApi.ModelsAGStat](docs/ModelsAGStat.md)
