@@ -142,6 +142,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountdomainstatApi* | [**domainStatRouterGetStatsForASingleDomainStats**](docs/AccountdomainstatApi.md#domainStatRouterGetStatsForASingleDomainStats) | **GET** /account/domain/stat/{domainId}/aggregate | 
 *SendPostApi.AccounteventApi* | [**eventRouterCountAllEventsFromAAccountForAGivenTimeRange**](docs/AccounteventApi.md#eventRouterCountAllEventsFromAAccountForAGivenTimeRange) | **GET** /account/event/count | 
 *SendPostApi.AccounteventApi* | [**eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange**](docs/AccounteventApi.md#eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange) | **GET** /account/event/node/count | 
+*SendPostApi.AccounteventApi* | [**eventRouterExportAllEventsFromAAccountForAGivenTimeRange**](docs/AccounteventApi.md#eventRouterExportAllEventsFromAAccountForAGivenTimeRange) | **POST** /account/event/export | 
 *SendPostApi.AccounteventApi* | [**eventRouterGet**](docs/AccounteventApi.md#eventRouterGet) | **GET** /account/event/{eventId} | 
 *SendPostApi.AccounteventApi* | [**eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange**](docs/AccounteventApi.md#eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange) | **GET** /account/event/node/timestampkeys | 
 *SendPostApi.AccounteventApi* | [**eventRouterGetAllEventsFromAAccountForAGivenTimeRange**](docs/AccounteventApi.md#eventRouterGetAllEventsFromAAccountForAGivenTimeRange) | **GET** /account/event/ | 
@@ -338,9 +339,10 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [SendPostApi.Model3234360x14000746570False](docs/Model3234360x14000746570False.md)
- - [SendPostApi.Model3237170x14000746660False](docs/Model3237170x14000746660False.md)
- - [SendPostApi.Model6333080x14000b3ac60False](docs/Model6333080x14000b3ac60False.md)
+ - [SendPostApi.Model3234360x14000786f00False](docs/Model3234360x14000786f00False.md)
+ - [SendPostApi.Model3237170x14000786ff0False](docs/Model3237170x14000786ff0False.md)
+ - [SendPostApi.Model6337710x14000b899b0False](docs/Model6337710x14000b899b0False.md)
+ - [SendPostApi.ModelExport](docs/ModelExport.md)
  - [SendPostApi.ModelsAGDomainStat](docs/ModelsAGDomainStat.md)
  - [SendPostApi.ModelsAGIPStat](docs/ModelsAGIPStat.md)
  - [SendPostApi.ModelsAGStat](docs/ModelsAGStat.md)

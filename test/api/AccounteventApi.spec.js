@@ -96,6 +96,34 @@
           done();
         });
       });
+      describe('eventRouterExportAllEventsFromAAccountForAGivenTimeRange', function() {
+        it('should call eventRouterExportAllEventsFromAAccountForAGivenTimeRange successfully', function(done) {
+          // TODO: uncomment, update parameter values for eventRouterExportAllEventsFromAAccountForAGivenTimeRange call and complete the assertions
+          /*
+          var xAccountApiKey = "xAccountApiKey_example";
+          var opts = {};
+          opts.offset = 789;
+          opts.limit = 789;
+          opts.from = "from_example";
+          opts.to = "to_example";
+          opts.source = "source_example";
+          opts.sourceId = "sourceId_example";
+
+          instance.eventRouterExportAllEventsFromAAccountForAGivenTimeRange(xAccountApiKey, opts, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelExport);
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('eventRouterGet', function() {
         it('should call eventRouterGet successfully', function(done) {
           // TODO: uncomment, update parameter values for eventRouterGet call and complete the assertions
