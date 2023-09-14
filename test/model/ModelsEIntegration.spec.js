@@ -47,6 +47,12 @@
         // expect(instance.key).to.be(expectedValueLiteral);
       });
 
+      it('should have the property memberId (base name: "memberId")', function() {
+        // TODO: update the code to test the property memberId
+        expect(instance).to.have.property('memberId');
+        // expect(instance.memberId).to.be(expectedValueLiteral);
+      });
+
       it('should have the property settings (base name: "settings")', function() {
         // TODO: update the code to test the property settings
         expect(instance).to.have.property('settings');

@@ -47,6 +47,12 @@
         // expect(instance.created).to.be(expectedValueLiteral);
       });
 
+      it('should have the property createdBy (base name: "created_by")', function() {
+        // TODO: update the code to test the property createdBy
+        expect(instance).to.have.property('createdBy');
+        // expect(instance.createdBy).to.be(expectedValueLiteral);
+      });
+
       it('should have the property dkim (base name: "dkim")', function() {
         // TODO: update the code to test the property dkim
         expect(instance).to.have.property('dkim');
@@ -63,6 +69,18 @@
         // TODO: update the code to test the property dkimVerified
         expect(instance).to.have.property('dkimVerified');
         // expect(instance.dkimVerified).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property dmarc (base name: "dmarc")', function() {
+        // TODO: update the code to test the property dmarc
+        expect(instance).to.have.property('dmarc');
+        // expect(instance.dmarc).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property dmarcVerified (base name: "dmarcVerified")', function() {
+        // TODO: update the code to test the property dmarcVerified
+        expect(instance).to.have.property('dmarcVerified');
+        // expect(instance.dmarcVerified).to.be(expectedValueLiteral);
       });
 
       it('should have the property id (base name: "id")', function() {
@@ -105,6 +123,12 @@
         // TODO: update the code to test the property trackVerified
         expect(instance).to.have.property('trackVerified');
         // expect(instance.trackVerified).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property updatedBy (base name: "updated_by")', function() {
+        // TODO: update the code to test the property updatedBy
+        expect(instance).to.have.property('updatedBy');
+        // expect(instance.updatedBy).to.be(expectedValueLiteral);
       });
 
       it('should have the property verified (base name: "verified")', function() {

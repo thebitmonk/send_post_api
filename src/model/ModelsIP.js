@@ -57,6 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('aolSettings'))
         obj.aolSettings = ApiClient.convertToType(data['aolSettings'], 'String');
+      if (data.hasOwnProperty('attSettings'))
+        obj.attSettings = ApiClient.convertToType(data['attSettings'], 'String');
       if (data.hasOwnProperty('autoWarmupEnabled'))
         obj.autoWarmupEnabled = ApiClient.convertToType(data['autoWarmupEnabled'], 'Boolean');
       if (data.hasOwnProperty('comcastSettings'))
@@ -109,6 +111,11 @@
    * @member {String} aolSettings
    */
   exports.prototype.aolSettings = undefined;
+
+  /**
+   * @member {String} attSettings
+   */
+  exports.prototype.attSettings = undefined;
 
   /**
    * @member {Boolean} autoWarmupEnabled

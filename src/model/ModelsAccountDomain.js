@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsDNSRecord', 'model/ModelsSubAccount'], factory);
+    define(['ApiClient', 'model/ModelsDNSRecord', 'model/ModelsMember', 'model/ModelsSubAccount'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ModelsDNSRecord'), require('./ModelsSubAccount'));
+    module.exports = factory(require('../ApiClient'), require('./ModelsDNSRecord'), require('./ModelsMember'), require('./ModelsSubAccount'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsAccountDomain = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsDNSRecord, root.SendPostApi.ModelsSubAccount);
+    root.SendPostApi.ModelsAccountDomain = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsDNSRecord, root.SendPostApi.ModelsMember, root.SendPostApi.ModelsSubAccount);
   }
-}(this, function(ApiClient, ModelsDNSRecord, ModelsSubAccount) {
+}(this, function(ApiClient, ModelsDNSRecord, ModelsMember, ModelsSubAccount) {
   'use strict';
 
   /**
@@ -57,12 +57,18 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('created'))
         obj.created = ApiClient.convertToType(data['created'], 'Number');
+      if (data.hasOwnProperty('created_by'))
+        obj.createdBy = ModelsMember.constructFromObject(data['created_by']);
       if (data.hasOwnProperty('dkim'))
         obj.dkim = ModelsDNSRecord.constructFromObject(data['dkim']);
       if (data.hasOwnProperty('dkimConfig'))
         obj.dkimConfig = ApiClient.convertToType(data['dkimConfig'], 'String');
       if (data.hasOwnProperty('dkimVerified'))
         obj.dkimVerified = ApiClient.convertToType(data['dkimVerified'], 'Boolean');
+      if (data.hasOwnProperty('dmarc'))
+        obj.dmarc = ModelsDNSRecord.constructFromObject(data['dmarc']);
+      if (data.hasOwnProperty('dmarcVerified'))
+        obj.dmarcVerified = ApiClient.convertToType(data['dmarcVerified'], 'Boolean');
       if (data.hasOwnProperty('id'))
         obj.id = ApiClient.convertToType(data['id'], 'Number');
       if (data.hasOwnProperty('name'))
@@ -77,6 +83,8 @@
         obj.track = ModelsDNSRecord.constructFromObject(data['track']);
       if (data.hasOwnProperty('trackVerified'))
         obj.trackVerified = ApiClient.convertToType(data['trackVerified'], 'Boolean');
+      if (data.hasOwnProperty('updated_by'))
+        obj.updatedBy = ModelsMember.constructFromObject(data['updated_by']);
       if (data.hasOwnProperty('verified'))
         obj.verified = ApiClient.convertToType(data['verified'], 'Boolean');
     }
@@ -87,6 +95,11 @@
    * @member {Number} created
    */
   exports.prototype.created = undefined;
+
+  /**
+   * @member {module:model/ModelsMember} createdBy
+   */
+  exports.prototype.createdBy = undefined;
 
   /**
    * @member {module:model/ModelsDNSRecord} dkim
@@ -102,6 +115,16 @@
    * @member {Boolean} dkimVerified
    */
   exports.prototype.dkimVerified = undefined;
+
+  /**
+   * @member {module:model/ModelsDNSRecord} dmarc
+   */
+  exports.prototype.dmarc = undefined;
+
+  /**
+   * @member {Boolean} dmarcVerified
+   */
+  exports.prototype.dmarcVerified = undefined;
 
   /**
    * @member {Number} id
@@ -137,6 +160,11 @@
    * @member {Boolean} trackVerified
    */
   exports.prototype.trackVerified = undefined;
+
+  /**
+   * @member {module:model/ModelsMember} updatedBy
+   */
+  exports.prototype.updatedBy = undefined;
 
   /**
    * @member {Boolean} verified

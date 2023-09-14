@@ -41,6 +41,12 @@
         expect(instance).to.be.a(SendPostApi.ModelsEDomain);
       });
 
+      it('should have the property memberId (base name: "memberId")', function() {
+        // TODO: update the code to test the property memberId
+        expect(instance).to.have.property('memberId');
+        // expect(instance.memberId).to.be(expectedValueLiteral);
+      });
+
       it('should have the property name (base name: "name")', function() {
         // TODO: update the code to test the property name
         expect(instance).to.have.property('name');

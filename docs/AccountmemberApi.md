@@ -173,7 +173,7 @@ var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var memberId = 789; // Number | The MemberId you want to update
 
-var body = new SendPostApi.ModelsEMember(); // ModelsEMember | The body
+var body = new SendPostApi.ModelsUMember(); // ModelsUMember | The body
 
 
 var callback = function(error, data, response) {
@@ -192,7 +192,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
  **memberId** | **Number**| The MemberId you want to update | 
- **body** | [**ModelsEMember**](ModelsEMember.md)| The body | 
+ **body** | [**ModelsUMember**](ModelsUMember.md)| The body | 
 
 ### Return type
 

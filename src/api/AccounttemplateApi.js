@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsAccountTemplate', 'model/ModelsCountStat', 'model/ModelsDeleteResponse'], factory);
+    define(['ApiClient', 'model/ModelsAccountTemplate', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsEAccountTemplate', 'model/ModelsEMember'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsAccountTemplate'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsAccountTemplate'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsEAccountTemplate'), require('../model/ModelsEMember'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.AccounttemplateApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsAccountTemplate, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse);
+    root.SendPostApi.AccounttemplateApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsAccountTemplate, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsEAccountTemplate, root.SendPostApi.ModelsEMember);
   }
-}(this, function(ApiClient, ModelsAccountTemplate, ModelsCountStat, ModelsDeleteResponse) {
+}(this, function(ApiClient, ModelsAccountTemplate, ModelsCountStat, ModelsDeleteResponse, ModelsEAccountTemplate, ModelsEMember) {
   'use strict';
 
   /**
@@ -164,7 +164,7 @@
     /**
      * Create a new template <br>
      * @param {String} xAccountApiKey Account API Key
-     * @param {module:model/ModelsAccountTemplate} body The AccountTemplate content
+     * @param {module:model/ModelsEAccountTemplate} body The AccountTemplate content
      * @param {module:api/AccounttemplateApi~accountTemplateRouterCreateCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsAccountTemplate}
      */
@@ -218,11 +218,12 @@
      * Delete AccountTemplate <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} templateid The id of the template you want to delete
+     * @param {module:model/ModelsEMember} body The triggering action member
      * @param {module:api/AccounttemplateApi~accountTemplateRouterDeleteCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsDeleteResponse}
      */
-    this.accountTemplateRouterDelete = function(xAccountApiKey, templateid, callback) {
-      var postBody = null;
+    this.accountTemplateRouterDelete = function(xAccountApiKey, templateid, body, callback) {
+      var postBody = body;
 
       // verify the required parameter 'xAccountApiKey' is set
       if (xAccountApiKey === undefined || xAccountApiKey === null) {
@@ -232,6 +233,11 @@
       // verify the required parameter 'templateid' is set
       if (templateid === undefined || templateid === null) {
         throw new Error("Missing the required parameter 'templateid' when calling accountTemplateRouterDelete");
+      }
+
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling accountTemplateRouterDelete");
       }
 
 
@@ -381,7 +387,7 @@
      * update template <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} templateid The id of the template you want to update
-     * @param {module:model/ModelsAccountTemplate} body The template content
+     * @param {module:model/ModelsEAccountTemplate} body The template content
      * @param {module:api/AccounttemplateApi~accountTemplateRouterUpdateCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsAccountTemplate}
      */

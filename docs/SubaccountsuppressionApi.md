@@ -67,7 +67,7 @@ No authorization required
 
 <a name="suppressionRouterCreateSuppressions"></a>
 # **suppressionRouterCreateSuppressions**
-> ModelsSuppression suppressionRouterCreateSuppressions(xSubAccountApiKey, body)
+> [ModelsSuppression] suppressionRouterCreateSuppressions(xSubAccountApiKey, body)
 
 
 
@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ModelsSuppression**](ModelsSuppression.md)
+[**[ModelsSuppression]**](ModelsSuppression.md)
 
 ### Authorization
 
@@ -162,7 +162,7 @@ No authorization required
 
 <a name="suppressionRouterDeleteSuppression"></a>
 # **suppressionRouterDeleteSuppression**
-> ModelsSuppression suppressionRouterDeleteSuppression(xSubAccountApiKey, body)
+> [ModelsDeleteResponse] suppressionRouterDeleteSuppression(xSubAccountApiKey, body)
 
 
 
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ModelsSuppression**](ModelsSuppression.md)
+[**[ModelsDeleteResponse]**](ModelsDeleteResponse.md)
 
 ### Authorization
 

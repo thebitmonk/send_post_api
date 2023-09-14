@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **routingMetaData** | **String** |  | [optional] 
 **routingStrategy** | **Number** |  | [optional] 
 **thirdPartySendingProviders** | [**[ModelsThirdPartySendingProvider]**](ModelsThirdPartySendingProvider.md) |  | [optional] 
+**toAccountIPPools** | **[Object]** |  | [optional] 
 **type** | [**ModelsIPPoolType**](ModelsIPPoolType.md) |  | [optional] 
 
 

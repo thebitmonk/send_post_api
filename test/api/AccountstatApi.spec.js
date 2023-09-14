@@ -529,6 +529,96 @@
           done();
         });
       });
+      describe('accountStatRouterGetAllAggregateThirdPartyProvidersStats', function() {
+        it('should call accountStatRouterGetAllAggregateThirdPartyProvidersStats successfully', function(done) {
+          // TODO: uncomment, update parameter values for accountStatRouterGetAllAggregateThirdPartyProvidersStats call and complete the assertions
+          /*
+          var xAccountApiKey = "xAccountApiKey_example";
+          var from = "from_example";
+          var to = "to_example";
+          var opts = {};
+          opts.filterBy = "filterBy_example";
+          opts.filterValue = 789;
+          opts.orderBy = "orderBy_example";
+          opts.sortOrder = "sortOrder_example";
+          opts.search = "search_example";
+          opts.offset = 789;
+          opts.limit = 789;
+
+          instance.accountStatRouterGetAllAggregateThirdPartyProvidersStats(xAccountApiKey, from, to, opts, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            let dataCtr = data;
+            expect(dataCtr).to.be.an(Array);
+            expect(dataCtr).to.not.be.empty();
+            for (let p in dataCtr) {
+              let data = dataCtr[p];
+              expect(data).to.be.a(SendPostApi.ModelsAGTPSPStat);
+              expect(data.clicked).to.be.a('number');
+              expect(data.clicked).to.be("0");
+              expect(data.delivered).to.be.a('number');
+              expect(data.delivered).to.be("0");
+              expect(data.dropped).to.be.a('number');
+              expect(data.dropped).to.be("0");
+              expect(data.hardBounced).to.be.a('number');
+              expect(data.hardBounced).to.be("0");
+              expect(data.name).to.be.a('string');
+              expect(data.name).to.be("");
+              expect(data.opened).to.be.a('number');
+              expect(data.opened).to.be("0");
+              expect(data.processed).to.be.a('number');
+              expect(data.processed).to.be("0");
+              expect(data.sent).to.be.a('number');
+              expect(data.sent).to.be("0");
+              expect(data.softBounced).to.be.a('number');
+              expect(data.softBounced).to.be("0");
+              expect(data.spam).to.be.a('number');
+              expect(data.spam).to.be("0");
+              expect(data.tpspId).to.be.a('number');
+              expect(data.tpspId).to.be("0");
+              expect(data.unsubscribed).to.be.a('number');
+              expect(data.unsubscribed).to.be("0");
+            }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('accountStatRouterGetAllAggregateThirdPartyProvidersStatsCount', function() {
+        it('should call accountStatRouterGetAllAggregateThirdPartyProvidersStatsCount successfully', function(done) {
+          // TODO: uncomment, update parameter values for accountStatRouterGetAllAggregateThirdPartyProvidersStatsCount call and complete the assertions
+          /*
+          var xAccountApiKey = "xAccountApiKey_example";
+          var from = "from_example";
+          var to = "to_example";
+          var opts = {};
+          opts.filterBy = "filterBy_example";
+          opts.filterValue = 789;
+          opts.search = "search_example";
+
+          instance.accountStatRouterGetAllAggregateThirdPartyProvidersStatsCount(xAccountApiKey, from, to, opts, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelsCountStat);
+            expect(data.count).to.be.a('number');
+            expect(data.count).to.be("0");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
     });
   });
 

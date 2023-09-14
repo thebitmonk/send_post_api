@@ -118,7 +118,7 @@ No authorization required
 
 <a name="subAccountRouterDelete"></a>
 # **subAccountRouterDelete**
-> ModelsDeleteResponse subAccountRouterDelete(xAccountApiKey, subAccountId)
+> ModelsDeleteResponse subAccountRouterDelete(xAccountApiKey, subAccountId, body)
 
 
 
@@ -134,6 +134,8 @@ var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var subAccountId = 789; // Number | The SubAccountId you want to delete
 
+var body = new SendPostApi.ModelsEMember(); // ModelsEMember | The triggering action member
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -142,7 +144,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.subAccountRouterDelete(xAccountApiKey, subAccountId, callback);
+apiInstance.subAccountRouterDelete(xAccountApiKey, subAccountId, body, callback);
 ```
 
 ### Parameters
@@ -151,6 +153,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
  **subAccountId** | **Number**| The SubAccountId you want to delete | 
+ **body** | [**ModelsEMember**](ModelsEMember.md)| The triggering action member | 
 
 ### Return type
 

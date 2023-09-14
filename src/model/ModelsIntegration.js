@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsIntegrationType'], factory);
+    define(['ApiClient', 'model/ModelsIntegrationType', 'model/ModelsMember'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ModelsIntegrationType'));
+    module.exports = factory(require('../ApiClient'), require('./ModelsIntegrationType'), require('./ModelsMember'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsIntegration = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsIntegrationType);
+    root.SendPostApi.ModelsIntegration = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsIntegrationType, root.SendPostApi.ModelsMember);
   }
-}(this, function(ApiClient, ModelsIntegrationType) {
+}(this, function(ApiClient, ModelsIntegrationType, ModelsMember) {
   'use strict';
 
   /**
@@ -57,6 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('created'))
         obj.created = ApiClient.convertToType(data['created'], 'Number');
+      if (data.hasOwnProperty('created_by'))
+        obj.createdBy = ModelsMember.constructFromObject(data['created_by']);
       if (data.hasOwnProperty('id'))
         obj.id = ApiClient.convertToType(data['id'], 'Number');
       if (data.hasOwnProperty('key'))
@@ -65,6 +67,8 @@
         obj.settings = ApiClient.convertToType(data['settings'], 'String');
       if (data.hasOwnProperty('type'))
         obj.type = ModelsIntegrationType.constructFromObject(data['type']);
+      if (data.hasOwnProperty('updated_by'))
+        obj.updatedBy = ModelsMember.constructFromObject(data['updated_by']);
     }
     return obj;
   }
@@ -73,6 +77,11 @@
    * @member {Number} created
    */
   exports.prototype.created = undefined;
+
+  /**
+   * @member {module:model/ModelsMember} createdBy
+   */
+  exports.prototype.createdBy = undefined;
 
   /**
    * @member {Number} id
@@ -93,6 +102,11 @@
    * @member {module:model/ModelsIntegrationType} type
    */
   exports.prototype.type = undefined;
+
+  /**
+   * @member {module:model/ModelsMember} updatedBy
+   */
+  exports.prototype.updatedBy = undefined;
 
 
   return exports;

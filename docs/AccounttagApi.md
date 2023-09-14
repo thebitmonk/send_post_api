@@ -25,7 +25,7 @@ var apiInstance = new SendPostApi.AccounttagApi();
 
 var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
-var body = new SendPostApi.ModelsTag(); // ModelsTag | The Tag content
+var body = new SendPostApi.ModelsETag(); // ModelsETag | The Tag content
 
 
 var callback = function(error, data, response) {
@@ -43,7 +43,7 @@ apiInstance.tagRouterCreate(xAccountApiKey, body, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
- **body** | [**ModelsTag**](ModelsTag.md)| The Tag content | 
+ **body** | [**ModelsETag**](ModelsETag.md)| The Tag content | 
 
 ### Return type
 
@@ -60,7 +60,7 @@ No authorization required
 
 <a name="tagRouterDelete"></a>
 # **tagRouterDelete**
-> ModelsDeleteResponse tagRouterDelete(xAccountApiKey, tagid)
+> ModelsDeleteResponse tagRouterDelete(xAccountApiKey, tagid, body)
 
 
 
@@ -76,6 +76,8 @@ var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var tagid = 789; // Number | The AccountTagId you want to delete
 
+var body = new SendPostApi.ModelsEMember(); // ModelsEMember | The triggering action member
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -84,7 +86,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.tagRouterDelete(xAccountApiKey, tagid, callback);
+apiInstance.tagRouterDelete(xAccountApiKey, tagid, body, callback);
 ```
 
 ### Parameters
@@ -93,6 +95,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
  **tagid** | **Number**| The AccountTagId you want to delete | 
+ **body** | [**ModelsEMember**](ModelsEMember.md)| The triggering action member | 
 
 ### Return type
 

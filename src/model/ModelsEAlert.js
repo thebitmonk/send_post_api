@@ -56,15 +56,22 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('active'))
-        obj.active = ApiClient.convertToType(data['active'], 'String');
+        obj.active = ApiClient.convertToType(data['active'], 'Boolean');
+      if (data.hasOwnProperty('memberId'))
+        obj.memberId = ApiClient.convertToType(data['memberId'], 'Number');
     }
     return obj;
   }
 
   /**
-   * @member {String} active
+   * @member {Boolean} active
    */
   exports.prototype.active = undefined;
+
+  /**
+   * @member {Number} memberId
+   */
+  exports.prototype.memberId = undefined;
 
 
   return exports;

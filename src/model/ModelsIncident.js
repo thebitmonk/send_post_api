@@ -67,6 +67,8 @@
         obj.description = ApiClient.convertToType(data['description'], 'String');
       if (data.hasOwnProperty('id'))
         obj.id = ApiClient.convertToType(data['id'], 'Number');
+      if (data.hasOwnProperty('modifiedBy'))
+        obj.modifiedBy = ModelsMember.constructFromObject(data['modifiedBy']);
       if (data.hasOwnProperty('relatedIP'))
         obj.relatedIP = ModelsIP.constructFromObject(data['relatedIP']);
       if (data.hasOwnProperty('relatedSubAccount'))
@@ -112,6 +114,11 @@
    * @member {Number} id
    */
   exports.prototype.id = undefined;
+
+  /**
+   * @member {module:model/ModelsMember} modifiedBy
+   */
+  exports.prototype.modifiedBy = undefined;
 
   /**
    * @member {module:model/ModelsIP} relatedIP

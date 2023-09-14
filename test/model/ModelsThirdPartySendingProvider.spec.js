@@ -47,6 +47,12 @@
         // expect(instance.created).to.be(expectedValueLiteral);
       });
 
+      it('should have the property createdBy (base name: "created_by")', function() {
+        // TODO: update the code to test the property createdBy
+        expect(instance).to.have.property('createdBy');
+        // expect(instance.createdBy).to.be(expectedValueLiteral);
+      });
+
       it('should have the property domain (base name: "domain")', function() {
         // TODO: update the code to test the property domain
         expect(instance).to.have.property('domain');
@@ -89,6 +95,12 @@
         // expect(instance.port).to.be(expectedValueLiteral);
       });
 
+      it('should have the property ratePerHour (base name: "ratePerHour")', function() {
+        // TODO: update the code to test the property ratePerHour
+        expect(instance).to.have.property('ratePerHour');
+        // expect(instance.ratePerHour).to.be(expectedValueLiteral);
+      });
+
       it('should have the property retryTime (base name: "retryTime")', function() {
         // TODO: update the code to test the property retryTime
         expect(instance).to.have.property('retryTime');
@@ -105,6 +117,12 @@
         // TODO: update the code to test the property type
         expect(instance).to.have.property('type');
         // expect(instance.type).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property updatedBy (base name: "updated_by")', function() {
+        // TODO: update the code to test the property updatedBy
+        expect(instance).to.have.property('updatedBy');
+        // expect(instance.updatedBy).to.be(expectedValueLiteral);
       });
 
     });

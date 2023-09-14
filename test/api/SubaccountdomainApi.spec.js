@@ -65,6 +65,7 @@
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
           var body = new SendPostApi.ModelsEDomain();
+          body.memberId = "0";
           body.name = "";
 
           instance.domainRouterCreate(xSubAccountApiKey, body, function(error, data, response) {
@@ -87,6 +88,15 @@
             expect(data.dkimConfig).to.be("");
             expect(data.dkimVerified).to.be.a('boolean');
             expect(data.dkimVerified).to.be(false);
+            expect(data.dmarc).to.be.a(SendPostApi.ModelsDNSRecord);
+                  expect(data.dmarc.host).to.be.a('string');
+              expect(data.dmarc.host).to.be("");
+              expect(data.dmarc.textValue).to.be.a('string');
+              expect(data.dmarc.textValue).to.be("");
+              expect(data.dmarc.type).to.be.a('string');
+              expect(data.dmarc.type).to.be("");
+            expect(data.dmarcVerified).to.be.a('boolean');
+            expect(data.dmarcVerified).to.be(false);
             expect(data.id).to.be.a('number');
             expect(data.id).to.be("0");
             expect(data.name).to.be.a('string');
@@ -125,8 +135,10 @@
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
           var domainId = 789;
+          var body = new SendPostApi.ModelsEMember();
+          body.id = "0";
 
-          instance.domainRouterDelete(xSubAccountApiKey, domainId, function(error, data, response) {
+          instance.domainRouterDelete(xSubAccountApiKey, domainId, body, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -172,6 +184,15 @@
             expect(data.dkimConfig).to.be("");
             expect(data.dkimVerified).to.be.a('boolean');
             expect(data.dkimVerified).to.be(false);
+            expect(data.dmarc).to.be.a(SendPostApi.ModelsDNSRecord);
+                  expect(data.dmarc.host).to.be.a('string');
+              expect(data.dmarc.host).to.be("");
+              expect(data.dmarc.textValue).to.be.a('string');
+              expect(data.dmarc.textValue).to.be("");
+              expect(data.dmarc.type).to.be.a('string');
+              expect(data.dmarc.type).to.be("");
+            expect(data.dmarcVerified).to.be.a('boolean');
+            expect(data.dmarcVerified).to.be(false);
             expect(data.id).to.be.a('number');
             expect(data.id).to.be("0");
             expect(data.name).to.be.a('string');
@@ -239,6 +260,15 @@
               expect(data.dkimConfig).to.be("");
               expect(data.dkimVerified).to.be.a('boolean');
               expect(data.dkimVerified).to.be(false);
+              expect(data.dmarc).to.be.a(SendPostApi.ModelsDNSRecord);
+                    expect(data.dmarc.host).to.be.a('string');
+                expect(data.dmarc.host).to.be("");
+                expect(data.dmarc.textValue).to.be.a('string');
+                expect(data.dmarc.textValue).to.be("");
+                expect(data.dmarc.type).to.be.a('string');
+                expect(data.dmarc.type).to.be("");
+              expect(data.dmarcVerified).to.be.a('boolean');
+              expect(data.dmarcVerified).to.be(false);
               expect(data.id).to.be.a('number');
               expect(data.id).to.be("0");
               expect(data.name).to.be.a('string');
@@ -279,6 +309,7 @@
           var xSubAccountApiKey = "xSubAccountApiKey_example";
           var domainId = 789;
           var body = new SendPostApi.ModelsEDomain();
+          body.memberId = "0";
           body.name = "";
 
           instance.domainRouterUpdate(xSubAccountApiKey, domainId, body, function(error, data, response) {
@@ -301,6 +332,15 @@
             expect(data.dkimConfig).to.be("");
             expect(data.dkimVerified).to.be.a('boolean');
             expect(data.dkimVerified).to.be(false);
+            expect(data.dmarc).to.be.a(SendPostApi.ModelsDNSRecord);
+                  expect(data.dmarc.host).to.be.a('string');
+              expect(data.dmarc.host).to.be("");
+              expect(data.dmarc.textValue).to.be.a('string');
+              expect(data.dmarc.textValue).to.be("");
+              expect(data.dmarc.type).to.be.a('string');
+              expect(data.dmarc.type).to.be("");
+            expect(data.dmarcVerified).to.be.a('boolean');
+            expect(data.dmarcVerified).to.be(false);
             expect(data.id).to.be.a('number');
             expect(data.id).to.be("0");
             expect(data.name).to.be.a('string');
@@ -360,6 +400,15 @@
             expect(data.dkimConfig).to.be("");
             expect(data.dkimVerified).to.be.a('boolean');
             expect(data.dkimVerified).to.be(false);
+            expect(data.dmarc).to.be.a(SendPostApi.ModelsDNSRecord);
+                  expect(data.dmarc.host).to.be.a('string');
+              expect(data.dmarc.host).to.be("");
+              expect(data.dmarc.textValue).to.be.a('string');
+              expect(data.dmarc.textValue).to.be("");
+              expect(data.dmarc.type).to.be.a('string');
+              expect(data.dmarc.type).to.be("");
+            expect(data.dmarcVerified).to.be.a('boolean');
+            expect(data.dmarcVerified).to.be(false);
             expect(data.id).to.be.a('number');
             expect(data.id).to.be("0");
             expect(data.name).to.be.a('string');
@@ -420,6 +469,15 @@
             expect(data.dkimConfig).to.be("");
             expect(data.dkimVerified).to.be.a('boolean');
             expect(data.dkimVerified).to.be(false);
+            expect(data.dmarc).to.be.a(SendPostApi.ModelsDNSRecord);
+                  expect(data.dmarc.host).to.be.a('string');
+              expect(data.dmarc.host).to.be("");
+              expect(data.dmarc.textValue).to.be.a('string');
+              expect(data.dmarc.textValue).to.be("");
+              expect(data.dmarc.type).to.be.a('string');
+              expect(data.dmarc.type).to.be("");
+            expect(data.dmarcVerified).to.be.a('boolean');
+            expect(data.dmarcVerified).to.be(false);
             expect(data.id).to.be.a('number');
             expect(data.id).to.be("0");
             expect(data.name).to.be.a('string');

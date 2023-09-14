@@ -83,16 +83,22 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SendPostApi.ModelsSuppression);
-            expect(data.created).to.be.a('number');
-            expect(data.created).to.be("0");
-            expect(data.email).to.be.a('string');
-            expect(data.email).to.be("");
-            expect(data.id).to.be.a('number');
-            expect(data.id).to.be("0");
-            expect(data.reason).to.be.a(SendPostApi.ModelsSuppressionReason);
-                expect(data.smtpError).to.be.a('string');
-            expect(data.smtpError).to.be("");
+            let dataCtr = data;
+            expect(dataCtr).to.be.an(Array);
+            expect(dataCtr).to.not.be.empty();
+            for (let p in dataCtr) {
+              let data = dataCtr[p];
+              expect(data).to.be.a(SendPostApi.ModelsSuppression);
+              expect(data.created).to.be.a('number');
+              expect(data.created).to.be("0");
+              expect(data.email).to.be.a('string');
+              expect(data.email).to.be("");
+              expect(data.id).to.be.a('number');
+              expect(data.id).to.be("0");
+              expect(data.reason).to.be.a(SendPostApi.ModelsSuppressionReason);
+                  expect(data.smtpError).to.be.a('string');
+              expect(data.smtpError).to.be("");
+            }
 
             done();
           });
@@ -140,16 +146,17 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SendPostApi.ModelsSuppression);
-            expect(data.created).to.be.a('number');
-            expect(data.created).to.be("0");
-            expect(data.email).to.be.a('string');
-            expect(data.email).to.be("");
-            expect(data.id).to.be.a('number');
-            expect(data.id).to.be("0");
-            expect(data.reason).to.be.a(SendPostApi.ModelsSuppressionReason);
-                expect(data.smtpError).to.be.a('string');
-            expect(data.smtpError).to.be("");
+            let dataCtr = data;
+            expect(dataCtr).to.be.an(Array);
+            expect(dataCtr).to.not.be.empty();
+            for (let p in dataCtr) {
+              let data = dataCtr[p];
+              expect(data).to.be.a(SendPostApi.ModelsDeleteResponse);
+              expect(data.id).to.be.a('number');
+              expect(data.id).to.be("0");
+              expect(data.message).to.be.a('string');
+              expect(data.message).to.be("");
+            }
 
             done();
           });

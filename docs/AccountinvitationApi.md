@@ -60,7 +60,7 @@ No authorization required
 
 <a name="invitationRouterDelete"></a>
 # **invitationRouterDelete**
-> ModelsDeleteResponse invitationRouterDelete(xAccountApiKey, invitationId)
+> ModelsDeleteResponse invitationRouterDelete(xAccountApiKey, invitationId, body)
 
 
 
@@ -76,6 +76,8 @@ var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var invitationId = 789; // Number | The InvitationId you want to delete
 
+var body = new SendPostApi.ModelsEMember(); // ModelsEMember | The triggering action member
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -84,7 +86,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.invitationRouterDelete(xAccountApiKey, invitationId, callback);
+apiInstance.invitationRouterDelete(xAccountApiKey, invitationId, body, callback);
 ```
 
 ### Parameters
@@ -93,6 +95,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
  **invitationId** | **Number**| The InvitationId you want to delete | 
+ **body** | [**ModelsEMember**](ModelsEMember.md)| The triggering action member | 
 
 ### Return type
 

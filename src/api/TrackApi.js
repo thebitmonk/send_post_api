@@ -204,6 +204,161 @@
     }
 
     /**
+     * Callback function to receive the result of the trackRouterTrackTPSPEmailOpen operation.
+     * @callback module:api/TrackApi~trackRouterTrackTPSPEmailOpenCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Track TPSP Email Open <br>
+     * @param {Number} tpspId The id of tpsp from which this email message was sent
+     * @param {Number} accountId The id of account from which email is being sent
+     * @param {Number} subAccountId The id of sub-account from which email is being sent
+     * @param {String} messageId The UUID of message which was sent
+     * @param {String} emailType The type of email such as gmail, yahoo etc. which was sent. This is inferred from to email address
+     * @param {module:api/TrackApi~trackRouterTrackTPSPEmailOpenCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.trackRouterTrackTPSPEmailOpen = function(tpspId, accountId, subAccountId, messageId, emailType, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'tpspId' is set
+      if (tpspId === undefined || tpspId === null) {
+        throw new Error("Missing the required parameter 'tpspId' when calling trackRouterTrackTPSPEmailOpen");
+      }
+
+      // verify the required parameter 'accountId' is set
+      if (accountId === undefined || accountId === null) {
+        throw new Error("Missing the required parameter 'accountId' when calling trackRouterTrackTPSPEmailOpen");
+      }
+
+      // verify the required parameter 'subAccountId' is set
+      if (subAccountId === undefined || subAccountId === null) {
+        throw new Error("Missing the required parameter 'subAccountId' when calling trackRouterTrackTPSPEmailOpen");
+      }
+
+      // verify the required parameter 'messageId' is set
+      if (messageId === undefined || messageId === null) {
+        throw new Error("Missing the required parameter 'messageId' when calling trackRouterTrackTPSPEmailOpen");
+      }
+
+      // verify the required parameter 'emailType' is set
+      if (emailType === undefined || emailType === null) {
+        throw new Error("Missing the required parameter 'emailType' when calling trackRouterTrackTPSPEmailOpen");
+      }
+
+
+      var pathParams = {
+        'tpspId': tpspId,
+        'accountId': accountId,
+        'subAccountId': subAccountId,
+        'messageId': messageId,
+        'emailType': emailType
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/track/tpsp/open/{accountId}/{subAccountId}/{tpspId}/{emailType}/{messageId}/1.png', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the trackRouterTrackTPSPLinkClick operation.
+     * @callback module:api/TrackApi~trackRouterTrackTPSPLinkClickCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Track TPSP Link Click <br>
+     * @param {Number} tpspId The id of tpsp from which this email message was sent
+     * @param {Number} accountId The id of account from which email is being sent
+     * @param {Number} subAccountId The id of sub-account from which email is being sent
+     * @param {String} messageId The UUID of message which was sent
+     * @param {String} emailType The type of email such as gmail, yahoo etc. which was sent. This is inferred from to email address
+     * @param {String} redirecturl The encoded redirect URL
+     * @param {module:api/TrackApi~trackRouterTrackTPSPLinkClickCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.trackRouterTrackTPSPLinkClick = function(tpspId, accountId, subAccountId, messageId, emailType, redirecturl, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'tpspId' is set
+      if (tpspId === undefined || tpspId === null) {
+        throw new Error("Missing the required parameter 'tpspId' when calling trackRouterTrackTPSPLinkClick");
+      }
+
+      // verify the required parameter 'accountId' is set
+      if (accountId === undefined || accountId === null) {
+        throw new Error("Missing the required parameter 'accountId' when calling trackRouterTrackTPSPLinkClick");
+      }
+
+      // verify the required parameter 'subAccountId' is set
+      if (subAccountId === undefined || subAccountId === null) {
+        throw new Error("Missing the required parameter 'subAccountId' when calling trackRouterTrackTPSPLinkClick");
+      }
+
+      // verify the required parameter 'messageId' is set
+      if (messageId === undefined || messageId === null) {
+        throw new Error("Missing the required parameter 'messageId' when calling trackRouterTrackTPSPLinkClick");
+      }
+
+      // verify the required parameter 'emailType' is set
+      if (emailType === undefined || emailType === null) {
+        throw new Error("Missing the required parameter 'emailType' when calling trackRouterTrackTPSPLinkClick");
+      }
+
+      // verify the required parameter 'redirecturl' is set
+      if (redirecturl === undefined || redirecturl === null) {
+        throw new Error("Missing the required parameter 'redirecturl' when calling trackRouterTrackTPSPLinkClick");
+      }
+
+
+      var pathParams = {
+        'tpspId': tpspId,
+        'accountId': accountId,
+        'subAccountId': subAccountId,
+        'messageId': messageId,
+        'emailType': emailType
+      };
+      var queryParams = {
+        'redirecturl': redirecturl,
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/track/tpsp/click/{accountId}/{subAccountId}/{tpspId}/{emailType}/{messageId}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the trackRouterTrackUnsubscribe operation.
      * @callback module:api/TrackApi~trackRouterTrackUnsubscribeCallback
      * @param {String} error Error message, if any.
