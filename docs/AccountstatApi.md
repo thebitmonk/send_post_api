@@ -306,7 +306,8 @@ var opts = {
   'sortOrder': "sortOrder_example", // String | sortOrder
   'search': "search_example", // String | search term
   'offset': 789, // Number | offset
-  'limit': 789 // Number | limit
+  'limit': 789, // Number | limit
+  'exported': "exported_example" // String | exported
 };
 
 var callback = function(error, data, response) {
@@ -333,6 +334,7 @@ Name | Type | Description  | Notes
  **search** | **String**| search term | [optional] 
  **offset** | **Number**| offset | [optional] 
  **limit** | **Number**| limit | [optional] 
+ **exported** | **String**| exported | [optional] 
 
 ### Return type
 
@@ -436,7 +438,8 @@ var opts = {
   'sortOrder': "sortOrder_example", // String | sortOrder
   'search': "search_example", // String | search term
   'offset': 789, // Number | offset
-  'limit': 789 // Number | limit
+  'limit': 789, // Number | limit
+  'exported': "exported_example" // String | exported
 };
 
 var callback = function(error, data, response) {
@@ -465,6 +468,7 @@ Name | Type | Description  | Notes
  **search** | **String**| search term | [optional] 
  **offset** | **Number**| offset | [optional] 
  **limit** | **Number**| limit | [optional] 
+ **exported** | **String**| exported | [optional] 
 
 ### Return type
 
@@ -570,7 +574,8 @@ var opts = {
   'sortOrder': "sortOrder_example", // String | sortOrder
   'search': "search_example", // String | search term
   'offset': 789, // Number | offset
-  'limit': 789 // Number | limit
+  'limit': 789, // Number | limit
+  'exported': "exported_example" // String | exported
 };
 
 var callback = function(error, data, response) {
@@ -597,6 +602,7 @@ Name | Type | Description  | Notes
  **search** | **String**| search term | [optional] 
  **offset** | **Number**| offset | [optional] 
  **limit** | **Number**| limit | [optional] 
+ **exported** | **String**| exported | [optional] 
 
 ### Return type
 
@@ -699,7 +705,7 @@ var opts = {
   'search': "search_example", // String | search term
   'offset': 789, // Number | offset
   'limit': 789, // Number | limit
-  '_export': "_export_example" // String | exported
+  'exported': "exported_example" // String | exported
 };
 
 var callback = function(error, data, response) {
@@ -726,7 +732,7 @@ Name | Type | Description  | Notes
  **search** | **String**| search term | [optional] 
  **offset** | **Number**| offset | [optional] 
  **limit** | **Number**| limit | [optional] 
- **_export** | **String**| exported | [optional] 
+ **exported** | **String**| exported | [optional] 
 
 ### Return type
 

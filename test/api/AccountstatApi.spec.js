@@ -270,6 +270,7 @@
           opts.search = "search_example";
           opts.offset = 789;
           opts.limit = 789;
+          opts.exported = "exported_example";
 
           instance.accountStatRouterGetAllAggregateDomainStats(xAccountApiKey, from, to, opts, function(error, data, response) {
             if (error) {
@@ -362,6 +363,7 @@
           opts.search = "search_example";
           opts.offset = 789;
           opts.limit = 789;
+          opts.exported = "exported_example";
 
           instance.accountStatRouterGetAllAggregateIPStats(xAccountApiKey, from, to, opts, function(error, data, response) {
             if (error) {
@@ -454,6 +456,7 @@
           opts.search = "search_example";
           opts.offset = 789;
           opts.limit = 789;
+          opts.exported = "exported_example";
 
           instance.accountStatRouterGetAllAggregateSubAccountStats(xAccountApiKey, from, to, opts, function(error, data, response) {
             if (error) {
@@ -544,7 +547,7 @@
           opts.search = "search_example";
           opts.offset = 789;
           opts.limit = 789;
-          opts._export = "_export_example";
+          opts.exported = "exported_example";
 
           instance.accountStatRouterGetAllAggregateThirdPartyProvidersStats(xAccountApiKey, from, to, opts, function(error, data, response) {
             if (error) {
