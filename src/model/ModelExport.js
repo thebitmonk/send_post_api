@@ -26,66 +26,38 @@
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsETag = factory(root.SendPostApi.ApiClient);
+    root.SendPostApi.ModelExport = factory(root.SendPostApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The ModelsETag model module.
-   * @module model/ModelsETag
+   * The ModelExport model module.
+   * @module model/ModelExport
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>ModelsETag</code>.
-   * @alias module:model/ModelsETag
+   * Constructs a new <code>ModelExport</code>.
+   * @alias module:model/ModelExport
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>ModelsETag</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ModelExport</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ModelsETag} obj Optional instance to populate.
-   * @return {module:model/ModelsETag} The populated <code>ModelsETag</code> instance.
+   * @param {module:model/ModelExport} obj Optional instance to populate.
+   * @return {module:model/ModelExport} The populated <code>ModelExport</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('color'))
-        obj.color = ApiClient.convertToType(data['color'], 'String');
-      if (data.hasOwnProperty('description'))
-        obj.description = ApiClient.convertToType(data['description'], 'String');
-      if (data.hasOwnProperty('memberId'))
-        obj.memberId = ApiClient.convertToType(data['memberId'], 'Number');
-      if (data.hasOwnProperty('name'))
-        obj.name = ApiClient.convertToType(data['name'], 'String');
     }
     return obj;
   }
-
-  /**
-   * @member {String} color
-   */
-  exports.prototype.color = undefined;
-
-  /**
-   * @member {String} description
-   */
-  exports.prototype.description = undefined;
-
-  /**
-   * @member {Number} memberId
-   */
-  exports.prototype.memberId = undefined;
-
-  /**
-   * @member {String} name
-   */
-  exports.prototype.name = undefined;
 
 
   return exports;

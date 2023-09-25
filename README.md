@@ -142,12 +142,14 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountdomainstatApi* | [**domainStatRouterGetStatsForASingleDomainStats**](docs/AccountdomainstatApi.md#domainStatRouterGetStatsForASingleDomainStats) | **GET** /account/domain/stat/{domainId}/aggregate | 
 *SendPostApi.AccounteventApi* | [**eventRouterCountAllEventsFromAAccountForAGivenTimeRange**](docs/AccounteventApi.md#eventRouterCountAllEventsFromAAccountForAGivenTimeRange) | **GET** /account/event/count | 
 *SendPostApi.AccounteventApi* | [**eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange**](docs/AccounteventApi.md#eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange) | **GET** /account/event/node/count | 
+*SendPostApi.AccounteventApi* | [**eventRouterExportAllEventsFromAAccountForAGivenTimeRange**](docs/AccounteventApi.md#eventRouterExportAllEventsFromAAccountForAGivenTimeRange) | **POST** /account/event/export | 
 *SendPostApi.AccounteventApi* | [**eventRouterGet**](docs/AccounteventApi.md#eventRouterGet) | **GET** /account/event/{eventId} | 
 *SendPostApi.AccounteventApi* | [**eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange**](docs/AccounteventApi.md#eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange) | **GET** /account/event/node/timestampkeys | 
 *SendPostApi.AccounteventApi* | [**eventRouterGetAllEventsFromAAccountForAGivenTimeRange**](docs/AccounteventApi.md#eventRouterGetAllEventsFromAAccountForAGivenTimeRange) | **GET** /account/event/ | 
 *SendPostApi.AccounteventApi* | [**eventRouterGetAllEventsFromAnAccountWhichHasOnlyProccessed**](docs/AccounteventApi.md#eventRouterGetAllEventsFromAnAccountWhichHasOnlyProccessed) | **GET** /account/event/node/eventType | 
 *SendPostApi.AccounteventApi* | [**eventRouterGetAllEventsOfAAccountFromASpecificNode**](docs/AccounteventApi.md#eventRouterGetAllEventsOfAAccountFromASpecificNode) | **POST** /account/event/node | 
 *SendPostApi.AccounteventApi* | [**eventRouterGetEventInNode**](docs/AccounteventApi.md#eventRouterGetEventInNode) | **GET** /account/event/node/{eventId} | 
+*SendPostApi.AccountexportedApi* | [**exportStatRouterGet**](docs/AccountexportedApi.md#exportStatRouterGet) | **GET** /account/exported/ | 
 *SendPostApi.AccountincidentApi* | [**incidentRouterAdd**](docs/AccountincidentApi.md#incidentRouterAdd) | **POST** /account/incident/{incidentId}/comment | 
 *SendPostApi.AccountincidentApi* | [**incidentRouterCount**](docs/AccountincidentApi.md#incidentRouterCount) | **GET** /account/incident/count | 
 *SendPostApi.AccountincidentApi* | [**incidentRouterCreate**](docs/AccountincidentApi.md#incidentRouterCreate) | **POST** /account/incident/ | 
@@ -338,9 +340,10 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [SendPostApi.Model3227680x140007359b0False](docs/Model3227680x140007359b0False.md)
- - [SendPostApi.Model3230490x14000735aa0False](docs/Model3230490x14000735aa0False.md)
- - [SendPostApi.Model6326400x14000b240c0False](docs/Model6326400x14000b240c0False.md)
+ - [SendPostApi.Model3234360x140007d0d80False](docs/Model3234360x140007d0d80False.md)
+ - [SendPostApi.Model3237170x140007d0e70False](docs/Model3237170x140007d0e70False.md)
+ - [SendPostApi.Model6337710x14000bc3830False](docs/Model6337710x14000bc3830False.md)
+ - [SendPostApi.ModelExport](docs/ModelExport.md)
  - [SendPostApi.ModelsAGDomainStat](docs/ModelsAGDomainStat.md)
  - [SendPostApi.ModelsAGIPStat](docs/ModelsAGIPStat.md)
  - [SendPostApi.ModelsAGStat](docs/ModelsAGStat.md)

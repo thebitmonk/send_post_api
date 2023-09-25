@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**eventRouterCountAllEventsFromAAccountForAGivenTimeRange**](AccounteventApi.md#eventRouterCountAllEventsFromAAccountForAGivenTimeRange) | **GET** /account/event/count | 
 [**eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange**](AccounteventApi.md#eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange) | **GET** /account/event/node/count | 
+[**eventRouterExportAllEventsFromAAccountForAGivenTimeRange**](AccounteventApi.md#eventRouterExportAllEventsFromAAccountForAGivenTimeRange) | **POST** /account/event/export | 
 [**eventRouterGet**](AccounteventApi.md#eventRouterGet) | **GET** /account/event/{eventId} | 
 [**eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange**](AccounteventApi.md#eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange) | **GET** /account/event/node/timestampkeys | 
 [**eventRouterGetAllEventsFromAAccountForAGivenTimeRange**](AccounteventApi.md#eventRouterGetAllEventsFromAAccountForAGivenTimeRange) | **GET** /account/event/ | 
@@ -124,6 +125,66 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ModelsCountStat**](ModelsCountStat.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="eventRouterExportAllEventsFromAAccountForAGivenTimeRange"></a>
+# **eventRouterExportAllEventsFromAAccountForAGivenTimeRange**
+> ModelExport eventRouterExportAllEventsFromAAccountForAGivenTimeRange(xAccountApiKey, opts)
+
+
+
+Export all events from a account for a given time-range <br>
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccounteventApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var opts = { 
+  'offset': 789, // Number | offset
+  'limit': 789, // Number | limit
+  'from': "from_example", // String | from date
+  'to': "to_example", // String | to date
+  'source': "source_example", // String | data source from which to get timestamp keys subaccount or ip
+  'sourceId': "sourceId_example" // String | source id from which to get timestamp keys subaccount or ip
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.eventRouterExportAllEventsFromAAccountForAGivenTimeRange(xAccountApiKey, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xAccountApiKey** | **String**| Account API Key | 
+ **offset** | **Number**| offset | [optional] 
+ **limit** | **Number**| limit | [optional] 
+ **from** | **String**| from date | [optional] 
+ **to** | **String**| to date | [optional] 
+ **source** | **String**| data source from which to get timestamp keys subaccount or ip | [optional] 
+ **sourceId** | **String**| source id from which to get timestamp keys subaccount or ip | [optional] 
+
+### Return type
+
+[**ModelExport**](ModelExport.md)
 
 ### Authorization
 

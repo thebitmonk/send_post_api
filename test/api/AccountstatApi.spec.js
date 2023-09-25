@@ -544,6 +544,7 @@
           opts.search = "search_example";
           opts.offset = 789;
           opts.limit = 789;
+          opts._export = "_export_example";
 
           instance.accountStatRouterGetAllAggregateThirdPartyProvidersStats(xAccountApiKey, from, to, opts, function(error, data, response) {
             if (error) {

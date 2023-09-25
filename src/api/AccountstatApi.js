@@ -788,6 +788,7 @@
      * @param {String} opts.search search term
      * @param {Number} opts.offset offset
      * @param {Number} opts.limit limit
+     * @param {String} opts._export exported
      * @param {module:api/AccountstatApi~accountStatRouterGetAllAggregateThirdPartyProvidersStatsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsAGTPSPStat>}
      */
@@ -823,6 +824,7 @@
         'search': opts['search'],
         'offset': opts['offset'],
         'limit': opts['limit'],
+        'export': opts['_export'],
       };
       var collectionQueryParams = {
       };
