@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsThirdPartySendingProviderType'], factory);
+    define(['ApiClient', 'model/ModelsMember', 'model/ModelsThirdPartySendingProviderType'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ModelsThirdPartySendingProviderType'));
+    module.exports = factory(require('../ApiClient'), require('./ModelsMember'), require('./ModelsThirdPartySendingProviderType'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsThirdPartySendingProvider = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsThirdPartySendingProviderType);
+    root.SendPostApi.ModelsThirdPartySendingProvider = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsMember, root.SendPostApi.ModelsThirdPartySendingProviderType);
   }
-}(this, function(ApiClient, ModelsThirdPartySendingProviderType) {
+}(this, function(ApiClient, ModelsMember, ModelsThirdPartySendingProviderType) {
   'use strict';
 
   /**
@@ -57,6 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('created'))
         obj.created = ApiClient.convertToType(data['created'], 'Number');
+      if (data.hasOwnProperty('created_by'))
+        obj.createdBy = ModelsMember.constructFromObject(data['created_by']);
       if (data.hasOwnProperty('domain'))
         obj.domain = ApiClient.convertToType(data['domain'], 'String');
       if (data.hasOwnProperty('endpoint'))
@@ -79,6 +81,8 @@
         obj.secret = ApiClient.convertToType(data['secret'], 'String');
       if (data.hasOwnProperty('type'))
         obj.type = ModelsThirdPartySendingProviderType.constructFromObject(data['type']);
+      if (data.hasOwnProperty('updated_by'))
+        obj.updatedBy = ModelsMember.constructFromObject(data['updated_by']);
     }
     return obj;
   }
@@ -87,6 +91,11 @@
    * @member {Number} created
    */
   exports.prototype.created = undefined;
+
+  /**
+   * @member {module:model/ModelsMember} createdBy
+   */
+  exports.prototype.createdBy = undefined;
 
   /**
    * @member {String} domain
@@ -142,6 +151,11 @@
    * @member {module:model/ModelsThirdPartySendingProviderType} type
    */
   exports.prototype.type = undefined;
+
+  /**
+   * @member {module:model/ModelsMember} updatedBy
+   */
+  exports.prototype.updatedBy = undefined;
 
 
   return exports;

@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -83,16 +83,22 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SendPostApi.ModelsSuppression);
-            expect(data.created).to.be.a('number');
-            expect(data.created).to.be("0");
-            expect(data.email).to.be.a('string');
-            expect(data.email).to.be("");
-            expect(data.id).to.be.a('number');
-            expect(data.id).to.be("0");
-            expect(data.reason).to.be.a(SendPostApi.ModelsSuppressionReason);
-                expect(data.smtpError).to.be.a('string');
-            expect(data.smtpError).to.be("");
+            let dataCtr = data;
+            expect(dataCtr).to.be.an(Array);
+            expect(dataCtr).to.not.be.empty();
+            for (let p in dataCtr) {
+              let data = dataCtr[p];
+              expect(data).to.be.a(SendPostApi.ModelsSuppression);
+              expect(data.created).to.be.a('number');
+              expect(data.created).to.be("0");
+              expect(data.email).to.be.a('string');
+              expect(data.email).to.be("");
+              expect(data.id).to.be.a('number');
+              expect(data.id).to.be("0");
+              expect(data.reason).to.be.a(SendPostApi.ModelsSuppressionReason);
+                  expect(data.smtpError).to.be.a('string');
+              expect(data.smtpError).to.be("");
+            }
 
             done();
           });
@@ -105,12 +111,12 @@
         it('should call suppressionRouterCreateSuppressionsInSuppressionFilter successfully', function(done) {
           // TODO: uncomment, update parameter values for suppressionRouterCreateSuppressionsInSuppressionFilter call
           /*
-          var body = new SendPostApi.ModelsSuppression();
-          body.created = "0";
-          body.email = "";
-          body.id = "0";
-          body.reason = new SendPostApi.ModelsSuppressionReason();
-          body.smtpError = "";
+          var body = [new SendPostApi.ModelsSuppression()];
+          body[0].created = "0";
+          body[0].email = "";
+          body[0].id = "0";
+          body[0].reason = new SendPostApi.ModelsSuppressionReason();
+          body[0].smtpError = "";
 
           instance.suppressionRouterCreateSuppressionsInSuppressionFilter(body, function(error, data, response) {
             if (error) {
@@ -140,16 +146,17 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SendPostApi.ModelsSuppression);
-            expect(data.created).to.be.a('number');
-            expect(data.created).to.be("0");
-            expect(data.email).to.be.a('string');
-            expect(data.email).to.be("");
-            expect(data.id).to.be.a('number');
-            expect(data.id).to.be("0");
-            expect(data.reason).to.be.a(SendPostApi.ModelsSuppressionReason);
-                expect(data.smtpError).to.be.a('string');
-            expect(data.smtpError).to.be("");
+            let dataCtr = data;
+            expect(dataCtr).to.be.an(Array);
+            expect(dataCtr).to.not.be.empty();
+            for (let p in dataCtr) {
+              let data = dataCtr[p];
+              expect(data).to.be.a(SendPostApi.ModelsDeleteResponse);
+              expect(data.id).to.be.a('number');
+              expect(data.id).to.be("0");
+              expect(data.message).to.be.a('string');
+              expect(data.message).to.be("");
+            }
 
             done();
           });
@@ -162,12 +169,12 @@
         it('should call suppressionRouterDeleteSuppressionsInSuppressionFilter successfully', function(done) {
           // TODO: uncomment, update parameter values for suppressionRouterDeleteSuppressionsInSuppressionFilter call
           /*
-          var body = new SendPostApi.ModelsSuppression();
-          body.created = "0";
-          body.email = "";
-          body.id = "0";
-          body.reason = new SendPostApi.ModelsSuppressionReason();
-          body.smtpError = "";
+          var body = [new SendPostApi.ModelsSuppression()];
+          body[0].created = "0";
+          body[0].email = "";
+          body[0].id = "0";
+          body[0].reason = new SendPostApi.ModelsSuppressionReason();
+          body[0].smtpError = "";
 
           instance.suppressionRouterDeleteSuppressionsInSuppressionFilter(body, function(error, data, response) {
             if (error) {

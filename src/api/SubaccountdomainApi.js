@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsDomain', 'model/ModelsEDomain', 'model/ModelsVerifyByTokenRequest'], factory);
+    define(['ApiClient', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsDomain', 'model/ModelsEDomain', 'model/ModelsEMember', 'model/ModelsVerifyByTokenRequest'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsDomain'), require('../model/ModelsEDomain'), require('../model/ModelsVerifyByTokenRequest'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsDomain'), require('../model/ModelsEDomain'), require('../model/ModelsEMember'), require('../model/ModelsVerifyByTokenRequest'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.SubaccountdomainApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsDomain, root.SendPostApi.ModelsEDomain, root.SendPostApi.ModelsVerifyByTokenRequest);
+    root.SendPostApi.SubaccountdomainApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsDomain, root.SendPostApi.ModelsEDomain, root.SendPostApi.ModelsEMember, root.SendPostApi.ModelsVerifyByTokenRequest);
   }
-}(this, function(ApiClient, ModelsCountStat, ModelsDeleteResponse, ModelsDomain, ModelsEDomain, ModelsVerifyByTokenRequest) {
+}(this, function(ApiClient, ModelsCountStat, ModelsDeleteResponse, ModelsDomain, ModelsEDomain, ModelsEMember, ModelsVerifyByTokenRequest) {
   'use strict';
 
   /**
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Count Total Domains
+     * Count Total Domains <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {module:api/SubaccountdomainApi~domainRouterCountCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsCountStat}
@@ -104,7 +104,7 @@
      */
 
     /**
-     * Create Domain
+     * Create Domain <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {module:model/ModelsEDomain} body The Domain content
      * @param {module:api/SubaccountdomainApi~domainRouterCreateCallback} callback The callback function, accepting three arguments: error, data, response
@@ -157,14 +157,15 @@
      */
 
     /**
-     * Delete Domain
+     * Delete Domain <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Number} domainId The DomainId you want to delete
+     * @param {module:model/ModelsEMember} body The triggering action member
      * @param {module:api/SubaccountdomainApi~domainRouterDeleteCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsDeleteResponse}
      */
-    this.domainRouterDelete = function(xSubAccountApiKey, domainId, callback) {
-      var postBody = null;
+    this.domainRouterDelete = function(xSubAccountApiKey, domainId, body, callback) {
+      var postBody = body;
 
       // verify the required parameter 'xSubAccountApiKey' is set
       if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
@@ -174,6 +175,11 @@
       // verify the required parameter 'domainId' is set
       if (domainId === undefined || domainId === null) {
         throw new Error("Missing the required parameter 'domainId' when calling domainRouterDelete");
+      }
+
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling domainRouterDelete");
       }
 
 
@@ -211,7 +217,7 @@
      */
 
     /**
-     * Find Domain by DomainId
+     * Find Domain by DomainId <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Number} domainId the DomainId you want to get
      * @param {module:api/SubaccountdomainApi~domainRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -265,7 +271,7 @@
      */
 
     /**
-     * Get All Domains
+     * Get All Domains <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
@@ -320,7 +326,7 @@
      */
 
     /**
-     * Update Domain
+     * Update Domain <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Number} domainId The DomainId you want to update
      * @param {module:model/ModelsEDomain} body The body
@@ -380,7 +386,7 @@
      */
 
     /**
-     * Verify Domain By Domain Id
+     * Verify Domain By Domain Id <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Number} domainId the DomainId you want to get
      * @param {module:api/SubaccountdomainApi~domainRouterVerifyCallback} callback The callback function, accepting three arguments: error, data, response
@@ -434,7 +440,7 @@
      */
 
     /**
-     * Verify Domain By Signed Token
+     * Verify Domain By Signed Token <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Number} domainId the DomainId you want to get
      * @param {String} token The signed token used to verify
@@ -495,7 +501,7 @@
      */
 
     /**
-     * Verify Domain By Email Request
+     * Verify Domain By Email Request <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Number} domainId the DomainId you want to get
      * @param {module:model/ModelsVerifyByTokenRequest} body The Email to be used to verify

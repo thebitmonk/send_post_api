@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -82,6 +82,27 @@
             expect(data.companyName).to.be("");
             expect(data.created).to.be.a('number');
             expect(data.created).to.be("0");
+            expect(data.createdBy).to.be.a(SendPostApi.ModelsMember);
+                  expect(data.createdBy.companyName).to.be.a('string');
+              expect(data.createdBy.companyName).to.be("");
+              expect(data.createdBy.created).to.be.a('number');
+              expect(data.createdBy.created).to.be("0");
+              expect(data.createdBy.email).to.be.a('string');
+              expect(data.createdBy.email).to.be("");
+              expect(data.createdBy.id).to.be.a('number');
+              expect(data.createdBy.id).to.be("0");
+              expect(data.createdBy.isForbidden).to.be.a('boolean');
+              expect(data.createdBy.isForbidden).to.be(false);
+              expect(data.createdBy.isVerified).to.be.a('boolean');
+              expect(data.createdBy.isVerified).to.be(false);
+              expect(data.createdBy.name).to.be.a('string');
+              expect(data.createdBy.name).to.be("");
+              expect(data.createdBy.onboardQAnswered).to.be.a('boolean');
+              expect(data.createdBy.onboardQAnswered).to.be(false);
+              expect(data.createdBy.phoneNumber).to.be.a('string');
+              expect(data.createdBy.phoneNumber).to.be("");
+              expect(data.createdBy.url).to.be.a('string');
+              expect(data.createdBy.url).to.be("");
             expect(data.currentEmailServiceProvider).to.be.a('string');
             expect(data.currentEmailServiceProvider).to.be("");
             expect(data.id).to.be.a('number');
@@ -122,6 +143,27 @@
             expect(data.stripeUsagePriceId).to.be("");
             expect(data.switchingSendpostDescription).to.be.a('string');
             expect(data.switchingSendpostDescription).to.be("");
+            expect(data.updatedBy).to.be.a(SendPostApi.ModelsMember);
+                  expect(data.updatedBy.companyName).to.be.a('string');
+              expect(data.updatedBy.companyName).to.be("");
+              expect(data.updatedBy.created).to.be.a('number');
+              expect(data.updatedBy.created).to.be("0");
+              expect(data.updatedBy.email).to.be.a('string');
+              expect(data.updatedBy.email).to.be("");
+              expect(data.updatedBy.id).to.be.a('number');
+              expect(data.updatedBy.id).to.be("0");
+              expect(data.updatedBy.isForbidden).to.be.a('boolean');
+              expect(data.updatedBy.isForbidden).to.be(false);
+              expect(data.updatedBy.isVerified).to.be.a('boolean');
+              expect(data.updatedBy.isVerified).to.be(false);
+              expect(data.updatedBy.name).to.be.a('string');
+              expect(data.updatedBy.name).to.be("");
+              expect(data.updatedBy.onboardQAnswered).to.be.a('boolean');
+              expect(data.updatedBy.onboardQAnswered).to.be(false);
+              expect(data.updatedBy.phoneNumber).to.be.a('string');
+              expect(data.updatedBy.phoneNumber).to.be("");
+              expect(data.updatedBy.url).to.be.a('string');
+              expect(data.updatedBy.url).to.be("");
 
             done();
           });
@@ -138,6 +180,7 @@
           var body = new SendPostApi.ModelsEAccountSetting();
           body.companyName = "";
           body.logoURL = "";
+          body.memberId = "0";
 
           instance.accountSettingRouterUpdate(xAccountApiKey, body, function(error, data, response) {
             if (error) {
@@ -156,6 +199,27 @@
             expect(data.companyName).to.be("");
             expect(data.created).to.be.a('number');
             expect(data.created).to.be("0");
+            expect(data.createdBy).to.be.a(SendPostApi.ModelsMember);
+                  expect(data.createdBy.companyName).to.be.a('string');
+              expect(data.createdBy.companyName).to.be("");
+              expect(data.createdBy.created).to.be.a('number');
+              expect(data.createdBy.created).to.be("0");
+              expect(data.createdBy.email).to.be.a('string');
+              expect(data.createdBy.email).to.be("");
+              expect(data.createdBy.id).to.be.a('number');
+              expect(data.createdBy.id).to.be("0");
+              expect(data.createdBy.isForbidden).to.be.a('boolean');
+              expect(data.createdBy.isForbidden).to.be(false);
+              expect(data.createdBy.isVerified).to.be.a('boolean');
+              expect(data.createdBy.isVerified).to.be(false);
+              expect(data.createdBy.name).to.be.a('string');
+              expect(data.createdBy.name).to.be("");
+              expect(data.createdBy.onboardQAnswered).to.be.a('boolean');
+              expect(data.createdBy.onboardQAnswered).to.be(false);
+              expect(data.createdBy.phoneNumber).to.be.a('string');
+              expect(data.createdBy.phoneNumber).to.be("");
+              expect(data.createdBy.url).to.be.a('string');
+              expect(data.createdBy.url).to.be("");
             expect(data.currentEmailServiceProvider).to.be.a('string');
             expect(data.currentEmailServiceProvider).to.be("");
             expect(data.id).to.be.a('number');
@@ -196,6 +260,27 @@
             expect(data.stripeUsagePriceId).to.be("");
             expect(data.switchingSendpostDescription).to.be.a('string');
             expect(data.switchingSendpostDescription).to.be("");
+            expect(data.updatedBy).to.be.a(SendPostApi.ModelsMember);
+                  expect(data.updatedBy.companyName).to.be.a('string');
+              expect(data.updatedBy.companyName).to.be("");
+              expect(data.updatedBy.created).to.be.a('number');
+              expect(data.updatedBy.created).to.be("0");
+              expect(data.updatedBy.email).to.be.a('string');
+              expect(data.updatedBy.email).to.be("");
+              expect(data.updatedBy.id).to.be.a('number');
+              expect(data.updatedBy.id).to.be("0");
+              expect(data.updatedBy.isForbidden).to.be.a('boolean');
+              expect(data.updatedBy.isForbidden).to.be(false);
+              expect(data.updatedBy.isVerified).to.be.a('boolean');
+              expect(data.updatedBy.isVerified).to.be(false);
+              expect(data.updatedBy.name).to.be.a('string');
+              expect(data.updatedBy.name).to.be("");
+              expect(data.updatedBy.onboardQAnswered).to.be.a('boolean');
+              expect(data.updatedBy.onboardQAnswered).to.be(false);
+              expect(data.updatedBy.phoneNumber).to.be.a('string');
+              expect(data.updatedBy.phoneNumber).to.be("");
+              expect(data.updatedBy.url).to.be.a('string');
+              expect(data.updatedBy.url).to.be("");
 
             done();
           });

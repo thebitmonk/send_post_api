@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -65,6 +65,7 @@
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
           var body = new SendPostApi.ModelsEDomain();
+          body.memberId = "0";
           body.name = "";
 
           instance.domainRouterCreate(xSubAccountApiKey, body, function(error, data, response) {
@@ -134,8 +135,10 @@
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
           var domainId = 789;
+          var body = new SendPostApi.ModelsEMember();
+          body.id = "0";
 
-          instance.domainRouterDelete(xSubAccountApiKey, domainId, function(error, data, response) {
+          instance.domainRouterDelete(xSubAccountApiKey, domainId, body, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -306,6 +309,7 @@
           var xSubAccountApiKey = "xSubAccountApiKey_example";
           var domainId = 789;
           var body = new SendPostApi.ModelsEDomain();
+          body.memberId = "0";
           body.name = "";
 
           instance.domainRouterUpdate(xSubAccountApiKey, domainId, body, function(error, data, response) {

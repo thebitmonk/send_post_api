@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -68,11 +68,12 @@
           var xAccountApiKey = "xAccountApiKey_example";
           var body = new SendPostApi.ModelsAlertRequest();
           body.active = false;
-          body.emails = ;
+          body.assignedMemberId = "0";
+          body.emails = [""];
           body.entityType = "";
           body.entityValue = "0";
           body.label = new SendPostApi.ModelsAlertLabel();
-          body.member = "0";
+          body.memberId = "0";
           body.name = "";
           body.notificationType = new SendPostApi.ModelsNotificationType();
           body.parameter = "0";
@@ -108,8 +109,10 @@
           /*
           var xAccountApiKey = "xAccountApiKey_example";
           var alertId = 789;
+          var body = new SendPostApi.ModelsEMember();
+          body.id = "0";
 
-          instance.alertRouterDelete(xAccountApiKey, alertId, function(error, data, response) {
+          instance.alertRouterDelete(xAccountApiKey, alertId, body, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -183,7 +186,8 @@
           var xAccountApiKey = "xAccountApiKey_example";
           var alertId = 789;
           var body = new SendPostApi.ModelsEAlert();
-          body.active = "";
+          body.active = false;
+          body.memberId = "0";
 
           instance.alertRouterUpdate(xAccountApiKey, alertId, body, function(error, data, response) {
             if (error) {
@@ -191,7 +195,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SendPostApi.Alert);
+            expect(data).to.be.a(SendPostApi.ModelsAlert);
 
             done();
           });

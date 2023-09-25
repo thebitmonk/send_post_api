@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -71,6 +71,53 @@
           var redirecturl = "redirecturl_example";
 
           instance.trackRouterTrackLinkClick(ipId, accountId, subAccountId, messageId, emailType, redirecturl, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('trackRouterTrackTPSPEmailOpen', function() {
+        it('should call trackRouterTrackTPSPEmailOpen successfully', function(done) {
+          // TODO: uncomment, update parameter values for trackRouterTrackTPSPEmailOpen call
+          /*
+          var tpspId = 789;
+          var accountId = 789;
+          var subAccountId = 789;
+          var messageId = "messageId_example";
+          var emailType = "emailType_example";
+
+          instance.trackRouterTrackTPSPEmailOpen(tpspId, accountId, subAccountId, messageId, emailType, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('trackRouterTrackTPSPLinkClick', function() {
+        it('should call trackRouterTrackTPSPLinkClick successfully', function(done) {
+          // TODO: uncomment, update parameter values for trackRouterTrackTPSPLinkClick call
+          /*
+          var tpspId = 789;
+          var accountId = 789;
+          var subAccountId = 789;
+          var messageId = "messageId_example";
+          var emailType = "emailType_example";
+          var redirecturl = "redirecturl_example";
+
+          instance.trackRouterTrackTPSPLinkClick(tpspId, accountId, subAccountId, messageId, emailType, redirecturl, function(error, data, response) {
             if (error) {
               done(error);
               return;

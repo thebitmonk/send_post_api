@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -58,9 +58,9 @@
       if (data.hasOwnProperty('detailedResponse'))
         obj.detailedResponse = ApiClient.convertToType(data['detailedResponse'], [ModelsSingleCleanedMail]);
       if (data.hasOwnProperty('invalid'))
-        obj.invalid = ApiClient.convertToType(data['invalid'], Object);
+        obj.invalid = ApiClient.convertToType(data['invalid'], ['String']);
       if (data.hasOwnProperty('valid'))
-        obj.valid = ApiClient.convertToType(data['valid'], Object);
+        obj.valid = ApiClient.convertToType(data['valid'], ['String']);
     }
     return obj;
   }
@@ -71,12 +71,12 @@
   exports.prototype.detailedResponse = undefined;
 
   /**
-   * @member {Object} invalid
+   * @member {Array.<String>} invalid
    */
   exports.prototype.invalid = undefined;
 
   /**
-   * @member {Object} valid
+   * @member {Array.<String>} valid
    */
   exports.prototype.valid = undefined;
 

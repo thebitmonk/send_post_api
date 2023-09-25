@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**accountIPPoolRouterDelete**](AccountippoolApi.md#accountIPPoolRouterDelete) | **DELETE** /account/ippool/{ippoolid} | 
 [**accountIPPoolRouterGet**](AccountippoolApi.md#accountIPPoolRouterGet) | **GET** /account/ippool/{ippoolid} | 
 [**accountIPPoolRouterGetAll**](AccountippoolApi.md#accountIPPoolRouterGetAll) | **GET** /account/ippool/ | 
+[**accountIPPoolRouterSearchAll**](AccountippoolApi.md#accountIPPoolRouterSearchAll) | **GET** /account/ippool/search | 
 [**accountIPPoolRouterUpdate**](AccountippoolApi.md#accountIPPoolRouterUpdate) | **PUT** /account/ippool/{ippoolid} | 
 
 
@@ -18,7 +19,7 @@ Method | HTTP request | Description
 
 
 
-Count Total AccountIPPools
+Count Total AccountIPPools <br>
 
 ### Example
 ```javascript
@@ -64,7 +65,7 @@ No authorization required
 
 
 
-Create AccountIPPool
+Create AccountIPPool <br>
 
 ### Example
 ```javascript
@@ -109,11 +110,11 @@ No authorization required
 
 <a name="accountIPPoolRouterDelete"></a>
 # **accountIPPoolRouterDelete**
-> ModelsDeleteResponse accountIPPoolRouterDelete(xAccountApiKey, ippoolid)
+> ModelsDeleteResponse accountIPPoolRouterDelete(xAccountApiKey, ippoolid, body)
 
 
 
-Delete AccountIPPool
+Delete AccountIPPool <br>
 
 ### Example
 ```javascript
@@ -125,6 +126,8 @@ var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var ippoolid = 789; // Number | The AccountIPPoolId you want to delete
 
+var body = new SendPostApi.ModelsEMember(); // ModelsEMember | The triggering action member
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -133,7 +136,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.accountIPPoolRouterDelete(xAccountApiKey, ippoolid, callback);
+apiInstance.accountIPPoolRouterDelete(xAccountApiKey, ippoolid, body, callback);
 ```
 
 ### Parameters
@@ -142,6 +145,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
  **ippoolid** | **Number**| The AccountIPPoolId you want to delete | 
+ **body** | [**ModelsEMember**](ModelsEMember.md)| The triggering action member | 
 
 ### Return type
 
@@ -162,7 +166,7 @@ No authorization required
 
 
 
-Find AccountIPPool by AccountIPPoolId
+Find AccountIPPool by AccountIPPoolId <br>
 
 ### Example
 ```javascript
@@ -211,7 +215,7 @@ No authorization required
 
 
 
-Get All AccountIPPools
+Get All AccountIPPools <br>
 
 ### Example
 ```javascript
@@ -259,13 +263,67 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="accountIPPoolRouterSearchAll"></a>
+# **accountIPPoolRouterSearchAll**
+> [ModelsAccountIPPool] accountIPPoolRouterSearchAll(xAccountApiKey, opts)
+
+
+
+Get All AccountIPPools without fetching IPs, TPSPs and other pools <br>
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccountippoolApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var opts = { 
+  'offset': 789, // Number | offset
+  'limit': 789, // Number | limit
+  'search': "search_example" // String | search term
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.accountIPPoolRouterSearchAll(xAccountApiKey, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xAccountApiKey** | **String**| Account API Key | 
+ **offset** | **Number**| offset | [optional] 
+ **limit** | **Number**| limit | [optional] 
+ **search** | **String**| search term | [optional] 
+
+### Return type
+
+[**[ModelsAccountIPPool]**](ModelsAccountIPPool.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="accountIPPoolRouterUpdate"></a>
 # **accountIPPoolRouterUpdate**
 > ModelsAccountIPPool accountIPPoolRouterUpdate(xAccountApiKey, ippoolid, body)
 
 
 
-Update AccountIPPool
+Update AccountIPPool <br>
 
 ### Example
 ```javascript

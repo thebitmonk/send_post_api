@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 
 
-Count Total Suppressions
+Count Total Suppressions <br>
 
 ### Example
 ```javascript
@@ -67,11 +67,11 @@ No authorization required
 
 <a name="suppressionRouterCreateSuppressions"></a>
 # **suppressionRouterCreateSuppressions**
-> ModelsSuppression suppressionRouterCreateSuppressions(xSubAccountApiKey, body)
+> [ModelsSuppression] suppressionRouterCreateSuppressions(xSubAccountApiKey, body)
 
 
 
-Add Email Addresses To Suppression List
+Add Email Addresses To Suppression List <br>
 
 ### Example
 ```javascript
@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ModelsSuppression**](ModelsSuppression.md)
+[**[ModelsSuppression]**](ModelsSuppression.md)
 
 ### Authorization
 
@@ -120,7 +120,7 @@ No authorization required
 
 
 
-Add Email Addresses To Suppression Filter
+Add Email Addresses To Suppression Filter <br>
 
 ### Example
 ```javascript
@@ -128,7 +128,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.SubaccountsuppressionApi();
 
-var body = new SendPostApi.ModelsSuppression(); // ModelsSuppression | Add suppressions to suppression filter
+var body = [new SendPostApi.ModelsSuppression()]; // [ModelsSuppression] | Add suppressions to suppression filter
 
 
 var callback = function(error, data, response) {
@@ -145,7 +145,7 @@ apiInstance.suppressionRouterCreateSuppressionsInSuppressionFilter(body, callbac
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ModelsSuppression**](ModelsSuppression.md)| Add suppressions to suppression filter | 
+ **body** | [**[ModelsSuppression]**](ModelsSuppression.md)| Add suppressions to suppression filter | 
 
 ### Return type
 
@@ -162,11 +162,11 @@ No authorization required
 
 <a name="suppressionRouterDeleteSuppression"></a>
 # **suppressionRouterDeleteSuppression**
-> ModelsSuppression suppressionRouterDeleteSuppression(xSubAccountApiKey, body)
+> [ModelsDeleteResponse] suppressionRouterDeleteSuppression(xSubAccountApiKey, body)
 
 
 
-Delete specific emails which are in suppression list
+Delete specific emails which are in suppression list <br>
 
 ### Example
 ```javascript
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ModelsSuppression**](ModelsSuppression.md)
+[**[ModelsDeleteResponse]**](ModelsDeleteResponse.md)
 
 ### Authorization
 
@@ -215,7 +215,7 @@ No authorization required
 
 
 
-Delete specific emails which are in suppression list
+Delete specific emails which are in suppression list <br>
 
 ### Example
 ```javascript
@@ -223,7 +223,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.SubaccountsuppressionApi();
 
-var body = new SendPostApi.ModelsSuppression(); // ModelsSuppression | Suppression content
+var body = [new SendPostApi.ModelsSuppression()]; // [ModelsSuppression] | Suppression content
 
 
 var callback = function(error, data, response) {
@@ -240,7 +240,7 @@ apiInstance.suppressionRouterDeleteSuppressionsInSuppressionFilter(body, callbac
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ModelsSuppression**](ModelsSuppression.md)| Suppression content | 
+ **body** | [**[ModelsSuppression]**](ModelsSuppression.md)| Suppression content | 
 
 ### Return type
 
@@ -261,7 +261,7 @@ No authorization required
 
 
 
-Export all suppressions
+Export all suppressions <br>
 
 ### Example
 ```javascript
@@ -315,7 +315,7 @@ No authorization required
 
 
 
-Get all suppressions
+Get all suppressions <br>
 
 ### Example
 ```javascript

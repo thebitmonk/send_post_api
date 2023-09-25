@@ -25,7 +25,7 @@ Method | HTTP request | Description
 
 
 
-Responds back with Account Processed Mails Stat
+Responds back with Account Processed Mails Stat <br>
 
 ### Example
 ```javascript
@@ -71,7 +71,7 @@ No authorization required
 
 
 
-Get All Account Stats
+Get All Account Stats <br>
 
 ### Example
 ```javascript
@@ -123,7 +123,7 @@ No authorization required
 
 
 
-Get All Account Stats by Group
+Get All Account Stats by Group <br>
 
 ### Example
 ```javascript
@@ -178,7 +178,7 @@ No authorization required
 
 
 
-Get All Aggregate Stats
+Get All Aggregate Stats <br>
 
 ### Example
 ```javascript
@@ -230,7 +230,7 @@ No authorization required
 
 
 
-Get All Aggregate Stats by Group
+Get All Aggregate Stats by Group <br>
 
 ### Example
 ```javascript
@@ -285,7 +285,7 @@ No authorization required
 
 
 
-Get All Aggregate Domain Stats
+Get All Aggregate Domain Stats <br>
 
 ### Example
 ```javascript
@@ -353,7 +353,7 @@ No authorization required
 
 
 
-Get All Aggregate Domain Stats Count
+Get All Aggregate Domain Stats Count <br>
 
 ### Example
 ```javascript
@@ -413,7 +413,7 @@ No authorization required
 
 
 
-Get All Aggregate IP Stats
+Get All Aggregate IP Stats <br>
 
 ### Example
 ```javascript
@@ -485,7 +485,7 @@ No authorization required
 
 
 
-Get All Aggregate IP Stats Count
+Get All Aggregate IP Stats Count <br>
 
 ### Example
 ```javascript
@@ -549,7 +549,7 @@ No authorization required
 
 
 
-Get All Aggregate SubAccount Stats
+Get All Aggregate SubAccount Stats <br>
 
 ### Example
 ```javascript
@@ -617,7 +617,7 @@ No authorization required
 
 
 
-Get All Aggregate SubAccount Stats Count
+Get All Aggregate SubAccount Stats Count <br>
 
 ### Example
 ```javascript
@@ -677,7 +677,7 @@ No authorization required
 
 
 
-Get All Aggregate Third Party Providers Stats
+Get All Aggregate Third Party Providers Stats <br>
 
 ### Example
 ```javascript
@@ -698,7 +698,8 @@ var opts = {
   'sortOrder': "sortOrder_example", // String | sortOrder
   'search': "search_example", // String | search term
   'offset': 789, // Number | offset
-  'limit': 789 // Number | limit
+  'limit': 789, // Number | limit
+  '_export': "_export_example" // String | exported
 };
 
 var callback = function(error, data, response) {
@@ -725,6 +726,7 @@ Name | Type | Description  | Notes
  **search** | **String**| search term | [optional] 
  **offset** | **Number**| offset | [optional] 
  **limit** | **Number**| limit | [optional] 
+ **_export** | **String**| exported | [optional] 
 
 ### Return type
 
@@ -745,7 +747,7 @@ No authorization required
 
 
 
-Get All Aggregate Third Party Providers Stats Count
+Get All Aggregate Third Party Providers Stats Count <br>
 
 ### Example
 ```javascript

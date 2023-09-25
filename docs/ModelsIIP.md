@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**labels** | **Object** |  | [optional] 
+**labels** | **[String]** |  | [optional] 
 **providerSettings** | [**ModelsProviderSettings**](ModelsProviderSettings.md) |  | [optional] 
 **type** | [**ModelsIIPUpdateType**](ModelsIIPUpdateType.md) |  | [optional] 
 

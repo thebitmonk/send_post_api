@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsDeleteResponse', 'model/ModelsTag'], factory);
+    define(['ApiClient', 'model/ModelsDeleteResponse', 'model/ModelsEMember', 'model/ModelsETag', 'model/ModelsTag'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsDeleteResponse'), require('../model/ModelsTag'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsDeleteResponse'), require('../model/ModelsEMember'), require('../model/ModelsETag'), require('../model/ModelsTag'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.AccounttagApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsTag);
+    root.SendPostApi.AccounttagApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsEMember, root.SendPostApi.ModelsETag, root.SendPostApi.ModelsTag);
   }
-}(this, function(ApiClient, ModelsDeleteResponse, ModelsTag) {
+}(this, function(ApiClient, ModelsDeleteResponse, ModelsEMember, ModelsETag, ModelsTag) {
   'use strict';
 
   /**
@@ -57,9 +57,9 @@
      */
 
     /**
-     * Create Tag
+     * Create Tag <br>
      * @param {String} xAccountApiKey Account API Key
-     * @param {module:model/ModelsTag} body The Tag content
+     * @param {module:model/ModelsETag} body The Tag content
      * @param {module:api/AccounttagApi~tagRouterCreateCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsTag}
      */
@@ -110,14 +110,15 @@
      */
 
     /**
-     * Delete Tag
+     * Delete Tag <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} tagid The AccountTagId you want to delete
+     * @param {module:model/ModelsEMember} body The triggering action member
      * @param {module:api/AccounttagApi~tagRouterDeleteCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsDeleteResponse}
      */
-    this.tagRouterDelete = function(xAccountApiKey, tagid, callback) {
-      var postBody = null;
+    this.tagRouterDelete = function(xAccountApiKey, tagid, body, callback) {
+      var postBody = body;
 
       // verify the required parameter 'xAccountApiKey' is set
       if (xAccountApiKey === undefined || xAccountApiKey === null) {
@@ -127,6 +128,11 @@
       // verify the required parameter 'tagid' is set
       if (tagid === undefined || tagid === null) {
         throw new Error("Missing the required parameter 'tagid' when calling tagRouterDelete");
+      }
+
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling tagRouterDelete");
       }
 
 
@@ -164,7 +170,7 @@
      */
 
     /**
-     * Get All Tags
+     * Get All Tags <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccounttagApi~tagRouterGetAllCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsTag>}

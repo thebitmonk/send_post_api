@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -65,6 +65,8 @@
         obj.routingStrategy = ApiClient.convertToType(data['routingStrategy'], 'Number');
       if (data.hasOwnProperty('tpsps'))
         obj.tpsps = ApiClient.convertToType(data['tpsps'], ['Number']);
+      if (data.hasOwnProperty('memberId'))
+        obj.memberId = ApiClient.convertToType(data['memberId'], 'Number');
     }
     return obj;
   }
@@ -93,6 +95,11 @@
    * @member {Array.<Number>} tpsps
    */
   exports.prototype.tpsps = undefined;
+
+  /**
+   * @member {Number} memberId
+   */
+  exports.prototype.memberId = undefined;
 
 
   return exports;

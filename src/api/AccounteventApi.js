@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsCountStat', 'model/ModelsQEvent'], factory);
+    define(['ApiClient', 'model/ModelExport', 'model/ModelsCountStat', 'model/ModelsQEvent'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsCountStat'), require('../model/ModelsQEvent'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelExport'), require('../model/ModelsCountStat'), require('../model/ModelsQEvent'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.AccounteventApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsQEvent);
+    root.SendPostApi.AccounteventApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelExport, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsQEvent);
   }
-}(this, function(ApiClient, ModelsCountStat, ModelsQEvent) {
+}(this, function(ApiClient, ModelExport, ModelsCountStat, ModelsQEvent) {
   'use strict';
 
   /**
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Count all events from a account for a given time-range
+     * Count all events from a account for a given time-range <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.search search term
@@ -118,7 +118,7 @@
      */
 
     /**
-     * Count all events from a node of a sub-account for a given time-range
+     * Count all events from a node of a sub-account for a given time-range <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.search search term
@@ -171,6 +171,67 @@
     }
 
     /**
+     * Callback function to receive the result of the eventRouterExportAllEventsFromAAccountForAGivenTimeRange operation.
+     * @callback module:api/AccounteventApi~eventRouterExportAllEventsFromAAccountForAGivenTimeRangeCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ModelExport} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Export all events from a account for a given time-range <br>
+     * @param {String} xAccountApiKey Account API Key
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.offset offset
+     * @param {Number} opts.limit limit
+     * @param {String} opts.from from date
+     * @param {String} opts.to to date
+     * @param {String} opts.source data source from which to get timestamp keys subaccount or ip
+     * @param {String} opts.sourceId source id from which to get timestamp keys subaccount or ip
+     * @param {module:api/AccounteventApi~eventRouterExportAllEventsFromAAccountForAGivenTimeRangeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ModelExport}
+     */
+    this.eventRouterExportAllEventsFromAAccountForAGivenTimeRange = function(xAccountApiKey, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling eventRouterExportAllEventsFromAAccountForAGivenTimeRange");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'offset': opts['offset'],
+        'limit': opts['limit'],
+        'from': opts['from'],
+        'to': opts['to'],
+        'source': opts['source'],
+        'sourceId': opts['sourceId'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-Account-ApiKey': xAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ModelExport;
+
+      return this.apiClient.callApi(
+        '/account/event/export', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the eventRouterGet operation.
      * @callback module:api/AccounteventApi~eventRouterGetCallback
      * @param {String} error Error message, if any.
@@ -179,7 +240,7 @@
      */
 
     /**
-     * Find Event By Id
+     * Find Event By Id <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {String} eventId the eventId that you want to retrieve
      * @param {module:api/AccounteventApi~eventRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -233,7 +294,7 @@
      */
 
     /**
-     * Find all events of a sub-account from a specific node for a give time-range
+     * Find all events of a sub-account from a specific node for a give time-range <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.search search term
@@ -294,7 +355,7 @@
      */
 
     /**
-     * Find all events from a account for a given time-range
+     * Find all events from a account for a given time-range <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
@@ -359,7 +420,7 @@
      */
 
     /**
-     * Find all events from a account for a given time-range
+     * Find all events from a account for a given time-range <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
@@ -424,7 +485,7 @@
      */
 
     /**
-     * Find all events of a account from a specific node
+     * Find all events of a account from a specific node <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccounteventApi~eventRouterGetAllEventsOfAAccountFromASpecificNodeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsQEvent>}
@@ -471,7 +532,7 @@
      */
 
     /**
-     * Find Event From Node by id
+     * Find Event From Node by id <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {String} eventId the eventId that you want to retrieve
      * @param {module:api/AccounteventApi~eventRouterGetEventInNodeCallback} callback The callback function, accepting three arguments: error, data, response

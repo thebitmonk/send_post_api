@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -96,6 +96,34 @@
           done();
         });
       });
+      describe('eventRouterExportAllEventsFromAAccountForAGivenTimeRange', function() {
+        it('should call eventRouterExportAllEventsFromAAccountForAGivenTimeRange successfully', function(done) {
+          // TODO: uncomment, update parameter values for eventRouterExportAllEventsFromAAccountForAGivenTimeRange call and complete the assertions
+          /*
+          var xAccountApiKey = "xAccountApiKey_example";
+          var opts = {};
+          opts.offset = 789;
+          opts.limit = 789;
+          opts.from = "from_example";
+          opts.to = "to_example";
+          opts.source = "source_example";
+          opts.sourceId = "sourceId_example";
+
+          instance.eventRouterExportAllEventsFromAAccountForAGivenTimeRange(xAccountApiKey, opts, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelExport);
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('eventRouterGet', function() {
         it('should call eventRouterGet successfully', function(done) {
           // TODO: uncomment, update parameter values for eventRouterGet call and complete the assertions
@@ -157,8 +185,16 @@
                 expect(data.eventMetadata.userAgent.patch).to.be("");
             expect(data.from).to.be.a('string');
             expect(data.from).to.be("");
-            expect(data.groups).to.be.a(Object);
-            expect(data.groups).to.be();
+            {
+              let dataCtr = data.groups;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a('string');
+                expect(data).to.be("");
+              }
+            }
             expect(data.ipID).to.be.a('number');
             expect(data.ipID).to.be("0");
             expect(data.messageID).to.be.a('string');
@@ -255,8 +291,16 @@
                   expect(data.eventMetadata.userAgent.patch).to.be("");
               expect(data.from).to.be.a('string');
               expect(data.from).to.be("");
-              expect(data.groups).to.be.a(Object);
-              expect(data.groups).to.be();
+              {
+                let dataCtr = data.groups;
+                expect(dataCtr).to.be.an(Array);
+                expect(dataCtr).to.not.be.empty();
+                for (let p in dataCtr) {
+                  let data = dataCtr[p];
+                  expect(data).to.be.a('string');
+                  expect(data).to.be("");
+                }
+              }
               expect(data.ipID).to.be.a('number');
               expect(data.ipID).to.be("0");
               expect(data.messageID).to.be.a('string');
@@ -356,8 +400,16 @@
                   expect(data.eventMetadata.userAgent.patch).to.be("");
               expect(data.from).to.be.a('string');
               expect(data.from).to.be("");
-              expect(data.groups).to.be.a(Object);
-              expect(data.groups).to.be();
+              {
+                let dataCtr = data.groups;
+                expect(dataCtr).to.be.an(Array);
+                expect(dataCtr).to.not.be.empty();
+                for (let p in dataCtr) {
+                  let data = dataCtr[p];
+                  expect(data).to.be.a('string');
+                  expect(data).to.be("");
+                }
+              }
               expect(data.ipID).to.be.a('number');
               expect(data.ipID).to.be("0");
               expect(data.messageID).to.be.a('string');
@@ -457,8 +509,16 @@
                   expect(data.eventMetadata.userAgent.patch).to.be("");
               expect(data.from).to.be.a('string');
               expect(data.from).to.be("");
-              expect(data.groups).to.be.a(Object);
-              expect(data.groups).to.be();
+              {
+                let dataCtr = data.groups;
+                expect(dataCtr).to.be.an(Array);
+                expect(dataCtr).to.not.be.empty();
+                for (let p in dataCtr) {
+                  let data = dataCtr[p];
+                  expect(data).to.be.a('string');
+                  expect(data).to.be("");
+                }
+              }
               expect(data.ipID).to.be.a('number');
               expect(data.ipID).to.be("0");
               expect(data.messageID).to.be.a('string');
@@ -549,8 +609,16 @@
                   expect(data.eventMetadata.userAgent.patch).to.be("");
               expect(data.from).to.be.a('string');
               expect(data.from).to.be("");
-              expect(data.groups).to.be.a(Object);
-              expect(data.groups).to.be();
+              {
+                let dataCtr = data.groups;
+                expect(dataCtr).to.be.an(Array);
+                expect(dataCtr).to.not.be.empty();
+                for (let p in dataCtr) {
+                  let data = dataCtr[p];
+                  expect(data).to.be.a('string');
+                  expect(data).to.be("");
+                }
+              }
               expect(data.ipID).to.be.a('number');
               expect(data.ipID).to.be("0");
               expect(data.messageID).to.be.a('string');
@@ -637,8 +705,16 @@
                 expect(data.eventMetadata.userAgent.patch).to.be("");
             expect(data.from).to.be.a('string');
             expect(data.from).to.be("");
-            expect(data.groups).to.be.a(Object);
-            expect(data.groups).to.be();
+            {
+              let dataCtr = data.groups;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a('string');
+                expect(data).to.be("");
+              }
+            }
             expect(data.ipID).to.be.a('number');
             expect(data.ipID).to.be("0");
             expect(data.messageID).to.be.a('string');

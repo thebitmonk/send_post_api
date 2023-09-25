@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **clicked** | **Boolean** |  | [optional] 
 **created** | **Number** |  | [optional] 
+**createdBy** | [**ModelsMember**](ModelsMember.md) |  | [optional] 
 **delivered** | **Boolean** |  | [optional] 
 **dropped** | **Boolean** |  | [optional] 
 **enabled** | **Boolean** |  | [optional] 
@@ -16,6 +17,7 @@ Name | Type | Description | Notes
 **softBounced** | **Boolean** |  | [optional] 
 **spam** | **Boolean** |  | [optional] 
 **unsubscribed** | **Boolean** |  | [optional] 
+**updatedBy** | [**ModelsMember**](ModelsMember.md) |  | [optional] 
 **url** | **String** |  | [optional] 
 
 

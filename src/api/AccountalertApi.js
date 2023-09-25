@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Alert', 'model/ModelsAlertRequest', 'model/ModelsAlertResponse', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsDetailedAlert', 'model/ModelsEAlert'], factory);
+    define(['ApiClient', 'model/ModelsAlert', 'model/ModelsAlertRequest', 'model/ModelsAlertResponse', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsDetailedAlert', 'model/ModelsEAlert', 'model/ModelsEMember'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/Alert'), require('../model/ModelsAlertRequest'), require('../model/ModelsAlertResponse'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsDetailedAlert'), require('../model/ModelsEAlert'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsAlert'), require('../model/ModelsAlertRequest'), require('../model/ModelsAlertResponse'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsDetailedAlert'), require('../model/ModelsEAlert'), require('../model/ModelsEMember'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.AccountalertApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.Alert, root.SendPostApi.ModelsAlertRequest, root.SendPostApi.ModelsAlertResponse, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsDetailedAlert, root.SendPostApi.ModelsEAlert);
+    root.SendPostApi.AccountalertApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsAlert, root.SendPostApi.ModelsAlertRequest, root.SendPostApi.ModelsAlertResponse, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsDetailedAlert, root.SendPostApi.ModelsEAlert, root.SendPostApi.ModelsEMember);
   }
-}(this, function(ApiClient, Alert, ModelsAlertRequest, ModelsAlertResponse, ModelsCountStat, ModelsDeleteResponse, ModelsDetailedAlert, ModelsEAlert) {
+}(this, function(ApiClient, ModelsAlert, ModelsAlertRequest, ModelsAlertResponse, ModelsCountStat, ModelsDeleteResponse, ModelsDetailedAlert, ModelsEAlert, ModelsEMember) {
   'use strict';
 
   /**
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Count Total Alerts for account
+     * Count Total Alerts for account <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.search search term
@@ -108,7 +108,7 @@
      */
 
     /**
-     * create an alert
+     * create an alert <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:model/ModelsAlertRequest} body The List to br sent
      * @param {module:api/AccountalertApi~alertRouterCreateAlertCallback} callback The callback function, accepting three arguments: error, data, response
@@ -161,14 +161,15 @@
      */
 
     /**
-     * Delete Alert
+     * Delete Alert <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} alertId The AlertId you want to delete
+     * @param {module:model/ModelsEMember} body The triggering action member
      * @param {module:api/AccountalertApi~alertRouterDeleteCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsDeleteResponse}
      */
-    this.alertRouterDelete = function(xAccountApiKey, alertId, callback) {
-      var postBody = null;
+    this.alertRouterDelete = function(xAccountApiKey, alertId, body, callback) {
+      var postBody = body;
 
       // verify the required parameter 'xAccountApiKey' is set
       if (xAccountApiKey === undefined || xAccountApiKey === null) {
@@ -178,6 +179,11 @@
       // verify the required parameter 'alertId' is set
       if (alertId === undefined || alertId === null) {
         throw new Error("Missing the required parameter 'alertId' when calling alertRouterDelete");
+      }
+
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling alertRouterDelete");
       }
 
 
@@ -215,7 +221,7 @@
      */
 
     /**
-     * Get All Alerts
+     * Get All Alerts <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
@@ -265,17 +271,17 @@
      * Callback function to receive the result of the alertRouterUpdate operation.
      * @callback module:api/AccountalertApi~alertRouterUpdateCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Alert} data The data returned by the service call.
+     * @param {module:model/ModelsAlert} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Update an Alert
+     * Update an Alert <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} alertId The alert you want to update
      * @param {module:model/ModelsEAlert} body The alert  Settings
      * @param {module:api/AccountalertApi~alertRouterUpdateCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Alert}
+     * data is of type: {@link module:model/ModelsAlert}
      */
     this.alertRouterUpdate = function(xAccountApiKey, alertId, body, callback) {
       var postBody = body;
@@ -312,7 +318,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = Alert;
+      var returnType = ModelsAlert;
 
       return this.apiClient.callApi(
         '/account/alert/{alertId}', 'PUT',

@@ -1,6 +1,6 @@
 /*
  * SendPost API
- * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time.
+ * Email API and SMTP relay to not just send and measure email sending, but also alert and optimise. We provide you with tools, expertise and support needed to reliably deliver emails to your customers inboxes on time, every time. 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: hello@sendpost.io
@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsESubAccount', 'model/ModelsIncident', 'model/ModelsSubAccount'], factory);
+    define(['ApiClient', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsEMember', 'model/ModelsESubAccount', 'model/ModelsIncident', 'model/ModelsSubAccount'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsESubAccount'), require('../model/ModelsIncident'), require('../model/ModelsSubAccount'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsEMember'), require('../model/ModelsESubAccount'), require('../model/ModelsIncident'), require('../model/ModelsSubAccount'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.AccountsubaccountApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsESubAccount, root.SendPostApi.ModelsIncident, root.SendPostApi.ModelsSubAccount);
+    root.SendPostApi.AccountsubaccountApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsEMember, root.SendPostApi.ModelsESubAccount, root.SendPostApi.ModelsIncident, root.SendPostApi.ModelsSubAccount);
   }
-}(this, function(ApiClient, ModelsCountStat, ModelsDeleteResponse, ModelsESubAccount, ModelsIncident, ModelsSubAccount) {
+}(this, function(ApiClient, ModelsCountStat, ModelsDeleteResponse, ModelsEMember, ModelsESubAccount, ModelsIncident, ModelsSubAccount) {
   'use strict';
 
   /**
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Count Total Subaccounts
+     * Count Total Subaccounts <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.filterBy filterBy
@@ -112,7 +112,7 @@
      */
 
     /**
-     * Create SubAccount
+     * Create SubAccount <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:model/ModelsESubAccount} body The SubAccount content
      * @param {module:api/AccountsubaccountApi~subAccountRouterCreateCallback} callback The callback function, accepting three arguments: error, data, response
@@ -165,14 +165,15 @@
      */
 
     /**
-     * Delete SubAccount
+     * Delete SubAccount <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} subAccountId The SubAccountId you want to delete
+     * @param {module:model/ModelsEMember} body The triggering action member
      * @param {module:api/AccountsubaccountApi~subAccountRouterDeleteCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsDeleteResponse}
      */
-    this.subAccountRouterDelete = function(xAccountApiKey, subAccountId, callback) {
-      var postBody = null;
+    this.subAccountRouterDelete = function(xAccountApiKey, subAccountId, body, callback) {
+      var postBody = body;
 
       // verify the required parameter 'xAccountApiKey' is set
       if (xAccountApiKey === undefined || xAccountApiKey === null) {
@@ -182,6 +183,11 @@
       // verify the required parameter 'subAccountId' is set
       if (subAccountId === undefined || subAccountId === null) {
         throw new Error("Missing the required parameter 'subAccountId' when calling subAccountRouterDelete");
+      }
+
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling subAccountRouterDelete");
       }
 
 
@@ -219,7 +225,7 @@
      */
 
     /**
-     * Find SubAccount by SubAccountId
+     * Find SubAccount by SubAccountId <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} subAccountId the SubAccountId you want to get
      * @param {module:api/AccountsubaccountApi~subAccountRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -273,7 +279,7 @@
      */
 
     /**
-     * Get All SubAccounts
+     * Get All SubAccounts <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
@@ -332,7 +338,7 @@
      */
 
     /**
-     * Get All Incidents associated with a sub-account
+     * Get All Incidents associated with a sub-account <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} subAccountId The SubAccountId you want to delete
      * @param {module:api/AccountsubaccountApi~subAccountRouterGetAllSubAccountIncidentsCallback} callback The callback function, accepting three arguments: error, data, response
@@ -386,7 +392,7 @@
      */
 
     /**
-     * Update SubAccount
+     * Update SubAccount <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} subAccountId The SubAccountId you want to update
      * @param {module:model/ModelsESubAccount} body The body

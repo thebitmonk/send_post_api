@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created** | **Number** |  | [optional] 
+**createdBy** | [**ModelsMember**](ModelsMember.md) |  | [optional] 
 **domain** | **String** |  | [optional] 
 **endpoint** | **String** |  | [optional] 
 **id** | **Number** |  | [optional] 
@@ -15,5 +16,6 @@ Name | Type | Description | Notes
 **retryTime** | **Number** |  | [optional] 
 **secret** | **String** |  | [optional] 
 **type** | [**ModelsThirdPartySendingProviderType**](ModelsThirdPartySendingProviderType.md) |  | [optional] 
+**updatedBy** | [**ModelsMember**](ModelsMember.md) |  | [optional] 
 
 
