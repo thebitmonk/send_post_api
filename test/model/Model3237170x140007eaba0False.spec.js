@@ -30,31 +30,17 @@
 
   var instance;
 
-  beforeEach(function() {
-    instance = new SendPostApi.AccountexportedApi();
-  });
-
   describe('(package)', function() {
-    describe('AccountexportedApi', function() {
-      describe('exportStatRouterGetStatisticToFile', function() {
-        it('should call exportStatRouterGetStatisticToFile successfully', function(done) {
-          // TODO: uncomment, update parameter values for exportStatRouterGetStatisticToFile call
-          /*
-          var xAccountApiKey = "xAccountApiKey_example";
-
-          instance.exportStatRouterGetStatisticToFile(xAccountApiKey, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
+    describe('Model3237170x140007eaba0False', function() {
+      beforeEach(function() {
+        instance = new SendPostApi.Model3237170x140007eaba0False();
       });
+
+      it('should create an instance of Model3237170x140007eaba0False', function() {
+        // TODO: update the code to test Model3237170x140007eaba0False
+        expect(instance).to.be.a(SendPostApi.Model3237170x140007eaba0False);
+      });
+
     });
   });
 

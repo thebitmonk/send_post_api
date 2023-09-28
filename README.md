@@ -149,7 +149,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccounteventApi* | [**eventRouterGetAllEventsFromAnAccountWhichHasOnlyProccessed**](docs/AccounteventApi.md#eventRouterGetAllEventsFromAnAccountWhichHasOnlyProccessed) | **GET** /account/event/node/eventType | 
 *SendPostApi.AccounteventApi* | [**eventRouterGetAllEventsOfAAccountFromASpecificNode**](docs/AccounteventApi.md#eventRouterGetAllEventsOfAAccountFromASpecificNode) | **POST** /account/event/node | 
 *SendPostApi.AccounteventApi* | [**eventRouterGetEventInNode**](docs/AccounteventApi.md#eventRouterGetEventInNode) | **GET** /account/event/node/{eventId} | 
-*SendPostApi.AccountexportedApi* | [**exportStatRouterGet**](docs/AccountexportedApi.md#exportStatRouterGet) | **GET** /account/exported/ | 
+*SendPostApi.AccountexportedApi* | [**exportStatRouterGetStatisticToFile**](docs/AccountexportedApi.md#exportStatRouterGetStatisticToFile) | **GET** /account/exported/ | 
 *SendPostApi.AccountincidentApi* | [**incidentRouterAdd**](docs/AccountincidentApi.md#incidentRouterAdd) | **POST** /account/incident/{incidentId}/comment | 
 *SendPostApi.AccountincidentApi* | [**incidentRouterCount**](docs/AccountincidentApi.md#incidentRouterCount) | **GET** /account/incident/count | 
 *SendPostApi.AccountincidentApi* | [**incidentRouterCreate**](docs/AccountincidentApi.md#incidentRouterCreate) | **POST** /account/incident/ | 
@@ -340,9 +340,9 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [SendPostApi.Model3234360x1400078b200False](docs/Model3234360x1400078b200False.md)
- - [SendPostApi.Model3237170x1400078b2f0False](docs/Model3237170x1400078b2f0False.md)
- - [SendPostApi.Model6337710x14000b89cb0False](docs/Model6337710x14000b89cb0False.md)
+ - [SendPostApi.Model3234360x140007eaab0False](docs/Model3234360x140007eaab0False.md)
+ - [SendPostApi.Model3237170x140007eaba0False](docs/Model3237170x140007eaba0False.md)
+ - [SendPostApi.Model6337710x14000be9560False](docs/Model6337710x14000be9560False.md)
  - [SendPostApi.ModelExport](docs/ModelExport.md)
  - [SendPostApi.ModelsAGDomainStat](docs/ModelsAGDomainStat.md)
  - [SendPostApi.ModelsAGIPStat](docs/ModelsAGIPStat.md)
