@@ -49,24 +49,24 @@
 
 
     /**
-     * Callback function to receive the result of the exportStatRouterGet operation.
-     * @callback module:api/AccountexportedApi~exportStatRouterGetCallback
+     * Callback function to receive the result of the exportStatRouterGetStatisticToFile operation.
+     * @callback module:api/AccountexportedApi~exportStatRouterGetStatisticToFileCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Get exported stats <br>
+     * Save statistic to the file and send email <br>
      * @param {String} xAccountApiKey Account API Key
-     * @param {module:api/AccountexportedApi~exportStatRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/AccountexportedApi~exportStatRouterGetStatisticToFileCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.exportStatRouterGet = function(xAccountApiKey, callback) {
+    this.exportStatRouterGetStatisticToFile = function(xAccountApiKey, callback) {
       var postBody = null;
 
       // verify the required parameter 'xAccountApiKey' is set
       if (xAccountApiKey === undefined || xAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xAccountApiKey' when calling exportStatRouterGet");
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling exportStatRouterGetStatisticToFile");
       }
 
 

@@ -4,16 +4,16 @@ All URIs are relative to *https://api-stag.sendpost.io/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**exportStatRouterGet**](AccountexportedApi.md#exportStatRouterGet) | **GET** /account/exported/ | 
+[**exportStatRouterGetStatisticToFile**](AccountexportedApi.md#exportStatRouterGetStatisticToFile) | **GET** /account/exported/ | 
 
 
-<a name="exportStatRouterGet"></a>
-# **exportStatRouterGet**
-> exportStatRouterGet(xAccountApiKey)
+<a name="exportStatRouterGetStatisticToFile"></a>
+# **exportStatRouterGetStatisticToFile**
+> exportStatRouterGetStatisticToFile(xAccountApiKey)
 
 
 
-Get exported stats <br>
+Save statistic to the file and send email <br>
 
 ### Example
 ```javascript
@@ -31,7 +31,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.exportStatRouterGet(xAccountApiKey, callback);
+apiInstance.exportStatRouterGetStatisticToFile(xAccountApiKey, callback);
 ```
 
 ### Parameters
