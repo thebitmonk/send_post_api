@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 
-Count Total TPSPs <br>
+Count Total TPSPs 
 
 ### Example
 ```javascript
@@ -68,7 +68,7 @@ No authorization required
 
 
 
-Delete ThirdPartySendingProvider <br>
+Delete ThirdPartySendingProvider 
 
 ### Example
 ```javascript
@@ -120,7 +120,7 @@ No authorization required
 
 
 
-Find ThirdPartySendingProvider by TPSPID <br>
+Find ThirdPartySendingProvider by TPSPID 
 
 ### Example
 ```javascript
@@ -169,7 +169,7 @@ No authorization required
 
 
 
-Get All TPSPs <br>
+Get All TPSPs 
 
 ### Example
 ```javascript
@@ -223,7 +223,7 @@ No authorization required
 
 
 
-Insert ThirdPartySendingProvider <br>
+Insert ThirdPartySendingProvider 
 
 ### Example
 ```javascript
@@ -272,7 +272,7 @@ No authorization required
 
 
 
-Update ThirdPartySendingProvider <br>
+Update ThirdPartySendingProvider 
 
 ### Example
 ```javascript

@@ -66,7 +66,7 @@ No authorization required
 
 
 
-Count Total Validations <br>
+Count Total Validations 
 
 ### Example
 ```javascript
@@ -112,7 +112,7 @@ No authorization required
 
 
 
-Delete a specific validation <br>
+Delete a specific validation 
 
 ### Example
 ```javascript
@@ -161,7 +161,7 @@ No authorization required
 
 
 
-Get all validation <br>
+Get all validation 
 
 ### Example
 ```javascript
@@ -215,7 +215,7 @@ No authorization required
 
 
 
-Validate Email List Synchronously <br>
+Validate Email List Synchronously 
 
 ### Example
 ```javascript

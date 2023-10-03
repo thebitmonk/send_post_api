@@ -149,6 +149,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccounteventApi* | [**eventRouterGetAllEventsFromAnAccountWhichHasOnlyProccessed**](docs/AccounteventApi.md#eventRouterGetAllEventsFromAnAccountWhichHasOnlyProccessed) | **GET** /account/event/node/eventType | 
 *SendPostApi.AccounteventApi* | [**eventRouterGetAllEventsOfAAccountFromASpecificNode**](docs/AccounteventApi.md#eventRouterGetAllEventsOfAAccountFromASpecificNode) | **POST** /account/event/node | 
 *SendPostApi.AccounteventApi* | [**eventRouterGetEventInNode**](docs/AccounteventApi.md#eventRouterGetEventInNode) | **GET** /account/event/node/{eventId} | 
+*SendPostApi.AccountexportedApi* | [**exportStatRouterGetStatisticToFile**](docs/AccountexportedApi.md#exportStatRouterGetStatisticToFile) | **GET** /account/exported/ | 
 *SendPostApi.AccountincidentApi* | [**incidentRouterAdd**](docs/AccountincidentApi.md#incidentRouterAdd) | **POST** /account/incident/{incidentId}/comment | 
 *SendPostApi.AccountincidentApi* | [**incidentRouterCount**](docs/AccountincidentApi.md#incidentRouterCount) | **GET** /account/incident/count | 
 *SendPostApi.AccountincidentApi* | [**incidentRouterCreate**](docs/AccountincidentApi.md#incidentRouterCreate) | **POST** /account/incident/ | 
@@ -339,9 +340,9 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [SendPostApi.Model3234360x14000786f00False](docs/Model3234360x14000786f00False.md)
- - [SendPostApi.Model3237170x14000786ff0False](docs/Model3237170x14000786ff0False.md)
- - [SendPostApi.Model6337710x14000b899b0False](docs/Model6337710x14000b899b0False.md)
+ - [SendPostApi.Model3246890x14000753440False](docs/Model3246890x14000753440False.md)
+ - [SendPostApi.Model3249700x14000753530False](docs/Model3249700x14000753530False.md)
+ - [SendPostApi.Model6353670x14000b47fb0False](docs/Model6353670x14000b47fb0False.md)
  - [SendPostApi.ModelExport](docs/ModelExport.md)
  - [SendPostApi.ModelsAGDomainStat](docs/ModelsAGDomainStat.md)
  - [SendPostApi.ModelsAGIPStat](docs/ModelsAGIPStat.md)

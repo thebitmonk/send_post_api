@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 
-Count Total Alerts for account <br>
+Count Total Alerts for account 
 
 ### Example
 ```javascript
@@ -67,7 +67,7 @@ No authorization required
 
 
 
-create an alert <br>
+create an alert 
 
 ### Example
 ```javascript
@@ -116,7 +116,7 @@ No authorization required
 
 
 
-Delete Alert <br>
+Delete Alert 
 
 ### Example
 ```javascript
@@ -168,7 +168,7 @@ No authorization required
 
 
 
-Get All Alerts <br>
+Get All Alerts 
 
 ### Example
 ```javascript
@@ -222,7 +222,7 @@ No authorization required
 
 
 
-Update an Alert <br>
+Update an Alert 
 
 ### Example
 ```javascript

@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 
-get reputation of domain <br>
+get reputation of domain 
 
 ### Example
 ```javascript
@@ -64,7 +64,7 @@ No authorization required
 
 
 
-get Providers available <br>
+get Providers available 
 
 ### Example
 ```javascript
@@ -113,7 +113,7 @@ No authorization required
 
 
 
-get Providers available <br>
+get Providers available 
 
 ### Example
 ```javascript
