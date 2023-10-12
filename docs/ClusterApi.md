@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 
-Add items to suppression filter of every node in cluster 
+Add items to suppression filter of every node in cluster <br>
 
 ### Example
 ```javascript
@@ -64,7 +64,7 @@ No authorization required
 
 
 
-Delete item from cache of every node in cluster 
+Delete item from cache of every node in cluster <br>
 
 ### Example
 ```javascript
@@ -116,7 +116,7 @@ No authorization required
 
 
 
-Delete items from suppression filter of every node in cluster 
+Delete items from suppression filter of every node in cluster <br>
 
 ### Example
 ```javascript
@@ -162,7 +162,7 @@ No authorization required
 
 
 
-Get item from cache of every node in cluster 
+Get item from cache of every node in cluster <br>
 
 ### Example
 ```javascript
@@ -214,7 +214,7 @@ No authorization required
 
 
 
-Delete item from cache of specific node in cluster 
+Delete item from cache of specific node in cluster <br>
 
 ### Example
 ```javascript
@@ -266,7 +266,7 @@ No authorization required
 
 
 
-Get item from cache of specific node in cluster 
+Get item from cache of specific node in cluster <br>
 
 ### Example
 ```javascript

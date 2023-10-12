@@ -57,7 +57,7 @@
      */
 
     /**
-     * Delete Member 
+     * Delete Member <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} memberId The MemberId you want to delete
      * @param {module:api/AccountmemberApi~memberRouterDeleteCallback} callback The callback function, accepting three arguments: error, data, response
@@ -111,7 +111,7 @@
      */
 
     /**
-     * Find Member by MemberId 
+     * Find Member by MemberId <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} memberId the MemberId you want to get
      * @param {module:api/AccountmemberApi~memberRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -165,7 +165,7 @@
      */
 
     /**
-     * Get All Members 
+     * Get All Members <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountmemberApi~memberRouterGetAllCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsMember>}
@@ -212,7 +212,7 @@
      */
 
     /**
-     * Update Member 
+     * Update Member <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} memberId The MemberId you want to update
      * @param {module:model/ModelsUMember} body The body
@@ -272,7 +272,7 @@
      */
 
     /**
-     * Verify Member By Email Request 
+     * Verify Member By Email Request <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} memberId the MemberId who is inviting new member to join the account
      * @param {module:model/ModelsVerifyByMemberTokenRequest} body The Email to be used to verify

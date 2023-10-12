@@ -57,7 +57,7 @@
      */
 
     /**
-     * Save statistic to the file and send email 
+     * Save statistic to the file and send email <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountexportedApi~exportStatRouterGetStatisticToFileCallback} callback The callback function, accepting three arguments: error, data, response
      */

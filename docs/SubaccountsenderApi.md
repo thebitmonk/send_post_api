@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 
-Count Total Senders 
+Count Total Senders <br>
 
 ### Example
 ```javascript
@@ -64,7 +64,7 @@ No authorization required
 
 
 
-Create Sender 
+Create Sender <br>
 
 ### Example
 ```javascript
@@ -113,7 +113,7 @@ No authorization required
 
 
 
-Delete Sender 
+Delete Sender <br>
 
 ### Example
 ```javascript
@@ -162,7 +162,7 @@ No authorization required
 
 
 
-Find Sender by SenderId 
+Find Sender by SenderId <br>
 
 ### Example
 ```javascript
@@ -211,7 +211,7 @@ No authorization required
 
 
 
-Get All Senders 
+Get All Senders <br>
 
 ### Example
 ```javascript
@@ -265,7 +265,7 @@ No authorization required
 
 
 
-Update Sender 
+Update Sender <br>
 
 ### Example
 ```javascript

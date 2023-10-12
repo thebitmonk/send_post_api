@@ -57,7 +57,7 @@
      */
 
     /**
-     * Count Total Account Domains 
+     * Count Total Account Domains <br>
      * @param {String} xAccountApiKey Sub-Account API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.search search term
@@ -108,7 +108,7 @@
      */
 
     /**
-     * Find Domain by DomainId 
+     * Find Domain by DomainId <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} domainId the DomainId you want to get
      * @param {module:api/AccountdomainApi~accountDomainRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -162,7 +162,7 @@
      */
 
     /**
-     * Get All Domains 
+     * Get All Domains <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset

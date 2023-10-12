@@ -57,7 +57,7 @@
      */
 
     /**
-     * Count Total IPPools 
+     * Count Total IPPools <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {module:api/SubaccountippoolApi~iPPoolRouterCountCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsCountStat}
@@ -104,7 +104,7 @@
      */
 
     /**
-     * Create IPPool 
+     * Create IPPool <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {module:model/ModelsEIPPool} body The IPPool content
      * @param {module:api/SubaccountippoolApi~iPPoolRouterCreateCallback} callback The callback function, accepting three arguments: error, data, response
@@ -157,7 +157,7 @@
      */
 
     /**
-     * Delete IPPool 
+     * Delete IPPool <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Number} ippoolid The IPPoolId you want to delete
      * @param {module:api/SubaccountippoolApi~iPPoolRouterDeleteCallback} callback The callback function, accepting three arguments: error, data, response
@@ -211,7 +211,7 @@
      */
 
     /**
-     * Find IPPool by IPPoolId 
+     * Find IPPool by IPPoolId <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Number} ippoolid the IPPoolId you want to get
      * @param {module:api/SubaccountippoolApi~iPPoolRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -265,7 +265,7 @@
      */
 
     /**
-     * Get All IPPools 
+     * Get All IPPools <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
@@ -320,7 +320,7 @@
      */
 
     /**
-     * Update IPPool 
+     * Update IPPool <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Number} ippoolid The IPPoolId you want to update
      * @param {module:model/ModelsEIPPool} body The body

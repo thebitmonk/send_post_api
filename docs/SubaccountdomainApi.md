@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 
 
-Count Total Domains 
+Count Total Domains <br>
 
 ### Example
 ```javascript
@@ -67,7 +67,7 @@ No authorization required
 
 
 
-Create Domain 
+Create Domain <br>
 
 ### Example
 ```javascript
@@ -116,7 +116,7 @@ No authorization required
 
 
 
-Delete Domain 
+Delete Domain <br>
 
 ### Example
 ```javascript
@@ -168,7 +168,7 @@ No authorization required
 
 
 
-Find Domain by DomainId 
+Find Domain by DomainId <br>
 
 ### Example
 ```javascript
@@ -217,7 +217,7 @@ No authorization required
 
 
 
-Get All Domains 
+Get All Domains <br>
 
 ### Example
 ```javascript
@@ -271,7 +271,7 @@ No authorization required
 
 
 
-Update Domain 
+Update Domain <br>
 
 ### Example
 ```javascript
@@ -323,7 +323,7 @@ No authorization required
 
 
 
-Verify Domain By Domain Id 
+Verify Domain By Domain Id <br>
 
 ### Example
 ```javascript
@@ -372,7 +372,7 @@ No authorization required
 
 
 
-Verify Domain By Signed Token 
+Verify Domain By Signed Token <br>
 
 ### Example
 ```javascript
@@ -424,7 +424,7 @@ No authorization required
 
 
 
-Verify Domain By Email Request 
+Verify Domain By Email Request <br>
 
 ### Example
 ```javascript

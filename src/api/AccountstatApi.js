@@ -57,7 +57,7 @@
      */
 
     /**
-     * Responds back with Account Processed Mails Stat 
+     * Responds back with Account Processed Mails Stat <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountstatApi~accountStatRouterGetAccountCycleUsageCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsAccountCycleUsage}
@@ -104,7 +104,7 @@
      */
 
     /**
-     * Get All Account Stats 
+     * Get All Account Stats <br>
      * @param {String} xAccountApiKey Sub-Account API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
@@ -157,7 +157,7 @@
      */
 
     /**
-     * Get All Account Stats by Group 
+     * Get All Account Stats by Group <br>
      * @param {String} xAccountApiKey Sub-Account API Key
      * @param {String} group the group whose stats you want
      * @param {Object} opts Optional parameters
@@ -217,7 +217,7 @@
      */
 
     /**
-     * Get All Aggregate Stats 
+     * Get All Aggregate Stats <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
@@ -270,7 +270,7 @@
      */
 
     /**
-     * Get All Aggregate Stats by Group 
+     * Get All Aggregate Stats by Group <br>
      * @param {String} xAccountApiKey Sub-Account API Key
      * @param {String} group the group whose stats you want
      * @param {Object} opts Optional parameters
@@ -330,7 +330,7 @@
      */
 
     /**
-     * Get All Aggregate Domain Stats 
+     * Get All Aggregate Domain Stats <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {String} from from date
      * @param {String} to to date
@@ -409,7 +409,7 @@
      */
 
     /**
-     * Get All Aggregate Domain Stats Count 
+     * Get All Aggregate Domain Stats Count <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {String} from from date
      * @param {String} to to date
@@ -478,7 +478,7 @@
      */
 
     /**
-     * Get All Aggregate IP Stats 
+     * Get All Aggregate IP Stats <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {String} from from date
      * @param {String} to to date
@@ -561,7 +561,7 @@
      */
 
     /**
-     * Get All Aggregate IP Stats Count 
+     * Get All Aggregate IP Stats Count <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {String} from from date
      * @param {String} to to date
@@ -634,7 +634,7 @@
      */
 
     /**
-     * Get All Aggregate SubAccount Stats 
+     * Get All Aggregate SubAccount Stats <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {String} from from date
      * @param {String} to to date
@@ -713,7 +713,7 @@
      */
 
     /**
-     * Get All Aggregate SubAccount Stats Count 
+     * Get All Aggregate SubAccount Stats Count <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {String} from from date
      * @param {String} to to date
@@ -782,7 +782,7 @@
      */
 
     /**
-     * Get All Aggregate Third Party Providers Stats 
+     * Get All Aggregate Third Party Providers Stats <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {String} from from date
      * @param {String} to to date
@@ -861,7 +861,7 @@
      */
 
     /**
-     * Get All Aggregate Third Party Providers Stats Count 
+     * Get All Aggregate Third Party Providers Stats Count <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {String} from from date
      * @param {String} to to date

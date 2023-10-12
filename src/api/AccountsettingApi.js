@@ -57,7 +57,7 @@
      */
 
     /**
-     * check if account has dedicated ip's 
+     * check if account has dedicated ip's <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountsettingApi~accountSettingRouterCheckDedicatedIPExistCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsDedicatedIPs}
@@ -104,7 +104,7 @@
      */
 
     /**
-     * get latest account details 
+     * get latest account details <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountsettingApi~accountSettingRouterGetAccountCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsAccount}
@@ -151,7 +151,7 @@
      */
 
     /**
-     * update account settings 
+     * update account settings <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:model/ModelsEAccountSetting} body The account settings to be updated
      * @param {module:api/AccountsettingApi~accountSettingRouterUpdateCallback} callback The callback function, accepting three arguments: error, data, response

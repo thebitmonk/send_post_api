@@ -57,7 +57,7 @@
      */
 
     /**
-     * Count all events from a account for a given time-range 
+     * Count all events from a account for a given time-range <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.search search term
@@ -118,7 +118,7 @@
      */
 
     /**
-     * Count all events from a node of a sub-account for a given time-range 
+     * Count all events from a node of a sub-account for a given time-range <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.search search term
@@ -179,7 +179,7 @@
      */
 
     /**
-     * Export all events from a account for a given time-range 
+     * Export all events from a account for a given time-range <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
@@ -240,7 +240,7 @@
      */
 
     /**
-     * Find Event By Id 
+     * Find Event By Id <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {String} eventId the eventId that you want to retrieve
      * @param {module:api/AccounteventApi~eventRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -294,7 +294,7 @@
      */
 
     /**
-     * Find all events of a sub-account from a specific node for a give time-range 
+     * Find all events of a sub-account from a specific node for a give time-range <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.search search term
@@ -355,7 +355,7 @@
      */
 
     /**
-     * Find all events from a account for a given time-range 
+     * Find all events from a account for a given time-range <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
@@ -420,7 +420,7 @@
      */
 
     /**
-     * Find all events from a account for a given time-range 
+     * Find all events from a account for a given time-range <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
@@ -485,7 +485,7 @@
      */
 
     /**
-     * Find all events of a account from a specific node 
+     * Find all events of a account from a specific node <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccounteventApi~eventRouterGetAllEventsOfAAccountFromASpecificNodeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsQEvent>}
@@ -532,7 +532,7 @@
      */
 
     /**
-     * Find Event From Node by id 
+     * Find Event From Node by id <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {String} eventId the eventId that you want to retrieve
      * @param {module:api/AccounteventApi~eventRouterGetEventInNodeCallback} callback The callback function, accepting three arguments: error, data, response

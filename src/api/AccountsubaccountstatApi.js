@@ -57,7 +57,7 @@
      */
 
     /**
-     * Get All Aggregate Sub-Account Stats 
+     * Get All Aggregate Sub-Account Stats <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} sid the subaccount id you want to get
      * @param {Object} opts Optional parameters
@@ -117,7 +117,7 @@
      */
 
     /**
-     * Get All Aggregated Domain Stats for a Sub-Account 
+     * Get All Aggregated Domain Stats for a Sub-Account <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} sid the subaccount id you want to get
      * @param {Object} opts Optional parameters
@@ -177,7 +177,7 @@
      */
 
     /**
-     * Get All Aggregated Group Stats for a Sub-Account 
+     * Get All Aggregated Group Stats for a Sub-Account <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} sid the subaccount id you want to get
      * @param {Object} opts Optional parameters
@@ -237,7 +237,7 @@
      */
 
     /**
-     * Get All Aggregated IP Stats for a Sub-Account 
+     * Get All Aggregated IP Stats for a Sub-Account <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} sid the subaccount id you want to get
      * @param {Object} opts Optional parameters
@@ -297,7 +297,7 @@
      */
 
     /**
-     * Get All Aggregated Provider Stats for a Sub-Account 
+     * Get All Aggregated Provider Stats for a Sub-Account <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} sid the subaccount id you want to get
      * @param {Object} opts Optional parameters
@@ -357,7 +357,7 @@
      */
 
     /**
-     * Get All Sub-Account Stats 
+     * Get All Sub-Account Stats <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} sid the subaccount id you want to get
      * @param {Object} opts Optional parameters

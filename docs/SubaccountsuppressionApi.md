@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 
 
-Count Total Suppressions 
+Count Total Suppressions <br>
 
 ### Example
 ```javascript
@@ -71,7 +71,7 @@ No authorization required
 
 
 
-Add Email Addresses To Suppression List 
+Add Email Addresses To Suppression List <br>
 
 ### Example
 ```javascript
@@ -120,7 +120,7 @@ No authorization required
 
 
 
-Add Email Addresses To Suppression Filter 
+Add Email Addresses To Suppression Filter <br>
 
 ### Example
 ```javascript
@@ -166,7 +166,7 @@ No authorization required
 
 
 
-Delete specific emails which are in suppression list 
+Delete specific emails which are in suppression list <br>
 
 ### Example
 ```javascript
@@ -215,7 +215,7 @@ No authorization required
 
 
 
-Delete specific emails which are in suppression list 
+Delete specific emails which are in suppression list <br>
 
 ### Example
 ```javascript
@@ -261,7 +261,7 @@ No authorization required
 
 
 
-Export all suppressions 
+Export all suppressions <br>
 
 ### Example
 ```javascript
@@ -315,7 +315,7 @@ No authorization required
 
 
 
-Get all suppressions 
+Get all suppressions <br>
 
 ### Example
 ```javascript

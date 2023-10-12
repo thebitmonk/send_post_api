@@ -57,7 +57,7 @@
      */
 
     /**
-     * Add items to suppression filter of every node in cluster 
+     * Add items to suppression filter of every node in cluster <br>
      * @param {Array.<module:model/ModelsSuppression>} body Add suppressions to suppression filter
      * @param {module:api/ClusterApi~clusterRouterAddItemsToSuppressionFilterOfEveryNodeInClusterCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -102,7 +102,7 @@
      */
 
     /**
-     * Delete item from cache of every node in cluster 
+     * Delete item from cache of every node in cluster <br>
      * @param {String} xSystemApiKey System API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.name cache name
@@ -154,7 +154,7 @@
      */
 
     /**
-     * Delete items from suppression filter of every node in cluster 
+     * Delete items from suppression filter of every node in cluster <br>
      * @param {Array.<module:model/ModelsSuppression>} body Delete suppressions from suppression filter
      * @param {module:api/ClusterApi~clusterRouterDeleteItemsFromSuppressionFilterOfEveryNodeInClusterCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -199,7 +199,7 @@
      */
 
     /**
-     * Get item from cache of every node in cluster 
+     * Get item from cache of every node in cluster <br>
      * @param {String} xSystemApiKey System API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.name cache name
@@ -252,7 +252,7 @@
      */
 
     /**
-     * Delete item from cache of specific node in cluster 
+     * Delete item from cache of specific node in cluster <br>
      * @param {String} xSystemApiKey System API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.name cache name
@@ -305,7 +305,7 @@
      */
 
     /**
-     * Get item from cache of specific node in cluster 
+     * Get item from cache of specific node in cluster <br>
      * @param {String} xSystemApiKey System API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.name cache name

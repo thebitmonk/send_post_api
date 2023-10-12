@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 
-Receive webhooks raised from SMTP servers 
+Receive webhooks raised from SMTP servers <br>
 
 ### Example
 ```javascript

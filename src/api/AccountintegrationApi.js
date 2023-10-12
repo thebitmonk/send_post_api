@@ -57,7 +57,7 @@
      */
 
     /**
-     * Count Total AccountIntegrations 
+     * Count Total AccountIntegrations <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountintegrationApi~accountIntegrationRouterCountCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsCountStat}
@@ -104,7 +104,7 @@
      */
 
     /**
-     * Create Integration 
+     * Create Integration <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {String} itype The integration type you want to create
      * @param {module:model/ModelsEIntegration} body The Integration content
@@ -164,7 +164,7 @@
      */
 
     /**
-     * Delete Integration 
+     * Delete Integration <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {String} itype The integration type you want to update
      * @param {module:model/ModelsEMember} body The triggering action member
@@ -224,7 +224,7 @@
      */
 
     /**
-     * Disable IP Monitoring for a single IP 
+     * Disable IP Monitoring for a single IP <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid the IPId you want to disable monitoring for
      * @param {module:model/ModelsEMember} body The triggering action member
@@ -284,7 +284,7 @@
      */
 
     /**
-     * Enable IP Monitoring for a single IP 
+     * Enable IP Monitoring for a single IP <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid the IPId you want to enable monitoring for
      * @param {module:model/ModelsEMember} body The triggering action member
@@ -344,7 +344,7 @@
      */
 
     /**
-     * Get All Integrations 
+     * Get All Integrations <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountintegrationApi~accountIntegrationRouterGetAllCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsIntegration>}
@@ -391,7 +391,7 @@
      */
 
     /**
-     * Get Monitored IP Stats 
+     * Get Monitored IP Stats <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ipid the IPId for which you want monitored stats
      * @param {Object} opts Optional parameters
@@ -451,7 +451,7 @@
      */
 
     /**
-     * Update Integration 
+     * Update Integration <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {String} itype The integration type you want to update
      * @param {module:model/ModelsEIntegration} body The Integration content

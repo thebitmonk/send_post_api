@@ -57,7 +57,7 @@
      */
 
     /**
-     * Count Total AccountIPPools 
+     * Count Total AccountIPPools <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountippoolApi~accountIPPoolRouterCountCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsCountStat}
@@ -104,7 +104,7 @@
      */
 
     /**
-     * Create AccountIPPool 
+     * Create AccountIPPool <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:model/ModelsEIPPool} body The AccountIPPool content
      * @param {module:api/AccountippoolApi~accountIPPoolRouterCreateCallback} callback The callback function, accepting three arguments: error, data, response
@@ -157,7 +157,7 @@
      */
 
     /**
-     * Delete AccountIPPool 
+     * Delete AccountIPPool <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ippoolid The AccountIPPoolId you want to delete
      * @param {module:model/ModelsEMember} body The triggering action member
@@ -217,7 +217,7 @@
      */
 
     /**
-     * Find AccountIPPool by AccountIPPoolId 
+     * Find AccountIPPool by AccountIPPoolId <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ippoolid the AccountIPPoolId you want to get
      * @param {module:api/AccountippoolApi~accountIPPoolRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -271,7 +271,7 @@
      */
 
     /**
-     * Get All AccountIPPools 
+     * Get All AccountIPPools <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
@@ -326,7 +326,7 @@
      */
 
     /**
-     * Get All AccountIPPools without fetching IPs, TPSPs and other pools 
+     * Get All AccountIPPools without fetching IPs, TPSPs and other pools <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
@@ -381,7 +381,7 @@
      */
 
     /**
-     * Update AccountIPPool 
+     * Update AccountIPPool <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} ippoolid The AccountIPPoolId you want to update
      * @param {module:model/ModelsEIPPool} body The body

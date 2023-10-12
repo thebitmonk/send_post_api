@@ -57,7 +57,7 @@
      */
 
     /**
-     * Create Invitation 
+     * Create Invitation <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:model/ModelsEInvitation} body The Invitation content
      * @param {module:api/AccountinvitationApi~invitationRouterCreateCallback} callback The callback function, accepting three arguments: error, data, response
@@ -110,7 +110,7 @@
      */
 
     /**
-     * Delete Invitation 
+     * Delete Invitation <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} invitationId The InvitationId you want to delete
      * @param {module:model/ModelsEMember} body The triggering action member
@@ -170,7 +170,7 @@
      */
 
     /**
-     * Get All Invitations 
+     * Get All Invitations <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccountinvitationApi~invitationRouterGetAllCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsInvitation>}

@@ -57,7 +57,7 @@
      */
 
     /**
-     * Count Total Suppressions 
+     * Count Total Suppressions <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
@@ -110,7 +110,7 @@
      */
 
     /**
-     * Add Email Addresses To Suppression List 
+     * Add Email Addresses To Suppression List <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {module:model/ModelsRSuppression} body Suppression content
      * @param {module:api/SubaccountsuppressionApi~suppressionRouterCreateSuppressionsCallback} callback The callback function, accepting three arguments: error, data, response
@@ -163,7 +163,7 @@
      */
 
     /**
-     * Add Email Addresses To Suppression Filter 
+     * Add Email Addresses To Suppression Filter <br>
      * @param {Array.<module:model/ModelsSuppression>} body Add suppressions to suppression filter
      * @param {module:api/SubaccountsuppressionApi~suppressionRouterCreateSuppressionsInSuppressionFilterCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -208,7 +208,7 @@
      */
 
     /**
-     * Delete specific emails which are in suppression list 
+     * Delete specific emails which are in suppression list <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {module:model/ModelsRDSuppression} body Suppression content
      * @param {module:api/SubaccountsuppressionApi~suppressionRouterDeleteSuppressionCallback} callback The callback function, accepting three arguments: error, data, response
@@ -261,7 +261,7 @@
      */
 
     /**
-     * Delete specific emails which are in suppression list 
+     * Delete specific emails which are in suppression list <br>
      * @param {Array.<module:model/ModelsSuppression>} body Suppression content
      * @param {module:api/SubaccountsuppressionApi~suppressionRouterDeleteSuppressionsInSuppressionFilterCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -306,7 +306,7 @@
      */
 
     /**
-     * Export all suppressions 
+     * Export all suppressions <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.from from date
@@ -360,7 +360,7 @@
      */
 
     /**
-     * Get all suppressions 
+     * Get all suppressions <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset

@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 
-fetch Bee editor token 
+fetch Bee editor token <br>
 
 ### Example
 ```javascript

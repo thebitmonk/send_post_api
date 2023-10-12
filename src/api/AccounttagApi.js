@@ -57,7 +57,7 @@
      */
 
     /**
-     * Create Tag 
+     * Create Tag <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:model/ModelsETag} body The Tag content
      * @param {module:api/AccounttagApi~tagRouterCreateCallback} callback The callback function, accepting three arguments: error, data, response
@@ -110,7 +110,7 @@
      */
 
     /**
-     * Delete Tag 
+     * Delete Tag <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} tagid The AccountTagId you want to delete
      * @param {module:model/ModelsEMember} body The triggering action member
@@ -170,7 +170,7 @@
      */
 
     /**
-     * Get All Tags 
+     * Get All Tags <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:api/AccounttagApi~tagRouterGetAllCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ModelsTag>}

@@ -57,7 +57,7 @@
      */
 
     /**
-     * Find Message By Id 
+     * Find Message By Id <br>
      * @param {String} xAccountApiKey Sub-Account API Key
      * @param {String} messageId the messageId that you want to retrieve
      * @param {module:api/AccountmessageApi~messageRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -111,7 +111,7 @@
      */
 
     /**
-     * Find all events associated with a message id 
+     * Find all events associated with a message id <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {String} messageId the messageId that you want to retrieve
      * @param {module:api/AccountmessageApi~messageRouterGetAllEventsForAMessageIdCallback} callback The callback function, accepting three arguments: error, data, response
@@ -165,7 +165,7 @@
      */
 
     /**
-     * Find all message events associated with a message id from a specific node 
+     * Find all message events associated with a message id from a specific node <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {String} messageId the messageId that you want to retrieve
      * @param {module:api/AccountmessageApi~messageRouterGetAllEventsForAMessageIdFromANodeCallback} callback The callback function, accepting three arguments: error, data, response
@@ -219,7 +219,7 @@
      */
 
     /**
-     * Find Message from node by specific Id 
+     * Find Message from node by specific Id <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {String} messageId the messageId that you want to retrieve
      * @param {module:api/AccountmessageApi~messageRouterGetMessageFromNodeCallback} callback The callback function, accepting three arguments: error, data, response

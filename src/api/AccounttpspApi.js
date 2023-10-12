@@ -57,7 +57,7 @@
      */
 
     /**
-     * Count Total TPSPs 
+     * Count Total TPSPs <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {String} opts.search search term
@@ -108,7 +108,7 @@
      */
 
     /**
-     * Delete ThirdPartySendingProvider 
+     * Delete ThirdPartySendingProvider <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} tpspId The TPSPID you want to delete
      * @param {module:model/ModelsEMember} body The triggering action member
@@ -168,7 +168,7 @@
      */
 
     /**
-     * Find ThirdPartySendingProvider by TPSPID 
+     * Find ThirdPartySendingProvider by TPSPID <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} tpspId the TPSPID you want to get
      * @param {module:api/AccounttpspApi~tPSPRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -222,7 +222,7 @@
      */
 
     /**
-     * Get All TPSPs 
+     * Get All TPSPs <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
@@ -277,7 +277,7 @@
      */
 
     /**
-     * Insert ThirdPartySendingProvider 
+     * Insert ThirdPartySendingProvider <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {module:model/ModelsEThirdPartySendingProvider} body The body
      * @param {module:api/AccounttpspApi~tPSPRouterInsertCallback} callback The callback function, accepting three arguments: error, data, response
@@ -330,7 +330,7 @@
      */
 
     /**
-     * Update ThirdPartySendingProvider 
+     * Update ThirdPartySendingProvider <br>
      * @param {String} xAccountApiKey Account API Key
      * @param {Number} tpspId The TPSPID you want to update
      * @param {module:model/ModelsEUpdateTPSP} body The body

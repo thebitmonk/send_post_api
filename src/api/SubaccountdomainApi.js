@@ -57,7 +57,7 @@
      */
 
     /**
-     * Count Total Domains 
+     * Count Total Domains <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {module:api/SubaccountdomainApi~domainRouterCountCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsCountStat}
@@ -104,7 +104,7 @@
      */
 
     /**
-     * Create Domain 
+     * Create Domain <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {module:model/ModelsEDomain} body The Domain content
      * @param {module:api/SubaccountdomainApi~domainRouterCreateCallback} callback The callback function, accepting three arguments: error, data, response
@@ -157,7 +157,7 @@
      */
 
     /**
-     * Delete Domain 
+     * Delete Domain <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Number} domainId The DomainId you want to delete
      * @param {module:model/ModelsEMember} body The triggering action member
@@ -217,7 +217,7 @@
      */
 
     /**
-     * Find Domain by DomainId 
+     * Find Domain by DomainId <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Number} domainId the DomainId you want to get
      * @param {module:api/SubaccountdomainApi~domainRouterGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -271,7 +271,7 @@
      */
 
     /**
-     * Get All Domains 
+     * Get All Domains <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Object} opts Optional parameters
      * @param {Number} opts.offset offset
@@ -326,7 +326,7 @@
      */
 
     /**
-     * Update Domain 
+     * Update Domain <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Number} domainId The DomainId you want to update
      * @param {module:model/ModelsEDomain} body The body
@@ -386,7 +386,7 @@
      */
 
     /**
-     * Verify Domain By Domain Id 
+     * Verify Domain By Domain Id <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Number} domainId the DomainId you want to get
      * @param {module:api/SubaccountdomainApi~domainRouterVerifyCallback} callback The callback function, accepting three arguments: error, data, response
@@ -440,7 +440,7 @@
      */
 
     /**
-     * Verify Domain By Signed Token 
+     * Verify Domain By Signed Token <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Number} domainId the DomainId you want to get
      * @param {String} token The signed token used to verify
@@ -501,7 +501,7 @@
      */
 
     /**
-     * Verify Domain By Email Request 
+     * Verify Domain By Email Request <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Number} domainId the DomainId you want to get
      * @param {module:model/ModelsVerifyByTokenRequest} body The Email to be used to verify
