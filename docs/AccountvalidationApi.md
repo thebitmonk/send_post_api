@@ -157,7 +157,7 @@ No authorization required
 
 <a name="validationRouterGetAll"></a>
 # **validationRouterGetAll**
-> [ModelsListCleaningJob] validationRouterGetAll(xSubAccountApiKey, opts)
+> [ModelsValidationJob] validationRouterGetAll(xSubAccountApiKey, opts)
 
 
 
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[ModelsListCleaningJob]**](ModelsListCleaningJob.md)
+[**[ModelsValidationJob]**](ModelsValidationJob.md)
 
 ### Authorization
 
@@ -211,7 +211,7 @@ No authorization required
 
 <a name="validationRouterValidateEmailList"></a>
 # **validationRouterValidateEmailList**
-> ModelsCleanedList validationRouterValidateEmailList(xSubAccountApiKey, body)
+> ModelsValidatedEmailList validationRouterValidateEmailList(xSubAccountApiKey, body)
 
 
 
@@ -247,7 +247,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ModelsCleanedList**](ModelsCleanedList.md)
+[**ModelsValidatedEmailList**](ModelsValidatedEmailList.md)
 
 ### Authorization
 

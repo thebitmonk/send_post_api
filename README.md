@@ -149,6 +149,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccounteventApi* | [**eventRouterGetAllEventsFromAnAccountWhichHasOnlyProccessed**](docs/AccounteventApi.md#eventRouterGetAllEventsFromAnAccountWhichHasOnlyProccessed) | **GET** /account/event/node/eventType | 
 *SendPostApi.AccounteventApi* | [**eventRouterGetAllEventsOfAAccountFromASpecificNode**](docs/AccounteventApi.md#eventRouterGetAllEventsOfAAccountFromASpecificNode) | **POST** /account/event/node | 
 *SendPostApi.AccounteventApi* | [**eventRouterGetEventInNode**](docs/AccounteventApi.md#eventRouterGetEventInNode) | **GET** /account/event/node/{eventId} | 
+*SendPostApi.AccountexportedApi* | [**exportStatRouterGetStatisticToFile**](docs/AccountexportedApi.md#exportStatRouterGetStatisticToFile) | **GET** /account/exported/ | 
 *SendPostApi.AccountincidentApi* | [**incidentRouterAdd**](docs/AccountincidentApi.md#incidentRouterAdd) | **POST** /account/incident/{incidentId}/comment | 
 *SendPostApi.AccountincidentApi* | [**incidentRouterCount**](docs/AccountincidentApi.md#incidentRouterCount) | **GET** /account/incident/count | 
 *SendPostApi.AccountincidentApi* | [**incidentRouterCreate**](docs/AccountincidentApi.md#incidentRouterCreate) | **POST** /account/incident/ | 
@@ -339,9 +340,9 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [SendPostApi.Model3234360x1400075ff20False](docs/Model3234360x1400075ff20False.md)
- - [SendPostApi.Model3237170x14000776030False](docs/Model3237170x14000776030False.md)
- - [SendPostApi.Model6337710x14000b609f0False](docs/Model6337710x14000b609f0False.md)
+ - [SendPostApi.Model3137100x14000757e00False](docs/Model3137100x14000757e00False.md)
+ - [SendPostApi.Model3139910x14000757ef0False](docs/Model3139910x14000757ef0False.md)
+ - [SendPostApi.Model6106530x14000b19dd0False](docs/Model6106530x14000b19dd0False.md)
  - [SendPostApi.ModelExport](docs/ModelExport.md)
  - [SendPostApi.ModelsAGDomainStat](docs/ModelsAGDomainStat.md)
  - [SendPostApi.ModelsAGIPStat](docs/ModelsAGIPStat.md)
@@ -390,7 +391,6 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsCertificateSubject](docs/ModelsCertificateSubject.md)
  - [SendPostApi.ModelsCertificateValidity](docs/ModelsCertificateValidity.md)
  - [SendPostApi.ModelsCity](docs/ModelsCity.md)
- - [SendPostApi.ModelsCleanedList](docs/ModelsCleanedList.md)
  - [SendPostApi.ModelsClusterCache](docs/ModelsClusterCache.md)
  - [SendPostApi.ModelsComment](docs/ModelsComment.md)
  - [SendPostApi.ModelsConsumerStats](docs/ModelsConsumerStats.md)
@@ -468,7 +468,6 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsLabel](docs/ModelsLabel.md)
  - [SendPostApi.ModelsLabelType](docs/ModelsLabelType.md)
  - [SendPostApi.ModelsLinks](docs/ModelsLinks.md)
- - [SendPostApi.ModelsListCleaningJob](docs/ModelsListCleaningJob.md)
  - [SendPostApi.ModelsMailReportResult](docs/ModelsMailReportResult.md)
  - [SendPostApi.ModelsMailgunClientInfo](docs/ModelsMailgunClientInfo.md)
  - [SendPostApi.ModelsMailgunDeliveryStatus](docs/ModelsMailgunDeliveryStatus.md)
@@ -509,7 +508,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsSSLInfo](docs/ModelsSSLInfo.md)
  - [SendPostApi.ModelsSender](docs/ModelsSender.md)
  - [SendPostApi.ModelsSendgridEvent](docs/ModelsSendgridEvent.md)
- - [SendPostApi.ModelsSingleCleanedMail](docs/ModelsSingleCleanedMail.md)
+ - [SendPostApi.ModelsSingleValidatedEmail](docs/ModelsSingleValidatedEmail.md)
  - [SendPostApi.ModelsStat](docs/ModelsStat.md)
  - [SendPostApi.ModelsSubAccount](docs/ModelsSubAccount.md)
  - [SendPostApi.ModelsSubAccountType](docs/ModelsSubAccountType.md)
@@ -526,7 +525,9 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsThirdPartySendingProviderType](docs/ModelsThirdPartySendingProviderType.md)
  - [SendPostApi.ModelsTo](docs/ModelsTo.md)
  - [SendPostApi.ModelsUMember](docs/ModelsUMember.md)
+ - [SendPostApi.ModelsValidatedEmailList](docs/ModelsValidatedEmailList.md)
  - [SendPostApi.ModelsValidation](docs/ModelsValidation.md)
+ - [SendPostApi.ModelsValidationJob](docs/ModelsValidationJob.md)
  - [SendPostApi.ModelsValidationReason](docs/ModelsValidationReason.md)
  - [SendPostApi.ModelsVerifyByMemberTokenRequest](docs/ModelsVerifyByMemberTokenRequest.md)
  - [SendPostApi.ModelsVerifyByTokenRequest](docs/ModelsVerifyByTokenRequest.md)
