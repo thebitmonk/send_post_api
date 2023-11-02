@@ -7,8 +7,8 @@ Name | Type | Description | Notes
 **device** | [**UaparserDevice**](UaparserDevice.md) |  | [optional] 
 **geo** | [**ModelsCity**](ModelsCity.md) |  | [optional] 
 **os** | [**UaparserOs**](UaparserOs.md) |  | [optional] 
-**smtpCode** | **Number** |  | [optional] 
-**smtpDescription** | **String** |  | [optional] 
+**rawUserAgent** | **String** |  | [optional] 
+**trackedIP** | **String** |  | [optional] 
 **userAgent** | [**UaparserUserAgent**](UaparserUserAgent.md) |  | [optional] 
 
 
