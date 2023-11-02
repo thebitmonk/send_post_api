@@ -36,6 +36,34 @@
 
   describe('(package)', function() {
     describe('SmtpApi', function() {
+      describe('sMTPRouterAuthForSMTPServers', function() {
+        it('should call sMTPRouterAuthForSMTPServers successfully', function(done) {
+          // TODO: uncomment, update parameter values for sMTPRouterAuthForSMTPServers call and complete the assertions
+          /*
+          var body = new SendPostApi.ModelsESMTPAuth();
+          body.password = "";
+          body.subAccountId = "0";
+          body.username = "";
+
+          instance.sMTPRouterAuthForSMTPServers(body, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelsSMTPAuthCompleted);
+            expect(data.accountId).to.be.a('number');
+            expect(data.accountId).to.be("0");
+            expect(data.subAccountId).to.be.a('number');
+            expect(data.subAccountId).to.be("0");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('sMTPRouterReceiveWebhooksRaisedFromSMTPServers', function() {
         it('should call sMTPRouterReceiveWebhooksRaisedFromSMTPServers successfully', function(done) {
           // TODO: uncomment, update parameter values for sMTPRouterReceiveWebhooksRaisedFromSMTPServers call

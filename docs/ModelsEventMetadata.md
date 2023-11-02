@@ -8,8 +8,6 @@ Name | Type | Description | Notes
 **geo** | [**ModelsCity**](ModelsCity.md) |  | [optional] 
 **os** | [**UaparserOs**](UaparserOs.md) |  | [optional] 
 **rawUserAgent** | **String** |  | [optional] 
-**smtpCode** | **Number** |  | [optional] 
-**smtpDescription** | **String** |  | [optional] 
 **trackedIP** | **String** |  | [optional] 
 **userAgent** | [**UaparserUserAgent**](UaparserUserAgent.md) |  | [optional] 
 

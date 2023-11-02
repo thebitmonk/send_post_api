@@ -157,60 +157,6 @@
     }
 
     /**
-     * Callback function to receive the result of the messageRouterGetAllEventsForAMessageIdFromANode operation.
-     * @callback module:api/AccountmessageApi~messageRouterGetAllEventsForAMessageIdFromANodeCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ModelsQEvent>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Find all message events associated with a message id from a specific node <br>
-     * @param {String} xAccountApiKey Account API Key
-     * @param {String} messageId the messageId that you want to retrieve
-     * @param {module:api/AccountmessageApi~messageRouterGetAllEventsForAMessageIdFromANodeCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ModelsQEvent>}
-     */
-    this.messageRouterGetAllEventsForAMessageIdFromANode = function(xAccountApiKey, messageId, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'xAccountApiKey' is set
-      if (xAccountApiKey === undefined || xAccountApiKey === null) {
-        throw new Error("Missing the required parameter 'xAccountApiKey' when calling messageRouterGetAllEventsForAMessageIdFromANode");
-      }
-
-      // verify the required parameter 'messageId' is set
-      if (messageId === undefined || messageId === null) {
-        throw new Error("Missing the required parameter 'messageId' when calling messageRouterGetAllEventsForAMessageIdFromANode");
-      }
-
-
-      var pathParams = {
-        'messageId': messageId
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-        'X-Account-ApiKey': xAccountApiKey
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = [ModelsQEvent];
-
-      return this.apiClient.callApi(
-        '/account/message/node/{messageId}/events', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the messageRouterGetMessageFromNode operation.
      * @callback module:api/AccountmessageApi~messageRouterGetMessageFromNodeCallback
      * @param {String} error Error message, if any.

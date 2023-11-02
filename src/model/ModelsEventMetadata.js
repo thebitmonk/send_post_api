@@ -65,10 +65,6 @@
         obj.os = UaparserOs.constructFromObject(data['os']);
       if (data.hasOwnProperty('rawUserAgent'))
         obj.rawUserAgent = ApiClient.convertToType(data['rawUserAgent'], 'String');
-      if (data.hasOwnProperty('smtpCode'))
-        obj.smtpCode = ApiClient.convertToType(data['smtpCode'], 'Number');
-      if (data.hasOwnProperty('smtpDescription'))
-        obj.smtpDescription = ApiClient.convertToType(data['smtpDescription'], 'String');
       if (data.hasOwnProperty('trackedIP'))
         obj.trackedIP = ApiClient.convertToType(data['trackedIP'], 'String');
       if (data.hasOwnProperty('userAgent'))
@@ -101,16 +97,6 @@
    * @member {String} rawUserAgent
    */
   exports.prototype.rawUserAgent = undefined;
-
-  /**
-   * @member {Number} smtpCode
-   */
-  exports.prototype.smtpCode = undefined;
-
-  /**
-   * @member {String} smtpDescription
-   */
-  exports.prototype.smtpDescription = undefined;
 
   /**
    * @member {String} trackedIP

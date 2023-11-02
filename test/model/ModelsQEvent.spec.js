@@ -47,6 +47,12 @@
         // expect(instance.accountID).to.be(expectedValueLiteral);
       });
 
+      it('should have the property domainID (base name: "domainID")', function() {
+        // TODO: update the code to test the property domainID
+        expect(instance).to.have.property('domainID');
+        // expect(instance.domainID).to.be(expectedValueLiteral);
+      });
+
       it('should have the property eventID (base name: "eventID")', function() {
         // TODO: update the code to test the property eventID
         expect(instance).to.have.property('eventID');
@@ -59,10 +65,16 @@
         // expect(instance.eventMetadata).to.be(expectedValueLiteral);
       });
 
-      it('should have the property from (base name: "from")', function() {
-        // TODO: update the code to test the property from
-        expect(instance).to.have.property('from');
-        // expect(instance.from).to.be(expectedValueLiteral);
+      it('should have the property fromEmail (base name: "fromEmail")', function() {
+        // TODO: update the code to test the property fromEmail
+        expect(instance).to.have.property('fromEmail');
+        // expect(instance.fromEmail).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property fromName (base name: "fromName")', function() {
+        // TODO: update the code to test the property fromName
+        expect(instance).to.have.property('fromName');
+        // expect(instance.fromName).to.be(expectedValueLiteral);
       });
 
       it('should have the property groups (base name: "groups")', function() {
@@ -77,16 +89,40 @@
         // expect(instance.ipID).to.be(expectedValueLiteral);
       });
 
+      it('should have the property ipPoolID (base name: "ipPoolID")', function() {
+        // TODO: update the code to test the property ipPoolID
+        expect(instance).to.have.property('ipPoolID');
+        // expect(instance.ipPoolID).to.be(expectedValueLiteral);
+      });
+
       it('should have the property messageID (base name: "messageID")', function() {
         // TODO: update the code to test the property messageID
         expect(instance).to.have.property('messageID');
         // expect(instance.messageID).to.be(expectedValueLiteral);
       });
 
+      it('should have the property messageSubject (base name: "messageSubject")', function() {
+        // TODO: update the code to test the property messageSubject
+        expect(instance).to.have.property('messageSubject');
+        // expect(instance.messageSubject).to.be(expectedValueLiteral);
+      });
+
       it('should have the property messageType (base name: "messageType")', function() {
         // TODO: update the code to test the property messageType
         expect(instance).to.have.property('messageType');
         // expect(instance.messageType).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property smtpCode (base name: "smtpCode")', function() {
+        // TODO: update the code to test the property smtpCode
+        expect(instance).to.have.property('smtpCode');
+        // expect(instance.smtpCode).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property smtpDescription (base name: "smtpDescription")', function() {
+        // TODO: update the code to test the property smtpDescription
+        expect(instance).to.have.property('smtpDescription');
+        // expect(instance.smtpDescription).to.be(expectedValueLiteral);
       });
 
       it('should have the property subAccountID (base name: "subAccountID")', function() {
@@ -101,10 +137,16 @@
         // expect(instance.submittedAt).to.be(expectedValueLiteral);
       });
 
-      it('should have the property to (base name: "to")', function() {
-        // TODO: update the code to test the property to
-        expect(instance).to.have.property('to');
-        // expect(instance.to).to.be(expectedValueLiteral);
+      it('should have the property toEmail (base name: "toEmail")', function() {
+        // TODO: update the code to test the property toEmail
+        expect(instance).to.have.property('toEmail');
+        // expect(instance.toEmail).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property toName (base name: "toName")', function() {
+        // TODO: update the code to test the property toName
+        expect(instance).to.have.property('toName');
+        // expect(instance.toName).to.be(expectedValueLiteral);
       });
 
       it('should have the property tpspId (base name: "tpspId")', function() {

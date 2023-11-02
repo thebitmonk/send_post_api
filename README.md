@@ -141,14 +141,9 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountdomainstatApi* | [**domainStatRouterGetCurrentDomainPostmasterStats**](docs/AccountdomainstatApi.md#domainStatRouterGetCurrentDomainPostmasterStats) | **GET** /account/domain/stat/{domainId}/postmaster/stat | 
 *SendPostApi.AccountdomainstatApi* | [**domainStatRouterGetStatsForASingleDomainStats**](docs/AccountdomainstatApi.md#domainStatRouterGetStatsForASingleDomainStats) | **GET** /account/domain/stat/{domainId}/aggregate | 
 *SendPostApi.AccounteventApi* | [**eventRouterCountAllEventsFromAAccountForAGivenTimeRange**](docs/AccounteventApi.md#eventRouterCountAllEventsFromAAccountForAGivenTimeRange) | **GET** /account/event/count | 
-*SendPostApi.AccounteventApi* | [**eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange**](docs/AccounteventApi.md#eventRouterCountAllEventsFromANodeOfASubAccountForAGivenTimeRange) | **GET** /account/event/node/count | 
 *SendPostApi.AccounteventApi* | [**eventRouterExportAllEventsFromAAccountForAGivenTimeRange**](docs/AccounteventApi.md#eventRouterExportAllEventsFromAAccountForAGivenTimeRange) | **POST** /account/event/export | 
 *SendPostApi.AccounteventApi* | [**eventRouterGet**](docs/AccounteventApi.md#eventRouterGet) | **GET** /account/event/{eventId} | 
-*SendPostApi.AccounteventApi* | [**eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange**](docs/AccounteventApi.md#eventRouterGetAllEventTimestampKeysOfASubAccountFromASpecificNodeForAGivenTimeRange) | **GET** /account/event/node/timestampkeys | 
 *SendPostApi.AccounteventApi* | [**eventRouterGetAllEventsFromAAccountForAGivenTimeRange**](docs/AccounteventApi.md#eventRouterGetAllEventsFromAAccountForAGivenTimeRange) | **GET** /account/event/ | 
-*SendPostApi.AccounteventApi* | [**eventRouterGetAllEventsFromAnAccountWhichHasOnlyProccessed**](docs/AccounteventApi.md#eventRouterGetAllEventsFromAnAccountWhichHasOnlyProccessed) | **GET** /account/event/node/eventType | 
-*SendPostApi.AccounteventApi* | [**eventRouterGetAllEventsOfAAccountFromASpecificNode**](docs/AccounteventApi.md#eventRouterGetAllEventsOfAAccountFromASpecificNode) | **POST** /account/event/node | 
-*SendPostApi.AccounteventApi* | [**eventRouterGetEventInNode**](docs/AccounteventApi.md#eventRouterGetEventInNode) | **GET** /account/event/node/{eventId} | 
 *SendPostApi.AccountexportedApi* | [**exportStatRouterGetStatisticToFile**](docs/AccountexportedApi.md#exportStatRouterGetStatisticToFile) | **GET** /account/exported/ | 
 *SendPostApi.AccountincidentApi* | [**incidentRouterAdd**](docs/AccountincidentApi.md#incidentRouterAdd) | **POST** /account/incident/{incidentId}/comment | 
 *SendPostApi.AccountincidentApi* | [**incidentRouterCount**](docs/AccountincidentApi.md#incidentRouterCount) | **GET** /account/incident/count | 
@@ -204,7 +199,6 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountmemberApi* | [**memberRouterVerifyByEmailRequest**](docs/AccountmemberApi.md#memberRouterVerifyByEmailRequest) | **POST** /account/member/{memberId}/verify/email | 
 *SendPostApi.AccountmessageApi* | [**messageRouterGet**](docs/AccountmessageApi.md#messageRouterGet) | **GET** /account/message/{messageId} | 
 *SendPostApi.AccountmessageApi* | [**messageRouterGetAllEventsForAMessageId**](docs/AccountmessageApi.md#messageRouterGetAllEventsForAMessageId) | **GET** /account/message/{messageId}/events | 
-*SendPostApi.AccountmessageApi* | [**messageRouterGetAllEventsForAMessageIdFromANode**](docs/AccountmessageApi.md#messageRouterGetAllEventsForAMessageIdFromANode) | **GET** /account/message/node/{messageId}/events | 
 *SendPostApi.AccountmessageApi* | [**messageRouterGetMessageFromNode**](docs/AccountmessageApi.md#messageRouterGetMessageFromNode) | **GET** /account/message/node/{messageId} | 
 *SendPostApi.AccountonboardingApi* | [**onboardingRouterCreateUnlockTicket**](docs/AccountonboardingApi.md#onboardingRouterCreateUnlockTicket) | **POST** /account/onboarding/unlockticket | 
 *SendPostApi.AccountonboardingApi* | [**onboardingRouterGetOnboardingChecklist**](docs/AccountonboardingApi.md#onboardingRouterGetOnboardingChecklist) | **GET** /account/onboarding/checklist | 
@@ -218,8 +212,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountpaymentApi* | [**paymentRouterGetTaxRateByAddress**](docs/AccountpaymentApi.md#paymentRouterGetTaxRateByAddress) | **POST** /account/payment/tax/address | 
 *SendPostApi.AccountpaymentApi* | [**paymentRouterGetTaxRateByIP**](docs/AccountpaymentApi.md#paymentRouterGetTaxRateByIP) | **GET** /account/payment/tax/ip | 
 *SendPostApi.AccountpaymentApi* | [**paymentRouterHandlePaymentWebhook**](docs/AccountpaymentApi.md#paymentRouterHandlePaymentWebhook) | **POST** /account/payment/webhook | 
-*SendPostApi.AccountrecipientApi* | [**recipientRouterGetAllMessagesForARecipient**](docs/AccountrecipientApi.md#recipientRouterGetAllMessagesForARecipient) | **GET** /account/recipient/{recipient}/messages | 
-*SendPostApi.AccountrecipientApi* | [**recipientRouterGetAllMessagesForARecipientFromANode**](docs/AccountrecipientApi.md#recipientRouterGetAllMessagesForARecipientFromANode) | **GET** /account/recipient/node/{recipient}/messages | 
+*SendPostApi.AccountrecipientApi* | [**recipientRouterGetAllMessagesInfoForARecipient**](docs/AccountrecipientApi.md#recipientRouterGetAllMessagesInfoForARecipient) | **GET** /account/recipient/{recipient}/messages | 
 *SendPostApi.AccountsettingApi* | [**accountSettingRouterCheckDedicatedIPExist**](docs/AccountsettingApi.md#accountSettingRouterCheckDedicatedIPExist) | **GET** /account/setting/dedicated | 
 *SendPostApi.AccountsettingApi* | [**accountSettingRouterGetAccount**](docs/AccountsettingApi.md#accountSettingRouterGetAccount) | **GET** /account/setting/ | 
 *SendPostApi.AccountsettingApi* | [**accountSettingRouterUpdate**](docs/AccountsettingApi.md#accountSettingRouterUpdate) | **PUT** /account/setting/ | 
@@ -297,6 +290,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.ClusterApi* | [**clusterRouterGetItemFromCacheOfSpecificNodeInCluster**](docs/ClusterApi.md#clusterRouterGetItemFromCacheOfSpecificNodeInCluster) | **GET** /cluster/cache/node | 
 *SendPostApi.ClusterApi* | [**clusterRouterGetItemFromCacheOfSpecificNodeInCluster_0**](docs/ClusterApi.md#clusterRouterGetItemFromCacheOfSpecificNodeInCluster_0) | **DELETE** /cluster/cache/node | 
 *SendPostApi.EditorApi* | [**editorApiRouterGetToken**](docs/EditorApi.md#editorApiRouterGetToken) | **GET** /editor/ | 
+*SendPostApi.SmtpApi* | [**sMTPRouterAuthForSMTPServers**](docs/SmtpApi.md#sMTPRouterAuthForSMTPServers) | **POST** /smtp/auth | 
 *SendPostApi.SmtpApi* | [**sMTPRouterReceiveWebhooksRaisedFromSMTPServers**](docs/SmtpApi.md#sMTPRouterReceiveWebhooksRaisedFromSMTPServers) | **POST** /smtp/webhook | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterCount**](docs/SubaccountdomainApi.md#domainRouterCount) | **GET** /subaccount/domain/count | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterCreate**](docs/SubaccountdomainApi.md#domainRouterCreate) | **POST** /subaccount/domain/ | 
@@ -340,9 +334,9 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [SendPostApi.Model3137100x14000757e00False](docs/Model3137100x14000757e00False.md)
- - [SendPostApi.Model3139910x14000757ef0False](docs/Model3139910x14000757ef0False.md)
- - [SendPostApi.Model6106530x14000b19dd0False](docs/Model6106530x14000b19dd0False.md)
+ - [SendPostApi.Model3188780x1400075ccc0False](docs/Model3188780x1400075ccc0False.md)
+ - [SendPostApi.Model3191590x1400075cdb0False](docs/Model3191590x1400075cdb0False.md)
+ - [SendPostApi.Model6202790x14000b28ab0False](docs/Model6202790x14000b28ab0False.md)
  - [SendPostApi.ModelExport](docs/ModelExport.md)
  - [SendPostApi.ModelsAGDomainStat](docs/ModelsAGDomainStat.md)
  - [SendPostApi.ModelsAGIPStat](docs/ModelsAGIPStat.md)
@@ -422,6 +416,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsEIntegration](docs/ModelsEIntegration.md)
  - [SendPostApi.ModelsEInvitation](docs/ModelsEInvitation.md)
  - [SendPostApi.ModelsEMember](docs/ModelsEMember.md)
+ - [SendPostApi.ModelsESMTPAuth](docs/ModelsESMTPAuth.md)
  - [SendPostApi.ModelsESender](docs/ModelsESender.md)
  - [SendPostApi.ModelsESubAccount](docs/ModelsESubAccount.md)
  - [SendPostApi.ModelsESystemDomain](docs/ModelsESystemDomain.md)
@@ -503,6 +498,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsResponse](docs/ModelsResponse.md)
  - [SendPostApi.ModelsSDStat](docs/ModelsSDStat.md)
  - [SendPostApi.ModelsSMTPAuth](docs/ModelsSMTPAuth.md)
+ - [SendPostApi.ModelsSMTPAuthCompleted](docs/ModelsSMTPAuthCompleted.md)
  - [SendPostApi.ModelsSMTPStat](docs/ModelsSMTPStat.md)
  - [SendPostApi.ModelsSSLCertificate](docs/ModelsSSLCertificate.md)
  - [SendPostApi.ModelsSSLInfo](docs/ModelsSSLInfo.md)
