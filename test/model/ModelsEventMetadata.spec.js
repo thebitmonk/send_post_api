@@ -71,6 +71,18 @@
         // expect(instance.rawUserAgent).to.be(expectedValueLiteral);
       });
 
+      it('should have the property smtpCode (base name: "smtpCode")', function() {
+        // TODO: update the code to test the property smtpCode
+        expect(instance).to.have.property('smtpCode');
+        // expect(instance.smtpCode).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property smtpDescription (base name: "smtpDescription")', function() {
+        // TODO: update the code to test the property smtpDescription
+        expect(instance).to.have.property('smtpDescription');
+        // expect(instance.smtpDescription).to.be(expectedValueLiteral);
+      });
+
       it('should have the property trackedIP (base name: "trackedIP")', function() {
         // TODO: update the code to test the property trackedIP
         expect(instance).to.have.property('trackedIP');

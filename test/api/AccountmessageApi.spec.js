@@ -287,6 +287,10 @@
                   expect(data.eventMetadata.os.patchMinor).to.be("");
                 expect(data.eventMetadata.rawUserAgent).to.be.a('string');
                 expect(data.eventMetadata.rawUserAgent).to.be("");
+                expect(data.eventMetadata.smtpCode).to.be.a('number');
+                expect(data.eventMetadata.smtpCode).to.be("0");
+                expect(data.eventMetadata.smtpDescription).to.be.a('string');
+                expect(data.eventMetadata.smtpDescription).to.be("");
                 expect(data.eventMetadata.trackedIP).to.be.a('string');
                 expect(data.eventMetadata.trackedIP).to.be("");
                 expect(data.eventMetadata.userAgent).to.be.a(SendPostApi.UaparserUserAgent);
@@ -298,8 +302,8 @@
                   expect(data.eventMetadata.userAgent.minor).to.be("");
                   expect(data.eventMetadata.userAgent.patch).to.be.a('string');
                   expect(data.eventMetadata.userAgent.patch).to.be("");
-              expect(data.fromEmail).to.be.a('string');
-              expect(data.fromEmail).to.be("");
+              expect(data.from).to.be.a('string');
+              expect(data.from).to.be("");
               expect(data.fromName).to.be.a('string');
               expect(data.fromName).to.be("");
               {
@@ -330,8 +334,8 @@
               expect(data.subAccountID).to.be("0");
               expect(data.submittedAt).to.be.a('number');
               expect(data.submittedAt).to.be("0");
-              expect(data.toEmail).to.be.a('string');
-              expect(data.toEmail).to.be("");
+              expect(data.to).to.be.a('string');
+              expect(data.to).to.be("");
               expect(data.toName).to.be.a('string');
               expect(data.toName).to.be("");
               expect(data.tpspId).to.be.a('number');
