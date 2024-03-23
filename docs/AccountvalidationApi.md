@@ -66,7 +66,7 @@ No authorization required
 
 
 
-Count Total Validations <br>
+Count Total Validations
 
 ### Example
 ```javascript
@@ -112,7 +112,7 @@ No authorization required
 
 
 
-Delete a specific validation <br>
+Delete a specific validation
 
 ### Example
 ```javascript
@@ -157,11 +157,11 @@ No authorization required
 
 <a name="validationRouterGetAll"></a>
 # **validationRouterGetAll**
-> [ModelsListCleaningJob] validationRouterGetAll(xSubAccountApiKey, opts)
+> [ModelsValidationJob] validationRouterGetAll(xSubAccountApiKey, opts)
 
 
 
-Get all validation <br>
+Get all validation
 
 ### Example
 ```javascript
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[ModelsListCleaningJob]**](ModelsListCleaningJob.md)
+[**[ModelsValidationJob]**](ModelsValidationJob.md)
 
 ### Authorization
 
@@ -211,11 +211,11 @@ No authorization required
 
 <a name="validationRouterValidateEmailList"></a>
 # **validationRouterValidateEmailList**
-> ModelsCleanedList validationRouterValidateEmailList(xSubAccountApiKey, body)
+> ModelsValidatedEmailList validationRouterValidateEmailList(xSubAccountApiKey, body)
 
 
 
-Validate Email List Synchronously <br>
+Validate Email List Synchronously
 
 ### Example
 ```javascript
@@ -247,7 +247,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ModelsCleanedList**](ModelsCleanedList.md)
+[**ModelsValidatedEmailList**](ModelsValidatedEmailList.md)
 
 ### Authorization
 

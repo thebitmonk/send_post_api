@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **ampBody** | **String** |  | [optional] 
 **attachments** | [**[ModelsAttachment]**](ModelsAttachment.md) |  | [optional] 
 **from** | [**ModelsFrom**](ModelsFrom.md) |  | [optional] 
-**groups** | **[String]** |  | [optional] 
+**groups** | **Object** |  | [optional] 
 **headers** | **Object** |  | [optional] 
 **htmlBody** | **String** |  | [optional] 
 **ippool** | **String** |  | [optional] 
@@ -18,5 +18,6 @@ Name | Type | Description | Notes
 **to** | [**[ModelsTo]**](ModelsTo.md) |  | [optional] 
 **trackClicks** | **Boolean** |  | [optional] 
 **trackOpens** | **Boolean** |  | [optional] 
+**webhookEndpoint** | **String** |  | [optional] 
 
 

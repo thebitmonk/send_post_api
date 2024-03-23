@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**messageRouterGet**](AccountmessageApi.md#messageRouterGet) | **GET** /account/message/{messageId} | 
 [**messageRouterGetAllEventsForAMessageId**](AccountmessageApi.md#messageRouterGetAllEventsForAMessageId) | **GET** /account/message/{messageId}/events | 
-[**messageRouterGetAllEventsForAMessageIdFromANode**](AccountmessageApi.md#messageRouterGetAllEventsForAMessageIdFromANode) | **GET** /account/message/node/{messageId}/events | 
+[**messageRouterGetMessageFromBadger**](AccountmessageApi.md#messageRouterGetMessageFromBadger) | **GET** /account/message/badger/{messageId} | 
 [**messageRouterGetMessageFromNode**](AccountmessageApi.md#messageRouterGetMessageFromNode) | **GET** /account/message/node/{messageId} | 
 
 
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 
-Find Message By Id <br>
+Find Message By Id
 
 ### Example
 ```javascript
@@ -65,7 +65,7 @@ No authorization required
 
 
 
-Find all events associated with a message id <br>
+Find all events associated with a message id
 
 ### Example
 ```javascript
@@ -108,13 +108,13 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="messageRouterGetAllEventsForAMessageIdFromANode"></a>
-# **messageRouterGetAllEventsForAMessageIdFromANode**
-> [ModelsQEvent] messageRouterGetAllEventsForAMessageIdFromANode(xAccountApiKey, messageId)
+<a name="messageRouterGetMessageFromBadger"></a>
+# **messageRouterGetMessageFromBadger**
+> ModelsQEmailMessage messageRouterGetMessageFromBadger(xAccountApiKey, messageId)
 
 
 
-Find all message events associated with a message id from a specific node <br>
+Find Message By Id
 
 ### Example
 ```javascript
@@ -122,7 +122,7 @@ var SendPostApi = require('send_post_api');
 
 var apiInstance = new SendPostApi.AccountmessageApi();
 
-var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+var xAccountApiKey = "xAccountApiKey_example"; // String | Sub-Account API Key
 
 var messageId = "messageId_example"; // String | the messageId that you want to retrieve
 
@@ -134,19 +134,19 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.messageRouterGetAllEventsForAMessageIdFromANode(xAccountApiKey, messageId, callback);
+apiInstance.messageRouterGetMessageFromBadger(xAccountApiKey, messageId, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xAccountApiKey** | **String**| Account API Key | 
+ **xAccountApiKey** | **String**| Sub-Account API Key | 
  **messageId** | **String**| the messageId that you want to retrieve | 
 
 ### Return type
 
-[**[ModelsQEvent]**](ModelsQEvent.md)
+[**ModelsQEmailMessage**](ModelsQEmailMessage.md)
 
 ### Authorization
 
@@ -163,7 +163,7 @@ No authorization required
 
 
 
-Find Message from node by specific Id <br>
+Find Message from node by specific Id
 
 ### Example
 ```javascript

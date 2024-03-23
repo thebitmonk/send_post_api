@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 
-Save statistic to the file and send email <br>
+Save statistic to the file and send email
 
 ### Example
 ```javascript

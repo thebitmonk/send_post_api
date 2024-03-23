@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 
-Track Email Open <br>
+Track Email Open
 
 ### Example
 ```javascript
@@ -76,7 +76,7 @@ No authorization required
 
 
 
-Track Link Click <br>
+Track Link Click
 
 ### Example
 ```javascript
@@ -137,7 +137,7 @@ No authorization required
 
 
 
-Track TPSP Email Open <br>
+Track TPSP Email Open
 
 ### Example
 ```javascript
@@ -195,7 +195,7 @@ No authorization required
 
 
 
-Track TPSP Link Click <br>
+Track TPSP Link Click
 
 ### Example
 ```javascript
@@ -252,11 +252,11 @@ No authorization required
 
 <a name="trackRouterTrackUnsubscribe"></a>
 # **trackRouterTrackUnsubscribe**
-> trackRouterTrackUnsubscribe(ipId, accountId, subAccountId, messageId, emailType)
+> trackRouterTrackUnsubscribe(ipId, accountId, subAccountId, messageId, emailType, email)
 
 
 
-track link click <br>
+track link click
 
 ### Example
 ```javascript
@@ -274,6 +274,8 @@ var messageId = "messageId_example"; // String | The UUID of message which was s
 
 var emailType = "emailType_example"; // String | The type of email such as gmail, yahoo etc. which was sent. This is inferred from to email address
 
+var email = "email_example"; // String | email to add in suppression
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -282,7 +284,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.trackRouterTrackUnsubscribe(ipId, accountId, subAccountId, messageId, emailType, callback);
+apiInstance.trackRouterTrackUnsubscribe(ipId, accountId, subAccountId, messageId, emailType, email, callback);
 ```
 
 ### Parameters
@@ -294,6 +296,7 @@ Name | Type | Description  | Notes
  **subAccountId** | **Number**| The id of sub-account from which email is being sent | 
  **messageId** | **String**| The UUID of message which was sent | 
  **emailType** | **String**| The type of email such as gmail, yahoo etc. which was sent. This is inferred from to email address | 
+ **email** | **String**| email to add in suppression | 
 
 ### Return type
 
@@ -314,7 +317,7 @@ No authorization required
 
 
 
-Track Welcome Link Click <br>
+Track Welcome Link Click
 
 ### Example
 ```javascript

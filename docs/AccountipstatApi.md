@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 
-Get All Aggregate Stats <br>
+Get All Aggregate Stats
 
 ### Example
 ```javascript
@@ -73,7 +73,7 @@ No authorization required
 
 
 
-Get All Aggregated Provider Stats for a IP <br>
+Get All Aggregated Provider Stats for a IP
 
 ### Example
 ```javascript
@@ -128,7 +128,7 @@ No authorization required
 
 
 
-Get All Aggregated Sub-Account Stats for an IP <br>
+Get All Aggregated Sub-Account Stats for an IP
 
 ### Example
 ```javascript
@@ -187,7 +187,7 @@ No authorization required
 
 
 
-Get All IP Stats <br>
+Get All IP Stats
 
 ### Example
 ```javascript

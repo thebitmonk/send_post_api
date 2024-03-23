@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 
 
-Count Total Subaccounts <br>
+Count Total Subaccounts
 
 ### Example
 ```javascript
@@ -73,7 +73,7 @@ No authorization required
 
 
 
-Create SubAccount <br>
+Create SubAccount
 
 ### Example
 ```javascript
@@ -122,7 +122,7 @@ No authorization required
 
 
 
-Delete SubAccount <br>
+Delete SubAccount
 
 ### Example
 ```javascript
@@ -174,7 +174,7 @@ No authorization required
 
 
 
-Find SubAccount by SubAccountId <br>
+Find SubAccount by SubAccountId
 
 ### Example
 ```javascript
@@ -223,7 +223,7 @@ No authorization required
 
 
 
-Get All SubAccounts <br>
+Get All SubAccounts
 
 ### Example
 ```javascript
@@ -281,7 +281,7 @@ No authorization required
 
 
 
-Get All Incidents associated with a sub-account <br>
+Get All Incidents associated with a sub-account
 
 ### Example
 ```javascript
@@ -330,7 +330,7 @@ No authorization required
 
 
 
-Update SubAccount <br>
+Update SubAccount
 
 ### Example
 ```javascript
