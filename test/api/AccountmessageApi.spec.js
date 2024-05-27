@@ -351,6 +351,202 @@
           done();
         });
       });
+      describe('messageRouterGetMessageFromBadger', function() {
+        it('should call messageRouterGetMessageFromBadger successfully', function(done) {
+          // TODO: uncomment, update parameter values for messageRouterGetMessageFromBadger call and complete the assertions
+          /*
+          var xAccountApiKey = "xAccountApiKey_example";
+          var messageId = "messageId_example";
+
+          instance.messageRouterGetMessageFromBadger(xAccountApiKey, messageId, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelsQEmailMessage);
+            expect(data.accountID).to.be.a('number');
+            expect(data.accountID).to.be("0");
+            expect(data.ampBody).to.be.a('string');
+            expect(data.ampBody).to.be("");
+            {
+              let dataCtr = data.attachments;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(SendPostApi.ModelsAttachment);
+                expect(data.content).to.be.a('string');
+                expect(data.content).to.be("");
+                expect(data.filename).to.be.a('string');
+                expect(data.filename).to.be("");
+
+                      }
+            }
+            expect(data.attempt).to.be.a('number');
+            expect(data.attempt).to.be("0");
+            expect(data.customFields).to.be.a(Object);
+            expect(data.customFields).to.be();
+            expect(data.emailType).to.be.a('string');
+            expect(data.emailType).to.be("");
+            expect(data.from).to.be.a(SendPostApi.ModelsFrom);
+                  expect(data.from.email).to.be.a('string');
+              expect(data.from.email).to.be("");
+              expect(data.from.name).to.be.a('string');
+              expect(data.from.name).to.be("");
+            expect(data.groups).to.be.a(Object);
+            expect(data.groups).to.be();
+            {
+              let dataCtr = data.headerBcc;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(SendPostApi.ModelsCopyTo);
+                expect(data.name).to.be.a('string');
+                expect(data.name).to.be("");
+                expect(data.email).to.be.a('string');
+                expect(data.email).to.be("");
+                expect(data.customFields).to.be.a(Object);
+                expect(data.customFields).to.be();
+
+                      }
+            }
+            {
+              let dataCtr = data.headerCc;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(SendPostApi.ModelsCopyTo);
+                expect(data.name).to.be.a('string');
+                expect(data.name).to.be("");
+                expect(data.email).to.be.a('string');
+                expect(data.email).to.be("");
+                expect(data.customFields).to.be.a(Object);
+                expect(data.customFields).to.be();
+
+                      }
+            }
+            expect(data.headerTo).to.be.a(SendPostApi.ModelsTo);
+                  expect(data.headerTo.name).to.be.a('string');
+              expect(data.headerTo.name).to.be("");
+              expect(data.headerTo.email).to.be.a('string');
+              expect(data.headerTo.email).to.be("");
+              {
+                let dataCtr = data.headerTo.cc;
+                expect(dataCtr).to.be.an(Array);
+                expect(dataCtr).to.not.be.empty();
+                for (let p in dataCtr) {
+                  let data = dataCtr[p];
+                  expect(data).to.be.a(SendPostApi.ModelsCopyTo);
+                  expect(data.name).to.be.a('string');
+                  expect(data.name).to.be("");
+                  expect(data.email).to.be.a('string');
+                  expect(data.email).to.be("");
+                  expect(data.customFields).to.be.a(Object);
+                  expect(data.customFields).to.be();
+  
+                        }
+              }
+              {
+                let dataCtr = data.headerTo.bcc;
+                expect(dataCtr).to.be.an(Array);
+                expect(dataCtr).to.not.be.empty();
+                for (let p in dataCtr) {
+                  let data = dataCtr[p];
+                  expect(data).to.be.a(SendPostApi.ModelsCopyTo);
+                  expect(data.name).to.be.a('string');
+                  expect(data.name).to.be("");
+                  expect(data.email).to.be.a('string');
+                  expect(data.email).to.be("");
+                  expect(data.customFields).to.be.a(Object);
+                  expect(data.customFields).to.be();
+  
+                        }
+              }
+              expect(data.headerTo.customFields).to.be.a(Object);
+              expect(data.headerTo.customFields).to.be();
+            expect(data.headers).to.be.a(Object);
+            expect(data.headers).to.be();
+            expect(data.htmlBody).to.be.a('string');
+            expect(data.htmlBody).to.be("");
+            expect(data.ipID).to.be.a('number');
+            expect(data.ipID).to.be("0");
+            expect(data.ipPool).to.be.a('string');
+            expect(data.ipPool).to.be("");
+            expect(data.localIP).to.be.a('string');
+            expect(data.localIP).to.be("");
+            expect(data.messageID).to.be.a('string');
+            expect(data.messageID).to.be("");
+            expect(data.preText).to.be.a('string');
+            expect(data.preText).to.be("");
+            expect(data.publicIP).to.be.a('string');
+            expect(data.publicIP).to.be("");
+            expect(data.replyTo).to.be.a(SendPostApi.ModelsReplyTo);
+                  expect(data.replyTo.email).to.be.a('string');
+              expect(data.replyTo.email).to.be("");
+              expect(data.replyTo.name).to.be.a('string');
+              expect(data.replyTo.name).to.be("");
+            expect(data.subAccountID).to.be.a('number');
+            expect(data.subAccountID).to.be("0");
+            expect(data.subject).to.be.a('string');
+            expect(data.subject).to.be("");
+            expect(data.submittedAt).to.be.a('number');
+            expect(data.submittedAt).to.be("0");
+            expect(data.textBody).to.be.a('string');
+            expect(data.textBody).to.be("");
+            expect(data.to).to.be.a(SendPostApi.ModelsTo);
+                  expect(data.to.name).to.be.a('string');
+              expect(data.to.name).to.be("");
+              expect(data.to.email).to.be.a('string');
+              expect(data.to.email).to.be("");
+              {
+                let dataCtr = data.to.cc;
+                expect(dataCtr).to.be.an(Array);
+                expect(dataCtr).to.not.be.empty();
+                for (let p in dataCtr) {
+                  let data = dataCtr[p];
+                  expect(data).to.be.a(SendPostApi.ModelsCopyTo);
+                  expect(data.name).to.be.a('string');
+                  expect(data.name).to.be("");
+                  expect(data.email).to.be.a('string');
+                  expect(data.email).to.be("");
+                  expect(data.customFields).to.be.a(Object);
+                  expect(data.customFields).to.be();
+  
+                        }
+              }
+              {
+                let dataCtr = data.to.bcc;
+                expect(dataCtr).to.be.an(Array);
+                expect(dataCtr).to.not.be.empty();
+                for (let p in dataCtr) {
+                  let data = dataCtr[p];
+                  expect(data).to.be.a(SendPostApi.ModelsCopyTo);
+                  expect(data.name).to.be.a('string');
+                  expect(data.name).to.be("");
+                  expect(data.email).to.be.a('string');
+                  expect(data.email).to.be("");
+                  expect(data.customFields).to.be.a(Object);
+                  expect(data.customFields).to.be();
+  
+                        }
+              }
+              expect(data.to.customFields).to.be.a(Object);
+              expect(data.to.customFields).to.be();
+            expect(data.trackClicks).to.be.a('boolean');
+            expect(data.trackClicks).to.be(false);
+            expect(data.trackOpens).to.be.a('boolean');
+            expect(data.trackOpens).to.be(false);
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('messageRouterGetMessageFromNode', function() {
         it('should call messageRouterGetMessageFromNode successfully', function(done) {
           // TODO: uncomment, update parameter values for messageRouterGetMessageFromNode call and complete the assertions

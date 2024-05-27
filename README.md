@@ -199,6 +199,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountmemberApi* | [**memberRouterVerifyByEmailRequest**](docs/AccountmemberApi.md#memberRouterVerifyByEmailRequest) | **POST** /account/member/{memberId}/verify/email | 
 *SendPostApi.AccountmessageApi* | [**messageRouterGet**](docs/AccountmessageApi.md#messageRouterGet) | **GET** /account/message/{messageId} | 
 *SendPostApi.AccountmessageApi* | [**messageRouterGetAllEventsForAMessageId**](docs/AccountmessageApi.md#messageRouterGetAllEventsForAMessageId) | **GET** /account/message/{messageId}/events | 
+*SendPostApi.AccountmessageApi* | [**messageRouterGetMessageFromBadger**](docs/AccountmessageApi.md#messageRouterGetMessageFromBadger) | **GET** /account/message/badger/{messageId} | 
 *SendPostApi.AccountmessageApi* | [**messageRouterGetMessageFromNode**](docs/AccountmessageApi.md#messageRouterGetMessageFromNode) | **GET** /account/message/node/{messageId} | 
 *SendPostApi.AccountonboardingApi* | [**onboardingRouterCreateUnlockTicket**](docs/AccountonboardingApi.md#onboardingRouterCreateUnlockTicket) | **POST** /account/onboarding/unlockticket | 
 *SendPostApi.AccountonboardingApi* | [**onboardingRouterGetOnboardingChecklist**](docs/AccountonboardingApi.md#onboardingRouterGetOnboardingChecklist) | **GET** /account/onboarding/checklist | 
@@ -317,6 +318,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.SubaccountsenderApi* | [**senderRouterUpdate**](docs/SubaccountsenderApi.md#senderRouterUpdate) | **PUT** /subaccount/sender/{senderId} | 
 *SendPostApi.SubaccountsuppressionApi* | [**suppressionRouterCount**](docs/SubaccountsuppressionApi.md#suppressionRouterCount) | **GET** /subaccount/suppression/count | 
 *SendPostApi.SubaccountsuppressionApi* | [**suppressionRouterCreateSuppressions**](docs/SubaccountsuppressionApi.md#suppressionRouterCreateSuppressions) | **POST** /subaccount/suppression/ | 
+*SendPostApi.SubaccountsuppressionApi* | [**suppressionRouterCreateSuppressionsBulk**](docs/SubaccountsuppressionApi.md#suppressionRouterCreateSuppressionsBulk) | **POST** /subaccount/suppression/bulk | 
 *SendPostApi.SubaccountsuppressionApi* | [**suppressionRouterCreateSuppressionsInSuppressionFilter**](docs/SubaccountsuppressionApi.md#suppressionRouterCreateSuppressionsInSuppressionFilter) | **POST** /subaccount/suppression/filter | 
 *SendPostApi.SubaccountsuppressionApi* | [**suppressionRouterDeleteSuppression**](docs/SubaccountsuppressionApi.md#suppressionRouterDeleteSuppression) | **DELETE** /subaccount/suppression/ | 
 *SendPostApi.SubaccountsuppressionApi* | [**suppressionRouterDeleteSuppressionsInSuppressionFilter**](docs/SubaccountsuppressionApi.md#suppressionRouterDeleteSuppressionsInSuppressionFilter) | **DELETE** /subaccount/suppression/filter | 
@@ -334,9 +336,9 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [SendPostApi.Model3187110x14000786f60False](docs/Model3187110x14000786f60False.md)
- - [SendPostApi.Model3189920x14000787050False](docs/Model3189920x14000787050False.md)
- - [SendPostApi.Model6289940x14000b6dfb0False](docs/Model6289940x14000b6dfb0False.md)
+ - [SendPostApi.Model3181660x1400086e3f0False](docs/Model3181660x1400086e3f0False.md)
+ - [SendPostApi.Model3184470x1400086e4e0False](docs/Model3184470x1400086e4e0False.md)
+ - [SendPostApi.Model6576840x14000c9b1a0False](docs/Model6576840x14000c9b1a0False.md)
  - [SendPostApi.ModelExport](docs/ModelExport.md)
  - [SendPostApi.ModelsAGDomainStat](docs/ModelsAGDomainStat.md)
  - [SendPostApi.ModelsAGIPStat](docs/ModelsAGIPStat.md)
