@@ -3,12 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**dKIMSuccess** | **String** |  | [optional] 
+**dMARCSuccess** | **String** |  | [optional] 
+**sPFSuccess** | **String** |  | [optional] 
 **_date** | **String** |  | [optional] 
-**dkimSuccess** | **String** |  | [optional] 
-**dmarcSuccess** | **String** |  | [optional] 
 **domainReputation** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
 **spam** | **String** |  | [optional] 
-**spfSuccess** | **String** |  | [optional] 
 
 
