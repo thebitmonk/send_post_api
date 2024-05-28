@@ -74,6 +74,7 @@
           body.to[0].customFields = ;
           body.trackClicks = false;
           body.trackOpens = false;
+          body.webhookEndpoint = "";
           var opts = {};
           opts.xSendPostMockEmail = true;
           opts.xSendPostMockTimeShift = "xSendPostMockTimeShift_example";
@@ -146,6 +147,7 @@
           body.to[0].customFields = ;
           body.trackClicks = false;
           body.trackOpens = false;
+          body.webhookEndpoint = "";
 
           instance.emailRouterSendEmailWithTemplate(xSubAccountApiKey, body, function(error, data, response) {
             if (error) {

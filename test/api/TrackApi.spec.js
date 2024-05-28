@@ -139,8 +139,9 @@
           var subAccountId = 789;
           var messageId = "messageId_example";
           var emailType = "emailType_example";
+          var email = "email_example";
 
-          instance.trackRouterTrackUnsubscribe(ipId, accountId, subAccountId, messageId, emailType, function(error, data, response) {
+          instance.trackRouterTrackUnsubscribe(ipId, accountId, subAccountId, messageId, emailType, email, function(error, data, response) {
             if (error) {
               done(error);
               return;

@@ -107,6 +107,26 @@
           done();
         });
       });
+      describe('suppressionRouterCreateSuppressionsBulk', function() {
+        it('should call suppressionRouterCreateSuppressionsBulk successfully', function(done) {
+          // TODO: uncomment, update parameter values for suppressionRouterCreateSuppressionsBulk call
+          /*
+          var fileinput = "/path/to/file.txt";
+          var xSubAccountApiKey = "xSubAccountApiKey_example";
+
+          instance.suppressionRouterCreateSuppressionsBulk(fileinput, xSubAccountApiKey, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('suppressionRouterCreateSuppressionsInSuppressionFilter', function() {
         it('should call suppressionRouterCreateSuppressionsInSuppressionFilter successfully', function(done) {
           // TODO: uncomment, update parameter values for suppressionRouterCreateSuppressionsInSuppressionFilter call

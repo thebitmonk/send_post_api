@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**suppressionRouterCount**](SubaccountsuppressionApi.md#suppressionRouterCount) | **GET** /subaccount/suppression/count | 
 [**suppressionRouterCreateSuppressions**](SubaccountsuppressionApi.md#suppressionRouterCreateSuppressions) | **POST** /subaccount/suppression/ | 
+[**suppressionRouterCreateSuppressionsBulk**](SubaccountsuppressionApi.md#suppressionRouterCreateSuppressionsBulk) | **POST** /subaccount/suppression/bulk | 
 [**suppressionRouterCreateSuppressionsInSuppressionFilter**](SubaccountsuppressionApi.md#suppressionRouterCreateSuppressionsInSuppressionFilter) | **POST** /subaccount/suppression/filter | 
 [**suppressionRouterDeleteSuppression**](SubaccountsuppressionApi.md#suppressionRouterDeleteSuppression) | **DELETE** /subaccount/suppression/ | 
 [**suppressionRouterDeleteSuppressionsInSuppressionFilter**](SubaccountsuppressionApi.md#suppressionRouterDeleteSuppressionsInSuppressionFilter) | **DELETE** /subaccount/suppression/filter | 
@@ -112,6 +113,55 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="suppressionRouterCreateSuppressionsBulk"></a>
+# **suppressionRouterCreateSuppressionsBulk**
+> suppressionRouterCreateSuppressionsBulk(fileinput, xSubAccountApiKey)
+
+
+
+Add Email Addresses To Suppression List
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.SubaccountsuppressionApi();
+
+var fileinput = "/path/to/file.txt"; // File | CSV whose emails need to be added in suppression
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+apiInstance.suppressionRouterCreateSuppressionsBulk(fileinput, xSubAccountApiKey, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fileinput** | **File**| CSV whose emails need to be added in suppression | 
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json
 
 <a name="suppressionRouterCreateSuppressionsInSuppressionFilter"></a>

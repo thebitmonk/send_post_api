@@ -85,6 +85,8 @@
         obj.trackClicks = ApiClient.convertToType(data['trackClicks'], 'Boolean');
       if (data.hasOwnProperty('trackOpens'))
         obj.trackOpens = ApiClient.convertToType(data['trackOpens'], 'Boolean');
+      if (data.hasOwnProperty('webhookEndpoint'))
+        obj.webhookEndpoint = ApiClient.convertToType(data['webhookEndpoint'], 'String');
     }
     return obj;
   }
@@ -163,6 +165,11 @@
    * @member {Boolean} trackOpens
    */
   exports.prototype.trackOpens = undefined;
+
+  /**
+   * @member {String} webhookEndpoint
+   */
+  exports.prototype.webhookEndpoint = undefined;
 
 
   return exports;

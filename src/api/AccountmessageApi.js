@@ -155,6 +155,114 @@
         authNames, contentTypes, accepts, returnType, callback
       );
     }
+
+    /**
+     * Callback function to receive the result of the messageRouterGetMessageFromBadger operation.
+     * @callback module:api/AccountmessageApi~messageRouterGetMessageFromBadgerCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ModelsQEmailMessage} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Find Message By Id <br>
+     * @param {String} xAccountApiKey Sub-Account API Key
+     * @param {String} messageId the messageId that you want to retrieve
+     * @param {module:api/AccountmessageApi~messageRouterGetMessageFromBadgerCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ModelsQEmailMessage}
+     */
+    this.messageRouterGetMessageFromBadger = function(xAccountApiKey, messageId, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling messageRouterGetMessageFromBadger");
+      }
+
+      // verify the required parameter 'messageId' is set
+      if (messageId === undefined || messageId === null) {
+        throw new Error("Missing the required parameter 'messageId' when calling messageRouterGetMessageFromBadger");
+      }
+
+
+      var pathParams = {
+        'messageId': messageId
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-Account-ApiKey': xAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ModelsQEmailMessage;
+
+      return this.apiClient.callApi(
+        '/account/message/badger/{messageId}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the messageRouterGetMessageFromNode operation.
+     * @callback module:api/AccountmessageApi~messageRouterGetMessageFromNodeCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ModelsQEmailMessage} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Find Message from node by specific Id <br>
+     * @param {String} xAccountApiKey Account API Key
+     * @param {String} messageId the messageId that you want to retrieve
+     * @param {module:api/AccountmessageApi~messageRouterGetMessageFromNodeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ModelsQEmailMessage}
+     */
+    this.messageRouterGetMessageFromNode = function(xAccountApiKey, messageId, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling messageRouterGetMessageFromNode");
+      }
+
+      // verify the required parameter 'messageId' is set
+      if (messageId === undefined || messageId === null) {
+        throw new Error("Missing the required parameter 'messageId' when calling messageRouterGetMessageFromNode");
+      }
+
+
+      var pathParams = {
+        'messageId': messageId
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-Account-ApiKey': xAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ModelsQEmailMessage;
+
+      return this.apiClient.callApi(
+        '/account/message/node/{messageId}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
   };
 
   return exports;

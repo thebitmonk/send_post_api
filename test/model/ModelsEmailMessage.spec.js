@@ -131,6 +131,12 @@
         // expect(instance.trackOpens).to.be(expectedValueLiteral);
       });
 
+      it('should have the property webhookEndpoint (base name: "webhookEndpoint")', function() {
+        // TODO: update the code to test the property webhookEndpoint
+        expect(instance).to.have.property('webhookEndpoint');
+        // expect(instance.webhookEndpoint).to.be(expectedValueLiteral);
+      });
+
     });
   });
 
