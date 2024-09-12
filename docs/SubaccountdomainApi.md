@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**domainRouterDelete**](SubaccountdomainApi.md#domainRouterDelete) | **DELETE** /subaccount/domain/{domainId} | 
 [**domainRouterGet**](SubaccountdomainApi.md#domainRouterGet) | **GET** /subaccount/domain/{domainId} | 
 [**domainRouterGetAll**](SubaccountdomainApi.md#domainRouterGetAll) | **GET** /subaccount/domain/ | 
+[**domainRouterIsDomainVerified**](SubaccountdomainApi.md#domainRouterIsDomainVerified) | **GET** /subaccount/domain/isverified | 
 [**domainRouterUpdate**](SubaccountdomainApi.md#domainRouterUpdate) | **PUT** /subaccount/domain/{domainId} | 
 [**domainRouterVerify**](SubaccountdomainApi.md#domainRouterVerify) | **POST** /subaccount/domain/{domainId}/verify | 
 [**domainRouterVerifyByToken**](SubaccountdomainApi.md#domainRouterVerifyByToken) | **POST** /subaccount/domain/{domainId}/verify/email/{token} | 
@@ -255,6 +256,55 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[ModelsDomain]**](ModelsDomain.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="domainRouterIsDomainVerified"></a>
+# **domainRouterIsDomainVerified**
+> ModelsDomain domainRouterIsDomainVerified(xSubAccountApiKey, domainName)
+
+
+
+Is Domain Verified <br>
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.SubaccountdomainApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var domainName = "domainName_example"; // String | the DomainName you want to get
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.domainRouterIsDomainVerified(xSubAccountApiKey, domainName, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **domainName** | **String**| the DomainName you want to get | 
+
+### Return type
+
+[**ModelsDomain**](ModelsDomain.md)
 
 ### Authorization
 

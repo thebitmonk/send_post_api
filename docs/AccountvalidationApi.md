@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**validationRouterCount**](AccountvalidationApi.md#validationRouterCount) | **GET** /account/validation/count | 
 [**validationRouterDeleteValidation**](AccountvalidationApi.md#validationRouterDeleteValidation) | **DELETE** /account/validation/ | 
 [**validationRouterGetAll**](AccountvalidationApi.md#validationRouterGetAll) | **GET** /account/validation/ | 
+[**validationRouterValidateEmailBulkList**](AccountvalidationApi.md#validationRouterValidateEmailBulkList) | **POST** /account/validation/list/bulk | 
 [**validationRouterValidateEmailList**](AccountvalidationApi.md#validationRouterValidateEmailList) | **POST** /account/validation/ | 
 
 
@@ -157,7 +158,7 @@ No authorization required
 
 <a name="validationRouterGetAll"></a>
 # **validationRouterGetAll**
-> [ModelsListCleaningJob] validationRouterGetAll(xSubAccountApiKey, opts)
+> [ModelsValidationJob] validationRouterGetAll(xSubAccountApiKey, opts)
 
 
 
@@ -198,7 +199,56 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[ModelsListCleaningJob]**](ModelsListCleaningJob.md)
+[**[ModelsValidationJob]**](ModelsValidationJob.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="validationRouterValidateEmailBulkList"></a>
+# **validationRouterValidateEmailBulkList**
+> ModelsBulkResponse validationRouterValidateEmailBulkList(xSubAccountApiKey, body)
+
+
+
+Validate Emails In File Asynchronously <br>
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccountvalidationApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var body = new SendPostApi.ModelsEmailList(); // ModelsEmailList | The email list to be sent for being validated
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.validationRouterValidateEmailBulkList(xSubAccountApiKey, body, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **body** | [**ModelsEmailList**](ModelsEmailList.md)| The email list to be sent for being validated | 
+
+### Return type
+
+[**ModelsBulkResponse**](ModelsBulkResponse.md)
 
 ### Authorization
 
@@ -211,7 +261,7 @@ No authorization required
 
 <a name="validationRouterValidateEmailList"></a>
 # **validationRouterValidateEmailList**
-> ModelsCleanedList validationRouterValidateEmailList(xSubAccountApiKey, body)
+> ModelsValidatedEmailList validationRouterValidateEmailList(xSubAccountApiKey, body)
 
 
 
@@ -247,7 +297,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ModelsCleanedList**](ModelsCleanedList.md)
+[**ModelsValidatedEmailList**](ModelsValidatedEmailList.md)
 
 ### Authorization
 
