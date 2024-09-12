@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**subAccountRouterGet**](AccountsubaccountApi.md#subAccountRouterGet) | **GET** /account/subaccount/{subAccountId} | 
 [**subAccountRouterGetAll**](AccountsubaccountApi.md#subAccountRouterGetAll) | **GET** /account/subaccount/ | 
 [**subAccountRouterGetAllSubAccountIncidents**](AccountsubaccountApi.md#subAccountRouterGetAllSubAccountIncidents) | **GET** /account/subaccount/{subAccountId}/incident | 
+[**subAccountRouterMarkPlus**](AccountsubaccountApi.md#subAccountRouterMarkPlus) | **PUT** /account/subaccount/{subAccountKey}/plus | 
 [**subAccountRouterUpdate**](AccountsubaccountApi.md#subAccountRouterUpdate) | **PUT** /account/subaccount/{subAccountId} | 
 
 
@@ -314,6 +315,55 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[ModelsIncident]**](ModelsIncident.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="subAccountRouterMarkPlus"></a>
+# **subAccountRouterMarkPlus**
+> ModelsSubAccount subAccountRouterMarkPlus(xAccountApiKey, subAccountKey)
+
+
+
+Mark Plus SubAccount <br>
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccountsubaccountApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var subAccountKey = 789; // Number | The SubAccountId you want to Mark Plus
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.subAccountRouterMarkPlus(xAccountApiKey, subAccountKey, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xAccountApiKey** | **String**| Account API Key | 
+ **subAccountKey** | **Number**| The SubAccountId you want to Mark Plus | 
+
+### Return type
+
+[**ModelsSubAccount**](ModelsSubAccount.md)
 
 ### Authorization
 

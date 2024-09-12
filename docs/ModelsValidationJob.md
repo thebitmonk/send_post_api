@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **resultValidPath** | **String** |  | [optional] 
 **status** | [**ModelsJobStatus**](ModelsJobStatus.md) |  | [optional] 
 **totalBatches** | **Number** |  | [optional] 
+**trackingId** | **String** |  | [optional] 
 **updated** | **Number** |  | [optional] 
 
 
