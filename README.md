@@ -274,8 +274,8 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountvalidationApi* | [**validationRouterCount**](docs/AccountvalidationApi.md#validationRouterCount) | **GET** /account/validation/count | 
 *SendPostApi.AccountvalidationApi* | [**validationRouterDeleteValidation**](docs/AccountvalidationApi.md#validationRouterDeleteValidation) | **DELETE** /account/validation/ | 
 *SendPostApi.AccountvalidationApi* | [**validationRouterGetAll**](docs/AccountvalidationApi.md#validationRouterGetAll) | **GET** /account/validation/ | 
+*SendPostApi.AccountvalidationApi* | [**validationRouterGetValidationJobResults**](docs/AccountvalidationApi.md#validationRouterGetValidationJobResults) | **GET** /account/validation/results | 
 *SendPostApi.AccountvalidationApi* | [**validationRouterValidateEmailBulkList**](docs/AccountvalidationApi.md#validationRouterValidateEmailBulkList) | **POST** /account/validation/list/bulk | 
-*SendPostApi.AccountvalidationApi* | [**validationRouterValidateEmailList**](docs/AccountvalidationApi.md#validationRouterValidateEmailList) | **POST** /account/validation/ | 
 *SendPostApi.AccountwebhookApi* | [**accountWebhookRouterCount**](docs/AccountwebhookApi.md#accountWebhookRouterCount) | **GET** /account/webhook/count | 
 *SendPostApi.AccountwebhookApi* | [**accountWebhookRouterCreate**](docs/AccountwebhookApi.md#accountWebhookRouterCreate) | **POST** /account/webhook/ | 
 *SendPostApi.AccountwebhookApi* | [**accountWebhookRouterDelete**](docs/AccountwebhookApi.md#accountWebhookRouterDelete) | **DELETE** /account/webhook/{webhookId} | 
@@ -298,12 +298,15 @@ Class | Method | HTTP request | Description
 *SendPostApi.SubaccountdomainApi* | [**domainRouterCount**](docs/SubaccountdomainApi.md#domainRouterCount) | **GET** /subaccount/domain/count | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterCreate**](docs/SubaccountdomainApi.md#domainRouterCreate) | **POST** /subaccount/domain/ | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterDelete**](docs/SubaccountdomainApi.md#domainRouterDelete) | **DELETE** /subaccount/domain/{domainId} | 
+*SendPostApi.SubaccountdomainApi* | [**domainRouterDoesDomainExists**](docs/SubaccountdomainApi.md#domainRouterDoesDomainExists) | **GET** /subaccount/domain/exists | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterGet**](docs/SubaccountdomainApi.md#domainRouterGet) | **GET** /subaccount/domain/{domainId} | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterGetAll**](docs/SubaccountdomainApi.md#domainRouterGetAll) | **GET** /subaccount/domain/ | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterIsDomainVerified**](docs/SubaccountdomainApi.md#domainRouterIsDomainVerified) | **GET** /subaccount/domain/isverified | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterUpdate**](docs/SubaccountdomainApi.md#domainRouterUpdate) | **PUT** /subaccount/domain/{domainId} | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterVerify**](docs/SubaccountdomainApi.md#domainRouterVerify) | **POST** /subaccount/domain/{domainId}/verify | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterVerifyByToken**](docs/SubaccountdomainApi.md#domainRouterVerifyByToken) | **POST** /subaccount/domain/{domainId}/verify/email/{token} | 
+*SendPostApi.SubaccountdomainApi* | [**domainRouterVerifyOwnerDomainByToken**](docs/SubaccountdomainApi.md#domainRouterVerifyOwnerDomainByToken) | **POST** /subaccount/domain/owner/verify/email/{token} | 
+*SendPostApi.SubaccountdomainApi* | [**domainRouterVerifyOwnerDomainRequest**](docs/SubaccountdomainApi.md#domainRouterVerifyOwnerDomainRequest) | **POST** /subaccount/domain/owner/verify/email | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterVerifyRequest**](docs/SubaccountdomainApi.md#domainRouterVerifyRequest) | **POST** /subaccount/domain/{domainId}/verify/email | 
 *SendPostApi.SubaccountemailApi* | [**emailRouterSendEmail**](docs/SubaccountemailApi.md#emailRouterSendEmail) | **POST** /subaccount/email/ | 
 *SendPostApi.SubaccountemailApi* | [**emailRouterSendEmailWithTemplate**](docs/SubaccountemailApi.md#emailRouterSendEmailWithTemplate) | **POST** /subaccount/email/template | 
@@ -339,9 +342,9 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [SendPostApi.Model3220150x140007b9290False](docs/Model3220150x140007b9290False.md)
- - [SendPostApi.Model3222960x140007b9380False](docs/Model3222960x140007b9380False.md)
- - [SendPostApi.Model6927150x14000c36420False](docs/Model6927150x14000c36420False.md)
+ - [SendPostApi.Model3224840x140007487b0False](docs/Model3224840x140007487b0False.md)
+ - [SendPostApi.Model3227650x140007488a0False](docs/Model3227650x140007488a0False.md)
+ - [SendPostApi.Model6977340x14000bc4ae0False](docs/Model6977340x14000bc4ae0False.md)
  - [SendPostApi.ModelExport](docs/ModelExport.md)
  - [SendPostApi.ModelsAGDomainStat](docs/ModelsAGDomainStat.md)
  - [SendPostApi.ModelsAGIPStat](docs/ModelsAGIPStat.md)
@@ -407,6 +410,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsDetailedAlert](docs/ModelsDetailedAlert.md)
  - [SendPostApi.ModelsDomain](docs/ModelsDomain.md)
  - [SendPostApi.ModelsDomainAge](docs/ModelsDomainAge.md)
+ - [SendPostApi.ModelsDomainCheckRequest](docs/ModelsDomainCheckRequest.md)
  - [SendPostApi.ModelsDomainCheckResult](docs/ModelsDomainCheckResult.md)
  - [SendPostApi.ModelsEAccount](docs/ModelsEAccount.md)
  - [SendPostApi.ModelsEAccountMember](docs/ModelsEAccountMember.md)
@@ -509,7 +513,6 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsSSLInfo](docs/ModelsSSLInfo.md)
  - [SendPostApi.ModelsSender](docs/ModelsSender.md)
  - [SendPostApi.ModelsSendgridEvent](docs/ModelsSendgridEvent.md)
- - [SendPostApi.ModelsSingleValidatedEmail](docs/ModelsSingleValidatedEmail.md)
  - [SendPostApi.ModelsStat](docs/ModelsStat.md)
  - [SendPostApi.ModelsSubAccount](docs/ModelsSubAccount.md)
  - [SendPostApi.ModelsSubAccountType](docs/ModelsSubAccountType.md)
@@ -526,10 +529,10 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsThirdPartySendingProviderType](docs/ModelsThirdPartySendingProviderType.md)
  - [SendPostApi.ModelsTo](docs/ModelsTo.md)
  - [SendPostApi.ModelsUMember](docs/ModelsUMember.md)
- - [SendPostApi.ModelsValidatedEmailList](docs/ModelsValidatedEmailList.md)
  - [SendPostApi.ModelsValidation](docs/ModelsValidation.md)
  - [SendPostApi.ModelsValidationJob](docs/ModelsValidationJob.md)
  - [SendPostApi.ModelsValidationReason](docs/ModelsValidationReason.md)
+ - [SendPostApi.ModelsValidationStatus](docs/ModelsValidationStatus.md)
  - [SendPostApi.ModelsVerifyByMemberTokenRequest](docs/ModelsVerifyByMemberTokenRequest.md)
  - [SendPostApi.ModelsVerifyByTokenRequest](docs/ModelsVerifyByTokenRequest.md)
  - [SendPostApi.ModelsWMessage](docs/ModelsWMessage.md)

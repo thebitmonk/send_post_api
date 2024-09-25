@@ -31,26 +31,14 @@
   var instance;
 
   describe('(package)', function() {
-    describe('ModelsEmailList', function() {
+    describe('ModelsValidationStatus', function() {
       beforeEach(function() {
-        instance = new SendPostApi.ModelsEmailList();
+        instance = new SendPostApi.ModelsValidationStatus();
       });
 
-      it('should create an instance of ModelsEmailList', function() {
-        // TODO: update the code to test ModelsEmailList
-        expect(instance).to.be.a(SendPostApi.ModelsEmailList);
-      });
-
-      it('should have the property emailIds (base name: "emailIds")', function() {
-        // TODO: update the code to test the property emailIds
-        expect(instance).to.have.property('emailIds');
-        // expect(instance.emailIds).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property headers (base name: "headers")', function() {
-        // TODO: update the code to test the property headers
-        expect(instance).to.have.property('headers');
-        // expect(instance.headers).to.be(expectedValueLiteral);
+      it('should create an instance of ModelsValidationStatus', function() {
+        // TODO: update the code to test ModelsValidationStatus
+        expect(instance).to.be.a(SendPostApi.ModelsValidationStatus);
       });
 
     });

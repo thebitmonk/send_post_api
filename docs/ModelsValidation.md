@@ -7,6 +7,6 @@ Name | Type | Description | Notes
 **email** | **String** |  | [optional] 
 **error** | **String** |  | [optional] 
 **id** | **Number** |  | [optional] 
-**reason** | [**ModelsValidationReason**](ModelsValidationReason.md) |  | [optional] 
+**reason** | [**ModelsValidationStatus**](ModelsValidationStatus.md) |  | [optional] 
 
 

@@ -8,8 +8,8 @@ Method | HTTP request | Description
 [**validationRouterCount**](AccountvalidationApi.md#validationRouterCount) | **GET** /account/validation/count | 
 [**validationRouterDeleteValidation**](AccountvalidationApi.md#validationRouterDeleteValidation) | **DELETE** /account/validation/ | 
 [**validationRouterGetAll**](AccountvalidationApi.md#validationRouterGetAll) | **GET** /account/validation/ | 
+[**validationRouterGetValidationJobResults**](AccountvalidationApi.md#validationRouterGetValidationJobResults) | **GET** /account/validation/results | 
 [**validationRouterValidateEmailBulkList**](AccountvalidationApi.md#validationRouterValidateEmailBulkList) | **POST** /account/validation/list/bulk | 
-[**validationRouterValidateEmailList**](AccountvalidationApi.md#validationRouterValidateEmailList) | **POST** /account/validation/ | 
 
 
 <a name="validateRouterValidateEmailBulk"></a>
@@ -210,6 +210,58 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="validationRouterGetValidationJobResults"></a>
+# **validationRouterGetValidationJobResults**
+> ModelsBulkResponse validationRouterGetValidationJobResults(xSubAccountApiKey, opts)
+
+
+
+Get validation job results <br>
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccountvalidationApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var opts = { 
+  'jobId': 789, // Number | jobId
+  'tag': "tag_example" // String | tag
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.validationRouterGetValidationJobResults(xSubAccountApiKey, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **jobId** | **Number**| jobId | [optional] 
+ **tag** | **String**| tag | [optional] 
+
+### Return type
+
+[**ModelsBulkResponse**](ModelsBulkResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="validationRouterValidateEmailBulkList"></a>
 # **validationRouterValidateEmailBulkList**
 > ModelsBulkResponse validationRouterValidateEmailBulkList(xSubAccountApiKey, body)
@@ -249,55 +301,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ModelsBulkResponse**](ModelsBulkResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="validationRouterValidateEmailList"></a>
-# **validationRouterValidateEmailList**
-> ModelsValidatedEmailList validationRouterValidateEmailList(xSubAccountApiKey, body)
-
-
-
-Validate Email List Synchronously <br>
-
-### Example
-```javascript
-var SendPostApi = require('send_post_api');
-
-var apiInstance = new SendPostApi.AccountvalidationApi();
-
-var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
-
-var body = new SendPostApi.ModelsEmailList(); // ModelsEmailList | The email list to be sent for being validated
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.validationRouterValidateEmailList(xSubAccountApiKey, body, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **xSubAccountApiKey** | **String**| Sub-Account API Key | 
- **body** | [**ModelsEmailList**](ModelsEmailList.md)| The email list to be sent for being validated | 
-
-### Return type
-
-[**ModelsValidatedEmailList**](ModelsValidatedEmailList.md)
 
 ### Authorization
 

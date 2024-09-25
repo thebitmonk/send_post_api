@@ -157,6 +157,74 @@
           done();
         });
       });
+      describe('domainRouterDoesDomainExists', function() {
+        it('should call domainRouterDoesDomainExists successfully', function(done) {
+          // TODO: uncomment, update parameter values for domainRouterDoesDomainExists call and complete the assertions
+          /*
+          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var domainName = "domainName_example";
+
+          instance.domainRouterDoesDomainExists(xSubAccountApiKey, domainName, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelsDomain);
+            expect(data.created).to.be.a('number');
+            expect(data.created).to.be("0");
+            expect(data.dkim).to.be.a(SendPostApi.ModelsDNSRecord);
+                  expect(data.dkim.host).to.be.a('string');
+              expect(data.dkim.host).to.be("");
+              expect(data.dkim.textValue).to.be.a('string');
+              expect(data.dkim.textValue).to.be("");
+              expect(data.dkim.type).to.be.a('string');
+              expect(data.dkim.type).to.be("");
+            expect(data.dkimConfig).to.be.a('string');
+            expect(data.dkimConfig).to.be("");
+            expect(data.dkimVerified).to.be.a('boolean');
+            expect(data.dkimVerified).to.be(false);
+            expect(data.dmarc).to.be.a(SendPostApi.ModelsDNSRecord);
+                  expect(data.dmarc.host).to.be.a('string');
+              expect(data.dmarc.host).to.be("");
+              expect(data.dmarc.textValue).to.be.a('string');
+              expect(data.dmarc.textValue).to.be("");
+              expect(data.dmarc.type).to.be.a('string');
+              expect(data.dmarc.type).to.be("");
+            expect(data.dmarcVerified).to.be.a('boolean');
+            expect(data.dmarcVerified).to.be(false);
+            expect(data.id).to.be.a('number');
+            expect(data.id).to.be("0");
+            expect(data.name).to.be.a('string');
+            expect(data.name).to.be("");
+            expect(data.returnPath).to.be.a(SendPostApi.ModelsDNSRecord);
+                  expect(data.returnPath.host).to.be.a('string');
+              expect(data.returnPath.host).to.be("");
+              expect(data.returnPath.textValue).to.be.a('string');
+              expect(data.returnPath.textValue).to.be("");
+              expect(data.returnPath.type).to.be.a('string');
+              expect(data.returnPath.type).to.be("");
+            expect(data.returnPathVerified).to.be.a('boolean');
+            expect(data.returnPathVerified).to.be(false);
+            expect(data.track).to.be.a(SendPostApi.ModelsDNSRecord);
+                  expect(data.track.host).to.be.a('string');
+              expect(data.track.host).to.be("");
+              expect(data.track.textValue).to.be.a('string');
+              expect(data.track.textValue).to.be("");
+              expect(data.track.type).to.be.a('string');
+              expect(data.track.type).to.be("");
+            expect(data.trackVerified).to.be.a('boolean');
+            expect(data.trackVerified).to.be(false);
+            expect(data.verified).to.be.a('boolean');
+            expect(data.verified).to.be(false);
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('domainRouterGet', function() {
         it('should call domainRouterGet successfully', function(done) {
           // TODO: uncomment, update parameter values for domainRouterGet call and complete the assertions
@@ -570,6 +638,96 @@
             expect(data.trackVerified).to.be(false);
             expect(data.verified).to.be.a('boolean');
             expect(data.verified).to.be(false);
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('domainRouterVerifyOwnerDomainByToken', function() {
+        it('should call domainRouterVerifyOwnerDomainByToken successfully', function(done) {
+          // TODO: uncomment, update parameter values for domainRouterVerifyOwnerDomainByToken call and complete the assertions
+          /*
+          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var token = "token_example";
+
+          instance.domainRouterVerifyOwnerDomainByToken(xSubAccountApiKey, token, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelsDomain);
+            expect(data.created).to.be.a('number');
+            expect(data.created).to.be("0");
+            expect(data.dkim).to.be.a(SendPostApi.ModelsDNSRecord);
+                  expect(data.dkim.host).to.be.a('string');
+              expect(data.dkim.host).to.be("");
+              expect(data.dkim.textValue).to.be.a('string');
+              expect(data.dkim.textValue).to.be("");
+              expect(data.dkim.type).to.be.a('string');
+              expect(data.dkim.type).to.be("");
+            expect(data.dkimConfig).to.be.a('string');
+            expect(data.dkimConfig).to.be("");
+            expect(data.dkimVerified).to.be.a('boolean');
+            expect(data.dkimVerified).to.be(false);
+            expect(data.dmarc).to.be.a(SendPostApi.ModelsDNSRecord);
+                  expect(data.dmarc.host).to.be.a('string');
+              expect(data.dmarc.host).to.be("");
+              expect(data.dmarc.textValue).to.be.a('string');
+              expect(data.dmarc.textValue).to.be("");
+              expect(data.dmarc.type).to.be.a('string');
+              expect(data.dmarc.type).to.be("");
+            expect(data.dmarcVerified).to.be.a('boolean');
+            expect(data.dmarcVerified).to.be(false);
+            expect(data.id).to.be.a('number');
+            expect(data.id).to.be("0");
+            expect(data.name).to.be.a('string');
+            expect(data.name).to.be("");
+            expect(data.returnPath).to.be.a(SendPostApi.ModelsDNSRecord);
+                  expect(data.returnPath.host).to.be.a('string');
+              expect(data.returnPath.host).to.be("");
+              expect(data.returnPath.textValue).to.be.a('string');
+              expect(data.returnPath.textValue).to.be("");
+              expect(data.returnPath.type).to.be.a('string');
+              expect(data.returnPath.type).to.be("");
+            expect(data.returnPathVerified).to.be.a('boolean');
+            expect(data.returnPathVerified).to.be(false);
+            expect(data.track).to.be.a(SendPostApi.ModelsDNSRecord);
+                  expect(data.track.host).to.be.a('string');
+              expect(data.track.host).to.be("");
+              expect(data.track.textValue).to.be.a('string');
+              expect(data.track.textValue).to.be("");
+              expect(data.track.type).to.be.a('string');
+              expect(data.track.type).to.be("");
+            expect(data.trackVerified).to.be.a('boolean');
+            expect(data.trackVerified).to.be(false);
+            expect(data.verified).to.be.a('boolean');
+            expect(data.verified).to.be(false);
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('domainRouterVerifyOwnerDomainRequest', function() {
+        it('should call domainRouterVerifyOwnerDomainRequest successfully', function(done) {
+          // TODO: uncomment, update parameter values for domainRouterVerifyOwnerDomainRequest call
+          /*
+          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var body = new SendPostApi.ModelsDomainCheckRequest();
+          var opts = {};
+          opts.redirectPath = "redirectPath_example";
+
+          instance.domainRouterVerifyOwnerDomainRequest(xSubAccountApiKey, body, opts, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
 
             done();
           });
