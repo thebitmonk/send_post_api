@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 
-Find all messages sent to a specific recipient
+Find all messages sent to a specific recipient <br>
 
 ### Example
 ```javascript

@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 
 
-Count Total AccountIntegrations
+Count Total AccountIntegrations <br>
 
 ### Example
 ```javascript
@@ -66,7 +66,7 @@ No authorization required
 
 
 
-Create Integration
+Create Integration <br>
 
 ### Example
 ```javascript
@@ -118,7 +118,7 @@ No authorization required
 
 
 
-Delete Integration
+Delete Integration <br>
 
 ### Example
 ```javascript
@@ -170,7 +170,7 @@ No authorization required
 
 
 
-Disable IP Monitoring for a single IP
+Disable IP Monitoring for a single IP <br>
 
 ### Example
 ```javascript
@@ -222,7 +222,7 @@ No authorization required
 
 
 
-Enable IP Monitoring for a single IP
+Enable IP Monitoring for a single IP <br>
 
 ### Example
 ```javascript
@@ -274,7 +274,7 @@ No authorization required
 
 
 
-Get All Integrations
+Get All Integrations <br>
 
 ### Example
 ```javascript
@@ -320,7 +320,7 @@ No authorization required
 
 
 
-Get Monitored IP Stats
+Get Monitored IP Stats <br>
 
 ### Example
 ```javascript
@@ -375,7 +375,7 @@ No authorization required
 
 
 
-Update Integration
+Update Integration <br>
 
 ### Example
 ```javascript

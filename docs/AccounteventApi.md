@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 
-Count all events from a account for a given time-range
+Count all events from a account for a given time-range <br>
 
 ### Example
 ```javascript
@@ -76,7 +76,7 @@ No authorization required
 
 
 
-Export all events from a account for a given time-range
+Export all events from a account for a given time-range <br>
 
 ### Example
 ```javascript
@@ -136,7 +136,7 @@ No authorization required
 
 
 
-Find Event By Id
+Find Event By Id <br>
 
 ### Example
 ```javascript
@@ -185,7 +185,7 @@ No authorization required
 
 
 
-Find all events from a account for a given time-range
+Find all events from a account for a given time-range <br>
 
 ### Example
 ```javascript

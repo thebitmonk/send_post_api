@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **active** | **Boolean** |  | [optional] 
 **assignedMemberId** | **Number** |  | [optional] 
-**emails** | **Object** |  | [optional] 
+**emails** | **[String]** |  | [optional] 
 **entityType** | **String** |  | [optional] 
 **entityValue** | **Number** |  | [optional] 
 **label** | [**ModelsAlertLabel**](ModelsAlertLabel.md) |  | [optional] 

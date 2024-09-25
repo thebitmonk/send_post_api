@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 
-Count Total Alerts for account
+Count Total Alerts for account <br>
 
 ### Example
 ```javascript
@@ -67,7 +67,7 @@ No authorization required
 
 
 
-create an alert
+create an alert <br>
 
 ### Example
 ```javascript
@@ -116,7 +116,7 @@ No authorization required
 
 
 
-Delete Alert
+Delete Alert <br>
 
 ### Example
 ```javascript
@@ -168,7 +168,7 @@ No authorization required
 
 
 
-Get All Alerts
+Get All Alerts <br>
 
 ### Example
 ```javascript
@@ -218,11 +218,11 @@ No authorization required
 
 <a name="alertRouterUpdate"></a>
 # **alertRouterUpdate**
-> Alert alertRouterUpdate(xAccountApiKey, alertId, body)
+> ModelsAlert alertRouterUpdate(xAccountApiKey, alertId, body)
 
 
 
-Update an Alert
+Update an Alert <br>
 
 ### Example
 ```javascript
@@ -257,7 +257,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Alert**](Alert.md)
+[**ModelsAlert**](ModelsAlert.md)
 
 ### Authorization
 

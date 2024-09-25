@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 
-Send Email To Contacts
+Send Email To Contacts <br>
 
 ### Example
 ```javascript
@@ -69,7 +69,7 @@ No authorization required
 
 
 
-Send Email To Contacts With Template
+Send Email To Contacts With Template <br>
 
 ### Example
 ```javascript

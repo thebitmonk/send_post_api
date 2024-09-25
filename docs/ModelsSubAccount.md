@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **created** | **Number** |  | [optional] 
 **createdBy** | [**ModelsMember**](ModelsMember.md) |  | [optional] 
 **id** | **Number** |  | [optional] 
+**isPlus** | **Boolean** |  | [optional] 
 **labels** | [**[ModelsLabel]**](ModelsLabel.md) |  | [optional] 
 **name** | **String** |  | [optional] 
 **smtpAuths** | [**[ModelsSMTPAuth]**](ModelsSMTPAuth.md) |  | [optional] 

@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 
-Check if the username and password correct and returns the subAccount info
+Check if the username and password correct and returns the subAccount info <br>
 
 ### Example
 ```javascript
@@ -60,7 +60,7 @@ No authorization required
 
 
 
-Receive webhooks raised from SMTP servers
+Receive webhooks raised from SMTP servers <br>
 
 ### Example
 ```javascript

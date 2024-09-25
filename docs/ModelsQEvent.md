@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **eventMetadata** | [**ModelsEventMetadata**](ModelsEventMetadata.md) |  | [optional] 
 **from** | **String** |  | [optional] 
 **fromName** | **String** |  | [optional] 
-**groups** | **Object** |  | [optional] 
+**groups** | **[String]** |  | [optional] 
 **ipID** | **Number** |  | [optional] 
 **ipPoolID** | **Number** |  | [optional] 
 **messageID** | **String** |  | [optional] 
