@@ -26,52 +26,38 @@
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsEmailList = factory(root.SendPostApi.ApiClient);
+    root.SendPostApi.ModelsDomainCheckRequest = factory(root.SendPostApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The ModelsEmailList model module.
-   * @module model/ModelsEmailList
+   * The ModelsDomainCheckRequest model module.
+   * @module model/ModelsDomainCheckRequest
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>ModelsEmailList</code>.
-   * @alias module:model/ModelsEmailList
+   * Constructs a new <code>ModelsDomainCheckRequest</code>.
+   * @alias module:model/ModelsDomainCheckRequest
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>ModelsEmailList</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ModelsDomainCheckRequest</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ModelsEmailList} obj Optional instance to populate.
-   * @return {module:model/ModelsEmailList} The populated <code>ModelsEmailList</code> instance.
+   * @param {module:model/ModelsDomainCheckRequest} obj Optional instance to populate.
+   * @return {module:model/ModelsDomainCheckRequest} The populated <code>ModelsDomainCheckRequest</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('emailIds'))
-        obj.emailIds = ApiClient.convertToType(data['emailIds'], ['String']);
-      if (data.hasOwnProperty('headers'))
-        obj.headers = ApiClient.convertToType(data['headers'], Object);
     }
     return obj;
   }
-
-  /**
-   * @member {Array.<String>} emailIds
-   */
-  exports.prototype.emailIds = undefined;
-
-  /**
-   * @member {Object} headers
-   */
-  exports.prototype.headers = undefined;
 
 
   return exports;

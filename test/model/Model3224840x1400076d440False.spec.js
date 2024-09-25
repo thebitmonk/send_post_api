@@ -31,26 +31,14 @@
   var instance;
 
   describe('(package)', function() {
-    describe('ModelsEmailList', function() {
+    describe('Model3224840x1400076d440False', function() {
       beforeEach(function() {
-        instance = new SendPostApi.ModelsEmailList();
+        instance = new SendPostApi.Model3224840x1400076d440False();
       });
 
-      it('should create an instance of ModelsEmailList', function() {
-        // TODO: update the code to test ModelsEmailList
-        expect(instance).to.be.a(SendPostApi.ModelsEmailList);
-      });
-
-      it('should have the property emailIds (base name: "emailIds")', function() {
-        // TODO: update the code to test the property emailIds
-        expect(instance).to.have.property('emailIds');
-        // expect(instance.emailIds).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property headers (base name: "headers")', function() {
-        // TODO: update the code to test the property headers
-        expect(instance).to.have.property('headers');
-        // expect(instance.headers).to.be(expectedValueLiteral);
+      it('should create an instance of Model3224840x1400076d440False', function() {
+        // TODO: update the code to test Model3224840x1400076d440False
+        expect(instance).to.be.a(SendPostApi.Model3224840x1400076d440False);
       });
 
     });

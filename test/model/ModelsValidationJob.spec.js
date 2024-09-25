@@ -53,10 +53,10 @@
         // expect(instance.id).to.be(expectedValueLiteral);
       });
 
-      it('should have the property processedBatches (base name: "processedBatches")', function() {
-        // TODO: update the code to test the property processedBatches
-        expect(instance).to.have.property('processedBatches');
-        // expect(instance.processedBatches).to.be(expectedValueLiteral);
+      it('should have the property processed (base name: "processed")', function() {
+        // TODO: update the code to test the property processed
+        expect(instance).to.have.property('processed');
+        // expect(instance.processed).to.be(expectedValueLiteral);
       });
 
       it('should have the property resultInvalidPath (base name: "resultInvalidPath")', function() {
@@ -83,10 +83,10 @@
         // expect(instance.status).to.be(expectedValueLiteral);
       });
 
-      it('should have the property totalBatches (base name: "totalBatches")', function() {
-        // TODO: update the code to test the property totalBatches
-        expect(instance).to.have.property('totalBatches');
-        // expect(instance.totalBatches).to.be(expectedValueLiteral);
+      it('should have the property total (base name: "total")', function() {
+        // TODO: update the code to test the property total
+        expect(instance).to.have.property('total');
+        // expect(instance.total).to.be(expectedValueLiteral);
       });
 
       it('should have the property trackingId (base name: "trackingId")', function() {

@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsDomain', 'model/ModelsEDomain', 'model/ModelsEMember', 'model/ModelsVerifyByTokenRequest'], factory);
+    define(['ApiClient', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsDomain', 'model/ModelsDomainCheckRequest', 'model/ModelsEDomain', 'model/ModelsEMember', 'model/ModelsVerifyByTokenRequest'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsDomain'), require('../model/ModelsEDomain'), require('../model/ModelsEMember'), require('../model/ModelsVerifyByTokenRequest'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsDomain'), require('../model/ModelsDomainCheckRequest'), require('../model/ModelsEDomain'), require('../model/ModelsEMember'), require('../model/ModelsVerifyByTokenRequest'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.SubaccountdomainApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsDomain, root.SendPostApi.ModelsEDomain, root.SendPostApi.ModelsEMember, root.SendPostApi.ModelsVerifyByTokenRequest);
+    root.SendPostApi.SubaccountdomainApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsDomain, root.SendPostApi.ModelsDomainCheckRequest, root.SendPostApi.ModelsEDomain, root.SendPostApi.ModelsEMember, root.SendPostApi.ModelsVerifyByTokenRequest);
   }
-}(this, function(ApiClient, ModelsCountStat, ModelsDeleteResponse, ModelsDomain, ModelsEDomain, ModelsEMember, ModelsVerifyByTokenRequest) {
+}(this, function(ApiClient, ModelsCountStat, ModelsDeleteResponse, ModelsDomain, ModelsDomainCheckRequest, ModelsEDomain, ModelsEMember, ModelsVerifyByTokenRequest) {
   'use strict';
 
   /**
@@ -203,6 +203,60 @@
 
       return this.apiClient.callApi(
         '/subaccount/domain/{domainId}', 'DELETE',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the domainRouterDoesDomainExists operation.
+     * @callback module:api/SubaccountdomainApi~domainRouterDoesDomainExistsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ModelsDomain} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Does Domain Exists <br>
+     * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {String} domainName the DomainName you want to get
+     * @param {module:api/SubaccountdomainApi~domainRouterDoesDomainExistsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ModelsDomain}
+     */
+    this.domainRouterDoesDomainExists = function(xSubAccountApiKey, domainName, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'xSubAccountApiKey' is set
+      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling domainRouterDoesDomainExists");
+      }
+
+      // verify the required parameter 'domainName' is set
+      if (domainName === undefined || domainName === null) {
+        throw new Error("Missing the required parameter 'domainName' when calling domainRouterDoesDomainExists");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'domainName': domainName,
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-SubAccount-ApiKey': xSubAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ModelsDomain;
+
+      return this.apiClient.callApi(
+        '/subaccount/domain/exists', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -541,6 +595,116 @@
 
       return this.apiClient.callApi(
         '/subaccount/domain/{domainId}/verify/email/{token}', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the domainRouterVerifyOwnerDomainByToken operation.
+     * @callback module:api/SubaccountdomainApi~domainRouterVerifyOwnerDomainByTokenCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ModelsDomain} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Verify owner Domain By Signed Token <br>
+     * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {String} token The signed token used to verify
+     * @param {module:api/SubaccountdomainApi~domainRouterVerifyOwnerDomainByTokenCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ModelsDomain}
+     */
+    this.domainRouterVerifyOwnerDomainByToken = function(xSubAccountApiKey, token, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'xSubAccountApiKey' is set
+      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling domainRouterVerifyOwnerDomainByToken");
+      }
+
+      // verify the required parameter 'token' is set
+      if (token === undefined || token === null) {
+        throw new Error("Missing the required parameter 'token' when calling domainRouterVerifyOwnerDomainByToken");
+      }
+
+
+      var pathParams = {
+        'token': token
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-SubAccount-ApiKey': xSubAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ModelsDomain;
+
+      return this.apiClient.callApi(
+        '/subaccount/domain/owner/verify/email/{token}', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the domainRouterVerifyOwnerDomainRequest operation.
+     * @callback module:api/SubaccountdomainApi~domainRouterVerifyOwnerDomainRequestCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Verify Domain By Email Request <br>
+     * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {module:model/ModelsDomainCheckRequest} body The Email to be used to verify
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.redirectPath redirectPath
+     * @param {module:api/SubaccountdomainApi~domainRouterVerifyOwnerDomainRequestCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.domainRouterVerifyOwnerDomainRequest = function(xSubAccountApiKey, body, opts, callback) {
+      opts = opts || {};
+      var postBody = body;
+
+      // verify the required parameter 'xSubAccountApiKey' is set
+      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling domainRouterVerifyOwnerDomainRequest");
+      }
+
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling domainRouterVerifyOwnerDomainRequest");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'redirectPath': opts['redirectPath'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-SubAccount-ApiKey': xSubAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/subaccount/domain/owner/verify/email', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

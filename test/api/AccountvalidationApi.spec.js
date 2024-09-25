@@ -107,7 +107,7 @@
             expect(data.error).to.be("");
             expect(data.id).to.be.a('number');
             expect(data.id).to.be("0");
-            expect(data.reason).to.be.a(SendPostApi.ModelsValidationReason);
+            expect(data.reason).to.be.a(SendPostApi.ModelsValidationStatus);
     
             done();
           });
@@ -142,8 +142,8 @@
               expect(data.created).to.be("0");
               expect(data.id).to.be.a('number');
               expect(data.id).to.be("0");
-              expect(data.processedBatches).to.be.a('number');
-              expect(data.processedBatches).to.be("0");
+              expect(data.processed).to.be.a('number');
+              expect(data.processed).to.be("0");
               expect(data.resultInvalidPath).to.be.a('string');
               expect(data.resultInvalidPath).to.be("");
               expect(data.resultPath).to.be.a('string');
@@ -151,8 +151,8 @@
               expect(data.resultValidPath).to.be.a('string');
               expect(data.resultValidPath).to.be("");
               expect(data.status).to.be.a(SendPostApi.ModelsJobStatus);
-                  expect(data.totalBatches).to.be.a('number');
-              expect(data.totalBatches).to.be("0");
+                  expect(data.total).to.be.a('number');
+              expect(data.total).to.be("0");
               expect(data.trackingId).to.be.a('string');
               expect(data.trackingId).to.be("");
               expect(data.updated).to.be.a('number');
@@ -166,15 +166,16 @@
           done();
         });
       });
-      describe('validationRouterValidateEmailBulkList', function() {
-        it('should call validationRouterValidateEmailBulkList successfully', function(done) {
-          // TODO: uncomment, update parameter values for validationRouterValidateEmailBulkList call and complete the assertions
+      describe('validationRouterGetValidationJobResults', function() {
+        it('should call validationRouterGetValidationJobResults successfully', function(done) {
+          // TODO: uncomment, update parameter values for validationRouterGetValidationJobResults call and complete the assertions
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
-          var body = new SendPostApi.ModelsEmailList();
-          body.emailIds = [""];
+          var opts = {};
+          opts.jobId = 789;
+          opts.tag = "tag_example";
 
-          instance.validationRouterValidateEmailBulkList(xSubAccountApiKey, body, function(error, data, response) {
+          instance.validationRouterGetValidationJobResults(xSubAccountApiKey, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -193,60 +194,26 @@
           done();
         });
       });
-      describe('validationRouterValidateEmailList', function() {
-        it('should call validationRouterValidateEmailList successfully', function(done) {
-          // TODO: uncomment, update parameter values for validationRouterValidateEmailList call and complete the assertions
+      describe('validationRouterValidateEmailBulkList', function() {
+        it('should call validationRouterValidateEmailBulkList successfully', function(done) {
+          // TODO: uncomment, update parameter values for validationRouterValidateEmailBulkList call and complete the assertions
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
           var body = new SendPostApi.ModelsEmailList();
           body.emailIds = [""];
+          body.headers = ;
 
-          instance.validationRouterValidateEmailList(xSubAccountApiKey, body, function(error, data, response) {
+          instance.validationRouterValidateEmailBulkList(xSubAccountApiKey, body, function(error, data, response) {
             if (error) {
               done(error);
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SendPostApi.ModelsValidatedEmailList);
-            {
-              let dataCtr = data.detailedResponse;
-              expect(dataCtr).to.be.an(Array);
-              expect(dataCtr).to.not.be.empty();
-              for (let p in dataCtr) {
-                let data = dataCtr[p];
-                expect(data).to.be.a(SendPostApi.ModelsSingleValidatedEmail);
-                expect(data.email).to.be.a('string');
-                expect(data.email).to.be("");
-                expect(data.error).to.be.a('string');
-                expect(data.error).to.be("");
-                expect(data.reason).to.be.a(SendPostApi.ModelsValidationReason);
-                    expect(data.status).to.be.a('string');
-                expect(data.status).to.be("");
-                expect(data.valid).to.be.a('boolean');
-                expect(data.valid).to.be(false);
-
-                      }
-            }
-            {
-              let dataCtr = data.invalid;
-              expect(dataCtr).to.be.an(Array);
-              expect(dataCtr).to.not.be.empty();
-              for (let p in dataCtr) {
-                let data = dataCtr[p];
-                expect(data).to.be.a('string');
-                expect(data).to.be("");
-              }
-            }
-            {
-              let dataCtr = data.valid;
-              expect(dataCtr).to.be.an(Array);
-              expect(dataCtr).to.not.be.empty();
-              for (let p in dataCtr) {
-                let data = dataCtr[p];
-                expect(data).to.be.a('string');
-                expect(data).to.be("");
-              }
-            }
+            expect(data).to.be.a(SendPostApi.ModelsBulkResponse);
+            expect(data.jobId).to.be.a('number');
+            expect(data.jobId).to.be("0");
+            expect(data.message).to.be.a('string');
+            expect(data.message).to.be("");
 
             done();
           });
