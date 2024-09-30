@@ -255,6 +255,50 @@
           done();
         });
       });
+      describe('accountStatRouterGetAllAggregateAccountValidationStats', function() {
+        it('should call accountStatRouterGetAllAggregateAccountValidationStats successfully', function(done) {
+          // TODO: uncomment, update parameter values for accountStatRouterGetAllAggregateAccountValidationStats call and complete the assertions
+          /*
+          var xAccountApiKey = "xAccountApiKey_example";
+          var opts = {};
+          opts.from = "from_example";
+          opts.to = "to_example";
+
+          instance.accountStatRouterGetAllAggregateAccountValidationStats(xAccountApiKey, opts, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelsStat);
+            expect(data.clicked).to.be.a('number');
+            expect(data.clicked).to.be("0");
+            expect(data.delivered).to.be.a('number');
+            expect(data.delivered).to.be("0");
+            expect(data.dropped).to.be.a('number');
+            expect(data.dropped).to.be("0");
+            expect(data.hardBounced).to.be.a('number');
+            expect(data.hardBounced).to.be("0");
+            expect(data.opened).to.be.a('number');
+            expect(data.opened).to.be("0");
+            expect(data.processed).to.be.a('number');
+            expect(data.processed).to.be("0");
+            expect(data.sent).to.be.a('number');
+            expect(data.sent).to.be("0");
+            expect(data.softBounced).to.be.a('number');
+            expect(data.softBounced).to.be("0");
+            expect(data.spam).to.be.a('number');
+            expect(data.spam).to.be("0");
+            expect(data.unsubscribed).to.be.a('number');
+            expect(data.unsubscribed).to.be("0");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('accountStatRouterGetAllAggregateDomainStats', function() {
         it('should call accountStatRouterGetAllAggregateDomainStats successfully', function(done) {
           // TODO: uncomment, update parameter values for accountStatRouterGetAllAggregateDomainStats call and complete the assertions

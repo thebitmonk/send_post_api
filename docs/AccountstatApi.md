@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**accountStatRouterGetAllAccountStatsByGroup**](AccountstatApi.md#accountStatRouterGetAllAccountStatsByGroup) | **GET** /account/stat/group | 
 [**accountStatRouterGetAllAggregateAccountStats**](AccountstatApi.md#accountStatRouterGetAllAggregateAccountStats) | **GET** /account/stat/aggregate | 
 [**accountStatRouterGetAllAggregateAccountStatsByGroup**](AccountstatApi.md#accountStatRouterGetAllAggregateAccountStatsByGroup) | **GET** /account/stat/aggregate/group | 
+[**accountStatRouterGetAllAggregateAccountValidationStats**](AccountstatApi.md#accountStatRouterGetAllAggregateAccountValidationStats) | **GET** /account/stat/aggregate/validation | 
 [**accountStatRouterGetAllAggregateDomainStats**](AccountstatApi.md#accountStatRouterGetAllAggregateDomainStats) | **GET** /account/stat/aggregate/domain | 
 [**accountStatRouterGetAllAggregateDomainStatsCount**](AccountstatApi.md#accountStatRouterGetAllAggregateDomainStatsCount) | **GET** /account/stat/aggregate/domain/count | 
 [**accountStatRouterGetAllAggregateIPStats**](AccountstatApi.md#accountStatRouterGetAllAggregateIPStats) | **GET** /account/stat/aggregate/ip | 
@@ -263,6 +264,58 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Sub-Account API Key | 
  **group** | **String**| the group whose stats you want | 
+ **from** | **String**| from date | [optional] 
+ **to** | **String**| to date | [optional] 
+
+### Return type
+
+[**ModelsStat**](ModelsStat.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="accountStatRouterGetAllAggregateAccountValidationStats"></a>
+# **accountStatRouterGetAllAggregateAccountValidationStats**
+> ModelsStat accountStatRouterGetAllAggregateAccountValidationStats(xAccountApiKey, opts)
+
+
+
+Get All Aggregate Validation Stats <br>
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccountstatApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var opts = { 
+  'from': "from_example", // String | from date
+  'to': "to_example" // String | to date
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.accountStatRouterGetAllAggregateAccountValidationStats(xAccountApiKey, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xAccountApiKey** | **String**| Account API Key | 
  **from** | **String**| from date | [optional] 
  **to** | **String**| to date | [optional] 
 

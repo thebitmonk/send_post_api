@@ -322,6 +322,59 @@
     }
 
     /**
+     * Callback function to receive the result of the accountStatRouterGetAllAggregateAccountValidationStats operation.
+     * @callback module:api/AccountstatApi~accountStatRouterGetAllAggregateAccountValidationStatsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ModelsStat} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get All Aggregate Validation Stats <br>
+     * @param {String} xAccountApiKey Account API Key
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.from from date
+     * @param {String} opts.to to date
+     * @param {module:api/AccountstatApi~accountStatRouterGetAllAggregateAccountValidationStatsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ModelsStat}
+     */
+    this.accountStatRouterGetAllAggregateAccountValidationStats = function(xAccountApiKey, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling accountStatRouterGetAllAggregateAccountValidationStats");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'from': opts['from'],
+        'to': opts['to'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-Account-ApiKey': xAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ModelsStat;
+
+      return this.apiClient.callApi(
+        '/account/stat/aggregate/validation', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the accountStatRouterGetAllAggregateDomainStats operation.
      * @callback module:api/AccountstatApi~accountStatRouterGetAllAggregateDomainStatsCallback
      * @param {String} error Error message, if any.
