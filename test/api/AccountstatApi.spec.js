@@ -270,27 +270,23 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SendPostApi.ModelsStat);
-            expect(data.clicked).to.be.a('number');
-            expect(data.clicked).to.be("0");
-            expect(data.delivered).to.be.a('number');
-            expect(data.delivered).to.be("0");
-            expect(data.dropped).to.be.a('number');
-            expect(data.dropped).to.be("0");
+            expect(data).to.be.a(SendPostApi.ModelsValidationStat);
+            expect(data.catchAll).to.be.a('number');
+            expect(data.catchAll).to.be("0");
             expect(data.hardBounced).to.be.a('number');
             expect(data.hardBounced).to.be("0");
-            expect(data.opened).to.be.a('number');
-            expect(data.opened).to.be("0");
+            expect(data.initiated).to.be.a('number');
+            expect(data.initiated).to.be("0");
+            expect(data.invalid).to.be.a('number');
+            expect(data.invalid).to.be("0");
             expect(data.processed).to.be.a('number');
             expect(data.processed).to.be("0");
-            expect(data.sent).to.be.a('number');
-            expect(data.sent).to.be("0");
             expect(data.softBounced).to.be.a('number');
             expect(data.softBounced).to.be("0");
-            expect(data.spam).to.be.a('number');
-            expect(data.spam).to.be("0");
-            expect(data.unsubscribed).to.be.a('number');
-            expect(data.unsubscribed).to.be("0");
+            expect(data.unknown).to.be.a('number');
+            expect(data.unknown).to.be("0");
+            expect(data.valid).to.be.a('number');
+            expect(data.valid).to.be("0");
 
             done();
           });

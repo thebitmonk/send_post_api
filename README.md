@@ -343,9 +343,9 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [SendPostApi.Model3244240x1400077fad0False](docs/Model3244240x1400077fad0False.md)
- - [SendPostApi.Model3247050x1400077fbc0False](docs/Model3247050x1400077fbc0False.md)
- - [SendPostApi.Model7026980x14000c240c0False](docs/Model7026980x14000c240c0False.md)
+ - [SendPostApi.Model3244240x140007feb10False](docs/Model3244240x140007feb10False.md)
+ - [SendPostApi.Model3247050x140007fec00False](docs/Model3247050x140007fec00False.md)
+ - [SendPostApi.Model7026980x14000c890e0False](docs/Model7026980x14000c890e0False.md)
  - [SendPostApi.ModelExport](docs/ModelExport.md)
  - [SendPostApi.ModelsAGDomainStat](docs/ModelsAGDomainStat.md)
  - [SendPostApi.ModelsAGIPStat](docs/ModelsAGIPStat.md)
@@ -533,6 +533,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsValidation](docs/ModelsValidation.md)
  - [SendPostApi.ModelsValidationJob](docs/ModelsValidationJob.md)
  - [SendPostApi.ModelsValidationReason](docs/ModelsValidationReason.md)
+ - [SendPostApi.ModelsValidationStat](docs/ModelsValidationStat.md)
  - [SendPostApi.ModelsValidationStatus](docs/ModelsValidationStatus.md)
  - [SendPostApi.ModelsVerifyByMemberTokenRequest](docs/ModelsVerifyByMemberTokenRequest.md)
  - [SendPostApi.ModelsVerifyByTokenRequest](docs/ModelsVerifyByTokenRequest.md)

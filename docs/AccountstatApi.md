@@ -282,7 +282,7 @@ No authorization required
 
 <a name="accountStatRouterGetAllAggregateAccountValidationStats"></a>
 # **accountStatRouterGetAllAggregateAccountValidationStats**
-> ModelsStat accountStatRouterGetAllAggregateAccountValidationStats(xAccountApiKey, opts)
+> ModelsValidationStat accountStatRouterGetAllAggregateAccountValidationStats(xAccountApiKey, opts)
 
 
 
@@ -321,7 +321,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ModelsStat**](ModelsStat.md)
+[**ModelsValidationStat**](ModelsValidationStat.md)
 
 ### Authorization
 
