@@ -228,6 +228,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountstatApi* | [**accountStatRouterGetAllAccountStatsByGroup**](docs/AccountstatApi.md#accountStatRouterGetAllAccountStatsByGroup) | **GET** /account/stat/group | 
 *SendPostApi.AccountstatApi* | [**accountStatRouterGetAllAggregateAccountStats**](docs/AccountstatApi.md#accountStatRouterGetAllAggregateAccountStats) | **GET** /account/stat/aggregate | 
 *SendPostApi.AccountstatApi* | [**accountStatRouterGetAllAggregateAccountStatsByGroup**](docs/AccountstatApi.md#accountStatRouterGetAllAggregateAccountStatsByGroup) | **GET** /account/stat/aggregate/group | 
+*SendPostApi.AccountstatApi* | [**accountStatRouterGetAllAggregateAccountValidationStats**](docs/AccountstatApi.md#accountStatRouterGetAllAggregateAccountValidationStats) | **GET** /account/stat/aggregate/validation | 
 *SendPostApi.AccountstatApi* | [**accountStatRouterGetAllAggregateDomainStats**](docs/AccountstatApi.md#accountStatRouterGetAllAggregateDomainStats) | **GET** /account/stat/aggregate/domain | 
 *SendPostApi.AccountstatApi* | [**accountStatRouterGetAllAggregateDomainStatsCount**](docs/AccountstatApi.md#accountStatRouterGetAllAggregateDomainStatsCount) | **GET** /account/stat/aggregate/domain/count | 
 *SendPostApi.AccountstatApi* | [**accountStatRouterGetAllAggregateIPStats**](docs/AccountstatApi.md#accountStatRouterGetAllAggregateIPStats) | **GET** /account/stat/aggregate/ip | 
@@ -342,9 +343,9 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [SendPostApi.Model3224840x140007487b0False](docs/Model3224840x140007487b0False.md)
- - [SendPostApi.Model3227650x140007488a0False](docs/Model3227650x140007488a0False.md)
- - [SendPostApi.Model6977340x14000bc4ae0False](docs/Model6977340x14000bc4ae0False.md)
+ - [SendPostApi.Model3244270x1400077fad0False](docs/Model3244270x1400077fad0False.md)
+ - [SendPostApi.Model3247080x1400077fbc0False](docs/Model3247080x1400077fbc0False.md)
+ - [SendPostApi.Model7027010x14000c240c0False](docs/Model7027010x14000c240c0False.md)
  - [SendPostApi.ModelExport](docs/ModelExport.md)
  - [SendPostApi.ModelsAGDomainStat](docs/ModelsAGDomainStat.md)
  - [SendPostApi.ModelsAGIPStat](docs/ModelsAGIPStat.md)
@@ -532,6 +533,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsValidation](docs/ModelsValidation.md)
  - [SendPostApi.ModelsValidationJob](docs/ModelsValidationJob.md)
  - [SendPostApi.ModelsValidationReason](docs/ModelsValidationReason.md)
+ - [SendPostApi.ModelsValidationStat](docs/ModelsValidationStat.md)
  - [SendPostApi.ModelsValidationStatus](docs/ModelsValidationStatus.md)
  - [SendPostApi.ModelsVerifyByMemberTokenRequest](docs/ModelsVerifyByMemberTokenRequest.md)
  - [SendPostApi.ModelsVerifyByTokenRequest](docs/ModelsVerifyByTokenRequest.md)
