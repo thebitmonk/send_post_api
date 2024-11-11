@@ -118,7 +118,7 @@ api.accountAdminRouterAssumeAccountGetToken(xAccountApiKey, email, opts, callbac
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://127.0.0.1:8081/api/v1*
+All URIs are relative to *https://api-stag.sendpost.io/api/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -343,9 +343,9 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [SendPostApi.Model3433560x14000804db0False](docs/Model3433560x14000804db0False.md)
- - [SendPostApi.Model3436370x14000804ea0False](docs/Model3436370x14000804ea0False.md)
- - [SendPostApi.Model7628030x14000ce69c0False](docs/Model7628030x14000ce69c0False.md)
+ - [SendPostApi.Model3433130x14000839bc0False](docs/Model3433130x14000839bc0False.md)
+ - [SendPostApi.Model3435940x14000839cb0False](docs/Model3435940x14000839cb0False.md)
+ - [SendPostApi.Model7626750x14000d37800False](docs/Model7626750x14000d37800False.md)
  - [SendPostApi.ModelExport](docs/ModelExport.md)
  - [SendPostApi.ModelsAGDomainStat](docs/ModelsAGDomainStat.md)
  - [SendPostApi.ModelsAGIPStat](docs/ModelsAGIPStat.md)
