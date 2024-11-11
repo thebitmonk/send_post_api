@@ -118,7 +118,7 @@ api.accountAdminRouterAssumeAccountGetToken(xAccountApiKey, email, opts, callbac
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api-stag.sendpost.io/api/v1*
+All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -343,9 +343,9 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [SendPostApi.Model3244240x140007feb10False](docs/Model3244240x140007feb10False.md)
- - [SendPostApi.Model3247050x140007fec00False](docs/Model3247050x140007fec00False.md)
- - [SendPostApi.Model7026980x14000c890e0False](docs/Model7026980x14000c890e0False.md)
+ - [SendPostApi.Model3433560x14000804db0False](docs/Model3433560x14000804db0False.md)
+ - [SendPostApi.Model3436370x14000804ea0False](docs/Model3436370x14000804ea0False.md)
+ - [SendPostApi.Model7628030x14000ce69c0False](docs/Model7628030x14000ce69c0False.md)
  - [SendPostApi.ModelExport](docs/ModelExport.md)
  - [SendPostApi.ModelsAGDomainStat](docs/ModelsAGDomainStat.md)
  - [SendPostApi.ModelsAGIPStat](docs/ModelsAGIPStat.md)
@@ -454,12 +454,12 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsIIP](docs/ModelsIIP.md)
  - [SendPostApi.ModelsIIPUpdateType](docs/ModelsIIPUpdateType.md)
  - [SendPostApi.ModelsIP](docs/ModelsIP.md)
- - [SendPostApi.ModelsIPDomainWarmupStatus](docs/ModelsIPDomainWarmupStatus.md)
  - [SendPostApi.ModelsIPHealthResponse](docs/ModelsIPHealthResponse.md)
  - [SendPostApi.ModelsIPPool](docs/ModelsIPPool.md)
  - [SendPostApi.ModelsIPPoolType](docs/ModelsIPPoolType.md)
  - [SendPostApi.ModelsIPProviderSettings](docs/ModelsIPProviderSettings.md)
  - [SendPostApi.ModelsIPStat](docs/ModelsIPStat.md)
+ - [SendPostApi.ModelsIPState](docs/ModelsIPState.md)
  - [SendPostApi.ModelsIPType](docs/ModelsIPType.md)
  - [SendPostApi.ModelsIncident](docs/ModelsIncident.md)
  - [SendPostApi.ModelsIncidentStatus](docs/ModelsIncidentStatus.md)
@@ -538,6 +538,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsVerifyByMemberTokenRequest](docs/ModelsVerifyByMemberTokenRequest.md)
  - [SendPostApi.ModelsVerifyByTokenRequest](docs/ModelsVerifyByTokenRequest.md)
  - [SendPostApi.ModelsWMessage](docs/ModelsWMessage.md)
+ - [SendPostApi.ModelsWarmupDetails](docs/ModelsWarmupDetails.md)
  - [SendPostApi.UaparserDevice](docs/UaparserDevice.md)
  - [SendPostApi.UaparserOs](docs/UaparserOs.md)
  - [SendPostApi.UaparserUserAgent](docs/UaparserUserAgent.md)

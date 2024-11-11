@@ -1,6 +1,6 @@
 # SendPostApi.SubaccountdomainApi
 
-All URIs are relative to *https://api-stag.sendpost.io/api/v1*
+All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -67,7 +67,7 @@ No authorization required
 
 <a name="domainRouterCreate"></a>
 # **domainRouterCreate**
-> ModelsDomain domainRouterCreate(xSubAccountApiKey, body)
+> ModelsDomain domainRouterCreate(xSubAccountApiKey, body, opts)
 
 
 
@@ -83,6 +83,9 @@ var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API
 
 var body = new SendPostApi.ModelsEDomain(); // ModelsEDomain | The Domain content
 
+var opts = { 
+  'xIndustry': "xIndustry_example" // String | industry
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -91,7 +94,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.domainRouterCreate(xSubAccountApiKey, body, callback);
+apiInstance.domainRouterCreate(xSubAccountApiKey, body, opts, callback);
 ```
 
 ### Parameters
@@ -100,6 +103,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
  **body** | [**ModelsEDomain**](ModelsEDomain.md)| The Domain content | 
+ **xIndustry** | **String**| industry | [optional] 
 
 ### Return type
 

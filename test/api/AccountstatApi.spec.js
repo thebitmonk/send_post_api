@@ -439,6 +439,8 @@
               expect(data.softBounced).to.be("0");
               expect(data.spam).to.be.a('number');
               expect(data.spam).to.be("0");
+              expect(data.state).to.be.a('number');
+              expect(data.state).to.be("0");
               expect(data.unsubscribed).to.be.a('number');
               expect(data.unsubscribed).to.be("0");
             }

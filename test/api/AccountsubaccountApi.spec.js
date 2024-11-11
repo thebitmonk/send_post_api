@@ -545,8 +545,43 @@
                 expect(data.relatedIP.aolSettings).to.be("");
                 expect(data.relatedIP.attSettings).to.be.a('string');
                 expect(data.relatedIP.attSettings).to.be("");
-                expect(data.relatedIP.autoWarmupEnabled).to.be.a('boolean');
-                expect(data.relatedIP.autoWarmupEnabled).to.be(false);
+                expect(data.relatedIP.autoWarmupPlan).to.be.a(SendPostApi.ModelsAutoWarmupPlan);
+                      expect(data.relatedIP.autoWarmupPlan.aolWarmupPlan).to.be.a('string');
+                  expect(data.relatedIP.autoWarmupPlan.aolWarmupPlan).to.be("");
+                  expect(data.relatedIP.autoWarmupPlan.attWarmupPlan).to.be.a('string');
+                  expect(data.relatedIP.autoWarmupPlan.attWarmupPlan).to.be("");
+                  expect(data.relatedIP.autoWarmupPlan.comcastWarmupPlan).to.be.a('string');
+                  expect(data.relatedIP.autoWarmupPlan.comcastWarmupPlan).to.be("");
+                  expect(data.relatedIP.autoWarmupPlan.created).to.be.a('number');
+                  expect(data.relatedIP.autoWarmupPlan.created).to.be("0");
+                  expect(data.relatedIP.autoWarmupPlan.defaultWarmupPlan).to.be.a('string');
+                  expect(data.relatedIP.autoWarmupPlan.defaultWarmupPlan).to.be("");
+                  expect(data.relatedIP.autoWarmupPlan.gmailWarmupPlan).to.be.a('string');
+                  expect(data.relatedIP.autoWarmupPlan.gmailWarmupPlan).to.be("");
+                  expect(data.relatedIP.autoWarmupPlan.gmxWarmupPlan).to.be.a('string');
+                  expect(data.relatedIP.autoWarmupPlan.gmxWarmupPlan).to.be("");
+                  expect(data.relatedIP.autoWarmupPlan.icloudWarmupPlan).to.be.a('string');
+                  expect(data.relatedIP.autoWarmupPlan.icloudWarmupPlan).to.be("");
+                  expect(data.relatedIP.autoWarmupPlan.id).to.be.a('number');
+                  expect(data.relatedIP.autoWarmupPlan.id).to.be("0");
+                  expect(data.relatedIP.autoWarmupPlan.mailruWarmupPlan).to.be.a('string');
+                  expect(data.relatedIP.autoWarmupPlan.mailruWarmupPlan).to.be("");
+                  expect(data.relatedIP.autoWarmupPlan.microsoftWarmupPlan).to.be.a('string');
+                  expect(data.relatedIP.autoWarmupPlan.microsoftWarmupPlan).to.be("");
+                  expect(data.relatedIP.autoWarmupPlan.name).to.be.a('string');
+                  expect(data.relatedIP.autoWarmupPlan.name).to.be("");
+                  expect(data.relatedIP.autoWarmupPlan.qqWarmupPlan).to.be.a('string');
+                  expect(data.relatedIP.autoWarmupPlan.qqWarmupPlan).to.be("");
+                  expect(data.relatedIP.autoWarmupPlan.updated).to.be.a('number');
+                  expect(data.relatedIP.autoWarmupPlan.updated).to.be("0");
+                  expect(data.relatedIP.autoWarmupPlan.warmupInterval).to.be.a('number');
+                  expect(data.relatedIP.autoWarmupPlan.warmupInterval).to.be("0");
+                  expect(data.relatedIP.autoWarmupPlan.yahooWarmupPlan).to.be.a('string');
+                  expect(data.relatedIP.autoWarmupPlan.yahooWarmupPlan).to.be("");
+                  expect(data.relatedIP.autoWarmupPlan.yandexWarmupPlan).to.be.a('string');
+                  expect(data.relatedIP.autoWarmupPlan.yandexWarmupPlan).to.be("");
+                  expect(data.relatedIP.autoWarmupPlan.zohoWarmupPlan).to.be.a('string');
+                  expect(data.relatedIP.autoWarmupPlan.zohoWarmupPlan).to.be("");
                 expect(data.relatedIP.comcastSettings).to.be.a('string');
                 expect(data.relatedIP.comcastSettings).to.be("");
                 expect(data.relatedIP.created).to.be.a('number');
@@ -565,30 +600,6 @@
                 expect(data.relatedIP.infraClassification).to.be("");
                 expect(data.relatedIP.infraMonitor).to.be.a('boolean');
                 expect(data.relatedIP.infraMonitor).to.be(false);
-                {
-                  let dataCtr = data.relatedIP.ipDomainWarmupStatus;
-                  expect(dataCtr).to.be.an(Array);
-                  expect(dataCtr).to.not.be.empty();
-                  for (let p in dataCtr) {
-                    let data = dataCtr[p];
-                    expect(data).to.be.a(SendPostApi.ModelsIPDomainWarmupStatus);
-                    expect(data.autoWarmupDelay).to.be.a('number');
-                    expect(data.autoWarmupDelay).to.be("0");
-                    expect(data.autoWarmupLastRunAt).to.be.a('number');
-                    expect(data.autoWarmupLastRunAt).to.be("0");
-                    expect(data.created).to.be.a('number');
-                    expect(data.created).to.be("0");
-                    expect(data.currentWarmupStage).to.be.a('number');
-                    expect(data.currentWarmupStage).to.be("0");
-                    expect(data.id).to.be.a('number');
-                    expect(data.id).to.be("0");
-                    expect(data.updated).to.be.a('number');
-                    expect(data.updated).to.be("0");
-                    expect(data.warmupCompleted).to.be.a('boolean');
-                    expect(data.warmupCompleted).to.be(false);
-    
-                          }
-                }
                 {
                   let dataCtr = data.relatedIP.labels;
                   expect(dataCtr).to.be.an(Array);
@@ -619,7 +630,8 @@
                 expect(data.relatedIP.qqSettings).to.be("");
                 expect(data.relatedIP.reverseDNSHostname).to.be.a('string');
                 expect(data.relatedIP.reverseDNSHostname).to.be("");
-                expect(data.relatedIP.systemDomain).to.be.a(SendPostApi.ModelsSystemDomain);
+                expect(data.relatedIP.state).to.be.a(SendPostApi.ModelsIPState);
+                    expect(data.relatedIP.systemDomain).to.be.a(SendPostApi.ModelsSystemDomain);
                       expect(data.relatedIP.systemDomain.created).to.be.a('number');
                   expect(data.relatedIP.systemDomain.created).to.be("0");
                   expect(data.relatedIP.systemDomain.dkim).to.be.a(SendPostApi.ModelsSystemDNSRecord);

@@ -107,10 +107,13 @@
      * Create Domain <br>
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {module:model/ModelsEDomain} body The Domain content
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.xIndustry industry
      * @param {module:api/SubaccountdomainApi~domainRouterCreateCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelsDomain}
      */
-    this.domainRouterCreate = function(xSubAccountApiKey, body, callback) {
+    this.domainRouterCreate = function(xSubAccountApiKey, body, opts, callback) {
+      opts = opts || {};
       var postBody = body;
 
       // verify the required parameter 'xSubAccountApiKey' is set
@@ -131,7 +134,8 @@
       var collectionQueryParams = {
       };
       var headerParams = {
-        'X-SubAccount-ApiKey': xSubAccountApiKey
+        'X-SubAccount-ApiKey': xSubAccountApiKey,
+        'X-Industry': opts['xIndustry']
       };
       var formParams = {
       };

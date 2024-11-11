@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **sent** | **Number** |  | [optional] 
 **softBounced** | **Number** |  | [optional] 
 **spam** | **Number** |  | [optional] 
+**state** | **Number** |  | [optional] 
 **unsubscribed** | **Number** |  | [optional] 
 
 

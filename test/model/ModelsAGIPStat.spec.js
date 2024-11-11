@@ -107,6 +107,12 @@
         // expect(instance.spam).to.be(expectedValueLiteral);
       });
 
+      it('should have the property state (base name: "state")', function() {
+        // TODO: update the code to test the property state
+        expect(instance).to.have.property('state');
+        // expect(instance.state).to.be(expectedValueLiteral);
+      });
+
       it('should have the property unsubscribed (base name: "unsubscribed")', function() {
         // TODO: update the code to test the property unsubscribed
         expect(instance).to.have.property('unsubscribed');
