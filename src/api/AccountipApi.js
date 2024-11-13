@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsAccountIPPool', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsIIP', 'model/ModelsIP', 'model/ModelsIPHealthResponse', 'model/ModelsIncident'], factory);
+    define(['ApiClient', 'model/ModelsAccountIPPool', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsIIP', 'model/ModelsIP', 'model/ModelsIPHealthResponse', 'model/ModelsIncident', 'model/ModelsSystemEvent'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsAccountIPPool'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsIIP'), require('../model/ModelsIP'), require('../model/ModelsIPHealthResponse'), require('../model/ModelsIncident'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsAccountIPPool'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsIIP'), require('../model/ModelsIP'), require('../model/ModelsIPHealthResponse'), require('../model/ModelsIncident'), require('../model/ModelsSystemEvent'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.AccountipApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsAccountIPPool, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsIIP, root.SendPostApi.ModelsIP, root.SendPostApi.ModelsIPHealthResponse, root.SendPostApi.ModelsIncident);
+    root.SendPostApi.AccountipApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsAccountIPPool, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsIIP, root.SendPostApi.ModelsIP, root.SendPostApi.ModelsIPHealthResponse, root.SendPostApi.ModelsIncident, root.SendPostApi.ModelsSystemEvent);
   }
-}(this, function(ApiClient, ModelsAccountIPPool, ModelsCountStat, ModelsDeleteResponse, ModelsIIP, ModelsIP, ModelsIPHealthResponse, ModelsIncident) {
+}(this, function(ApiClient, ModelsAccountIPPool, ModelsCountStat, ModelsDeleteResponse, ModelsIIP, ModelsIP, ModelsIPHealthResponse, ModelsIncident, ModelsSystemEvent) {
   'use strict';
 
   /**
@@ -420,6 +420,72 @@
 
       return this.apiClient.callApi(
         '/account/ip/{ipid}/ippool', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the iPRouterGetIPTimeline operation.
+     * @callback module:api/AccountipApi~iPRouterGetIPTimelineCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/ModelsSystemEvent>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get IP Timeline <br>
+     * @param {String} xAccountApiKey Account API Key
+     * @param {Number} ipid the IPId you want to get
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.from from date
+     * @param {String} opts.to to date
+     * @param {String} opts.provider the provider whose timeline you want
+     * @param {Number} opts.offset offset
+     * @param {Number} opts.limit limit
+     * @param {module:api/AccountipApi~iPRouterGetIPTimelineCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/ModelsSystemEvent>}
+     */
+    this.iPRouterGetIPTimeline = function(xAccountApiKey, ipid, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling iPRouterGetIPTimeline");
+      }
+
+      // verify the required parameter 'ipid' is set
+      if (ipid === undefined || ipid === null) {
+        throw new Error("Missing the required parameter 'ipid' when calling iPRouterGetIPTimeline");
+      }
+
+
+      var pathParams = {
+        'ipid': ipid
+      };
+      var queryParams = {
+        'from': opts['from'],
+        'to': opts['to'],
+        'provider': opts['provider'],
+        'offset': opts['offset'],
+        'limit': opts['limit'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-Account-ApiKey': xAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = [ModelsSystemEvent];
+
+      return this.apiClient.callApi(
+        '/account/ip/{ipid}/timeline', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
