@@ -59,6 +59,8 @@
         obj.created = ApiClient.convertToType(data['created'], 'Number');
       if (data.hasOwnProperty('id'))
         obj.id = ApiClient.convertToType(data['id'], 'Number');
+      if (data.hasOwnProperty('name'))
+        obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('processed'))
         obj.processed = ApiClient.convertToType(data['processed'], 'Number');
       if (data.hasOwnProperty('resultInvalidPath'))
@@ -88,6 +90,11 @@
    * @member {Number} id
    */
   exports.prototype.id = undefined;
+
+  /**
+   * @member {String} name
+   */
+  exports.prototype.name = undefined;
 
   /**
    * @member {Number} processed

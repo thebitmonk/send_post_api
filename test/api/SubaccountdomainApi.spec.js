@@ -67,8 +67,10 @@
           var body = new SendPostApi.ModelsEDomain();
           body.memberId = "0";
           body.name = "";
+          var opts = {};
+          opts.xIndustry = "xIndustry_example";
 
-          instance.domainRouterCreate(xSubAccountApiKey, body, function(error, data, response) {
+          instance.domainRouterCreate(xSubAccountApiKey, body, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;

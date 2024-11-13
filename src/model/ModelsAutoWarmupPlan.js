@@ -55,19 +55,60 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('aolWarmupPlan'))
+        obj.aolWarmupPlan = ApiClient.convertToType(data['aolWarmupPlan'], 'String');
+      if (data.hasOwnProperty('attWarmupPlan'))
+        obj.attWarmupPlan = ApiClient.convertToType(data['attWarmupPlan'], 'String');
+      if (data.hasOwnProperty('comcastWarmupPlan'))
+        obj.comcastWarmupPlan = ApiClient.convertToType(data['comcastWarmupPlan'], 'String');
       if (data.hasOwnProperty('created'))
         obj.created = ApiClient.convertToType(data['created'], 'Number');
+      if (data.hasOwnProperty('defaultWarmupPlan'))
+        obj.defaultWarmupPlan = ApiClient.convertToType(data['defaultWarmupPlan'], 'String');
+      if (data.hasOwnProperty('gmailWarmupPlan'))
+        obj.gmailWarmupPlan = ApiClient.convertToType(data['gmailWarmupPlan'], 'String');
+      if (data.hasOwnProperty('gmxWarmupPlan'))
+        obj.gmxWarmupPlan = ApiClient.convertToType(data['gmxWarmupPlan'], 'String');
+      if (data.hasOwnProperty('icloudWarmupPlan'))
+        obj.icloudWarmupPlan = ApiClient.convertToType(data['icloudWarmupPlan'], 'String');
       if (data.hasOwnProperty('id'))
         obj.id = ApiClient.convertToType(data['id'], 'Number');
+      if (data.hasOwnProperty('mailruWarmupPlan'))
+        obj.mailruWarmupPlan = ApiClient.convertToType(data['mailruWarmupPlan'], 'String');
+      if (data.hasOwnProperty('microsoftWarmupPlan'))
+        obj.microsoftWarmupPlan = ApiClient.convertToType(data['microsoftWarmupPlan'], 'String');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
-      if (data.hasOwnProperty('schedule'))
-        obj.schedule = ApiClient.convertToType(data['schedule'], 'String');
+      if (data.hasOwnProperty('qqWarmupPlan'))
+        obj.qqWarmupPlan = ApiClient.convertToType(data['qqWarmupPlan'], 'String');
       if (data.hasOwnProperty('updated'))
         obj.updated = ApiClient.convertToType(data['updated'], 'Number');
+      if (data.hasOwnProperty('warmupInterval'))
+        obj.warmupInterval = ApiClient.convertToType(data['warmupInterval'], 'Number');
+      if (data.hasOwnProperty('yahooWarmupPlan'))
+        obj.yahooWarmupPlan = ApiClient.convertToType(data['yahooWarmupPlan'], 'String');
+      if (data.hasOwnProperty('yandexWarmupPlan'))
+        obj.yandexWarmupPlan = ApiClient.convertToType(data['yandexWarmupPlan'], 'String');
+      if (data.hasOwnProperty('zohoWarmupPlan'))
+        obj.zohoWarmupPlan = ApiClient.convertToType(data['zohoWarmupPlan'], 'String');
     }
     return obj;
   }
+
+  /**
+   * @member {String} aolWarmupPlan
+   */
+  exports.prototype.aolWarmupPlan = undefined;
+
+  /**
+   * @member {String} attWarmupPlan
+   */
+  exports.prototype.attWarmupPlan = undefined;
+
+  /**
+   * @member {String} comcastWarmupPlan
+   */
+  exports.prototype.comcastWarmupPlan = undefined;
 
   /**
    * @member {Number} created
@@ -75,9 +116,39 @@
   exports.prototype.created = undefined;
 
   /**
+   * @member {String} defaultWarmupPlan
+   */
+  exports.prototype.defaultWarmupPlan = undefined;
+
+  /**
+   * @member {String} gmailWarmupPlan
+   */
+  exports.prototype.gmailWarmupPlan = undefined;
+
+  /**
+   * @member {String} gmxWarmupPlan
+   */
+  exports.prototype.gmxWarmupPlan = undefined;
+
+  /**
+   * @member {String} icloudWarmupPlan
+   */
+  exports.prototype.icloudWarmupPlan = undefined;
+
+  /**
    * @member {Number} id
    */
   exports.prototype.id = undefined;
+
+  /**
+   * @member {String} mailruWarmupPlan
+   */
+  exports.prototype.mailruWarmupPlan = undefined;
+
+  /**
+   * @member {String} microsoftWarmupPlan
+   */
+  exports.prototype.microsoftWarmupPlan = undefined;
 
   /**
    * @member {String} name
@@ -85,15 +156,34 @@
   exports.prototype.name = undefined;
 
   /**
-   * has JSON marshalledf form of []AutomWarmupDomainSchedule
-   * @member {String} schedule
+   * @member {String} qqWarmupPlan
    */
-  exports.prototype.schedule = undefined;
+  exports.prototype.qqWarmupPlan = undefined;
 
   /**
    * @member {Number} updated
    */
   exports.prototype.updated = undefined;
+
+  /**
+   * @member {Number} warmupInterval
+   */
+  exports.prototype.warmupInterval = undefined;
+
+  /**
+   * @member {String} yahooWarmupPlan
+   */
+  exports.prototype.yahooWarmupPlan = undefined;
+
+  /**
+   * @member {String} yandexWarmupPlan
+   */
+  exports.prototype.yandexWarmupPlan = undefined;
+
+  /**
+   * @member {String} zohoWarmupPlan
+   */
+  exports.prototype.zohoWarmupPlan = undefined;
 
 
   return exports;

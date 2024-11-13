@@ -10,5 +10,6 @@ Name | Type | Description | Notes
 **maxSendPerHour** | **Number** |  | [optional] 
 **maxSendPerMinute** | **Number** |  | [optional] 
 **name** | **String** |  | [optional] 
+**warmupSettings** | [**ModelsWarmupDetails**](ModelsWarmupDetails.md) |  | [optional] 
 
 

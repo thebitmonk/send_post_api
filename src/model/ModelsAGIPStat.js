@@ -77,6 +77,8 @@
         obj.softBounced = ApiClient.convertToType(data['softBounced'], 'Number');
       if (data.hasOwnProperty('spam'))
         obj.spam = ApiClient.convertToType(data['spam'], 'Number');
+      if (data.hasOwnProperty('state'))
+        obj.state = ApiClient.convertToType(data['state'], 'Number');
       if (data.hasOwnProperty('unsubscribed'))
         obj.unsubscribed = ApiClient.convertToType(data['unsubscribed'], 'Number');
     }
@@ -137,6 +139,11 @@
    * @member {Number} spam
    */
   exports.prototype.spam = undefined;
+
+  /**
+   * @member {Number} state
+   */
+  exports.prototype.state = undefined;
 
   /**
    * @member {Number} unsubscribed

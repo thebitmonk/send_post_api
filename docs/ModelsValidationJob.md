@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created** | **Number** |  | [optional] 
 **id** | **Number** |  | [optional] 
+**name** | **String** |  | [optional] 
 **processed** | **Number** |  | [optional] 
 **resultInvalidPath** | **String** |  | [optional] 
 **resultPath** | **String** |  | [optional] 

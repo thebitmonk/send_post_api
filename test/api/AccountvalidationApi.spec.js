@@ -142,6 +142,8 @@
               expect(data.created).to.be("0");
               expect(data.id).to.be.a('number');
               expect(data.id).to.be("0");
+              expect(data.name).to.be.a('string');
+              expect(data.name).to.be("");
               expect(data.processed).to.be.a('number');
               expect(data.processed).to.be("0");
               expect(data.resultInvalidPath).to.be.a('string');

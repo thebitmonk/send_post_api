@@ -83,6 +83,12 @@
         // expect(instance.name).to.be(expectedValueLiteral);
       });
 
+      it('should have the property warmupSettings (base name: "warmupSettings")', function() {
+        // TODO: update the code to test the property warmupSettings
+        expect(instance).to.have.property('warmupSettings');
+        // expect(instance.warmupSettings).to.be(expectedValueLiteral);
+      });
+
     });
   });
 
