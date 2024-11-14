@@ -41,10 +41,52 @@
         expect(instance).to.be.a(SendPostApi.ModelsAutoWarmupPlan);
       });
 
+      it('should have the property aolWarmupPlan (base name: "aolWarmupPlan")', function() {
+        // TODO: update the code to test the property aolWarmupPlan
+        expect(instance).to.have.property('aolWarmupPlan');
+        // expect(instance.aolWarmupPlan).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property attWarmupPlan (base name: "attWarmupPlan")', function() {
+        // TODO: update the code to test the property attWarmupPlan
+        expect(instance).to.have.property('attWarmupPlan');
+        // expect(instance.attWarmupPlan).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property comcastWarmupPlan (base name: "comcastWarmupPlan")', function() {
+        // TODO: update the code to test the property comcastWarmupPlan
+        expect(instance).to.have.property('comcastWarmupPlan');
+        // expect(instance.comcastWarmupPlan).to.be(expectedValueLiteral);
+      });
+
       it('should have the property created (base name: "created")', function() {
         // TODO: update the code to test the property created
         expect(instance).to.have.property('created');
         // expect(instance.created).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property defaultWarmupPlan (base name: "defaultWarmupPlan")', function() {
+        // TODO: update the code to test the property defaultWarmupPlan
+        expect(instance).to.have.property('defaultWarmupPlan');
+        // expect(instance.defaultWarmupPlan).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property gmailWarmupPlan (base name: "gmailWarmupPlan")', function() {
+        // TODO: update the code to test the property gmailWarmupPlan
+        expect(instance).to.have.property('gmailWarmupPlan');
+        // expect(instance.gmailWarmupPlan).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property gmxWarmupPlan (base name: "gmxWarmupPlan")', function() {
+        // TODO: update the code to test the property gmxWarmupPlan
+        expect(instance).to.have.property('gmxWarmupPlan');
+        // expect(instance.gmxWarmupPlan).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property icloudWarmupPlan (base name: "icloudWarmupPlan")', function() {
+        // TODO: update the code to test the property icloudWarmupPlan
+        expect(instance).to.have.property('icloudWarmupPlan');
+        // expect(instance.icloudWarmupPlan).to.be(expectedValueLiteral);
       });
 
       it('should have the property id (base name: "id")', function() {
@@ -53,22 +95,58 @@
         // expect(instance.id).to.be(expectedValueLiteral);
       });
 
+      it('should have the property mailruWarmupPlan (base name: "mailruWarmupPlan")', function() {
+        // TODO: update the code to test the property mailruWarmupPlan
+        expect(instance).to.have.property('mailruWarmupPlan');
+        // expect(instance.mailruWarmupPlan).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property microsoftWarmupPlan (base name: "microsoftWarmupPlan")', function() {
+        // TODO: update the code to test the property microsoftWarmupPlan
+        expect(instance).to.have.property('microsoftWarmupPlan');
+        // expect(instance.microsoftWarmupPlan).to.be(expectedValueLiteral);
+      });
+
       it('should have the property name (base name: "name")', function() {
         // TODO: update the code to test the property name
         expect(instance).to.have.property('name');
         // expect(instance.name).to.be(expectedValueLiteral);
       });
 
-      it('should have the property schedule (base name: "schedule")', function() {
-        // TODO: update the code to test the property schedule
-        expect(instance).to.have.property('schedule');
-        // expect(instance.schedule).to.be(expectedValueLiteral);
+      it('should have the property qqWarmupPlan (base name: "qqWarmupPlan")', function() {
+        // TODO: update the code to test the property qqWarmupPlan
+        expect(instance).to.have.property('qqWarmupPlan');
+        // expect(instance.qqWarmupPlan).to.be(expectedValueLiteral);
       });
 
       it('should have the property updated (base name: "updated")', function() {
         // TODO: update the code to test the property updated
         expect(instance).to.have.property('updated');
         // expect(instance.updated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property warmupInterval (base name: "warmupInterval")', function() {
+        // TODO: update the code to test the property warmupInterval
+        expect(instance).to.have.property('warmupInterval');
+        // expect(instance.warmupInterval).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property yahooWarmupPlan (base name: "yahooWarmupPlan")', function() {
+        // TODO: update the code to test the property yahooWarmupPlan
+        expect(instance).to.have.property('yahooWarmupPlan');
+        // expect(instance.yahooWarmupPlan).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property yandexWarmupPlan (base name: "yandexWarmupPlan")', function() {
+        // TODO: update the code to test the property yandexWarmupPlan
+        expect(instance).to.have.property('yandexWarmupPlan');
+        // expect(instance.yandexWarmupPlan).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property zohoWarmupPlan (base name: "zohoWarmupPlan")', function() {
+        // TODO: update the code to test the property zohoWarmupPlan
+        expect(instance).to.have.property('zohoWarmupPlan');
+        // expect(instance.zohoWarmupPlan).to.be(expectedValueLiteral);
       });
 
     });
