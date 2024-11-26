@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**iPRouterGetAll**](AccountipApi.md#iPRouterGetAll) | **GET** /account/ip/ | 
 [**iPRouterGetAllIPIncidents**](AccountipApi.md#iPRouterGetAllIPIncidents) | **GET** /account/ip/{ipid}/incident | 
 [**iPRouterGetIPAccountIPPools**](AccountipApi.md#iPRouterGetIPAccountIPPools) | **GET** /account/ip/{ipid}/ippool | 
+[**iPRouterGetIPTimeline**](AccountipApi.md#iPRouterGetIPTimeline) | **GET** /account/ip/{ipid}/timeline | 
 [**iPRouterGetIpHealth**](AccountipApi.md#iPRouterGetIpHealth) | **GET** /account/ip/{ipid}/health | 
 [**iPRouterUpdate**](AccountipApi.md#iPRouterUpdate) | **PUT** /account/ip/{ipid} | 
 
@@ -359,6 +360,67 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[ModelsAccountIPPool]**](ModelsAccountIPPool.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="iPRouterGetIPTimeline"></a>
+# **iPRouterGetIPTimeline**
+> [ModelsSystemEvent] iPRouterGetIPTimeline(xAccountApiKey, ipid, opts)
+
+
+
+Get IP Timeline <br>
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccountipApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var ipid = 789; // Number | the IPId you want to get
+
+var opts = { 
+  'from': "from_example", // String | from date
+  'to': "to_example", // String | to date
+  'provider': "provider_example", // String | the provider whose timeline you want
+  'offset': 789, // Number | offset
+  'limit': 789 // Number | limit
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.iPRouterGetIPTimeline(xAccountApiKey, ipid, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xAccountApiKey** | **String**| Account API Key | 
+ **ipid** | **Number**| the IPId you want to get | 
+ **from** | **String**| from date | [optional] 
+ **to** | **String**| to date | [optional] 
+ **provider** | **String**| the provider whose timeline you want | [optional] 
+ **offset** | **Number**| offset | [optional] 
+ **limit** | **Number**| limit | [optional] 
+
+### Return type
+
+[**[ModelsSystemEvent]**](ModelsSystemEvent.md)
 
 ### Authorization
 

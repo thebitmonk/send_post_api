@@ -7,11 +7,15 @@ Method | HTTP request | Description
 [**domainRouterCount**](SubaccountdomainApi.md#domainRouterCount) | **GET** /subaccount/domain/count | 
 [**domainRouterCreate**](SubaccountdomainApi.md#domainRouterCreate) | **POST** /subaccount/domain/ | 
 [**domainRouterDelete**](SubaccountdomainApi.md#domainRouterDelete) | **DELETE** /subaccount/domain/{domainId} | 
+[**domainRouterDoesDomainExists**](SubaccountdomainApi.md#domainRouterDoesDomainExists) | **GET** /subaccount/domain/exists | 
 [**domainRouterGet**](SubaccountdomainApi.md#domainRouterGet) | **GET** /subaccount/domain/{domainId} | 
 [**domainRouterGetAll**](SubaccountdomainApi.md#domainRouterGetAll) | **GET** /subaccount/domain/ | 
+[**domainRouterIsDomainVerified**](SubaccountdomainApi.md#domainRouterIsDomainVerified) | **GET** /subaccount/domain/isverified | 
 [**domainRouterUpdate**](SubaccountdomainApi.md#domainRouterUpdate) | **PUT** /subaccount/domain/{domainId} | 
 [**domainRouterVerify**](SubaccountdomainApi.md#domainRouterVerify) | **POST** /subaccount/domain/{domainId}/verify | 
 [**domainRouterVerifyByToken**](SubaccountdomainApi.md#domainRouterVerifyByToken) | **POST** /subaccount/domain/{domainId}/verify/email/{token} | 
+[**domainRouterVerifyOwnerDomainByToken**](SubaccountdomainApi.md#domainRouterVerifyOwnerDomainByToken) | **POST** /subaccount/domain/owner/verify/email/{token} | 
+[**domainRouterVerifyOwnerDomainRequest**](SubaccountdomainApi.md#domainRouterVerifyOwnerDomainRequest) | **POST** /subaccount/domain/owner/verify/email | 
 [**domainRouterVerifyRequest**](SubaccountdomainApi.md#domainRouterVerifyRequest) | **POST** /subaccount/domain/{domainId}/verify/email | 
 
 
@@ -63,7 +67,7 @@ No authorization required
 
 <a name="domainRouterCreate"></a>
 # **domainRouterCreate**
-> ModelsDomain domainRouterCreate(xSubAccountApiKey, body)
+> ModelsDomain domainRouterCreate(xSubAccountApiKey, body, opts)
 
 
 
@@ -79,6 +83,9 @@ var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API
 
 var body = new SendPostApi.ModelsEDomain(); // ModelsEDomain | The Domain content
 
+var opts = { 
+  'xIndustry': "xIndustry_example" // String | industry
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -87,7 +94,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.domainRouterCreate(xSubAccountApiKey, body, callback);
+apiInstance.domainRouterCreate(xSubAccountApiKey, body, opts, callback);
 ```
 
 ### Parameters
@@ -96,6 +103,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSubAccountApiKey** | **String**| Sub-Account API Key | 
  **body** | [**ModelsEDomain**](ModelsEDomain.md)| The Domain content | 
+ **xIndustry** | **String**| industry | [optional] 
 
 ### Return type
 
@@ -152,6 +160,55 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ModelsDeleteResponse**](ModelsDeleteResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="domainRouterDoesDomainExists"></a>
+# **domainRouterDoesDomainExists**
+> ModelsDomain domainRouterDoesDomainExists(xSubAccountApiKey, domainName)
+
+
+
+Does Domain Exists <br>
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.SubaccountdomainApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var domainName = "domainName_example"; // String | the DomainName you want to get
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.domainRouterDoesDomainExists(xSubAccountApiKey, domainName, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **domainName** | **String**| the DomainName you want to get | 
+
+### Return type
+
+[**ModelsDomain**](ModelsDomain.md)
 
 ### Authorization
 
@@ -255,6 +312,55 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[ModelsDomain]**](ModelsDomain.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="domainRouterIsDomainVerified"></a>
+# **domainRouterIsDomainVerified**
+> ModelsDomain domainRouterIsDomainVerified(xSubAccountApiKey, domainName)
+
+
+
+Is Domain Verified <br>
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.SubaccountdomainApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var domainName = "domainName_example"; // String | the DomainName you want to get
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.domainRouterIsDomainVerified(xSubAccountApiKey, domainName, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **domainName** | **String**| the DomainName you want to get | 
+
+### Return type
+
+[**ModelsDomain**](ModelsDomain.md)
 
 ### Authorization
 
@@ -408,6 +514,108 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ModelsDomain**](ModelsDomain.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="domainRouterVerifyOwnerDomainByToken"></a>
+# **domainRouterVerifyOwnerDomainByToken**
+> ModelsDomain domainRouterVerifyOwnerDomainByToken(xSubAccountApiKey, token)
+
+
+
+Verify owner Domain By Signed Token <br>
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.SubaccountdomainApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var token = "token_example"; // String | The signed token used to verify
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.domainRouterVerifyOwnerDomainByToken(xSubAccountApiKey, token, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **token** | **String**| The signed token used to verify | 
+
+### Return type
+
+[**ModelsDomain**](ModelsDomain.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="domainRouterVerifyOwnerDomainRequest"></a>
+# **domainRouterVerifyOwnerDomainRequest**
+> domainRouterVerifyOwnerDomainRequest(xSubAccountApiKey, body, opts)
+
+
+
+Verify Domain By Email Request <br>
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.SubaccountdomainApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var body = new SendPostApi.ModelsDomainCheckRequest(); // ModelsDomainCheckRequest | The Email to be used to verify
+
+var opts = { 
+  'redirectPath': "redirectPath_example" // String | redirectPath
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+apiInstance.domainRouterVerifyOwnerDomainRequest(xSubAccountApiKey, body, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **body** | [**ModelsDomainCheckRequest**](ModelsDomainCheckRequest.md)| The Email to be used to verify | 
+ **redirectPath** | **String**| redirectPath | [optional] 
+
+### Return type
+
+null (empty response body)
 
 ### Authorization
 

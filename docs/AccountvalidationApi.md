@@ -8,7 +8,10 @@ Method | HTTP request | Description
 [**validationRouterCount**](AccountvalidationApi.md#validationRouterCount) | **GET** /account/validation/count | 
 [**validationRouterDeleteValidation**](AccountvalidationApi.md#validationRouterDeleteValidation) | **DELETE** /account/validation/ | 
 [**validationRouterGetAll**](AccountvalidationApi.md#validationRouterGetAll) | **GET** /account/validation/ | 
-[**validationRouterValidateEmailList**](AccountvalidationApi.md#validationRouterValidateEmailList) | **POST** /account/validation/ | 
+[**validationRouterGetEmailCountByStatus**](AccountvalidationApi.md#validationRouterGetEmailCountByStatus) | **GET** /account/validation/emails/count | 
+[**validationRouterGetEmailsByStatus**](AccountvalidationApi.md#validationRouterGetEmailsByStatus) | **GET** /account/validation/emails | 
+[**validationRouterGetValidationJobResults**](AccountvalidationApi.md#validationRouterGetValidationJobResults) | **GET** /account/validation/results | 
+[**validationRouterValidateEmailBulkList**](AccountvalidationApi.md#validationRouterValidateEmailBulkList) | **POST** /account/validation/list/bulk | 
 
 
 <a name="validateRouterValidateEmailBulk"></a>
@@ -209,13 +212,169 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="validationRouterValidateEmailList"></a>
-# **validationRouterValidateEmailList**
-> ModelsValidatedEmailList validationRouterValidateEmailList(xSubAccountApiKey, body)
+<a name="validationRouterGetEmailCountByStatus"></a>
+# **validationRouterGetEmailCountByStatus**
+> MapStringint validationRouterGetEmailCountByStatus(xSubAccountApiKey, status)
 
 
 
-Validate Email List Synchronously <br>
+Get count of email addresses based on status <br>
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccountvalidationApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | SubAccount API Key
+
+var status = 789; // Number | Email status filter
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.validationRouterGetEmailCountByStatus(xSubAccountApiKey, status, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xSubAccountApiKey** | **String**| SubAccount API Key | 
+ **status** | **Number**| Email status filter | 
+
+### Return type
+
+[**MapStringint**](MapStringint.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="validationRouterGetEmailsByStatus"></a>
+# **validationRouterGetEmailsByStatus**
+> [ModelsEmail] validationRouterGetEmailsByStatus(xSubAccountApiKey, status, opts)
+
+
+
+Fetch email addresses based on status with limit and offset <br>
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccountvalidationApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | SubAccount API Key
+
+var status = 789; // Number | Email status filter
+
+var opts = { 
+  'offset': 789, // Number | Offset for pagination
+  'limit': 789 // Number | Limit for pagination
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.validationRouterGetEmailsByStatus(xSubAccountApiKey, status, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xSubAccountApiKey** | **String**| SubAccount API Key | 
+ **status** | **Number**| Email status filter | 
+ **offset** | **Number**| Offset for pagination | [optional] 
+ **limit** | **Number**| Limit for pagination | [optional] 
+
+### Return type
+
+[**[ModelsEmail]**](ModelsEmail.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="validationRouterGetValidationJobResults"></a>
+# **validationRouterGetValidationJobResults**
+> ModelsBulkResponse validationRouterGetValidationJobResults(xSubAccountApiKey, opts)
+
+
+
+Get validation job results <br>
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccountvalidationApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var opts = { 
+  'jobId': 789, // Number | jobId
+  'tag': "tag_example" // String | tag
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.validationRouterGetValidationJobResults(xSubAccountApiKey, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **jobId** | **Number**| jobId | [optional] 
+ **tag** | **String**| tag | [optional] 
+
+### Return type
+
+[**ModelsBulkResponse**](ModelsBulkResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="validationRouterValidateEmailBulkList"></a>
+# **validationRouterValidateEmailBulkList**
+> ModelsBulkResponse validationRouterValidateEmailBulkList(xSubAccountApiKey, body)
+
+
+
+Validate Emails In File Asynchronously <br>
 
 ### Example
 ```javascript
@@ -235,7 +394,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.validationRouterValidateEmailList(xSubAccountApiKey, body, callback);
+apiInstance.validationRouterValidateEmailBulkList(xSubAccountApiKey, body, callback);
 ```
 
 ### Parameters
@@ -247,7 +406,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ModelsValidatedEmailList**](ModelsValidatedEmailList.md)
+[**ModelsBulkResponse**](ModelsBulkResponse.md)
 
 ### Authorization
 
