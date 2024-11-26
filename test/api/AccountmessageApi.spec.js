@@ -238,8 +238,9 @@
           /*
           var xAccountApiKey = "xAccountApiKey_example";
           var messageId = "messageId_example";
+          var subAccountId = 789;
 
-          instance.messageRouterGetAllEventsForAMessageId(xAccountApiKey, messageId, function(error, data, response) {
+          instance.messageRouterGetAllEventsForAMessageId(xAccountApiKey, messageId, subAccountId, function(error, data, response) {
             if (error) {
               done(error);
               return;

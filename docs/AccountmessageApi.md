@@ -61,7 +61,7 @@ No authorization required
 
 <a name="messageRouterGetAllEventsForAMessageId"></a>
 # **messageRouterGetAllEventsForAMessageId**
-> [ModelsQEvent] messageRouterGetAllEventsForAMessageId(xAccountApiKey, messageId)
+> [ModelsQEvent] messageRouterGetAllEventsForAMessageId(xAccountApiKey, messageId, subAccountId)
 
 
 
@@ -77,6 +77,8 @@ var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
 
 var messageId = "messageId_example"; // String | the messageId that you want to retrieve
 
+var subAccountId = 789; // Number | the subAccountId that you want to retrieve
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -85,7 +87,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.messageRouterGetAllEventsForAMessageId(xAccountApiKey, messageId, callback);
+apiInstance.messageRouterGetAllEventsForAMessageId(xAccountApiKey, messageId, subAccountId, callback);
 ```
 
 ### Parameters
@@ -94,6 +96,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xAccountApiKey** | **String**| Account API Key | 
  **messageId** | **String**| the messageId that you want to retrieve | 
+ **subAccountId** | **Number**| the subAccountId that you want to retrieve | 
 
 ### Return type
 

@@ -276,6 +276,8 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountvalidationApi* | [**validationRouterCount**](docs/AccountvalidationApi.md#validationRouterCount) | **GET** /account/validation/count | 
 *SendPostApi.AccountvalidationApi* | [**validationRouterDeleteValidation**](docs/AccountvalidationApi.md#validationRouterDeleteValidation) | **DELETE** /account/validation/ | 
 *SendPostApi.AccountvalidationApi* | [**validationRouterGetAll**](docs/AccountvalidationApi.md#validationRouterGetAll) | **GET** /account/validation/ | 
+*SendPostApi.AccountvalidationApi* | [**validationRouterGetEmailCountByStatus**](docs/AccountvalidationApi.md#validationRouterGetEmailCountByStatus) | **GET** /account/validation/emails/count | 
+*SendPostApi.AccountvalidationApi* | [**validationRouterGetEmailsByStatus**](docs/AccountvalidationApi.md#validationRouterGetEmailsByStatus) | **GET** /account/validation/emails | 
 *SendPostApi.AccountvalidationApi* | [**validationRouterGetValidationJobResults**](docs/AccountvalidationApi.md#validationRouterGetValidationJobResults) | **GET** /account/validation/results | 
 *SendPostApi.AccountvalidationApi* | [**validationRouterValidateEmailBulkList**](docs/AccountvalidationApi.md#validationRouterValidateEmailBulkList) | **POST** /account/validation/list/bulk | 
 *SendPostApi.AccountwebhookApi* | [**accountWebhookRouterCount**](docs/AccountwebhookApi.md#accountWebhookRouterCount) | **GET** /account/webhook/count | 
@@ -344,9 +346,10 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [SendPostApi.Model3432980x14000854ae0False](docs/Model3432980x14000854ae0False.md)
- - [SendPostApi.Model3435790x14000854bd0False](docs/Model3435790x14000854bd0False.md)
- - [SendPostApi.Model7627130x14000d34660False](docs/Model7627130x14000d34660False.md)
+ - [SendPostApi.MapStringint](docs/MapStringint.md)
+ - [SendPostApi.Model3433490x140007a01b0False](docs/Model3433490x140007a01b0False.md)
+ - [SendPostApi.Model3436300x140007a02a0False](docs/Model3436300x140007a02a0False.md)
+ - [SendPostApi.Model7742440x14000c9ccf0False](docs/Model7742440x14000c9ccf0False.md)
  - [SendPostApi.ModelExport](docs/ModelExport.md)
  - [SendPostApi.ModelsAGDomainStat](docs/ModelsAGDomainStat.md)
  - [SendPostApi.ModelsAGIPStat](docs/ModelsAGIPStat.md)
@@ -437,6 +440,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsEValidation](docs/ModelsEValidation.md)
  - [SendPostApi.ModelsEWebhook](docs/ModelsEWebhook.md)
  - [SendPostApi.ModelsEditorTokenResponse](docs/ModelsEditorTokenResponse.md)
+ - [SendPostApi.ModelsEmail](docs/ModelsEmail.md)
  - [SendPostApi.ModelsEmailErrorCode](docs/ModelsEmailErrorCode.md)
  - [SendPostApi.ModelsEmailList](docs/ModelsEmailList.md)
  - [SendPostApi.ModelsEmailMessage](docs/ModelsEmailMessage.md)
