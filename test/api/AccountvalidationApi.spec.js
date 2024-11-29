@@ -168,6 +168,59 @@
           done();
         });
       });
+      describe('validationRouterGetEmailCountByStatus', function() {
+        it('should call validationRouterGetEmailCountByStatus successfully', function(done) {
+          // TODO: uncomment, update parameter values for validationRouterGetEmailCountByStatus call and complete the assertions
+          /*
+          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var status = 789;
+
+          instance.validationRouterGetEmailCountByStatus(xSubAccountApiKey, status, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.MapStringint);
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('validationRouterGetEmailsByStatus', function() {
+        it('should call validationRouterGetEmailsByStatus successfully', function(done) {
+          // TODO: uncomment, update parameter values for validationRouterGetEmailsByStatus call and complete the assertions
+          /*
+          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var status = 789;
+          var opts = {};
+          opts.offset = 789;
+          opts.limit = 789;
+
+          instance.validationRouterGetEmailsByStatus(xSubAccountApiKey, status, opts, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            let dataCtr = data;
+            expect(dataCtr).to.be.an(Array);
+            expect(dataCtr).to.not.be.empty();
+            for (let p in dataCtr) {
+              let data = dataCtr[p];
+              expect(data).to.be.a(SendPostApi.ModelsEmail);
+            }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('validationRouterGetValidationJobResults', function() {
         it('should call validationRouterGetValidationJobResults successfully', function(done) {
           // TODO: uncomment, update parameter values for validationRouterGetValidationJobResults call and complete the assertions
