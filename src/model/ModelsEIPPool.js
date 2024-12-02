@@ -67,6 +67,10 @@
         obj.tpsps = ApiClient.convertToType(data['tpsps'], ['Number']);
       if (data.hasOwnProperty('memberId'))
         obj.memberId = ApiClient.convertToType(data['memberId'], 'Number');
+      if (data.hasOwnProperty('overflowStrategy'))
+        obj.overflowStrategy = ApiClient.convertToType(data['overflowStrategy'], 'Number');
+      if (data.hasOwnProperty('overflowPoolName'))
+        obj.overflowPoolName = ApiClient.convertToType(data['overflowPoolName'], 'String');
     }
     return obj;
   }
@@ -100,6 +104,16 @@
    * @member {Number} memberId
    */
   exports.prototype.memberId = undefined;
+
+  /**
+   * @member {Number} overflowStrategy
+   */
+  exports.prototype.overflowStrategy = undefined;
+
+  /**
+   * @member {String} overflowPoolName
+   */
+  exports.prototype.overflowPoolName = undefined;
 
 
   return exports;

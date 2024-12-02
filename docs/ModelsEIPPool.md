@@ -9,5 +9,7 @@ Name | Type | Description | Notes
 **routingStrategy** | **Number** |  | [optional] 
 **tpsps** | **[Number]** |  | [optional] 
 **memberId** | **Number** |  | [optional] 
+**overflowStrategy** | **Number** |  | [optional] 
+**overflowPoolName** | **String** |  | [optional] 
 
 
