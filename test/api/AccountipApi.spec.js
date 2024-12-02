@@ -1234,7 +1234,12 @@
                 }
               }
               expect(data.type).to.be.a(SendPostApi.ModelsIPPoolType);
-      
+                  expect(data.threshold).to.be.a('string');
+              expect(data.threshold).to.be("");
+              expect(data.shouldOverflow).to.be.a('boolean');
+              expect(data.shouldOverflow).to.be(false);
+              expect(data.overflowPoolName).to.be.a('string');
+              expect(data.overflowPoolName).to.be("");
             }
 
             done();
@@ -2353,7 +2358,12 @@
                   }
                 }
                 expect(data.ipPool.type).to.be.a(SendPostApi.ModelsIPPoolType);
-        
+                    expect(data.ipPool.threshold).to.be.a('string');
+                expect(data.ipPool.threshold).to.be("");
+                expect(data.ipPool.shouldOverflow).to.be.a('boolean');
+                expect(data.ipPool.shouldOverflow).to.be(false);
+                expect(data.ipPool.overflowPoolName).to.be.a('string');
+                expect(data.ipPool.overflowPoolName).to.be("");
               expect(data.label).to.be.a(SendPostApi.ModelsLabel);
                     expect(data.label.color).to.be.a('string');
                 expect(data.label.color).to.be("");

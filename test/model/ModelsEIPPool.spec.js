@@ -77,6 +77,18 @@
         // expect(instance.memberId).to.be(expectedValueLiteral);
       });
 
+      it('should have the property overflowStrategy (base name: "overflowStrategy")', function() {
+        // TODO: update the code to test the property overflowStrategy
+        expect(instance).to.have.property('overflowStrategy');
+        // expect(instance.overflowStrategy).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property overflowPoolName (base name: "overflowPoolName")', function() {
+        // TODO: update the code to test the property overflowPoolName
+        expect(instance).to.have.property('overflowPoolName');
+        // expect(instance.overflowPoolName).to.be(expectedValueLiteral);
+      });
+
     });
   });
 

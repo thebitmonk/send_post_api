@@ -73,6 +73,12 @@
         obj.toAccountIPPools = ApiClient.convertToType(data['toAccountIPPools'], [Object]);
       if (data.hasOwnProperty('type'))
         obj.type = ModelsIPPoolType.constructFromObject(data['type']);
+      if (data.hasOwnProperty('threshold'))
+        obj.threshold = ApiClient.convertToType(data['threshold'], 'String');
+      if (data.hasOwnProperty('shouldOverflow'))
+        obj.shouldOverflow = ApiClient.convertToType(data['shouldOverflow'], 'Boolean');
+      if (data.hasOwnProperty('overflowPoolName'))
+        obj.overflowPoolName = ApiClient.convertToType(data['overflowPoolName'], 'String');
     }
     return obj;
   }
@@ -121,6 +127,21 @@
    * @member {module:model/ModelsIPPoolType} type
    */
   exports.prototype.type = undefined;
+
+  /**
+   * @member {String} threshold
+   */
+  exports.prototype.threshold = undefined;
+
+  /**
+   * @member {Boolean} shouldOverflow
+   */
+  exports.prototype.shouldOverflow = undefined;
+
+  /**
+   * @member {String} overflowPoolName
+   */
+  exports.prototype.overflowPoolName = undefined;
 
 
   return exports;

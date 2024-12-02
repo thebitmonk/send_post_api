@@ -95,6 +95,24 @@
         // expect(instance.type).to.be(expectedValueLiteral);
       });
 
+      it('should have the property threshold (base name: "threshold")', function() {
+        // TODO: update the code to test the property threshold
+        expect(instance).to.have.property('threshold');
+        // expect(instance.threshold).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property shouldOverflow (base name: "shouldOverflow")', function() {
+        // TODO: update the code to test the property shouldOverflow
+        expect(instance).to.have.property('shouldOverflow');
+        // expect(instance.shouldOverflow).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property overflowPoolName (base name: "overflowPoolName")', function() {
+        // TODO: update the code to test the property overflowPoolName
+        expect(instance).to.have.property('overflowPoolName');
+        // expect(instance.overflowPoolName).to.be(expectedValueLiteral);
+      });
+
     });
   });
 

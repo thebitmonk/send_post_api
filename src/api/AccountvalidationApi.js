@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsBulkResponse', 'model/ModelsCountStat', 'model/ModelsEValidation', 'model/ModelsEmailList', 'model/ModelsValidation', 'model/ModelsValidationJob'], factory);
+    define(['ApiClient', 'model/MapStringint', 'model/ModelsBulkResponse', 'model/ModelsCountStat', 'model/ModelsEValidation', 'model/ModelsEmail', 'model/ModelsEmailList', 'model/ModelsValidation', 'model/ModelsValidationJob'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsBulkResponse'), require('../model/ModelsCountStat'), require('../model/ModelsEValidation'), require('../model/ModelsEmailList'), require('../model/ModelsValidation'), require('../model/ModelsValidationJob'));
+    module.exports = factory(require('../ApiClient'), require('../model/MapStringint'), require('../model/ModelsBulkResponse'), require('../model/ModelsCountStat'), require('../model/ModelsEValidation'), require('../model/ModelsEmail'), require('../model/ModelsEmailList'), require('../model/ModelsValidation'), require('../model/ModelsValidationJob'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.AccountvalidationApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsBulkResponse, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsEValidation, root.SendPostApi.ModelsEmailList, root.SendPostApi.ModelsValidation, root.SendPostApi.ModelsValidationJob);
+    root.SendPostApi.AccountvalidationApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.MapStringint, root.SendPostApi.ModelsBulkResponse, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsEValidation, root.SendPostApi.ModelsEmail, root.SendPostApi.ModelsEmailList, root.SendPostApi.ModelsValidation, root.SendPostApi.ModelsValidationJob);
   }
-}(this, function(ApiClient, ModelsBulkResponse, ModelsCountStat, ModelsEValidation, ModelsEmailList, ModelsValidation, ModelsValidationJob) {
+}(this, function(ApiClient, MapStringint, ModelsBulkResponse, ModelsCountStat, ModelsEValidation, ModelsEmail, ModelsEmailList, ModelsValidation, ModelsValidationJob) {
   'use strict';
 
   /**
@@ -252,6 +252,120 @@
 
       return this.apiClient.callApi(
         '/account/validation/', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the validationRouterGetEmailCountByStatus operation.
+     * @callback module:api/AccountvalidationApi~validationRouterGetEmailCountByStatusCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/MapStringint} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get count of email addresses based on status <br>
+     * @param {String} xSubAccountApiKey SubAccount API Key
+     * @param {Number} status Email status filter
+     * @param {module:api/AccountvalidationApi~validationRouterGetEmailCountByStatusCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/MapStringint}
+     */
+    this.validationRouterGetEmailCountByStatus = function(xSubAccountApiKey, status, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'xSubAccountApiKey' is set
+      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling validationRouterGetEmailCountByStatus");
+      }
+
+      // verify the required parameter 'status' is set
+      if (status === undefined || status === null) {
+        throw new Error("Missing the required parameter 'status' when calling validationRouterGetEmailCountByStatus");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'status': status,
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-SubAccount-ApiKey': xSubAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = MapStringint;
+
+      return this.apiClient.callApi(
+        '/account/validation/emails/count', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the validationRouterGetEmailsByStatus operation.
+     * @callback module:api/AccountvalidationApi~validationRouterGetEmailsByStatusCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/ModelsEmail>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Fetch email addresses based on status with limit and offset <br>
+     * @param {String} xSubAccountApiKey SubAccount API Key
+     * @param {Number} status Email status filter
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.offset Offset for pagination
+     * @param {Number} opts.limit Limit for pagination
+     * @param {module:api/AccountvalidationApi~validationRouterGetEmailsByStatusCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/ModelsEmail>}
+     */
+    this.validationRouterGetEmailsByStatus = function(xSubAccountApiKey, status, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'xSubAccountApiKey' is set
+      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling validationRouterGetEmailsByStatus");
+      }
+
+      // verify the required parameter 'status' is set
+      if (status === undefined || status === null) {
+        throw new Error("Missing the required parameter 'status' when calling validationRouterGetEmailsByStatus");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'offset': opts['offset'],
+        'limit': opts['limit'],
+        'status': status,
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-SubAccount-ApiKey': xSubAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = [ModelsEmail];
+
+      return this.apiClient.callApi(
+        '/account/validation/emails', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

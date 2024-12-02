@@ -72,6 +72,8 @@
           body.routingStrategy = "0";
           body.tpsps = [0];
           body.memberId = "0";
+          body.overflowStrategy = 0;
+          body.overflowPoolName = "";
 
           instance.iPPoolRouterCreate(xSubAccountApiKey, body, function(error, data, response) {
             if (error) {
@@ -650,6 +652,8 @@
           body.routingStrategy = "0";
           body.tpsps = [0];
           body.memberId = "0";
+          body.overflowStrategy = 0;
+          body.overflowPoolName = "";
 
           instance.iPPoolRouterUpdate(xSubAccountApiKey, ippoolid, body, function(error, data, response) {
             if (error) {
