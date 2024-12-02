@@ -12,5 +12,8 @@ Name | Type | Description | Notes
 **thirdPartySendingProviders** | [**[ModelsThirdPartySendingProvider]**](ModelsThirdPartySendingProvider.md) |  | [optional] 
 **toAccountIPPools** | **[Object]** |  | [optional] 
 **type** | [**ModelsIPPoolType**](ModelsIPPoolType.md) |  | [optional] 
+**threshold** | **String** |  | [optional] 
+**shouldOverflow** | **Boolean** |  | [optional] 
+**overflowPoolName** | **String** |  | [optional] 
 
 

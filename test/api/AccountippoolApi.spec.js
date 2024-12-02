@@ -72,6 +72,8 @@
           body.routingStrategy = "0";
           body.tpsps = [0];
           body.memberId = "0";
+          body.overflowStrategy = 0;
+          body.overflowPoolName = "";
 
           instance.accountIPPoolRouterCreate(xAccountApiKey, body, function(error, data, response) {
             if (error) {
@@ -321,7 +323,13 @@
               }
             }
             expect(data.type).to.be.a(SendPostApi.ModelsIPPoolType);
-    
+                expect(data.threshold).to.be.a('string');
+            expect(data.threshold).to.be("");
+            expect(data.shouldOverflow).to.be.a('boolean');
+            expect(data.shouldOverflow).to.be(false);
+            expect(data.overflowPoolName).to.be.a('string');
+            expect(data.overflowPoolName).to.be("");
+
             done();
           });
           */
@@ -612,7 +620,13 @@
               }
             }
             expect(data.type).to.be.a(SendPostApi.ModelsIPPoolType);
-    
+                expect(data.threshold).to.be.a('string');
+            expect(data.threshold).to.be("");
+            expect(data.shouldOverflow).to.be.a('boolean');
+            expect(data.shouldOverflow).to.be(false);
+            expect(data.overflowPoolName).to.be.a('string');
+            expect(data.overflowPoolName).to.be("");
+
             done();
           });
           */
@@ -883,7 +897,12 @@
                 }
               }
               expect(data.type).to.be.a(SendPostApi.ModelsIPPoolType);
-      
+                  expect(data.threshold).to.be.a('string');
+              expect(data.threshold).to.be("");
+              expect(data.shouldOverflow).to.be.a('boolean');
+              expect(data.shouldOverflow).to.be(false);
+              expect(data.overflowPoolName).to.be.a('string');
+              expect(data.overflowPoolName).to.be("");
             }
 
             done();
@@ -1156,7 +1175,12 @@
                 }
               }
               expect(data.type).to.be.a(SendPostApi.ModelsIPPoolType);
-      
+                  expect(data.threshold).to.be.a('string');
+              expect(data.threshold).to.be("");
+              expect(data.shouldOverflow).to.be.a('boolean');
+              expect(data.shouldOverflow).to.be(false);
+              expect(data.overflowPoolName).to.be.a('string');
+              expect(data.overflowPoolName).to.be("");
             }
 
             done();
@@ -1180,6 +1204,8 @@
           body.routingStrategy = "0";
           body.tpsps = [0];
           body.memberId = "0";
+          body.overflowStrategy = 0;
+          body.overflowPoolName = "";
 
           instance.accountIPPoolRouterUpdate(xAccountApiKey, ippoolid, body, function(error, data, response) {
             if (error) {
@@ -1429,7 +1455,13 @@
               }
             }
             expect(data.type).to.be.a(SendPostApi.ModelsIPPoolType);
-    
+                expect(data.threshold).to.be.a('string');
+            expect(data.threshold).to.be("");
+            expect(data.shouldOverflow).to.be.a('boolean');
+            expect(data.shouldOverflow).to.be(false);
+            expect(data.overflowPoolName).to.be.a('string');
+            expect(data.overflowPoolName).to.be("");
+
             done();
           });
           */
