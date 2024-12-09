@@ -71,6 +71,8 @@
         obj.overflowStrategy = ApiClient.convertToType(data['overflowStrategy'], 'Number');
       if (data.hasOwnProperty('overflowPoolName'))
         obj.overflowPoolName = ApiClient.convertToType(data['overflowPoolName'], 'String');
+      if (data.hasOwnProperty('warmupInterval'))
+        obj.warmupInterval = ApiClient.convertToType(data['warmupInterval'], 'Number');
     }
     return obj;
   }
@@ -114,6 +116,11 @@
    * @member {String} overflowPoolName
    */
   exports.prototype.overflowPoolName = undefined;
+
+  /**
+   * @member {Number} warmupInterval
+   */
+  exports.prototype.warmupInterval = undefined;
 
 
   return exports;

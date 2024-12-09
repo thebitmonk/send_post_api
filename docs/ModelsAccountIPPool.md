@@ -15,5 +15,6 @@ Name | Type | Description | Notes
 **threshold** | **String** |  | [optional] 
 **shouldOverflow** | **Boolean** |  | [optional] 
 **overflowPoolName** | **String** |  | [optional] 
+**warmupInterval** | **Number** |  | [optional] 
 
 

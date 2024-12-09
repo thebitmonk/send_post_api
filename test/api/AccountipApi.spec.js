@@ -1240,6 +1240,8 @@
               expect(data.shouldOverflow).to.be(false);
               expect(data.overflowPoolName).to.be.a('string');
               expect(data.overflowPoolName).to.be("");
+              expect(data.warmupInterval).to.be.a('number');
+              expect(data.warmupInterval).to.be("0");
             }
 
             done();
@@ -2364,6 +2366,8 @@
                 expect(data.ipPool.shouldOverflow).to.be(false);
                 expect(data.ipPool.overflowPoolName).to.be.a('string');
                 expect(data.ipPool.overflowPoolName).to.be("");
+                expect(data.ipPool.warmupInterval).to.be.a('number');
+                expect(data.ipPool.warmupInterval).to.be("0");
               expect(data.label).to.be.a(SendPostApi.ModelsLabel);
                     expect(data.label.color).to.be.a('string');
                 expect(data.label.color).to.be("");
