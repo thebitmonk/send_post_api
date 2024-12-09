@@ -74,6 +74,7 @@
           body.memberId = "0";
           body.overflowStrategy = 0;
           body.overflowPoolName = "";
+          body.warmupInterval = "0";
 
           instance.accountIPPoolRouterCreate(xAccountApiKey, body, function(error, data, response) {
             if (error) {
@@ -329,6 +330,8 @@
             expect(data.shouldOverflow).to.be(false);
             expect(data.overflowPoolName).to.be.a('string');
             expect(data.overflowPoolName).to.be("");
+            expect(data.warmupInterval).to.be.a('number');
+            expect(data.warmupInterval).to.be("0");
 
             done();
           });
@@ -626,6 +629,8 @@
             expect(data.shouldOverflow).to.be(false);
             expect(data.overflowPoolName).to.be.a('string');
             expect(data.overflowPoolName).to.be("");
+            expect(data.warmupInterval).to.be.a('number');
+            expect(data.warmupInterval).to.be("0");
 
             done();
           });
@@ -903,6 +908,8 @@
               expect(data.shouldOverflow).to.be(false);
               expect(data.overflowPoolName).to.be.a('string');
               expect(data.overflowPoolName).to.be("");
+              expect(data.warmupInterval).to.be.a('number');
+              expect(data.warmupInterval).to.be("0");
             }
 
             done();
@@ -1181,6 +1188,8 @@
               expect(data.shouldOverflow).to.be(false);
               expect(data.overflowPoolName).to.be.a('string');
               expect(data.overflowPoolName).to.be("");
+              expect(data.warmupInterval).to.be.a('number');
+              expect(data.warmupInterval).to.be("0");
             }
 
             done();
@@ -1206,6 +1215,7 @@
           body.memberId = "0";
           body.overflowStrategy = 0;
           body.overflowPoolName = "";
+          body.warmupInterval = "0";
 
           instance.accountIPPoolRouterUpdate(xAccountApiKey, ippoolid, body, function(error, data, response) {
             if (error) {
@@ -1461,6 +1471,8 @@
             expect(data.shouldOverflow).to.be(false);
             expect(data.overflowPoolName).to.be.a('string');
             expect(data.overflowPoolName).to.be("");
+            expect(data.warmupInterval).to.be.a('number');
+            expect(data.warmupInterval).to.be("0");
 
             done();
           });

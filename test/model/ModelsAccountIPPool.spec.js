@@ -113,6 +113,12 @@
         // expect(instance.overflowPoolName).to.be(expectedValueLiteral);
       });
 
+      it('should have the property warmupInterval (base name: "warmupInterval")', function() {
+        // TODO: update the code to test the property warmupInterval
+        expect(instance).to.have.property('warmupInterval');
+        // expect(instance.warmupInterval).to.be(expectedValueLiteral);
+      });
+
     });
   });
 

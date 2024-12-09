@@ -74,6 +74,7 @@
           body.memberId = "0";
           body.overflowStrategy = 0;
           body.overflowPoolName = "";
+          body.warmupInterval = "0";
 
           instance.iPPoolRouterCreate(xSubAccountApiKey, body, function(error, data, response) {
             if (error) {
@@ -654,6 +655,7 @@
           body.memberId = "0";
           body.overflowStrategy = 0;
           body.overflowPoolName = "";
+          body.warmupInterval = "0";
 
           instance.iPPoolRouterUpdate(xSubAccountApiKey, ippoolid, body, function(error, data, response) {
             if (error) {

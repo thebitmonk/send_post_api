@@ -11,5 +11,6 @@ Name | Type | Description | Notes
 **memberId** | **Number** |  | [optional] 
 **overflowStrategy** | **Number** |  | [optional] 
 **overflowPoolName** | **String** |  | [optional] 
+**warmupInterval** | **Number** |  | [optional] 
 
 
