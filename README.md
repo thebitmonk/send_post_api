@@ -347,9 +347,9 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [SendPostApi.MapStringint](docs/MapStringint.md)
- - [SendPostApi.Model3435220x140007e7980False](docs/Model3435220x140007e7980False.md)
- - [SendPostApi.Model3438030x140007e7a70False](docs/Model3438030x140007e7a70False.md)
- - [SendPostApi.Model7789120x14000d153b0False](docs/Model7789120x14000d153b0False.md)
+ - [SendPostApi.Model3451330x1400080b980False](docs/Model3451330x1400080b980False.md)
+ - [SendPostApi.Model3454140x1400080ba70False](docs/Model3454140x1400080ba70False.md)
+ - [SendPostApi.Model7824580x14000d4b500False](docs/Model7824580x14000d4b500False.md)
  - [SendPostApi.ModelExport](docs/ModelExport.md)
  - [SendPostApi.ModelsAGDomainStat](docs/ModelsAGDomainStat.md)
  - [SendPostApi.ModelsAGIPStat](docs/ModelsAGIPStat.md)
