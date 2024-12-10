@@ -1,6 +1,6 @@
 # SendPostApi.AccountwebhookApi
 
-All URIs are relative to *https://api.sendpost.io/api/v1*
+All URIs are relative to *https://apiv2.sendpost.io/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
