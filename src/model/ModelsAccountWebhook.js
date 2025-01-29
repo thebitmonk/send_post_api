@@ -81,6 +81,10 @@
         obj.softBounced = ApiClient.convertToType(data['softBounced'], 'Boolean');
       if (data.hasOwnProperty('spam'))
         obj.spam = ApiClient.convertToType(data['spam'], 'Boolean');
+      if (data.hasOwnProperty('uniqueClick'))
+        obj.uniqueClick = ApiClient.convertToType(data['uniqueClick'], 'Boolean');
+      if (data.hasOwnProperty('uniqueOpen'))
+        obj.uniqueOpen = ApiClient.convertToType(data['uniqueOpen'], 'Boolean');
       if (data.hasOwnProperty('unsubscribed'))
         obj.unsubscribed = ApiClient.convertToType(data['unsubscribed'], 'Boolean');
       if (data.hasOwnProperty('updated_by'))
@@ -155,6 +159,16 @@
    * @member {Boolean} spam
    */
   exports.prototype.spam = undefined;
+
+  /**
+   * @member {Boolean} uniqueClick
+   */
+  exports.prototype.uniqueClick = undefined;
+
+  /**
+   * @member {Boolean} uniqueOpen
+   */
+  exports.prototype.uniqueOpen = undefined;
 
   /**
    * @member {Boolean} unsubscribed
