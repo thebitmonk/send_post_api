@@ -16,6 +16,8 @@ Name | Type | Description | Notes
 **sent** | **Boolean** |  | [optional] 
 **softBounced** | **Boolean** |  | [optional] 
 **spam** | **Boolean** |  | [optional] 
+**uniqueClick** | **Boolean** |  | [optional] 
+**uniqueOpen** | **Boolean** |  | [optional] 
 **unsubscribed** | **Boolean** |  | [optional] 
 **updatedBy** | [**ModelsMember**](ModelsMember.md) |  | [optional] 
 **url** | **String** |  | [optional] 

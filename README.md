@@ -128,6 +128,10 @@ Class | Method | HTTP request | Description
 *SendPostApi.AccountalertApi* | [**alertRouterDelete**](docs/AccountalertApi.md#alertRouterDelete) | **DELETE** /account/alert/{alertId} | 
 *SendPostApi.AccountalertApi* | [**alertRouterGetAll**](docs/AccountalertApi.md#alertRouterGetAll) | **GET** /account/alert/ | 
 *SendPostApi.AccountalertApi* | [**alertRouterUpdate**](docs/AccountalertApi.md#alertRouterUpdate) | **PUT** /account/alert/{alertId} | 
+*SendPostApi.AccountcustomerPortalApi* | [**customerPortalRouterCreateTicketWithAssContactAndCompany**](docs/AccountcustomerPortalApi.md#customerPortalRouterCreateTicketWithAssContactAndCompany) | **POST** /account/customer_portal/{memberId}/tickets | 
+*SendPostApi.AccountcustomerPortalApi* | [**customerPortalRouterGetCompanyTickets**](docs/AccountcustomerPortalApi.md#customerPortalRouterGetCompanyTickets) | **GET** /account/customer_portal/tickets | 
+*SendPostApi.AccountcustomerPortalApi* | [**customerPortalRouterGetTicketDetails**](docs/AccountcustomerPortalApi.md#customerPortalRouterGetTicketDetails) | **GET** /account/customer_portal/tickets/{id} | 
+*SendPostApi.AccountcustomerPortalApi* | [**customerPortalRouterUploadFileToHubspot**](docs/AccountcustomerPortalApi.md#customerPortalRouterUploadFileToHubspot) | **POST** /account/customer_portal/upload | 
 *SendPostApi.AccountdomainApi* | [**accountDomainRouterCount**](docs/AccountdomainApi.md#accountDomainRouterCount) | **GET** /account/domain/count | 
 *SendPostApi.AccountdomainApi* | [**accountDomainRouterGet**](docs/AccountdomainApi.md#accountDomainRouterGet) | **GET** /account/domain/{domainId} | 
 *SendPostApi.AccountdomainApi* | [**accountDomainRouterGetAll**](docs/AccountdomainApi.md#accountDomainRouterGetAll) | **GET** /account/domain/ | 
@@ -305,6 +309,7 @@ Class | Method | HTTP request | Description
 *SendPostApi.SubaccountdomainApi* | [**domainRouterDoesDomainExists**](docs/SubaccountdomainApi.md#domainRouterDoesDomainExists) | **GET** /subaccount/domain/exists | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterGet**](docs/SubaccountdomainApi.md#domainRouterGet) | **GET** /subaccount/domain/{domainId} | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterGetAll**](docs/SubaccountdomainApi.md#domainRouterGetAll) | **GET** /subaccount/domain/ | 
+*SendPostApi.SubaccountdomainApi* | [**domainRouterGetAll_0**](docs/SubaccountdomainApi.md#domainRouterGetAll_0) | **GET** /subaccount/domain/names | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterIsDomainVerified**](docs/SubaccountdomainApi.md#domainRouterIsDomainVerified) | **GET** /subaccount/domain/isverified | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterUpdate**](docs/SubaccountdomainApi.md#domainRouterUpdate) | **PUT** /subaccount/domain/{domainId} | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterVerify**](docs/SubaccountdomainApi.md#domainRouterVerify) | **POST** /subaccount/domain/{domainId}/verify | 
@@ -347,9 +352,9 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [SendPostApi.MapStringint](docs/MapStringint.md)
- - [SendPostApi.Model3451330x140007d0330False](docs/Model3451330x140007d0330False.md)
- - [SendPostApi.Model3454140x140007d0420False](docs/Model3454140x140007d0420False.md)
- - [SendPostApi.Model7824580x14000ce9e90False](docs/Model7824580x14000ce9e90False.md)
+ - [SendPostApi.Model3613600x140007d9b60False](docs/Model3613600x140007d9b60False.md)
+ - [SendPostApi.Model3616410x140007d9c50False](docs/Model3616410x140007d9c50False.md)
+ - [SendPostApi.Model8580050x14000d9baa0False](docs/Model8580050x14000d9baa0False.md)
  - [SendPostApi.ModelExport](docs/ModelExport.md)
  - [SendPostApi.ModelsAGDomainStat](docs/ModelsAGDomainStat.md)
  - [SendPostApi.ModelsAGIPStat](docs/ModelsAGIPStat.md)
@@ -417,6 +422,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsDomainAge](docs/ModelsDomainAge.md)
  - [SendPostApi.ModelsDomainCheckRequest](docs/ModelsDomainCheckRequest.md)
  - [SendPostApi.ModelsDomainCheckResult](docs/ModelsDomainCheckResult.md)
+ - [SendPostApi.ModelsDomainNameRecord](docs/ModelsDomainNameRecord.md)
  - [SendPostApi.ModelsEAccount](docs/ModelsEAccount.md)
  - [SendPostApi.ModelsEAccountMember](docs/ModelsEAccountMember.md)
  - [SendPostApi.ModelsEAccountSetting](docs/ModelsEAccountSetting.md)
@@ -453,6 +459,10 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsGlockappsMailReport](docs/ModelsGlockappsMailReport.md)
  - [SendPostApi.ModelsHetrixtoolsBlacklist](docs/ModelsHetrixtoolsBlacklist.md)
  - [SendPostApi.ModelsHetrixtoolsMonitorStat](docs/ModelsHetrixtoolsMonitorStat.md)
+ - [SendPostApi.ModelsHubspotEmail](docs/ModelsHubspotEmail.md)
+ - [SendPostApi.ModelsHubspotEmailProperties](docs/ModelsHubspotEmailProperties.md)
+ - [SendPostApi.ModelsHubspotTicket](docs/ModelsHubspotTicket.md)
+ - [SendPostApi.ModelsHubspotTicketProperties](docs/ModelsHubspotTicketProperties.md)
  - [SendPostApi.ModelsIEIP](docs/ModelsIEIP.md)
  - [SendPostApi.ModelsIEMember](docs/ModelsIEMember.md)
  - [SendPostApi.ModelsIESubAccount](docs/ModelsIESubAccount.md)
@@ -511,6 +521,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsRSuppression](docs/ModelsRSuppression.md)
  - [SendPostApi.ModelsReplyTo](docs/ModelsReplyTo.md)
  - [SendPostApi.ModelsReportProvider](docs/ModelsReportProvider.md)
+ - [SendPostApi.ModelsRequestCreateTicket](docs/ModelsRequestCreateTicket.md)
  - [SendPostApi.ModelsResponse](docs/ModelsResponse.md)
  - [SendPostApi.ModelsSDStat](docs/ModelsSDStat.md)
  - [SendPostApi.ModelsSMTPAuth](docs/ModelsSMTPAuth.md)
@@ -538,6 +549,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsThirdPartySendingProviderType](docs/ModelsThirdPartySendingProviderType.md)
  - [SendPostApi.ModelsTo](docs/ModelsTo.md)
  - [SendPostApi.ModelsUMember](docs/ModelsUMember.md)
+ - [SendPostApi.ModelsUploadFileResponse](docs/ModelsUploadFileResponse.md)
  - [SendPostApi.ModelsValidation](docs/ModelsValidation.md)
  - [SendPostApi.ModelsValidationJob](docs/ModelsValidationJob.md)
  - [SendPostApi.ModelsValidationReason](docs/ModelsValidationReason.md)

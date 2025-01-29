@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**domainRouterDoesDomainExists**](SubaccountdomainApi.md#domainRouterDoesDomainExists) | **GET** /subaccount/domain/exists | 
 [**domainRouterGet**](SubaccountdomainApi.md#domainRouterGet) | **GET** /subaccount/domain/{domainId} | 
 [**domainRouterGetAll**](SubaccountdomainApi.md#domainRouterGetAll) | **GET** /subaccount/domain/ | 
+[**domainRouterGetAll_0**](SubaccountdomainApi.md#domainRouterGetAll_0) | **GET** /subaccount/domain/names | 
 [**domainRouterIsDomainVerified**](SubaccountdomainApi.md#domainRouterIsDomainVerified) | **GET** /subaccount/domain/isverified | 
 [**domainRouterUpdate**](SubaccountdomainApi.md#domainRouterUpdate) | **PUT** /subaccount/domain/{domainId} | 
 [**domainRouterVerify**](SubaccountdomainApi.md#domainRouterVerify) | **POST** /subaccount/domain/{domainId}/verify | 
@@ -312,6 +313,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[ModelsDomain]**](ModelsDomain.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="domainRouterGetAll_0"></a>
+# **domainRouterGetAll_0**
+> [ModelsDomainNameRecord] domainRouterGetAll_0(xSubAccountApiKey, opts)
+
+
+
+Get All Domains <br>
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.SubaccountdomainApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var opts = { 
+  'search': "search_example" // String | search term
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.domainRouterGetAll_0(xSubAccountApiKey, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **search** | **String**| search term | [optional] 
+
+### Return type
+
+[**[ModelsDomainNameRecord]**](ModelsDomainNameRecord.md)
 
 ### Authorization
 

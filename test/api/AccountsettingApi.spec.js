@@ -105,6 +105,8 @@
               expect(data.createdBy.url).to.be("");
             expect(data.currentEmailServiceProvider).to.be.a('string');
             expect(data.currentEmailServiceProvider).to.be("");
+            expect(data.hubspotCompanyId).to.be.a('string');
+            expect(data.hubspotCompanyId).to.be("");
             expect(data.id).to.be.a('number');
             expect(data.id).to.be("0");
             expect(data.incidentSlackEndpoint).to.be.a('string');
@@ -119,6 +121,8 @@
             expect(data.isLastPaymentFailed).to.be(false);
             expect(data.isUpgraded).to.be.a('boolean');
             expect(data.isUpgraded).to.be(false);
+            expect(data.linearIssueUuid).to.be.a('string');
+            expect(data.linearIssueUuid).to.be("");
             expect(data.lockThreshold).to.be.a('number');
             expect(data.lockThreshold).to.be("0");
             expect(data.locked).to.be.a('boolean');
@@ -222,6 +226,8 @@
               expect(data.createdBy.url).to.be("");
             expect(data.currentEmailServiceProvider).to.be.a('string');
             expect(data.currentEmailServiceProvider).to.be("");
+            expect(data.hubspotCompanyId).to.be.a('string');
+            expect(data.hubspotCompanyId).to.be("");
             expect(data.id).to.be.a('number');
             expect(data.id).to.be("0");
             expect(data.incidentSlackEndpoint).to.be.a('string');
@@ -236,6 +242,8 @@
             expect(data.isLastPaymentFailed).to.be(false);
             expect(data.isUpgraded).to.be.a('boolean');
             expect(data.isUpgraded).to.be(false);
+            expect(data.linearIssueUuid).to.be.a('string');
+            expect(data.linearIssueUuid).to.be("");
             expect(data.lockThreshold).to.be.a('number');
             expect(data.lockThreshold).to.be("0");
             expect(data.locked).to.be.a('boolean');

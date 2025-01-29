@@ -119,6 +119,18 @@
         // expect(instance.spam).to.be(expectedValueLiteral);
       });
 
+      it('should have the property uniqueClick (base name: "uniqueClick")', function() {
+        // TODO: update the code to test the property uniqueClick
+        expect(instance).to.have.property('uniqueClick');
+        // expect(instance.uniqueClick).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property uniqueOpen (base name: "uniqueOpen")', function() {
+        // TODO: update the code to test the property uniqueOpen
+        expect(instance).to.have.property('uniqueOpen');
+        // expect(instance.uniqueOpen).to.be(expectedValueLiteral);
+      });
+
       it('should have the property unsubscribed (base name: "unsubscribed")', function() {
         // TODO: update the code to test the property unsubscribed
         expect(instance).to.have.property('unsubscribed');
