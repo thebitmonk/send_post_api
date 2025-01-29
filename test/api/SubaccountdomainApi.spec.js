@@ -440,15 +440,15 @@
           done();
         });
       });
-      describe('domainRouterGetAllByNames', function() {
-        it('should call domainRouterGetAllByNames successfully', function(done) {
-          // TODO: uncomment, update parameter values for domainRouterGetAllByNames call and complete the assertions
+      describe('domainRouterGetAll_0', function() {
+        it('should call domainRouterGetAll_0 successfully', function(done) {
+          // TODO: uncomment, update parameter values for domainRouterGetAll_0 call and complete the assertions
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
           var opts = {};
           opts.search = "search_example";
 
-          instance.domainRouterGetAllByNames(xSubAccountApiKey, opts, function(error, data, response) {
+          instance.domainRouterGetAll_0(xSubAccountApiKey, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;

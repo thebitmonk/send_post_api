@@ -381,13 +381,13 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="domainRouterGetAllByNames"></a>
-# **domainRouterGetAllByNames**
-> [ModelsDomainNameRecord] domainRouterGetAllByNames(xSubAccountApiKey, opts)
+<a name="domainRouterGetAll_0"></a>
+# **domainRouterGetAll_0**
+> [ModelsDomainNameRecord] domainRouterGetAll_0(xSubAccountApiKey, opts)
 
 
 
-Get All Domains by name <br>
+Get All Domains <br>
 
 ### Example
 ```javascript
@@ -408,7 +408,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.domainRouterGetAllByNames(xSubAccountApiKey, opts, callback);
+apiInstance.domainRouterGetAll_0(xSubAccountApiKey, opts, callback);
 ```
 
 ### Parameters
