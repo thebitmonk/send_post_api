@@ -77,6 +77,18 @@
         // expect(instance.dmarcVerified).to.be(expectedValueLiteral);
       });
 
+      it('should have the property gpt (base name: "gpt")', function() {
+        // TODO: update the code to test the property gpt
+        expect(instance).to.have.property('gpt');
+        // expect(instance.gpt).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property gptVerified (base name: "gptVerified")', function() {
+        // TODO: update the code to test the property gptVerified
+        expect(instance).to.have.property('gptVerified');
+        // expect(instance.gptVerified).to.be(expectedValueLiteral);
+      });
+
       it('should have the property id (base name: "id")', function() {
         // TODO: update the code to test the property id
         expect(instance).to.have.property('id');

@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **dkimVerified** | **Boolean** |  | [optional] 
 **dmarc** | [**ModelsDNSRecord**](ModelsDNSRecord.md) |  | [optional] 
 **dmarcVerified** | **Boolean** |  | [optional] 
+**gpt** | [**ModelsDNSRecord**](ModelsDNSRecord.md) |  | [optional] 
+**gptVerified** | **Boolean** |  | [optional] 
 **id** | **Number** |  | [optional] 
 **name** | **String** |  | [optional] 
 **returnPath** | [**ModelsDNSRecord**](ModelsDNSRecord.md) |  | [optional] 

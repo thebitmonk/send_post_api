@@ -303,13 +303,14 @@ Class | Method | HTTP request | Description
 *SendPostApi.EditorApi* | [**editorApiRouterGetToken**](docs/EditorApi.md#editorApiRouterGetToken) | **GET** /editor/ | 
 *SendPostApi.SmtpApi* | [**sMTPRouterAuthForSMTPServers**](docs/SmtpApi.md#sMTPRouterAuthForSMTPServers) | **POST** /smtp/auth | 
 *SendPostApi.SmtpApi* | [**sMTPRouterReceiveWebhooksRaisedFromSMTPServers**](docs/SmtpApi.md#sMTPRouterReceiveWebhooksRaisedFromSMTPServers) | **POST** /smtp/webhook | 
+*SendPostApi.SubaccountdomainApi* | [**domainRouterAddDomainOnPostmaster**](docs/SubaccountdomainApi.md#domainRouterAddDomainOnPostmaster) | **GET** /subaccount/domain/{domainId}/add | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterCount**](docs/SubaccountdomainApi.md#domainRouterCount) | **GET** /subaccount/domain/count | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterCreate**](docs/SubaccountdomainApi.md#domainRouterCreate) | **POST** /subaccount/domain/ | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterDelete**](docs/SubaccountdomainApi.md#domainRouterDelete) | **DELETE** /subaccount/domain/{domainId} | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterDoesDomainExists**](docs/SubaccountdomainApi.md#domainRouterDoesDomainExists) | **GET** /subaccount/domain/exists | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterGet**](docs/SubaccountdomainApi.md#domainRouterGet) | **GET** /subaccount/domain/{domainId} | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterGetAll**](docs/SubaccountdomainApi.md#domainRouterGetAll) | **GET** /subaccount/domain/ | 
-*SendPostApi.SubaccountdomainApi* | [**domainRouterGetAll_0**](docs/SubaccountdomainApi.md#domainRouterGetAll_0) | **GET** /subaccount/domain/names | 
+*SendPostApi.SubaccountdomainApi* | [**domainRouterGetAllByNames**](docs/SubaccountdomainApi.md#domainRouterGetAllByNames) | **GET** /subaccount/domain/names | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterIsDomainVerified**](docs/SubaccountdomainApi.md#domainRouterIsDomainVerified) | **GET** /subaccount/domain/isverified | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterUpdate**](docs/SubaccountdomainApi.md#domainRouterUpdate) | **PUT** /subaccount/domain/{domainId} | 
 *SendPostApi.SubaccountdomainApi* | [**domainRouterVerify**](docs/SubaccountdomainApi.md#domainRouterVerify) | **POST** /subaccount/domain/{domainId}/verify | 
@@ -351,10 +352,9 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [SendPostApi.MapStringint](docs/MapStringint.md)
- - [SendPostApi.Model3613600x140007d9b60False](docs/Model3613600x140007d9b60False.md)
- - [SendPostApi.Model3616410x140007d9c50False](docs/Model3616410x140007d9c50False.md)
- - [SendPostApi.Model8580050x14000d9baa0False](docs/Model8580050x14000d9baa0False.md)
+ - [SendPostApi.Model3668100x140007c8b10False](docs/Model3668100x140007c8b10False.md)
+ - [SendPostApi.Model3670910x140007c8c00False](docs/Model3670910x140007c8c00False.md)
+ - [SendPostApi.Model8726040x14000dd3bc0False](docs/Model8726040x14000dd3bc0False.md)
  - [SendPostApi.ModelExport](docs/ModelExport.md)
  - [SendPostApi.ModelsAGDomainStat](docs/ModelsAGDomainStat.md)
  - [SendPostApi.ModelsAGIPStat](docs/ModelsAGIPStat.md)
@@ -423,6 +423,7 @@ Class | Method | HTTP request | Description
  - [SendPostApi.ModelsDomainCheckRequest](docs/ModelsDomainCheckRequest.md)
  - [SendPostApi.ModelsDomainCheckResult](docs/ModelsDomainCheckResult.md)
  - [SendPostApi.ModelsDomainNameRecord](docs/ModelsDomainNameRecord.md)
+ - [SendPostApi.ModelsDomainRecord](docs/ModelsDomainRecord.md)
  - [SendPostApi.ModelsEAccount](docs/ModelsEAccount.md)
  - [SendPostApi.ModelsEAccountMember](docs/ModelsEAccountMember.md)
  - [SendPostApi.ModelsEAccountSetting](docs/ModelsEAccountSetting.md)

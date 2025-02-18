@@ -67,6 +67,10 @@
         obj.dmarc = ModelsDNSRecord.constructFromObject(data['dmarc']);
       if (data.hasOwnProperty('dmarcVerified'))
         obj.dmarcVerified = ApiClient.convertToType(data['dmarcVerified'], 'Boolean');
+      if (data.hasOwnProperty('gpt'))
+        obj.gpt = ModelsDNSRecord.constructFromObject(data['gpt']);
+      if (data.hasOwnProperty('gptVerified'))
+        obj.gptVerified = ApiClient.convertToType(data['gptVerified'], 'Boolean');
       if (data.hasOwnProperty('id'))
         obj.id = ApiClient.convertToType(data['id'], 'Number');
       if (data.hasOwnProperty('name'))
@@ -114,6 +118,16 @@
    * @member {Boolean} dmarcVerified
    */
   exports.prototype.dmarcVerified = undefined;
+
+  /**
+   * @member {module:model/ModelsDNSRecord} gpt
+   */
+  exports.prototype.gpt = undefined;
+
+  /**
+   * @member {Boolean} gptVerified
+   */
+  exports.prototype.gptVerified = undefined;
 
   /**
    * @member {Number} id

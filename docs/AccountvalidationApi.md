@@ -214,7 +214,7 @@ No authorization required
 
 <a name="validationRouterGetEmailCountByStatus"></a>
 # **validationRouterGetEmailCountByStatus**
-> MapStringint validationRouterGetEmailCountByStatus(xSubAccountApiKey, status)
+> ModelsCountStat validationRouterGetEmailCountByStatus(xSubAccountApiKey, status)
 
 
 
@@ -250,7 +250,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MapStringint**](MapStringint.md)
+[**ModelsCountStat**](ModelsCountStat.md)
 
 ### Authorization
 

@@ -127,6 +127,7 @@
      * @param {String} opts.to to date
      * @param {String} opts.source data source from which to get timestamp keys subaccount or ip
      * @param {String} opts.sourceId source id from which to get timestamp keys subaccount or ip
+     * @param {Number} opts.memberId member id
      * @param {module:api/AccounteventApi~eventRouterExportAllEventsFromAAccountForAGivenTimeRangeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ModelExport}
      */
@@ -149,6 +150,7 @@
         'to': opts['to'],
         'source': opts['source'],
         'sourceId': opts['sourceId'],
+        'memberId': opts['memberId'],
       };
       var collectionQueryParams = {
       };

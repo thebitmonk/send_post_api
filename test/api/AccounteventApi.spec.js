@@ -78,6 +78,7 @@
           opts.to = "to_example";
           opts.source = "source_example";
           opts.sourceId = "sourceId_example";
+          opts.memberId = 789;
 
           instance.eventRouterExportAllEventsFromAAccountForAGivenTimeRange(xAccountApiKey, opts, function(error, data, response) {
             if (error) {
