@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsDomain', 'model/ModelsDomainCheckRequest', 'model/ModelsEDomain', 'model/ModelsEMember', 'model/ModelsVerifyByTokenRequest'], factory);
+    define(['ApiClient', 'model/ModelsCountStat', 'model/ModelsDeleteResponse', 'model/ModelsDomain', 'model/ModelsDomainCheckRequest', 'model/ModelsDomainNameRecord', 'model/ModelsDomainRecord', 'model/ModelsEDomain', 'model/ModelsEMember', 'model/ModelsVerifyByTokenRequest'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsDomain'), require('../model/ModelsDomainCheckRequest'), require('../model/ModelsEDomain'), require('../model/ModelsEMember'), require('../model/ModelsVerifyByTokenRequest'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsCountStat'), require('../model/ModelsDeleteResponse'), require('../model/ModelsDomain'), require('../model/ModelsDomainCheckRequest'), require('../model/ModelsDomainNameRecord'), require('../model/ModelsDomainRecord'), require('../model/ModelsEDomain'), require('../model/ModelsEMember'), require('../model/ModelsVerifyByTokenRequest'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.SubaccountdomainApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsDomain, root.SendPostApi.ModelsDomainCheckRequest, root.SendPostApi.ModelsEDomain, root.SendPostApi.ModelsEMember, root.SendPostApi.ModelsVerifyByTokenRequest);
+    root.SendPostApi.SubaccountdomainApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsDeleteResponse, root.SendPostApi.ModelsDomain, root.SendPostApi.ModelsDomainCheckRequest, root.SendPostApi.ModelsDomainNameRecord, root.SendPostApi.ModelsDomainRecord, root.SendPostApi.ModelsEDomain, root.SendPostApi.ModelsEMember, root.SendPostApi.ModelsVerifyByTokenRequest);
   }
-}(this, function(ApiClient, ModelsCountStat, ModelsDeleteResponse, ModelsDomain, ModelsDomainCheckRequest, ModelsEDomain, ModelsEMember, ModelsVerifyByTokenRequest) {
+}(this, function(ApiClient, ModelsCountStat, ModelsDeleteResponse, ModelsDomain, ModelsDomainCheckRequest, ModelsDomainNameRecord, ModelsDomainRecord, ModelsEDomain, ModelsEMember, ModelsVerifyByTokenRequest) {
   'use strict';
 
   /**
@@ -47,6 +47,68 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the domainRouterAddDomainOnPostmaster operation.
+     * @callback module:api/SubaccountdomainApi~domainRouterAddDomainOnPostmasterCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/ModelsDomainRecord>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Add domain on postmaster <br>
+     * @param {String} xTeamApiKey Sub-Account API Key
+     * @param {Number} domainId the DomainId you want to add
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.offset offset
+     * @param {Number} opts.limit limit
+     * @param {String} opts.search search term
+     * @param {module:api/SubaccountdomainApi~domainRouterAddDomainOnPostmasterCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/ModelsDomainRecord>}
+     */
+    this.domainRouterAddDomainOnPostmaster = function(xTeamApiKey, domainId, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'xTeamApiKey' is set
+      if (xTeamApiKey === undefined || xTeamApiKey === null) {
+        throw new Error("Missing the required parameter 'xTeamApiKey' when calling domainRouterAddDomainOnPostmaster");
+      }
+
+      // verify the required parameter 'domainId' is set
+      if (domainId === undefined || domainId === null) {
+        throw new Error("Missing the required parameter 'domainId' when calling domainRouterAddDomainOnPostmaster");
+      }
+
+
+      var pathParams = {
+        'domainId': domainId
+      };
+      var queryParams = {
+        'offset': opts['offset'],
+        'limit': opts['limit'],
+        'search': opts['search'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-Team-ApiKey': xTeamApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = [ModelsDomainRecord];
+
+      return this.apiClient.callApi(
+        '/subaccount/domain/{domainId}/add', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the domainRouterCount operation.
@@ -370,6 +432,57 @@
 
       return this.apiClient.callApi(
         '/subaccount/domain/', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the domainRouterGetAllByNames operation.
+     * @callback module:api/SubaccountdomainApi~domainRouterGetAllByNamesCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/ModelsDomainNameRecord>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get All Domains by name <br>
+     * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.search search term
+     * @param {module:api/SubaccountdomainApi~domainRouterGetAllByNamesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/ModelsDomainNameRecord>}
+     */
+    this.domainRouterGetAllByNames = function(xSubAccountApiKey, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'xSubAccountApiKey' is set
+      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling domainRouterGetAllByNames");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'search': opts['search'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-SubAccount-ApiKey': xSubAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = [ModelsDomainNameRecord];
+
+      return this.apiClient.callApi(
+        '/subaccount/domain/names', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

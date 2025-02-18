@@ -92,7 +92,8 @@ var opts = {
   'from': "from_example", // String | from date
   'to': "to_example", // String | to date
   'source': "source_example", // String | data source from which to get timestamp keys subaccount or ip
-  'sourceId': "sourceId_example" // String | source id from which to get timestamp keys subaccount or ip
+  'sourceId': "sourceId_example", // String | source id from which to get timestamp keys subaccount or ip
+  'memberId': 789 // Number | member id
 };
 
 var callback = function(error, data, response) {
@@ -116,6 +117,7 @@ Name | Type | Description  | Notes
  **to** | **String**| to date | [optional] 
  **source** | **String**| data source from which to get timestamp keys subaccount or ip | [optional] 
  **sourceId** | **String**| source id from which to get timestamp keys subaccount or ip | [optional] 
+ **memberId** | **Number**| member id | [optional] 
 
 ### Return type
 

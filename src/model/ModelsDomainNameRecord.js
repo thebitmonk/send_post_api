@@ -26,37 +26,37 @@
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsDomain = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsDNSRecord);
+    root.SendPostApi.ModelsDomainNameRecord = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsDNSRecord);
   }
 }(this, function(ApiClient, ModelsDNSRecord) {
   'use strict';
 
   /**
-   * The ModelsDomain model module.
-   * @module model/ModelsDomain
+   * The ModelsDomainNameRecord model module.
+   * @module model/ModelsDomainNameRecord
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>ModelsDomain</code>.
-   * @alias module:model/ModelsDomain
+   * Constructs a new <code>ModelsDomainNameRecord</code>.
+   * @alias module:model/ModelsDomainNameRecord
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>ModelsDomain</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ModelsDomainNameRecord</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ModelsDomain} obj Optional instance to populate.
-   * @return {module:model/ModelsDomain} The populated <code>ModelsDomain</code> instance.
+   * @param {module:model/ModelsDomainNameRecord} obj Optional instance to populate.
+   * @return {module:model/ModelsDomainNameRecord} The populated <code>ModelsDomainNameRecord</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('created'))
-        obj.created = ApiClient.convertToType(data['created'], 'Number');
+      if (data.hasOwnProperty('accountId'))
+        obj.accountId = ApiClient.convertToType(data['accountId'], 'Number');
       if (data.hasOwnProperty('dkim'))
         obj.dkim = ModelsDNSRecord.constructFromObject(data['dkim']);
       if (data.hasOwnProperty('dkimConfig'))
@@ -67,18 +67,14 @@
         obj.dmarc = ModelsDNSRecord.constructFromObject(data['dmarc']);
       if (data.hasOwnProperty('dmarcVerified'))
         obj.dmarcVerified = ApiClient.convertToType(data['dmarcVerified'], 'Boolean');
-      if (data.hasOwnProperty('gpt'))
-        obj.gpt = ModelsDNSRecord.constructFromObject(data['gpt']);
-      if (data.hasOwnProperty('gptVerified'))
-        obj.gptVerified = ApiClient.convertToType(data['gptVerified'], 'Boolean');
-      if (data.hasOwnProperty('id'))
-        obj.id = ApiClient.convertToType(data['id'], 'Number');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('returnPath'))
         obj.returnPath = ModelsDNSRecord.constructFromObject(data['returnPath']);
       if (data.hasOwnProperty('returnPathVerified'))
         obj.returnPathVerified = ApiClient.convertToType(data['returnPathVerified'], 'Boolean');
+      if (data.hasOwnProperty('subAccountId'))
+        obj.subAccountId = ApiClient.convertToType(data['subAccountId'], 'Number');
       if (data.hasOwnProperty('track'))
         obj.track = ModelsDNSRecord.constructFromObject(data['track']);
       if (data.hasOwnProperty('trackVerified'))
@@ -90,9 +86,9 @@
   }
 
   /**
-   * @member {Number} created
+   * @member {Number} accountId
    */
-  exports.prototype.created = undefined;
+  exports.prototype.accountId = undefined;
 
   /**
    * @member {module:model/ModelsDNSRecord} dkim
@@ -120,21 +116,6 @@
   exports.prototype.dmarcVerified = undefined;
 
   /**
-   * @member {module:model/ModelsDNSRecord} gpt
-   */
-  exports.prototype.gpt = undefined;
-
-  /**
-   * @member {Boolean} gptVerified
-   */
-  exports.prototype.gptVerified = undefined;
-
-  /**
-   * @member {Number} id
-   */
-  exports.prototype.id = undefined;
-
-  /**
    * @member {String} name
    */
   exports.prototype.name = undefined;
@@ -148,6 +129,11 @@
    * @member {Boolean} returnPathVerified
    */
   exports.prototype.returnPathVerified = undefined;
+
+  /**
+   * @member {Number} subAccountId
+   */
+  exports.prototype.subAccountId = undefined;
 
   /**
    * @member {module:model/ModelsDNSRecord} track

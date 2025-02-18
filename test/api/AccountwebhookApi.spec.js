@@ -76,6 +76,8 @@
           body.sent = false;
           body.softBounced = false;
           body.spam = false;
+          body.uniqueClick = false;
+          body.uniqueOpen = false;
           body.unsubscribed = false;
           body.url = "";
 
@@ -131,6 +133,10 @@
             expect(data.softBounced).to.be(false);
             expect(data.spam).to.be.a('boolean');
             expect(data.spam).to.be(false);
+            expect(data.uniqueClick).to.be.a('boolean');
+            expect(data.uniqueClick).to.be(false);
+            expect(data.uniqueOpen).to.be.a('boolean');
+            expect(data.uniqueOpen).to.be(false);
             expect(data.unsubscribed).to.be.a('boolean');
             expect(data.unsubscribed).to.be(false);
             expect(data.updatedBy).to.be.a(SendPostApi.ModelsMember);
@@ -251,6 +257,10 @@
             expect(data.softBounced).to.be(false);
             expect(data.spam).to.be.a('boolean');
             expect(data.spam).to.be(false);
+            expect(data.uniqueClick).to.be.a('boolean');
+            expect(data.uniqueClick).to.be(false);
+            expect(data.uniqueOpen).to.be.a('boolean');
+            expect(data.uniqueOpen).to.be(false);
             expect(data.unsubscribed).to.be.a('boolean');
             expect(data.unsubscribed).to.be(false);
             expect(data.updatedBy).to.be.a(SendPostApi.ModelsMember);
@@ -351,6 +361,10 @@
               expect(data.softBounced).to.be(false);
               expect(data.spam).to.be.a('boolean');
               expect(data.spam).to.be(false);
+              expect(data.uniqueClick).to.be.a('boolean');
+              expect(data.uniqueClick).to.be(false);
+              expect(data.uniqueOpen).to.be.a('boolean');
+              expect(data.uniqueOpen).to.be(false);
               expect(data.unsubscribed).to.be.a('boolean');
               expect(data.unsubscribed).to.be(false);
               expect(data.updatedBy).to.be.a(SendPostApi.ModelsMember);
@@ -403,6 +417,8 @@
           body.sent = false;
           body.softBounced = false;
           body.spam = false;
+          body.uniqueClick = false;
+          body.uniqueOpen = false;
           body.unsubscribed = false;
           body.url = "";
 
@@ -458,6 +474,10 @@
             expect(data.softBounced).to.be(false);
             expect(data.spam).to.be.a('boolean');
             expect(data.spam).to.be(false);
+            expect(data.uniqueClick).to.be.a('boolean');
+            expect(data.uniqueClick).to.be(false);
+            expect(data.uniqueOpen).to.be.a('boolean');
+            expect(data.uniqueOpen).to.be(false);
             expect(data.unsubscribed).to.be.a('boolean');
             expect(data.unsubscribed).to.be(false);
             expect(data.updatedBy).to.be.a(SendPostApi.ModelsMember);

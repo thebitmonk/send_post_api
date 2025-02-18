@@ -31,20 +31,20 @@
   var instance;
 
   describe('(package)', function() {
-    describe('ModelsDomain', function() {
+    describe('ModelsDomainNameRecord', function() {
       beforeEach(function() {
-        instance = new SendPostApi.ModelsDomain();
+        instance = new SendPostApi.ModelsDomainNameRecord();
       });
 
-      it('should create an instance of ModelsDomain', function() {
-        // TODO: update the code to test ModelsDomain
-        expect(instance).to.be.a(SendPostApi.ModelsDomain);
+      it('should create an instance of ModelsDomainNameRecord', function() {
+        // TODO: update the code to test ModelsDomainNameRecord
+        expect(instance).to.be.a(SendPostApi.ModelsDomainNameRecord);
       });
 
-      it('should have the property created (base name: "created")', function() {
-        // TODO: update the code to test the property created
-        expect(instance).to.have.property('created');
-        // expect(instance.created).to.be(expectedValueLiteral);
+      it('should have the property accountId (base name: "accountId")', function() {
+        // TODO: update the code to test the property accountId
+        expect(instance).to.have.property('accountId');
+        // expect(instance.accountId).to.be(expectedValueLiteral);
       });
 
       it('should have the property dkim (base name: "dkim")', function() {
@@ -77,24 +77,6 @@
         // expect(instance.dmarcVerified).to.be(expectedValueLiteral);
       });
 
-      it('should have the property gpt (base name: "gpt")', function() {
-        // TODO: update the code to test the property gpt
-        expect(instance).to.have.property('gpt');
-        // expect(instance.gpt).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property gptVerified (base name: "gptVerified")', function() {
-        // TODO: update the code to test the property gptVerified
-        expect(instance).to.have.property('gptVerified');
-        // expect(instance.gptVerified).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property id (base name: "id")', function() {
-        // TODO: update the code to test the property id
-        expect(instance).to.have.property('id');
-        // expect(instance.id).to.be(expectedValueLiteral);
-      });
-
       it('should have the property name (base name: "name")', function() {
         // TODO: update the code to test the property name
         expect(instance).to.have.property('name');
@@ -111,6 +93,12 @@
         // TODO: update the code to test the property returnPathVerified
         expect(instance).to.have.property('returnPathVerified');
         // expect(instance.returnPathVerified).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property subAccountId (base name: "subAccountId")', function() {
+        // TODO: update the code to test the property subAccountId
+        expect(instance).to.have.property('subAccountId');
+        // expect(instance.subAccountId).to.be(expectedValueLiteral);
       });
 
       it('should have the property track (base name: "track")', function() {

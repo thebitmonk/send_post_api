@@ -69,6 +69,8 @@
         obj.createdBy = ModelsMember.constructFromObject(data['createdBy']);
       if (data.hasOwnProperty('currentEmailServiceProvider'))
         obj.currentEmailServiceProvider = ApiClient.convertToType(data['currentEmailServiceProvider'], 'String');
+      if (data.hasOwnProperty('hubspotCompanyId'))
+        obj.hubspotCompanyId = ApiClient.convertToType(data['hubspotCompanyId'], 'String');
       if (data.hasOwnProperty('id'))
         obj.id = ApiClient.convertToType(data['id'], 'Number');
       if (data.hasOwnProperty('incidentSlackEndpoint'))
@@ -83,6 +85,8 @@
         obj.isLastPaymentFailed = ApiClient.convertToType(data['isLastPaymentFailed'], 'Boolean');
       if (data.hasOwnProperty('isUpgraded'))
         obj.isUpgraded = ApiClient.convertToType(data['isUpgraded'], 'Boolean');
+      if (data.hasOwnProperty('linearIssueUuid'))
+        obj.linearIssueUuid = ApiClient.convertToType(data['linearIssueUuid'], 'String');
       if (data.hasOwnProperty('lockThreshold'))
         obj.lockThreshold = ApiClient.convertToType(data['lockThreshold'], 'Number');
       if (data.hasOwnProperty('locked'))
@@ -149,6 +153,11 @@
   exports.prototype.currentEmailServiceProvider = undefined;
 
   /**
+   * @member {String} hubspotCompanyId
+   */
+  exports.prototype.hubspotCompanyId = undefined;
+
+  /**
    * @member {Number} id
    */
   exports.prototype.id = undefined;
@@ -182,6 +191,11 @@
    * @member {Boolean} isUpgraded
    */
   exports.prototype.isUpgraded = undefined;
+
+  /**
+   * @member {String} linearIssueUuid
+   */
+  exports.prototype.linearIssueUuid = undefined;
 
   /**
    * @member {Number} lockThreshold

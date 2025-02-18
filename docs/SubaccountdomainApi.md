@@ -4,12 +4,14 @@ All URIs are relative to *http://127.0.0.1:8081/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**domainRouterAddDomainOnPostmaster**](SubaccountdomainApi.md#domainRouterAddDomainOnPostmaster) | **GET** /subaccount/domain/{domainId}/add | 
 [**domainRouterCount**](SubaccountdomainApi.md#domainRouterCount) | **GET** /subaccount/domain/count | 
 [**domainRouterCreate**](SubaccountdomainApi.md#domainRouterCreate) | **POST** /subaccount/domain/ | 
 [**domainRouterDelete**](SubaccountdomainApi.md#domainRouterDelete) | **DELETE** /subaccount/domain/{domainId} | 
 [**domainRouterDoesDomainExists**](SubaccountdomainApi.md#domainRouterDoesDomainExists) | **GET** /subaccount/domain/exists | 
 [**domainRouterGet**](SubaccountdomainApi.md#domainRouterGet) | **GET** /subaccount/domain/{domainId} | 
 [**domainRouterGetAll**](SubaccountdomainApi.md#domainRouterGetAll) | **GET** /subaccount/domain/ | 
+[**domainRouterGetAllByNames**](SubaccountdomainApi.md#domainRouterGetAllByNames) | **GET** /subaccount/domain/names | 
 [**domainRouterIsDomainVerified**](SubaccountdomainApi.md#domainRouterIsDomainVerified) | **GET** /subaccount/domain/isverified | 
 [**domainRouterUpdate**](SubaccountdomainApi.md#domainRouterUpdate) | **PUT** /subaccount/domain/{domainId} | 
 [**domainRouterVerify**](SubaccountdomainApi.md#domainRouterVerify) | **POST** /subaccount/domain/{domainId}/verify | 
@@ -18,6 +20,63 @@ Method | HTTP request | Description
 [**domainRouterVerifyOwnerDomainRequest**](SubaccountdomainApi.md#domainRouterVerifyOwnerDomainRequest) | **POST** /subaccount/domain/owner/verify/email | 
 [**domainRouterVerifyRequest**](SubaccountdomainApi.md#domainRouterVerifyRequest) | **POST** /subaccount/domain/{domainId}/verify/email | 
 
+
+<a name="domainRouterAddDomainOnPostmaster"></a>
+# **domainRouterAddDomainOnPostmaster**
+> [ModelsDomainRecord] domainRouterAddDomainOnPostmaster(xTeamApiKey, domainId, opts)
+
+
+
+Add domain on postmaster <br>
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.SubaccountdomainApi();
+
+var xTeamApiKey = "xTeamApiKey_example"; // String | Sub-Account API Key
+
+var domainId = 789; // Number | the DomainId you want to add
+
+var opts = { 
+  'offset': 789, // Number | offset
+  'limit': 789, // Number | limit
+  'search': "search_example" // String | search term
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.domainRouterAddDomainOnPostmaster(xTeamApiKey, domainId, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xTeamApiKey** | **String**| Sub-Account API Key | 
+ **domainId** | **Number**| the DomainId you want to add | 
+ **offset** | **Number**| offset | [optional] 
+ **limit** | **Number**| limit | [optional] 
+ **search** | **String**| search term | [optional] 
+
+### Return type
+
+[**[ModelsDomainRecord]**](ModelsDomainRecord.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="domainRouterCount"></a>
 # **domainRouterCount**
@@ -312,6 +371,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[ModelsDomain]**](ModelsDomain.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="domainRouterGetAllByNames"></a>
+# **domainRouterGetAllByNames**
+> [ModelsDomainNameRecord] domainRouterGetAllByNames(xSubAccountApiKey, opts)
+
+
+
+Get All Domains by name <br>
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.SubaccountdomainApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var opts = { 
+  'search': "search_example" // String | search term
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.domainRouterGetAllByNames(xSubAccountApiKey, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **search** | **String**| search term | [optional] 
+
+### Return type
+
+[**[ModelsDomainNameRecord]**](ModelsDomainNameRecord.md)
 
 ### Authorization
 

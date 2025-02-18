@@ -1,20 +1,18 @@
-# SendPostApi.ModelsDomain
+# SendPostApi.ModelsDomainNameRecord
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**created** | **Number** |  | [optional] 
+**accountId** | **Number** |  | [optional] 
 **dkim** | [**ModelsDNSRecord**](ModelsDNSRecord.md) |  | [optional] 
 **dkimConfig** | **String** |  | [optional] 
 **dkimVerified** | **Boolean** |  | [optional] 
 **dmarc** | [**ModelsDNSRecord**](ModelsDNSRecord.md) |  | [optional] 
 **dmarcVerified** | **Boolean** |  | [optional] 
-**gpt** | [**ModelsDNSRecord**](ModelsDNSRecord.md) |  | [optional] 
-**gptVerified** | **Boolean** |  | [optional] 
-**id** | **Number** |  | [optional] 
 **name** | **String** |  | [optional] 
 **returnPath** | [**ModelsDNSRecord**](ModelsDNSRecord.md) |  | [optional] 
 **returnPathVerified** | **Boolean** |  | [optional] 
+**subAccountId** | **Number** |  | [optional] 
 **track** | [**ModelsDNSRecord**](ModelsDNSRecord.md) |  | [optional] 
 **trackVerified** | **Boolean** |  | [optional] 
 **verified** | **Boolean** |  | [optional] 

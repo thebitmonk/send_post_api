@@ -83,6 +83,12 @@
         // expect(instance.currentEmailServiceProvider).to.be(expectedValueLiteral);
       });
 
+      it('should have the property hubspotCompanyId (base name: "hubspotCompanyId")', function() {
+        // TODO: update the code to test the property hubspotCompanyId
+        expect(instance).to.have.property('hubspotCompanyId');
+        // expect(instance.hubspotCompanyId).to.be(expectedValueLiteral);
+      });
+
       it('should have the property id (base name: "id")', function() {
         // TODO: update the code to test the property id
         expect(instance).to.have.property('id');
@@ -123,6 +129,12 @@
         // TODO: update the code to test the property isUpgraded
         expect(instance).to.have.property('isUpgraded');
         // expect(instance.isUpgraded).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property linearIssueUuid (base name: "linearIssueUuid")', function() {
+        // TODO: update the code to test the property linearIssueUuid
+        expect(instance).to.have.property('linearIssueUuid');
+        // expect(instance.linearIssueUuid).to.be(expectedValueLiteral);
       });
 
       it('should have the property lockThreshold (base name: "lockThreshold")', function() {

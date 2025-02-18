@@ -181,7 +181,9 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SendPostApi.MapStringint);
+            expect(data).to.be.a(SendPostApi.ModelsCountStat);
+            expect(data.count).to.be.a('number');
+            expect(data.count).to.be("0");
 
             done();
           });

@@ -1379,6 +1379,10 @@
                 expect(data.accountWebhook.softBounced).to.be(false);
                 expect(data.accountWebhook.spam).to.be.a('boolean');
                 expect(data.accountWebhook.spam).to.be(false);
+                expect(data.accountWebhook.uniqueClick).to.be.a('boolean');
+                expect(data.accountWebhook.uniqueClick).to.be(false);
+                expect(data.accountWebhook.uniqueOpen).to.be.a('boolean');
+                expect(data.accountWebhook.uniqueOpen).to.be(false);
                 expect(data.accountWebhook.unsubscribed).to.be.a('boolean');
                 expect(data.accountWebhook.unsubscribed).to.be(false);
                 expect(data.accountWebhook.updatedBy).to.be.a(SendPostApi.ModelsMember);
@@ -1438,6 +1442,8 @@
                   expect(data.account.createdBy.url).to.be("");
                 expect(data.account.currentEmailServiceProvider).to.be.a('string');
                 expect(data.account.currentEmailServiceProvider).to.be("");
+                expect(data.account.hubspotCompanyId).to.be.a('string');
+                expect(data.account.hubspotCompanyId).to.be("");
                 expect(data.account.id).to.be.a('number');
                 expect(data.account.id).to.be("0");
                 expect(data.account.incidentSlackEndpoint).to.be.a('string');
@@ -1452,6 +1458,8 @@
                 expect(data.account.isLastPaymentFailed).to.be(false);
                 expect(data.account.isUpgraded).to.be.a('boolean');
                 expect(data.account.isUpgraded).to.be(false);
+                expect(data.account.linearIssueUuid).to.be.a('string');
+                expect(data.account.linearIssueUuid).to.be("");
                 expect(data.account.lockThreshold).to.be.a('number');
                 expect(data.account.lockThreshold).to.be("0");
                 expect(data.account.locked).to.be.a('boolean');
@@ -1520,6 +1528,15 @@
                   expect(data.domain.dmarc.type).to.be("");
                 expect(data.domain.dmarcVerified).to.be.a('boolean');
                 expect(data.domain.dmarcVerified).to.be(false);
+                expect(data.domain.gpt).to.be.a(SendPostApi.ModelsDNSRecord);
+                      expect(data.domain.gpt.host).to.be.a('string');
+                  expect(data.domain.gpt.host).to.be("");
+                  expect(data.domain.gpt.textValue).to.be.a('string');
+                  expect(data.domain.gpt.textValue).to.be("");
+                  expect(data.domain.gpt.type).to.be.a('string');
+                  expect(data.domain.gpt.type).to.be("");
+                expect(data.domain.gptVerified).to.be.a('boolean');
+                expect(data.domain.gptVerified).to.be(false);
                 expect(data.domain.id).to.be.a('number');
                 expect(data.domain.id).to.be("0");
                 expect(data.domain.name).to.be.a('string');

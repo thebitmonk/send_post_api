@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/MapStringint', 'model/ModelsBulkResponse', 'model/ModelsCountStat', 'model/ModelsEValidation', 'model/ModelsEmail', 'model/ModelsEmailList', 'model/ModelsValidation', 'model/ModelsValidationJob'], factory);
+    define(['ApiClient', 'model/ModelsBulkResponse', 'model/ModelsCountStat', 'model/ModelsEValidation', 'model/ModelsEmail', 'model/ModelsEmailList', 'model/ModelsValidation', 'model/ModelsValidationJob'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/MapStringint'), require('../model/ModelsBulkResponse'), require('../model/ModelsCountStat'), require('../model/ModelsEValidation'), require('../model/ModelsEmail'), require('../model/ModelsEmailList'), require('../model/ModelsValidation'), require('../model/ModelsValidationJob'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsBulkResponse'), require('../model/ModelsCountStat'), require('../model/ModelsEValidation'), require('../model/ModelsEmail'), require('../model/ModelsEmailList'), require('../model/ModelsValidation'), require('../model/ModelsValidationJob'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.AccountvalidationApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.MapStringint, root.SendPostApi.ModelsBulkResponse, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsEValidation, root.SendPostApi.ModelsEmail, root.SendPostApi.ModelsEmailList, root.SendPostApi.ModelsValidation, root.SendPostApi.ModelsValidationJob);
+    root.SendPostApi.AccountvalidationApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsBulkResponse, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsEValidation, root.SendPostApi.ModelsEmail, root.SendPostApi.ModelsEmailList, root.SendPostApi.ModelsValidation, root.SendPostApi.ModelsValidationJob);
   }
-}(this, function(ApiClient, MapStringint, ModelsBulkResponse, ModelsCountStat, ModelsEValidation, ModelsEmail, ModelsEmailList, ModelsValidation, ModelsValidationJob) {
+}(this, function(ApiClient, ModelsBulkResponse, ModelsCountStat, ModelsEValidation, ModelsEmail, ModelsEmailList, ModelsValidation, ModelsValidationJob) {
   'use strict';
 
   /**
@@ -261,7 +261,7 @@
      * Callback function to receive the result of the validationRouterGetEmailCountByStatus operation.
      * @callback module:api/AccountvalidationApi~validationRouterGetEmailCountByStatusCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/MapStringint} data The data returned by the service call.
+     * @param {module:model/ModelsCountStat} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -270,7 +270,7 @@
      * @param {String} xSubAccountApiKey SubAccount API Key
      * @param {Number} status Email status filter
      * @param {module:api/AccountvalidationApi~validationRouterGetEmailCountByStatusCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/MapStringint}
+     * data is of type: {@link module:model/ModelsCountStat}
      */
     this.validationRouterGetEmailCountByStatus = function(xSubAccountApiKey, status, callback) {
       var postBody = null;
@@ -302,7 +302,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = MapStringint;
+      var returnType = ModelsCountStat;
 
       return this.apiClient.callApi(
         '/account/validation/emails/count', 'GET',
