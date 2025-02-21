@@ -1528,6 +1528,15 @@
                   expect(data.domain.dmarc.type).to.be("");
                 expect(data.domain.dmarcVerified).to.be.a('boolean');
                 expect(data.domain.dmarcVerified).to.be(false);
+                expect(data.domain.gpt).to.be.a(SendPostApi.ModelsDNSRecord);
+                      expect(data.domain.gpt.host).to.be.a('string');
+                  expect(data.domain.gpt.host).to.be("");
+                  expect(data.domain.gpt.textValue).to.be.a('string');
+                  expect(data.domain.gpt.textValue).to.be("");
+                  expect(data.domain.gpt.type).to.be.a('string');
+                  expect(data.domain.gpt.type).to.be("");
+                expect(data.domain.gptVerified).to.be.a('boolean');
+                expect(data.domain.gptVerified).to.be(false);
                 expect(data.domain.id).to.be.a('number');
                 expect(data.domain.id).to.be("0");
                 expect(data.domain.name).to.be.a('string');

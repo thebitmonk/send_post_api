@@ -36,6 +36,38 @@
 
   describe('(package)', function() {
     describe('SubaccountdomainApi', function() {
+      describe('domainRouterAddDomainOnPostmaster', function() {
+        it('should call domainRouterAddDomainOnPostmaster successfully', function(done) {
+          // TODO: uncomment, update parameter values for domainRouterAddDomainOnPostmaster call and complete the assertions
+          /*
+          var xTeamApiKey = "xTeamApiKey_example";
+          var domainId = 789;
+          var opts = {};
+          opts.offset = 789;
+          opts.limit = 789;
+          opts.search = "search_example";
+
+          instance.domainRouterAddDomainOnPostmaster(xTeamApiKey, domainId, opts, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            let dataCtr = data;
+            expect(dataCtr).to.be.an(Array);
+            expect(dataCtr).to.not.be.empty();
+            for (let p in dataCtr) {
+              let data = dataCtr[p];
+              expect(data).to.be.a(SendPostApi.ModelsDomainRecord);
+            }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('domainRouterCount', function() {
         it('should call domainRouterCount successfully', function(done) {
           // TODO: uncomment, update parameter values for domainRouterCount call and complete the assertions
@@ -99,6 +131,15 @@
               expect(data.dmarc.type).to.be("");
             expect(data.dmarcVerified).to.be.a('boolean');
             expect(data.dmarcVerified).to.be(false);
+            expect(data.gpt).to.be.a(SendPostApi.ModelsDNSRecord);
+                  expect(data.gpt.host).to.be.a('string');
+              expect(data.gpt.host).to.be("");
+              expect(data.gpt.textValue).to.be.a('string');
+              expect(data.gpt.textValue).to.be("");
+              expect(data.gpt.type).to.be.a('string');
+              expect(data.gpt.type).to.be("");
+            expect(data.gptVerified).to.be.a('boolean');
+            expect(data.gptVerified).to.be(false);
             expect(data.id).to.be.a('number');
             expect(data.id).to.be("0");
             expect(data.name).to.be.a('string');
@@ -195,6 +236,15 @@
               expect(data.dmarc.type).to.be("");
             expect(data.dmarcVerified).to.be.a('boolean');
             expect(data.dmarcVerified).to.be(false);
+            expect(data.gpt).to.be.a(SendPostApi.ModelsDNSRecord);
+                  expect(data.gpt.host).to.be.a('string');
+              expect(data.gpt.host).to.be("");
+              expect(data.gpt.textValue).to.be.a('string');
+              expect(data.gpt.textValue).to.be("");
+              expect(data.gpt.type).to.be.a('string');
+              expect(data.gpt.type).to.be("");
+            expect(data.gptVerified).to.be.a('boolean');
+            expect(data.gptVerified).to.be(false);
             expect(data.id).to.be.a('number');
             expect(data.id).to.be("0");
             expect(data.name).to.be.a('string');
@@ -263,6 +313,15 @@
               expect(data.dmarc.type).to.be("");
             expect(data.dmarcVerified).to.be.a('boolean');
             expect(data.dmarcVerified).to.be(false);
+            expect(data.gpt).to.be.a(SendPostApi.ModelsDNSRecord);
+                  expect(data.gpt.host).to.be.a('string');
+              expect(data.gpt.host).to.be("");
+              expect(data.gpt.textValue).to.be.a('string');
+              expect(data.gpt.textValue).to.be("");
+              expect(data.gpt.type).to.be.a('string');
+              expect(data.gpt.type).to.be("");
+            expect(data.gptVerified).to.be.a('boolean');
+            expect(data.gptVerified).to.be(false);
             expect(data.id).to.be.a('number');
             expect(data.id).to.be("0");
             expect(data.name).to.be.a('string');
@@ -339,6 +398,15 @@
                 expect(data.dmarc.type).to.be("");
               expect(data.dmarcVerified).to.be.a('boolean');
               expect(data.dmarcVerified).to.be(false);
+              expect(data.gpt).to.be.a(SendPostApi.ModelsDNSRecord);
+                    expect(data.gpt.host).to.be.a('string');
+                expect(data.gpt.host).to.be("");
+                expect(data.gpt.textValue).to.be.a('string');
+                expect(data.gpt.textValue).to.be("");
+                expect(data.gpt.type).to.be.a('string');
+                expect(data.gpt.type).to.be("");
+              expect(data.gptVerified).to.be.a('boolean');
+              expect(data.gptVerified).to.be(false);
               expect(data.id).to.be.a('number');
               expect(data.id).to.be("0");
               expect(data.name).to.be.a('string');
@@ -372,15 +440,15 @@
           done();
         });
       });
-      describe('domainRouterGetAll_0', function() {
-        it('should call domainRouterGetAll_0 successfully', function(done) {
-          // TODO: uncomment, update parameter values for domainRouterGetAll_0 call and complete the assertions
+      describe('domainRouterGetAllByNames', function() {
+        it('should call domainRouterGetAllByNames successfully', function(done) {
+          // TODO: uncomment, update parameter values for domainRouterGetAllByNames call and complete the assertions
           /*
           var xSubAccountApiKey = "xSubAccountApiKey_example";
           var opts = {};
           opts.search = "search_example";
 
-          instance.domainRouterGetAll_0(xSubAccountApiKey, opts, function(error, data, response) {
+          instance.domainRouterGetAllByNames(xSubAccountApiKey, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -483,6 +551,15 @@
               expect(data.dmarc.type).to.be("");
             expect(data.dmarcVerified).to.be.a('boolean');
             expect(data.dmarcVerified).to.be(false);
+            expect(data.gpt).to.be.a(SendPostApi.ModelsDNSRecord);
+                  expect(data.gpt.host).to.be.a('string');
+              expect(data.gpt.host).to.be("");
+              expect(data.gpt.textValue).to.be.a('string');
+              expect(data.gpt.textValue).to.be("");
+              expect(data.gpt.type).to.be.a('string');
+              expect(data.gpt.type).to.be("");
+            expect(data.gptVerified).to.be.a('boolean');
+            expect(data.gptVerified).to.be(false);
             expect(data.id).to.be.a('number');
             expect(data.id).to.be("0");
             expect(data.name).to.be.a('string');
@@ -554,6 +631,15 @@
               expect(data.dmarc.type).to.be("");
             expect(data.dmarcVerified).to.be.a('boolean');
             expect(data.dmarcVerified).to.be(false);
+            expect(data.gpt).to.be.a(SendPostApi.ModelsDNSRecord);
+                  expect(data.gpt.host).to.be.a('string');
+              expect(data.gpt.host).to.be("");
+              expect(data.gpt.textValue).to.be.a('string');
+              expect(data.gpt.textValue).to.be("");
+              expect(data.gpt.type).to.be.a('string');
+              expect(data.gpt.type).to.be("");
+            expect(data.gptVerified).to.be.a('boolean');
+            expect(data.gptVerified).to.be(false);
             expect(data.id).to.be.a('number');
             expect(data.id).to.be("0");
             expect(data.name).to.be.a('string');
@@ -622,6 +708,15 @@
               expect(data.dmarc.type).to.be("");
             expect(data.dmarcVerified).to.be.a('boolean');
             expect(data.dmarcVerified).to.be(false);
+            expect(data.gpt).to.be.a(SendPostApi.ModelsDNSRecord);
+                  expect(data.gpt.host).to.be.a('string');
+              expect(data.gpt.host).to.be("");
+              expect(data.gpt.textValue).to.be.a('string');
+              expect(data.gpt.textValue).to.be("");
+              expect(data.gpt.type).to.be.a('string');
+              expect(data.gpt.type).to.be("");
+            expect(data.gptVerified).to.be.a('boolean');
+            expect(data.gptVerified).to.be(false);
             expect(data.id).to.be.a('number');
             expect(data.id).to.be("0");
             expect(data.name).to.be.a('string');
@@ -691,6 +786,15 @@
               expect(data.dmarc.type).to.be("");
             expect(data.dmarcVerified).to.be.a('boolean');
             expect(data.dmarcVerified).to.be(false);
+            expect(data.gpt).to.be.a(SendPostApi.ModelsDNSRecord);
+                  expect(data.gpt.host).to.be.a('string');
+              expect(data.gpt.host).to.be("");
+              expect(data.gpt.textValue).to.be.a('string');
+              expect(data.gpt.textValue).to.be("");
+              expect(data.gpt.type).to.be.a('string');
+              expect(data.gpt.type).to.be("");
+            expect(data.gptVerified).to.be.a('boolean');
+            expect(data.gptVerified).to.be(false);
             expect(data.id).to.be.a('number');
             expect(data.id).to.be("0");
             expect(data.name).to.be.a('string');
@@ -759,6 +863,15 @@
               expect(data.dmarc.type).to.be("");
             expect(data.dmarcVerified).to.be.a('boolean');
             expect(data.dmarcVerified).to.be(false);
+            expect(data.gpt).to.be.a(SendPostApi.ModelsDNSRecord);
+                  expect(data.gpt.host).to.be.a('string');
+              expect(data.gpt.host).to.be("");
+              expect(data.gpt.textValue).to.be.a('string');
+              expect(data.gpt.textValue).to.be("");
+              expect(data.gpt.type).to.be.a('string');
+              expect(data.gpt.type).to.be("");
+            expect(data.gptVerified).to.be.a('boolean');
+            expect(data.gptVerified).to.be(false);
             expect(data.id).to.be.a('number');
             expect(data.id).to.be("0");
             expect(data.name).to.be.a('string');
